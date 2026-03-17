@@ -16,8 +16,17 @@ function parseDbUrl(url: string) {
   };
 }
 
-function createPrismaClient() {
-  const dbConfig = parseDbUrl(process.env.DATABASE_URL!);
+function createPrismaClient(): PrismaClient {
+  if (!process.env.DATABASE_URL) {
+    // Return a no-op proxy so builds succeed without DATABASE_URL.
+    // Any query will throw, caught by try/catch in data.ts → falls back to mock data.
+    return new Proxy({} as PrismaClient, {
+      get() {
+        throw new Error("DATABASE_URL is not configured");
+      },
+    });
+  }
+  const dbConfig = parseDbUrl(process.env.DATABASE_URL);
   const adapter = new PrismaMariaDb(dbConfig);
   return new PrismaClient({
     adapter,
