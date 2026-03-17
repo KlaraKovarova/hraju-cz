@@ -83,6 +83,42 @@ async function main() {
         icon: "🏊",
       },
     }),
+    prisma.sport.upsert({
+      where: { slug: "golf" },
+      update: {},
+      create: {
+        slug: "golf",
+        name: "Golf",
+        nameCs: "Golf",
+        subdomain: "golf",
+        description: "Golfová hřiště, driving range, indoor golf",
+        icon: "⛳",
+      },
+    }),
+    prisma.sport.upsert({
+      where: { slug: "fitness" },
+      update: {},
+      create: {
+        slug: "fitness",
+        name: "Fitness",
+        nameCs: "Fitness",
+        subdomain: "fitness",
+        description: "Fitness centra, posilovny, CrossFit boxy",
+        icon: "🏋️",
+      },
+    }),
+    prisma.sport.upsert({
+      where: { slug: "bowling" },
+      update: {},
+      create: {
+        slug: "bowling",
+        name: "Bowling",
+        nameCs: "Bowling",
+        subdomain: "bowling",
+        description: "Bowlingové dráhy a centra",
+        icon: "🎳",
+      },
+    }),
   ]);
 
   console.log(`✓ ${sports.length} sports`);
