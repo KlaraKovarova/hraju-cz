@@ -4,7 +4,7 @@ import { SPORT_SUBDOMAINS } from "@/lib/sports";
 
 const ROOT_DOMAIN = process.env.ROOT_DOMAIN || "hraju.cz";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const url = request.nextUrl.clone();
   const hostname = request.headers.get("host") || "";
 
