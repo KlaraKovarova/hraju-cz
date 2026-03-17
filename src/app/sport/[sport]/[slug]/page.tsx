@@ -109,8 +109,44 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
       : null;
   const openingHours = facility.openingHours as Record<string, string> | null;
 
+  // Build JSON-LD structured data for SEO
+  const phone = facility.contacts.find((c) => c.type === "PHONE")?.value;
+  const email = facility.contacts.find((c) => c.type === "EMAIL")?.value;
+  const jsonLd: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    name: facility.name,
+    url: `https://hraju.cz/sport/${sportSlug}/${slug}`,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: facility.address,
+      addressLocality: facility.location.city,
+      ...(facility.location.region && { addressRegion: facility.location.region }),
+      ...(facility.postalCode && { postalCode: facility.postalCode }),
+      addressCountry: "CZ",
+    },
+    ...(facility.description && { description: facility.description }),
+    ...(phone && { telephone: phone }),
+    ...(email && { email }),
+    ...(facility.website && { sameAs: facility.website }),
+    ...(mapLat && mapLng && {
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: mapLat,
+        longitude: mapLng,
+      },
+    }),
+    ...(facility.sports.length > 0 && {
+      sport: facility.sports.map((s) => s.sport.nameCs),
+    }),
+  };
+
   return (
     <main className="min-h-screen bg-zinc-50/50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Header */}
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
