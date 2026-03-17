@@ -14,13 +14,26 @@ interface SportPageProps {
 
 export async function generateMetadata({
   params,
+  searchParams,
 }: SportPageProps): Promise<Metadata> {
   const { sport: sportSlug } = await params;
+  const { city } = await searchParams;
   const sport = getSportBySubdomain(sportSlug);
   if (!sport) return {};
+
+  const { facilities } = await getFacilitiesBySport(sport.slug, city);
+  const count = facilities.length;
+
+  if (city) {
+    return {
+      title: `${sport.nameCs} kurty v ${city} — hraju.cz`,
+      description: `Najděte ${sport.nameCs.toLowerCase()} v ${city}. ${count} sportovišť, adresy a kontakty.`,
+    };
+  }
+
   return {
-    title: `${sport.nameCs} sportoviště | hraju.cz`,
-    description: sport.description,
+    title: `${sport.nameCs} sportoviště v ČR — hraju.cz`,
+    description: `${count} ${sport.nameCs.toLowerCase()} sportovišť v celé ČR. Adresy, kontakty, ceny.`,
   };
 }
 

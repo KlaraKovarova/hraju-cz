@@ -23,13 +23,28 @@ interface FacilityPageProps {
 export async function generateMetadata({
   params,
 }: FacilityPageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { sport: sportSlug, slug } = await params;
+  const sport = getSportBySubdomain(sportSlug);
   const { facility } = await getFacilityBySlug(slug);
-  if (!facility) return {};
+  if (!facility || !sport) return {};
+
+  const description = facility.description
+    ? facility.description.slice(0, 155)
+    : `${facility.name} nabízí ${sport.nameCs.toLowerCase()} v ${facility.location.city}. Kontakt, adresa, provozní doba na hraju.cz.`;
+
+  const title = `${facility.name} — ${sport.nameCs} — hraju.cz`;
+  const url = `https://hraju.cz/sport/${sportSlug}/${slug}`;
+
   return {
-    title: `${facility.name} | hraju.cz`,
-    description:
-      facility.description ?? `${facility.name} — sportoviště na hraju.cz`,
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "website",
+      siteName: "hraju.cz",
+    },
   };
 }
 
