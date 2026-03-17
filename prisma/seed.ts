@@ -1,13 +1,21 @@
-import { PrismaPg } from "@prisma/adapter-pg";
+import { PrismaMariaDb } from "@prisma/adapter-mariadb";
 import { PrismaClient } from "@prisma/client";
-import { Pool } from "pg";
 
-const pool = new Pool({
-  connectionString:
-    process.env.DATABASE_URL ||
-    "postgresql://postgres:postgres@localhost:5432/hraju_cz?schema=public",
-});
-const adapter = new PrismaPg(pool);
+function parseDbUrl(url: string) {
+  const u = new URL(url);
+  return {
+    host: u.hostname,
+    port: u.port ? Number(u.port) : 3306,
+    user: u.username,
+    password: u.password,
+    database: u.pathname.replace(/^\//, ""),
+  };
+}
+
+const dbUrl =
+  process.env.DATABASE_URL ||
+  "mysql://root:@localhost:3306/hraju_cz";
+const adapter = new PrismaMariaDb(parseDbUrl(dbUrl));
 const prisma = new PrismaClient({ adapter });
 
 async function main() {
@@ -270,5 +278,4 @@ main()
   })
   .finally(async () => {
     await prisma.$disconnect();
-    await pool.end();
   });
