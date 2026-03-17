@@ -1,0 +1,137 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Sport {
+  id          String          @id @default(cuid())
+  slug        String          @unique // e.g. "tenis", "squash"
+  name        String          // display name
+  nameCs      String          // Czech name
+  subdomain   String          @unique // e.g. "tenis" -> tenis.hraju.cz
+  description String?
+  icon        String?
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  facilities  FacilitySport[]
+}
+
+model Location {
+  id         String     @id @default(cuid())
+  city       String
+  region     String? // e.g. "Praha", "Jihomoravský kraj"
+  country    String     @default("CZ")
+  lat        Float?
+  lng        Float?
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+  facilities Facility[]
+
+  @@unique([city, region])
+  @@index([city])
+  @@index([region])
+}
+
+model Facility {
+  id            String            @id @default(cuid())
+  name          String
+  slug          String            @unique
+  description   String?
+  address       String
+  postalCode    String?
+  locationId    String
+  location      Location          @relation(fields: [locationId], references: [id])
+  lat           Float?
+  lng           Float?
+  googlePlaceId String?
+  courtsLanes   Int? // number of courts/lanes/pools
+  pricing       String? // markdown or plain text pricing info
+  openingHours  Json? // structured opening hours per day
+  website       String?
+  isActive      Boolean           @default(true)
+  isClaimed     Boolean           @default(false)
+  isPremium     Boolean           @default(false)
+  createdAt     DateTime          @default(now())
+  updatedAt     DateTime          @updatedAt
+  sports        FacilitySport[]
+  amenities     FacilityAmenity[]
+  contacts      Contact[]
+  images        FacilityImage[]
+
+  @@index([locationId])
+  @@index([slug])
+  @@index([isActive])
+}
+
+model FacilitySport {
+  id         String   @id @default(cuid())
+  facilityId String
+  sportId    String
+  facility   Facility @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  sport      Sport    @relation(fields: [sportId], references: [id], onDelete: Cascade)
+  createdAt  DateTime @default(now())
+
+  @@unique([facilityId, sportId])
+  @@index([facilityId])
+  @@index([sportId])
+}
+
+model Amenity {
+  id         String            @id @default(cuid())
+  slug       String            @unique // e.g. "parking", "showers", "cafe"
+  name       String
+  nameCs     String
+  icon       String?
+  facilities FacilityAmenity[]
+}
+
+model FacilityAmenity {
+  id         String   @id @default(cuid())
+  facilityId String
+  amenityId  String
+  facility   Facility @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  amenity    Amenity  @relation(fields: [amenityId], references: [id], onDelete: Cascade)
+
+  @@unique([facilityId, amenityId])
+  @@index([facilityId])
+}
+
+model Contact {
+  id         String      @id @default(cuid())
+  facilityId String
+  facility   Facility    @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  type       ContactType
+  value      String
+  label      String? // e.g. "Recepce", "Rezervace"
+  isPrimary  Boolean     @default(false)
+  createdAt  DateTime    @default(now())
+
+  @@index([facilityId])
+}
+
+model FacilityImage {
+  id         String   @id @default(cuid())
+  facilityId String
+  facility   Facility @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  url        String
+  alt        String?
+  isPrimary  Boolean  @default(false)
+  order      Int      @default(0)
+  createdAt  DateTime @default(now())
+
+  @@index([facilityId])
+}
+
+enum ContactType {
+  PHONE
+  EMAIL
+  WEBSITE
+  FACEBOOK
+  INSTAGRAM
+}
