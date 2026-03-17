@@ -60,12 +60,15 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
     notFound();
   }
 
-  const mapsQuery = encodeURIComponent(
-    facility.googlePlaceId
-      ? `place_id:${facility.googlePlaceId}`
-      : facility.address
-  );
-  const mapsLinkUrl = `https://maps.google.com/?q=${encodeURIComponent(facility.address)}`;
+  // OpenStreetMap links — free, no API key required
+  const osmLinkUrl =
+    facility.lat && facility.lng
+      ? `https://www.openstreetmap.org/?mlat=${facility.lat}&mlon=${facility.lng}&zoom=16`
+      : `https://www.openstreetmap.org/search?query=${encodeURIComponent(facility.address)}`;
+  const osmEmbedUrl =
+    facility.lat && facility.lng
+      ? `https://www.openstreetmap.org/export/embed.html?bbox=${facility.lng - 0.008},${facility.lat - 0.005},${facility.lng + 0.008},${facility.lat + 0.005}&layer=mapnik&marker=${facility.lat},${facility.lng}`
+      : null;
   const openingHours = facility.openingHours as Record<string, string> | null;
 
   return (
@@ -170,7 +173,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                 <MapPin className="h-5 w-5 text-emerald-500" />
                 Mapa
               </h2>
-              {process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ? (
+              {osmEmbedUrl ? (
                 <div className="overflow-hidden rounded-xl">
                   <iframe
                     title={`Mapa — ${facility.name}`}
@@ -179,15 +182,17 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                     style={{ border: 0 }}
                     loading="lazy"
                     allowFullScreen
-                    referrerPolicy="no-referrer-when-downgrade"
-                    src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=${mapsQuery}&language=cs`}
+                    src={osmEmbedUrl}
                   />
+                  <p className="mt-1 text-right text-xs text-zinc-400">
+                    © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" className="underline hover:text-zinc-600">OpenStreetMap</a> přispěvatelé
+                  </p>
                 </div>
               ) : (
                 <div className="overflow-hidden rounded-xl">
-                  {/* Static map placeholder */}
+                  {/* Address placeholder — no coordinates in DB */}
                   <a
-                    href={mapsLinkUrl}
+                    href={osmLinkUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group relative block"
@@ -349,7 +354,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
               )}
 
               <a
-                href={mapsLinkUrl}
+                href={osmLinkUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 rounded-2xl border border-zinc-100 bg-white p-4 text-sm font-medium text-zinc-700 transition hover:border-emerald-200 hover:shadow-sm"
