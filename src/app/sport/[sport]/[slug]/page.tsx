@@ -60,14 +60,37 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
     notFound();
   }
 
+  // Resolve coordinates: use DB values if available, otherwise geocode via Nominatim (OSM, free)
+  let mapLat = facility.lat;
+  let mapLng = facility.lng;
+  if (!mapLat || !mapLng) {
+    try {
+      const geocodeQuery = `${facility.address}, ${facility.location.city}, Czech Republic`;
+      const res = await fetch(
+        `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(geocodeQuery)}&format=json&limit=1&countrycodes=cz`,
+        {
+          headers: { "User-Agent": "hraju.cz/1.0 (info@hraju.cz)" },
+          next: { revalidate: 86400 }, // cache geocode result for 24h
+        }
+      );
+      const results: { lat: string; lon: string }[] = await res.json();
+      if (results[0]) {
+        mapLat = parseFloat(results[0].lat);
+        mapLng = parseFloat(results[0].lon);
+      }
+    } catch {
+      // Geocoding failed — fall back to placeholder map
+    }
+  }
+
   // OpenStreetMap links — free, no API key required
   const osmLinkUrl =
-    facility.lat && facility.lng
-      ? `https://www.openstreetmap.org/?mlat=${facility.lat}&mlon=${facility.lng}&zoom=16`
+    mapLat && mapLng
+      ? `https://www.openstreetmap.org/?mlat=${mapLat}&mlon=${mapLng}&zoom=16`
       : `https://www.openstreetmap.org/search?query=${encodeURIComponent(facility.address)}`;
   const osmEmbedUrl =
-    facility.lat && facility.lng
-      ? `https://www.openstreetmap.org/export/embed.html?bbox=${facility.lng - 0.008},${facility.lat - 0.005},${facility.lng + 0.008},${facility.lat + 0.005}&layer=mapnik&marker=${facility.lat},${facility.lng}`
+    mapLat && mapLng
+      ? `https://www.openstreetmap.org/export/embed.html?bbox=${mapLng - 0.008},${mapLat - 0.005},${mapLng + 0.008},${mapLat + 0.005}&layer=mapnik&marker=${mapLat},${mapLng}`
       : null;
   const openingHours = facility.openingHours as Record<string, string> | null;
 
