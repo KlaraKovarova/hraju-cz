@@ -29,21 +29,24 @@ export function SearchBar({ currentCity, sportSlug }: SearchBarProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex gap-2">
-      <div className="relative flex-1">
-        <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400" />
+    <form
+      onSubmit={handleSubmit}
+      className="flex overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition focus-within:border-emerald-300 focus-within:shadow-md focus-within:shadow-emerald-50"
+    >
+      <div className="flex flex-1 items-center gap-2 px-4">
+        <Search className="h-4 w-4 shrink-0 text-zinc-400" />
         <input
           type="text"
-          placeholder="Hledat podle města (např. Praha, Brno…)"
+          placeholder="Hledat podle města (např. Praha, Brno...)"
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          className="w-full rounded-xl border border-zinc-200 bg-zinc-50 py-2.5 pl-9 pr-9 text-sm focus:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-100"
+          className="w-full py-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none"
         />
         {value && (
           <button
             type="button"
             onClick={handleClear}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600"
+            className="text-zinc-400 hover:text-zinc-600"
           >
             <X className="h-4 w-4" />
           </button>
@@ -51,7 +54,7 @@ export function SearchBar({ currentCity, sportSlug }: SearchBarProps) {
       </div>
       <button
         type="submit"
-        className="rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+        className="m-1.5 rounded-xl bg-emerald-600 px-5 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700 focus:outline-none"
       >
         Hledat
       </button>

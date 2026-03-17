@@ -1,3 +1,20 @@
+-- hraju.cz database setup
+-- Run this entire file in phpMyAdmin SQL tab against the hrajucz02 database
+-- It creates all tables AND records the migration so Prisma tracks it correctly.
+
+-- Prisma migration tracking table
+CREATE TABLE IF NOT EXISTS `_prisma_migrations` (
+    `id` VARCHAR(36) NOT NULL,
+    `checksum` VARCHAR(64) NOT NULL,
+    `finished_at` DATETIME(3) NULL,
+    `migration_name` VARCHAR(255) NOT NULL,
+    `logs` TEXT NULL,
+    `rolled_back_at` DATETIME(3) NULL,
+    `started_at` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `applied_steps_count` INTEGER UNSIGNED NOT NULL DEFAULT 0,
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
 -- CreateTable
 CREATE TABLE `Sport` (
     `id` VARCHAR(191) NOT NULL,
@@ -146,3 +163,15 @@ ALTER TABLE `Contact` ADD CONSTRAINT `Contact_facilityId_fkey` FOREIGN KEY (`fac
 -- AddForeignKey
 ALTER TABLE `FacilityImage` ADD CONSTRAINT `FacilityImage_facilityId_fkey` FOREIGN KEY (`facilityId`) REFERENCES `Facility`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
+-- Record migration as applied so Prisma does not try to re-run it
+INSERT INTO `_prisma_migrations` (`id`, `checksum`, `finished_at`, `migration_name`, `logs`, `rolled_back_at`, `started_at`, `applied_steps_count`)
+VALUES (
+    UUID(),
+    'manual',
+    NOW(3),
+    '20260317000000_init',
+    NULL,
+    NULL,
+    NOW(3),
+    1
+);

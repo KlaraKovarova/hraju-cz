@@ -262,7 +262,7 @@ async function dbFacilitiesBySport(
     where: {
       isActive: true,
       sports: { some: { sport: { slug: sportSlug } } },
-      ...(cityFilter ? { location: { city: { contains: cityFilter, mode: "insensitive" } } } : {}),
+      ...(cityFilter ? { location: { city: { contains: cityFilter } } } : {}),
     },
     include: {
       location: { select: { city: true, region: true } },

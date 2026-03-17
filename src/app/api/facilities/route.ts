@@ -10,7 +10,7 @@ export async function GET(request: NextRequest) {
     const facilities = await prisma.facility.findMany({
       where: {
         ...(sport ? { sports: { some: { sport: { slug: sport } } } } : {}),
-        ...(city ? { location: { city: { contains: city, mode: "insensitive" } } } : {}),
+        ...(city ? { location: { city: { contains: city } } } : {}),
       },
       include: {
         location: { select: { city: true, region: true } },
