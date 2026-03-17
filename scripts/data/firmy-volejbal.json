@@ -1,0 +1,2552 @@
+[
+  {
+    "name": "Kurty Hodolany",
+    "address": "Farského 376/14",
+    "city": "Olomouc",
+    "postalCode": "77900",
+    "phone": "+420 737890384",
+    "website": "https://sport-hodolany.cz",
+    "description": "Nabízíme sportovní areál pro celou rodinu, kde si můžete užít tenis, nohejbal a volejbal na antuce. Na našem dětském hřišti se pobaví nejmenší a večer si můžete odpočinout u grilu a baru. Těšíme se na vaši návštěvu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "SK Šťáhlavy (volejbal, beach, nohejbal, tenis)",
+    "address": "Tyršova",
+    "city": "Šťáhlavy",
+    "postalCode": "33203",
+    "phone": "",
+    "website": "http://skstahlavy.cz",
+    "description": "Provozujeme venkovní antukové kurty a volejbalové hřiště určené pro beach volejbal. K dispozici jsou 3 antukové kurty.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Správa majetku města Vyškova - Tenisový a beachvolejbalový kurt",
+    "address": "Čtvrtníčkova",
+    "city": "Vyškov",
+    "postalCode": "68201",
+    "phone": "+420 724924725",
+    "website": "http://www.smmvyskova.cz",
+    "description": "Provozujeme antukový tenisový kurt a pískový kurt pro plážový volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Penzion u Röselů - tenisový kurt",
+    "address": "Železná Ruda, Hojsova Stráž 63",
+    "city": "Hojsova Stráž 63",
+    "postalCode": "34022",
+    "phone": "+420 602687081",
+    "website": "http://www.uroselu.cz",
+    "description": "Provozujeme multifunkční hřiště s veškerým vybavením na tenis a badminton, volejbal, nohejbal – otevřeno pro ubytované i pro příchozí veřejnost. K dispozici je tenisové cvičné dělo, cvičná zeď, půjčovna veškerého vybavení. Zázemí – občerstvení, restaurace, šatny se sprchou. Pořádáme tenisové kurzy.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní zařízení města Kroměříže - tenisové kurty",
+    "address": "Obvodová 3474/11",
+    "city": "Kroměříž",
+    "postalCode": "76701",
+    "phone": "+420 777411918",
+    "website": "https://www.szmk.cz",
+    "description": "Provoz čtyř antukových kurtů - dva na tenis a dva na volejbal či nohejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Oddíl volejbalu TJ Sokol Řepy",
+    "address": "Na chobotě 125/2b",
+    "city": "Praha",
+    "postalCode": "16300",
+    "phone": "",
+    "website": "https://volejbalrepy.proweb.cz/",
+    "description": "Antukové kurty městské části Praha 17 ve správě TJ Sokol Řepy. Vstup je buď z jižní strany, od parkoviště u fotbalového hříště z ulice Engelmüllerova, nebo ze severní strany, z ulice Žalanského. Areál je uzamčený, pronájem možný po domluvě s vedením TJ.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisové kurty Lužánky",
+    "address": "Lidická 1880/50",
+    "city": "Brno",
+    "postalCode": "60200",
+    "phone": "+420 604311640",
+    "website": "https://www.ts4hand.cz",
+    "description": "Provozujeme čtyři antukové kurty a obchod s tenisovou výbavou a doplňky. Poskytujeme možnost výpletu tenisových raket. Půjčujeme rakety a míčky.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisové kurty Dneboh",
+    "address": "Mnichovo Hradiště, Dneboh",
+    "city": "Dneboh",
+    "postalCode": "29501",
+    "phone": "",
+    "website": "http://facebook.com/tenisdneboh",
+    "description": "Sportovní areál nabízí 2 tenisové kurty a jeden víceúčelový (nohejbal, volejbal). Využití kurtů je samoobslužné, rezervace se vytváří v tabulce na věži vedle kurtů, kde se po skončení hry také platí. Je možné si zde vypůjčit tenisové rakety a míčky.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Obec Těchlovice - antukový kurt",
+    "address": "Těchlovice",
+    "city": "Těchlovice",
+    "postalCode": "40502",
+    "phone": "+420 776414997",
+    "website": "http://www.techlovice-dc.cz",
+    "description": "Obec provozuje antukový kurt k hraní volejbalu či tenisu. Hřiště je k dispozici jak občanům Těchlovic, tak i všem návštěvníkům z okolí.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Beach volejbal Hradec Králové",
+    "address": "Hradec Králové",
+    "city": "Hradec Králové",
+    "postalCode": "50003",
+    "phone": "+420 724125322",
+    "website": "",
+    "description": "Provozujeme hřiště na plážový volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisové kurty Paulát",
+    "address": "Resslova 1597/1",
+    "city": "Havířov",
+    "postalCode": "73601",
+    "phone": "+420 739334045",
+    "website": "",
+    "description": "Stávající areál tenisových dvorců se skládá ze 4 tenisových kurtů s antukovým povrchem. Součástí areálu je i oplocené hřiště na volejbal nebo nohejbal, cvičná zeď, budova se šatnami, klubovnou a potřebným sociálním zázemím. Rakety i míčky Vám rádi zapůjčíme.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisové kurty - LÁZNĚ LIBVERDA, a.s.",
+    "address": "Lázně Libverda",
+    "city": "Lázně Libverda",
+    "postalCode": "46362",
+    "phone": "+420 482368111",
+    "website": "https://www.lazne-libverda.cz/cz/aktivity-leto",
+    "description": "Nabízíme využití antukového tenisového kurtu pro lázeňské hosty i pro veřejnost. Nabízíme možnost zapůjčení tenisového vybavení, hřiště a míče pro volejbal a nohejbal, badminton a další.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "PANDA SPORT - Tenisové kurty",
+    "address": "Máchova ev. č. 457",
+    "city": "Stráž pod Ralskem",
+    "postalCode": "47127",
+    "phone": "+420 733735830",
+    "website": "http://pandasport.cz",
+    "description": "Provozujeme pět tenisových kurtů s antukovým povrchem a 1 dvorec na volejbal a nohejbal. V nepříznivém počasí je možné využít sportovní halu s kurtem s umělým povrchem. Pro návštěvníky je k dispozici zázemí sportovní haly včetně sociálního zařízení a restaurace s venkovní terasou.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisový kurt Bc. Jana Faldynová",
+    "address": "Ostravice 6",
+    "city": "Ostravice",
+    "postalCode": "73914",
+    "phone": "+420 739271087",
+    "website": "https://www.hospudkasauna.cz",
+    "description": "Provoz tenisového antukového kurtu. Kurt je určený pro tenis, volejbal a nohejbal. Poblíž kurtu jsou lavičky k sezení. Lze si zapůjčit tenisové rakety a míčky nebo i volejbalový balón.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Volejbalové kurty Lužánky",
+    "address": "Drobného 300/27",
+    "city": "Brno",
+    "postalCode": "60200",
+    "phone": "+420 775766591",
+    "website": "https://www.volejbal-luzanky.cz",
+    "description": "Volejbalové kurty s příjemným posezením u místního bufetu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "KNOR - Tenisové kurty a sportoviště",
+    "address": "Na Stráni 1630",
+    "city": "Čelákovice",
+    "postalCode": "25088",
+    "phone": "+420 733151793",
+    "website": "https://www.knortenis.cz/",
+    "description": "Specializujeme se na výstavbu i rekonstrukce antukových tenisových kurtů a kurtů s umělým povrchem. Nabízíme jarní údržby kurtů, rekonstrukce antukových kurtů po zimním provozu v přetlakových halách, vybavení sportovišť a montáže přetlakových hal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisové kurty Horní Měcholupy",
+    "address": "Hornoměcholupská 564/105",
+    "city": "Praha",
+    "postalCode": "10900",
+    "phone": "+420 606916916",
+    "website": "https://www.tenisduda.cz/",
+    "description": "Provoz 2 krytých a 5 venkovních kurtů s antukovým povrchem. Nabídka služeb tenisové školy. Prodej a servis kompletního tenisového vybavení. K dispozici je bar, šatny a parkoviště. Zajišťujeme individuální tréninky.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Plážový volejbal - ESMARIN - Sportovně relaxační centrum",
+    "address": "Lhotecká 1535",
+    "city": "Mníšek pod Brdy",
+    "postalCode": "25210",
+    "phone": "+420 702005006",
+    "website": "https://www.esmarin.cz",
+    "description": "Provozujeme nafukovací (3 kurty) i pevnou (1 kurt) tenisovou halu s hřištěm na florbal, nohejbal či volejbal a 4 kurty na badminton (celoročně). V létě je k dispozici 6 antukových kurtů na tenis, 2 na nohejbal/volejbal a 1 hřiště na beach volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Beach volejbal Veselí nad Moravou",
+    "address": "Zámecká 29",
+    "city": "Veselí nad Moravou",
+    "postalCode": "69801",
+    "phone": "+420 774145164",
+    "website": "https://www.koupaliste-veseli.cz/plazovy-volejbal/d-1007/p1=1022",
+    "description": "Dva kurty pro plážový volejbal. Nutná rezervace. Bez předchozí domluvy není možné hřiště využívat.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Koupaliště Riviéra - Beach volejbal",
+    "address": "Bauerova 322/7",
+    "city": "Brno",
+    "postalCode": "60300",
+    "phone": "+420 533033800",
+    "website": "https://www.starez.cz",
+    "description": "Zahrát si můžete beach volejbal nebo vyzkoušet beach tenis a air badminton. Vše, co pro plážové sporty potřebujete si můžete vypůjčit ve stánku přímo u kurtů. Pozor, kurty na volejbal je třeba předem rezervovat.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisový kurt Losina",
+    "address": "Chotěšov, Losina 4",
+    "city": "Losina 4",
+    "postalCode": "33301",
+    "phone": "+420 606158254",
+    "website": "http://www.sportcentrumlosina.cz",
+    "description": "Provozujeme sportovní halu na squash, wallybal, venkovní antukový tenisový kurt, hřiště na nohejbal, klasický i plážový volejbal. K dispozici je parkování v areálu, půjčovna společenských her a sportovního vybavení.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Horské lázně Karlova Studánka",
+    "address": "Karlova Studánka 6",
+    "city": "Karlova Studánka",
+    "postalCode": "79324",
+    "phone": "+420 554798111",
+    "website": "https://www.horskelazne.cz",
+    "description": "Lázně celoročně nabízejí rekreační, relaxační a rodinné pobyty v krásné přírodě Jeseníků. Ideální podmínky pro turistiku, cykloturistiku a lyžování, kurty na tenis a volejbal. Lázně pro zdraví a zdravý životní styl. Můžete využít i náš bazénový komplex se saunou a párou a whirlpool pro max. 6 osob.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Volejbalové kurty města Pelhřimov",
+    "address": "Nádražní 2245",
+    "city": "Pelhřimov",
+    "postalCode": "39301",
+    "phone": "+420 724782831",
+    "website": "https://www.sportpe.cz",
+    "description": "Volejbalové kurty provozujeme pod správou volejbalového oddílu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TJ Břevnov",
+    "address": "Tomanova 2480/5",
+    "city": "Praha",
+    "postalCode": "16900",
+    "phone": "+420 603806002",
+    "website": "https://www.tenisbrevnov.cz",
+    "description": "Provozujeme tenisové kurty a nově také přetlakovou tenisovou halu. Vedeme tenisový a volejbalový oddíl. Pořádáme turnaje.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TENISCENTRUM JIHLAVA, a.s.",
+    "address": "Mostecká 3700/24",
+    "city": "Jihlava",
+    "postalCode": "58601",
+    "phone": "+420 607183578",
+    "website": "https://www.teniscentrum-ji.cz",
+    "description": "Správa a provoz 8 venkovních antukových tenisových kurtů a 5 tenisových kurtů s umělým povrchem ve sportovních halách. Navíc 4 badmintonové a 2 squashové kurty. V jedné z tenisových hal je také možné provozovat košíkovou, florbal, volejbal, nohejbal a nově i pickleball.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tělovýchovná jednota Střížkov, z.s.",
+    "address": "Habartická 200/5",
+    "city": "Praha",
+    "postalCode": "19000",
+    "phone": "+420 733109252",
+    "website": "http://www.tjstrizkov.cz/",
+    "description": "Provoz sportovního oddílu turistiky, odbíjené a stolního tenisu. Možnost pronájmu sportovišť. Nabízíme tělocvičnu a venkovní areál antukových kurtů na volejbal a nohejbal. Zajišťujeme sportovní vybavení a zázemí. K dispozici jsou 2 antukové kurty, míče a šatny, v tělocvičně 3 stoly na stolní tenis.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisový oddíl SK Aritma Praha",
+    "address": "Nad lávkou 672/5",
+    "city": "Praha",
+    "postalCode": "16000",
+    "phone": "+420 774711566",
+    "website": "https://www.tenisservis.cz",
+    "description": "Nabízíme tenisový servis v areálu SK Aritma. K dispozici máme celkem 10 tenisových dvorců, v zimě přetlakovou halu nebo 3 kurty pro mini-tenis. Poskytujeme vyplétání a opravy tenisových, squashových raket. Provozujeme tenisovou školu. Zajišťujeme prodej zboží Head, Babolat, Tecnifibre.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TENIS-CENTRUM DTJ HK",
+    "address": "U Labe 427/1",
+    "city": "Hradec Králové",
+    "postalCode": "50002",
+    "phone": "+420 606364434",
+    "website": "https://www.teniscentrumhk.cz",
+    "description": "Provozujeme 13 antukových kurtů, 10 kurtů v nafukovací hale, 1 kurt pro plážový volejbal a 2 antukové kurty pro volejbal či nohejbal. Dále prodáváme tenisové vybavení s širokou nabídkou tenisových výpletů a provádíme servis tenisových raket.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenis Centrum Donovalská",
+    "address": "Donovalská 1684/40",
+    "city": "Praha",
+    "postalCode": "14900",
+    "phone": "+420 603856063",
+    "website": "https://tcdonovalska.cz",
+    "description": "Provozujeme sportovní areál zaměřený na tenis. V komplexu se nachází tenisová hala, antukové kurty a víceúčelové hřiště. Dále nabízíme služby tenisové školy či tréninky se zkušeným trenérem. K dispozici máme též hřiště na plážový volejbal nebo umělou trávu na kopanou.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TJ Zvíkov",
+    "address": "Zahradní 35",
+    "city": "Zvíkov",
+    "postalCode": "37372",
+    "phone": "+420 602177754",
+    "website": "",
+    "description": "Provozujeme tělovýchovnou jednotu se zaměřením na volejbal a tenis. Pořádáme turnaje či soutěže a kulturní i společenské akce. Zajišťujeme možnost pronájmu antukového kurtu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenis Cibulka",
+    "address": "V stráni 485/11",
+    "city": "Praha",
+    "postalCode": "15000",
+    "phone": "+420 608504072",
+    "website": "https://teniscibulka.cz",
+    "description": "Provozujeme 8 venkovních antukových kurtů na tenis, dvě pevné haly s umělých povrchem a sociálním zázemím, 4 kurty na badminton a 2 stoly na stolní tenis. Dále je možné hrát volejbal, fotbal, šipky a pétanque. Prodáváme a půjčujeme tenisové příslušenství. K dispozici je připojení k WiFi.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisový Klub Frýdlant",
+    "address": "Jizerská 4077",
+    "city": "Frýdlant",
+    "postalCode": "46401",
+    "phone": "+420 777312171",
+    "website": "",
+    "description": "Nabízíme pronájem kurtů a hřiště na plážový volejbal. K dispozici je i dětské hřiště a Wi-Fi připojení. Pořádáme tenisové kempy, soustředění, firemní turnaje a jiné akce. V areálu je možnost si zahrát stolní tenis, fotbal nebo petangue a zakoupit tenisové míčky. Naleznete u nás také krytou halu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenis centrum Lužiny",
+    "address": "Zázvorkova 1480/11",
+    "city": "Praha",
+    "postalCode": "15500",
+    "phone": "+420 731011110",
+    "website": "https://www.tenis-luziny.cz/",
+    "description": "Provozujeme pevnou halu se 3 tenisovými kurty s umělým povrchem, 4 kurty na badminton a tenisovou školku. K dispozici je venkovní víceúčelové hřiště. Pořádáme letní kempy a soustředění. Nabízíme výplety raket. Prodáváme sportovní oblečení a příslušenství.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportkemp Orlík - Velký vír",
+    "address": "Mirovice, Kakovice 7",
+    "city": "Kakovice 7",
+    "postalCode": "39804",
+    "phone": "+420 736103150",
+    "website": "https://www.sportkemporlik.cz",
+    "description": "Provozujeme tenisové a nohejbalové kurty s možností občerstvení a ubytování. Možnost zapůjčení sportovních potřeb, motorových člunů, skútrů, horských kol či hry stolního tenisu, kriketu, badmintonu, stolního fotbalu, petangu, líného tenisu, nohejbalu či volejbalu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TK Millenium Lety",
+    "address": "Pražská 454",
+    "city": "Lety",
+    "postalCode": "25229",
+    "phone": "+420 731690690",
+    "website": "http://www.tenisdobrichovice.cz",
+    "description": "Provoz pevné haly se 2 kurty s australským grandslamovým tenisovým povrchem, který je vhodný pro rekreační hru, výuku, vrcholný tenis, basketbal, volejbal nebo netball. Nabídka zapůjčení raket. V objektu se nachází horizontální a vertikální solárium a sportbar. Zajišťujeme možnost občerstvení.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportcentrum Neugi o.s.",
+    "address": "Na Drahách",
+    "city": "Žamberk",
+    "postalCode": "56401",
+    "phone": "+420 605551722",
+    "website": "",
+    "description": "Provozujeme tenisové kurty. Nabízíme prodej potřebo pro tenis.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "SK Štětí",
+    "address": "Čs. armády 51",
+    "city": "Štětí",
+    "postalCode": "41108",
+    "phone": "+420 602220838",
+    "website": "https://www.sk-steti.cz",
+    "description": "Provozujeme sportovní kluby. Vedeme družstva florbalu, fotbalu, volejbalu, stolního tenisu a tenisu, kanoistiky a jachtingu. Sdružujeme zájemce o sport a skateboarding. Provozujeme tenisové kurty a halu stolního tenisu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisový klub Brno-Chrlice",
+    "address": "Blümlova",
+    "city": "Brno",
+    "postalCode": "64300",
+    "phone": "+420 733228931",
+    "website": "http://www.brno-tenis.cz",
+    "description": "Provozujeme 9 tenisových kurtů, 1 kurt na volejbal či nohejbal. Rezervace online. V areálu se nachází i hřiště na volejbal, basketbal a malou kopanou.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Fotbalový klub Véska",
+    "address": "Dolany, Véska 68",
+    "city": "Véska 68",
+    "postalCode": "78316",
+    "phone": "+420 732502065",
+    "website": "",
+    "description": "Provozujeme fotbalový klub. Poskytujeme možnost využití tenisového hřiště pro tenis, nohejbal, volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní klub Zdravotník, o.s.",
+    "address": "Karla Čapka 589",
+    "city": "Písek",
+    "postalCode": "39701",
+    "phone": "+420 382772104",
+    "website": "",
+    "description": "Provozujeme pět antukových kurtů, jeden kurt na nohejbal či volejbal a jeden dvorec s umělým povrchem, který je v zimě překrytý nafukovací halou. K dispozici je občerstvení, klubovna, šatny a sprchy. Zajišťujeme možnost pronájmu klubovny k soukromým společenským akcím do 40 osob.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisové Centrum Olšanská",
+    "address": "Chelčického",
+    "city": "Praha",
+    "postalCode": "13000",
+    "phone": "+420 606810852",
+    "website": "http://www.tenisolsanska.cz",
+    "description": "Provozujeme tenisové kurty, haly či víceúčelové hřiště. K sportovnímu vyžití je zde prostor také pro fotbal, nohejbal, házenou, košíkovou, volejbal, floorball a badminton. Možnost zapůjčení raket, využití služeb trenérů či sparing.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisový klub TK DEZA Valašské Meziříčí",
+    "address": "Kouty 26",
+    "city": "Valašské Meziříčí",
+    "postalCode": "75701",
+    "phone": "+420 606762922",
+    "website": "https://www.tenisdeza.cz",
+    "description": "Provozujeme čtrnáct tenisových kurtů s antukovým povrchem a tenisovou halu se dvěma kurty s pevným povrchem. Provozujeme tenisovou školku pro děti a kondiční hodiny pro dospělé. K dispozici je restaurace s barem a terasou, půjčovna a prodejna s nabídkou sportovních potřeb.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní areál LAMA",
+    "address": "Gudrichova 762",
+    "city": "Hradec nad Moravicí",
+    "postalCode": "74741",
+    "phone": "+420 553654228",
+    "website": "https://www.sportlama.cz",
+    "description": "Provoz sportovního areálu. K dispozici jsou tenisové kurty a hřiště na beach-volejbal. Pořádáme turnaje tenisu ve čtyřhře. Dále je zde k dispozici dětský kurt a cvičná tenisová stěna.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenis Černovice",
+    "address": "Štolcova 551/8",
+    "city": "Brno",
+    "postalCode": "61800",
+    "phone": "+420 605476309",
+    "website": "https://www.teniscernovice.cz",
+    "description": "Provozujeme 3 tenisové a 2 beach volejbalové kurty. Zajistíme výuku tenisu pro dospělé a dětskou tenisovou školičku. Vyplétáme tenisové a squashové rakety. Prodáváme tenisové rakety, výplety a doplňky. K dispozici letní zahrádka s občerstvením(gril, pizza, točené piva, limonády) a dětské hřiště.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní klub Metylovice",
+    "address": "Metylovice 466",
+    "city": "Metylovice",
+    "postalCode": "73949",
+    "phone": "+420 605245640",
+    "website": "https://www.skmetylovice.cz",
+    "description": "Sdružujeme oddíly kopané, volejbalu, nohejbalu a sportu pro všechny. Provozujeme fotbalový areál s volejbalovým, tenisovým a beach kurtem.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TK Ústí nad Labem s.r.o.",
+    "address": "Masarykova 974/232",
+    "city": "Ústí nad Labem",
+    "postalCode": "40001",
+    "phone": "+420 472743196",
+    "website": "http://www.tenisusti.cz",
+    "description": "Provozujeme 8 antukových kurtů, 2 kurty s umělým povrchem a pevnou halu. Možnost konání soukromých turnajů. K dispozici je bar. Nabídka vyplétání tenisových raket. Provoz tenisové školy pro mládež. Prodej tenisového vybavení.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní areál Strupčice",
+    "address": "Strupčice 77",
+    "city": "Strupčice",
+    "postalCode": "43114",
+    "phone": "+420 724920869",
+    "website": "https://www.obec-strupcice.cz/sportovni-areal-a-hala/kontakt/",
+    "description": "Provoz sportovního areálu s hřištěm na plážový volejbal, petanque, nohejbal a basketbal. K dispozici jsou tenisové kurty a tréninkové travnaté hřiště.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenis club Xaverov",
+    "address": "Božanovská 2098",
+    "city": "Praha",
+    "postalCode": "19300",
+    "phone": "+420 777367999",
+    "website": "",
+    "description": "Provozujeme dva tenisové kurty s celoročním provozem a tenisovou školu pro děti i dospělé. Dále nabízíme možnost využít kurt na nohejbal, volejbal nebo minitenis. V zimě jsou dvorce kryté nafukovací halou. K dispozici je parkování přímo v areálu. Pořádáme sportovní dny nebo komerční akce na míru.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Klub Freud",
+    "address": "Ostravice 190",
+    "city": "Ostravice",
+    "postalCode": "73914",
+    "phone": "+420 603521036",
+    "website": "https://www.hotelfreud.cz",
+    "description": "Nabízíme výjimečné prostředí, 2 profesionální tenisové kurty, hřiště na plážový volejbal, saunu, relaxační místnost a neobyčejný výběr kvalitních nápojů, skvělé kávy, dortíků a místních specialit.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisový klub Písečná s.r.o., s.r.o.",
+    "address": "K sadu 590/1",
+    "city": "Praha",
+    "postalCode": "18200",
+    "phone": "+420 725843649",
+    "website": "http://www.tenis-pisecna.cz",
+    "description": "Provozujeme tenisový klub. Nabízíme 5 antukových venkovních kurtů, 2 kurty na beachvolejbal a beachtenis, kurt na minitenis, antukový kurt na nohejbal či volejbal odrazovou stěnu, hard kurt s umělým povrchem a 2 antukové kurty v přetlakové hale. Nabízíme výuku tenisu pro děti a dospělé.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Hala Suchdol",
+    "address": "Záhumení 605",
+    "city": "Suchdol nad Odrou",
+    "postalCode": "74201",
+    "phone": "+420 607088716",
+    "website": "https://www.halasuchdol.cz",
+    "description": "Vlastníme a provozujeme krytou sportovní halu. Ocelová konstrukce zastřešuje tři tenisové kurty, dva badmintonové a fitness s tělocvičnou TRX.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní areál Hamr",
+    "address": "Záběhlická",
+    "city": "Praha",
+    "postalCode": "10600",
+    "phone": "+420 272772762",
+    "website": "https://www.hamrsport.cz/arealy/zabehlice",
+    "description": "V areálu jsou tenisové, beachvolejbalové a squashové kurty, stoly na stolní tenis, sály pro aerobik a indoor cycling, fitnesscentrum masáže a fyzioterapie. Organizujeme školu beachvolejbalovou, tenisovou, badmintonovou, squashovou, fotbalovou a stolního tenisu, vytváříme tréninkové a výživové plány.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisová akademie Poříčí",
+    "address": "Pod Lutovem 364",
+    "city": "Poříčí nad Sázavou",
+    "postalCode": "25721",
+    "phone": "+420 603209300",
+    "website": "https://tenisporici.cz/",
+    "description": "Provozujeme dva antukové tenisové kurty a halu s tenisovým kurtem a pevným povrchem. Dále také tréninkovou zeď, hřiště na plážový volejbal, dvě bowlingové dráhy, posilovnu, tělocvičnu se zrcadly a masážní služby.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenis - Slapy Ždáň",
+    "address": "Slapy 350",
+    "city": "Slapy",
+    "postalCode": "25208",
+    "phone": "+420 721907329",
+    "website": "https://www.slapytenis.cz/",
+    "description": "Zahrajte si tenis, volejbal nebo nohejbal na Ždáni - Slapy, hned vedle bezplatné travnaté pláže u Slapské přehrady, jen 33 km od Prahy.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní areál Pašovice",
+    "address": "Pašovice",
+    "city": "Pašovice",
+    "postalCode": "68756",
+    "phone": "+420 572672272",
+    "website": "https://www.pasovice.cz",
+    "description": "Provozujeme víceúčelový sportovní areál, jehož součástí jsou dvě multifunkční hřiště s umělým povrchem, koupaliště a dětské hřiště. Jedno z multifunkčních hřišť je určeno primárně pro malý fotbal a jeho součástí je umělé osvětlení. Na druhém lze hrát tenis, volejbal, nohejbal, basketbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Město Česká Skalice - Sportovní hala",
+    "address": "Sportovní 38",
+    "city": "Česká Skalice",
+    "postalCode": "55203",
+    "phone": "+420 491452010",
+    "website": "http://www.ceskaskalice.cz/cs/nase-mesto/sport/seznam-sportovist/sportovni-hala.html",
+    "description": "Provozujeme sportovní halu na sálové sporty, fotbal, tenis, basketbal, volejbal, gymnastika, šachy, florbal a další.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisová hala - Golf resort Kunětická hora",
+    "address": "Dříteč 195",
+    "city": "Dříteč",
+    "postalCode": "53305",
+    "phone": "+420 777822242",
+    "website": "https://www.teniscentrumhk.cz",
+    "description": "Celoročně provozujeme 3 tenisové kurty.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní areál Masná",
+    "address": "Masná",
+    "city": "Praha",
+    "postalCode": "11000",
+    "phone": "+420 724172309",
+    "website": "https://hristemasna.webnode.cz",
+    "description": "Náš areál je určený pro provozování nejrůznějších sportovních disciplín: tenis, fotbal, volejbal, nohejbal, basketbal a jiné. Součástí areálu je také dětské hřiště s různými atrakcemi pro nejmenší - pískoviště, houpačky a další. Areál je vybaven dvěma komfortními šatnami se sprchami a toaletami.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "SPORTCENTRUM VITALITY, s.r.o.",
+    "address": "Sadová 746",
+    "city": "Březnice",
+    "postalCode": "26272",
+    "phone": "+420 318543029",
+    "website": "http://www.tenisova-skola.cz",
+    "description": "Součástí areálu je pět venkovních antukových kurtů a 2 kryté halové kurty. Všechny kurty jsou obklopeny zelení a řekou, to vše v tichém a příjemném prostředí. Celý venkovní areál je ideálním místem pro pořádání sportovně společenských a firemních akcí.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Technická správa města Žatec - Sportoviště",
+    "address": "Bílý vrch 3184",
+    "city": "Žatec",
+    "postalCode": "43801",
+    "phone": "+420 724956507",
+    "website": "https://www.tsmzatec.cz",
+    "description": "Provozujeme hřiště na tenis, volejbal, nohejbal, hokejbal a ovál pro in-line bruslení. V areálu se nachází i WC se sprchami. Na sportovišti je také dětské hřiště.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenis Tami",
+    "address": "Jáchymovská 613/1",
+    "city": "Praha",
+    "postalCode": "15500",
+    "phone": "+420 732742333",
+    "website": "http://www.tenistami-reporyje.cz",
+    "description": "Provozujeme kurty pro tenis a beach volejbal. Umožňujeme jejich pronájem. V areálu se nacházejí sprchy, šatny a WC.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tsport Votice",
+    "address": "Masarykovo nám. 937",
+    "city": "Votice",
+    "postalCode": "25901",
+    "phone": "+420 728033612",
+    "website": "https://www.tsportvotice.cz",
+    "description": "Máme 3 venkovní antukové kurty, 2 vnitřní tenisové kurty v pevné hale s moderním povrchem Classic Clay, 4 badmintonová hřiště, bowling (dvě dráhy Brunswick).",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní areál Hamr",
+    "address": "Vltavanů",
+    "city": "Praha",
+    "postalCode": "14300",
+    "phone": "+420 244462467",
+    "website": "",
+    "description": "Nabízíme služby sportovního areálu s tenisovými, beachvolejbalovými a badmintonovými kurty, půjčovnou in-line, fotbalovým hřištěm.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportoviště Kemp Štěkeň",
+    "address": "Podskalí",
+    "city": "Štěkeň",
+    "postalCode": "38751",
+    "phone": "+420 777409059",
+    "website": "https://www.facebook.com/profile.php?id=61576198380646",
+    "description": "Provozujeme 2 antukové tenisové kurty a 2 hřiště na volejbal nebo nohejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Beachklub Ládví",
+    "address": "Chabařovická 1125/4",
+    "city": "Praha",
+    "postalCode": "18200",
+    "phone": "+420 608862740",
+    "website": "https://www.beachklubladvi.cz",
+    "description": "Provozujeme beachvolejbalový areál s 18 kurty. Pořádáme dětské kroužky, kempy pro dospělé a turnaje. V areálu je restaurace, obří trampolína pro děti zdarma, dětské hřiště i petanque. Nabízíme kondiční tréninky a individuální tréninky plážového volejbalu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "POD SVAHEM - Gladiator fitness",
+    "address": "Štursova 362/71",
+    "city": "Ústí nad Labem",
+    "postalCode": "40010",
+    "phone": "+420 725925102",
+    "website": "http://www.vodkan.cz/sportovni-areal",
+    "description": "Provozujeme sportovní areál. Nabízíme pořádání sportovních setkání a turnajů pro zájmové skupiny. Pravidelná příprava dětí v oddílu tenis, šachy volejbal. Součástí areálu 2 x kurt antuka 2 x kurt beach kurt na volejbal, posilovna a sauna.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Městská sportovní Třeboň",
+    "address": "Lázeňská",
+    "city": "Třeboň",
+    "postalCode": "37901",
+    "phone": "+420 724347458",
+    "website": "http://www.ms-trebon.cz",
+    "description": "Provoz hřiště na plážové hřiště. K dispozici jsou tři kurty na beach volejbal. Provoz sportoviště řízen týdenními plány dle rezervačního systému a obsazenosti.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sokolák",
+    "address": "Brno, Kníničky ev. č. 149",
+    "city": "Kníničky ev. č. 149",
+    "postalCode": "63500",
+    "phone": "",
+    "website": "https://www.sokolak.cz",
+    "description": "Provozujeme 6 kurtů na plážový volejbal, 1 kurt na beach tenis a 1 kurt na badminton.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní areál HROCH",
+    "address": "Brno, Komín ev. č. 677",
+    "city": "Komín ev. č. 677",
+    "postalCode": "62400",
+    "phone": "+420 775761414",
+    "website": "https://www.sporthroch.cz",
+    "description": "Provozujeme multifunkční hřiště. Naleznete u nás univerzální hřiště na futsal, basketbal, nohejbal a volejbal, dále disponujeme plážovými kurty, hřištěm na baseball či pétanque.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "CITY BEACH Brno",
+    "address": "Opuštěná",
+    "city": "Brno",
+    "postalCode": "60200",
+    "phone": "+420 737449818",
+    "website": "https://www.citybeach.cz",
+    "description": "Nabízíme pronájem kurtů na plážový volejbal a na plážový tenis. Veřejnost si u nás může zarezervovat kurt ad hoc. Pro firmy, organizace a skupiny kamarádů nabízíme výhodný dlouhodobý pronájem na celou sezonu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Beachvolejbal - TJ Neratovice",
+    "address": "Kpt. Jaroše 233/26",
+    "city": "Neratovice",
+    "postalCode": "27711",
+    "phone": "+420 777690322",
+    "website": "https://www.tjneratovice.cz/index.php/sportoviste/beach",
+    "description": "Provozujeme hřiště pro plážový volejbal. Před vstupem na kurt je vybudován prostor s lavičkami a sprchou.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Areál Císařská louka - Beach volleyball",
+    "address": "Císařská louka ev. č. 4",
+    "city": "Praha",
+    "postalCode": "15000",
+    "phone": "+420 607691150",
+    "website": "https://cisarska-louka.cz",
+    "description": "Provozujeme dva kurty na plážový volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Koupaliště Morkovice-Slížany",
+    "address": "Kolaříkova",
+    "city": "Morkovice-Slížany",
+    "postalCode": "76833",
+    "phone": "+420 608044976",
+    "website": "",
+    "description": "Provozujeme venkovní koupaliště s velkým plaveckým bazénem a brouzdalištěm. K dispozici je půjčovna slunečníků, lehátek, sportovního náčiní a hraček, dále kurt na plážový volejbal, bufet s venkovním posezením a připojení k Wi-Fi.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní centrum Losina",
+    "address": "Chotěšov, Losina 4",
+    "city": "Losina 4",
+    "postalCode": "33301",
+    "phone": "+420 606158254",
+    "website": "http://www.sportcentrumlosina.cz",
+    "description": "Provozujeme sportovní halu na squash, antukový tenisový kurt, hřiště na nohejbal, klasický i plážový volejbal. Zajišťujeme možnost hrát ruské kuželky a petanque. K dispozici je parkování v areálu, půjčovna společenských her a sportovního vybavení.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TJ tenis a odbíjená Merklín",
+    "address": "Merklín 152",
+    "city": "Merklín",
+    "postalCode": "36234",
+    "phone": "+420 603438589",
+    "website": "https://tenisavolejbalmerklin.websnadno.cz",
+    "description": "Provozujeme tenisový areál v obci Merklín. Najdete zde dva tenisové antukové kurty, jeden tenisový kobercový kurt, jeden volejbalový antukový kurt vhodný i pro nohejbal, jedno hřiště na plážový volejbal, jedno víceúčelové hřiště na fotbálek nebo košíkovou.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní klub Luby, z. s.",
+    "address": "Petra Bezruče ev. č. 35",
+    "city": "Luby",
+    "postalCode": "35137",
+    "phone": "+420 723259769",
+    "website": "https://skluby.wbs.cz",
+    "description": "Tenisové kurty (3 venkovní dvorce), plážový volejbal (2 venkovní dvorce) - po rychlé přestavbě možnost hry plážového fotbalu. Aktivní oddíl tenisu a házené.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Gross Tenis Club Nová Ves, z.s.",
+    "address": "Nová Ves 63",
+    "city": "Nová Ves",
+    "postalCode": "66491",
+    "phone": "+420 734148630",
+    "website": "http://www.tenisclub.cz",
+    "description": "Jedná se o sportovní areál, ve kterém se nachází dva antukové dvorce s celoročním provozem, pískové hřiště na plážový volejbal a plážový fotbal, tréninková zeď s betonovým hřištěm na minitenis, bazén se slanou vodou.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní areál Mečeříž",
+    "address": "Mečeříž",
+    "city": "Mečeříž",
+    "postalCode": "29477",
+    "phone": "+420 737454206",
+    "website": "",
+    "description": "Provozujeme tenisové kurty. Na kurtech je možnost hraní i nohejbalu a volejbalu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenis - Sportovní hala Dačice",
+    "address": "Sokolská 40",
+    "city": "Dačice V",
+    "postalCode": "38001",
+    "phone": "+420 774035886",
+    "website": "https://www.dasport.cz",
+    "description": "Provozujeme sportovní halu se sezónními i celoročními aktivitami. Areál je vhodný jak pro kolektivní sporty, tak pro individuální disciplíny. Mezi aktivity v areálu patří futsal, florbal, volejbal, tenis, basketbal, aerobic, badminton, gymnastika, stolní tennis a podobně.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Technické služby Humpolec - Sportovní areál",
+    "address": "Vilová 1637",
+    "city": "Humpolec",
+    "postalCode": "39601",
+    "phone": "+420 724340823",
+    "website": "https://www.tshumpolec.cz",
+    "description": "Provozujeme dva antukové kurty na tenis a volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "DOKAS Dobříš - venkovní hřiště",
+    "address": "Školní 36",
+    "city": "Dobříš",
+    "postalCode": "26301",
+    "phone": "+420 318522590",
+    "website": "https://dokas.cz",
+    "description": "Provozujeme 3 venkovní nohejbalová antuková hřiště, 2 hřiště beach volejbal a 1 hřiště plážový fotbálek.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisový klub Rochlice",
+    "address": "Na Žižkově 1080/40a",
+    "city": "Liberec VI-Rochlice",
+    "postalCode": "46006",
+    "phone": "+420 724953482",
+    "website": "http://www.tenis-liberec.cz",
+    "description": "Provozujeme tenisový klub s kurty. K dispozici je 6 venkovních antukových kurtů, dětský mini kurt, cvičná stěna i hřiště na beach volejbal. V zimní sezóně jsou k dispozici 3 antukové kurty v přetlakové hale. Poskytujeme kurzy tenisu pro děti i dospělé.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisový areál - TJ Sokol Dolní Beřkovice",
+    "address": "Nádražní 263",
+    "city": "Dolní Beřkovice",
+    "postalCode": "27701",
+    "phone": "+420 606566993",
+    "website": "",
+    "description": "Provozujeme tenisový areál s možností pronájmu pro podnikové sportovní akce či tenisovým svazům. Kurty je možné pronajmout i veřejnosti. K dispozici jsou antukové dvorce, odrazová stěna, oddělené šatny pro domácí i hosty či asfaltové dvorce pro nohejbal a volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TJ Baník Stříbro",
+    "address": "Palackého 1269",
+    "city": "Stříbro",
+    "postalCode": "34901",
+    "phone": "+420 608155828",
+    "website": "https://www.tjbanikstribro.cz",
+    "description": "Fotbal, nohejbal, atletika, tenis, kuželky, bowling, plážový volejbal, volejbal. Provoz tenisového kurtu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Jiří Korelus",
+    "address": "Losiná 442",
+    "city": "Losiná",
+    "postalCode": "33204",
+    "phone": "+420 377917096",
+    "website": "https://www.kavarnalosina.cz",
+    "description": "Moderní multifunkční hřiště s umělým trávníkem nabízí skvělý prostor nejen pro milovníky tenisu, ale také pro oblíbený volejbal, nohejbal nebo malou kopanou. Rakety a míčky vám zapůjčíme.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Autokemp Buňkov",
+    "address": "Ke Hřišti 251",
+    "city": "Břehy",
+    "postalCode": "53501",
+    "phone": "+420 774708951",
+    "website": "http://www.bunkov.cz",
+    "description": "Nabízíme celoroční ubytování v třílůžkových pokojích s vlastním sociálním zařízením a kuchyňským koutem. Celoroční ubytování v bezbariérových apartmánech. K dispozici jsou místa pro stany i karavany, dále stolní tenis, hřiště na fotbal, volejbal, nohejbal a tenisové kurty.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Penzion U Maňáků",
+    "address": "Perná 302",
+    "city": "Perná",
+    "postalCode": "69186",
+    "phone": "+420 602559486",
+    "website": "https://www.manakovi.cz",
+    "description": "Nabízíme ubytování v pěti apartmánech rodinného typu, kde se nachází sociální zařízení, kuchyňka s vybavením a dvě ložnice. K dispozici je venkovní terasa, krytý altán se zahradním grilem, otevřené parkoviště, úschovna kol i písečný kurt na volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Vidice - obecní úřad",
+    "address": "Vidice 6",
+    "city": "Vidice",
+    "postalCode": "28401",
+    "phone": "+420 327596177",
+    "website": "http://www.obec-vidice.cz",
+    "description": "První písemná zpráva pochází z roku 1303. Obec se nachází v nadmořské výšce 247 metrů. Dominantu obce tvoří kostel sv. Mikuláše se zvonicí a hřbitovem. V obci se nachází dětské hřiště, na zahradě obecního úřadu pak dětský tenisový kurt a hřiště na volejbal a nohejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Ubytování Na areálu",
+    "address": "Kobylí 366",
+    "city": "Kobylí",
+    "postalCode": "69110",
+    "phone": "+420 792432882",
+    "website": "http://www.naarealu.cz",
+    "description": "K dispozici je 30 míst a 5 pokojů s vlastním sociálním zařízením. Možnost postavit stan či karavan. Občerstvení s vnitřním i venkovním posezením, možnost pořádání oslav nebo firemních akcí. Sportovní vyžití: kurty na tenis, volejbal, nohejbal a plážový volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisové centrum Černý Most",
+    "address": "Bryksova 773/45",
+    "city": "Praha",
+    "postalCode": "19800",
+    "phone": "+420 603479204",
+    "website": "https://www.tenisova-skola-cerny-most.webnode.cz",
+    "description": "Tenisová škola, tenisové kurzy. Provozujeme dva tenisové kurty s umělou trávou včetně nabídky tenisových kurzů. Pořádáme soustředění a turnaje. Dále nabízíme možnost zapůjčení raket, míčů na volejbal i nohejbal. Vyplétání raket.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní areál Zruč, s.r.o.",
+    "address": "Sportovní 515",
+    "city": "Zruč-Senec",
+    "postalCode": "33008",
+    "phone": "+420 737265986",
+    "website": "https://sportovniarealzruc.cz",
+    "description": "Sportovní areál s nadstandardní sportovním zázemím nabízí: tenisové kurty, volejbal, nohejbal, beach volejbal, minigolf, víceúčelové hřiště, ubytování, restauraci s venkovní terasou, relaxační centrum a fitness.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Relaxcentrum Mrkáček Lišov",
+    "address": "Dolní 865/11",
+    "city": "Lišov",
+    "postalCode": "37372",
+    "phone": "+420 775297061",
+    "website": "https://www.sport-mrkacek.cz/",
+    "description": "Relaxcentrum Mrkáček Lišov je sportovní areál nabízející: krytá tenisová hala, krytý kurt na badminton, venkovní tenisový kurt, bowling, beach volejbal, privátní vířivku se saunou, fitness.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Hotel Sport Lípa",
+    "address": "Pod Lipou 297",
+    "city": "Vědomice",
+    "postalCode": "41301",
+    "phone": "+420 702132033",
+    "website": "https://www.hotelsportlipa.cz/",
+    "description": "Provozujeme hotel s kapacitou 48 lůžek ve dvou až čtyřlůžkových pokojích. Pokoje mají vlastní sociální zařízení a televizor. Součástí hotelu je také sportovní areál. K dispozici jsou fotbalová hřiště, tenisové kurty, hřiště na plážový volejbal a basketbal, krytý bazén, sauna, fitness a posilovna.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Ski - bike apartmens Samoty",
+    "address": "Železná Ruda 435",
+    "city": "Železná Ruda",
+    "postalCode": "34004",
+    "phone": "+420 777216887",
+    "website": "https://www.samoty.com",
+    "description": "Nabídka celoročního ubytování v 8 apartmánech s kapacitou 32 osob. K dispozici WiFi, kuchyňka, koupelna, sociální zařízení. V areálu se nachází 2 tenisové kurty, stolní tenis, hřiště na volejbal i nohejbal, ohniště s grilem a přírodní koupaliště. Vhodné pro sportovní soustředění a školy v přírodě.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Autokemping Na Vyhlídce",
+    "address": "Miletín",
+    "city": "Miletín",
+    "postalCode": "50771",
+    "phone": "+420 721171489",
+    "website": "https://autokempmiletin.cz",
+    "description": "Nabízíme ubytovaní v kempu s celkovou kapacitou 262 osob. K dispozici je 20 chatek, vybavených 4 lůžky, lednicí, varnou konvicí a nábytkem. 7 boxů pro karavany a plocha pro 50 stanů. Naleznete zde také tenisový a volejbalový kurt, hřiště pro plážový volejbal, stolní tenis a badminton.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Plavecký stadion Strakonice",
+    "address": "Na Křemelce 305",
+    "city": "Strakonice I",
+    "postalCode": "38601",
+    "phone": "+420 380422761",
+    "website": "https://www.starz.cz",
+    "description": "Provozujeme plavecký bazén i letní areál se třemi bazény, toboganem, skluzavkami a dětským brouzdalištěm. Dále osmnáctijamkový minigolf, beachvolejbal, tenisový kurt, nohejbal, volejbal, stolní tenis, zahradní šachy, badminton, pantanque a basketbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní hala Litvínov",
+    "address": "U Koldomu 2049",
+    "city": "Litvínov",
+    "postalCode": "43601",
+    "phone": "+420 778412991",
+    "website": "https://www.sportas.cz/rubrika/sportovni-hala/",
+    "description": "Víceúčelová hala slouží pro sporty jako je házená, volejbal, fotbal, tenis, gymnastika, florbal nebo lukostřelba. K dispozici jsou 3 tenisové kurty s povrchem Pullastik, šatny, sociální zařízení i sprchy. Dále u nás najdete gymnastický sál.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TJ Šumperk",
+    "address": "Žerotínova 1691/55",
+    "city": "Šumperk",
+    "postalCode": "78701",
+    "phone": "+420 602700908",
+    "website": "http://www.tjsumperk.cz",
+    "description": "Provozujeme sportoviště a sportovní oddíly atletiky, basketbalu, cyklistiky, házené, kanoistiky a gymnastiky. Dále vedeme oddíly plavání, volejbalu, vzpírání, futsalu a Amerického fotbalu. Nabízíme pronájem sportovišť. K dispozici je také kuželna, tenisové kurty, posilovna, masáže a sauna.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sokol Dolní Počernice z.s.",
+    "address": "Národních hrdinů 290",
+    "city": "Praha",
+    "postalCode": "19012",
+    "phone": "+420 736486360",
+    "website": "https://www.sodopo.cz",
+    "description": "Pořádáme sportovní aktivity jako je kopaná, basketbal, tenis, volejbal, nohejbal či atletiku a vedeme sportovní oddíly. Disponujeme tenisovými kurty a hřištěm. Poskytujeme možnost pronájmu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Atletická hala Střelnice",
+    "address": "U Stadionu 4586/1",
+    "city": "Jablonec nad Nisou",
+    "postalCode": "46601",
+    "phone": "+420 773336773",
+    "website": "https://www.sportjablonec.cz",
+    "description": "Krytá atletická aréna slouží k celoročnímu provozování atletiky. V hale je zachován 300m dlouhý běžecký ovál, po jehož celém obvodu jsou čtyři dráhy. Sprinteři mají k dispozici dokonce osm drah a dlouhý doběh. Hala disponuje i vybavenou posilovnou. Déle je k dispozici kurt na volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tělocvičná jednota Sokol Slaný",
+    "address": "Třebízského 625",
+    "city": "Slaný",
+    "postalCode": "27401",
+    "phone": "+420 604707624",
+    "website": "https://tjsokolslany.webnode.cz",
+    "description": "Zajištění sportovních činností a akcí pro cvičence všech věkových kategorií. Vedeme oddíly karate, volejbalu a nohejbalu. V současné době má jednota 450 členů. K dispozici jsou dvě tělocvičny a tři venkovní kurty.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tělocvičná jednota Sokol Praha - Krč",
+    "address": "Za obecním úřadem 354/7",
+    "city": "Praha",
+    "postalCode": "14000",
+    "phone": "",
+    "website": "http://www.tjsokolprahakrc.cz",
+    "description": "Zajišťujeme sportovní činnosti a akce pro cvičence všech věkových kategorií. Vedeme lyžařský a turistický oddíl a oddíl volejbalu a stolního tenisu. Nabízíme lekce cvičení pro rodiče s dětmi, dospělé i děti. Pronajímáme sokolovnu, antukové kurty pro tenis, hřiště pro fotbal a volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tělocvičná jednota Sokol Modřany",
+    "address": "K Vltavě 410/23",
+    "city": "Praha",
+    "postalCode": "14300",
+    "phone": "+420 774735462",
+    "website": "https://www.sokolmodrany.cz",
+    "description": "Zajišťujeme sportovní činnosti a akce pro cvičence všech věkových kategorií. Vedeme oddíl badmintonu, volejbalu a oddíl všestrannosti zaměřený na cvičení pro ženy, děti a mládež. Pronajímáme tělocvičnu, stůl na stolní tenis a antukové kurty na volejbal, nohejbal a badminton.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tělocvičná jednota Sokol Hnátnice",
+    "address": "Hnátnice 35",
+    "city": "Hnátnice",
+    "postalCode": "56101",
+    "phone": "+420 606715099",
+    "website": "",
+    "description": "Zajišťujeme sportovní činnosti a akce pro cvičence všech věkových kategorií. Vedeme oddíly volejbalu, všestrannosti, stolního tenisu a nohejbalu. Nabízíme k pronájmu prostory tělocvičny a posilovny. Pronajímáme také antukové kurty vhodné k nohejbalu, volejbalu a tenisu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TJ Sokol Dědice",
+    "address": "náměstí Svobody 22/17",
+    "city": "Vyškov",
+    "postalCode": "68201",
+    "phone": "+420 724845092",
+    "website": "",
+    "description": "Zajišťujeme sportovní činnosti a akce pro cvičence všech věkových kategorií. Organizujeme oddíly fotbalu, volejbalu a sokolské všestrannosti. Provozujeme fotbalový stadion, tenisové kurty, tělocvičnu, volejbalové a univerzální hřiště.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Multifunkční hala - Sportovní hala Jeneč",
+    "address": "Lidická 210",
+    "city": "Jeneč",
+    "postalCode": "25261",
+    "phone": "+420 266311023",
+    "website": "https://hala-jenec.cz",
+    "description": "Provozujeme multifunkční sportovní halu s tribunou pro 80 diváků. Sál má rozměry 15 x 31 m a je ideální pro basketbal, volejbal, tenis i sálovou kopanou. K dispozici jsou branky na kopanou a florbal, sítě na volejbal a tenis. Též je možno využívat kurty na squash a dráhy na bowling.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Dělnická tělovýchovná jednota Hradec Králové",
+    "address": "U Labe 427/1",
+    "city": "Hradec Králové",
+    "postalCode": "50002",
+    "phone": "+420 777822242",
+    "website": "http://www.dtjhk.cz",
+    "description": "Zabýváme se organizováním tělovýchovné a sportovní činnosti. Disponujeme halou pro stolní tenis, tenisovým areálem se sedmi kurty či nafukovací halou. K dispozici je hřiště na petanque, kurty na volejbal či nohejbal a další. Vedeme veslařský tým.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní klub Dařbož",
+    "address": "Řehenice, Babice 61",
+    "city": "Babice 61",
+    "postalCode": "25167",
+    "phone": "+420 720548956",
+    "website": "https://www.sk-darboz.cz",
+    "description": "Provozujeme víceúčelovou halu o rozměrech 28,3 x 16,6 metrů. Hala je určená pro sporty jako je fotbal, volejbal, nohejbal, košíková, líný tenis a jiné. Možnost pronájmu squashového kurtu a multifunkčního zrcadlového sálu pro cvičení aerobiku, zumby, jógy.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní klub Zbraslav",
+    "address": "Pod Havlínem 1302",
+    "city": "Praha",
+    "postalCode": "15600",
+    "phone": "",
+    "website": "",
+    "description": "Provozujeme fotbalový klub. V areálu se nachází travnaté a pískové hřiště, dva tenisové kurty i hřiště na volejbal, baketbal a nohejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Rekreačně sportovní areál Opárenské údolí",
+    "address": "Malé Žernoseky",
+    "city": "Malé Žernoseky",
+    "postalCode": "41002",
+    "phone": "+420 775245540",
+    "website": "http://www.malezernoseky.cz",
+    "description": "Provoz rekreačně-sportovního areálu. K dispozici jsou tenisové kurty, víceúčelová hřiště, půjčovna vybavení a dětské prolézačky i houpačky. Možnost hrát tenis, volejbal, nohejbal, basketbal, házenou, floorbal, líný tenis, badminton či petangue.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Penzion Bobas",
+    "address": "Nová Bystřice, Albeř 18",
+    "city": "Albeř 18",
+    "postalCode": "37833",
+    "phone": "",
+    "website": "https://www.hostinecbobas.cz",
+    "description": "Provozujeme penzion s nabídkou ubytování ve 2 až 4 lůžkových pokojích. K dispozici je vlastní sociální zařízení, sauna, společenská místnost s kulečníkem, ohniště, pískoviště, úschovna kol, parkoviště, vinotéka či kurt pro plážový volejbal. Zajišťujeme zapůjčení sportovních potřeb.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Chalupa U Nováků",
+    "address": "Dvory nad Lužnicí 86",
+    "city": "Dvory nad Lužnicí",
+    "postalCode": "37808",
+    "phone": "+420 731453370",
+    "website": "https://chalupaunovaku.cz",
+    "description": "Nabízíme k pronájmu chalupu na samotě v malé jihočeské vesnici Dvory nad Lužnicí na rozhraní CHKO Třeboňsko a Novohradských hor. V objektu je k dispozici venkovní krb, bazén, sauna, plážový volejbal, tenisový kurt, terasa, dvougaráž a úschovna kol. Parkovat je možné u chalupy.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Chalupa U Zvoníčků",
+    "address": "Slavětín nad Metují 46",
+    "city": "Slavětín nad Metují",
+    "postalCode": "54901",
+    "phone": "+420 723454864",
+    "website": "https://www.uzvonicku.cz",
+    "description": "Nabídka ubytování v chalupě s možností snídaně. Poskytujeme venkovní koupání, tenisový kurt a posezení s krbem. K dispozici také kulečníkový stůl, hřiště na nohejbal, volejbal a ping-pong. Nabídka posezení ve vinném sklípku, kde vám nabídneme některé druhy vín. Vhodné pro teambuildingové akce.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "SPORTKLUB NIVA",
+    "address": "Pitín 361",
+    "city": "Pitín",
+    "postalCode": "68771",
+    "phone": "+420 777521079",
+    "website": "",
+    "description": "Provozujeme koupaliště, tenisové kurty, plážový volejbal, nafukovací halu. Pronájem pro veřejné i firemní akce s posezením. Pravidelné turnaje. K dispozici je také dětské hřiště, parkoviště, občerstvení v areálu koupaliště s posezením, sprchy, toalety, převlékárny a další.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Koupaliště Žabčice - BEACH RESORT ORIGINAL s.r.o.",
+    "address": "Žabčice 544",
+    "city": "Žabčice",
+    "postalCode": "66463",
+    "phone": "+420 774030300",
+    "website": "https://www.koupakzabcice.cz",
+    "description": "Provozujeme letní koupaliště. K dispozici je 25 m plavecký bazén, bazén s atrakcemi, brouzdaliště a dětský bazén se skluzavkou a vodním hřibem. Dále mohou návštěvníci využít kurty na plážový volejbal, tobogán, bublinkovou zátoku, masážní trysky a vodní lezeckou stěnu, restauraci či koktejlový bar.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Beach Aréna Ústí, z.s.",
+    "address": "Masarykova 966/226",
+    "city": "Ústí nad Labem",
+    "postalCode": "40001",
+    "phone": "+420 606404946",
+    "website": "https://beacharenausti.webnode.cz",
+    "description": "Provozujeme multifunkční areál. K dispozici jsou plážové kurty na volejbal a další plážové sporty. Možnost využití stánku s občerstvením.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "HoSPORT",
+    "address": "Dolní 196",
+    "city": "Staré Hodějovice",
+    "postalCode": "37008",
+    "phone": "+420 723111313",
+    "website": "https://www.hosport.cz",
+    "description": "Provoz sportovní haly pro volejbal, basketbal, florbal, házenou, sálový fotbal, aerobik, jumping či tanec. K dispozici je bowling, lezecká stěna, golf, indoor golf a tartanový kurt včetně restaurace. Možnost výuky tenisu trenérem. Pořádáme firemní i společenské akce s kapacitou 150 osob.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Koupaliště Obecnice",
+    "address": "Obecnice",
+    "city": "Obecnice",
+    "postalCode": "26221",
+    "phone": "",
+    "website": "",
+    "description": "Provozujeme koupaliště. K dispozici je betonová nádrž 50x20m, která je napájena vodou z potoka. K dispozici travnatá plocha, paravány na převlékání, wc, občerstvení. Dále tu naleznete tenisový kurt, hřiště na volejbal a nohejbal a dětský koutek.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Restaurace Kamínka",
+    "address": "Nad Kamínkou 1523",
+    "city": "Praha",
+    "postalCode": "15600",
+    "phone": "+420 773129199",
+    "website": "",
+    "description": "Provozujeme restauraci. Připravujeme pokrmy inspirované zejména čínskou, thajskou, korejskou a vietnamskou kuchyní. Máme velkou zahrádku, nabízíme pivo, nealko, míchané nápoje a jídlo po celý den, které si můžete vzít také ssebou. K dispozici je dětské hřiště a kurt pro nohejbal a volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Areál Rolava",
+    "address": "Třeboňská 1049/92",
+    "city": "Karlovy Vary",
+    "postalCode": "36005",
+    "phone": "+420 770143204",
+    "website": "https://kvcity.cz",
+    "description": "Areál je místem pro sportovní vyžití a relaxaci. V areálu naleznete: in-line dráhu 1300 m, hřiště pro plážový volejbal, víceúčelové hřiště, dětské hřiště, tenisové kurty, workout hřiště, cvičební prvky pro seniory, přírodní koupaliště aj.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Penzion a restaurace Velké sedlo",
+    "address": "Svatoňovice ev. č. 18",
+    "city": "Svatoňovice ev. č.",
+    "postalCode": "74787",
+    "phone": "+420 602668068",
+    "website": "https://velkesedlo.cz",
+    "description": "Provozujeme penzion s kapacitou 27 lůžek a 3 přistýlky. Možnost stravování, využití i pro školní výlety a rodinné akce. Možnost zapůjčení kánoí, rafting. Horolezecká stěna o výšce 50m. Kvalitní antukový kurt pro volejbal, tenis.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Penzion Cukroška",
+    "address": "Akátová 58",
+    "city": "Hlušovice",
+    "postalCode": "78314",
+    "phone": "+420 603287379",
+    "website": "http://www.cukroska.cz",
+    "description": "Nabídka ubytování v jedno, dvou a třílůžkovém pokoji v penzionu s pizzerií. Součástí penzionu je sauna, bowling, kulečník, hřiště na plážový volejbal, dětské hřiště. V blízkosti tenisový kurt.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Rekreační středisko Toska",
+    "address": "Prostřední Bečva ev. č. 169",
+    "city": "Prostřední Bečva ev. č.",
+    "postalCode": "75656",
+    "phone": "+420 777755772",
+    "website": "http://www.rekreacetoska.cz",
+    "description": "Nabízíme celoročního ubytování ve 12 vybavených chatách s celkovou kapacitou 70 lůžek. K dispozici je hřiště na volejbal, ohniště a pingpongový stůl. Nabízíme možnost zapůjčení grilu, za poplatek je možné využívat bazén, saunu a tenisové kurty. Ubytování je vhodné pro rekreaci rodin s dětmi.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "ZAHRADNÍ RESTAURACE BAJK",
+    "address": "Valašská Polanka 471",
+    "city": "Valašská Polanka",
+    "postalCode": "75611",
+    "phone": "+420 731496708",
+    "website": "",
+    "description": "Zahradní restaurace má v areálu tenisový kurt, plážový volejbal a dětské hřiště. Areál se nachází mimo hlavní komunikaci s příjemným posezením na zastřešené zahrádce. Nabízíme pivo, limo, nanuky a něco na zub.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Vila Hraničná",
+    "address": "Janov nad Nisou, Hraničná 240",
+    "city": "Hraničná 240",
+    "postalCode": "46811",
+    "phone": "+420 728667486",
+    "website": "https://www.vilahranicna.cz",
+    "description": "Nabízíme ubytování se společenskou místností, velkým krbem, koupelnou, kuchyní a 4 pokoji. Poskytujeme ubytování pro rodiny, party sportovců, teambuildingy i oslavy. K dispozici je vlastní kurt pro tenis, volejbal nebo třeba fotbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Areál Drhleny",
+    "address": "Kněžmost, Čížovka 20",
+    "city": "Čížovka 20",
+    "postalCode": "29402",
+    "phone": "+420 739589780",
+    "website": "https://www.drhleny.cz/",
+    "description": "Rekreační středisko vhodné pro rekreaci, sportovní soustředění, školení a další. Přímo v areálu je k dispozici restaurace, venkovní bazén, tenisový a multifunkční kurt s umělým povrchem, kurt na plážový volejbal, fotbalové hřiště, zastřešený stolní tenis, minigolf, sauna a dětské hřiště.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sport-Radava",
+    "address": "Kovářov, Chrást ev. č. 246",
+    "city": "Chrást ev. č. 246",
+    "postalCode": "39901",
+    "phone": "+420 773965603",
+    "website": "http://www.sport-radava.cz",
+    "description": "Sportovně-rekreační areál. Nabízíme celoroční ubytování v chatkách, stravování v restauraci, tenisové a nohejbalové kurty, beach-volejbal, koupání. Vhodné pro rodiny i kolektivy. Rekreace, turnaje, oslavy, teambuildingy, školní výlety a pobyty, sportovní soustředění, svatby.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Hotel Elsyn Dvůr",
+    "address": "Zdíkov, Nový Dvůr 135",
+    "city": "Nový Dvůr 135",
+    "postalCode": "38473",
+    "phone": "+420 602127790",
+    "website": "https://elsyndvur.cz",
+    "description": "Nabídka ubytování v hotelu s kapacitou 70 lůžek. Pokoje mají vlastní sociální zařízení, lednici, TV, telefon a internet. K dispozici je fitness, hřiště na nohejbal a volejbal, půjčovna elektrokol, krytý vyhřívaný bazén, tenisový kurt, ohniště, konferenční místnost s kapacitou cca 30 osob.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Artamon Sport & Relax",
+    "address": "Bukovice 158",
+    "city": "Bukovice",
+    "postalCode": "54954",
+    "phone": "+420 773575087",
+    "website": "https://artamon.cz",
+    "description": "Provozujeme sportovní a relaxační areál. Hala o rozměru 60 x 40 m disponuje třemi tenisovými kurty, lze v ní však také hrát nohejbal, volejbal, fotbal či badminton. To vše na kvalitním povrchu TigerTurf Evo PRO v kombinaci barev modrá a zelená. Teplota v hale se pohybuje kolem 15°C.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Hotel Bečva na Horní Bečvě",
+    "address": "Horní Bečva ev. č. 488",
+    "city": "Horní Bečva ev. č.",
+    "postalCode": "75657",
+    "phone": "+420 775586454",
+    "website": "https://hotel-becva.cz",
+    "description": "Nabízíme ubytování v horském hotelu v Beskydech ve dvou až čtyřlůžkových pokojích pro rodiny s dětmi, skupinové zájezdy, firemní akce, školy v přírodě, adaptační pobyty, lyžařské výcviky. U hotelu je tenisový kurt, Beach volejbal. Hotel má i konferenční místnosti pro 60-70 lidí. Bowling, billiard.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Zátiší u Hastrmana",
+    "address": "Zátiší 522",
+    "city": "Křelov-Břuchotín",
+    "postalCode": "78336",
+    "phone": "+420 725237365",
+    "website": "https://www.facebook.com/people/Z%C3%A1ti%C5%A1%C3%AD-u-Hastrmana/100083439550323/",
+    "description": "Jsme bistro u Křelovského rybníka blízko cyklostezky 51A. Na čepu máme pivo od Radegastu a nealko od Kofoly. Nabízíme točenou zmrzlinu, tříšť a drobné občerstvení pizza, tortilla, párek v rohlíku aj. U bistra jsou tenisové kurty, beach volejbal, skate park, work-out, petanque a hřiště pro děti.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Kiosek u Trnávky",
+    "address": "Červená Řečice ev. č. 56",
+    "city": "Červená Řečice ev. č.",
+    "postalCode": "39446",
+    "phone": "+420 728163783",
+    "website": "https://www.facebook.com/kiosek.trnavka/",
+    "description": "Občerstvení pro návštěvníky přírodního koupaliště, rybáře, houbaře, cyklisty i pocestné na cestě mezi Červenou Řečicí a Želivem v krásném údolí přehradní nádrže na řece Trnávce. Nachází se zde dětské hřiště, venkovní posilovna a kurt na plážový volejbal. Možnost zapůjčení paddleboardů.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "SPORTOVNÍ AREÁL SRBSKÁ",
+    "address": "Srbská 116/4",
+    "city": "Brno",
+    "postalCode": "61200",
+    "phone": "+420 733536759",
+    "website": "https://arealsrbska.cz",
+    "description": "Pronajímáme 3 sály (vhodné pro míčové sporty, gymnastiku, sebeobranu a pod.). V sezoně pronajímáme 4 kurty na plážový volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Komunitní Centrum Knapovec",
+    "address": "Ústí nad Orlicí, Knapovec 178",
+    "city": "Knapovec 178",
+    "postalCode": "56201",
+    "phone": "+420 603537976",
+    "website": "https://kcknapovec.cekuj.net/",
+    "description": "Komunitní centrum je určeno pro sport, společenské akce místních spolků a také pro akce soukromé. Součástí nového Komunitního centra je také antukový kurt, kde si můžete zahrát tenis, nohejbal, volejbal a jiné sporty. Provoz restaurace.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Koupaliště SPORTES Svitavy",
+    "address": "Riegrova 2064/9",
+    "city": "Svitavy",
+    "postalCode": "56802",
+    "phone": "+420 736440519",
+    "website": "https://www.sportes.svitavy.cz",
+    "description": "Provoz koupaliště se dvěma bazény, tobogánem 93 metrů dlouhým, skluzavkou a kurty pro plážový volejbal. Naleznete zde také pískoviště, nafukovací horolezeckou stěnu, Bumber ball a trampolínu. V areálu je možnost občerstvení v bufetu. K dispozici jsou slunečníky k zapůjčení.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Areál Benedikt",
+    "address": "Rekreační 3128",
+    "city": "Most",
+    "postalCode": "43401",
+    "phone": "+420 602611415",
+    "website": "https://www.tsmost.cz",
+    "description": "Provozujeme areál s nabídkou několika hřišť s umělým povrchem na volejbal a hokejbal, dětská hřiště s prolézačkami, klouzačkami a houpačkami, pískoviště či stezky pro cyklisty. Pronajímáme hřiště na hokejbal, fotbal, plážový volejbal a tenisové kurty.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sky Sport City",
+    "address": "Lovosická 559/32",
+    "city": "Praha",
+    "postalCode": "19000",
+    "phone": "+420 601559559",
+    "website": "https://www.skysportcity.cz",
+    "description": "Provoz sportovního areálu. Největší prostor zabírají dvě fotbalové hřiště s tribunou. Tělocvičnu využívají převážně úspěšné oddíly badmintonu a volejbalu, který má k dispozici také dva venkovní kurty. ​Novinkou areálu jsou čtyři padelové kurty.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Golf klub Botanika",
+    "address": "Hlavní 68",
+    "city": "Horní Bezděkov",
+    "postalCode": "27351",
+    "phone": "+420 604938525",
+    "website": "http://www.golfbotanika.cz",
+    "description": "Provoz golfového klubu. Vedle devítijamkového hřiště (PAR 35) jsou zde k dispozici: tenisový kurt, hřiště pro plážový volejbal, restaurace zaměřená na českou kuchyni doplněná kuchyní mezinárodní, ubytování, hotelové lázně, bazén, sauna a další doprovodné služby",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní klub Motorlet Praha",
+    "address": "Butovická 592/35",
+    "city": "Praha",
+    "postalCode": "15800",
+    "phone": "+420 251556730",
+    "website": "https://www.sk-motorlet.cz/",
+    "description": "Provozujeme sportovní halu s hledištěm pro 250 diváků a povrchem Mondoflex. Hala je vhodná pro badminton, volejbal, basketbal, stolní tenis, malou kopanou a nohejbal. K dispozici jsou fotbalová hřiště s travnatým i umělých povrchem a antukové tenisové kurty.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tělocvična Bobrovníky",
+    "address": "Rekreační 394/9",
+    "city": "Hlučín",
+    "postalCode": "74801",
+    "phone": "+420 602418011",
+    "website": "https://www.sak-hlucin.cz/cs/sport-a-relaxace/telocvicna-bobrovniky/a-432/",
+    "description": "Nabízíme: 2 badmintonové kurty, koše na basketbal, branky na házenou a malou kopanou, florbalové zábrany, síť na volejbal, nohejbal, tenisovou síť, ping pong.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportoviště Bohušov",
+    "address": "Bohušov",
+    "city": "Bohušov",
+    "postalCode": "79399",
+    "phone": "+420 554642121",
+    "website": "https://www.bohusov.cz/rekreacni-areal/sportovni-hriste/",
+    "description": "Provozujeme sportoviště s tenisovými kurty, fotbalovým a víceúčelovým hřištěm a kurtem na beach volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Koupaliště Ruda nad Moravou",
+    "address": "Ruda nad Moravou",
+    "city": "Ruda nad Moravou",
+    "postalCode": "78963",
+    "phone": "+420 730191184",
+    "website": "https://www.ruda.cz/",
+    "description": "Provozujeme koupaliště s plaveckým a dětským bazénem. V areálu se nachází kurt pro volejbal, pingpongové stoly a v neposlední řadě golfové a dětské hřiště.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní areál koupaliště Sebranice",
+    "address": "Sebranice 100",
+    "city": "Sebranice",
+    "postalCode": "56962",
+    "phone": "",
+    "website": "https://www.sebranice.cz/sportovni_areal_koupaliste",
+    "description": "Koupaliště nabízí svým návštěvníkům plavecký bazén o velikosti 50 x 21 metrů se skluzavkou, menší bazén s vodním hřibem pro děti, ve kterém je voda přihřívána, 2 kurty na plážový volejbal a fotbal, tenisový kurt s umělým povrchem i stůl na stolní tenis.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Letní koupaliště Březnice",
+    "address": "Sadová",
+    "city": "Březnice",
+    "postalCode": "26272",
+    "phone": "+420 318403171",
+    "website": "",
+    "description": "Provoz letního koupaliště s nádrží o rozměrech 50 x 20 m a dětským brouzdalištěm se skluzavkou. K dispozici jsou kurty na volejbal a nohejbal, travnatá pláž, občerstvení. S koupalištěm sousedí skatepark, fotbalový stadion a venkovní tenisové kurty.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Víceúčelové sportoviště Hartmanice",
+    "address": "Hartmanice 75",
+    "city": "Hartmanice",
+    "postalCode": "34201",
+    "phone": "+420 376593218",
+    "website": "https://www.muhartmanice.cz",
+    "description": "Provozujeme víceúčelového sportoviště. K dispozici jsou volejbalové kurty s antukovým a asfaltovým povrchem, kurt s tartanovým povrchem na tenis, házenou či volejbal a fotbalovým hřištěm.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní areál Nové Strašecí",
+    "address": "Husova 1146",
+    "city": "Nové Strašecí",
+    "postalCode": "27101",
+    "phone": "+420 311242460",
+    "website": "https://www.novestraseci.cz/",
+    "description": "Provozujeme sportovní areál. K dispozici je hřiště na badminton, posilovna, herna stolního tenisu, kurty a hřiště na plážový volejbal či petanque, lezecká stěna a dětské hřiště. Možnost využití šaten se sociálním zařízením či restauraci. Provozujeme atletický a víceúčelový areál.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Plovárna u Sv. Václava",
+    "address": "Zátavské nábř. 22",
+    "city": "Písek",
+    "postalCode": "39701",
+    "phone": "+420 733164968",
+    "website": "https://ms-pisek.cz/sportovni-arealy/plovarna-u-vaclava/",
+    "description": "Provozujeme venkovní plovárnu s více jak 75letou tradicí. Nabízíme koupání v řece Otavě, venkovní dětský bazén 10 m, venkovní brouzdaliště, půjčování lodiček. Dále u nás naleznete dva kurty na volejbal či nohejbal. Možnost občerstvení v restauraci s terasou přilehlého penzionu Sport.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Koupaliště Za Řekou",
+    "address": "Ústrašická 430",
+    "city": "Planá nad Lužnicí",
+    "postalCode": "39111",
+    "phone": "+420 731677206",
+    "website": "https://www.plananl.cz/sportovni-centrum-za-rekou/ms-5415",
+    "description": "Provozujeme koupaliště s nádrží o velikosti 25x12 m a dětským brouzdalištěm. K dispozici je kurt na plážový volejbal a hřiště na nohejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní areál města Plánice",
+    "address": "Plánice",
+    "city": "Plánice",
+    "postalCode": "34034",
+    "phone": "+420 724317561",
+    "website": "https://www.planice.cz",
+    "description": "Provozujeme sportovní areál, který je tvořen 3 víceúčelové kurty s umělým povrchem a umělým osvětlením pro míčové sporty - tenis, malou kopanou, volejbal, nohejbal, basketbal, házenou a další. Součástí areálu jsou asfaltové plochy pro streetball, skateboard, jízdu na in-line bruslích a kolech.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní areál pod Svatou Horou",
+    "address": "Hrabákova",
+    "city": "Příbram",
+    "postalCode": "26101",
+    "phone": "",
+    "website": "",
+    "description": "Provozujeme sportovní areál. Víceúčelové sportoviště nabízí sportovcům dva tenisové kurty, fotbalové hřiště, hřiště na volejbal, házenou, basketbal, in-line dráhu, doskočiště pro skok daleký a dráhy na běh.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sporthala Valtice",
+    "address": "Mikulovská 997",
+    "city": "Valtice",
+    "postalCode": "69142",
+    "phone": "+420 734314111",
+    "website": "https://www.valtice.eu/kontakty/sportovni-hala/",
+    "description": "Provozujeme sportovní halu. Nabízíme možnost pronájmu prostor pro florbal, volejbal, nohejbal, košíkovou, házenou či stolní tennis. Zajišťujeme pořádání společenských a kulturních akcí. Poskytujeme 4 kurty na badminton. K dispozici je také venkovní hřiště.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Koupaliště Flošna Hradec Králové",
+    "address": "Malšovická 779/2",
+    "city": "Hradec Králové",
+    "postalCode": "50009",
+    "phone": "+420 495000708",
+    "website": "https://www.snhk.cz",
+    "description": "Letní koupaliště nabízí 3 venkovní vyhřívané bazény s teplotou vody 26°C, 2 tobogány, 1 dušový s línou řekou, skluzavky, dětské hřiště s mnoha atrakcemi, dva kurty na plážový volejbal. Dále nabízíme hodiny aquazumby, aquaerobiku, aquazorbing, skákání na trampolíně a soutěže. Sezóna 2025 ukončena.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Ladislav Klauz",
+    "address": "Pšovlky 142",
+    "city": "Pšovlky",
+    "postalCode": "27031",
+    "phone": "+420 602370541",
+    "website": "",
+    "description": "Provozuji sportovní areál. K dispozici je kurt s bílým pískem na plážový volejbal, pétanque, hokejbal, elektronické šipky a Pool kulečník.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Koupaliště Nový Bor",
+    "address": "Ke Koupališti",
+    "city": "Nový Bor",
+    "postalCode": "47301",
+    "phone": "+420 737988358",
+    "website": "",
+    "description": "Provozujeme přírodní koupaliště. V areálu k dispozici občerstvení, beach volejbal, kurty, prolézačky, sprchy, klouzačky a WiFi. Vstup z písečné či travnaté pláže.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Hotel Reoneo",
+    "address": "Vernířovice 154",
+    "city": "Vernířovice",
+    "postalCode": "78815",
+    "phone": "+420 608444659",
+    "website": "https://reoneo.cz",
+    "description": "Nabízíme ubytování v hotelu s kapacitou 83 lůžek. Pokoje jsou dvou, tří a čtyřlůžkové. K dispozici je salonek, parkoviště a restaurace. Pokoje jsou vybavené sprchovým koutem. Můžete také využít kulečník, šipky, stůl na stolní tenis, tenisové kurty a hřiště na volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Penzion Herbertov",
+    "address": "Vyšší Brod, Herbertov 15",
+    "city": "Herbertov 15",
+    "postalCode": "38273",
+    "phone": "+420 602659616",
+    "website": "http://www.penzionherbertov.cz",
+    "description": "Celoročně provozovaný penzion nabízí ubytování v Jižních Čechách u břehu řeky Vltavy, ve vzdálenosti cca 10 km od Lipenského jezera. Areál je vybaven kurty pro tenis, volejbal či basketbal. Pro zabavení nejmenších dětí máme pískoviště a dětské hřiště. Pro milovníky grilování je k dispozici ohniště.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Městská sportoviště Skuteč, s.r.o. - Letní areál",
+    "address": "Československé armády 972",
+    "city": "Skuteč",
+    "postalCode": "53973",
+    "phone": "+420 775559606",
+    "website": "http://www.sportovisteskutec.cz",
+    "description": "V rámci letního areálu se nachází fotbalové hřiště s tribunou, víceúčelové hřiště na nohejbal, volejbal, basketbal a další sporty, tenisové kurty a workout hřiště.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TENIS ROCHLICE, s.r.o.",
+    "address": "Na Žižkově 1080/40a",
+    "city": "Liberec VI-Rochlice",
+    "postalCode": "46006",
+    "phone": "+420 724953482",
+    "website": "https://www.tenis-liberec.cz",
+    "description": "Provozujeme tenisový klub s kurty. K dispozici je 6 venkovních antukových kurtů, dětský mini kurt, cvičná stěna i hřiště na beach volejbal. V zimní sezóně jsou k dispozici 3 antukové kurty v přetlakové hale. Poskytujeme kurzy tenisu pro děti i dospělé.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tyršova veřejná plovárna",
+    "address": "U Plovárny 328",
+    "city": "Vysoké Mýto",
+    "postalCode": "56601",
+    "phone": "+420 731390170",
+    "website": "https://www.plovarna-vm.cz/",
+    "description": "Provoz koupaliště s tobogánem, skluzavkou a vodním hřibem. K dispozici jsou převlékací kabinky, občerstvení a dětský koutek. Provozujeme 2 kurty na plážový volejbal, 1 kurt nohejbal, 2 stoly na stolní tenis, hřiště na fotbálek, minigolf a další.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Squash Losina",
+    "address": "Chotěšov, Losina 4",
+    "city": "Losina 4",
+    "postalCode": "33301",
+    "phone": "+420 606158254",
+    "website": "http://www.sportcentrumlosina.cz",
+    "description": "Provozujeme sportovní halu na squash, antukový tenisový kurt, hřiště na nohejbal, klasický i plážový volejbal. K dispozici je parkování v areálu, půjčovna společenských her a sportovního vybavení.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Aparmány Ovaz",
+    "address": "Výprachtice 406",
+    "city": "Výprachtice",
+    "postalCode": "56301",
+    "phone": "+420 736754672",
+    "website": "",
+    "description": "Nabízíme ubytování v 8 pokojích. K dispozici je vlastní sociální zařízení, kuchyňský kout či Wifi připojení. Dále u nás najdete bazén, tenisový kurt či hřiště na plážový volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Občerstvení na hřišti, minigolf",
+    "address": "Čenkovice ev. č. 170",
+    "city": "Čenkovice ev. č.",
+    "postalCode": "56164",
+    "phone": "+420 732746094",
+    "website": "https://www.tjcenkovice.cz/",
+    "description": "Provoz minigolfového hřiště, plážového volejbalu, tenisového kurtu a multifunkčního hřiště.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Střední škola technická, Přerov - domov mládeže",
+    "address": "bří Hovůrkových 2750/17",
+    "city": "Přerov I-Město",
+    "postalCode": "75002",
+    "phone": "+420 581208256",
+    "website": "https://dm.kourilkova8.cz",
+    "description": "Provozujeme domov mládeže s nabídkou ubytování pro studenty. Celková kapacita domova je 370 lůžek. Nabízíme také ubytování pro veřejnost. K dispozici je k pronájmu tělocvična a tenisový kurt. Vedeme kroužky dámského klubu, fotbalu, volejbalu, výtvarné činnosti, zumby, mažoretek a další.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Střední škola technická, Přerov - domov mládeže",
+    "address": "Kouřílkova 1028/8",
+    "city": "Přerov I-Město",
+    "postalCode": "75002",
+    "phone": "+420 581208256",
+    "website": "https://dm.kourilkova8.cz",
+    "description": "Provozujeme domov mládeže s nabídkou ubytování pro studenty. Celková kapacita domova je 370 lůžek. Nabízíme také ubytování pro veřejnost. K dispozici je k pronájmu tělocvična a tenisový kurt. Vedeme kroužky dámského klubu, fotbalu, volejbalu, výtvarné činnosti, zumby, mažoretek a další.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní areál Hájek",
+    "address": "Hájek 1067",
+    "city": "Náměšť nad Oslavou",
+    "postalCode": "67571",
+    "phone": "+420 774492457",
+    "website": "https://www.sportvnamesti.cz",
+    "description": "Provozujeme osvětlený kurt na beach volejbal. K dispozici je dále skatepark, hřiště na street ball a petanque. Možnost občerstvení v restauraci.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Víceúčelová hala Landek",
+    "address": "Pod Landekem",
+    "city": "Ostrava",
+    "postalCode": "72529",
+    "phone": "+420 702206683",
+    "website": "http://www.landekpark.cz",
+    "description": "Provozujeme víceúčelovou sportovní halu, vhodnou na badminton, volejbal, nohejbal, futsal a další sálové sporty. K dispozici jsou dva venkovní kurty na plážový volejbal. Možnost zapůjčení sady na pétanque.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Městský stadion Tatran",
+    "address": "Pod Potoky 151",
+    "city": "Sedlčany",
+    "postalCode": "26401",
+    "phone": "+420 318822742",
+    "website": "http://www.arealysedlcany.cz",
+    "description": "Provozujeme sportoviště. K dispozici jsou dva antukové kurty na volejbal a jeden kurt na beach volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Koupaliště Laguna",
+    "address": "Pasohlávky ev. č. 114",
+    "city": "Pasohlávky ev. č.",
+    "postalCode": "69122",
+    "phone": "+420 519427714",
+    "website": "https://rekreace-laguna.cz",
+    "description": "Provoz letního koupaliště. Možnost využití školy windsurfingu, vodního lyžování a půjčovny kajaků. K dispozici je občerstvení, tenisové kurty a hřiště na volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní areál Olšinky",
+    "address": "Olšinky 383",
+    "city": "Hlinsko",
+    "postalCode": "53901",
+    "phone": "+420 773802321",
+    "website": "https://www.sportovistehlinsko.cz",
+    "description": "Sportovní areál nabízí dvě travnatá hřiště, která využívá ke své činnosti fotbalový klub, hřiště pro národní házenou, nohejbal, volejbal, tenisové kurty a hernu stolního tenisu, která se nachází v budově zimního stadionu. Od 1.10 2021 je možnost pronájmu tenisových kurtů v přetlakové hale.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Podještědský FC Český Dub",
+    "address": "Husova 159",
+    "city": "Český Dub III",
+    "postalCode": "46343",
+    "phone": "",
+    "website": "https://podjestedska.eu",
+    "description": "Provozujeme dvě travnaté fotbalové hřiště a jedno hřiště s umělým povrchem. Dále jsou k dispozici dva multifunkční kurty s umělou trávou, venkovní bazén, stolní tenis, posilovna a kulečník. Na kurtech lze hrát nohejbal, volejbal, házenou, basketbal či tenis.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportoviště Holšín rezidence",
+    "address": "Rosovice 302",
+    "city": "Rosovice",
+    "postalCode": "26211",
+    "phone": "+420 704717018",
+    "website": "https://www.holsin.cz",
+    "description": "Nabízíme využití venkovního sportoviště. Nabízíme minigolf, pétanque, plážový volejbal, plážový fotbal a kurt s umělým povrchem pro tenis, nohejbal a malou kopanou.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Hospůdka Zaolší",
+    "address": "Vendryně 1190",
+    "city": "Vendryně",
+    "postalCode": "73994",
+    "phone": "+420 704005740",
+    "website": "https://hospudka.zaolsi.cz/",
+    "description": "Hospůdka v podhůří Beskyd ležící na skvělém místě pro cyklo a turistické výlety. Dvě zahrádky nabízející možnost k relaxaci a pochutnání si na skvělém pivu a občerstvení. V těsné blízkosti je oplocené dětské hřiště, tenisový kurt a hřiště na beach volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Rekreační areál Slunce",
+    "address": "Volfartická ev. č. 1",
+    "city": "Žandov",
+    "postalCode": "47107",
+    "phone": "+420 734202464",
+    "website": "https://www.zandov.eu",
+    "description": "Provozujeme rekreační areál a nabízíme ubytování ve 2, 3 a 4 lůžkových chatkách s lednicí. Nabízíme výběr z denní nabídky v rychlém občerstvení. K dispozici je bazén, koupaliště, tenisové kurty, hřiště na plážový volejbal či místa pro karavany a stany s přípojkou elektrické energie.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Posezení u Kamzíku",
+    "address": "Soběšovice ev.č. 21",
+    "city": "Soběšovice ev.č.",
+    "postalCode": "73938",
+    "phone": "+420 777790900",
+    "website": "http://www.zermanice.cz",
+    "description": "Provoz krytého občerstvení u kurtu na plážový volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "ČESKÝ TRÁVNÍK, s.r.o.",
+    "address": "Litvínovice 32",
+    "city": "Litvínovice",
+    "postalCode": "37001",
+    "phone": "+420 606783026",
+    "website": "https://www.multifunkcnihriste.cz",
+    "description": "Stavíme na zakázku víceúčelová multifunkční hřiště s umělým povrchem včetně veškerého vybavení. Sportoviště lze využit na tenis, volejbal, nohejbal, košíkovou, malou kopanou, floorball, streetball. Vysoce odolná umělá tráva má nízké nároky na údržbu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní klub Nové Město nad Metují",
+    "address": "28. října 943",
+    "city": "Nové Město nad Metují",
+    "postalCode": "54901",
+    "phone": "+420 491474270",
+    "website": "http://www.sportklub.cz",
+    "description": "Provozujeme sportovní klub se zaměřením na volejbal, atletiku, lukostřelbu, stolní a klasický tenis. Sdružujeme i handicapované sportovce. Spravujeme sportovní areál, který zahrnuje dvě fotbalová hřiště, dále atletickou dráhu, tenisové kurty a hřiště na volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Squash Sport",
+    "address": "Čimická 780/61",
+    "city": "Praha",
+    "postalCode": "18100",
+    "phone": "+420 602658631",
+    "website": "https://www.squash-sport.cz/",
+    "description": "Multifunkční sportovní centrum nabízející 3 squashové kurty, stolní tenis ve dvou sálech, posilovnu - 200 m, skupinová cvičení (fitbox, alpinning, jumping), privátní saunu, bar s výčepem, aktivity pro děti. Provoz solária a nabídka masáží. Pořádáme příměstské tábory.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "SPORTOVNÍ KLUB POLICIE MAJÁK, z.s.",
+    "address": "Ladova 5232/55",
+    "city": "Jablonec nad Nisou",
+    "postalCode": "46605",
+    "phone": "+420 724006002",
+    "website": "https://skpjbc.webnode.cz",
+    "description": "Pořádání sportovních akcí. Sdružujeme oddíly lyžování, střelectví, volejbalu, nohejbalu a tenisu. Pronajímáme antukové kurty na tenis, volejbal a nohejbal. Zajišťujeme konání turnajů, soutěží i výletů, pronajímáme vnitřní zázemí cca 30 osob a venkovní zázemí kapacita do 150 osob.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tělovýchovná jednota Ostrava",
+    "address": "Varenská 3098/40a",
+    "city": "Ostrava",
+    "postalCode": "70200",
+    "phone": "+420 773960234",
+    "website": "https://www.tjostrava.cz",
+    "description": "Zajištění sportovních činností a akcí pro cvičence všech věkových kategorií. Vedeme oddíly golfu, juda, jógy, stolního tenisu, šachů, volejbalu a další. Nabízíme pronájem sportovní haly. Dále provozujeme saunu a nabízíme masáže.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Squash Trio",
+    "address": "Dukelská 2157",
+    "city": "Benešov",
+    "postalCode": "25601",
+    "phone": "+420 773724891",
+    "website": "http://www.squashtrio.cz",
+    "description": "Provoz třech klimatizovaných squashových kurtů s certifikací od WSF a ČASF. K dispozici je prodejna a půjčovna squashového vybavení, občerstvení s výhledem na kurty a dětský koutek. Pořádání turnajů.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní areál Vitality",
+    "address": "Vendryně 1017",
+    "city": "Vendryně",
+    "postalCode": "73994",
+    "phone": "+420 736626848",
+    "website": "https://www.sportvitality.cz",
+    "description": "Nabízíme širokou škálu sportovního vyžití pro raketové sporty - tenis v létě na antukových dvorcích, v zimě v hale na kurtech s povrchem Rebound Ace. K dispozici je 10 badmintonových kurtů, bowling, minigolf, plážový volejbal. Ideální prostředí pro různorodé akce.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "SQUASH HOLEŠOVICE",
+    "address": "Jankovcova 1055/13",
+    "city": "Praha",
+    "postalCode": "17000",
+    "phone": "+420 776035785",
+    "website": "http://www.squash-holesovice.cz",
+    "description": "Nabízíme 4 squashové kurty, stolní tenis, solárium Ergoline 300. Půjčujeme a prodáváme squashové rakety a sportovní zboží OLIVER. Možnost rezervace online.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportoviště města Uherské Hradiště, p.o.",
+    "address": "Stonky 860",
+    "city": "Uherské Hradiště",
+    "postalCode": "68601",
+    "phone": "+420 572540588",
+    "website": "https://www.sportoviste-uh.cz",
+    "description": "Provozujeme sportovní halu, squash, spinning, víceúčelová sportoviště, atletický areál, volejbalové, beachvolejbalové a tenisové kurty, basketbalové hřiště. Městský fotbalový a hokejový stadion, bruslení veřejnosti. Také provozujeme venkovní umělé kluziště.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisový klub Turnov",
+    "address": "Koškova 825",
+    "city": "Turnov",
+    "postalCode": "51101",
+    "phone": "+420 602312366",
+    "website": "https://tkturnov.cz",
+    "description": "Provozujeme tenisový klub a kurty. Zabýváme se prodejem tenisových míčů, omotávek, výpletů i tlumítek do výpletů a vyplétáním raket na elektronickém vyplétacím stroji. Pořádáme tenisovou školu, meziokresní přebory, mistrovská utkání, turnaje, skupinové tréninky pro děti a další.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "PRECOL, s.r.o.",
+    "address": "Předměřice nad Jizerou 74",
+    "city": "Předměřice nad Jizerou",
+    "postalCode": "29474",
+    "phone": "+420 326313528",
+    "website": "https://precol.cz",
+    "description": "Zabýváme se dodávkami sportovních povrchů. Nabízíme povrchy pro profesionální sport, ale i pro amatérské, klubové, školní či rekreační účely. Dodáváme povrchy na tenisové kurty, fotbalová hřiště, víceúčelová sportoviště, lehkoatletické dráhy a další. Poskytujeme poradenství a technický servis.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tělovýchovná jednota Zbrojovka Vsetín",
+    "address": "Na Lapači 297",
+    "city": "Vsetín",
+    "postalCode": "75501",
+    "phone": "+420 723277940",
+    "website": "http://www.tj-zbrojovka.cz",
+    "description": "Provozujeme sdružení nabízející sportovní vyžití ve 13 oddílech. Jsou zde otevřeny k pronájmu kuželna, sportovní hala a tenisové kurty. Sdružujeme oddíly basketbalu, házené, volejbalu, kulturistiky a fitness, sportovní gymnastiky, orientačního běhu, lyžování, horolezectví, turistiky a šachů.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Beach Centrum Kolofík",
+    "address": "Kolofíkovo nábřeží 1062/51",
+    "city": "Opava",
+    "postalCode": "74705",
+    "phone": "+420 602560410",
+    "website": "https://happysportopava.wixsite.com/",
+    "description": "Provozujeme sportovní klub zaměřený na plážový volejbal. K dispozici je 5 hřišť na beachvolejbal, 1 antukový kurt na volejbal, bazén s venkovní sprchou a bar s občerstvením i nápoji. Pořádáme beachvolejbalové turnaje všech úrovní. Možnost firemních (sport. den) i soukromých akcí.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Volejbalový klub Roudnice nad Labem, z.s.",
+    "address": "Nad Skalami 1833",
+    "city": "Roudnice nad Labem",
+    "postalCode": "41301",
+    "phone": "+420 724636970",
+    "website": "",
+    "description": "Provozování volejbalového klubu. Pořádáme turnaje mužů, žen i smíšených družstev. K dispozici jsou dva antukové kurty a jeden kurt na beachvolejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "FC Dolany",
+    "address": "Dolany 696",
+    "city": "Dolany",
+    "postalCode": "78316",
+    "phone": "+420 605387183",
+    "website": "https://www.fcdolany.cz",
+    "description": "Provozujeme fotbalový klub. Trénujeme tým dorostu, mužů, žáků, benjamínků a přípravku. Účastníme se a pořádáme různé zápasy a turnaje. Každoročně vyjíždíme na společné soustředění, kde utužujeme kolektiv a týmového ducha. Disponujeme hřištěm a kurty pro tenis, nohejbal a volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní klub Slatinice, z.s.",
+    "address": "Slatinice 50",
+    "city": "Slatinice",
+    "postalCode": "78342",
+    "phone": "+420 723082374",
+    "website": "https://www.sk-slatinice.cz",
+    "description": "Provozujeme fotbalový klub. K dispozici jsou tenisové kurty, fotbalové hřiště či hřiště na plážový volejbal. Vedeme tým mužů, starších i mladších žáků.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TJ Krnov",
+    "address": "Petrovická 341/2",
+    "city": "Krnov",
+    "postalCode": "79401",
+    "phone": "+420 603365276",
+    "website": "",
+    "description": "Provozujeme sportovní oddíl se zaměřením na atletiku, kuželky, plavání, volejbal, stolní tenis, karate, tenis či na sport pro všechny. Pronajímáme tenisové kurty s možností zajištění občerstvení.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Legea-eshop.cz",
+    "address": "Gorkého 2351/19a",
+    "city": "Svitavy",
+    "postalCode": "56802",
+    "phone": "+420 774204255",
+    "website": "https://www.legea-eshop.cz",
+    "description": "Sportobchod, sportovní potřeby a vybavení LEGEA, JOMA JAKO, ERREA, ADIDAS, NIKE, MOLTEN, MERCO a další. Prodáváme fotbalové, volejbalové i basketbalové dresy, míče, tašky a batohy, vybavení na hřiště i kurty, sportovní soupravy a oblečení na trénink i volný čas, štulpny a tréninkové pomůcky.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "BVC Chodov",
+    "address": "Bezručova",
+    "city": "Chodov",
+    "postalCode": "35735",
+    "phone": "+420 777251796",
+    "website": "https://www.bvc-chodov.cz",
+    "description": "Provozujeme klub šestkového a plážového volejbalu. Organizujeme celorepublikové i místní turnaje v beachvolejbalu. K dispozici je 9 kurtů (písek), 1 kurt (antuka), 1x stolní tenis, dětské hřiště, 300m dráha na kolečkové brusle, hřiště pro malou kopanou.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tělocvičná jednota Sokol Kerhartice",
+    "address": "Sokolská 120",
+    "city": "Ústí nad Orlicí",
+    "postalCode": "56204",
+    "phone": "+420 465552210",
+    "website": "http://www.sokol.kerhartice.com",
+    "description": "Zajištění sportovních činností a akcí pro cvičence všech věkových kategorií. Provoz oddílu volejbalu, fotbalu a aerobiku. Ve sportovním areálu je možnost pronájmu sokolovny, antukového a beach kurtu, multifunkčního hřiště s umělou travou a umělým osvětlením.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní klub Aritma Praha",
+    "address": "Nad lávkou 672/5",
+    "city": "Praha",
+    "postalCode": "16000",
+    "phone": "+420 235358551",
+    "website": "http://www.skaritma.cz",
+    "description": "Ve sportovním areálu se nachází víceúčelová sportovní hala. Nabízíme vyžití pro děti i dospělé tenisové kurty, hřiště na kopanou, volejbal, beach volejbal, házenou či sportovní halu na basketbal. Naleznete u nás i atletickou rovinku s doskočištěm na skok daleký a vysoký i dětskou lezeckou stěnu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TJ Letov Letňany",
+    "address": "Třinecká 650",
+    "city": "Praha",
+    "postalCode": "19900",
+    "phone": "+420 722303810",
+    "website": "https://www.tenisletnany.cz",
+    "description": "Provozujeme tělovýchovnou jednotu se zaměřením na tenis, volejbal i další individuální a kolektivní sporty. Pořádáme turnaje či soutěže. Organizujeme kulturní akce. Tenisové kurty s umělým povrchem. Kvalitní zázemí, klubovna, zahrádka, tenisová škola, rezervace kurtů.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TJ Tatran Třemošná",
+    "address": "U Stadionu 1072",
+    "city": "Třemošná",
+    "postalCode": "33011",
+    "phone": "+420 602219670",
+    "website": "https://tatran-tremosna.webnode.cz",
+    "description": "Provoz oddílů fotbalu, nohejbalu, hokejbalu, házené, turistiky a tenisu. Součástí areálu je travnaté fotbalové a asfaltové hokejbalové hřiště. Dále disponujeme víceúčelovým hřištěm s umělým povrchem na házenou nebo volejbal a 2 antukovými tenisovými kurty. K dispozici jsou šatny s restaurací.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TJ Slovan Frýdlant",
+    "address": "Frýdlant",
+    "city": "Frýdlant",
+    "postalCode": "46401",
+    "phone": "+420 603200538",
+    "website": "https://tj-slovan-frydlant.webnode.cz",
+    "description": "Provozujeme volejbalové kurty na kterých se stejně dobře dá hrát nohejbal i tenis.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Beachklub Praha Pankrác",
+    "address": "Horáčkova 1100/14",
+    "city": "Praha",
+    "postalCode": "14000",
+    "phone": "+420 724337967",
+    "website": "https://www.beachklub.cz/",
+    "description": "Jsme klub s velmi bohatou historií a vášní pro beachvolejbal. Pořádáme profesionální turnaje, domácí i zahraniční kempy a tréninky pro děti a mládež. Nabízíme také možnost uspořádat firemní akce či jiné oslavy. Tak si pronajměte kurt a přijďte si zahrát!",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Vrša  Sportcentrum",
+    "address": "Technologická 956/2a",
+    "city": "Praha",
+    "postalCode": "14800",
+    "phone": "+420 267315000",
+    "website": "https://vrsasportcentrum.cz",
+    "description": "Nabízíme celoroční zázemí pro tenis (kurty antukové a s umělým povrchem v halách i venkovní) a badminton. V letní sezóně beachvolejbal. Tenisová školička, příznivé ceny, pohodlné parkování, dobrá dostupnost MHD z nás dělá ideální místo pro profesionální trénink i aktivní odpočinek.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní areál Dobeška",
+    "address": "Nad lomem 1777/1a",
+    "city": "Praha",
+    "postalCode": "14700",
+    "phone": "",
+    "website": "https://www.cvf.cz/cvs/oddily",
+    "description": "Provozujeme tělovýchovnou jednotu se zaměřením na volejbal, nohejbal a sport pro všechny. Nabízíme pronájem kurtů. Pořádáme turnaje a soutěže. K dispozici jsou dva antukové volejbalové/nohejbalové kurty.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TJ Calofrig Borovany",
+    "address": "Žižkovo nám. 107",
+    "city": "Borovany",
+    "postalCode": "37312",
+    "phone": "+420 603712691",
+    "website": "https://www.fkborovany.cz",
+    "description": "Provozujeme sportovní klub. Vedeme oddíl kopané, nohejbalu, volejbalu, kuželek a oddíl stolního tenisu. K dipozici jsou dvě fotbalová hřiště, tělocvična, posilovna či volejbalové a tenisové kurty. Pořádáme a účastníme se různých turnajů, utkání a soutěží. Neustále hledáme nové členy do našich týmů.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TJ Jiskra Týn nad Vltavou",
+    "address": "Táborská 810",
+    "city": "Týn nad Vltavou",
+    "postalCode": "37501",
+    "phone": "+420 608975088",
+    "website": "https://www.facebook.com/people/TJ-Jiskra-Tyn-nad-Vltavou-volejbal",
+    "description": "Provozujeme volejbalový klub. Účastníme se turnajů a pořádáme zápasy. Poskytujeme pronájem volejbalových a beachového kurtu. Hledáme další členy naší TJ.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TJ Jiskra Adršpach",
+    "address": "Adršpach, Horní Adršpach 126",
+    "city": "Horní Adršpach 126",
+    "postalCode": "54952",
+    "phone": "+420 775379950",
+    "website": "https://www.tjadrspach.cz",
+    "description": "Provoz tělovýchovné jednoty. Sportovní areál s kurty, hřištěm, halou, horolezeckou stěnou, bike parkem (pumptrack). Sportoviště na tenis, volejbal, nohejbal, fotbal, stolní tenis, fitness, horolezectví. Pronájem sportovišť pro soustředění, školy v přírodě, firemní akce, kurzy, společenské akce.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TJ Tatran Hrušky",
+    "address": "Hrušky 166",
+    "city": "Hrušky",
+    "postalCode": "68352",
+    "phone": "+420 777560604",
+    "website": "",
+    "description": "Provozujeme tělovýchovnou jednotku, o třech oddílech - lední hokej, volejbal a stolní tenis. Pečujeme o sportovní areál se dvěma kurty pro volejbal. Pravidelně cvičíme s dětmi všeobecnou motorickou přípravu, která se průběžně profiluje hrou (mini)volejbalu. Organizujeme kulturní a společenské akce.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "VICTOR Sport s.r.o.",
+    "address": "Cyrilská 359/16",
+    "city": "Brno",
+    "postalCode": "60200",
+    "phone": "+420 777908392",
+    "website": "https://www.victorsport.cz",
+    "description": "Zaměřujeme se na výrobu sportovního vybavení pro profesionály i amatérské hráče badmintonu a dalších halových raketových sportů. Velkoobchodní sortiment zahrnuje badmintonové, squashové a tenisové rakety, badmintonové míče, sportovní textil, tašky, batohy, kurty, rekreační sety, vyplétací stroje.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Badminton Na Výstavišti",
+    "address": "Husova tř. 523/30",
+    "city": "České Budějovice 2",
+    "postalCode": "37005",
+    "phone": "+420 380830617",
+    "website": "http://www.badmintonceskebudejovice.cz",
+    "description": "Provozujeme badmintonovou halu se šesti kurty pro širokou veřejnost. Půjčujeme rakety, prodáváme občerstvení a sportovní vybavení.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sokol Vlašim",
+    "address": "Sportovní 618",
+    "city": "Vlašim",
+    "postalCode": "25801",
+    "phone": "+420 732408732",
+    "website": "https://www.sokolvlasim.cz",
+    "description": "Volnočasové aktivity v různých typech sportů a cvičení pod vedením vyškolených trenérů a cvičitelek. Pronájem 2 tělocvičen, pohybového studia, hřiště na mládežnický baseball a softball, volejbalový kurt a multifunkční hřiště s umělým povrchem na basketbal, nohejbal a volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportcentrum Ivanovice",
+    "address": "Černohorská 245/22",
+    "city": "Brno",
+    "postalCode": "62100",
+    "phone": "+420 730899399",
+    "website": "https://www.sportcentrum-ivanovice.cz/",
+    "description": "Nabízíme 4 profesionální kurty pro Squash, 3 badmintonové kurty. Pořádáme skupinové lekce Schwinn Cyclingu (Spinning), TRX, Pilates, BOSU a spoustu dětských kroužků. Těšíme se na vás.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Squashcentrum Strahov",
+    "address": "Vaníčkova 100/6",
+    "city": "Praha",
+    "postalCode": "16900",
+    "phone": "+420 723763154",
+    "website": "https://www.squashstrahov.cz",
+    "description": "Provozujeme squashcentrum s 6 kurty zn. Fiberesin. Pořádáme školu squashe pro mládež a nabízíme možnost tréninku se squashovým trenérem.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sport club Budějovická",
+    "address": "Budějovická 680/17",
+    "city": "Praha",
+    "postalCode": "14000",
+    "phone": "+420 777048343",
+    "website": "https://www.scbudejovicka.cz",
+    "description": "Posilovna s kardio zónou, beach volejbal, basketbal, tenis, fotbalové hřiště s umělou trávou.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní areál - MRAKOVI",
+    "address": "Šibenička 808",
+    "city": "Mnichovice",
+    "postalCode": "25164",
+    "phone": "+420 323640975",
+    "website": "https://www.sibenicnivrch.cz",
+    "description": "Provozujeme sportovní areál. K dispozici jsou dvě bowlingové dráhy, squashový kurt, vnitřní tenisový kurt a venkovní antukový tenisový kurt. Dále je možnost hrát beach volejbal či volejbal a nohejbal. V zimním období nabízíme služby lyžařské školy.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sky Padel Czech Republic, s.r.o.",
+    "address": "Lovosická 559/32",
+    "city": "Praha",
+    "postalCode": "19000",
+    "phone": "+420 776008008",
+    "website": "",
+    "description": "Od roku 2012 vyrábíme padelové kurty.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Badminton Milo",
+    "address": "Na Střelnici 37/37",
+    "city": "Olomouc",
+    "postalCode": "77900",
+    "phone": "+420 733300573",
+    "website": "https://badminton-olomouc.cz/cs/none",
+    "description": "Badmintonová hala s 5 kurty. Badmintonový klub, tréninkové lekce. Vyplétání badmintonových, tenisových a squashových raket. Prodej a testování vybavení značky YONEX.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Jih sportovní stavby",
+    "address": "Úžická 33",
+    "city": "Odolena Voda",
+    "postalCode": "25070",
+    "phone": "+420 605254580",
+    "website": "https://www.jih-sportovnistavby.cz/",
+    "description": "Výstavba sportovních zařízení včetně přípravy, poradenství a projektové dokumentace. Nabízíme sportovní i dětská hřiště s umělými povrchy, tenisové kurty, fotbalová hřiště a halové sportovní podlahy. Stavby realizujeme i na klíč.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Víceúčelová sportovní hala Slaný, Tělocvična, Bowling & Squash",
+    "address": "Lacinova 1720",
+    "city": "Slaný",
+    "postalCode": "27401",
+    "phone": "+420 702234739",
+    "website": "https://www.vshslany.cz",
+    "description": "Tělocvična pro míčové hry; basketbal, volejbal a nohejbal, nebo badminton. Bowlingová dráha a squashový kurt. Šatny, občerstvení a možnost zapůjčení squashové rakety zdarma a zapůjčení či zakoupení squashových míčů.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Wellness centrum Měřín",
+    "address": "Rabyně, Měřín 113",
+    "city": "Měřín 113",
+    "postalCode": "25744",
+    "phone": "+420 973222112",
+    "website": "https://www.volareza.cz/wellness-centrum-merin/",
+    "description": "Rozsáhlé wellness centrum hotelu Měřín je otevřeno i pro širokou klientelu. Nabízí 25m bazén, tobogán, vodní atrakce, suchou a parní saunu, whirlpooly, solnou jeskyni, solární louku, balneo, masáže, tenisové haly, squash, venkovní kurty, beach volejbal, fotbal, lodičky, kanoe či dračí lodě.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportoviště LUNA",
+    "address": "Kouty 77",
+    "city": "Kouty",
+    "postalCode": "58401",
+    "phone": "+420 569738800",
+    "website": "https://hotelluna.cz/dovolena/discgolfove-hriste-na-vysocine/",
+    "description": "Provoz multifunkčních kurtů s umělým povrchem pro tenis, nohejbal či volejbal s možností osvětlení. Devítijamkové multigolfové hřiště nabízející discgolf, fotbalgolf a parkgolf. Půjčovna lodiček, možnost rybaření a mnohem víc. Prostě vše pro skvělou zábavu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Squash - Orange gym",
+    "address": "Podřipská 914",
+    "city": "Kralupy nad Vltavou",
+    "postalCode": "27801",
+    "phone": "+420 315722411",
+    "website": "https://orangegym.cz",
+    "description": "Provozujeme jeden squashový kurt. Možnost zakoupení squashového oblečení a raket značky Oliver.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Volejbalové hřiště VK Hronov",
+    "address": "Náchodská",
+    "city": "Praha",
+    "postalCode": "54931",
+    "phone": "",
+    "website": "https://www.vkhronov.cz",
+    "description": "Volejbalové kurty VK Hronov na městském stadionu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "MTV Fitness & Squash",
+    "address": "Za Černým mostem 1425",
+    "city": "Praha",
+    "postalCode": "19800",
+    "phone": "+420 606940070",
+    "website": "http://www.mtvfitness.cz",
+    "description": "Provozuje squashové kurty. Půjčujeme a prodáváme rakety i míčky.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "YONEX ARENA",
+    "address": "Denisova 2916/9",
+    "city": "Přerov I-Město",
+    "postalCode": "75002",
+    "phone": "+420 737095989",
+    "website": "https://badminton-arena.cz/cs/none",
+    "description": "Badmintonová hala se 4 kurty. Tréninkové lekce. Vyplétání badmintonových, tenisových a squashových raket. Prodej a testování vybavení značky YONEX.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "sport klub 171",
+    "address": "Kostelec u Křížků 171",
+    "city": "Kostelec u Křížků",
+    "postalCode": "25168",
+    "phone": "+420 323602599",
+    "website": "https://sportklub171.cz",
+    "description": "Můžete si užít jedinečnost atmosféry a relaxovat. Naše venkovní sportoviště jsou vždy perfektně nachystané na vaše výkony. Od návštěvy vás nemusí odradit ani nepřízeň počasí. Ve sport klubu objevíte, co je radost ze sportu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Beach Klub Tajm Lanškroun",
+    "address": "Obora 24",
+    "city": "Lanškroun",
+    "postalCode": "56301",
+    "phone": "+420 775574220",
+    "website": "https://www.tajm.cz",
+    "description": "Provoz klubu zaměřeného na plážový volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Beach club Liberec",
+    "address": "Na Skřivanech 935",
+    "city": "Liberec XV-Starý Harcov",
+    "postalCode": "46015",
+    "phone": "+420 602613125",
+    "website": "https://www.beachliberec.cz",
+    "description": "Provozujeme areál kde naleznete 5 celoročně zastřešených a tři venkovní beachvolejbalové kurty, nové a moderní šatny, recepci a objednávání kurtů on-line, občerstvení a posezení, parkování zdarma.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Orel jednota Brno - Komín",
+    "address": "Kníničská 1221/15",
+    "city": "Brno",
+    "postalCode": "62400",
+    "phone": "",
+    "website": "http://www.orelkomin.cz",
+    "description": "Provoz beachvolejbalových kurtů a víceúčelového kurtu s umělým povrchem.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Beach Volley Vratislavice n. N.",
+    "address": "Liberec",
+    "city": "Liberec",
+    "postalCode": "46311",
+    "phone": "+420 728614155",
+    "website": "https://beachvratislavice.cz",
+    "description": "Sportovní klub je klub pro mládež, amatéry a veřejnost se zájmem o sport. Vznikl v říjnu 2009. Sport by nás měl dělat lepšími. Máme k dispozici 3 beach volejbalové kurty, v zimě tělocvičnu ZŠ.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Club classic",
+    "address": "Žabovřeská 581/3",
+    "city": "Brno",
+    "postalCode": "61600",
+    "phone": "+420 725712834",
+    "website": "https://www.clubclassic.cz",
+    "description": "Můžete zažít hru v tradičním tenisovém klubu. Můžete přijít do jedinečného sportovního areálu, kde si užijete svůj aktivní odpočinek na maximum. Tenis, Badminton, Beachvolejbal, Fotbal, Posilovna, Masáže, Squash.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Beach voleyball",
+    "address": "Šikulova 1427",
+    "city": "Předklášteří",
+    "postalCode": "66602",
+    "phone": "",
+    "website": "https://www.predklasteri.cz/kultura-a-sport/sportoviste-1/",
+    "description": "Tento kurt je spravován členy TJ Sokol Předklášteří a má svůj rozvrh, ve kterém jsou blokovány hodiny pro jednotlivé skupiny.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Bowling centrum Brno - beachvolejbal",
+    "address": "Líšeňská 4515/80",
+    "city": "Brno",
+    "postalCode": "61500",
+    "phone": "+420 530351500",
+    "website": "https://www.bowlingbrno.cz",
+    "description": "Součástí našeho společensko – sportovního centra jsou i čtyři beachvolejbalové kurty včetně kompletního zázemí. Připravujeme pro Vás sérii zajímavých turnajů a jsme schopni pro Vás nachystat turnaje dle Vašeho zadání a Vašich představ.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Volejbalové hřiště Blansko",
+    "address": "Mlýnská 1297/19",
+    "city": "Blansko",
+    "postalCode": "67801",
+    "phone": "+420 777465562",
+    "website": "https://www.sportoviste-blansko.cz/volejbalovy-kurt",
+    "description": "Provozujeme hřiště na plážový volejbal.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Florbal.com",
+    "address": "Kurta Konráda 2457/6",
+    "city": "Praha",
+    "postalCode": "19000",
+    "phone": "+420 252540008",
+    "website": "https://www.florbal.com",
+    "description": "Specializovaný e-shop a prodejny s florbalovým vybavením pro hráče všech úrovní. nabízíme vybavení od prémiových značek, jako jsou Oxdog, Zone, Salming, Unihoc, Fatpipe, a Blindsave. u nás najdete široký výběr florbalek, holí, brankářské výstroje i sálové obuvi Adidas, Mizuno.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TENIS CENTRUM Mandlík, s.r.o.",
+    "address": "Hornofova ev. č. 21",
+    "city": "Praha",
+    "postalCode": "16400",
+    "phone": "+420 731554007",
+    "website": "http://www.tenis-centrum-mandlik.cz",
+    "description": "Nabízíme kurzy tenisu pro všechny věkové kategorie. Provozujeme dva kryté antukové dvorce. Organizujeme firemní turnaje. Prodáváme tenisové vybavení.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Ski servis - Milan Čáp",
+    "address": "Kurta Konráda 507/20",
+    "city": "Praha",
+    "postalCode": "19000",
+    "phone": "+420 603245055",
+    "website": "http://www.lyzevysocany.cz",
+    "description": "Půjčovna, prodej a servis zimního vybavení na hory. Nabízíme sjezdové lyže, běžky, snowboardy, hole, helmy, lyžařské brýle. V sortimentu se nachází výrobky značek Atomic, Elan, Level, Leki a Völkl.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Ridera Sport, a.s.",
+    "address": "Závodní 2885/86g",
+    "city": "Ostrava",
+    "postalCode": "70300",
+    "phone": "+420 739521952",
+    "website": "https://riderasport.cz",
+    "description": "Sportovní a relaxační areál. Nabízíme tenis, tenisovou školu, badminton, spinning, fitness, bazén, saunu, masáže, solárium, minigolf, příměstské tábory. Online rezervační systém. Pronájem na sportovní a společenské akce.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Tenisový klub Havířov, z.s.",
+    "address": "Opletalova 1218/8b",
+    "city": "Havířov",
+    "postalCode": "73601",
+    "phone": "+420 777034027",
+    "website": "http://www.tk-havirov.cz",
+    "description": "Provozování 9-ti antukových dvorců a nafukovací haly se třemi dvorci. Prodej tenisového zboží. Pořádání firemních tenisových turnajů či sportovního odpoledne. Možnost pronájmu klubovny s barem pro 40 osob, malé banketky pro 12 osob či velké banketky pro 24 osob pro pořádání společenských akcí.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "SK SPORTCENTRUM ROUDNÁ z.s.",
+    "address": "Pod Všemi svatými 43",
+    "city": "Plzeň",
+    "postalCode": "30100",
+    "phone": "+420 605006060",
+    "website": "https://www.facebook.com/sksportcentrumroudna",
+    "description": "Tenisový areál SK Sportcentrum Roudná v blízkosti centra města. Nabízíme 8 tenisových antukových kurtů a 2 beachové hřiště.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Horácký tenisový klub Třebíč",
+    "address": "Janáčkovo stromořadí 158/7",
+    "city": "Třebíč",
+    "postalCode": "67401",
+    "phone": "+420 568848595",
+    "website": "https://www.facebook.com/htktrebic",
+    "description": "Tenisový klub a tenisová hala. 8 venkovních antukových tenisových kurtů a 2 halové, tenisová tréninková hrací stěna a elektronický nahrávací stroj. V areálu tenisová školička a tenisová akademie. Vyplétáme rakety a prodáváme sportovní vybavení. Pořádáme sportovní a společenské akce na klíč.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TENIS MLADCOVÁ",
+    "address": "Vinohrádek 493",
+    "city": "Zlín",
+    "postalCode": "76001",
+    "phone": "+420 602715441",
+    "website": "http://www.tenismladcova.cz",
+    "description": "Jsme tenisový klub a škola. Specializujeme se na mládežnický tenis, kdy trénujeme děti celoročně a pravidelně pořádáme taky příměstské tenisové tábory. Poskytujeme pronájem tenisových kurtů a nabízíme prodej tenisového vybavení Prince, vyplétání raket, pronájem sauny a whirlpoolu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "ORCA-YACHT, s.r.o.",
+    "address": "Kurta Konráda 2445/5",
+    "city": "Praha",
+    "postalCode": "19000",
+    "phone": "+420 603764979",
+    "website": "",
+    "description": "Nabízíme pronájem lodi katamarán Lagoon 400 i s kapitánem pro teambuilding či dovolenou na moři. Zaměřujeme se také na prodej lodí Imexus.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "COLNAGO & ASSOS ProShop",
+    "address": "Kurta Konráda 2445/9",
+    "city": "Praha",
+    "postalCode": "19000",
+    "phone": "+420 605234525",
+    "website": "https://colnago.cz/",
+    "description": "Výhradní zastoupení cyklistického oblečení švýcarské značky ASSOS a italské značky kol COLNAGO. Provádíme servis všech značek kol, seřízení a opravy kol. Nabízíme půjčení přepravních kufrů a tašek na kola. Poskytujeme stavby kol na míru.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Ing. Radim Slezák, SH Tennis Team",
+    "address": "Vřesinská 121/97",
+    "city": "Ostrava",
+    "postalCode": "70800",
+    "phone": "+420 603218510",
+    "website": "http://www.slezaktenis.cz",
+    "description": "Provozujeme tenisovou školu. Zajišťujeme pronájem dvorců, vyplétání raket a prodej tenisových potřeb.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "LTC Rudná",
+    "address": "Hořelické náměstí 1130/5",
+    "city": "Rudná",
+    "postalCode": "25219",
+    "phone": "+420 728113400",
+    "website": "https://www.facebook.com/TenisBeachRudna",
+    "description": "Provozujeme sportovní areál jehož součástí je 6 antukových dvorců a beachvolleyballové hřiště.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Beach Tenis Kapitol",
+    "address": "Magistrů 1510/24",
+    "city": "Praha",
+    "postalCode": "14000",
+    "phone": "+420 774505800",
+    "website": "https://www.teniskapitol.cz",
+    "description": "Provozujeme tenisový areál. Zajišťujeme výuku tenisu i plážového tenisu, půjčování tenisového vybavení. Nabízíme kurzy tenisu a plážového tenisu pro děti i dospělé. Provádíme vyplétání tenisových, squashových a badmintonových raket. Poskytujeme možnost dlouhodobé rezervace.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "LTC 2005",
+    "address": "Ovenecká 330/44",
+    "city": "Praha",
+    "postalCode": "17000",
+    "phone": "+420 608774195",
+    "website": "https://www.ltc2005.cz",
+    "description": "Společnost LTC 2005 s.r.o. je od roku 2008 provozovatelem Tenisového areálu LTC 2005 v Praze - Modřanech.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Assos-shop.cz",
+    "address": "Kurta Konráda 2445/9",
+    "city": "Praha",
+    "postalCode": "19000",
+    "phone": "+420 605234525",
+    "website": "https://www.assos-shop.cz",
+    "description": "Butik a internetový obchod s cyklo oblečením značky ASSOS. Výhradní zastoupení cyklistického oblečení švýcarské značky ASSOS a italské značky kol COLNAGO. Provádíme servis všech značek kol, seřízení a opravy kol. Nabízíme půjčení přepravních kufrů a tašek na kola. Poskytujeme stavby kol na míru.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Amenity Sport Arena Lipno",
+    "address": "Lipno nad Vltavou 998",
+    "city": "Lipno nad Vltavou",
+    "postalCode": "38278",
+    "phone": "+420 380731778",
+    "website": "https://lipno.amenity.cz/sport-arena-lipno",
+    "description": "Provozujeme sportovní halu se squashovými a badmintonovými kurty, stolním tenisem, bowlingovými drahami, fitness a venkovním hřištěm na plážové sporty. Naleznete zde také wellness s vířivkami, saunami, párou a nádherným výhledem na Lipno.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Dětská hřiště Prolemax",
+    "address": "Cvokařská 160/10",
+    "city": "Plzeň",
+    "postalCode": "31200",
+    "phone": "+420 377828946",
+    "website": "",
+    "description": "Dodáváme certifikovaná dětská hřiště pro veřejná prostranství, MŠ a obce dle ČSN EN 1176. Pro dětská hřiště nabízíme: skluzavky, houpačky, prolézačky, lanové prvky a další vybavení významných výrobců dětských hřišť LittleTikes a Miracle. Pokládáme bezpečnostní umělé povrchy a umělé trávníky.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Sportovní areál a Café Bar ROCI",
+    "address": "Těsnohlídkova 1710/9",
+    "city": "Šlapanice",
+    "postalCode": "66451",
+    "phone": "+420 725046373",
+    "website": "https://www.roci.cz",
+    "description": "Sportovní areál nabízí tyto sportovní aktivity: tenis či nohejbal v kryté  hale s betonovým povrchem, beachvolleyball, pétanque, billiard, stolní tenis, šipky. Součástí areálu je café bar s letní zahrádkou, dětské hřiště, apartmán s možností ubytování. Ideální místo pro oslavy a firemní akce.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "ENVOS, s.r.o.",
+    "address": "Pod Fialkou 2419/6",
+    "city": "Praha",
+    "postalCode": "15000",
+    "phone": "+420 257213551",
+    "website": "",
+    "description": "Provádíme a zajišťujeme kompletní dodávku staveb pro sportovní a oddychové účely. Stavíme tenisová hřiště, fotbalová hřiště, hřiště s univerzálním umělým povrchem pro více druhů sportovních činností. Nabízíme údržbu a čištění hřišť. Dodáváme oplocení, osvětlení a dalších doplňků sportovišť.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "TJ Sokol Nová Hradečná",
+    "address": "Nová Hradečná 95",
+    "city": "Nová Hradečná",
+    "postalCode": "78383",
+    "phone": "+420 606665896",
+    "website": "http://tjsokolnovahradecna.com",
+    "description": "Zajištění sportovních akcí, nabídka posilovny a tenisových kurtů. Pronájem sálu a venkovního areálu na svatby, oslavy a jiné akce.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "VRŠA-SPORT - Sportovní stavby na klíč",
+    "address": "Štichova 648/40",
+    "city": "Praha",
+    "postalCode": "14900",
+    "phone": "+420 739577419",
+    "website": "https://vrsasport.cz",
+    "description": "Projektování, realizace a revize sportovních staveb s vnitřními i venkovními povrchy. Nabídka povrchů pro tenis, fotbal, atletiku, golf, bruslení, badminton a veškeré míčové hry, závlahových a odvodňovacích systémů, lajnování a oplocení sportovišť. Možnost certifikace FIFA.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "ROYAL TECH, s.r.o.",
+    "address": "Fáblovka 404",
+    "city": "Pardubice",
+    "postalCode": "53352",
+    "phone": "+420 604183738",
+    "website": "https://www.royaltech.cz",
+    "description": "Nabízíme kompletní realizaci sportovních podlah tělocvičen, sportovních hal, multifunkčních hal (dřevěných a umělých - polyuretanové CONIPUR), samozřejmostí jsou jejich povrchové úpravy. K další činnosti patří renovace podlah a parket, servis, lajnování hřišť, sportovní vybavení, dřevěné obložení.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "CENTRUM VIKTORIA, s.r.o.",
+    "address": "Vodařská 232/2",
+    "city": "Brno",
+    "postalCode": "61900",
+    "phone": "+420 776282575",
+    "website": "https://www.centrumviktoria.cz",
+    "description": "Provozujeme moderní víceúčelový areál. Moderní koncept centra nabízí propojení práce, pohybu a relaxace. Naleznete zde několik druhů atraktivních sportovišť - 6x squash, 8x beachvolejbal, 3x badminton, tenis, fotbálek, nohejbal. Bezproblémové parkování hned u areálu.",
+    "sport": "volejbal"
+  },
+  {
+    "name": "Fifteen - Mgr. Marcel Trnka",
+    "address": "Jinačovice 170",
+    "city": "Jinačovice",
+    "postalCode": "66434",
+    "phone": "+420 721436136",
+    "website": "https://www.fifteen.cz",
+    "description": "Nabízíme špičkové tenisové vybavení a služby pro moderní tenisové areály. Naše produkty zahrnují tenisové lajny, sítě, kartáče a další nezbytnosti. S více než třicetiletou zkušeností v oblasti výstavby a údržby tenisových kurtů víme, co potřebujete pro kvalitní hru.",
+    "sport": "volejbal"
+  }
+]

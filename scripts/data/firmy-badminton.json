@@ -1,0 +1,2072 @@
+[
+  {
+    "name": "Tenisová a badmintonová hala Sprint",
+    "address": "Sportovní",
+    "city": "Brno",
+    "postalCode": "60200",
+    "phone": "+420 734686257",
+    "website": "https://www.sprinttenis.cz",
+    "description": "Provozujeme tenisovou a badmintonovou halu. K dispozici je bar a posezení, prodejna sportovních potřeb, pedikúra, masáže. Pořádáme jakékoliv sportovní akce. Zajistíme kompletní organizaci včetně materiálního zajištění, občerstvení formou rautu, profesionálního školitele, trenérů tenisu i badmintonu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Badmintonová hala",
+    "address": "Na Studánkách 2590",
+    "city": "Rakovník II",
+    "postalCode": "26901",
+    "phone": "+420 725004018",
+    "website": "https://www.cafex.cz/",
+    "description": "Provozujeme kryté kurty pro badminton.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Badminton Makra Court",
+    "address": "U Hřiště 2524",
+    "city": "Žatec",
+    "postalCode": "43801",
+    "phone": "+420 734255000",
+    "website": "",
+    "description": "Provozujeme badmintonový klub. K dispozici jsou dva kurty.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Badminton Na Výstavišti",
+    "address": "Husova tř. 523/30",
+    "city": "České Budějovice 2",
+    "postalCode": "37005",
+    "phone": "+420 380830617",
+    "website": "http://www.badmintonceskebudejovice.cz",
+    "description": "Provozujeme badmintonovou halu se šesti kurty pro širokou veřejnost. Půjčujeme rakety, prodáváme občerstvení a sportovní vybavení.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní hala Krašovská",
+    "address": "Krašovská 2333/32",
+    "city": "Plzeň",
+    "postalCode": "32300",
+    "phone": "+420 774050839",
+    "website": "https://www.halakrasovska.cz",
+    "description": "Nabízíme skvělé sportovní zázemí s moderním povrchem Taraflex, které je šetrné k vašim kloubům. Naše hala disponuje devíti badmintonovými kurty, vícúčelovou plochou a cvičebním sálem. Můžete si také půjčit badmintonové rakety a míčky. Těšíme se na vaši návštěvu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní a relaxační centrum Na Císařství - badminton",
+    "address": "Stonavská 51/6",
+    "city": "Horní Suchá",
+    "postalCode": "73535",
+    "phone": "+420 597457094",
+    "website": "https://nacisarstvi.cz",
+    "description": "Provozujeme badmintonové kurty. Vyznavačům tohoto sportu nabízíme sportovní vyžití v nově vybudované badmintonové hale s profesionálním povrchem i s možností zapůjčení sportovních pomůcek.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Badmintonový kurt - Fitness centrum R5",
+    "address": "Růžová 971/5",
+    "city": "Praha",
+    "postalCode": "11000",
+    "phone": "+420 224267556",
+    "website": "http://www.ruzova5.cz",
+    "description": "Provozujeme badmintonový kurt v izolovaném sále. Půjčujeme badmintonové rakety a míčky. Přijímáme poukázky Sodexo, Ticket, Unišek a karty Multisport.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squashové, badmintonové kurty - Centrum sportu Bobrky",
+    "address": "Bobrky 437",
+    "city": "Vsetín",
+    "postalCode": "75501",
+    "phone": "+420 725266104",
+    "website": "https://www.sportbobrky.cz",
+    "description": "Provozujeme dva squashové kurty a čtyři kurty pro badminton, které je možné využít i pro mini tenis. Zajišťujeme takké lekce badmintonu pro začátečníky i pokročilé. Rezervaci kurtu umožňujeme on-line i telefonicky.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Penzion u Röselů - tenisový kurt",
+    "address": "Železná Ruda, Hojsova Stráž 63",
+    "city": "Hojsova Stráž 63",
+    "postalCode": "34022",
+    "phone": "+420 602687081",
+    "website": "http://www.uroselu.cz",
+    "description": "Provozujeme multifunkční hřiště s veškerým vybavením na tenis a badminton, volejbal, nohejbal – otevřeno pro ubytované i pro příchozí veřejnost. K dispozici je tenisové cvičné dělo, cvičná zeď, půjčovna veškerého vybavení. Zázemí – občerstvení, restaurace, šatny se sprchou. Pořádáme tenisové kurzy.",
+    "sport": "badminton"
+  },
+  {
+    "name": "OSTRA Sport Centrum - squash a badminton",
+    "address": "Budečská 3214/4",
+    "city": "Ostrava",
+    "postalCode": "70200",
+    "phone": "+420 724233626",
+    "website": "https://www.scostra.cz",
+    "description": "Provozujeme tenisové, badmintonové a squashové kurty.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash, badminton - SportCentrum Na Hřišti",
+    "address": "U Hřiště 244",
+    "city": "Háj ve Slezsku",
+    "postalCode": "74792",
+    "phone": "+420 773744390",
+    "website": "https://www.restauracenahristihaj.cz",
+    "description": "Zajišťujeme provoz squashového a badmintonového kurtu. Nabízíme také možnost zapůjčení badmintonového vybavení.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Badminton Milo",
+    "address": "Na Střelnici 37/37",
+    "city": "Olomouc",
+    "postalCode": "77900",
+    "phone": "+420 733300573",
+    "website": "https://badminton-olomouc.cz/cs/none",
+    "description": "Badmintonová hala s 5 kurty. Badmintonový klub, tréninkové lekce. Vyplétání badmintonových, tenisových a squashových raket. Prodej a testování vybavení značky YONEX.",
+    "sport": "badminton"
+  },
+  {
+    "name": "YONEX ARENA",
+    "address": "Denisova 2916/9",
+    "city": "Přerov I-Město",
+    "postalCode": "75002",
+    "phone": "+420 737095989",
+    "website": "https://badminton-arena.cz/cs/none",
+    "description": "Badmintonová hala se 4 kurty. Tréninkové lekce. Vyplétání badmintonových, tenisových a squashových raket. Prodej a testování vybavení značky YONEX.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Hotel ENERGETIC - Badmintonové kurty",
+    "address": "Rekreační 1037",
+    "city": "Rožnov pod Radhoštěm",
+    "postalCode": "75661",
+    "phone": "+420 571667600",
+    "website": "https://hotel-energetic.cz/sport/#badminton",
+    "description": "Naše sportovní hala nabízí čtyři badmintonové kurty o rozměrech 13,4 x 5,18 m. Badmintonovou výbavu Vám rádi zapůjčíme na recepci.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenisové kurty Lužánky",
+    "address": "Lidická 1880/50",
+    "city": "Brno",
+    "postalCode": "60200",
+    "phone": "+420 604311640",
+    "website": "https://www.ts4hand.cz",
+    "description": "Provozujeme čtyři antukové kurty a obchod s tenisovou výbavou a doplňky. Poskytujeme možnost výpletu tenisových raket. Půjčujeme rakety a míčky.",
+    "sport": "badminton"
+  },
+  {
+    "name": "fit4all CENTRUM - badminton",
+    "address": "Chironova 544/8",
+    "city": "Brno",
+    "postalCode": "63400",
+    "phone": "+420 511187766",
+    "website": "https://www.fit4all.cz",
+    "description": "Provozujeme sportovní centrum. Naleznete u nás čtyři badmintonové kurty.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenisové kurty - LÁZNĚ LIBVERDA, a.s.",
+    "address": "Lázně Libverda",
+    "city": "Lázně Libverda",
+    "postalCode": "46362",
+    "phone": "+420 482368111",
+    "website": "https://www.lazne-libverda.cz/cz/aktivity-leto",
+    "description": "Nabízíme využití antukového tenisového kurtu pro lázeňské hosty i pro veřejnost. Nabízíme možnost zapůjčení tenisového vybavení, hřiště a míče pro volejbal a nohejbal, badminton a další.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Kurty Na Řádku 604",
+    "address": "Na Řádku 604",
+    "city": "Rakvice",
+    "postalCode": "69103",
+    "phone": "+420 602364008",
+    "website": "",
+    "description": "Zabývám se provozováním tenisových a squashových kurtů. V areálu se nachází také volejbalové hřiště, tenisová zeď, basketbalový koš a petangue.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Kurty Na Řádku \t603",
+    "address": "Na Řádku 603",
+    "city": "Rakvice",
+    "postalCode": "69103",
+    "phone": "+420 602364008",
+    "website": "",
+    "description": "Zabývám se provozováním tenisových a squashových kurtů. V areálu se nachází také volejbalové hřiště, tenisová zeď, basketbalový koš a petangue.",
+    "sport": "badminton"
+  },
+  {
+    "name": "tx HOTEL s.r.o. - squashové kurty",
+    "address": "Ke Cvičišti 878",
+    "city": "Hostinné",
+    "postalCode": "54371",
+    "phone": "+420 499441070",
+    "website": "https://www.txhotel.cz",
+    "description": "Provozujeme kurt na squash.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenisové kurty Horní Měcholupy",
+    "address": "Hornoměcholupská 564/105",
+    "city": "Praha",
+    "postalCode": "10900",
+    "phone": "+420 606916916",
+    "website": "https://www.tenisduda.cz/",
+    "description": "Provoz 2 krytých a 5 venkovních kurtů s antukovým povrchem. Nabídka služeb tenisové školy. Prodej a servis kompletního tenisového vybavení. K dispozici je bar, šatny a parkoviště. Zajišťujeme individuální tréninky.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Club classic",
+    "address": "Žabovřeská 581/3",
+    "city": "Brno",
+    "postalCode": "61600",
+    "phone": "+420 725712834",
+    "website": "https://www.clubclassic.cz",
+    "description": "Můžete zažít hru v tradičním tenisovém klubu. Můžete přijít do jedinečného sportovního areálu, kde si užijete svůj aktivní odpočinek na maximum. Tenis, Badminton, Beachvolejbal, Fotbal, Posilovna, Masáže, Squash.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash Flošna",
+    "address": "Malšovická 779/2",
+    "city": "Hradec Králové",
+    "postalCode": "50009",
+    "phone": "+420 495000709",
+    "website": "https://www.snhk.cz",
+    "description": "Provoz squashových kurtů je celoroční, vč. víkendů a svátků. Využít můžete 4 plně klimatizované kurty. Možnost zapůjčení squashového vybavení. Možnost online rezervace kurtů. Součástí areálu je také wellness studio, fitness, restaurace s bowlingem a venkovní koupaliště. Parkování zdarma.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Restaurace - Penzion U Slunce",
+    "address": "Nad Porubkou 259/28",
+    "city": "Ostrava",
+    "postalCode": "72100",
+    "phone": "+420 603706353",
+    "website": "https://www.restauraceuslunce.eu",
+    "description": "Restaurace s vlastní kuchyní. K dispozici salónek i sál. Soukromé i firemní akce, rezervace, možnost uzavření celé restaurace pro vaše akce. Dále možnost ubytování 17 osob, pokoje vč. kuchyňky + sociální zařízení. K dispozici 2 badmintonové kurty.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Relax Centrum Sepetná",
+    "address": "Ostravice ev. č. 956",
+    "city": "Ostravice ev. č.",
+    "postalCode": "73914",
+    "phone": "+420 736503014",
+    "website": "https://sepetna.cz/relax-centrum/",
+    "description": "Relax centrum Sepetná nabízí celoroční sportovní a relaxační vyžití. K dispozici je krytý bazén s vířivkou a tobogánem, sauna, masáže a koupele. Součástí centra je také bowling, badmintonové kurty, lezecká stěna a další aktivity pro sport i odpočinek.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportcentrum Step",
+    "address": "Malletova 2350/6",
+    "city": "Praha",
+    "postalCode": "19000",
+    "phone": "+420 733141630",
+    "website": "https://step.infinit.cz/sportcentrum",
+    "description": "Ve sportcentru je pro vás připraveno několik venkovních a vnitřních tenisových kurtů dle sezony, 12 badmintonových kurtů, squash.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash Sport",
+    "address": "Čimická 780/61",
+    "city": "Praha",
+    "postalCode": "18100",
+    "phone": "+420 602658631",
+    "website": "https://www.squash-sport.cz/",
+    "description": "Multifunkční sportovní centrum nabízející 3 squashové kurty, stolní tenis ve dvou sálech, posilovnu - 200 m, skupinová cvičení (fitbox, alpinning, jumping), privátní saunu, bar s výčepem, aktivity pro děti. Provoz solária a nabídka masáží. Pořádáme příměstské tábory.",
+    "sport": "badminton"
+  },
+  {
+    "name": "TENISCENTRUM JIHLAVA, a.s.",
+    "address": "Mostecká 3700/24",
+    "city": "Jihlava",
+    "postalCode": "58601",
+    "phone": "+420 607183578",
+    "website": "https://www.teniscentrum-ji.cz",
+    "description": "Správa a provoz 8 venkovních antukových tenisových kurtů a 5 tenisových kurtů s umělým povrchem ve sportovních halách. Navíc 4 badmintonové a 2 squashové kurty. V jedné z tenisových hal je také možné provozovat košíkovou, florbal, volejbal, nohejbal a nově i pickleball.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenisový oddíl SK Aritma Praha",
+    "address": "Nad lávkou 672/5",
+    "city": "Praha",
+    "postalCode": "16000",
+    "phone": "+420 774711566",
+    "website": "https://www.tenisservis.cz",
+    "description": "Nabízíme tenisový servis v areálu SK Aritma. K dispozici máme celkem 10 tenisových dvorců, v zimě přetlakovou halu nebo 3 kurty pro mini-tenis. Poskytujeme vyplétání a opravy tenisových, squashových raket. Provozujeme tenisovou školu. Zajišťujeme prodej zboží Head, Babolat, Tecnifibre.",
+    "sport": "badminton"
+  },
+  {
+    "name": "TENIS-CENTRUM DTJ HK",
+    "address": "U Labe 427/1",
+    "city": "Hradec Králové",
+    "postalCode": "50002",
+    "phone": "+420 606364434",
+    "website": "https://www.teniscentrumhk.cz",
+    "description": "Provozujeme 13 antukových kurtů, 10 kurtů v nafukovací hale, 1 kurt pro plážový volejbal a 2 antukové kurty pro volejbal či nohejbal. Dále prodáváme tenisové vybavení s širokou nabídkou tenisových výpletů a provádíme servis tenisových raket.",
+    "sport": "badminton"
+  },
+  {
+    "name": "JEREMI sport",
+    "address": "Jeremiášova 2581/2",
+    "city": "Praha",
+    "postalCode": "15500",
+    "phone": "+420 724370007",
+    "website": "https://www.jeremi.cz",
+    "description": "JEREMI sport – multifunkční sportovní hala a restaurace. 15x badmintonový kurt, squash, stolní tenis, MMA aréna, horolezecká stěna, posilovna ve 3 patrech a na střeše, box, strongman sál. Dále provozujeme lekce alpinningu, jógy, jumpingu bodystylingu, TRX a pilates clinic, sauna a masáže.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash Trio",
+    "address": "Dukelská 2157",
+    "city": "Benešov",
+    "postalCode": "25601",
+    "phone": "+420 773724891",
+    "website": "http://www.squashtrio.cz",
+    "description": "Provoz třech klimatizovaných squashových kurtů s certifikací od WSF a ČASF. K dispozici je prodejna a půjčovna squashového vybavení, občerstvení s výhledem na kurty a dětský koutek. Pořádání turnajů.",
+    "sport": "badminton"
+  },
+  {
+    "name": "TCV Pardubice",
+    "address": "Brožíkova 550",
+    "city": "Pardubice",
+    "postalCode": "53009",
+    "phone": "+420 736651156",
+    "website": "https://www.tcv.cz",
+    "description": "Provozujeme tenisové kurty s umělým i s antukovým povrchem a badmintonové hřiště. Nabízíme služby kvalifikovaných trenérů. K dispozici je občerstvení, zahrádka a bar.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenis Cibulka",
+    "address": "V stráni 485/11",
+    "city": "Praha",
+    "postalCode": "15000",
+    "phone": "+420 608504072",
+    "website": "https://teniscibulka.cz",
+    "description": "Provozujeme 8 venkovních antukových kurtů na tenis, dvě pevné haly s umělých povrchem a sociálním zázemím, 4 kurty na badminton a 2 stoly na stolní tenis. Dále je možné hrát volejbal, fotbal, šipky a pétanque. Prodáváme a půjčujeme tenisové příslušenství. K dispozici je připojení k WiFi.",
+    "sport": "badminton"
+  },
+  {
+    "name": "SQUASH HOLEŠOVICE",
+    "address": "Jankovcova 1055/13",
+    "city": "Praha",
+    "postalCode": "17000",
+    "phone": "+420 776035785",
+    "website": "http://www.squash-holesovice.cz",
+    "description": "Nabízíme 4 squashové kurty, stolní tenis, solárium Ergoline 300. Půjčujeme a prodáváme squashové rakety a sportovní zboží OLIVER. Možnost rezervace online.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenisové haly Uhříněves",
+    "address": "K sokolovně 245/1",
+    "city": "Praha",
+    "postalCode": "10400",
+    "phone": "+420 602400199",
+    "website": "https://www.tenisuhrineves.cz",
+    "description": "Nabízíme tenisové dvorce (4x umělá antuka s celoročním provozem), tenisovou školu pro děti i dospělé, 4 kryté badmintonové dvorce (celoroční provoz), pořádání tenisových a badmintonových akcí na klíč a příjemné posezení v klubovně tenisového areálu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Ridera Sport, a.s.",
+    "address": "Závodní 2885/86g",
+    "city": "Ostrava",
+    "postalCode": "70300",
+    "phone": "+420 739521952",
+    "website": "https://riderasport.cz",
+    "description": "Sportovní a relaxační areál. Nabízíme tenis, tenisovou školu, badminton, spinning, fitness, bazén, saunu, masáže, solárium, minigolf, příměstské tábory. Online rezervační systém. Pronájem na sportovní a společenské akce.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenis centrum Lužiny",
+    "address": "Zázvorkova 1480/11",
+    "city": "Praha",
+    "postalCode": "15500",
+    "phone": "+420 731011110",
+    "website": "https://www.tenis-luziny.cz/",
+    "description": "Provozujeme pevnou halu se 3 tenisovými kurty s umělým povrchem, 4 kurty na badminton a tenisovou školku. K dispozici je venkovní víceúčelové hřiště. Pořádáme letní kempy a soustředění. Nabízíme výplety raket. Prodáváme sportovní oblečení a příslušenství.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportkemp Orlík - Velký vír",
+    "address": "Mirovice, Kakovice 7",
+    "city": "Kakovice 7",
+    "postalCode": "39804",
+    "phone": "+420 736103150",
+    "website": "https://www.sportkemporlik.cz",
+    "description": "Provozujeme tenisové a nohejbalové kurty s možností občerstvení a ubytování. Možnost zapůjčení sportovních potřeb, motorových člunů, skútrů, horských kol či hry stolního tenisu, kriketu, badmintonu, stolního fotbalu, petangu, líného tenisu, nohejbalu či volejbalu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Liberecký tenisový klub",
+    "address": "Fibichova 1377/8",
+    "city": "Liberec I-Staré Město",
+    "postalCode": "46001",
+    "phone": "+420 739547007",
+    "website": "https://www.ltkliberec.cz/",
+    "description": "Provozujeme tenisový klub s nabídkou výuky tenisu, třemi tenisovými a čtyřmi badmintonovými kurty v hale.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportcentrum Neugi o.s.",
+    "address": "Na Drahách",
+    "city": "Žamberk",
+    "postalCode": "56401",
+    "phone": "+420 605551722",
+    "website": "",
+    "description": "Provozujeme tenisové kurty. Nabízíme prodej potřebo pro tenis.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenisový klub Neridé, z. s.",
+    "address": "V Chotejně 700/7",
+    "city": "Praha",
+    "postalCode": "10200",
+    "phone": "+420 272703458",
+    "website": "http://www.neride.cz",
+    "description": "Provozujeme tenisový klub. K dispozici jsou 2 tenisové kurty a 5 badmintonových dvorců. Trénujeme družstva a děti.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní areál K3",
+    "address": "Smetanův okruh 2337/19",
+    "city": "Krnov",
+    "postalCode": "79401",
+    "phone": "+420 552302181",
+    "website": "https://www.k3krnov.cz",
+    "description": "Provozujeme sportovní areál. Nabízíme možnost využít 3 vnitřní tenisové kurty a 2 venkovní antukové kurty či 8 antukových hřišť na badminton i jeden stůl na stolní tenis. K dispozici jsou šatny, sprchové kouty, toalety i parkoviště přímo u objektu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenisové Centrum Olšanská",
+    "address": "Chelčického",
+    "city": "Praha",
+    "postalCode": "13000",
+    "phone": "+420 606810852",
+    "website": "http://www.tenisolsanska.cz",
+    "description": "Provozujeme tenisové kurty, haly či víceúčelové hřiště. K sportovnímu vyžití je zde prostor také pro fotbal, nohejbal, házenou, košíkovou, volejbal, floorball a badminton. Možnost zapůjčení raket, využití služeb trenérů či sparing.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenisový areál TK Natali",
+    "address": "Podskalí 553",
+    "city": "Mostkovice",
+    "postalCode": "79802",
+    "phone": "+420 739056116",
+    "website": "http://www.tenis-natali.cz",
+    "description": "Provozování 5 venkovních kurtů s antukovým povrchem a pevné kryté haly se 3 kurty s kobercovým hracím povrchem pro tenis a badmintonové hřiště. Nabízíme pronájem tenisových kurtů nebo celého areálu pro pořádání sportovních akcí. Možnost zapůjčení tenisových a badmintonových raket i míčků.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenisový klub - TOSK Žamberk",
+    "address": "U Koupaliště 1362",
+    "city": "Žamberk",
+    "postalCode": "56401",
+    "phone": "+420 724193236",
+    "website": "https://www.tenis.zamberk.cz",
+    "description": "Provoz tenisového klubu s celoročním provozem. K dispozici je 8 antukových dvorců z toho 2 se zelenou antukou v hale. Poskytujeme i možnost hry badmintonu. Zaměřujeme se na celoroční hraní na venkovních dvorcích a v hale. Pořádáme letní a zimní turnaje. Zajišťujeme půjčování raket a míčů.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenisový klub TK DEZA Valašské Meziříčí",
+    "address": "Kouty 26",
+    "city": "Valašské Meziříčí",
+    "postalCode": "75701",
+    "phone": "+420 606762922",
+    "website": "https://www.tenisdeza.cz",
+    "description": "Provozujeme čtrnáct tenisových kurtů s antukovým povrchem a tenisovou halu se dvěma kurty s pevným povrchem. Provozujeme tenisovou školku pro děti a kondiční hodiny pro dospělé. K dispozici je restaurace s barem a terasou, půjčovna a prodejna s nabídkou sportovních potřeb.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenis Centrum Opava",
+    "address": "Karlovecká 2918/1b",
+    "city": "Opava",
+    "postalCode": "74707",
+    "phone": "+420 724777843",
+    "website": "https://www.teniscentrumopava.cz",
+    "description": "Provoz 5 venkovních antukových kurtů, pevné haly se 3 kurty a badmintonové haly se 4 kurty.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní klub Dařbož",
+    "address": "Řehenice, Babice 61",
+    "city": "Babice 61",
+    "postalCode": "25167",
+    "phone": "+420 720548956",
+    "website": "https://www.sk-darboz.cz",
+    "description": "Provozujeme víceúčelovou halu o rozměrech 28,3 x 16,6 metrů. Hala je určená pro sporty jako je fotbal, volejbal, nohejbal, košíková, líný tenis a jiné. Možnost pronájmu squashového kurtu a multifunkčního zrcadlového sálu pro cvičení aerobiku, zumby, jógy.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Liberecký tenisový klub, s.r.o.",
+    "address": "Fibichova 1377/8",
+    "city": "Liberec I-Staré Město",
+    "postalCode": "46001",
+    "phone": "+420 482710357",
+    "website": "",
+    "description": "Provoz tenisové haly a tenisových dvorců, badmintonové haly se 4 dvorci a možností stolního tenisu. Pořádání akcí, dětských kempů i soustředění. Možnost rezervace on-line.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash Club Podbořany",
+    "address": "Hlubanská 978",
+    "city": "Podbořany",
+    "postalCode": "44101",
+    "phone": "+420 602581447",
+    "website": "http://www.squash.podborany.cz",
+    "description": "Provozujeme sportovní klub, kurt a dětskou školičku, vše orientované na squash. Poskytujeme možnost poradenství ohledně správného výběru tašky na squash, materiálu pro squashové rakety, míčků, péče a vyvážení rakety, značek a dalšího. Nabízíme pronájem reklamních ploch přímo v areálu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenis Černovice",
+    "address": "Štolcova 551/8",
+    "city": "Brno",
+    "postalCode": "61800",
+    "phone": "+420 605476309",
+    "website": "https://www.teniscernovice.cz",
+    "description": "Provozujeme 3 tenisové a 2 beach volejbalové kurty. Zajistíme výuku tenisu pro dospělé a dětskou tenisovou školičku. Vyplétáme tenisové a squashové rakety. Prodáváme tenisové rakety, výplety a doplňky. K dispozici letní zahrádka s občerstvením(gril, pizza, točené piva, limonády) a dětské hřiště.",
+    "sport": "badminton"
+  },
+  {
+    "name": "CENTRUM VIKTORIA, s.r.o.",
+    "address": "Vodařská 232/2",
+    "city": "Brno",
+    "postalCode": "61900",
+    "phone": "+420 776282575",
+    "website": "https://www.centrumviktoria.cz",
+    "description": "Provozujeme moderní víceúčelový areál. Moderní koncept centra nabízí propojení práce, pohybu a relaxace. Naleznete zde několik druhů atraktivních sportovišť - 6x squash, 8x beachvolejbal, 3x badminton, tenis, fotbálek, nohejbal. Bezproblémové parkování hned u areálu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "TENIS VELEŠÍN",
+    "address": "Strahovská 661",
+    "city": "Velešín",
+    "postalCode": "38232",
+    "phone": "+420 605180650",
+    "website": "https://www.tenisvelesin.cz",
+    "description": "Pronájem tenisového a squashového kurtu. Možnost využití infrasauny. Pořádání společenských a firemních akcí. K dispozici je bar a občerstvení či WiFi připojení.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenis - Sportcentrum Mladá Boleslav",
+    "address": "Mladá Boleslav, Bezděčín 89",
+    "city": "Bezděčín 89",
+    "postalCode": "29301",
+    "phone": "+420 724109541",
+    "website": "https://www.sportcentrum-mb.cz",
+    "description": "Provozujeme tenisový klub s 8 krytými tenisovými kurty s umělým povrchem a 2 venkovními dvorci s umělou trávou. Dále nabízíme 3 badmintonové a 2 squashové hřiště.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Vrša  Sportcentrum",
+    "address": "Technologická 956/2a",
+    "city": "Praha",
+    "postalCode": "14800",
+    "phone": "+420 267315000",
+    "website": "https://vrsasportcentrum.cz",
+    "description": "Nabízíme celoroční zázemí pro tenis (kurty antukové a s umělým povrchem v halách i venkovní) a badminton. V letní sezóně beachvolejbal. Tenisová školička, příznivé ceny, pohodlné parkování, dobrá dostupnost MHD z nás dělá ideální místo pro profesionální trénink i aktivní odpočinek.",
+    "sport": "badminton"
+  },
+  {
+    "name": "SPORTCENTRUM AVION, s.r.o.",
+    "address": "Tupolevova 710",
+    "city": "Praha",
+    "postalCode": "19900",
+    "phone": "+420 723140339",
+    "website": "",
+    "description": "Provozujeme tenisové a badmintonové kurty v hale. Celý areál je bezbariérově přístupný. Prodáváme sportovní potřeby. Zajišťujeme kurzy tenisu pod dohledem školených trenérů.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash club Hájek",
+    "address": "Pod přehradou 18",
+    "city": "Praha",
+    "postalCode": "10400",
+    "phone": "+420 267712092",
+    "website": "https://www.centrum-hajek.cz",
+    "description": "Provozujeme squashový klub a hrací centrum. Nabízíme možnost on-line rezervace kurtu. Pravidelně se účastníme a také pořádáme squashové turnaje a zápasy. Dále v centru prodáváme squashové rakety, oblečení, obuv, míčky či časopisy o tomto sportu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "TK Ústí nad Labem s.r.o.",
+    "address": "Masarykova 974/232",
+    "city": "Ústí nad Labem",
+    "postalCode": "40001",
+    "phone": "+420 472743196",
+    "website": "http://www.tenisusti.cz",
+    "description": "Provozujeme 8 antukových kurtů, 2 kurty s umělým povrchem a pevnou halu. Možnost konání soukromých turnajů. K dispozici je bar. Nabídka vyplétání tenisových raket. Provoz tenisové školy pro mládež. Prodej tenisového vybavení.",
+    "sport": "badminton"
+  },
+  {
+    "name": "VICTOR Sport s.r.o.",
+    "address": "Cyrilská 359/16",
+    "city": "Brno",
+    "postalCode": "60200",
+    "phone": "+420 777908392",
+    "website": "https://www.victorsport.cz",
+    "description": "Zaměřujeme se na výrobu sportovního vybavení pro profesionály i amatérské hráče badmintonu a dalších halových raketových sportů. Velkoobchodní sortiment zahrnuje badmintonové, squashové a tenisové rakety, badmintonové míče, sportovní textil, tašky, batohy, kurty, rekreační sety, vyplétací stroje.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash Omega",
+    "address": "Křídlovická 333/19b",
+    "city": "Brno",
+    "postalCode": "60300",
+    "phone": "+420 543215152",
+    "website": "https://www.hotelomega.eu",
+    "description": "Provozujeme squashové kurty. Možnost zapůjčení míčků i raket.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sport Centrum Písek",
+    "address": "U Výstaviště",
+    "city": "Písek",
+    "postalCode": "39701",
+    "phone": "+420 723566623",
+    "website": "https://www.sportcentrumpisek.cz",
+    "description": "Provozujeme sportovní centrum. Součástí areálu jsou badmintonové kurty, 4 bowlingové dráhy, místnost na hraní squashe, stolního tenisu, kulečníků a podobně. Nabízíme možnost pořádání firemních či soukromých akcí, oslav, vánočních večírků a školení.",
+    "sport": "badminton"
+  },
+  {
+    "name": "SQP Squashpoint",
+    "address": "Květnového vítězství 938/79",
+    "city": "Praha",
+    "postalCode": "14900",
+    "phone": "+420 728481157",
+    "website": "https://www.squashpoint.cz/",
+    "description": "Provozujeme areál se 3 squashovými kurty (squash, stolní tenis, badminton). K dispozici jsou profesionální trenéři.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní centrum REPLAY",
+    "address": "U Příkopy 1914",
+    "city": "Frenštát pod Radhoštěm",
+    "postalCode": "74401",
+    "phone": "+420 603965981",
+    "website": "https://www.replaysc.cz",
+    "description": "Provozujeme sportovní centrum. k dispozici je fitness, solárium, badminton, tenis, squash, stolní tenis, lezecká stěna.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportcentrum Forea",
+    "address": "Opletalova 95",
+    "city": "Lanškroun",
+    "postalCode": "56301",
+    "phone": "+420 775752744",
+    "website": "https://sport.forea.cz",
+    "description": "Tenis, badminton, stolní tenis, lezecká stěna typu Boulder. Workoutový sál s vybavením (silový trenink, workout, funkční trénink), TRX, Yoga, Pole Dance. Taneční sály (klasika, street dance).",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní Klub Uherský Brod",
+    "address": "Zátiší 1958",
+    "city": "Uherský Brod",
+    "postalCode": "68801",
+    "phone": "+420 777733744",
+    "website": "https://www.skub.cz",
+    "description": "Sportovní klub vlastní multifunkční halu, ve které se je možnost hrát tenis, squash, badminton, stolní tenis, je zde posilovna a také prostory pro skupinová cvičení. To vše včetně odpovídajícího zázemí.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tennisteam.cz",
+    "address": "Úslavská 2357/75",
+    "city": "Plzeň",
+    "postalCode": "32600",
+    "phone": "",
+    "website": "http://www.tennisteam.cz",
+    "description": "Prodejna a e-shop s vybavením Babolat pro tenis a badminton v Plzni. Nabízíme rakety, tašky, tenisovou obuv, míče i oblečení.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Hala Suchdol",
+    "address": "Záhumení 605",
+    "city": "Suchdol nad Odrou",
+    "postalCode": "74201",
+    "phone": "+420 607088716",
+    "website": "https://www.halasuchdol.cz",
+    "description": "Vlastníme a provozujeme krytou sportovní halu. Ocelová konstrukce zastřešuje tři tenisové kurty, dva badmintonové a fitness s tělocvičnou TRX.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Beach Tenis Kapitol",
+    "address": "Magistrů 1510/24",
+    "city": "Praha",
+    "postalCode": "14000",
+    "phone": "+420 774505800",
+    "website": "https://www.teniskapitol.cz",
+    "description": "Provozujeme tenisový areál. Zajišťujeme výuku tenisu i plážového tenisu, půjčování tenisového vybavení. Nabízíme kurzy tenisu a plážového tenisu pro děti i dospělé. Provádíme vyplétání tenisových, squashových a badmintonových raket. Poskytujeme možnost dlouhodobé rezervace.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash Club Koruna s.r.o.",
+    "address": "Zámečnická 492/2",
+    "city": "Olomouc",
+    "postalCode": "77900",
+    "phone": "+420 720130003",
+    "website": "https://www.klubkoruna.cz",
+    "description": "Provoz fitness centra s kurty na squash, schwinn cycling a stolní tenis. Pořádáme také hodiny jumpingu. K dispozici je i bar s občerstvením.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní areál Hamr",
+    "address": "Záběhlická",
+    "city": "Praha",
+    "postalCode": "10600",
+    "phone": "+420 272772762",
+    "website": "https://www.hamrsport.cz/arealy/zabehlice",
+    "description": "V areálu jsou tenisové, beachvolejbalové a squashové kurty, stoly na stolní tenis, sály pro aerobik a indoor cycling, fitnesscentrum masáže a fyzioterapie. Organizujeme školu beachvolejbalovou, tenisovou, badmintonovou, squashovou, fotbalovou a stolního tenisu, vytváříme tréninkové a výživové plány.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash Haštal",
+    "address": "Haštalská 731/20",
+    "city": "Praha",
+    "postalCode": "11000",
+    "phone": "+420 777311561",
+    "website": "https://www.squash-hastal.cz/",
+    "description": "Provozujeme squashové centrum. Nabízíme 6 klimatizovaných kurtů squash, 2 squash kurty upravené pro rekreační hru Badminton, Wallyball, stolní tenis, fitness, bojové sporty, Powerplate a privátní saunu pro 4 osoby.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportcentrum Opava",
+    "address": "Provaznická 318/5",
+    "city": "Opava",
+    "postalCode": "74601",
+    "phone": "+420 704404504",
+    "website": "https://www.sportopava.cz",
+    "description": "Sportovní centrum provozující badmintonové kurty, squashové kurty a stolní tenis. Provoz sportcafé. Hrací deskové centrum a další zábavní aktivity.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squashcentrum Strahov",
+    "address": "Vaníčkova 100/6",
+    "city": "Praha",
+    "postalCode": "16900",
+    "phone": "+420 723763154",
+    "website": "https://www.squashstrahov.cz",
+    "description": "Provozujeme squashcentrum s 6 kurty zn. Fiberesin. Pořádáme školu squashe pro mládež a nabízíme možnost tréninku se squashovým trenérem.",
+    "sport": "badminton"
+  },
+  {
+    "name": "K2 SPORT CENTRUM",
+    "address": "I. P. Pavlova 1414/146",
+    "city": "Olomouc",
+    "postalCode": "77900",
+    "phone": "+420 602202635",
+    "website": "https://www.k2-sport.cz",
+    "description": "Nabízíme všestranné možnosti pro aktivní trávení volného času. Nabízené sportovní aktivity: tenis, badminton a fitness.",
+    "sport": "badminton"
+  },
+  {
+    "name": "ARENA 68",
+    "address": "Pražská 1268/121",
+    "city": "Teplice",
+    "postalCode": "41501",
+    "phone": "+420 731656050",
+    "website": "https://arena68.com",
+    "description": "Provoz badmintonové haly s 8 profesionálními kurty. Možnost zapujčení vybavení pro hru.",
+    "sport": "badminton"
+  },
+  {
+    "name": "TENIS CENTRUM Tábor, s.r.o.",
+    "address": "Václava Soumara 3039",
+    "city": "Tábor",
+    "postalCode": "39003",
+    "phone": "+420 607855665",
+    "website": "https://tenis-tabor.cz",
+    "description": "Provozujeme tenisovou a badmintonovou halu. Naše tenisová škola nabízí celoroční tréninky pro děti i dospělé, od začátečníků po vrcholové hráče.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenis - Squash Bouda Máma",
+    "address": "Pec pod Sněžkou 124",
+    "city": "Pec pod Sněžkou",
+    "postalCode": "54221",
+    "phone": "+420 499896273",
+    "website": "https://www.boudamama.cz/aktivity",
+    "description": "Nabízíme možnost využít venkovní tenisový kurt s umělou trávou Terragreen s možností umělého osvětlení. Ten lze využít kromě tenisu také na nohejbal, malý fotbal nebo jako dětské hřiště. V hotelu najdete také vnitřní squashový kurt. Jeho využití je také široké: squash, badminton, aerobic, yoga.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Víceúčelová sportovní hala Slaný, Tělocvična, Bowling & Squash",
+    "address": "Lacinova 1720",
+    "city": "Slaný",
+    "postalCode": "27401",
+    "phone": "+420 702234739",
+    "website": "https://www.vshslany.cz",
+    "description": "Tělocvična pro míčové hry; basketbal, volejbal a nohejbal, nebo badminton. Bowlingová dráha a squashový kurt. Šatny, občerstvení a možnost zapůjčení squashové rakety zdarma a zapůjčení či zakoupení squashových míčů.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Město Frenštát pod Radhoštěm - sportovní hala",
+    "address": "Martinská čtvrť 1704",
+    "city": "Frenštát pod Radhoštěm",
+    "postalCode": "74401",
+    "phone": "",
+    "website": "https://www.astrafren.cz/pronajem/311-sportovni-hala-a-viceucelove-venkovni-hriste",
+    "description": "Provozujeme tenisovou halu a hřiště na badminton.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sporthala Valtice",
+    "address": "Mikulovská 997",
+    "city": "Valtice",
+    "postalCode": "69142",
+    "phone": "+420 734314111",
+    "website": "https://www.valtice.eu/kontakty/sportovni-hala/",
+    "description": "Provozujeme sportovní halu. Nabízíme možnost pronájmu prostor pro florbal, volejbal, nohejbal, košíkovou, házenou či stolní tennis. Zajišťujeme pořádání společenských a kulturních akcí. Poskytujeme 4 kurty na badminton. K dispozici je také venkovní hřiště.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenisová hala - Golf resort Kunětická hora",
+    "address": "Dříteč 195",
+    "city": "Dříteč",
+    "postalCode": "53305",
+    "phone": "+420 777822242",
+    "website": "https://www.teniscentrumhk.cz",
+    "description": "Celoročně provozujeme 3 tenisové kurty.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash - Orange gym",
+    "address": "Podřipská 914",
+    "city": "Kralupy nad Vltavou",
+    "postalCode": "27801",
+    "phone": "+420 315722411",
+    "website": "https://orangegym.cz",
+    "description": "Provozujeme jeden squashový kurt. Možnost zakoupení squashového oblečení a raket značky Oliver.",
+    "sport": "badminton"
+  },
+  {
+    "name": "JK Tenis Arena",
+    "address": "Cukrovarská 489/30",
+    "city": "Vyškov-Město",
+    "postalCode": "68201",
+    "phone": "+420 606053454",
+    "website": "https://jktenisarena.webnode.cz",
+    "description": "Provozujeme moderní halu s tenisovými a badmintonovými kurty. K dispozici půjčovna sportovního náčiní a sauna. Nabízíme také tenisovou a badmintonovou školu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní centrum H-centrum",
+    "address": "Staré Hradiště 197",
+    "city": "Staré Hradiště",
+    "postalCode": "53352",
+    "phone": "+420 466412044",
+    "website": "https://hcentrum.net",
+    "description": "Sportovní centrum nabízí široké spektrum možností aktivního odpočinku - tenis, badminton, lezecká stěna, stolní tenis, bowling či fitness.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash - Sportovní zařízení města Hořice",
+    "address": "Janderova 2156",
+    "city": "Hořice",
+    "postalCode": "50801",
+    "phone": "+420 493627074",
+    "website": "https://www.sporthorice.cz",
+    "description": "Provoz squashového kurtu a plně automatizované čtyřdráhové kuželny.",
+    "sport": "badminton"
+  },
+  {
+    "name": "SPORTCENTRUM VITALITY, s.r.o.",
+    "address": "Sadová 746",
+    "city": "Březnice",
+    "postalCode": "26272",
+    "phone": "+420 318543029",
+    "website": "http://www.tenisova-skola.cz",
+    "description": "Součástí areálu je pět venkovních antukových kurtů a 2 kryté halové kurty. Všechny kurty jsou obklopeny zelení a řekou, to vše v tichém a příjemném prostředí. Celý venkovní areál je ideálním místem pro pořádání sportovně společenských a firemních akcí.",
+    "sport": "badminton"
+  },
+  {
+    "name": "SPARING MB - Sportcentrum",
+    "address": "Na Radouči 1114",
+    "city": "Mladá Boleslav II",
+    "postalCode": "29301",
+    "phone": "+420 326734906",
+    "website": "http://www.sparing.cz",
+    "description": "Provozujeme krytou halu s umělým a antukovým povrchem. Je zde možnost hrát tenis, squash, badminton, stolní tenis a bowling. Naleznete u nás snack bar s kapacitou 50 míst k uspořádání soukromých večírků i oslav v příjemném sportovním prostředí.",
+    "sport": "badminton"
+  },
+  {
+    "name": "TK DEZA Valašské Meziříčí, spol. s r.o.",
+    "address": "Kouty 408",
+    "city": "Valašské Meziříčí",
+    "postalCode": "75701",
+    "phone": "+420 606762922",
+    "website": "https://www.tenisdeza.cz",
+    "description": "Provoz antukových kurtů na tenis, dvě haly na tenis a badminton.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní multifunkční centrum Radonice",
+    "address": "Pavlova 255",
+    "city": "Radonice",
+    "postalCode": "25073",
+    "phone": "+420 721559961",
+    "website": "https://www.sportcentrumradonice.cz/",
+    "description": "Provozujeme badmintonové herny pro sportovní i rekreační badminton. Zaměřujeme se na půjčování a prodej sportovních a badmintonových potřeb. Zajišťujeme realizace a dodávky sportovních podlah, hřišť a speciálních programů. Věnujeme se zejména oblasti hobby players a pořádání soutěží.",
+    "sport": "badminton"
+  },
+  {
+    "name": "PRO SPORT - sportovní klub",
+    "address": "Josefa Růžičky 224",
+    "city": "Rokycany",
+    "postalCode": "33701",
+    "phone": "+420 777684499",
+    "website": "",
+    "description": "Provozujeme tři squashové kurty a stolní tenis. Půjčujeme a prodáváme rakety, míčky či doplňky. Pořádáme squashovou ligu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Bublina Arena",
+    "address": "Lomnického 1071/1",
+    "city": "Praha",
+    "postalCode": "14000",
+    "phone": "+420 774168745",
+    "website": "https://fbsbohemians.isportsystem.cz",
+    "description": "Sportovní přetlaková hala disponuje florbalovým hřištěm o rozměrech 40x20m a čtyřmi kurty na badminton. Halu je možné využít také na cvičení a další sporty. Součástí areálu je kompletní zázemí, které sportovcům nabízí šatny a sociální zařízení.",
+    "sport": "badminton"
+  },
+  {
+    "name": "VALČÍK, s.r.o.",
+    "address": "U Malé řeky 623",
+    "city": "Praha",
+    "postalCode": "15600",
+    "phone": "+420 257923708",
+    "website": "http://www.restauraceupristavu.cz",
+    "description": "Provozujeme squashový kurt s možností půjčení vybavení a pronájmu kurtu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sport centrum Koloseum - Squash",
+    "address": "Sokolovská 2233/76",
+    "city": "Plzeň",
+    "postalCode": "32300",
+    "phone": "+420 774378775",
+    "website": "http://sport-plzen.cz",
+    "description": "Nabízíme možnost využití squashového kurtu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sauna365, s.r.o.",
+    "address": "Pustkovecká 4492/29f",
+    "city": "Ostrava",
+    "postalCode": "70800",
+    "phone": "+420 777857555",
+    "website": "https://www.sauna365.cz",
+    "description": "Můžete si přijít zahrát badminton do naší prostorné haly s umělým povrchem. K dispozici jsou dva kurty, dámské a pánské šatny se sprchami. Prodáváme i půjčujeme rakety značky Yonex, nabídku doplňuje prodej bot, triček, míčků a dalšího vybavení na badminton.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenis - SPORTCENTRUM BRANDÝS",
+    "address": "Kostelecká 1776",
+    "city": "Brandýs nad Labem-Stará Boleslav",
+    "postalCode": "25001",
+    "phone": "+420 604400569",
+    "website": "https://www.sportcentrumbrandys.cz",
+    "description": "Provozujeme tenisové kurty na tenis. K dispozici je i hřiště na stolní tenis a badminton.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Petr Vaněček",
+    "address": "Sokolovská 42",
+    "city": "Ústí nad Labem",
+    "postalCode": "40322",
+    "phone": "+420 728936109",
+    "website": "https://squashsvadov.webnode.cz",
+    "description": "Nabízíme dva squashové kurty, stolní tenis, možnost individuálního aerobního cvičení v prostorách kurtu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sport Centrum HECTOR",
+    "address": "Malešická 655/59c",
+    "city": "Praha",
+    "postalCode": "10800",
+    "phone": "+420 736286603",
+    "website": "https://www.hector.cz/",
+    "description": "Provozujeme sportovní centrum - squash, badminton, tenis, posilovna, sauna. Máme připraveny 4 tenisové dvorce s umělým povrchem, pět squashových kurtů, 5 badmintonových kurtů, bowlingovou dvoudráhu od firmy Brunswick. Možnost zapůjčení raket, míčků i bot na bowling.",
+    "sport": "badminton"
+  },
+  {
+    "name": "MTV Fitness & Squash",
+    "address": "Za Černým mostem 1425",
+    "city": "Praha",
+    "postalCode": "19800",
+    "phone": "+420 606940070",
+    "website": "http://www.mtvfitness.cz",
+    "description": "Provozuje squashové kurty. Půjčujeme a prodáváme rakety i míčky.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash Mutějovice",
+    "address": "Malá Strana 12",
+    "city": "Mutějovice",
+    "postalCode": "27007",
+    "phone": "+420 728779191",
+    "website": "http://www.ubytovani-mutejovice.estranky.cz",
+    "description": "Nabízíme sportovní vyžití, squash, travnatý tenisový kurt, stolní tenis, bowls, minigolf, kroket, ruské kuželky, petanque, badminton, soft tenis.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tsport Votice",
+    "address": "Masarykovo nám. 937",
+    "city": "Votice",
+    "postalCode": "25901",
+    "phone": "+420 728033612",
+    "website": "https://www.tsportvotice.cz",
+    "description": "Máme 3 venkovní antukové kurty, 2 vnitřní tenisové kurty v pevné hale s moderním povrchem Classic Clay, 4 badmintonová hřiště, bowling (dvě dráhy Brunswick).",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní areál Hamr",
+    "address": "Vltavanů",
+    "city": "Praha",
+    "postalCode": "14300",
+    "phone": "+420 244462467",
+    "website": "",
+    "description": "Nabízíme služby sportovního areálu s tenisovými, beachvolejbalovými a badmintonovými kurty, půjčovnou in-line, fotbalovým hřištěm.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sport-V-Hotel",
+    "address": "nám. 8. května 219",
+    "city": "Hrotovice",
+    "postalCode": "67555",
+    "phone": "+420 568860013",
+    "website": "https://hotel-hrotovice.cz",
+    "description": "Provoz kryté tenisové haly s 2 kurty a možností úpravy na volejbalové, badmintonové, florbalové i nohejbalové hřiště. K dispozici je lezecká stěna, squashové hřiště, šatny se sprchami a možnost zapůjčení sportovních potřeb.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportcentrum Hotel Tennis Club",
+    "address": "Za Kosteleckou 4161/49",
+    "city": "Prostějov",
+    "postalCode": "79601",
+    "phone": "+420 739715146",
+    "website": "https://www.sportonline.cz/",
+    "description": "Jsme odborníci na tenis, ať už v létě nebo v zimě. Badminton i squash jsou u nás populární sporty. Nabízíme také pingpongový stůl a dvě bowlingové dráhy. Privátní sauna vám poskytne maximální relaxaci a pohodlí. Pro rezervace všech aktivit využijte online rezervační systém.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenis - Sportovní hala Dačice",
+    "address": "Sokolská 40",
+    "city": "Dačice V",
+    "postalCode": "38001",
+    "phone": "+420 774035886",
+    "website": "https://www.dasport.cz",
+    "description": "Provozujeme sportovní halu se sezónními i celoročními aktivitami. Areál je vhodný jak pro kolektivní sporty, tak pro individuální disciplíny. Mezi aktivity v areálu patří futsal, florbal, volejbal, tenis, basketbal, aerobic, badminton, gymnastika, stolní tennis a podobně.",
+    "sport": "badminton"
+  },
+  {
+    "name": "S-centrum Benešov",
+    "address": "U Vodárny 2215",
+    "city": "Benešov",
+    "postalCode": "25601",
+    "phone": "+420 317750004",
+    "website": "https://www.scentrum.eu",
+    "description": "V našem sportovním areálu najdete tenisovou halu s dvěma tenisovými kurty, jeden z nich lze využít jako čtyři kurty na badminton. Dále máme dva venkovní tenisové kurty s kobercem a nově i tři antukové kurty. Sportovní zázemí skvěle doplňuje restaurace, hotel, bowling a wellness.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash - Sportcentrum Želva",
+    "address": "Hodonínská 1680",
+    "city": "Dubňany",
+    "postalCode": "69603",
+    "phone": "+420 518364300",
+    "website": "https://www.sportcentrumzelva.cz",
+    "description": "Sportcentrum nabízí jeden squashový kurt.",
+    "sport": "badminton"
+  },
+  {
+    "name": "STaRS Karviná - Squash",
+    "address": "Karola Śliwky 783/2a",
+    "city": "Karviná",
+    "postalCode": "73301",
+    "phone": "+420 596324492",
+    "website": "https://www.stars-karvina.cz/",
+    "description": "Provozujeme squashové kurty.",
+    "sport": "badminton"
+  },
+  {
+    "name": "TK NATALI,s.r.o.",
+    "address": "Podskalí",
+    "city": "Mostkovice",
+    "postalCode": "79802",
+    "phone": "+420 739056116",
+    "website": "http://www.tenis-natali.cz",
+    "description": "Provoz antukových tenisových kurtů a tenisových kurtů v kryté tenisové hale, provoz badmintonu, provoz stolního tenisu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenis - ESMARIN - Sportovně relaxační centrum",
+    "address": "Lhotecká 1535",
+    "city": "Mníšek pod Brdy",
+    "postalCode": "25210",
+    "phone": "+420 702005006",
+    "website": "https://www.esmarin.cz",
+    "description": "Provozujeme nafukovací i pevnou halu s tenisovými a badmintonovými kurty. Nabízíme možnost využití služeb tenisového trenéra.",
+    "sport": "badminton"
+  },
+  {
+    "name": "SINET K, s.r.o.",
+    "address": "Tyršova",
+    "city": "Kralupy nad Vltavou",
+    "postalCode": "27801",
+    "phone": "+420 702045501",
+    "website": "http://badminton-kralupy.cz",
+    "description": "Provozujeme tenisový kurt.",
+    "sport": "badminton"
+  },
+  {
+    "name": "TENIS CENTRUM CAFEX, s.r.o.",
+    "address": "Na Studánkách 2590",
+    "city": "Rakovník II",
+    "postalCode": "26901",
+    "phone": "+420 608444156",
+    "website": "https://www.cafex.cz/",
+    "description": "Provozujeme sportovní centrum. K dispozici je 10 tenisových kurtů, 6 bowlingových drah, 3 víceúčelové a 3 badmintonové kurty a 3 beachvolejbalová hřiště. Nabízíme fitness tělocvičnu a vířivý bazén pro 6 osob. Pořádáme firemní dny, turnaje, svatby nebo soustředění.",
+    "sport": "badminton"
+  },
+  {
+    "name": "HOOP CAMPS - Sportovní centrum",
+    "address": "Domažlická 609",
+    "city": "Klatovy III",
+    "postalCode": "33901",
+    "phone": "+420 602439809",
+    "website": "https://www.hotelsportkt.cz",
+    "description": "Provozujeme sportovní centrum se dvěma fotbalovými, jedním atletickým a zimním stadionem. K dispozici je wellness zařízení, posilovna, basketbalové hřiště, tenisová hala, krytý bazén a kurty na badminton.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Relaxcentrum Mrkáček Lišov",
+    "address": "Dolní 865/11",
+    "city": "Lišov",
+    "postalCode": "37372",
+    "phone": "+420 775297061",
+    "website": "https://www.sport-mrkacek.cz/",
+    "description": "Relaxcentrum Mrkáček Lišov je sportovní areál nabízející: krytá tenisová hala, krytý kurt na badminton, venkovní tenisový kurt, bowling, beach volejbal, privátní vířivku se saunou, fitness.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Autokemping Na Vyhlídce",
+    "address": "Miletín",
+    "city": "Miletín",
+    "postalCode": "50771",
+    "phone": "+420 721171489",
+    "website": "https://autokempmiletin.cz",
+    "description": "Nabízíme ubytovaní v kempu s celkovou kapacitou 262 osob. K dispozici je 20 chatek, vybavených 4 lůžky, lednicí, varnou konvicí a nábytkem. 7 boxů pro karavany a plocha pro 50 stanů. Naleznete zde také tenisový a volejbalový kurt, hřiště pro plážový volejbal, stolní tenis a badminton.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Plavecký stadion Strakonice",
+    "address": "Na Křemelce 305",
+    "city": "Strakonice I",
+    "postalCode": "38601",
+    "phone": "+420 380422761",
+    "website": "https://www.starz.cz",
+    "description": "Provozujeme plavecký bazén i letní areál se třemi bazény, toboganem, skluzavkami a dětským brouzdalištěm. Dále osmnáctijamkový minigolf, beachvolejbal, tenisový kurt, nohejbal, volejbal, stolní tenis, zahradní šachy, badminton, pantanque a basketbal.",
+    "sport": "badminton"
+  },
+  {
+    "name": "STaRS Karviná - víceúčelová hala",
+    "address": "Karola Śliwky 783/2a",
+    "city": "Karviná",
+    "postalCode": "73301",
+    "phone": "+420 596324492",
+    "website": "https://www.stars-karvina.cz/",
+    "description": "Provozujeme halu s badmintonovými kurty. Možnost využití vodoléčby a masáží. Dále je k dispozici klimatizované fitness centrum a minibar.",
+    "sport": "badminton"
+  },
+  {
+    "name": "TJ Sokol Horní Lhota, z.s.",
+    "address": "Hlavní 17",
+    "city": "Horní Lhota",
+    "postalCode": "74764",
+    "phone": "+420 736432127",
+    "website": "https://sokolhl.estranky.cz",
+    "description": "Provoz sportovního klubu a areálu se stolním tenisem, badmintonovou sítí, basketbalovým košem a různým náčiním. Možnost pronájmu tenisového kurtu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Jan Vondra",
+    "address": "Na Balkáně 812/21",
+    "city": "Praha",
+    "postalCode": "13000",
+    "phone": "+420 603741258",
+    "website": "",
+    "description": "Nabízíme mobilní badmintonové kurty a sportovní potřeby firmy FZ Forza.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tělocvičná jednota Sokol Modřany",
+    "address": "K Vltavě 410/23",
+    "city": "Praha",
+    "postalCode": "14300",
+    "phone": "+420 774735462",
+    "website": "https://www.sokolmodrany.cz",
+    "description": "Zajišťujeme sportovní činnosti a akce pro cvičence všech věkových kategorií. Vedeme oddíl badmintonu, volejbalu a oddíl všestrannosti zaměřený na cvičení pro ženy, děti a mládež. Pronajímáme tělocvičnu, stůl na stolní tenis a antukové kurty na volejbal, nohejbal a badminton.",
+    "sport": "badminton"
+  },
+  {
+    "name": "TJ Sokol Spořice",
+    "address": "Lipová 28",
+    "city": "Spořice",
+    "postalCode": "43101",
+    "phone": "+420 474686282",
+    "website": "https://www.sokolsporice.cz",
+    "description": "Zajištění sportovních činností a akcí pro cvičence všech věkových kategorií. Vedeme oddíly všestrannosti, kuželek, stolního tenisu a kulturistiky. Dále provozujeme oddíly badmintonu, tenisu a zápasnický oddíl. K dispozici je tělocvična a tenisový kurt.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tělocvičná jednota Sokol Hodonín",
+    "address": "Velkomoravská 2202/2",
+    "city": "Hodonín",
+    "postalCode": "69501",
+    "phone": "+420 607028601",
+    "website": "https://www.sokolhodonin.cz",
+    "description": "Zajišťujeme sportovní činnosti a akce. Provozujeme 7 venkovních tenisových kurtů a 2 kryté kurty, fotbalové hřiště. Pronajímáme sportovní areál. Vedeme oddíl všestrannosti, který zahrnuje aerobik, jógu, kalanetiku, turistiku a cvičení s dětmi. Sdružujeme oddíl badmintonu, basketbalu, billiardu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Wellness hotel Skalka",
+    "address": "Benecko 196",
+    "city": "Benecko",
+    "postalCode": "51237",
+    "phone": "+420 602293398",
+    "website": "https://skalkabenecko.cz",
+    "description": "Provoz fitness a wellness centra. K dispozici je aerobik, masáže, stolní tenis, badminton, rodinný bazén a volejbalový kurt.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportcentrum Trnovany",
+    "address": "Emilie Dvořákové 1630",
+    "city": "Teplice",
+    "postalCode": "41501",
+    "phone": "+420 731489067",
+    "website": "https://www.sportcentrumtrnovany.cz",
+    "description": "Provoz sportovního centra s restaurací. K dispozici jsou kurty na badminton, víceúčelová hala, padel a pingpongové stoly.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Rekreačně sportovní areál Opárenské údolí",
+    "address": "Malé Žernoseky",
+    "city": "Malé Žernoseky",
+    "postalCode": "41002",
+    "phone": "+420 775245540",
+    "website": "http://www.malezernoseky.cz",
+    "description": "Provoz rekreačně-sportovního areálu. K dispozici jsou tenisové kurty, víceúčelová hřiště, půjčovna vybavení a dětské prolézačky i houpačky. Možnost hrát tenis, volejbal, nohejbal, basketbal, házenou, floorbal, líný tenis, badminton či petangue.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Plážový volejbal - ESMARIN - Sportovně relaxační centrum",
+    "address": "Lhotecká 1535",
+    "city": "Mníšek pod Brdy",
+    "postalCode": "25210",
+    "phone": "+420 702005006",
+    "website": "https://www.esmarin.cz",
+    "description": "Provozujeme nafukovací (3 kurty) i pevnou (1 kurt) tenisovou halu s hřištěm na florbal, nohejbal či volejbal a 4 kurty na badminton (celoročně). V létě je k dispozici 6 antukových kurtů na tenis, 2 na nohejbal/volejbal a 1 hřiště na beach volejbal.",
+    "sport": "badminton"
+  },
+  {
+    "name": "LEON centrum, s.r.o.",
+    "address": "Teličkova 491/6b",
+    "city": "Přerov II-Předmostí",
+    "postalCode": "75124",
+    "phone": "+420 601500115",
+    "website": "",
+    "description": "Provoz multifunkčního centra. V centru je kulečníková herna, restaurace, bowlingové dráhy v barem, dva badmintonové kurty, fitness centrum a potraviny.",
+    "sport": "badminton"
+  },
+  {
+    "name": "T-CLUB s.r.o.",
+    "address": "Drážďanská 858/83b",
+    "city": "Ústí nad Labem",
+    "postalCode": "40007",
+    "phone": "+420 602688956",
+    "website": "https://www.tclub.cz",
+    "description": "10 badmintonových kurtů s umělým povrchem, krytý tenisový kurt s umělým povrchem, 2 squashové kurty, moderní posilovna, skupinové lekce, H. E. A. T. program, solárium, diagnostika složení těla InBody, podtlakový trenažer vacushape, skupinové lekce, parkování přímo v oploceném areálu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tsport Votice",
+    "address": "Sukova 443",
+    "city": "Votice",
+    "postalCode": "25901",
+    "phone": "+420 727937569",
+    "website": "https://www.penzionvotice.cz",
+    "description": "Sportovní areál ve Voticích nabízí ubytování v penziónu (pokoje s vlastním příslušenstvím), 3 venkovní antukové kurty, 2 vnitřní tenisové kurty v pevné hale s moderním povrchem Classic Clay, 4 badmintonová hřiště, bowling (dvě dráhy Brunswick).",
+    "sport": "badminton"
+  },
+  {
+    "name": "RESTAART SPORTOVNÍ CENTRUM",
+    "address": "Přerovská 503",
+    "city": "Pardubice",
+    "postalCode": "53006",
+    "phone": "+420 608197964",
+    "website": "https://www.restaart.cz/uvod",
+    "description": "Rodinné sportovní a relaxační centrum. Máme u nás skupinové lekce, dětská cvičení, squash, posilovnu, fit zónu, stolní tenis, VacuShape, badminton (na squash kurtu). Pro odpočinek a regeneraci privátní saunu či maderoterapii a další.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Advert Media Group, s.r.o.",
+    "address": "Tajovského 1157/2",
+    "city": "Havířov",
+    "postalCode": "73601",
+    "phone": "+420 605008521",
+    "website": "https://www.hodnedobre.cz",
+    "description": "Provoz sportovního centra. K dispozici je tělocvična, kde jsou 3 badmintonové kurty, hřiště na kopanou, košíkovou a florbal a kruhový trénink, venkovní tenisové kurty a jumping. Možnost využít saunu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Artamon Sport & Relax",
+    "address": "Bukovice 158",
+    "city": "Bukovice",
+    "postalCode": "54954",
+    "phone": "+420 773575087",
+    "website": "https://artamon.cz",
+    "description": "Provozujeme sportovní a relaxační areál. Hala o rozměru 60 x 40 m disponuje třemi tenisovými kurty, lze v ní však také hrát nohejbal, volejbal, fotbal či badminton. To vše na kvalitním povrchu TigerTurf Evo PRO v kombinaci barev modrá a zelená. Teplota v hale se pohybuje kolem 15°C.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Penzion U Splavu",
+    "address": "Haškova 3508/30",
+    "city": "Břeclav",
+    "postalCode": "69002",
+    "phone": "+420 724223058",
+    "website": "https://www.penzionumachu.cz/",
+    "description": "Nabízíme ubytování ve dvoulůžkových pokojích s vlastním sociálním zařízením, TV a připojením k internetu. K dispozici jsou badmintonové kurty a infrasauna. Nabízíme pronájem prostor pro společenské oslavy i akce.",
+    "sport": "badminton"
+  },
+  {
+    "name": "SportCentrum Kuklenská",
+    "address": "Kuklenská 4396/46",
+    "city": "Brno",
+    "postalCode": "61500",
+    "phone": "+420 775738188",
+    "website": "https://www.sportkuklenska.cz/",
+    "description": "Provozujeme sportovní centrum s možností pronájmu klimatizované haly. K dispozici jsou čtyři badmintonové kurty. Půjčujeme a prodáváme badmintonové vybavení a sportovní oblečení. Nabízíme kurzy zumby a chitoningu. Provádíme rehabilitace a masáže. Najdete u nás i bar s občerstvením.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní hala Na Radosti",
+    "address": "Nákupní",
+    "city": "Plzeň",
+    "postalCode": "31200",
+    "phone": "+420 602224774",
+    "website": "https://www.halanaradosti.cz",
+    "description": "Nabízíme moderní sportovní halu, kde si můžete užít badminton a pingpong. Naše hala je vybavena kvalitními kurty a stoly, zázemím s šatnami a občerstvením.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sky Sport City",
+    "address": "Lovosická 559/32",
+    "city": "Praha",
+    "postalCode": "19000",
+    "phone": "+420 601559559",
+    "website": "https://www.skysportcity.cz",
+    "description": "Provoz sportovního areálu. Největší prostor zabírají dvě fotbalové hřiště s tribunou. Tělocvičnu využívají převážně úspěšné oddíly badmintonu a volejbalu, který má k dispozici také dva venkovní kurty. ​Novinkou areálu jsou čtyři padelové kurty.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportoviště Radvanice",
+    "address": "Radvanice 170",
+    "city": "Radvanice",
+    "postalCode": "54212",
+    "phone": "+420 603427884",
+    "website": "https://www.pensionradvanice.cz",
+    "description": "Sportovní hala přímo v objektu pensionu a restaurace. Rozměry 20m x 15m, výška stropu 6m. Nalajnovány 2 badmintonové kurty a jeden volejbalový. Sítě, míče, žíněnky na judo, závěs na akrobatický rock and roll.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tělocvična Bobrovníky",
+    "address": "Rekreační 394/9",
+    "city": "Hlučín",
+    "postalCode": "74801",
+    "phone": "+420 602418011",
+    "website": "https://www.sak-hlucin.cz/cs/sport-a-relaxace/telocvicna-bobrovniky/a-432/",
+    "description": "Nabízíme: 2 badmintonové kurty, koše na basketbal, branky na házenou a malou kopanou, florbalové zábrany, síť na volejbal, nohejbal, tenisovou síť, ping pong.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní hala Zavadilka",
+    "address": "Želivského 211",
+    "city": "Beroun-Zavadilka",
+    "postalCode": "26601",
+    "phone": "+420 724195267",
+    "website": "https://lokomotivaberoun.cz/hala-zavadilka-2/",
+    "description": "Provoz sportovní haly. K dispozici jsou tenisové a badmintonové kurty a atletické sektory.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní areál Nové Strašecí",
+    "address": "Husova 1146",
+    "city": "Nové Strašecí",
+    "postalCode": "27101",
+    "phone": "+420 311242460",
+    "website": "https://www.novestraseci.cz/",
+    "description": "Provozujeme sportovní areál. K dispozici je hřiště na badminton, posilovna, herna stolního tenisu, kurty a hřiště na plážový volejbal či petanque, lezecká stěna a dětské hřiště. Možnost využití šaten se sociálním zařízením či restauraci. Provozujeme atletický a víceúčelový areál.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní hala Český Krumlov",
+    "address": "Chvalšinská 111",
+    "city": "Český Krumlov",
+    "postalCode": "38101",
+    "phone": "+420 380713957",
+    "website": "https://www.pro-sportck.eu",
+    "description": "Provozujeme sportovní halu pro míčové sporty. K dispozici je 5 badmintonových kurtů, 1 tenisový kurt, 1 volejbalový kurt, hřiště pro futsal a florbal.",
+    "sport": "badminton"
+  },
+  {
+    "name": "OSTRA Sport Centrum",
+    "address": "Budečská 3214/4",
+    "city": "Ostrava",
+    "postalCode": "70200",
+    "phone": "+420 724233626",
+    "website": "https://www.scostra.cz",
+    "description": "Provozujeme tenisové, badmintonové a squashové kurty, fitness centra, bowling a tenisové školy. K dispozici je také zasedací místnost s kapacitou 40 míst, dataprojektoremm, plátnem, televizí a připojením k internetu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Bosporka",
+    "address": "Nerudova 1037",
+    "city": "Bohumín",
+    "postalCode": "73581",
+    "phone": "+420 730521457",
+    "website": "https://www.bospor.info",
+    "description": "V Bosporce se nachází čtyři sportoviště - dva badmintonové kurty, jeden kurt na squash či stolní tenis a fitness sál s přilehlou dětskou hernou pro cvičící maminky s dětmi. V prostoru Bosporky se nachází plně vybavené zázemí včetně šaten pro muže i ženy. Pokryto vysokorychlostním Wi-Fi internetem.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sokolák",
+    "address": "Brno, Kníničky ev. č. 149",
+    "city": "Kníničky ev. č. 149",
+    "postalCode": "63500",
+    "phone": "",
+    "website": "https://www.sokolak.cz",
+    "description": "Provozujeme 6 kurtů na plážový volejbal, 1 kurt na beach tenis a 1 kurt na badminton.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Koupaliště Riviéra - Beach volejbal",
+    "address": "Bauerova 322/7",
+    "city": "Brno",
+    "postalCode": "60300",
+    "phone": "+420 533033800",
+    "website": "https://www.starez.cz",
+    "description": "Zahrát si můžete beach volejbal nebo vyzkoušet beach tenis a air badminton. Vše, co pro plážové sporty potřebujete si můžete vypůjčit ve stánku přímo u kurtů. Pozor, kurty na volejbal je třeba předem rezervovat.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Chalupa Stará škola",
+    "address": "Bartošovice v Orlických horách 94",
+    "city": "Bartošovice v Orlických horách",
+    "postalCode": "51761",
+    "phone": "+420 604524860",
+    "website": "https://www.chalupa-stara-skola.cz",
+    "description": "Nabízíme pronájem stylové chalupy. Poskytujeme zázemí pro relaxaci i aktivně strávenou dovolenou. K dispozici je venkovní posezení s krbem, badmintonový kurt, finská sauna, bezdrátové připojení k internetu a parkoviště. Kapacita je 22 míst. Je zde možnost pořádání firemních večírků a školení.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Exe Sport Arena",
+    "address": "Jeremenkova 1003/66a",
+    "city": "Praha",
+    "postalCode": "14700",
+    "phone": "+420 774168745",
+    "website": "https://fbsbohemians.isportsystem.cz",
+    "description": "Sportovní přetlaková hala Exe Sport Arena disponuje florbalovým hřištěm o rozměrech 40x20m a čtyřmi badmintonovými kurty. Halu je možné využít také na cvičení a další sporty. Součástí areálu je kompletní zázemí, které sportovcům nabízí šatny a sociální zařízení.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Víceúčelová hala Landek",
+    "address": "Pod Landekem",
+    "city": "Ostrava",
+    "postalCode": "72529",
+    "phone": "+420 702206683",
+    "website": "http://www.landekpark.cz",
+    "description": "Provozujeme víceúčelovou sportovní halu, vhodnou na badminton, volejbal, nohejbal, futsal a další sálové sporty. K dispozici jsou dva venkovní kurty na plážový volejbal. Možnost zapůjčení sady na pétanque.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Hotel Forea",
+    "address": "Opletalova 95",
+    "city": "Lanškroun",
+    "postalCode": "56301",
+    "phone": "+420 775752744",
+    "website": "https://hotel.forea.cz",
+    "description": "Hotel se nachází v centru Lanškrouna a nabízí hostům moderně zařízené pokoje a apartmány. Součástí je sportcentrum s tenisovými a badmintonovými kurty, lezeckou stěnou a dalšími aktivitami. K dispozici jsou konferenční prostory s kapacitou až 150 osob. Nově máme otevřené i wellness.",
+    "sport": "badminton"
+  },
+  {
+    "name": "ŠUMAVA",
+    "address": "U Elektrárny 917",
+    "city": "Klatovy III",
+    "postalCode": "33901",
+    "phone": "+420 376310910",
+    "website": "http://www.hoopcamps.cz",
+    "description": "Nabízíme sportovní pobyty a školy v přírodě. K dispozici je sportovní hala s palubovkou pro basketbal, přetlaková tenisová hala, badmintonové kurty, víceúčelová tělocvična pro bojové sporty, aerobik, stacionární kola, pilates, jógu a další. Pořádáme sportovní kempy po celé České republice.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportcentrum Duna",
+    "address": "Čs. legií 876/18",
+    "city": "Děčín IV-Podmokly",
+    "postalCode": "40502",
+    "phone": "+420 412530250",
+    "website": "http://www.duna-dc.cz",
+    "description": "Provozujeme squashový a bowlingový klub. K dispozici jsou 4 bowlingové dráhy i 2 klimatizované squashové kurty.",
+    "sport": "badminton"
+  },
+  {
+    "name": "BG Klub",
+    "address": "Masarykova 1320/16",
+    "city": "Liberec I-Staré Město",
+    "postalCode": "46001",
+    "phone": "+420 485104824",
+    "website": "https://bg-klub.eu",
+    "description": "Netradiční prostor spojující sport a zábavu. BG Klub nabízí tři golfové simulátory ProTee VX, čtyři badmintonové kurty a bar s příjemnou atmosférou. Místo pro teambuildingy, soukromé akce, oslavy, nebo příjemné posezení u kávy.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní areál Vitality",
+    "address": "Vendryně 1017",
+    "city": "Vendryně",
+    "postalCode": "73994",
+    "phone": "+420 736626848",
+    "website": "https://www.sportvitality.cz",
+    "description": "Nabízíme širokou škálu sportovního vyžití pro raketové sporty - tenis v létě na antukových dvorcích, v zimě v hale na kurtech s povrchem Rebound Ace. K dispozici je 10 badmintonových kurtů, bowling, minigolf, plážový volejbal. Ideální prostředí pro různorodé akce.",
+    "sport": "badminton"
+  },
+  {
+    "name": "UHER COMPANY, s.r.o.",
+    "address": "Kouty 1290",
+    "city": "Valašské Meziříčí",
+    "postalCode": "75701",
+    "phone": "+420 602531600",
+    "website": "",
+    "description": "Vyrábíme a dodáváme florbalové a hokejbalové mantinely, víceúčelová hřiště, badmintonové kurty a sportovní povrchy.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenisový klub Turnov",
+    "address": "Koškova 825",
+    "city": "Turnov",
+    "postalCode": "51101",
+    "phone": "+420 602312366",
+    "website": "https://tkturnov.cz",
+    "description": "Provozujeme tenisový klub a kurty. Zabýváme se prodejem tenisových míčů, omotávek, výpletů i tlumítek do výpletů a vyplétáním raket na elektronickém vyplétacím stroji. Pořádáme tenisovou školu, meziokresní přebory, mistrovská utkání, turnaje, skupinové tréninky pro děti a další.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Duratec team BMX Mariánské Lázně",
+    "address": "Palackého 24/115",
+    "city": "Mariánské Lázně",
+    "postalCode": "35301",
+    "phone": "+420 607911757",
+    "website": "",
+    "description": "Provoz solária, flowin, sauny, squashového a spinningového centra. K dispozici jsou 2 klimatizované kurty na squash. Možnost využití sportovního baru. Možnosti cvičení - bosa, kruhové tréninky, TRX, stolní tenis, badminton, slimbox či pilates .",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash Centrum Ostrava - Mariánské Hory",
+    "address": "28. října 2663/150",
+    "city": "Ostrava",
+    "postalCode": "70200",
+    "phone": "+420 597577777",
+    "website": "https://www.squashsport.cz",
+    "description": "Nabízíme tři klimatizované kurty na squash. Zajišťujeme turnaje pro veřejnost a trenérské služby. Provozujeme bar a půjčovnu sportovních potřeb na squash.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Hotel Břízky",
+    "address": "Průběžná 4597/22",
+    "city": "Jablonec nad Nisou",
+    "postalCode": "46604",
+    "phone": "+420 731425705",
+    "website": "https://www.brizky.cz",
+    "description": "Čtyřhvězdičkový hotel s kapacitou 60 lůžek u Jablonecké přehrady. Součástí hotelu je tenisová hala, squashové kurty, sauna, whirlpool, badminton, indoor golf. V blízkosti lyžařský běžecký areál. Ideální místo pro školení, soustředění a firemní akce.",
+    "sport": "badminton"
+  },
+  {
+    "name": "VRŠA-SPORT - Sportovní stavby na klíč",
+    "address": "Štichova 648/40",
+    "city": "Praha",
+    "postalCode": "14900",
+    "phone": "+420 739577419",
+    "website": "https://vrsasport.cz",
+    "description": "Projektování, realizace a revize sportovních staveb s vnitřními i venkovními povrchy. Nabídka povrchů pro tenis, fotbal, atletiku, golf, bruslení, badminton a veškeré míčové hry, závlahových a odvodňovacích systémů, lajnování a oplocení sportovišť. Možnost certifikace FIFA.",
+    "sport": "badminton"
+  },
+  {
+    "name": "LAWN TENNIS CLUB ZBRASLAV",
+    "address": "U Národní galerie 1268",
+    "city": "Praha",
+    "postalCode": "15600",
+    "phone": "+420 257922134",
+    "website": "https://www.ltczbraslav.cz/",
+    "description": "Organizujeme sportovní klub zaměřený na tenis, badminton a judo. Nabízíme tenisové kurzy pro děti i dospělé i individuální lekce. Pronajímáme tenisové kurty. Provozujeme také adventure golf. Pořádáme tenisové turnaje a soutěže.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportcentrum Maty",
+    "address": "Růmy 5470",
+    "city": "Zlín",
+    "postalCode": "76001",
+    "phone": "+420 775296669",
+    "website": "http://www.sportcentrum-maty.cz",
+    "description": "Vnitřní i venkovní tenisové kurty a badmintonová hala. Sportovní centrum s nabídkou cvičení ve 4 klimatizovaných sportovních sálech: Alpinning, Spinning (Schwinn Cycling), Power Plate, Power Jóga, Fly Jóga, Jumping, Kruhový funkční trénink, Fitbox, Body styling, běhací pás, osobní tréninky a další.",
+    "sport": "badminton"
+  },
+  {
+    "name": "BR Sport, s.r.o.",
+    "address": "Javornická 1705",
+    "city": "Rychnov nad Kněžnou",
+    "postalCode": "51601",
+    "phone": "+420 773047791",
+    "website": "http://www.brsportcentrum.cz",
+    "description": "Provozujeme venkovní i vnitřní tenisové dvorce, tenisovou školu, badminton a masážní salón. Nabízíme cardio fitness, kruhový trénink, powerjógu, aerobik, zumbu a stolní tenis. Poskytujeme sportovní přípravu dětí. Možnost pronájmu nebo prodeje sportovního vybavení.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Hrádek sport",
+    "address": "Červenohrádecká 396/9",
+    "city": "Plzeň",
+    "postalCode": "31200",
+    "phone": "+420 777330860",
+    "website": "https://hradeksport.cz",
+    "description": "Sportovně relaxační centrum. Tři squashové kurty, sál na aerobní sporty. Fitness s kardio zónou a trenérem, soukromá finská sauna s odpočívárnou. Beach volejbalové hřiště. Cafe a sport bar, letní terasa, parkoviště. Online rezervace na stránkách centra. Pořádání turnajů, firemních a soukromých akcí.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Pro-life fitness",
+    "address": "Horákova 3080/7",
+    "city": "Brno",
+    "postalCode": "61600",
+    "phone": "+420 775557718",
+    "website": "",
+    "description": "Nabízíme 3 squashové kurty, posilovnu s 40 stanovišti, prostor pro úpolové sporty s boxerským ringem, závěsnými aparáty a tatami. Dále poskytujeme možnost využití skupinové i privátní lekce pilates, BOSU a Bodyform. K dispozici je také pistolová střelnice s pojízdnými terči a další.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Fitness centrum Spirit",
+    "address": "Davle 324",
+    "city": "Davle",
+    "postalCode": "25206",
+    "phone": "+420 722055052",
+    "website": "https://www.centrum-spirit.cz",
+    "description": "Provoz sportovního areálu. K dispozici je 50 parkovacích míst. V celém areálu je WiFi připojení zdarma. Nabízíme 3 squashové kurty, beachvolejbalové hřiště, posilovnu, sál na studiové hodiny a Bodyspace. Provozujeme sportbar. Prodáváme teplé i studené nápoje, výživové doplňky, bagety.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní centrum FAJNE",
+    "address": "Gen. Sochora 6228/12",
+    "city": "Ostrava",
+    "postalCode": "70800",
+    "phone": "+420 602533105",
+    "website": "https://www.scfajne.cz",
+    "description": "Provozujeme klimatizované sportovní centrum se 6 squashovými a 6 badmintonovými kurty, posilovnou a 3 sportovními sály. Nabízíme spinning, intervalový trénink, bosu, pilates, powerjogu a jiné. Posilovna je vybavena běžeckými pásy, orbitracky, veslařskými trenažéry, rotopedy.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Relax CLUB Chrudim - Squash",
+    "address": "Topolská 52",
+    "city": "Chrudim II",
+    "postalCode": "53705",
+    "phone": "+420 602412866",
+    "website": "https://relaxclubchrudim.cz",
+    "description": "Provozujeme squashový kurt s možností půjčení vybavení.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportcentrum Ivanovice",
+    "address": "Černohorská 245/22",
+    "city": "Brno",
+    "postalCode": "62100",
+    "phone": "+420 730899399",
+    "website": "https://www.sportcentrum-ivanovice.cz/",
+    "description": "Nabízíme 4 profesionální kurty pro Squash, 3 badmintonové kurty. Pořádáme skupinové lekce Schwinn Cyclingu (Spinning), TRX, Pilates, BOSU a spoustu dětských kroužků. Těšíme se na vás.",
+    "sport": "badminton"
+  },
+  {
+    "name": "SC Eden Beroun, s.r.o.",
+    "address": "Pod Homolkou 1482",
+    "city": "Beroun-Město",
+    "postalCode": "26601",
+    "phone": "+420 724774353",
+    "website": "https://sporteden.cz",
+    "description": "Provozujeme areál zaměřený na sportovní a volnočasové aktivity. Najdete u nás indoor golf se dvěma simulátory, driving range, chipping a putting green i kurty na badminton či tenis. Nabízíme tenisovou akademii pro děti. Disponujeme fitness centrem s kurzy jógy, pilates a dalších cvičení.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash Ohradní",
+    "address": "Ohradní 1440/2a",
+    "city": "Praha",
+    "postalCode": "14000",
+    "phone": "+420 241480009",
+    "website": "https://www.squash-ohradni.cz",
+    "description": "Provoz squashového centra s čtyřmi klimatizovanými kurty, prodejnou a půjčovnou sportovních potřeb. Zaměřujeme se na servis squashových raket. Poskytujeme možnost internetové rezervace. Pořádáme soutěže, páteční turnaje, squashovou ligu a další",
+    "sport": "badminton"
+  },
+  {
+    "name": "BLUE bowling, squash a fitness",
+    "address": "Přívozní 1158",
+    "city": "Lovosice",
+    "postalCode": "41002",
+    "phone": "+420 728495570",
+    "website": "https://www.facebook.com/BlueBowlingLovosice",
+    "description": "Místo pro vaše narozeninové oslavy a rodinné i firemní setkání. K dispozici jsou dvě bowlingové dráhy, dětská herna a squashový kurt.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní areál - MRAKOVI",
+    "address": "Šibenička 808",
+    "city": "Mnichovice",
+    "postalCode": "25164",
+    "phone": "+420 323640975",
+    "website": "https://www.sibenicnivrch.cz",
+    "description": "Provozujeme sportovní areál. K dispozici jsou dvě bowlingové dráhy, squashový kurt, vnitřní tenisový kurt a venkovní antukový tenisový kurt. Dále je možnost hrát beach volejbal či volejbal a nohejbal. V zimním období nabízíme služby lyžařské školy.",
+    "sport": "badminton"
+  },
+  {
+    "name": "BEST Sportcentrum",
+    "address": "Dolní Hejčínská 1194/36",
+    "city": "Olomouc",
+    "postalCode": "77900",
+    "phone": "+420 773313314",
+    "website": "https://best-sportcentrum.cz",
+    "description": "Moderní sportovně-společenské centrum, 6 bowlingových drah (dětské zarážky), 2 squashové kurty, kavárna a velká restaurace. K dispozici virtuální realita, dětský koutek, parkování zdarma přímo před budovou. Milá obsluha, firemní večírky a narozeninové oslavy, školení, tančírny a taneční kurzy.",
+    "sport": "badminton"
+  },
+  {
+    "name": "SQUASH ARENA, s.r.o.",
+    "address": "Olbrachtova 820/4",
+    "city": "Liberec XV-Starý Harcov",
+    "postalCode": "46015",
+    "phone": "+420 482750506",
+    "website": "http://www.squasharena.li",
+    "description": "Provozujeme sportovní zařízení se squashovými kurty. Nabízíme školu squashe a možnost hry wallyball.",
+    "sport": "badminton"
+  },
+  {
+    "name": "SPORTSTARR, a.s.",
+    "address": "U Stadionu 3570",
+    "city": "Havlíčkův Brod",
+    "postalCode": "58001",
+    "phone": "+420 569424656",
+    "website": "https://www.kotlina.cz/",
+    "description": "Squash centrum nabízí 2 squashové kurty, půjčovnu míčků a raket, prodej vybavení pro hru, osobního trenéra, samoobslužný bar a příjemné prostředí.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní klub Motorlet Praha",
+    "address": "Butovická 592/35",
+    "city": "Praha",
+    "postalCode": "15800",
+    "phone": "+420 251556730",
+    "website": "https://www.sk-motorlet.cz/",
+    "description": "Provozujeme sportovní halu s hledištěm pro 250 diváků a povrchem Mondoflex. Hala je vhodná pro badminton, volejbal, basketbal, stolní tenis, malou kopanou a nohejbal. K dispozici jsou fotbalová hřiště s travnatým i umělých povrchem a antukové tenisové kurty.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní klub vzpírání Baník Havířov",
+    "address": "U Stadionu 1325/2b",
+    "city": "Havířov",
+    "postalCode": "73601",
+    "phone": "+420 773242807",
+    "website": "https://vzpiranihavirov.cz/",
+    "description": "Provozujeme badmintonové kurty. Půjčujeme rakety, míčky a boty. Nabízíme on-line rezervace. K dispozici je Wi-Fi připojení zdarma.",
+    "sport": "badminton"
+  },
+  {
+    "name": "SPORTCENTRUM TJ Turnov",
+    "address": "Skálova 207",
+    "city": "Turnov",
+    "postalCode": "51101",
+    "phone": "+420 737490222",
+    "website": "http://www.tjturnov.cz",
+    "description": "Provoz sportovního centra s fitness sálem, hřišti na florbal, futsal, basketbal, házenou, odbíjenou a další. K dispozci jsou kurty na squash a badminton. Možnost zapůjčení vybavení.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní centrum Olšanka",
+    "address": "Táboritská 1000/23",
+    "city": "Praha",
+    "postalCode": "13000",
+    "phone": "+420 267092448",
+    "website": "https://www.hotelolsanka.cz/sport/",
+    "description": "Více než 10 sportovišť pod jednou střechou nabízí formou jednorázových vstupů i předplacených permanentních karet ideální prostor k aktivnímu odpočinku a relaxaci. K dispozici finskou saunu, stolní tenis, posilovnu, cvičební sál nebo 4 kurty na badminton.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash - Sportovní hala Jeneč",
+    "address": "Lidická 210",
+    "city": "Jeneč",
+    "postalCode": "25261",
+    "phone": "+420 266311023",
+    "website": "https://hala-jenec.cz",
+    "description": "Provozujeme kurty na squash.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Wellness centrum Měřín",
+    "address": "Rabyně, Měřín 113",
+    "city": "Měřín 113",
+    "postalCode": "25744",
+    "phone": "+420 973222112",
+    "website": "https://www.volareza.cz/wellness-centrum-merin/",
+    "description": "Rozsáhlé wellness centrum hotelu Měřín je otevřeno i pro širokou klientelu. Nabízí 25m bazén, tobogán, vodní atrakce, suchou a parní saunu, whirlpooly, solnou jeskyni, solární louku, balneo, masáže, tenisové haly, squash, venkovní kurty, beach volejbal, fotbal, lodičky, kanoe či dračí lodě.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash Paříž",
+    "address": "Žižkovo náměstí 3",
+    "city": "Jičín",
+    "postalCode": "50601",
+    "phone": "+420 493532750",
+    "website": "https://www.hotel-pariz-jicin.cz",
+    "description": "Provozujeme squashový kurt. Půjčujeme rakety i míčky.",
+    "sport": "badminton"
+  },
+  {
+    "name": "FITNESS ABÁCIE",
+    "address": "U Abácie 491/2",
+    "city": "Valašské Meziříčí",
+    "postalCode": "75701",
+    "phone": "+420 571613830",
+    "website": "http://www.fitness-abacie.cz",
+    "description": "Provozujeme squashové kurty, badmintonovou halu, fitness centrum, bowling, badminton, power plate, body space, skupinové cvičení. Vše pod vedením profesionálních trenérů. Fitness centrum může využít místní klientela i ubytovaní hosté.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash Hodonín",
+    "address": "Bratislavská 4055/1b",
+    "city": "Hodonín",
+    "postalCode": "69501",
+    "phone": "+420 724292303",
+    "website": "https://www.squashhodonin.cz/",
+    "description": "Provoz sportovního centra se squashovými kurty pro rekreační i výkonnostní hráče. Nabídka zahrnuje pronájem kurtů, půjčovnu sportovního vybavení, tréninky s trenérem, pořádání turnajů a doplňkové zázemí pro sport a odpočinek.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sportovní areál Hvozdná - Squash",
+    "address": "Družstevní 355",
+    "city": "Hvozdná",
+    "postalCode": "76310",
+    "phone": "+420 577902501",
+    "website": "https://www.rmgas.cz",
+    "description": "Provozujeme squashové kurty s možností zapůjčení sportovního vybavení. Půjčujeme rakety, míčky, squashové brýle, sportovní boty i ručníky.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash Losina",
+    "address": "Chotěšov, Losina 4",
+    "city": "Losina 4",
+    "postalCode": "33301",
+    "phone": "+420 606158254",
+    "website": "http://www.sportcentrumlosina.cz",
+    "description": "Provozujeme sportovní halu na squash, antukový tenisový kurt, hřiště na nohejbal, klasický i plážový volejbal. K dispozici je parkování v areálu, půjčovna společenských her a sportovního vybavení.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Fitness Bobo",
+    "address": "Cukrovarská 738",
+    "city": "Židlochovice",
+    "postalCode": "66701",
+    "phone": "+420 774348637",
+    "website": "https://www.fitness-bobo.cz",
+    "description": "Provozujeme fitcentrum se soláriem a se dvěma squashovými kurty. Pronajímáme také víceúčelovou halu. Pořádáme kurzy pilates, zumby, bodystylingu﻿, aerobiku, powerjógy a dětského aerobiku. Naleznete zde přístroj Vacushape a vibrační plošinu Fitvibe. Prodáváme sportovní potřeby a doplňky stravy.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash - Libor Hlavenka",
+    "address": "Lesní 1406/12a",
+    "city": "Břeclav",
+    "postalCode": "69141",
+    "phone": "+420 608242793",
+    "website": "https://www.squashrelaxsport.cz/",
+    "description": "Ve sportovním centru jsou k dispozici jsou 2 klimatizované squashové kurty a velký zrcadlový sál k všestrannému využití. Aerobic, Body form, Power jóga, KickBox, Metafit.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Amenity Sport Arena Lipno",
+    "address": "Lipno nad Vltavou 998",
+    "city": "Lipno nad Vltavou",
+    "postalCode": "38278",
+    "phone": "+420 380731778",
+    "website": "https://lipno.amenity.cz/sport-arena-lipno",
+    "description": "Provozujeme sportovní halu se squashovými a badmintonovými kurty, stolním tenisem, bowlingovými drahami, fitness a venkovním hřištěm na plážové sporty. Naleznete zde také wellness s vířivkami, saunami, párou a nádherným výhledem na Lipno.",
+    "sport": "badminton"
+  },
+  {
+    "name": "FITNESS BESEDA - Squash",
+    "address": "Kapucínské náměstí 200/6",
+    "city": "Litoměřice-Město",
+    "postalCode": "41201",
+    "phone": "+420 776752485",
+    "website": "http://www.fitness-beseda.cz",
+    "description": "Nabízíme kurty pro squash.",
+    "sport": "badminton"
+  },
+  {
+    "name": "ZONE4YOU",
+    "address": "třída Generála Píky 2026/11",
+    "city": "Brno",
+    "postalCode": "61300",
+    "phone": "+420 733735376",
+    "website": "https://zone4you.cz/squash/",
+    "description": "Provoz sportovního centra, které má k dispozici čtyři klimatizované squashové kurty. Nabídka kruhových tréninků či spinningu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "KASKÁDA Ledeč, v.o.s.",
+    "address": "Husovo náměstí 17",
+    "city": "Ledeč nad Sázavou",
+    "postalCode": "58401",
+    "phone": "+420 569443745",
+    "website": "https://www.kaskadaledec.cz",
+    "description": "Provozujeme sportovní centrum s nabídkou lekcí spinningu a zumby. K dispozici je posilovna a 2 squashové kurty.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Squash - Hotel Na Vývoji",
+    "address": "Havlíčkova 1135",
+    "city": "Vlašim",
+    "postalCode": "25801",
+    "phone": "+420 601376912",
+    "website": "https://www.navyvoji.cz",
+    "description": "Provoz squashového kurtu. Naleznete zde jeden squashový kurt, který odpovídá předpisům a standardům ČASQ.",
+    "sport": "badminton"
+  },
+  {
+    "name": "4 Zones Fitness",
+    "address": "U Koupaliště 1530",
+    "city": "Žamberk",
+    "postalCode": "56401",
+    "phone": "+420 733735753",
+    "website": "https://autocamping.cz",
+    "description": "Nabízíme služby fitness centra. K dispozici je cardio zóna, squashový kurt, solárium, funkční kruhový trénink, měření na přístroji InBody 230 a fitness bar. Možnost spolupráce s trenérem, sestavení individuálních tréninkových plánů a poradenství v oblasti sportu a výživy.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Hotel Jezerka",
+    "address": "Seč, Ústupky ev. č. 278",
+    "city": "Ústupky ev. č. 278",
+    "postalCode": "53807",
+    "phone": "+420 469676327",
+    "website": "https://www.jezerka.cz",
+    "description": "Hotel nabízí ubytování ve 2 a 3lůžkových pokojích, Superiorech a relaxačních apartmánech (230 lůžek). Umístění 200 metrů od přehrady Seč. Kongresy, školení, sport, rekreace. V areálu je krytý i venkovní bazén, whirpool, squash a tenis, fitness, sauny. Hotel nabízí i nové wellness & spa centrum.",
+    "sport": "badminton"
+  },
+  {
+    "name": "TENIS CENTRUM Mandlík, s.r.o.",
+    "address": "Hornofova ev. č. 21",
+    "city": "Praha",
+    "postalCode": "16400",
+    "phone": "+420 731554007",
+    "website": "http://www.tenis-centrum-mandlik.cz",
+    "description": "Nabízíme kurzy tenisu pro všechny věkové kategorie. Provozujeme dva kryté antukové dvorce. Organizujeme firemní turnaje. Prodáváme tenisové vybavení.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenisový Klub Frýdlant",
+    "address": "Jizerská 4077",
+    "city": "Frýdlant",
+    "postalCode": "46401",
+    "phone": "+420 777312171",
+    "website": "",
+    "description": "Nabízíme pronájem kurtů a hřiště na plážový volejbal. K dispozici je i dětské hřiště a Wi-Fi připojení. Pořádáme tenisové kempy, soustředění, firemní turnaje a jiné akce. V areálu je možnost si zahrát stolní tenis, fotbal nebo petangue a zakoupit tenisové míčky. Naleznete u nás také krytou halu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tenisový klub Havířov, z.s.",
+    "address": "Opletalova 1218/8b",
+    "city": "Havířov",
+    "postalCode": "73601",
+    "phone": "+420 777034027",
+    "website": "http://www.tk-havirov.cz",
+    "description": "Provozování 9-ti antukových dvorců a nafukovací haly se třemi dvorci. Prodej tenisového zboží. Pořádání firemních tenisových turnajů či sportovního odpoledne. Možnost pronájmu klubovny s barem pro 40 osob, malé banketky pro 12 osob či velké banketky pro 24 osob pro pořádání společenských akcí.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Horácký tenisový klub Třebíč",
+    "address": "Janáčkovo stromořadí 158/7",
+    "city": "Třebíč",
+    "postalCode": "67401",
+    "phone": "+420 568848595",
+    "website": "https://www.facebook.com/htktrebic",
+    "description": "Tenisový klub a tenisová hala. 8 venkovních antukových tenisových kurtů a 2 halové, tenisová tréninková hrací stěna a elektronický nahrávací stroj. V areálu tenisová školička a tenisová akademie. Vyplétáme rakety a prodáváme sportovní vybavení. Pořádáme sportovní a společenské akce na klíč.",
+    "sport": "badminton"
+  },
+  {
+    "name": "TENIS MLADCOVÁ",
+    "address": "Vinohrádek 493",
+    "city": "Zlín",
+    "postalCode": "76001",
+    "phone": "+420 602715441",
+    "website": "http://www.tenismladcova.cz",
+    "description": "Jsme tenisový klub a škola. Specializujeme se na mládežnický tenis, kdy trénujeme děti celoročně a pravidelně pořádáme taky příměstské tenisové tábory. Poskytujeme pronájem tenisových kurtů a nabízíme prodej tenisového vybavení Prince, vyplétání raket, pronájem sauny a whirlpoolu.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Ing. Radim Slezák, SH Tennis Team",
+    "address": "Vřesinská 121/97",
+    "city": "Ostrava",
+    "postalCode": "70800",
+    "phone": "+420 603218510",
+    "website": "http://www.slezaktenis.cz",
+    "description": "Provozujeme tenisovou školu. Zajišťujeme pronájem dvorců, vyplétání raket a prodej tenisových potřeb.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Fifteen - Mgr. Marcel Trnka",
+    "address": "Jinačovice 170",
+    "city": "Jinačovice",
+    "postalCode": "66434",
+    "phone": "+420 721436136",
+    "website": "https://www.fifteen.cz",
+    "description": "Nabízíme špičkové tenisové vybavení a služby pro moderní tenisové areály. Naše produkty zahrnují tenisové lajny, sítě, kartáče a další nezbytnosti. S více než třicetiletou zkušeností v oblasti výstavby a údržby tenisových kurtů víme, co potřebujete pro kvalitní hru.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Tělovýchovná jednota Ostrava",
+    "address": "Varenská 3098/40a",
+    "city": "Ostrava",
+    "postalCode": "70200",
+    "phone": "+420 773960234",
+    "website": "https://www.tjostrava.cz",
+    "description": "Zajištění sportovních činností a akcí pro cvičence všech věkových kategorií. Vedeme oddíly golfu, juda, jógy, stolního tenisu, šachů, volejbalu a další. Nabízíme pronájem sportovní haly. Dále provozujeme saunu a nabízíme masáže.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Corkers Ostrava",
+    "address": "Horymírova 3069/5",
+    "city": "Ostrava",
+    "postalCode": "70030",
+    "phone": "+420 722924218",
+    "website": "https://www.corkers.cz",
+    "description": "Squashový klub s velkou sportovní historií. Hlavním zaměřením je výkonnostní a elitní squash, prostor však dostává i rekreační hra. V klubu se rodila historie ostravského soutěžního squashe, za dobu své existence v něm vyrostla celá řada skvělých hráčů domácí i mezinárodní úrovně.",
+    "sport": "badminton"
+  },
+  {
+    "name": "TJ Sokol Nová Hradečná",
+    "address": "Nová Hradečná 95",
+    "city": "Nová Hradečná",
+    "postalCode": "78383",
+    "phone": "+420 606665896",
+    "website": "http://tjsokolnovahradecna.com",
+    "description": "Zajištění sportovních akcí, nabídka posilovny a tenisových kurtů. Pronájem sálu a venkovního areálu na svatby, oslavy a jiné akce.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Sport club Budějovická",
+    "address": "Budějovická 680/17",
+    "city": "Praha",
+    "postalCode": "14000",
+    "phone": "+420 777048343",
+    "website": "https://www.scbudejovicka.cz",
+    "description": "Posilovna s kardio zónou, beach volejbal, basketbal, tenis, fotbalové hřiště s umělou trávou.",
+    "sport": "badminton"
+  },
+  {
+    "name": "Wellness centrum Bedřichov",
+    "address": "Špindlerův Mlýn, Bedřichov 62",
+    "city": "Bedřichov 62",
+    "postalCode": "54351",
+    "phone": "+420 973259025",
+    "website": "https://www.volareza.cz/wellness-centrum-bedrichov",
+    "description": "Wellness centrum, které je součástí hotelu Bedřichov ve Špindlerově Mlýně nabízí Vodní ráj s atrakcemi, 25 m bazén a whirlpool. Vstup je možno skloubit s pobytem ve Wellness zóně se saunami, whirlpooly, kneipem. Dále nabízíme široký výběr masáží a sportovních služeb (tenis, squash, fitness, kola).",
+    "sport": "badminton"
+  }
+]
