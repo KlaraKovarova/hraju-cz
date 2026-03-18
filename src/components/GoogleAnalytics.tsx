@@ -4,7 +4,6 @@ import Script from "next/script";
 import { useState, useEffect } from "react";
 import { getConsent } from "./CookieConsent";
 
-// TODO: Replace with actual Google Analytics Measurement ID
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 export function GoogleAnalytics() {
