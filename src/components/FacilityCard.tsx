@@ -56,7 +56,11 @@ export function FacilityCard({ facility, sportSlug }: FacilityCardProps) {
         {facility.courtsLanes != null && (
           <span className="rounded-lg bg-zinc-100 px-2.5 py-1 font-medium text-zinc-600">
             {facility.courtsLanes}{" "}
-            {facility.courtsLanes === 1 ? "kurt" : "kurtů"}
+            {facility.courtsLanes === 1
+              ? "kurt"
+              : facility.courtsLanes >= 2 && facility.courtsLanes <= 4
+                ? "kurty"
+                : "kurtů"}
           </span>
         )}
         {facility.pricing && (

@@ -268,7 +268,11 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
             {facility.courtsLanes != null && (
               <span className="rounded-lg bg-zinc-100 px-2.5 py-1 text-xs font-medium text-zinc-600">
                 {facility.courtsLanes}{" "}
-                {facility.courtsLanes === 1 ? "kurt" : "kurtů"}
+                {facility.courtsLanes === 1
+                  ? "kurt"
+                  : facility.courtsLanes >= 2 && facility.courtsLanes <= 4
+                    ? "kurty"
+                    : "kurtů"}
               </span>
             )}
           </div>
@@ -388,19 +392,23 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                   Otevírací doba
                 </h2>
                 <div className="divide-y divide-zinc-50 rounded-xl bg-zinc-50/50">
-                  {Object.entries(openingHours).map(([day, hours]) => (
-                    <div
-                      key={day}
-                      className="flex justify-between px-4 py-3 text-sm"
-                    >
-                      <span className="font-medium text-zinc-600">
-                        {DAY_LABELS[day] ?? day}
-                      </span>
-                      <span className="font-semibold text-zinc-900">
-                        {hours}
-                      </span>
-                    </div>
-                  ))}
+                  {Object.keys(DAY_LABELS).map((day) => {
+                    const hours = openingHours[day];
+                    if (!hours) return null;
+                    return (
+                      <div
+                        key={day}
+                        className="flex justify-between px-4 py-3 text-sm"
+                      >
+                        <span className="font-medium text-zinc-600">
+                          {DAY_LABELS[day]}
+                        </span>
+                        <span className="font-semibold text-zinc-900">
+                          {hours}
+                        </span>
+                      </div>
+                    );
+                  })}
                 </div>
               </section>
             )}
