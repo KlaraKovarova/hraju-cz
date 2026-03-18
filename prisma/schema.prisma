@@ -64,6 +64,7 @@ model Facility {
   contacts      Contact[]
   images        FacilityImage[]
   editRequests  EditRequest[]
+  ownerTokens   OwnerToken[]
 
   @@index([locationId])
   @@index([slug])
@@ -161,4 +162,19 @@ enum EditRequestStatus {
   PENDING
   APPROVED
   REJECTED
+}
+
+model OwnerToken {
+  id         String    @id @default(cuid())
+  facilityId String
+  facility   Facility  @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  token      String    @unique
+  ownerEmail String?
+  ownerName  String?
+  usedAt     DateTime?
+  expiresAt  DateTime?
+  createdAt  DateTime  @default(now())
+
+  @@index([facilityId])
+  @@index([token])
 }
