@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import {
   MapPin,
@@ -13,7 +13,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { getSportBySlug } from "@/lib/sports";
-import { getFacilityBySlug } from "@/lib/data";
+import { getFacilityBySlug, getInactiveFacilityRedirectInfo } from "@/lib/data";
 import { getRegionByName, cityToSlug } from "@/lib/regions";
 import { getSportFacilityType } from "@/lib/seo";
 import EditSuggestionForm from "@/components/EditSuggestionForm";
@@ -80,7 +80,29 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
   const sport = getSportBySlug(sportSlug);
   const { facility, isLive } = await getFacilityBySlug(slug);
 
-  if (!facility || !sport) {
+  if (!sport) {
+    notFound();
+  }
+
+  // Deactivated facility from DB (DB doesn't filter by isActive) — redirect to city listing
+  if (facility && !facility.isActive) {
+    const regionInfo = facility.location.region ? getRegionByName(facility.location.region) : null;
+    redirect(regionInfo
+      ? `/sport/${sportSlug}/kraj/${regionInfo.slug}/${cityToSlug(facility.location.city)}`
+      : `/sport/${sportSlug}`
+    );
+  }
+
+  // Facility not found — check if it's a deactivated facility in static data
+  if (!facility) {
+    const info = getInactiveFacilityRedirectInfo(slug);
+    if (info) {
+      const regionInfo = info.region ? getRegionByName(info.region) : null;
+      redirect(regionInfo
+        ? `/sport/${sportSlug}/kraj/${regionInfo.slug}/${cityToSlug(info.city)}`
+        : `/sport/${sportSlug}`
+      );
+    }
     notFound();
   }
 

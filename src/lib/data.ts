@@ -143,6 +143,18 @@ function staticFacilityBySlug(slug: string): FacilityWithDetails | null {
   return f && f.isActive ? toFacilityWithDetails(f) : null;
 }
 
+/**
+ * Look up an inactive facility's location info by slug (for redirect purposes).
+ * Returns null if the slug doesn't exist or the facility is active.
+ */
+export function getInactiveFacilityRedirectInfo(slug: string): { city: string; region: string | null } | null {
+  const f = facilityBySlug.get(slug);
+  if (!f || f.isActive) return null;
+  const loc = locationById.get(f.locationId);
+  if (!loc) return null;
+  return { city: loc.city, region: loc.region };
+}
+
 function staticCities(): string[] {
   const cities = new Set<string>();
   for (const loc of exportData.locations) {
