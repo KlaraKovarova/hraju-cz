@@ -1,21 +1,31 @@
 "use client";
 
 import Script from "next/script";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { getConsent } from "./CookieConsent";
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
-export function GoogleAnalytics() {
-  const [consented, setConsented] = useState(false);
+function grantConsent() {
+  window.gtag?.("consent", "update", {
+    analytics_storage: "granted",
+  });
+}
 
+export function GoogleAnalytics() {
   useEffect(() => {
     if (getConsent() === "accepted") {
-      setConsented(true);
+      grantConsent();
     }
 
     function onAccepted() {
-      setConsented(true);
+      grantConsent();
     }
 
     window.addEventListener("cookie-consent-accepted", onAccepted);
@@ -23,10 +33,19 @@ export function GoogleAnalytics() {
       window.removeEventListener("cookie-consent-accepted", onAccepted);
   }, []);
 
-  if (!consented || !GA_MEASUREMENT_ID) return null;
+  if (!GA_MEASUREMENT_ID) return null;
 
   return (
     <>
+      <Script id="ga-consent-default" strategy="beforeInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('consent', 'default', {
+            analytics_storage: 'denied',
+          });
+        `}
+      </Script>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         strategy="afterInteractive"
@@ -35,6 +54,7 @@ export function GoogleAnalytics() {
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
           gtag('js', new Date());
           gtag('config', '${GA_MEASUREMENT_ID}');
         `}
