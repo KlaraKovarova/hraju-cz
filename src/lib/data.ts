@@ -125,7 +125,7 @@ function staticFacilitiesBySport(sportSlug: string, cityFilter?: string): Facili
   const facilityIds = facilitiesBySportSlug.get(sportSlug);
   if (!facilityIds) return [];
 
-  let results = exportData.facilities.filter((f) => facilityIds.has(f.id));
+  let results = exportData.facilities.filter((f) => facilityIds.has(f.id) && f.isActive);
 
   if (cityFilter) {
     const lower = cityFilter.toLowerCase();
@@ -140,7 +140,7 @@ function staticFacilitiesBySport(sportSlug: string, cityFilter?: string): Facili
 
 function staticFacilityBySlug(slug: string): FacilityWithDetails | null {
   const f = facilityBySlug.get(slug);
-  return f ? toFacilityWithDetails(f) : null;
+  return f && f.isActive ? toFacilityWithDetails(f) : null;
 }
 
 function staticCities(): string[] {
@@ -176,7 +176,7 @@ function staticRegionsBySport(sportSlug: string): RegionWithCount[] {
   const regionCounts = new Map<string, { count: number; cities: Set<string> }>();
 
   for (const f of exportData.facilities) {
-    if (!facilityIds.has(f.id)) continue;
+    if (!facilityIds.has(f.id) || !f.isActive) continue;
     const loc = locationById.get(f.locationId);
     if (!loc?.region) continue;
 
@@ -222,7 +222,7 @@ function staticCitiesByRegionAndSport(regionSlug: string, sportSlug: string): Ci
   const cityCounts = new Map<string, number>();
 
   for (const f of exportData.facilities) {
-    if (!facilityIds.has(f.id)) continue;
+    if (!facilityIds.has(f.id) || !f.isActive) continue;
     if (!locIds.has(f.locationId)) continue;
     const loc = locationById.get(f.locationId);
     if (!loc) continue;
@@ -260,7 +260,7 @@ function staticFacilitiesByRegionCityAndSport(
   if (!cityName) return { facilities: [], cityName: null };
 
   const results = exportData.facilities.filter((f) => {
-    if (!facilityIds.has(f.id)) return false;
+    if (!facilityIds.has(f.id) || !f.isActive) return false;
     if (!locIds.has(f.locationId)) return false;
     const loc = locationById.get(f.locationId);
     return loc?.city === cityName;
@@ -286,7 +286,7 @@ function staticFacilitiesByRegionAndSport(
   if (!locIds) return [];
 
   const results = exportData.facilities.filter((f) => {
-    if (!facilityIds.has(f.id)) return false;
+    if (!facilityIds.has(f.id) || !f.isActive) return false;
     return locIds.has(f.locationId);
   });
 
