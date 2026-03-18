@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
-import { MOCK_FACILITIES } from "@/lib/data";
+import { getFacilitiesBySport } from "@/lib/data";
 
 async function getFacilities() {
   try {
@@ -15,7 +15,9 @@ async function getFacilities() {
       isLive: true,
     };
   } catch {
-    return { facilities: MOCK_FACILITIES, isLive: false };
+    // Fall back to static data — show all tenis facilities as a representative sample
+    const { facilities } = await getFacilitiesBySport("tenis");
+    return { facilities, isLive: false };
   }
 }
 

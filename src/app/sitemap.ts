@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SPORTS } from "@/lib/sports";
 import { prisma } from "@/lib/prisma";
-import { MOCK_FACILITIES } from "@/lib/data";
+import exportData from "@/data/facilities-export.json";
 
 const BASE_URL = "https://hraju.cz";
 
@@ -20,7 +20,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   }
 
-  // Facility detail pages + city listing pages from DB (fallback to mock)
+  // Facility detail pages + city listing pages from DB (fallback to static export)
   let facilities: { slug: string; sportSlugs: string[]; city: string; updatedAt?: Date }[] = [];
 
   try {
@@ -45,12 +45,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       city: f.location.city,
       updatedAt: f.updatedAt,
     }));
-  } catch (err) {
-    console.warn(`[hraju.cz] DB fallback for sitemap: ${err instanceof Error ? err.message : err}`);
-    facilities = MOCK_FACILITIES.map((f) => ({
+  } catch {
+    // Use static JSON export
+    const sportById = new Map(exportData.sports.map((s) => [s.id, s]));
+    const locationById = new Map(exportData.locations.map((l) => [l.id, l]));
+    const sportsByFacId = new Map<string, string[]>();
+    for (const fs of exportData.facilitySports) {
+      const sport = sportById.get(fs.sportId);
+      if (!sport) continue;
+      const arr = sportsByFacId.get(fs.facilityId) || [];
+      arr.push(sport.slug);
+      sportsByFacId.set(fs.facilityId, arr);
+    }
+    facilities = exportData.facilities.map((f) => ({
       slug: f.slug,
-      sportSlugs: f.sports.map((s) => s.sport.slug),
-      city: f.location.city,
+      sportSlugs: sportsByFacId.get(f.id) || [],
+      city: locationById.get(f.locationId)?.city || "",
     }));
   }
 

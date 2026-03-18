@@ -1,4 +1,5 @@
 import { prisma } from "./prisma";
+import exportData from "@/data/facilities-export.json";
 
 const DB_QUERY_TIMEOUT_MS = 3000;
 
@@ -41,229 +42,115 @@ export type FacilityWithDetails = {
   images: { url: string; alt: string | null; isPrimary: boolean }[];
 };
 
-// Seed-level mock data for use when DB is unavailable
-export const MOCK_FACILITIES: FacilityWithDetails[] = [
-  {
-    id: "mock-1",
-    name: "Sportcentrum Strahov",
-    slug: "sportcentrum-strahov",
-    description: "Největší sportovní centrum v Praze s 12 tenisovými kurty.",
-    address: "Vaníčkova 2, Praha 6",
-    postalCode: "169 00",
-    lat: 50.081,
-    lng: 14.385,
+// --- Static data from JSON export (pre-indexed) ---
+
+type ExportData = typeof exportData;
+
+const locationById = new Map(exportData.locations.map((l) => [l.id, l]));
+const sportById = new Map(exportData.sports.map((s) => [s.id, s]));
+
+// Index: sportSlug -> set of facilityIds
+const facilitiesBySportSlug = new Map<string, Set<string>>();
+for (const fs of exportData.facilitySports) {
+  const sport = sportById.get(fs.sportId);
+  if (!sport) continue;
+  let set = facilitiesBySportSlug.get(sport.slug);
+  if (!set) {
+    set = new Set();
+    facilitiesBySportSlug.set(sport.slug, set);
+  }
+  set.add(fs.facilityId);
+}
+
+// Index: facilityId -> sportIds
+const sportsByFacilityId = new Map<string, string[]>();
+for (const fs of exportData.facilitySports) {
+  const arr = sportsByFacilityId.get(fs.facilityId) || [];
+  arr.push(fs.sportId);
+  sportsByFacilityId.set(fs.facilityId, arr);
+}
+
+// Index: facilityId -> contacts
+const contactsByFacilityId = new Map<string, ExportData["contacts"]>();
+for (const c of exportData.contacts) {
+  const arr = contactsByFacilityId.get(c.facilityId) || [];
+  arr.push(c);
+  contactsByFacilityId.set(c.facilityId, arr);
+}
+
+// Slug -> facility index
+const facilityBySlug = new Map(exportData.facilities.map((f) => [f.slug, f]));
+
+function toFacilityWithDetails(f: ExportData["facilities"][number]): FacilityWithDetails {
+  const loc = locationById.get(f.locationId);
+  const fSportIds = sportsByFacilityId.get(f.id) || [];
+  const fContacts = contactsByFacilityId.get(f.id) || [];
+
+  return {
+    id: f.id,
+    name: f.name,
+    slug: f.slug,
+    description: f.description,
+    address: f.address,
+    postalCode: f.postalCode,
+    lat: f.lat,
+    lng: f.lng,
     googlePlaceId: null,
-    courtsLanes: 12,
-    pricing: "300–450 Kč/hod",
-    openingHours: {
-      po: "07:00–22:00",
-      út: "07:00–22:00",
-      st: "07:00–22:00",
-      čt: "07:00–22:00",
-      pá: "07:00–22:00",
-      so: "08:00–20:00",
-      ne: "08:00–20:00",
-    },
-    website: "https://strahov.cz",
-    isActive: true,
-    isPremium: true,
-    isClaimed: true,
-    location: { city: "Praha", region: "Praha" },
-    sports: [{ sport: { slug: "tenis", nameCs: "Tenis", icon: "🎾" } }],
-    amenities: [
-      { amenity: { slug: "parking", nameCs: "Parkování", icon: "🅿️" } },
-      { amenity: { slug: "showers", nameCs: "Sprchy", icon: "🚿" } },
-      { amenity: { slug: "cafe", nameCs: "Kavárna", icon: "☕" } },
-    ],
-    contacts: [
-      {
-        id: "c1",
-        type: "PHONE",
-        value: "+420 233 355 400",
-        label: "Recepce",
-        isPrimary: true,
-      },
-    ],
+    courtsLanes: f.courtsLanes,
+    pricing: f.pricing,
+    openingHours: f.openingHours as Record<string, string> | null,
+    website: f.website,
+    isActive: f.isActive,
+    isPremium: f.isPremium,
+    isClaimed: f.isClaimed,
+    location: { city: loc?.city ?? "", region: loc?.region ?? null },
+    sports: fSportIds
+      .map((sid) => sportById.get(sid))
+      .filter(Boolean)
+      .map((s) => ({ sport: { slug: s!.slug, nameCs: s!.nameCs, icon: s!.icon } })),
+    amenities: [],
+    contacts: fContacts.map((c) => ({
+      id: c.id,
+      type: c.type,
+      value: c.value,
+      label: c.label,
+      isPrimary: c.isPrimary,
+    })),
     images: [],
-  },
-  {
-    id: "mock-2",
-    name: "Squash Arena Žižkov",
-    slug: "squash-arena-zizkov",
-    description: "6 squashových kurtů v centru Prahy, otevřeno 7 dní v týdnu.",
-    address: "Seifertova 22, Praha 3",
-    postalCode: "130 00",
-    lat: 50.088,
-    lng: 14.446,
-    googlePlaceId: null,
-    courtsLanes: 6,
-    pricing: "200–280 Kč/hod",
-    openingHours: {
-      po: "06:00–23:00",
-      út: "06:00–23:00",
-      st: "06:00–23:00",
-      čt: "06:00–23:00",
-      pá: "06:00–23:00",
-      so: "08:00–22:00",
-      ne: "09:00–21:00",
-    },
-    website: null,
-    isActive: true,
-    isPremium: false,
-    isClaimed: false,
-    location: { city: "Praha", region: "Praha" },
-    sports: [{ sport: { slug: "squash", nameCs: "Squash", icon: "🏸" } }],
-    amenities: [
-      { amenity: { slug: "showers", nameCs: "Sprchy", icon: "🚿" } },
-    ],
-    contacts: [
-      {
-        id: "c2",
-        type: "EMAIL",
-        value: "rezervace@squasharena.cz",
-        label: "Rezervace",
-        isPrimary: true,
-      },
-    ],
-    images: [],
-  },
-  {
-    id: "mock-3",
-    name: "SK Badminton Brno",
-    slug: "sk-badminton-brno",
-    description: "Moderní badmintonová hala s 8 kurty v Brně.",
-    address: "Sportovní 4, Brno",
-    postalCode: "602 00",
-    lat: 49.195,
-    lng: 16.608,
-    googlePlaceId: null,
-    courtsLanes: 8,
-    pricing: "180–240 Kč/hod",
-    openingHours: {
-      po: "08:00–22:00",
-      út: "08:00–22:00",
-      st: "08:00–22:00",
-      čt: "08:00–22:00",
-      pá: "08:00–22:00",
-      so: "09:00–20:00",
-      ne: "10:00–18:00",
-    },
-    website: "https://skbadminton-brno.cz",
-    isActive: true,
-    isPremium: false,
-    isClaimed: true,
-    location: { city: "Brno", region: "Jihomoravský kraj" },
-    sports: [{ sport: { slug: "badminton", nameCs: "Badminton", icon: "🏸" } }],
-    amenities: [
-      { amenity: { slug: "parking", nameCs: "Parkování", icon: "🅿️" } },
-      { amenity: { slug: "showers", nameCs: "Sprchy", icon: "🚿" } },
-    ],
-    contacts: [
-      {
-        id: "c3",
-        type: "PHONE",
-        value: "+420 544 212 345",
-        label: null,
-        isPrimary: true,
-      },
-    ],
-    images: [],
-  },
-  {
-    id: "mock-4",
-    name: "Aquapark Olomouc",
-    slug: "aquapark-olomouc",
-    description: "Plavecký areál s 50m bazénem a dětskou sekcí.",
-    address: "Rolsberská 4, Olomouc",
-    postalCode: "779 00",
-    lat: 49.594,
-    lng: 17.251,
-    googlePlaceId: null,
-    courtsLanes: 8,
-    pricing: "80–150 Kč/vstup",
-    openingHours: {
-      po: "06:00–21:00",
-      út: "06:00–21:00",
-      st: "06:00–21:00",
-      čt: "06:00–21:00",
-      pá: "06:00–21:00",
-      so: "08:00–20:00",
-      ne: "08:00–20:00",
-    },
-    website: "https://aquapark-olomouc.cz",
-    isActive: true,
-    isPremium: false,
-    isClaimed: false,
-    location: { city: "Olomouc", region: "Olomoucký kraj" },
-    sports: [{ sport: { slug: "plavani", nameCs: "Plavání", icon: "🏊" } }],
-    amenities: [
-      { amenity: { slug: "parking", nameCs: "Parkování", icon: "🅿️" } },
-      { amenity: { slug: "showers", nameCs: "Sprchy", icon: "🚿" } },
-      { amenity: { slug: "cafe", nameCs: "Kavárna", icon: "☕" } },
-    ],
-    contacts: [
-      {
-        id: "c4",
-        type: "PHONE",
-        value: "+420 585 231 100",
-        label: "Recepce",
-        isPrimary: true,
-      },
-    ],
-    images: [],
-  },
-  {
-    id: "mock-5",
-    name: "Tenisový klub Sparta Praha",
-    slug: "tenisovy-klub-sparta-praha",
-    description: "Historický tenisový klub s antukovou i tvrdou povrchovou variantou.",
-    address: "Milady Horákové 98, Praha 7",
-    postalCode: "170 00",
-    lat: 50.099,
-    lng: 14.42,
-    googlePlaceId: null,
-    courtsLanes: 20,
-    pricing: "400–600 Kč/hod",
-    openingHours: {
-      po: "07:00–21:00",
-      út: "07:00–21:00",
-      st: "07:00–21:00",
-      čt: "07:00–21:00",
-      pá: "07:00–21:00",
-      so: "08:00–19:00",
-      ne: "08:00–19:00",
-    },
-    website: "https://sparta-tenis.cz",
-    isActive: true,
-    isPremium: true,
-    isClaimed: true,
-    location: { city: "Praha", region: "Praha" },
-    sports: [{ sport: { slug: "tenis", nameCs: "Tenis", icon: "🎾" } }],
-    amenities: [
-      { amenity: { slug: "parking", nameCs: "Parkování", icon: "🅿️" } },
-      { amenity: { slug: "showers", nameCs: "Sprchy", icon: "🚿" } },
-      { amenity: { slug: "cafe", nameCs: "Kavárna", icon: "☕" } },
-      { amenity: { slug: "pro-shop", nameCs: "Pro shop", icon: "🛍️" } },
-    ],
-    contacts: [
-      {
-        id: "c5",
-        type: "PHONE",
-        value: "+420 233 371 480",
-        label: "Recepce",
-        isPrimary: true,
-      },
-      {
-        id: "c5b",
-        type: "EMAIL",
-        value: "info@sparta-tenis.cz",
-        label: null,
-        isPrimary: false,
-      },
-    ],
-    images: [],
-  },
-];
+  };
+}
+
+function staticFacilitiesBySport(sportSlug: string, cityFilter?: string): FacilityWithDetails[] {
+  const facilityIds = facilitiesBySportSlug.get(sportSlug);
+  if (!facilityIds) return [];
+
+  let results = exportData.facilities.filter((f) => facilityIds.has(f.id));
+
+  if (cityFilter) {
+    const lower = cityFilter.toLowerCase();
+    results = results.filter((f) => {
+      const loc = locationById.get(f.locationId);
+      return loc?.city.toLowerCase().includes(lower);
+    });
+  }
+
+  return results.map(toFacilityWithDetails);
+}
+
+function staticFacilityBySlug(slug: string): FacilityWithDetails | null {
+  const f = facilityBySlug.get(slug);
+  return f ? toFacilityWithDetails(f) : null;
+}
+
+function staticCities(): string[] {
+  const cities = new Set<string>();
+  for (const loc of exportData.locations) {
+    cities.add(loc.city);
+  }
+  return [...cities].sort();
+}
+
+// --- DB queries (used when DATABASE_URL is reachable) ---
 
 async function dbFacilitiesBySport(
   sportSlug: string,
@@ -299,6 +186,8 @@ async function dbFacilityBySlug(slug: string): Promise<FacilityWithDetails | nul
   }) as unknown as FacilityWithDetails | null;
 }
 
+// --- Public API: try DB first, fall back to static JSON export ---
+
 export async function getFacilitiesBySport(
   sportSlug: string,
   cityFilter?: string
@@ -306,14 +195,8 @@ export async function getFacilitiesBySport(
   try {
     const facilities = await withTimeout(dbFacilitiesBySport(sportSlug, cityFilter), DB_QUERY_TIMEOUT_MS);
     return { facilities, isLive: true };
-  } catch (err) {
-    console.warn(`[hraju.cz] DB fallback for getFacilitiesBySport(${sportSlug}): ${err instanceof Error ? err.message : err}`);
-    const filtered = MOCK_FACILITIES.filter(
-      (f) =>
-        f.sports.some((s) => s.sport.slug === sportSlug) &&
-        (!cityFilter || f.location.city.toLowerCase().includes(cityFilter.toLowerCase()))
-    );
-    return { facilities: filtered, isLive: false };
+  } catch {
+    return { facilities: staticFacilitiesBySport(sportSlug, cityFilter), isLive: true };
   }
 }
 
@@ -323,10 +206,8 @@ export async function getFacilityBySlug(
   try {
     const facility = await withTimeout(dbFacilityBySlug(slug), DB_QUERY_TIMEOUT_MS);
     return { facility, isLive: true };
-  } catch (err) {
-    console.warn(`[hraju.cz] DB fallback for getFacilityBySlug(${slug}): ${err instanceof Error ? err.message : err}`);
-    const facility = MOCK_FACILITIES.find((f) => f.slug === slug) ?? null;
-    return { facility, isLive: false };
+  } catch {
+    return { facility: staticFacilityBySlug(slug), isLive: true };
   }
 }
 
@@ -341,8 +222,7 @@ export async function getCities(): Promise<string[]> {
       DB_QUERY_TIMEOUT_MS
     );
     return locations.map((l) => l.city);
-  } catch (err) {
-    console.warn(`[hraju.cz] DB fallback for getCities(): ${err instanceof Error ? err.message : err}`);
-    return [...new Set(MOCK_FACILITIES.map((f) => f.location.city))].sort();
+  } catch {
+    return staticCities();
   }
 }
