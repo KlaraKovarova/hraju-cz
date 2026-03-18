@@ -39,11 +39,6 @@ export function Footer() {
           <p>
             Provozovatel: Silex, spol. s r.o. | IČ: 25058738
           </p>
-          <p className="mt-1">
-            Za Poříčskou bránou 365/21, 186 00 Praha 8 |{" "}
-            <a href="mailto:klara@hraju.cz" className="hover:text-zinc-700">klara@hraju.cz</a> |{" "}
-            <a href="tel:+420608651393" className="hover:text-zinc-700">+420 608 651 393</a>
-          </p>
         </div>
 
         <div className="mt-6 flex flex-col items-center gap-3 border-t border-zinc-200 pt-6 text-xs text-zinc-400">
