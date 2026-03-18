@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
+import { prisma } from "@/lib/prisma";
 
 export async function POST(request: NextRequest) {
   try {
@@ -21,13 +23,53 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Log contact form submission (MVP - email sending can be added later with SMTP)
-    console.log("=== Contact form submission ===");
-    console.log(`Name: ${name}`);
-    console.log(`Email: ${email}`);
-    console.log(`Phone: ${phone || "N/A"}`);
-    console.log(`Message: ${message}`);
-    console.log("==============================");
+    // Save to database
+    try {
+      await prisma.contactMessage.create({
+        data: {
+          name: name.trim(),
+          email: email.trim(),
+          phone: phone?.trim() || null,
+          message: message.trim(),
+        },
+      });
+    } catch (dbError) {
+      console.error("Failed to save contact message to DB:", dbError);
+    }
+
+    // Send email notification if SMTP is configured
+    if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS) {
+      try {
+        const transporter = nodemailer.createTransport({
+          host: process.env.SMTP_HOST,
+          port: Number(process.env.SMTP_PORT) || 587,
+          secure: (process.env.SMTP_PORT || "587") === "465",
+          auth: {
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PASS,
+          },
+        });
+
+        const contactEmail = process.env.CONTACT_EMAIL || "klara@hraju.cz";
+
+        await transporter.sendMail({
+          from: `"hraju.cz kontakt" <${process.env.SMTP_USER}>`,
+          to: contactEmail,
+          replyTo: email.trim(),
+          subject: `Nová zpráva z hraju.cz od ${name.trim()}`,
+          text: [
+            `Jméno: ${name.trim()}`,
+            `E-mail: ${email.trim()}`,
+            `Telefon: ${phone?.trim() || "neuvedeno"}`,
+            ``,
+            `Zpráva:`,
+            message.trim(),
+          ].join("\n"),
+        });
+      } catch (mailError) {
+        console.error("Failed to send contact email:", mailError);
+      }
+    }
 
     return NextResponse.json({ success: true });
   } catch {

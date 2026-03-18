@@ -178,3 +178,14 @@ model OwnerToken {
   @@index([facilityId])
   @@index([token])
 }
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  message   String   @db.Text
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}
