@@ -56,10 +56,14 @@ model Facility {
   website       String?
   isActive      Boolean           @default(true)
   isClaimed     Boolean           @default(false)
-  isPremium     Boolean           @default(false)
-  bookingUrl    String?
-  createdAt     DateTime          @default(now())
-  updatedAt     DateTime          @updatedAt
+  isPremium              Boolean           @default(false)
+  bookingUrl             String?
+  stripeCustomerId       String?
+  stripeSubscriptionId   String?
+  subscriptionStatus     String?           // active, canceled, past_due, etc.
+  premiumExpiresAt       DateTime?
+  createdAt              DateTime          @default(now())
+  updatedAt              DateTime          @updatedAt
   sports        FacilitySport[]
   amenities     FacilityAmenity[]
   contacts      Contact[]

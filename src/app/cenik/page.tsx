@@ -110,10 +110,10 @@ export default function CenikPage() {
               ))}
             </ul>
             <Link
-              href="/kontakt"
+              href="/moje-sportoviste"
               className="mt-8 flex items-center justify-center rounded-xl bg-emerald-600 px-6 py-3 text-sm font-bold text-white transition hover:bg-emerald-700"
             >
-              Kontaktujte nás
+              Aktivovat Premium
             </Link>
           </div>
         </div>
