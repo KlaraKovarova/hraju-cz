@@ -15,6 +15,7 @@ import {
 import { getSportBySlug } from "@/lib/sports";
 import { getFacilityBySlug } from "@/lib/data";
 import { getRegionByName, cityToSlug } from "@/lib/regions";
+import { getSportFacilityType } from "@/lib/seo";
 import EditSuggestionForm from "@/components/EditSuggestionForm";
 import type { Metadata } from "next";
 
@@ -30,23 +31,29 @@ export async function generateMetadata({
   const { facility } = await getFacilityBySlug(slug);
   if (!facility || !sport) return {};
 
+  const title = `${facility.name} — ${getSportFacilityType(sport.slug)}, ${facility.location.city}`;
   const description = facility.description
     ? facility.description.slice(0, 155)
-    : `${facility.name} nabízí ${sport.nameCs.toLowerCase()} v ${facility.location.city}. Kontakt, adresa, provozní doba na hraju.cz.`;
-
-  const title = `${facility.name} — ${sport.nameCs} — hraju.cz`;
+    : `${facility.name} — ${getSportFacilityType(sport.slug)} v ${facility.location.city}. Adresa, kontakt, otevírací doba a recenze na hraju.cz.`;
   const url = `https://hraju.cz/sport/${sportSlug}/${slug}`;
 
   return {
     title,
     description,
     openGraph: {
-      title,
+      title: `${facility.name} — ${sport.nameCs}, ${facility.location.city}`,
       description,
       url,
       type: "website",
       siteName: "hraju.cz",
+      locale: "cs_CZ",
     },
+    twitter: {
+      card: "summary",
+      title: `${facility.name} — ${sport.nameCs}`,
+      description,
+    },
+    alternates: { canonical: url },
   };
 }
 

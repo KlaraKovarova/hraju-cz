@@ -16,9 +16,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "hraju.cz — Sportoviště v České republice",
+  metadataBase: new URL("https://hraju.cz"),
+  title: {
+    default: "Sportoviště v České republice | hraju.cz",
+    template: "%s | hraju.cz",
+  },
   description:
-    "Najdi sportoviště poblíž. Tenis, squash, badminton, volejbal, plavání.",
+    "Najdi sportoviště poblíž sebe. Tenisové kurty, squashové haly, bazény, fitness centra, badminton a další — adresy, kontakty a hodnocení po celé ČR.",
+  openGraph: {
+    siteName: "hraju.cz",
+    locale: "cs_CZ",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://hraju.cz",
+  },
 };
 
 export default function RootLayout({

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MapPin, ChevronRight } from "lucide-react";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
 import { getRegionsBySport, getTopFacilitiesBySport } from "@/lib/data";
+import { getSportTitleSuffix, getSportFacilityTypePluralGenitive, getSportFacilityType } from "@/lib/seo";
 import { FacilityCard } from "@/components/FacilityCard";
 import type { Metadata } from "next";
 
@@ -20,9 +21,15 @@ export async function generateMetadata({
   const regions = await getRegionsBySport(sport.slug);
   const totalFacilities = regions.reduce((sum, r) => sum + r.facilityCount, 0);
 
+  const title = `${sport.nameCs} — ${getSportTitleSuffix(sport.slug)}`;
+  const description = `${totalFacilities} ${getSportFacilityTypePluralGenitive(sport.slug)} ve všech 14 krajích. Najdi ${getSportFacilityType(sport.slug)} ve svém městě — adresy, kontakty, otevírací doby.`;
+  const url = `https://hraju.cz/sport/${sportSlug}`;
+
   return {
-    title: `${sport.nameCs} sportoviště v ČR — hraju.cz`,
-    description: `${totalFacilities} ${sport.nameCs.toLowerCase()} sportovišť ve všech krajích ČR. Vyberte kraj a najděte sportoviště ve svém městě.`,
+    title,
+    description,
+    openGraph: { title, description, url, type: "website" },
+    alternates: { canonical: url },
   };
 }
 

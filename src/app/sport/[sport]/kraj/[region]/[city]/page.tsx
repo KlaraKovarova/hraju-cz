@@ -4,6 +4,7 @@ import { MapPin, ChevronRight } from "lucide-react";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
 import { getRegionBySlug } from "@/lib/regions";
 import { getFacilitiesByRegionCityAndSport } from "@/lib/data";
+import { getSportFacilityTypePlural, getSportFacilityTypePluralGenitive } from "@/lib/seo";
 import { FacilityCard } from "@/components/FacilityCard";
 import type { Metadata } from "next";
 
@@ -26,9 +27,15 @@ export async function generateMetadata({
   );
   if (!cityName) return {};
 
+  const title = `${sport.nameCs} ${cityName} — ${getSportFacilityTypePlural(sport.slug)}`;
+  const description = `${facilities.length} ${getSportFacilityTypePluralGenitive(sport.slug)} ve městě ${cityName}. Adresy, telefonní čísla, otevírací doby a další informace na jednom místě.`;
+  const url = `https://hraju.cz/sport/${sportSlug}/kraj/${regionSlug}/${citySlug}`;
+
   return {
-    title: `${sport.nameCs} — ${cityName} — hraju.cz`,
-    description: `${facilities.length} ${sport.nameCs.toLowerCase()} sportovišť ve městě ${cityName}, ${region.name}. Adresy, kontakty, ceny.`,
+    title,
+    description,
+    openGraph: { title, description, url, type: "website" },
+    alternates: { canonical: url },
   };
 }
 
