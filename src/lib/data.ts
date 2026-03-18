@@ -1,5 +1,16 @@
 import { prisma } from "./prisma";
 
+const DB_QUERY_TIMEOUT_MS = 3000;
+
+function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
+  return Promise.race([
+    promise,
+    new Promise<never>((_, reject) =>
+      setTimeout(() => reject(new Error(`DB query timed out after ${ms}ms`)), ms)
+    ),
+  ]);
+}
+
 export type FacilityWithDetails = {
   id: string;
   name: string;
@@ -293,9 +304,10 @@ export async function getFacilitiesBySport(
   cityFilter?: string
 ): Promise<{ facilities: FacilityWithDetails[]; isLive: boolean }> {
   try {
-    const facilities = await dbFacilitiesBySport(sportSlug, cityFilter);
+    const facilities = await withTimeout(dbFacilitiesBySport(sportSlug, cityFilter), DB_QUERY_TIMEOUT_MS);
     return { facilities, isLive: true };
-  } catch {
+  } catch (err) {
+    console.warn(`[hraju.cz] DB fallback for getFacilitiesBySport(${sportSlug}): ${err instanceof Error ? err.message : err}`);
     const filtered = MOCK_FACILITIES.filter(
       (f) =>
         f.sports.some((s) => s.sport.slug === sportSlug) &&
@@ -309,9 +321,10 @@ export async function getFacilityBySlug(
   slug: string
 ): Promise<{ facility: FacilityWithDetails | null; isLive: boolean }> {
   try {
-    const facility = await dbFacilityBySlug(slug);
+    const facility = await withTimeout(dbFacilityBySlug(slug), DB_QUERY_TIMEOUT_MS);
     return { facility, isLive: true };
-  } catch {
+  } catch (err) {
+    console.warn(`[hraju.cz] DB fallback for getFacilityBySlug(${slug}): ${err instanceof Error ? err.message : err}`);
     const facility = MOCK_FACILITIES.find((f) => f.slug === slug) ?? null;
     return { facility, isLive: false };
   }
@@ -319,13 +332,17 @@ export async function getFacilityBySlug(
 
 export async function getCities(): Promise<string[]> {
   try {
-    const locations = await prisma.location.findMany({
-      select: { city: true },
-      distinct: ["city"],
-      orderBy: { city: "asc" },
-    });
+    const locations = await withTimeout(
+      prisma.location.findMany({
+        select: { city: true },
+        distinct: ["city"],
+        orderBy: { city: "asc" },
+      }),
+      DB_QUERY_TIMEOUT_MS
+    );
     return locations.map((l) => l.city);
-  } catch {
+  } catch (err) {
+    console.warn(`[hraju.cz] DB fallback for getCities(): ${err instanceof Error ? err.message : err}`);
     return [...new Set(MOCK_FACILITIES.map((f) => f.location.city))].sort();
   }
 }

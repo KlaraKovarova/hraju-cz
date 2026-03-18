@@ -24,7 +24,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let facilities: { slug: string; sportSlugs: string[]; city: string; updatedAt?: Date }[] = [];
 
   try {
-    const dbFacilities = await prisma.facility.findMany({
+    const dbQuery = prisma.facility.findMany({
       where: { isActive: true },
       select: {
         slug: true,
@@ -33,13 +33,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         sports: { select: { sport: { select: { slug: true } } } },
       },
     });
+    const dbFacilities = await Promise.race([
+      dbQuery,
+      new Promise<never>((_, reject) =>
+        setTimeout(() => reject(new Error("DB query timed out")), 3000)
+      ),
+    ]);
     facilities = dbFacilities.map((f) => ({
       slug: f.slug,
       sportSlugs: f.sports.map((s) => s.sport.slug),
       city: f.location.city,
       updatedAt: f.updatedAt,
     }));
-  } catch {
+  } catch (err) {
+    console.warn(`[hraju.cz] DB fallback for sitemap: ${err instanceof Error ? err.message : err}`);
     facilities = MOCK_FACILITIES.map((f) => ({
       slug: f.slug,
       sportSlugs: f.sports.map((s) => s.sport.slug),

@@ -27,7 +27,11 @@ function createPrismaClient(): PrismaClient {
     });
   }
   const dbConfig = parseDbUrl(process.env.DATABASE_URL);
-  const adapter = new PrismaMariaDb(dbConfig);
+  const adapter = new PrismaMariaDb({
+    ...dbConfig,
+    connectTimeout: 5000,
+    socketTimeout: 5000,
+  });
   return new PrismaClient({
     adapter,
     log:
