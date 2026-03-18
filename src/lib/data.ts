@@ -272,6 +272,27 @@ function staticFacilitiesByRegionCityAndSport(
   };
 }
 
+function staticFacilitiesByRegionAndSport(
+  regionSlug: string,
+  sportSlug: string
+): FacilityWithDetails[] {
+  const region = getRegionBySlug(regionSlug);
+  if (!region) return [];
+
+  const facilityIds = facilitiesBySportSlug.get(sportSlug);
+  if (!facilityIds) return [];
+
+  const locIds = locationIdsByRegion.get(region.name);
+  if (!locIds) return [];
+
+  const results = exportData.facilities.filter((f) => {
+    if (!facilityIds.has(f.id)) return false;
+    return locIds.has(f.locationId);
+  });
+
+  return results.map(toFacilityWithDetails);
+}
+
 // --- DB queries (used when DATABASE_URL is reachable) ---
 
 async function dbFacilitiesBySport(
@@ -355,6 +376,31 @@ export async function getFacilitiesByRegionCityAndSport(
 ): Promise<{ facilities: FacilityWithDetails[]; cityName: string | null; isLive: boolean }> {
   const result = staticFacilitiesByRegionCityAndSport(regionSlug, citySlug, sportSlug);
   return { ...result, isLive: true };
+}
+
+export async function getTopFacilitiesBySport(
+  sportSlug: string,
+  limit: number = 10
+): Promise<FacilityWithDetails[]> {
+  const facilities = staticFacilitiesBySport(sportSlug);
+  facilities.sort((a, b) => {
+    if (a.isPremium !== b.isPremium) return b.isPremium ? 1 : -1;
+    return a.name.localeCompare(b.name, "cs");
+  });
+  return facilities.slice(0, limit);
+}
+
+export async function getTopFacilitiesByRegionAndSport(
+  regionSlug: string,
+  sportSlug: string,
+  limit: number = 10
+): Promise<FacilityWithDetails[]> {
+  const facilities = staticFacilitiesByRegionAndSport(regionSlug, sportSlug);
+  facilities.sort((a, b) => {
+    if (a.isPremium !== b.isPremium) return b.isPremium ? 1 : -1;
+    return a.name.localeCompare(b.name, "cs");
+  });
+  return facilities.slice(0, limit);
 }
 
 export async function getCities(): Promise<string[]> {

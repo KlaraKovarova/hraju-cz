@@ -2,7 +2,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { MapPin, ChevronRight } from "lucide-react";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
-import { getRegionsBySport } from "@/lib/data";
+import { getRegionsBySport, getTopFacilitiesBySport } from "@/lib/data";
+import { FacilityCard } from "@/components/FacilityCard";
 import type { Metadata } from "next";
 
 interface SportPageProps {
@@ -34,6 +35,7 @@ export default async function SportPage({ params }: SportPageProps) {
   }
 
   const regions = await getRegionsBySport(sport.slug);
+  const topFacilities = await getTopFacilitiesBySport(sport.slug, 10);
   const totalFacilities = regions.reduce((sum, r) => sum + r.facilityCount, 0);
 
   return (
@@ -118,6 +120,24 @@ export default async function SportPage({ params }: SportPageProps) {
           ))}
         </div>
       </section>
+
+      {/* Top Facilities */}
+      {topFacilities.length > 0 && (
+        <section className="mx-auto max-w-6xl px-6 py-8 border-t border-zinc-100">
+          <h2 className="mb-6 text-xl font-bold text-zinc-900">
+            {sport.nameCs} sportoviště
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {topFacilities.map((facility) => (
+              <FacilityCard
+                key={facility.id}
+                facility={facility}
+                sportSlug={sportSlug}
+              />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Other Sports */}
       <section className="border-t border-zinc-100 bg-white">
