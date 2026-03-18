@@ -131,12 +131,6 @@ export const SPORTS = [
 
 export type SportSlug = (typeof SPORTS)[number]["slug"];
 
-export const SPORT_SUBDOMAINS = SPORTS.map((s) => s.subdomain);
-
-export function getSportBySubdomain(subdomain: string) {
-  return SPORTS.find((s) => s.subdomain === subdomain);
-}
-
 export function getSportBySlug(slug: string) {
   return SPORTS.find((s) => s.slug === slug);
 }

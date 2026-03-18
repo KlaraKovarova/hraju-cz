@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Search, SlidersHorizontal, MapPin } from "lucide-react";
-import { getSportBySubdomain, SPORTS } from "@/lib/sports";
+import { getSportBySlug, SPORTS } from "@/lib/sports";
 import { getFacilitiesBySport } from "@/lib/data";
 import { FacilityCard } from "@/components/FacilityCard";
 import { SearchBar } from "@/components/SearchBar";
@@ -18,7 +18,7 @@ export async function generateMetadata({
 }: SportPageProps): Promise<Metadata> {
   const { sport: sportSlug } = await params;
   const { city } = await searchParams;
-  const sport = getSportBySubdomain(sportSlug);
+  const sport = getSportBySlug(sportSlug);
   if (!sport) return {};
 
   const { facilities } = await getFacilitiesBySport(sport.slug, city);
@@ -43,7 +43,7 @@ export default async function SportPage({
 }: SportPageProps) {
   const { sport: sportSlug } = await params;
   const { city } = await searchParams;
-  const sport = getSportBySubdomain(sportSlug);
+  const sport = getSportBySlug(sportSlug);
 
   if (!sport) {
     notFound();

@@ -12,7 +12,7 @@ import {
   Navigation,
   CheckCircle2,
 } from "lucide-react";
-import { getSportBySubdomain } from "@/lib/sports";
+import { getSportBySlug } from "@/lib/sports";
 import { getFacilityBySlug } from "@/lib/data";
 import type { Metadata } from "next";
 
@@ -24,7 +24,7 @@ export async function generateMetadata({
   params,
 }: FacilityPageProps): Promise<Metadata> {
   const { sport: sportSlug, slug } = await params;
-  const sport = getSportBySubdomain(sportSlug);
+  const sport = getSportBySlug(sportSlug);
   const { facility } = await getFacilityBySlug(slug);
   if (!facility || !sport) return {};
 
@@ -68,7 +68,7 @@ const DAY_LABELS: Record<string, string> = {
 
 export default async function FacilityPage({ params }: FacilityPageProps) {
   const { sport: sportSlug, slug } = await params;
-  const sport = getSportBySubdomain(sportSlug);
+  const sport = getSportBySlug(sportSlug);
   const { facility, isLive } = await getFacilityBySlug(slug);
 
   if (!facility || !sport) {
