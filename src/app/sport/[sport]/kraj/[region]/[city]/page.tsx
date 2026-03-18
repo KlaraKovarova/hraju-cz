@@ -6,6 +6,7 @@ import { getRegionBySlug } from "@/lib/regions";
 import { getFacilitiesByRegionCityAndSport } from "@/lib/data";
 import { getSportFacilityTypePlural, getSportFacilityTypePluralGenitive } from "@/lib/seo";
 import { FacilityCard } from "@/components/FacilityCard";
+import { FacilityMap } from "@/components/FacilityMap";
 import type { Metadata } from "next";
 
 interface CityPageProps {
@@ -110,6 +111,24 @@ export default async function CityPage({ params }: CityPageProps) {
           </div>
         </div>
       </section>
+
+      {/* Map */}
+      {(() => {
+        const mapMarkers = facilities
+          .filter((f) => f.lat && f.lng)
+          .map((f) => ({
+            lat: f.lat!,
+            lng: f.lng!,
+            name: f.name,
+            address: f.address,
+            url: `/sport/${sportSlug}/${f.slug}`,
+          }));
+        return mapMarkers.length > 0 ? (
+          <section className="mx-auto max-w-6xl px-6 pt-8">
+            <FacilityMap markers={mapMarkers} />
+          </section>
+        ) : null;
+      })()}
 
       {/* Results */}
       <section className="mx-auto max-w-6xl px-6 py-8">
