@@ -33,6 +33,7 @@ export async function POST(request: NextRequest) {
       name, slug, description, address, postalCode, city, region,
       lat, lng, courtsLanes, pricing, openingHours, website,
       sportSlugs = [],
+      amenityIds = [],
     } = body;
 
     if (!name || !slug || !address || !city) {
@@ -67,8 +68,13 @@ export async function POST(request: NextRequest) {
             })
           ),
         },
+        ...((amenityIds as string[]).length > 0 && {
+          amenities: {
+            create: (amenityIds as string[]).map((amenityId: string) => ({ amenityId })),
+          },
+        }),
       },
-      include: { location: true, sports: { include: { sport: true } } },
+      include: { location: true, sports: { include: { sport: true } }, amenities: { include: { amenity: true } } },
     });
 
     return NextResponse.json(facility, { status: 201 });

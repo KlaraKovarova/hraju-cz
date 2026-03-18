@@ -4,6 +4,58 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { SPORTS } from "@/lib/sports";
 
+const DAYS = [
+  { key: "po", label: "Pondělí" },
+  { key: "út", label: "Úterý" },
+  { key: "st", label: "Středa" },
+  { key: "čt", label: "Čtvrtek" },
+  { key: "pá", label: "Pátek" },
+  { key: "so", label: "Sobota" },
+  { key: "ne", label: "Neděle" },
+] as const;
+
+interface DayHours {
+  closed: boolean;
+  open: string;
+  close: string;
+}
+
+type OpeningHoursState = Record<string, DayHours>;
+
+function parseOpeningHours(json: Record<string, string> | null): OpeningHoursState {
+  const state: OpeningHoursState = {};
+  for (const { key } of DAYS) {
+    const val = json?.[key];
+    if (!val || val.toLowerCase() === "zavřeno") {
+      state[key] = { closed: true, open: "09:00", close: "22:00" };
+    } else {
+      const parts = val.split("–").map((s) => s.trim());
+      state[key] = {
+        closed: false,
+        open: parts[0] || "09:00",
+        close: parts[1] || "22:00",
+      };
+    }
+  }
+  return state;
+}
+
+function serializeOpeningHours(state: OpeningHoursState): Record<string, string> {
+  const result: Record<string, string> = {};
+  for (const { key } of DAYS) {
+    const day = state[key];
+    result[key] = day.closed ? "Zavřeno" : `${day.open}–${day.close}`;
+  }
+  return result;
+}
+
+export interface AmenityOption {
+  id: string;
+  slug: string;
+  nameCs: string;
+  icon: string | null;
+}
+
 interface FacilityFormData {
   id?: string;
   name: string;
@@ -19,10 +71,13 @@ interface FacilityFormData {
   isActive: boolean;
   isPremium: boolean;
   sportSlugs: string[];
+  openingHours?: Record<string, string> | null;
+  amenityIds?: string[];
 }
 
 interface FacilityFormProps {
   initialData?: FacilityFormData;
+  allAmenities?: AmenityOption[];
 }
 
 const DEFAULT_DATA: FacilityFormData = {
@@ -38,11 +93,19 @@ const DEFAULT_DATA: FacilityFormData = {
   isActive: true,
   isPremium: false,
   sportSlugs: [],
+  openingHours: null,
+  amenityIds: [],
 };
 
-export function FacilityForm({ initialData }: FacilityFormProps) {
+export function FacilityForm({ initialData, allAmenities = [] }: FacilityFormProps) {
   const router = useRouter();
   const [form, setForm] = useState<FacilityFormData>(initialData ?? DEFAULT_DATA);
+  const [hours, setHours] = useState<OpeningHoursState>(
+    parseOpeningHours((initialData?.openingHours as Record<string, string> | null) ?? null)
+  );
+  const [selectedAmenities, setSelectedAmenities] = useState<Set<string>>(
+    new Set(initialData?.amenityIds ?? [])
+  );
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -93,6 +156,8 @@ export function FacilityForm({ initialData }: FacilityFormProps) {
         body: JSON.stringify({
           ...form,
           courtsLanes: form.courtsLanes ? Number(form.courtsLanes) : null,
+          openingHours: serializeOpeningHours(hours),
+          amenityIds: [...selectedAmenities],
         }),
       });
 
@@ -314,6 +379,113 @@ export function FacilityForm({ initialData }: FacilityFormProps) {
           </label>
         </div>
       </div>
+
+      {/* Opening Hours */}
+      <div className="rounded-2xl border border-zinc-200 bg-white p-6 space-y-4">
+        <div className="flex items-center justify-between">
+          <h2 className="font-semibold text-zinc-900">Otevírací doba</h2>
+          <button
+            type="button"
+            onClick={() => {
+              const poDay = hours["po"];
+              if (poDay.closed) return;
+              setHours((prev) => {
+                const next = { ...prev };
+                for (const { key } of DAYS) {
+                  next[key] = { ...poDay };
+                }
+                return next;
+              });
+            }}
+            className="rounded-xl border border-zinc-200 px-3 py-1.5 text-xs text-zinc-500 hover:bg-zinc-50"
+          >
+            Kopírovat Po na všechny dny
+          </button>
+        </div>
+
+        <div className="space-y-2">
+          {DAYS.map(({ key, label }) => {
+            const day = hours[key];
+            return (
+              <div key={key} className="flex items-center gap-3">
+                <span className="w-20 text-sm font-medium text-zinc-700">{label}</span>
+                <label className="flex items-center gap-1.5 text-sm text-zinc-600">
+                  <input
+                    type="checkbox"
+                    checked={day.closed}
+                    onChange={(e) =>
+                      setHours((prev) => ({
+                        ...prev,
+                        [key]: { ...prev[key], closed: e.target.checked },
+                      }))
+                    }
+                    className="rounded"
+                  />
+                  Zavřeno
+                </label>
+                {!day.closed && (
+                  <>
+                    <input
+                      type="time"
+                      value={day.open}
+                      onChange={(e) =>
+                        setHours((prev) => ({
+                          ...prev,
+                          [key]: { ...prev[key], open: e.target.value },
+                        }))
+                      }
+                      className="rounded-xl border border-zinc-200 px-2 py-1.5 text-sm focus:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-100"
+                    />
+                    <span className="text-zinc-400">–</span>
+                    <input
+                      type="time"
+                      value={day.close}
+                      onChange={(e) =>
+                        setHours((prev) => ({
+                          ...prev,
+                          [key]: { ...prev[key], close: e.target.value },
+                        }))
+                      }
+                      className="rounded-xl border border-zinc-200 px-2 py-1.5 text-sm focus:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-100"
+                    />
+                  </>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Amenities */}
+      {allAmenities.length > 0 && (
+        <div className="rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-3 font-semibold text-zinc-900">Vybavení</h2>
+          <div className="flex flex-wrap gap-2">
+            {allAmenities.map((amenity) => (
+              <button
+                key={amenity.id}
+                type="button"
+                onClick={() =>
+                  setSelectedAmenities((prev) => {
+                    const next = new Set(prev);
+                    if (next.has(amenity.id)) next.delete(amenity.id);
+                    else next.add(amenity.id);
+                    return next;
+                  })
+                }
+                className={`rounded-xl border px-3 py-1.5 text-sm transition ${
+                  selectedAmenities.has(amenity.id)
+                    ? "border-indigo-300 bg-indigo-50 text-indigo-700"
+                    : "border-zinc-200 text-zinc-600 hover:bg-zinc-50"
+                }`}
+              >
+                {amenity.icon && <span className="mr-1">{amenity.icon}</span>}
+                {amenity.nameCs}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Actions */}
       <div className="flex items-center gap-3">

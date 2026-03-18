@@ -32,7 +32,7 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
     const {
       name, description, address, postalCode, city, region,
       lat, lng, courtsLanes, pricing, openingHours, website,
-      isActive, isClaimed, isPremium,
+      isActive, isClaimed, isPremium, amenityIds,
     } = body;
 
     let locationId: string | undefined;
@@ -63,8 +63,35 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
         ...(isClaimed !== undefined && { isClaimed }),
         ...(isPremium !== undefined && { isPremium }),
       },
-      include: { location: true, sports: { include: { sport: true } } },
+      include: { location: true, sports: { include: { sport: true } }, amenities: { include: { amenity: true } } },
     });
+
+    // Sync amenities if provided
+    if (Array.isArray(amenityIds)) {
+      const current = await prisma.facilityAmenity.findMany({
+        where: { facilityId: id },
+        select: { amenityId: true },
+      });
+      const currentIds = new Set(current.map((a) => a.amenityId));
+      const desiredIds = new Set(amenityIds as string[]);
+
+      const toAdd = [...desiredIds].filter((aid) => !currentIds.has(aid));
+      const toRemove = [...currentIds].filter((aid) => !desiredIds.has(aid));
+
+      await Promise.all([
+        ...toAdd.map((amenityId) =>
+          prisma.facilityAmenity.create({ data: { facilityId: id, amenityId } })
+        ),
+        ...(toRemove.length > 0
+          ? [
+              prisma.facilityAmenity.deleteMany({
+                where: { facilityId: id, amenityId: { in: toRemove } },
+              }),
+            ]
+          : []),
+      ]);
+    }
+
     return NextResponse.json(facility);
   } catch {
     return NextResponse.json({ error: "Failed to update" }, { status: 500 });

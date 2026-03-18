@@ -11,14 +11,22 @@ export default async function EditFacilityPage({ params }: EditFacilityPageProps
   const { id } = await params;
 
   let facility = null;
+  let allAmenities: { id: string; slug: string; nameCs: string; icon: string | null }[] = [];
   try {
-    facility = await prisma.facility.findUnique({
-      where: { id },
-      include: {
-        location: true,
-        sports: { include: { sport: { select: { slug: true, nameCs: true } } } },
-      },
-    });
+    [facility, allAmenities] = await Promise.all([
+      prisma.facility.findUnique({
+        where: { id },
+        include: {
+          location: true,
+          sports: { include: { sport: { select: { slug: true, nameCs: true } } } },
+          amenities: { select: { amenityId: true } },
+        },
+      }),
+      prisma.amenity.findMany({
+        select: { id: true, slug: true, nameCs: true, icon: true },
+        orderBy: { nameCs: "asc" },
+      }),
+    ]);
   } catch {
     // DB unavailable
   }
@@ -45,7 +53,10 @@ export default async function EditFacilityPage({ params }: EditFacilityPageProps
             isActive: facility.isActive,
             isPremium: facility.isPremium,
             sportSlugs: facility.sports.map((s) => s.sport.slug),
+            openingHours: facility.openingHours as Record<string, string> | null,
+            amenityIds: facility.amenities.map((a) => a.amenityId),
           }}
+          allAmenities={allAmenities}
         />
       </div>
       <OwnerTokenGenerator facilityId={facility.id} facilityName={facility.name} />
