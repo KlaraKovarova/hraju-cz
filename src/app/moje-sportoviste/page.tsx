@@ -13,6 +13,7 @@ import {
   Star,
   CreditCard,
   ExternalLink,
+  Mail,
 } from "lucide-react";
 
 interface FacilityData {
@@ -274,14 +275,15 @@ function MojeSportovisteContent() {
             </div>
           ) : (
             <p className="mt-3 text-sm text-zinc-500">
-              Pro úpravu vašeho sportoviště potřebujete přístupový odkaz. Pokud
-              ho nemáte, kontaktujte nás na{" "}
+              Pro úpravu vašeho sportoviště potřebujete přístupový odkaz.
+              Zadejte svůj e-mail níže, nebo nás kontaktujte na{" "}
               <a href="mailto:klara@hraju.cz" className="text-emerald-600 hover:underline">
                 klara@hraju.cz
               </a>
               .
             </p>
           )}
+          <MagicLinkRequestForm />
           <Link
             href="/"
             className="mt-6 inline-block text-sm text-zinc-500 hover:text-zinc-700"
@@ -594,5 +596,66 @@ function MojeSportovisteContent() {
         </form>
       </div>
     </div>
+  );
+}
+
+function MagicLinkRequestForm() {
+  const [email, setEmail] = useState("");
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  async function handleRequest(e: React.FormEvent) {
+    e.preventDefault();
+    setSending(true);
+
+    try {
+      await fetch("/api/owner/request-magic-link", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email.trim() }),
+      });
+      setSent(true);
+    } catch {
+      setSent(true); // Show same message regardless to prevent enumeration
+    } finally {
+      setSending(false);
+    }
+  }
+
+  if (sent) {
+    return (
+      <div className="mt-4 rounded-lg bg-emerald-50 p-4 text-sm text-emerald-700">
+        <CheckCircle2 className="mx-auto h-6 w-6 text-emerald-500" />
+        <p className="mt-2">
+          Pokud e-mail odpovídá našim záznamům, odeslali jsme vám přihlašovací
+          odkaz. Zkontrolujte svou e-mailovou schránku.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleRequest} className="mt-4 space-y-3">
+      <input
+        type="email"
+        required
+        placeholder="Váš e-mail"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-emerald-400 focus:outline-none focus:ring-1 focus:ring-emerald-400"
+      />
+      <button
+        type="submit"
+        disabled={sending}
+        className="flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-700 disabled:opacity-50"
+      >
+        {sending ? (
+          <Loader2 className="h-4 w-4 animate-spin" />
+        ) : (
+          <Mail className="h-4 w-4" />
+        )}
+        {sending ? "Odesílání..." : "Zaslat přihlašovací odkaz"}
+      </button>
+    </form>
   );
 }

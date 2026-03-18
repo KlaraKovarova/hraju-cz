@@ -15,6 +15,7 @@ export default function EditSuggestionForm({
   const [isOpen, setIsOpen] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [magicLinkSent, setMagicLinkSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const [form, setForm] = useState({
@@ -78,6 +79,10 @@ export default function EditSuggestionForm({
         throw new Error(data.error || "Nepodařilo se odeslat.");
       }
 
+      const data = await res.json();
+      if (data.magicLinkSent) {
+        setMagicLinkSent(true);
+      }
       setSuccess(true);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Nepodařilo se odeslat.");
@@ -93,10 +98,17 @@ export default function EditSuggestionForm({
         <h3 className="mt-3 text-lg font-bold text-emerald-800">
           Děkujeme za váš podnět!
         </h3>
-        <p className="mt-1 text-sm text-emerald-600">
-          Váš návrh úpravy pro {facilityName} byl odeslán. Budeme ho posuzovat co
-          nejdříve.
-        </p>
+        {magicLinkSent ? (
+          <p className="mt-1 text-sm text-emerald-600">
+            Na váš e-mail jsme odeslali odkaz pro přihlášení. Kliknutím na něj
+            získáte přístup ke správě sportoviště {facilityName}.
+          </p>
+        ) : (
+          <p className="mt-1 text-sm text-emerald-600">
+            Váš návrh úpravy pro {facilityName} byl odeslán. Budeme ho posuzovat co
+            nejdříve.
+          </p>
+        )}
       </div>
     );
   }
