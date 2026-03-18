@@ -1,6 +1,18 @@
 import Link from "next/link";
-import { MapPin, Phone, Star, ArrowRight } from "lucide-react";
+import { MapPin, Phone, Star, ArrowRight, Clock } from "lucide-react";
 import type { FacilityWithDetails } from "@/lib/data";
+
+const DAY_KEYS = ["ne", "po", "út", "st", "čt", "pá", "so"] as const;
+
+const HIGHLIGHT_AMENITIES = new Set(["showers", "locker-room", "parking"]);
+
+function getTodayHours(
+  openingHours: Record<string, string> | null,
+): string | null {
+  if (!openingHours) return null;
+  const key = DAY_KEYS[new Date().getDay()];
+  return openingHours[key] ?? null;
+}
 
 interface FacilityCardProps {
   facility: FacilityWithDetails;
@@ -9,6 +21,9 @@ interface FacilityCardProps {
 
 export function FacilityCard({ facility, sportSlug }: FacilityCardProps) {
   const primaryContact = facility.contacts.find((c) => c.isPrimary);
+  const todayHours = getTodayHours(
+    facility.openingHours as Record<string, string> | null,
+  );
 
   return (
     <Link
@@ -45,8 +60,14 @@ export function FacilityCard({ facility, sportSlug }: FacilityCardProps) {
           </span>
         )}
         {facility.pricing && (
-          <span className="rounded-lg bg-emerald-50 px-2.5 py-1 font-medium text-emerald-700">
+          <span className="max-w-48 truncate rounded-lg bg-emerald-50 px-2.5 py-1 font-medium text-emerald-700">
             {facility.pricing}
+          </span>
+        )}
+        {todayHours && (
+          <span className="flex items-center gap-1 rounded-lg bg-zinc-100 px-2.5 py-1 font-medium text-zinc-600">
+            <Clock className="h-3 w-3 shrink-0" />
+            Dnes: {todayHours}
           </span>
         )}
       </div>
@@ -54,14 +75,23 @@ export function FacilityCard({ facility, sportSlug }: FacilityCardProps) {
       {/* Amenities */}
       {facility.amenities.length > 0 && (
         <div className="mt-3 flex flex-wrap gap-1.5">
-          {facility.amenities.slice(0, 4).map((a) => (
+          {facility.amenities.slice(0, 5).map((a) => (
             <span
               key={a.amenity.slug}
-              className="rounded-full bg-zinc-50 px-2 py-0.5 text-xs text-zinc-500"
+              className={
+                HIGHLIGHT_AMENITIES.has(a.amenity.slug)
+                  ? "rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700"
+                  : "rounded-full bg-zinc-50 px-2.5 py-1 text-xs text-zinc-500"
+              }
             >
               {a.amenity.icon} {a.amenity.nameCs}
             </span>
           ))}
+          {facility.amenities.length > 5 && (
+            <span className="rounded-full bg-zinc-50 px-2.5 py-1 text-xs text-zinc-400">
+              +{facility.amenities.length - 5}
+            </span>
+          )}
         </div>
       )}
 
