@@ -149,11 +149,38 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
     }),
   };
 
+  // BreadcrumbList structured data for SEO
+  const breadcrumbItems = [
+    { name: "hraju.cz", url: "https://hraju.cz" },
+    { name: sport.nameCs, url: `https://hraju.cz/sport/${sportSlug}` },
+    ...(regionInfo
+      ? [
+          { name: regionInfo.name, url: `https://hraju.cz/sport/${sportSlug}/kraj/${regionInfo.slug}` },
+          { name: facility.location.city, url: `https://hraju.cz/sport/${sportSlug}/kraj/${regionInfo.slug}/${citySl}` },
+        ]
+      : []),
+    { name: facility.name, url: `https://hraju.cz/sport/${sportSlug}/${slug}` },
+  ];
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: breadcrumbItems.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+
   return (
     <main className="min-h-screen bg-zinc-50/50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       {/* Header */}
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">
