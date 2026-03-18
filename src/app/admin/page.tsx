@@ -13,6 +13,14 @@ export default function AdminPage() {
           <h2 className="font-semibold text-zinc-900">Sportoviště</h2>
           <p className="mt-1 text-sm text-zinc-500">Správa sportovišť — přidat, upravit, smazat</p>
         </Link>
+        <Link
+          href="/admin/edit-requests"
+          className="rounded-2xl border border-zinc-200 bg-white p-6 hover:border-zinc-300 hover:shadow-sm"
+        >
+          <div className="mb-2 text-2xl">📝</div>
+          <h2 className="font-semibold text-zinc-900">Návrhy úprav</h2>
+          <p className="mt-1 text-sm text-zinc-500">Posouzení návrhů od provozovatelů a uživatelů</p>
+        </Link>
       </div>
     </div>
   );

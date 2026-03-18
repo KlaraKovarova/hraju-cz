@@ -9,8 +9,8 @@
     "lint": "eslint",
     "db:seed": "tsx prisma/seed.ts",
     "db:migrate": "prisma migrate dev",
-    "db:export": "tsx scripts/db-export.ts",
-    "db:import": "tsx scripts/db-import.ts"
+    "db:export": "bash scripts/db-export.sh",
+    "db:import": "bash scripts/db-import.sh"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",

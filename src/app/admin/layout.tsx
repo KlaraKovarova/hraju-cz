@@ -11,6 +11,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           <Link href="/admin/facilities" className="text-sm text-zinc-500 hover:text-zinc-900">
             Sportoviště
           </Link>
+          <Link href="/admin/edit-requests" className="text-sm text-zinc-500 hover:text-zinc-900">
+            Návrhy úprav
+          </Link>
           <Link href="/" className="ml-auto text-sm text-zinc-400 hover:text-zinc-600">
             ← Zpět na web
           </Link>

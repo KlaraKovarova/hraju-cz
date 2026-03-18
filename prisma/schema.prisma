@@ -63,6 +63,7 @@ model Facility {
   amenities     FacilityAmenity[]
   contacts      Contact[]
   images        FacilityImage[]
+  editRequests  EditRequest[]
 
   @@index([locationId])
   @@index([slug])
@@ -134,4 +135,30 @@ enum ContactType {
   WEBSITE
   FACEBOOK
   INSTAGRAM
+}
+
+model EditRequest {
+  id             String            @id @default(cuid())
+  facilityId     String
+  facility       Facility          @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  submitterName  String
+  submitterEmail String
+  submitterPhone String?
+  isOwner        Boolean           @default(false)
+  changes        Json
+  message        String?           @db.Text
+  status         EditRequestStatus @default(PENDING)
+  reviewedAt     DateTime?
+  reviewNote     String?           @db.Text
+  createdAt      DateTime          @default(now())
+  updatedAt      DateTime          @updatedAt
+
+  @@index([facilityId])
+  @@index([status])
+}
+
+enum EditRequestStatus {
+  PENDING
+  APPROVED
+  REJECTED
 }
