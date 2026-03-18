@@ -68,6 +68,7 @@ interface FacilityFormData {
   courtsLanes?: number;
   pricing: string;
   website: string;
+  bookingUrl: string;
   isActive: boolean;
   isPremium: boolean;
   sportSlugs: string[];
@@ -90,6 +91,7 @@ const DEFAULT_DATA: FacilityFormData = {
   region: "",
   pricing: "",
   website: "",
+  bookingUrl: "",
   isActive: true,
   isPremium: false,
   sportSlugs: [],
@@ -252,6 +254,18 @@ export function FacilityForm({ initialData, allAmenities = [] }: FacilityFormPro
             onChange={handleChange}
             type="url"
             placeholder="https://"
+            className="w-full rounded-xl border border-zinc-200 px-3 py-2 text-sm focus:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-100"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-zinc-700 mb-1">Rezervační URL (Premium)</label>
+          <input
+            name="bookingUrl"
+            value={form.bookingUrl}
+            onChange={handleChange}
+            type="url"
+            placeholder="https://rezervace.example.com"
             className="w-full rounded-xl border border-zinc-200 px-3 py-2 text-sm focus:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-100"
           />
         </div>

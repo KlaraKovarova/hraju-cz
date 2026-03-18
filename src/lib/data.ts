@@ -27,6 +27,7 @@ export type FacilityWithDetails = {
   pricing: string | null;
   openingHours: Record<string, string> | null;
   website: string | null;
+  bookingUrl: string | null;
   isActive: boolean;
   isPremium: boolean;
   isClaimed: boolean;
@@ -101,6 +102,7 @@ function toFacilityWithDetails(f: ExportData["facilities"][number]): FacilityWit
     pricing: f.pricing,
     openingHours: f.openingHours as Record<string, string> | null,
     website: f.website,
+    bookingUrl: (f as Record<string, unknown>).bookingUrl as string | null ?? null,
     isActive: f.isActive,
     isPremium: f.isPremium,
     isClaimed: f.isClaimed,

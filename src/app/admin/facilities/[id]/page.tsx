@@ -50,6 +50,7 @@ export default async function EditFacilityPage({ params }: EditFacilityPageProps
             courtsLanes: facility.courtsLanes ?? undefined,
             pricing: facility.pricing ?? "",
             website: facility.website ?? "",
+            bookingUrl: facility.bookingUrl ?? "",
             isActive: facility.isActive,
             isPremium: facility.isPremium,
             sportSlugs: facility.sports.map((s) => s.sport.slug),

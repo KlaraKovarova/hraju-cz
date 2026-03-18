@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Star, ArrowRight, Clock } from "lucide-react";
 import type { FacilityWithDetails } from "@/lib/data";
 
@@ -24,12 +25,32 @@ export function FacilityCard({ facility, sportSlug }: FacilityCardProps) {
   const todayHours = getTodayHours(
     facility.openingHours as Record<string, string> | null,
   );
+  const primaryImage = facility.images?.find((img) => img.isPrimary) ?? facility.images?.[0];
 
   return (
     <Link
       href={`/sport/${sportSlug}/${facility.slug}`}
-      className="group flex flex-col rounded-2xl border border-zinc-100 bg-white p-5 transition-all hover:border-zinc-200 hover:shadow-lg hover:shadow-zinc-100"
+      className="group flex flex-col rounded-2xl border border-zinc-100 bg-white overflow-hidden transition-all hover:border-zinc-200 hover:shadow-lg hover:shadow-zinc-100"
     >
+      {/* Primary image */}
+      {primaryImage && (
+        <div className="relative h-40 w-full overflow-hidden bg-zinc-100">
+          <Image
+            src={primaryImage.url}
+            alt={primaryImage.alt ?? facility.name}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover transition-transform group-hover:scale-105"
+          />
+          {facility.isPremium && (
+            <span className="absolute right-2 top-2 flex items-center gap-1 rounded-full bg-amber-50/90 px-2.5 py-1 text-xs font-semibold text-amber-600 backdrop-blur-sm">
+              <Star className="h-3 w-3 fill-amber-400 text-amber-400" />
+              Premium
+            </span>
+          )}
+        </div>
+      )}
+      <div className="flex flex-1 flex-col p-5">
       {/* Top row: name + badges */}
       <div className="mb-3 flex items-start justify-between gap-2">
         <div className="min-w-0">
@@ -43,7 +64,7 @@ export function FacilityCard({ facility, sportSlug }: FacilityCardProps) {
             </span>
           </div>
         </div>
-        {facility.isPremium && (
+        {facility.isPremium && !primaryImage && (
           <span className="flex shrink-0 items-center gap-1 rounded-full bg-amber-50 px-2.5 py-1 text-xs font-semibold text-amber-600">
             <Star className="h-3 w-3 fill-amber-400 text-amber-400" />
             Premium
@@ -112,6 +133,7 @@ export function FacilityCard({ facility, sportSlug }: FacilityCardProps) {
         <span className="flex items-center gap-1 text-xs font-semibold text-emerald-600 opacity-0 transition-opacity group-hover:opacity-100">
           Detail <ArrowRight className="h-3 w-3" />
         </span>
+      </div>
       </div>
     </Link>
   );

@@ -1,5 +1,6 @@
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import {
   MapPin,
   Phone,
@@ -11,6 +12,7 @@ import {
   ChevronRight,
   Navigation,
   CheckCircle2,
+  CalendarCheck,
 } from "lucide-react";
 import { getSportBySlug } from "@/lib/sports";
 import { getFacilityBySlug, getInactiveFacilityRedirectInfo } from "@/lib/data";
@@ -313,6 +315,44 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
         </div>
       </section>
 
+      {/* Facility Images */}
+      {(() => {
+        const primaryImage = facility.images.find((img) => img.isPrimary) ?? facility.images[0];
+        const displayImages = facility.isPremium ? facility.images : (primaryImage ? [primaryImage] : []);
+        if (displayImages.length === 0) return null;
+        return (
+          <section className="border-b border-zinc-100 bg-white">
+            <div className="mx-auto max-w-6xl px-6 py-6">
+              {displayImages.length === 1 ? (
+                <div className="overflow-hidden rounded-2xl">
+                  <Image
+                    src={displayImages[0].url}
+                    alt={displayImages[0].alt ?? facility.name}
+                    width={1200}
+                    height={600}
+                    className="h-auto max-h-[400px] w-full object-cover"
+                  />
+                </div>
+              ) : (
+                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  {displayImages.map((img, i) => (
+                    <div key={i} className="overflow-hidden rounded-xl">
+                      <Image
+                        src={img.url}
+                        alt={img.alt ?? `${facility.name} — foto ${i + 1}`}
+                        width={400}
+                        height={300}
+                        className="h-48 w-full object-cover transition hover:scale-105"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </section>
+        );
+      })()}
+
       {/* Content Grid */}
       <div className="mx-auto max-w-6xl px-6 py-8">
         <div className="grid gap-6 lg:grid-cols-3">
@@ -504,6 +544,20 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
               </div>
               ) : null;
             })()}
+
+            {/* Booking CTA (Premium only) */}
+            {facility.isPremium && facility.bookingUrl && (
+              <a
+                href={facility.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 rounded-2xl bg-emerald-600 px-5 py-4 text-sm font-bold text-white shadow-lg shadow-emerald-200 transition hover:bg-emerald-700 hover:shadow-emerald-300"
+              >
+                <CalendarCheck className="h-5 w-5" />
+                Rezervovat
+                <ExternalLink className="ml-1 h-3.5 w-3.5 opacity-70" />
+              </a>
+            )}
 
             {/* Quick Actions */}
             <div className="space-y-2">

@@ -21,13 +21,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   // Facility detail pages + city listing pages from DB (fallback to static export)
-  let facilities: { slug: string; sportSlugs: string[]; city: string; updatedAt?: Date }[] = [];
+  let facilities: { slug: string; sportSlugs: string[]; city: string; isPremium: boolean; updatedAt?: Date }[] = [];
 
   try {
     const dbQuery = prisma.facility.findMany({
       where: { isActive: true },
       select: {
         slug: true,
+        isPremium: true,
         updatedAt: true,
         location: { select: { city: true } },
         sports: { select: { sport: { select: { slug: true } } } },
@@ -43,6 +44,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       slug: f.slug,
       sportSlugs: f.sports.map((s) => s.sport.slug),
       city: f.location.city,
+      isPremium: f.isPremium,
       updatedAt: f.updatedAt,
     }));
   } catch {
@@ -61,6 +63,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       slug: f.slug,
       sportSlugs: sportsByFacId.get(f.id) || [],
       city: locationById.get(f.locationId)?.city || "",
+      isPremium: f.isPremium,
     }));
   }
 
@@ -71,7 +74,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         url: `${BASE_URL}/sport/${sportSlug}/${facility.slug}`,
         lastModified: facility.updatedAt,
         changeFrequency: "monthly",
-        priority: 0.7,
+        priority: facility.isPremium ? 0.9 : 0.7,
       });
     }
   }

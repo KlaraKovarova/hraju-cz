@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const {
       name, slug, description, address, postalCode, city, region,
-      lat, lng, courtsLanes, pricing, openingHours, website,
+      lat, lng, courtsLanes, pricing, openingHours, website, bookingUrl,
       sportSlugs = [],
       amenityIds = [],
     } = body;
@@ -60,6 +60,7 @@ export async function POST(request: NextRequest) {
         pricing: pricing ?? null,
         openingHours: openingHours ?? null,
         website: website ?? null,
+        bookingUrl: bookingUrl ?? null,
         sports: {
           create: await Promise.all(
             (sportSlugs as string[]).map(async (sportSlug: string) => {

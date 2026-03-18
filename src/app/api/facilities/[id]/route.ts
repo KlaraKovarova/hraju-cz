@@ -31,7 +31,7 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
     const body = await request.json();
     const {
       name, description, address, postalCode, city, region,
-      lat, lng, courtsLanes, pricing, openingHours, website,
+      lat, lng, courtsLanes, pricing, openingHours, website, bookingUrl,
       isActive, isClaimed, isPremium, amenityIds,
     } = body;
 
@@ -59,6 +59,7 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
         ...(pricing !== undefined && { pricing }),
         ...(openingHours !== undefined && { openingHours }),
         ...(website !== undefined && { website }),
+        ...(bookingUrl !== undefined && { bookingUrl }),
         ...(isActive !== undefined && { isActive }),
         ...(isClaimed !== undefined && { isClaimed }),
         ...(isPremium !== undefined && { isPremium }),
