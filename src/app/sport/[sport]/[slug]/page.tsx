@@ -116,7 +116,9 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
   const citySl = cityToSlug(facility.location.city);
 
   // Build JSON-LD structured data for SEO
-  const phone = facility.contacts.find((c) => c.type === "PHONE")?.value;
+  const phone = facility.isClaimed
+    ? facility.contacts.find((c) => c.type === "PHONE")?.value
+    : undefined;
   const email = facility.contacts.find((c) => c.type === "EMAIL")?.value;
   const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -383,11 +385,15 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
           {/* Sidebar */}
           <div className="space-y-4">
             {/* Contacts */}
-            {facility.contacts.length > 0 && (
+            {(() => {
+              const visibleContacts = facility.isClaimed
+                ? facility.contacts
+                : facility.contacts.filter((c) => c.type !== "PHONE");
+              return visibleContacts.length > 0 ? (
               <div className="rounded-2xl border border-zinc-100 bg-white p-5">
                 <h3 className="mb-4 font-bold text-zinc-900">Kontakt</h3>
                 <ul className="space-y-3">
-                  {facility.contacts.map((contact) => (
+                  {visibleContacts.map((contact) => (
                     <li
                       key={contact.id}
                       className="flex items-center gap-3 text-sm"
@@ -432,7 +438,8 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                   ))}
                 </ul>
               </div>
-            )}
+              ) : null;
+            })()}
 
             {/* Quick Actions */}
             <div className="space-y-2">

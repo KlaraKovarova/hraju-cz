@@ -67,7 +67,7 @@ export function FacilityCard({ facility, sportSlug }: FacilityCardProps) {
 
       {/* Contact + CTA */}
       <div className="mt-auto flex items-center justify-between border-t border-zinc-50 pt-3 mt-4">
-        {primaryContact ? (
+        {primaryContact && facility.isClaimed ? (
           <span className="flex items-center gap-1.5 text-xs text-zinc-500">
             <Phone className="h-3 w-3" />
             {primaryContact.value}
