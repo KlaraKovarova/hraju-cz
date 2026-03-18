@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import { getSportBySlug } from "@/lib/sports";
 import { getFacilityBySlug } from "@/lib/data";
+import { getRegionByName, cityToSlug } from "@/lib/regions";
+import EditSuggestionForm from "@/components/EditSuggestionForm";
 import type { Metadata } from "next";
 
 interface FacilityPageProps {
@@ -109,6 +111,10 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
       : null;
   const openingHours = facility.openingHours as Record<string, string> | null;
 
+  // Region/city for breadcrumb links
+  const regionInfo = facility.location.region ? getRegionByName(facility.location.region) : null;
+  const citySl = cityToSlug(facility.location.city);
+
   // Build JSON-LD structured data for SEO
   const phone = facility.contacts.find((c) => c.type === "PHONE")?.value;
   const email = facility.contacts.find((c) => c.type === "EMAIL")?.value;
@@ -150,7 +156,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
       {/* Header */}
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-2 text-sm text-zinc-500">
+          <div className="flex flex-wrap items-center gap-2 text-sm text-zinc-500">
             <Link
               href="/"
               className="font-extrabold text-zinc-900 hover:text-emerald-600"
@@ -165,6 +171,24 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
             >
               {sport.icon} {sport.nameCs}
             </Link>
+            {regionInfo && (
+              <>
+                <ChevronRight className="h-3.5 w-3.5 text-zinc-300" />
+                <Link
+                  href={`/sport/${sportSlug}/kraj/${regionInfo.slug}`}
+                  className="hover:text-zinc-900"
+                >
+                  {regionInfo.name}
+                </Link>
+                <ChevronRight className="h-3.5 w-3.5 text-zinc-300" />
+                <Link
+                  href={`/sport/${sportSlug}/kraj/${regionInfo.slug}/${citySl}`}
+                  className="hover:text-zinc-900"
+                >
+                  {facility.location.city}
+                </Link>
+              </>
+            )}
             <ChevronRight className="h-3.5 w-3.5 text-zinc-300" />
             <span className="truncate font-medium text-zinc-900">
               {facility.name}
@@ -460,6 +484,12 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                 </ul>
               </div>
             )}
+
+            {/* Edit Suggestion */}
+            <EditSuggestionForm
+              facilityId={facility.id}
+              facilityName={facility.name}
+            />
           </div>
         </div>
       </div>

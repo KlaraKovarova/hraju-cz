@@ -1,55 +1,40 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Search, SlidersHorizontal, MapPin } from "lucide-react";
+import { MapPin, ChevronRight } from "lucide-react";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
-import { getFacilitiesBySport } from "@/lib/data";
-import { FacilityCard } from "@/components/FacilityCard";
-import { SearchBar } from "@/components/SearchBar";
+import { getRegionsBySport } from "@/lib/data";
 import type { Metadata } from "next";
 
 interface SportPageProps {
   params: Promise<{ sport: string }>;
-  searchParams: Promise<{ city?: string }>;
 }
 
 export async function generateMetadata({
   params,
-  searchParams,
 }: SportPageProps): Promise<Metadata> {
   const { sport: sportSlug } = await params;
-  const { city } = await searchParams;
   const sport = getSportBySlug(sportSlug);
   if (!sport) return {};
 
-  const { facilities } = await getFacilitiesBySport(sport.slug, city);
-  const count = facilities.length;
-
-  if (city) {
-    return {
-      title: `${sport.nameCs} kurty v ${city} — hraju.cz`,
-      description: `Najděte ${sport.nameCs.toLowerCase()} v ${city}. ${count} sportovišť, adresy a kontakty.`,
-    };
-  }
+  const regions = await getRegionsBySport(sport.slug);
+  const totalFacilities = regions.reduce((sum, r) => sum + r.facilityCount, 0);
 
   return {
     title: `${sport.nameCs} sportoviště v ČR — hraju.cz`,
-    description: `${count} ${sport.nameCs.toLowerCase()} sportovišť v celé ČR. Adresy, kontakty, ceny.`,
+    description: `${totalFacilities} ${sport.nameCs.toLowerCase()} sportovišť ve všech krajích ČR. Vyberte kraj a najděte sportoviště ve svém městě.`,
   };
 }
 
-export default async function SportPage({
-  params,
-  searchParams,
-}: SportPageProps) {
+export default async function SportPage({ params }: SportPageProps) {
   const { sport: sportSlug } = await params;
-  const { city } = await searchParams;
   const sport = getSportBySlug(sportSlug);
 
   if (!sport) {
     notFound();
   }
 
-  const { facilities, isLive } = await getFacilitiesBySport(sport.slug, city);
+  const regions = await getRegionsBySport(sport.slug);
+  const totalFacilities = regions.reduce((sum, r) => sum + r.facilityCount, 0);
 
   return (
     <main className="min-h-screen bg-zinc-50/50">
@@ -93,136 +78,46 @@ export default async function SportPage({
               </h1>
               <p className="mt-1 text-zinc-500">
                 {sport.description}
-                {!isLive && (
-                  <span className="ml-2 inline-flex items-center rounded-full bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-700">
-                    ukázková data
-                  </span>
-                )}
               </p>
             </div>
           </div>
-
-          {/* Search */}
-          <div className="mt-6">
-            <SearchBar currentCity={city} sportSlug={sportSlug} />
-          </div>
-        </div>
-      </section>
-
-      {/* Results */}
-      <section className="mx-auto max-w-6xl px-6 py-8">
-        <div className="mb-4 flex items-center justify-between">
-          <p className="text-sm text-zinc-500">
-            {facilities.length > 0
-              ? `${facilities.length} sportovišť`
-              : "Žádná sportoviště nenalezena"}
-            {city ? ` ve městě ${city}` : ""}
+          <p className="mt-4 text-sm text-zinc-500">
+            Celkem <span className="font-semibold text-zinc-700">{totalFacilities}</span> sportovišť
+            {" "}v <span className="font-semibold text-zinc-700">{regions.length}</span> krajích
           </p>
         </div>
-
-        {facilities.length === 0 ? (
-          <div className="mt-12 rounded-3xl border border-zinc-100 bg-white p-12 text-center">
-            <span className="text-5xl">{sport.icon}</span>
-            <h3 className="mt-4 text-lg font-semibold text-zinc-900">
-              {city
-                ? `Ve městě "${city}" jsme nic nenašli`
-                : "Zatím žádná sportoviště"}
-            </h3>
-            <p className="mt-2 text-sm text-zinc-500">
-              {city
-                ? `Zkuste hledat v jiném městě nebo se podívejte na všechna ${sport.nameCs.toLowerCase()}ová sportoviště.`
-                : `Zatím nejsou přidána žádná ${sport.nameCs.toLowerCase()}ová sportoviště.`}
-            </p>
-            {city && (
-              <Link
-                href={`/sport/${sportSlug}`}
-                className={`mt-4 inline-flex items-center gap-1 text-sm font-semibold ${sport.accent} hover:underline`}
-              >
-                Zobrazit všechna sportoviště
-              </Link>
-            )}
-          </div>
-        ) : (
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {facilities.map((facility) => (
-              <FacilityCard
-                key={facility.id}
-                facility={facility}
-                sportSlug={sportSlug}
-              />
-            ))}
-          </div>
-        )}
       </section>
 
-      {/* Map Overview */}
-      {facilities.length > 0 && (
-        <section className="border-t border-zinc-100 bg-white">
-          <div className="mx-auto max-w-6xl px-6 py-8">
-            <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-zinc-900">
-              <MapPin className="h-5 w-5 text-emerald-500" />
-              Mapa sportovišť
-            </h2>
-            <div className="overflow-hidden rounded-2xl border border-zinc-100">
-              <div className="relative h-[280px] w-full bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
-                {/* Grid pattern */}
-                <div className="absolute inset-0 opacity-30" style={{
-                  backgroundImage: `
-                    linear-gradient(rgba(16,185,129,0.15) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(16,185,129,0.15) 1px, transparent 1px)
-                  `,
-                  backgroundSize: '40px 40px',
-                }} />
-                {/* Road-like lines */}
-                <div className="absolute left-0 right-0 top-[45%] h-px bg-emerald-200/60" />
-                <div className="absolute left-0 right-0 top-[70%] h-px bg-emerald-200/40" />
-                <div className="absolute bottom-0 left-[30%] top-0 w-px bg-emerald-200/60" />
-                <div className="absolute bottom-0 left-[60%] top-0 w-px bg-emerald-200/40" />
-                <div className="absolute bottom-0 left-[85%] top-0 w-px bg-emerald-200/30" />
+      {/* Regions Grid */}
+      <section className="mx-auto max-w-6xl px-6 py-8">
+        <h2 className="mb-6 text-xl font-bold text-zinc-900">
+          Vyberte kraj
+        </h2>
 
-                {/* Facility pins - spread across the map */}
-                {facilities.slice(0, 8).map((f, i) => {
-                  // Deterministic positioning based on index
-                  const positions = [
-                    { left: '20%', top: '30%' },
-                    { left: '55%', top: '25%' },
-                    { left: '75%', top: '45%' },
-                    { left: '35%', top: '55%' },
-                    { left: '60%', top: '65%' },
-                    { left: '15%', top: '60%' },
-                    { left: '45%', top: '40%' },
-                    { left: '80%', top: '20%' },
-                  ];
-                  const pos = positions[i];
-                  return (
-                    <Link
-                      key={f.id}
-                      href={`/sport/${sportSlug}/${f.slug}`}
-                      className="group absolute -translate-x-1/2 -translate-y-full"
-                      style={{ left: pos.left, top: pos.top }}
-                      title={f.name}
-                    >
-                      <div className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-600 text-white shadow-md transition group-hover:scale-125 group-hover:bg-emerald-700">
-                        <MapPin className="h-3.5 w-3.5" />
-                      </div>
-                    </Link>
-                  );
-                })}
-
-                {/* Bottom overlay with count */}
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white/90 to-transparent px-5 pb-4 pt-10">
-                  <p className="text-sm text-zinc-600">
-                    <span className="font-semibold text-zinc-900">{facilities.length}</span>{" "}
-                    {facilities.length === 1 ? "sportoviště" : "sportovišť"}
-                    {city && <> ve městě <span className="font-semibold">{city}</span></>}
-                    {" "}— interaktivní mapa bude brzy k dispozici
-                  </p>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {regions.map(({ region, facilityCount, cities }) => (
+            <Link
+              key={region.slug}
+              href={`/sport/${sportSlug}/kraj/${region.slug}`}
+              className="group flex items-center justify-between rounded-2xl border border-zinc-100 bg-white p-5 transition-all hover:border-zinc-200 hover:shadow-lg hover:shadow-zinc-100"
+            >
+              <div className="min-w-0">
+                <h3 className="text-base font-bold text-zinc-900 group-hover:text-emerald-700">
+                  {region.name}
+                </h3>
+                <div className="mt-1.5 flex items-center gap-1.5 text-sm text-zinc-500">
+                  <MapPin className="h-3.5 w-3.5 shrink-0 text-zinc-400" />
+                  <span>
+                    {facilityCount} {facilityCount === 1 ? "sportoviště" : "sportovišť"}
+                    {" "}v {cities.length} {cities.length === 1 ? "městě" : "městech"}
+                  </span>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-      )}
+              <ChevronRight className="h-5 w-5 shrink-0 text-zinc-300 transition group-hover:text-emerald-500" />
+            </Link>
+          ))}
+        </div>
+      </section>
 
       {/* Other Sports */}
       <section className="border-t border-zinc-100 bg-white">

@@ -2,22 +2,25 @@ import Link from "next/link";
 import { MapPin, Search, ArrowRight } from "lucide-react";
 import { SPORTS } from "@/lib/sports";
 import { getCities } from "@/lib/data";
+import { cityToSlug } from "@/lib/regions";
 
-const POPULAR_CITIES = [
-  "Praha",
-  "Brno",
-  "Ostrava",
-  "Plzeň",
-  "Olomouc",
-  "Liberec",
-  "České Budějovice",
-  "Hradec Králové",
+const POPULAR_CITIES: { name: string; regionSlug: string }[] = [
+  { name: "Praha", regionSlug: "hlavni-mesto-praha" },
+  { name: "Brno", regionSlug: "jihomoravsky-kraj" },
+  { name: "Ostrava", regionSlug: "moravskoslezsky-kraj" },
+  { name: "Plzeň", regionSlug: "plzensky-kraj" },
+  { name: "Olomouc", regionSlug: "olomoucky-kraj" },
+  { name: "Liberec", regionSlug: "liberecky-kraj" },
+  { name: "České Budějovice", regionSlug: "jihocesky-kraj" },
+  { name: "Hradec Králové", regionSlug: "kralovehradecky-kraj" },
 ];
 
 export default async function Home() {
   const cities = await getCities();
   const displayCities =
-    cities.length > 0 ? cities.slice(0, 8) : POPULAR_CITIES;
+    cities.length > 0
+      ? POPULAR_CITIES.filter((pc) => cities.includes(pc.name))
+      : POPULAR_CITIES;
 
   return (
     <main className="min-h-screen bg-white">
@@ -87,13 +90,13 @@ export default async function Home() {
             {/* Quick city links */}
             <div className="mt-5 flex flex-wrap items-center gap-2 text-sm">
               <span className="text-zinc-400">Oblíbená města:</span>
-              {displayCities.slice(0, 5).map((city) => (
+              {displayCities.slice(0, 5).map((pc) => (
                 <Link
-                  key={city}
-                  href={`/sport/tenis?city=${encodeURIComponent(city)}`}
+                  key={pc.name}
+                  href={`/sport/tenis/kraj/${pc.regionSlug}/${cityToSlug(pc.name)}`}
                   className="rounded-full border border-zinc-200 bg-white px-3 py-1 text-zinc-600 transition hover:border-emerald-300 hover:text-emerald-700"
                 >
-                  {city}
+                  {pc.name}
                 </Link>
               ))}
             </div>
@@ -153,17 +156,17 @@ export default async function Home() {
           </div>
 
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            {displayCities.map((city) => (
+            {displayCities.map((pc) => (
               <Link
-                key={city}
-                href={`/sport/tenis?city=${encodeURIComponent(city)}`}
+                key={pc.name}
+                href={`/sport/tenis/kraj/${pc.regionSlug}/${cityToSlug(pc.name)}`}
                 className="group flex items-center gap-3 rounded-2xl border border-zinc-100 bg-white p-4 transition hover:border-emerald-200 hover:shadow-sm"
               >
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 transition group-hover:bg-emerald-100">
                   <MapPin className="h-5 w-5" />
                 </div>
                 <span className="font-medium text-zinc-700 group-hover:text-zinc-900">
-                  {city}
+                  {pc.name}
                 </span>
               </Link>
             ))}
@@ -212,8 +215,19 @@ export default async function Home() {
               ))}
             </div>
           </div>
-          <div className="mt-8 border-t border-zinc-200 pt-6 text-center text-xs text-zinc-400">
-            &copy; {new Date().getFullYear()} hraju.cz — Všechna práva vyhrazena
+          <div className="mt-8 flex flex-col items-center gap-3 border-t border-zinc-200 pt-6 text-xs text-zinc-400">
+            <div className="flex gap-4">
+              <Link
+                href="/ochrana-osobnich-udaju"
+                className="hover:text-zinc-600"
+              >
+                Ochrana osobních údajů
+              </Link>
+            </div>
+            <span>
+              &copy; {new Date().getFullYear()} hraju.cz — Všechna práva
+              vyhrazena
+            </span>
           </div>
         </div>
       </footer>

@@ -1,5 +1,6 @@
 import { prisma } from "./prisma";
 import exportData from "@/data/facilities-export.json";
+import { getRegionByName, getRegionBySlug, cityToSlug, findCityBySlug, type Region } from "./regions";
 
 const DB_QUERY_TIMEOUT_MS = 3000;
 
@@ -150,6 +151,127 @@ function staticCities(): string[] {
   return [...cities].sort();
 }
 
+// Index: region -> set of locationIds
+const locationIdsByRegion = new Map<string, Set<string>>();
+for (const loc of exportData.locations) {
+  if (!loc.region) continue;
+  let set = locationIdsByRegion.get(loc.region);
+  if (!set) {
+    set = new Set();
+    locationIdsByRegion.set(loc.region, set);
+  }
+  set.add(loc.id);
+}
+
+export type RegionWithCount = {
+  region: Region;
+  facilityCount: number;
+  cities: string[];
+};
+
+function staticRegionsBySport(sportSlug: string): RegionWithCount[] {
+  const facilityIds = facilitiesBySportSlug.get(sportSlug);
+  if (!facilityIds) return [];
+
+  const regionCounts = new Map<string, { count: number; cities: Set<string> }>();
+
+  for (const f of exportData.facilities) {
+    if (!facilityIds.has(f.id)) continue;
+    const loc = locationById.get(f.locationId);
+    if (!loc?.region) continue;
+
+    let entry = regionCounts.get(loc.region);
+    if (!entry) {
+      entry = { count: 0, cities: new Set() };
+      regionCounts.set(loc.region, entry);
+    }
+    entry.count++;
+    entry.cities.add(loc.city);
+  }
+
+  const results: RegionWithCount[] = [];
+  for (const [regionName, data] of regionCounts) {
+    const region = getRegionByName(regionName);
+    if (!region) continue;
+    results.push({
+      region,
+      facilityCount: data.count,
+      cities: [...data.cities].sort(),
+    });
+  }
+
+  return results.sort((a, b) => b.facilityCount - a.facilityCount);
+}
+
+export type CityWithCount = {
+  city: string;
+  citySlug: string;
+  facilityCount: number;
+};
+
+function staticCitiesByRegionAndSport(regionSlug: string, sportSlug: string): CityWithCount[] {
+  const region = getRegionBySlug(regionSlug);
+  if (!region) return [];
+
+  const facilityIds = facilitiesBySportSlug.get(sportSlug);
+  if (!facilityIds) return [];
+
+  const locIds = locationIdsByRegion.get(region.name);
+  if (!locIds) return [];
+
+  const cityCounts = new Map<string, number>();
+
+  for (const f of exportData.facilities) {
+    if (!facilityIds.has(f.id)) continue;
+    if (!locIds.has(f.locationId)) continue;
+    const loc = locationById.get(f.locationId);
+    if (!loc) continue;
+    cityCounts.set(loc.city, (cityCounts.get(loc.city) || 0) + 1);
+  }
+
+  return [...cityCounts.entries()]
+    .map(([city, count]) => ({
+      city,
+      citySlug: cityToSlug(city),
+      facilityCount: count,
+    }))
+    .sort((a, b) => b.facilityCount - a.facilityCount);
+}
+
+function staticFacilitiesByRegionCityAndSport(
+  regionSlug: string,
+  citySlug: string,
+  sportSlug: string
+): { facilities: FacilityWithDetails[]; cityName: string | null } {
+  const region = getRegionBySlug(regionSlug);
+  if (!region) return { facilities: [], cityName: null };
+
+  const facilityIds = facilitiesBySportSlug.get(sportSlug);
+  if (!facilityIds) return { facilities: [], cityName: null };
+
+  const locIds = locationIdsByRegion.get(region.name);
+  if (!locIds) return { facilities: [], cityName: null };
+
+  // Find all cities in this region to resolve citySlug
+  const regionCities = exportData.locations
+    .filter((l) => locIds.has(l.id))
+    .map((l) => l.city);
+  const cityName = findCityBySlug(regionCities, citySlug);
+  if (!cityName) return { facilities: [], cityName: null };
+
+  const results = exportData.facilities.filter((f) => {
+    if (!facilityIds.has(f.id)) return false;
+    if (!locIds.has(f.locationId)) return false;
+    const loc = locationById.get(f.locationId);
+    return loc?.city === cityName;
+  });
+
+  return {
+    facilities: results.map(toFacilityWithDetails),
+    cityName,
+  };
+}
+
 // --- DB queries (used when DATABASE_URL is reachable) ---
 
 async function dbFacilitiesBySport(
@@ -209,6 +331,30 @@ export async function getFacilityBySlug(
   } catch {
     return { facility: staticFacilityBySlug(slug), isLive: true };
   }
+}
+
+export async function getRegionsBySport(
+  sportSlug: string
+): Promise<RegionWithCount[]> {
+  // For now, always use static data for region aggregation
+  // (DB version would require a complex GROUP BY query)
+  return staticRegionsBySport(sportSlug);
+}
+
+export async function getCitiesByRegionAndSport(
+  regionSlug: string,
+  sportSlug: string
+): Promise<CityWithCount[]> {
+  return staticCitiesByRegionAndSport(regionSlug, sportSlug);
+}
+
+export async function getFacilitiesByRegionCityAndSport(
+  regionSlug: string,
+  citySlug: string,
+  sportSlug: string
+): Promise<{ facilities: FacilityWithDetails[]; cityName: string | null; isLive: boolean }> {
+  const result = staticFacilitiesByRegionCityAndSport(regionSlug, citySlug, sportSlug);
+  return { ...result, isLive: true };
 }
 
 export async function getCities(): Promise<string[]> {
