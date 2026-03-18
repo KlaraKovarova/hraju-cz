@@ -154,11 +154,23 @@ async function main() {
 
   console.log(`✓ ${amenities.length} amenities`);
 
-  // Locations
-  const praha = await prisma.location.upsert({
-    where: { city_region: { city: "Praha", region: "Praha" } },
+  // Locations (Praha split into districts)
+  const praha6 = await prisma.location.upsert({
+    where: { city_region: { city: "Praha 6", region: "Hlavní město Praha" } },
     update: {},
-    create: { city: "Praha", region: "Praha", lat: 50.0755, lng: 14.4378 },
+    create: { city: "Praha 6", region: "Hlavní město Praha", lat: 50.1000, lng: 14.3700 },
+  });
+
+  const praha7 = await prisma.location.upsert({
+    where: { city_region: { city: "Praha 7", region: "Hlavní město Praha" } },
+    update: {},
+    create: { city: "Praha 7", region: "Hlavní město Praha", lat: 50.1000, lng: 14.4300 },
+  });
+
+  const praha3 = await prisma.location.upsert({
+    where: { city_region: { city: "Praha 3", region: "Hlavní město Praha" } },
+    update: {},
+    create: { city: "Praha 3", region: "Hlavní město Praha", lat: 50.0833, lng: 14.4500 },
   });
 
   const brno = await prisma.location.upsert({
@@ -173,7 +185,7 @@ async function main() {
     create: { city: "Olomouc", region: "Olomoucký kraj", lat: 49.5938, lng: 17.2509 },
   });
 
-  console.log(`✓ 3 locations`);
+  console.log(`✓ 5 locations`);
 
   // Facilities
   const tenis = sports.find((s) => s.slug === "tenis")!;
@@ -193,7 +205,7 @@ async function main() {
       description: "Největší sportovní centrum v Praze s 12 tenisovými kurty.",
       address: "Vaníčkova 2, Praha 6",
       postalCode: "169 00",
-      locationId: praha.id,
+      locationId: praha6.id,
       lat: 50.081,
       lng: 14.385,
       courtsLanes: 12,
@@ -212,7 +224,7 @@ async function main() {
       description: "Historický tenisový klub s antukovou i tvrdou povrchovou variantou.",
       address: "Milady Horákové 98, Praha 7",
       postalCode: "170 00",
-      locationId: praha.id,
+      locationId: praha7.id,
       lat: 50.099,
       lng: 14.42,
       courtsLanes: 20,
@@ -231,7 +243,7 @@ async function main() {
       description: "6 squashových kurtů v centru Prahy, otevřeno 7 dní v týdnu.",
       address: "Seifertova 22, Praha 3",
       postalCode: "130 00",
-      locationId: praha.id,
+      locationId: praha3.id,
       lat: 50.088,
       lng: 14.446,
       courtsLanes: 6,

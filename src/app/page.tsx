@@ -4,8 +4,8 @@ import { SPORTS } from "@/lib/sports";
 import { getCities } from "@/lib/data";
 import { cityToSlug } from "@/lib/regions";
 
-const POPULAR_CITIES: { name: string; regionSlug: string }[] = [
-  { name: "Praha", regionSlug: "hlavni-mesto-praha" },
+const POPULAR_CITIES: { name: string; regionSlug: string; isRegionLink?: boolean }[] = [
+  { name: "Praha", regionSlug: "hlavni-mesto-praha", isRegionLink: true },
   { name: "Brno", regionSlug: "jihomoravsky-kraj" },
   { name: "Ostrava", regionSlug: "moravskoslezsky-kraj" },
   { name: "Plzeň", regionSlug: "plzensky-kraj" },
@@ -19,7 +19,7 @@ export default async function Home() {
   const cities = await getCities();
   const displayCities =
     cities.length > 0
-      ? POPULAR_CITIES.filter((pc) => cities.includes(pc.name))
+      ? POPULAR_CITIES.filter((pc) => pc.isRegionLink || cities.includes(pc.name))
       : POPULAR_CITIES;
 
   return (
@@ -93,7 +93,7 @@ export default async function Home() {
               {displayCities.slice(0, 5).map((pc) => (
                 <Link
                   key={pc.name}
-                  href={`/sport/tenis/kraj/${pc.regionSlug}/${cityToSlug(pc.name)}`}
+                  href={pc.isRegionLink ? `/sport/tenis/kraj/${pc.regionSlug}` : `/sport/tenis/kraj/${pc.regionSlug}/${cityToSlug(pc.name)}`}
                   className="rounded-full border border-zinc-200 bg-white px-3 py-1 text-zinc-600 transition hover:border-emerald-300 hover:text-emerald-700"
                 >
                   {pc.name}
@@ -159,7 +159,7 @@ export default async function Home() {
             {displayCities.map((pc) => (
               <Link
                 key={pc.name}
-                href={`/sport/tenis/kraj/${pc.regionSlug}/${cityToSlug(pc.name)}`}
+                href={pc.isRegionLink ? `/sport/tenis/kraj/${pc.regionSlug}` : `/sport/tenis/kraj/${pc.regionSlug}/${cityToSlug(pc.name)}`}
                 className="group flex items-center gap-3 rounded-2xl border border-zinc-100 bg-white p-4 transition hover:border-emerald-200 hover:shadow-sm"
               >
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 transition group-hover:bg-emerald-100">
