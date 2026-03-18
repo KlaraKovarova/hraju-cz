@@ -111,22 +111,7 @@ export const SPORTS = [
     ringColor: "ring-red-100",
     borderColor: "border-red-200",
   },
-  {
-    slug: "bowling",
-    name: "Bowling",
-    nameCs: "Bowling",
-    subdomain: "bowling",
-    description: "Bowlingové dráhy a centra",
-    icon: "🎳",
-    color: "amber",
-    gradient: "from-amber-500 to-yellow-600",
-    lightBg: "bg-amber-50",
-    accent: "text-amber-600",
-    accentBg: "bg-amber-600",
-    accentHover: "hover:bg-amber-700",
-    ringColor: "ring-amber-100",
-    borderColor: "border-amber-200",
-  },
+  // bowling hidden until data is cleaned (SIL-67) — most records are unrelated businesses
 ] as const;
 
 export type SportSlug = (typeof SPORTS)[number]["slug"];
