@@ -57,10 +57,10 @@ export default function PrivacyPolicyPage() {
                   <li>
                     E-mail:{" "}
                     <a
-                      href="mailto:gdpr@studio-silex.cz"
+                      href="mailto:klara@hraju.cz"
                       className="text-emerald-600 hover:underline"
                     >
-                      gdpr@studio-silex.cz
+                      klara@hraju.cz
                     </a>
                   </li>
                   <li>Telefon: +420 608 651 393</li>
