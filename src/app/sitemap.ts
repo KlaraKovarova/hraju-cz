@@ -81,11 +81,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   // City landing pages — distinct cities per sport (only 2+ facilities)
+  // Praha districts are aggregated into a unified "praha" entry per sport
   const cityCountBySport = new Map<string, Map<string, number>>();
+  const prahaCountBySport = new Map<string, number>();
   for (const facility of facilities) {
     for (const sportSlug of facility.sportSlugs) {
       if (!cityCountBySport.has(sportSlug)) cityCountBySport.set(sportSlug, new Map());
       const cityMap = cityCountBySport.get(sportSlug)!;
+      if (/^Praha \d+$/.test(facility.city)) {
+        prahaCountBySport.set(sportSlug, (prahaCountBySport.get(sportSlug) || 0) + 1);
+      }
       cityMap.set(facility.city, (cityMap.get(facility.city) || 0) + 1);
     }
   }
@@ -96,6 +101,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         url: `${BASE_URL}/sport/${sportSlug}/${cityToSlug(city)}`,
         changeFrequency: "weekly",
         priority: 0.8,
+      });
+    }
+    // Add unified Praha entry per sport (if 2+ Praha facilities exist)
+    const prahaTotal = prahaCountBySport.get(sportSlug) || 0;
+    if (prahaTotal >= 2) {
+      entries.push({
+        url: `${BASE_URL}/sport/${sportSlug}/praha`,
+        changeFrequency: "weekly",
+        priority: 0.85,
       });
     }
   }

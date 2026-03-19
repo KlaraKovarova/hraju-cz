@@ -68,8 +68,14 @@ export async function generateMetadata({
   const { facilities: cityFacilities, cityName } = await getFacilitiesByCityAndSport(slug, sport.slug);
   if (cityName && cityFacilities.length >= 2) {
     const n = cityFacilities.length;
-    const title = `${sport.nameCs} ${cityName} — ${n} sportovišť | hraju.cz`;
-    const description = `Najděte ${n} ${getSportFacilityTypePluralGenitive(sport.slug)} v ${cityName}. Otevírací doby, ceny, kontakty.`;
+    // Praha special: "Tenisové kurty v Praze" style title
+    const isPraha = slug === "praha";
+    const title = isPraha
+      ? `${sport.nameCs} Praha — ${n} sportovišť`
+      : `${sport.nameCs} ${cityName} — ${n} sportovišť`;
+    const description = isPraha
+      ? `Najděte ${n} ${getSportFacilityTypePluralGenitive(sport.slug)} v Praze. Přehled podle městských částí, kontakty a otevírací doby.`
+      : `Najděte ${n} ${getSportFacilityTypePluralGenitive(sport.slug)} v ${cityName}. Otevírací doby, ceny, kontakty.`;
     const url = `https://hraju.cz/sport/${sportSlug}/${slug}`;
 
     return {
@@ -122,7 +128,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
   // No facility found — try city landing page, then inactive redirect, then 404
   if (!facility) {
     // Try city landing page (only for cities with 2+ facilities)
-    const { facilities: cityFacilities, cityName } = await getFacilitiesByCityAndSport(slug, sport.slug);
+    const { facilities: cityFacilities, cityName, districts } = await getFacilitiesByCityAndSport(slug, sport.slug);
     if (cityName && cityFacilities.length >= 2) {
       return (
         <CityLandingContent
@@ -131,6 +137,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
           cityName={cityName}
           citySlug={slug}
           facilities={cityFacilities}
+          districts={districts}
         />
       );
     }

@@ -425,12 +425,61 @@ export type CityForSport = {
   facilityCount: number;
 };
 
+/** Check if a city name is a Praha district (e.g. "Praha 1", "Praha 10") */
+function isPrahaDistrict(city: string): boolean {
+  return /^Praha \d+$/.test(city);
+}
+
+export type DistrictGroup = {
+  district: string;
+  districtSlug: string;
+  facilities: FacilityWithDetails[];
+};
+
 function staticFacilitiesByCityAndSport(
   citySlug: string,
   sportSlug: string
-): { facilities: FacilityWithDetails[]; cityName: string | null } {
+): { facilities: FacilityWithDetails[]; cityName: string | null; districts?: DistrictGroup[] } {
   const facilityIds = facilitiesBySportSlug.get(sportSlug);
   if (!facilityIds) return { facilities: [], cityName: null };
+
+  // Special case: "praha" aggregates all Praha districts
+  if (citySlug === "praha") {
+    const results = exportData.facilities.filter((f) => {
+      if (!facilityIds.has(f.id) || !f.isActive) return false;
+      const loc = locationById.get(f.locationId);
+      return loc ? isPrahaDistrict(loc.city) : false;
+    });
+
+    if (results.length === 0) return { facilities: [], cityName: null };
+
+    const mapped = results.map(toFacilityWithDetails);
+    // Sort: premium first, then district asc, then name asc
+    mapped.sort((a, b) => {
+      if (a.isPremium !== b.isPremium) return b.isPremium ? 1 : -1;
+      const distA = a.location.city;
+      const distB = b.location.city;
+      if (distA !== distB) return distA.localeCompare(distB, "cs", { numeric: true });
+      return a.name.localeCompare(b.name, "cs");
+    });
+
+    // Group by district
+    const districtMap = new Map<string, FacilityWithDetails[]>();
+    for (const f of mapped) {
+      const d = f.location.city;
+      if (!districtMap.has(d)) districtMap.set(d, []);
+      districtMap.get(d)!.push(f);
+    }
+    const districts: DistrictGroup[] = [...districtMap.entries()]
+      .sort(([a], [b]) => a.localeCompare(b, "cs", { numeric: true }))
+      .map(([district, facs]) => ({
+        district,
+        districtSlug: cityToSlug(district),
+        facilities: facs,
+      }));
+
+    return { facilities: mapped, cityName: "Praha", districts };
+  }
 
   const allCities = [...new Set(exportData.locations.map((l) => l.city))];
   const cityName = findCityBySlug(allCities, citySlug);
@@ -455,7 +504,7 @@ function staticFacilitiesByCityAndSport(
 export async function getFacilitiesByCityAndSport(
   citySlug: string,
   sportSlug: string
-): Promise<{ facilities: FacilityWithDetails[]; cityName: string | null }> {
+): Promise<{ facilities: FacilityWithDetails[]; cityName: string | null; districts?: DistrictGroup[] }> {
   return staticFacilitiesByCityAndSport(citySlug, sportSlug);
 }
 
@@ -464,20 +513,29 @@ function staticTopCitiesBySport(sportSlug: string, limit: number = 10): CityForS
   if (!facilityIds) return [];
 
   const cityCounts = new Map<string, number>();
+  let prahaCount = 0;
   for (const f of exportData.facilities) {
     if (!facilityIds.has(f.id) || !f.isActive) continue;
     const loc = locationById.get(f.locationId);
     if (!loc) continue;
-    cityCounts.set(loc.city, (cityCounts.get(loc.city) || 0) + 1);
+    if (isPrahaDistrict(loc.city)) {
+      prahaCount++;
+    } else {
+      cityCounts.set(loc.city, (cityCounts.get(loc.city) || 0) + 1);
+    }
   }
 
-  return [...cityCounts.entries()]
+  const results: CityForSport[] = [...cityCounts.entries()]
     .filter(([, count]) => count >= 2)
     .map(([city, count]) => ({
       city,
       citySlug: cityToSlug(city),
       facilityCount: count,
-    }))
+    }));
+  if (prahaCount >= 2) {
+    results.push({ city: "Praha", citySlug: "praha", facilityCount: prahaCount });
+  }
+  return results
     .sort((a, b) => b.facilityCount - a.facilityCount)
     .slice(0, limit);
 }
@@ -524,22 +582,31 @@ export async function getFeaturedFacilities(limit: number = 6): Promise<Facility
   return rotated.slice(0, limit).map(toFacilityWithDetails);
 }
 
-/** Top cities across all sports */
+/** Top cities across all sports (Praha districts aggregated into one "Praha" entry) */
 export async function getTopCitiesOverall(limit: number = 10): Promise<CityForSport[]> {
   const cityCounts = new Map<string, number>();
+  let prahaCount = 0;
   for (const f of exportData.facilities) {
     if (!f.isActive) continue;
     const loc = locationById.get(f.locationId);
     if (!loc) continue;
-    cityCounts.set(loc.city, (cityCounts.get(loc.city) || 0) + 1);
+    if (isPrahaDistrict(loc.city)) {
+      prahaCount++;
+    } else {
+      cityCounts.set(loc.city, (cityCounts.get(loc.city) || 0) + 1);
+    }
   }
-  return [...cityCounts.entries()]
+  const results: CityForSport[] = [...cityCounts.entries()]
     .filter(([, count]) => count >= 2)
     .map(([city, count]) => ({
       city,
       citySlug: cityToSlug(city),
       facilityCount: count,
-    }))
+    }));
+  if (prahaCount >= 2) {
+    results.push({ city: "Praha", citySlug: "praha", facilityCount: prahaCount });
+  }
+  return results
     .sort((a, b) => b.facilityCount - a.facilityCount)
     .slice(0, limit);
 }

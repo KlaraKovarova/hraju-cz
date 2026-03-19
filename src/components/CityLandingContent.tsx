@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { MapPin, ChevronRight } from "lucide-react";
 import { SPORTS } from "@/lib/sports";
+import { getSportFacilityTypePlural } from "@/lib/seo";
 import { FacilityCard } from "@/components/FacilityCard";
 import { FacilityMap } from "@/components/FacilityMap";
-import type { FacilityWithDetails } from "@/lib/data";
+import type { FacilityWithDetails, DistrictGroup } from "@/lib/data";
 
 type Sport = (typeof SPORTS)[number];
 
@@ -13,6 +14,7 @@ interface CityLandingContentProps {
   cityName: string;
   citySlug: string;
   facilities: FacilityWithDetails[];
+  districts?: DistrictGroup[];
 }
 
 export function CityLandingContent({
@@ -21,6 +23,7 @@ export function CityLandingContent({
   cityName,
   citySlug,
   facilities,
+  districts,
 }: CityLandingContentProps) {
   const mapMarkers = facilities
     .filter((f) => f.lat && f.lng)
@@ -101,11 +104,20 @@ export function CityLandingContent({
             <span className="text-5xl">{sport.icon}</span>
             <div>
               <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900">
-                {sport.nameCs} — {cityName}
+                {districts ? (
+                  <>
+                    {getSportFacilityTypePlural(sportSlug).charAt(0).toUpperCase()
+                      + getSportFacilityTypePlural(sportSlug).slice(1)}{" "}
+                    v Praze
+                  </>
+                ) : (
+                  <>{sport.nameCs} — {cityName}</>
+                )}
               </h1>
               <p className="mt-1 flex items-center gap-1.5 text-zinc-500">
                 <MapPin className="h-4 w-4" />
                 {facilities.length} sportovišť
+                {districts && ` v ${districts.length} městských částech`}
               </p>
             </div>
           </div>
@@ -127,15 +139,47 @@ export function CityLandingContent({
           </p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {facilities.map((facility) => (
-            <FacilityCard
-              key={facility.id}
-              facility={facility}
-              sportSlug={sportSlug}
-            />
-          ))}
-        </div>
+        {districts && districts.length > 0 ? (
+          <div className="space-y-8">
+            {districts.map((group) => (
+              <div key={group.district}>
+                <div className="mb-3 flex items-center justify-between">
+                  <h2 className="text-lg font-bold text-zinc-900">
+                    {group.district}{" "}
+                    <span className="text-sm font-normal text-zinc-400">
+                      ({group.facilities.length})
+                    </span>
+                  </h2>
+                  <Link
+                    href={`/sport/${sportSlug}/${group.districtSlug}`}
+                    className="text-sm font-medium text-emerald-600 hover:text-emerald-700"
+                  >
+                    Zobrazit {group.district} &rarr;
+                  </Link>
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {group.facilities.map((facility) => (
+                    <FacilityCard
+                      key={facility.id}
+                      facility={facility}
+                      sportSlug={sportSlug}
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {facilities.map((facility) => (
+              <FacilityCard
+                key={facility.id}
+                facility={facility}
+                sportSlug={sportSlug}
+              />
+            ))}
+          </div>
+        )}
       </section>
 
       {/* Other Sports in this City */}
