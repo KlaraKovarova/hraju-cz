@@ -1,4 +1,6 @@
 import nodemailer from "nodemailer";
+import { readFileSync } from "fs";
+import { join } from "path";
 
 function createTransporter() {
   if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
@@ -65,6 +67,85 @@ export async function sendMagicLinkEmail(
     return true;
   } catch (error) {
     console.error("Failed to send magic-link email:", error);
+    return false;
+  }
+}
+
+interface OutreachEmailParams {
+  facilityName: string;
+  facilityUrl: string;
+  claimUrl: string;
+  sportName: string;
+  city: string;
+}
+
+let cachedTemplate: string | null = null;
+
+function getOutreachTemplate(): string {
+  if (!cachedTemplate) {
+    cachedTemplate = readFileSync(
+      join(process.cwd(), "src/emails/claim-outreach.html"),
+      "utf-8"
+    );
+  }
+  return cachedTemplate;
+}
+
+function renderOutreachTemplate(params: OutreachEmailParams): string {
+  let html = getOutreachTemplate();
+  html = html.replace(/\{facilityName\}/g, params.facilityName);
+  html = html.replace(/\{facilityUrl\}/g, params.facilityUrl);
+  html = html.replace(/\{claimUrl\}/g, params.claimUrl);
+  html = html.replace(/\{sportName\}/g, params.sportName);
+  html = html.replace(/\{city\}/g, params.city);
+  return html;
+}
+
+export async function sendClaimOutreachEmail(
+  to: string,
+  params: OutreachEmailParams
+): Promise<boolean> {
+  const transporter = createTransporter();
+  if (!transporter) {
+    console.warn("SMTP not configured, skipping outreach email");
+    return false;
+  }
+
+  try {
+    const html = renderOutreachTemplate(params);
+
+    await transporter.sendMail({
+      from: `"hraju.cz" <${process.env.SMTP_USER}>`,
+      to,
+      subject: `Vaše sportoviště ${params.facilityName} je na hraju.cz — převezměte si svůj profil`,
+      text: [
+        `Dobrý den,`,
+        ``,
+        `na portálu hraju.cz jsme vytvořili profil vašeho sportoviště „${params.facilityName}" v kategorii ${params.sportName}, ${params.city}.`,
+        ``,
+        `hraju.cz je nový český adresář sportovišť, který pomáhá lidem najít místa pro sport ve svém okolí.`,
+        ``,
+        `Váš profil: ${params.facilityUrl}`,
+        ``,
+        `Pro převzetí profilu klikněte na tento odkaz:`,
+        params.claimUrl,
+        ``,
+        `Po převzetí můžete aktualizovat údaje, přidat fotografie a reagovat na dotazy návštěvníků.`,
+        ``,
+        `Máte otázky? Napište nám na klara@hraju.cz.`,
+        ``,
+        `S pozdravem,`,
+        `tým hraju.cz`,
+        ``,
+        `---`,
+        `Pokud si nepřejete dostávat další e-maily, odpovězte s předmětem „Odhlásit".`,
+        `Silex, spol. s r.o. · hraju.cz`,
+      ].join("\n"),
+      html,
+    });
+    return true;
+  } catch (error) {
+    console.error("Failed to send outreach email:", error);
     return false;
   }
 }

@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { FacilityForm } from "@/components/FacilityForm";
 import OwnerTokenGenerator from "@/components/OwnerTokenGenerator";
+import OutreachEmailSender from "@/components/OutreachEmailSender";
 
 interface EditFacilityPageProps {
   params: Promise<{ id: string }>;
@@ -20,6 +21,7 @@ export default async function EditFacilityPage({ params }: EditFacilityPageProps
           location: true,
           sports: { include: { sport: { select: { slug: true, nameCs: true } } } },
           amenities: { select: { amenityId: true } },
+          contacts: { where: { type: "EMAIL" }, take: 1 },
         },
       }),
       prisma.amenity.findMany({
@@ -61,6 +63,11 @@ export default async function EditFacilityPage({ params }: EditFacilityPageProps
         />
       </div>
       <OwnerTokenGenerator facilityId={facility.id} facilityName={facility.name} />
+      <OutreachEmailSender
+        facilityId={facility.id}
+        facilityName={facility.name}
+        contactEmail={facility.contacts[0]?.value ?? null}
+      />
     </div>
   );
 }
