@@ -119,6 +119,54 @@ export async function sendDelistConfirmationEmail(
   }
 }
 
+export async function sendEventSubmissionConfirmationEmail(
+  to: string,
+  eventName: string
+): Promise<boolean> {
+  const transporter = createTransporter();
+  if (!transporter) {
+    console.warn("SMTP not configured, skipping event submission email");
+    return false;
+  }
+
+  try {
+    await transporter.sendMail({
+      from: `"hraju.cz" <${process.env.SMTP_USER}>`,
+      to,
+      subject: `Akce „${eventName}" byla odeslána ke kontrole`,
+      text: [
+        `Dobrý den,`,
+        ``,
+        `potvrzujeme přijetí vaší turistické akce „${eventName}" na portál hraju.cz.`,
+        ``,
+        `Akci zkontrolujeme a po schválení se zobrazí v kalendáři na hraju.cz.`,
+        ``,
+        `Máte otázky? Napište nám na klara@hraju.cz.`,
+        ``,
+        `S pozdravem,`,
+        `tým hraju.cz`,
+      ].join("\n"),
+      html: `
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #18181b;">Akce odeslána ke kontrole</h2>
+          <p>Dobrý den,</p>
+          <p>potvrzujeme přijetí vaší turistické akce <strong>${eventName}</strong> na portál hraju.cz.</p>
+          <p>Akci zkontrolujeme a po schválení se zobrazí v kalendáři na hraju.cz.</p>
+          <p style="color: #71717a; font-size: 14px;">
+            Máte otázky? Napište nám na <a href="mailto:klara@hraju.cz" style="color: #059669;">klara@hraju.cz</a>.
+          </p>
+          <hr style="border: none; border-top: 1px solid #e4e4e7; margin: 24px 0;" />
+          <p style="color: #a1a1aa; font-size: 12px;">hraju.cz – sportoviště v Česku</p>
+        </div>
+      `,
+    });
+    return true;
+  } catch (error) {
+    console.error("Failed to send event submission email:", error);
+    return false;
+  }
+}
+
 interface OutreachEmailParams {
   facilityName: string;
   facilityUrl: string;

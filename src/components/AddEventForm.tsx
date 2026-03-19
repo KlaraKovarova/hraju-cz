@@ -1,0 +1,288 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { Send, CheckCircle2, AlertCircle } from "lucide-react";
+import Link from "next/link";
+
+const inputClass =
+  "w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-emerald-400 focus:outline-none focus:ring-1 focus:ring-emerald-400";
+
+export default function AddEventForm() {
+  const [submitting, setSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [timestamp, setTimestamp] = useState<number>(0);
+
+  const [form, setForm] = useState({
+    name: "",
+    dateStart: "",
+    dateEnd: "",
+    city: "",
+    region: "",
+    description: "",
+    externalUrl: "",
+    submitterName: "",
+    submitterEmail: "",
+    website_url: "", // honeypot
+  });
+
+  useEffect(() => {
+    setTimestamp(Date.now());
+  }, []);
+
+  function update(field: string, value: string) {
+    setForm((prev) => ({ ...prev, [field]: value }));
+  }
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setSubmitting(true);
+    setError(null);
+
+    if (!form.name.trim()) {
+      setError("Vyplňte název akce.");
+      setSubmitting(false);
+      return;
+    }
+    if (!form.dateStart) {
+      setError("Vyplňte datum začátku.");
+      setSubmitting(false);
+      return;
+    }
+    if (!form.city.trim()) {
+      setError("Vyplňte město konání.");
+      setSubmitting(false);
+      return;
+    }
+    if (!form.submitterName.trim()) {
+      setError("Vyplňte vaše jméno.");
+      setSubmitting(false);
+      return;
+    }
+    if (!form.submitterEmail.trim()) {
+      setError("Vyplňte váš e-mail.");
+      setSubmitting(false);
+      return;
+    }
+
+    try {
+      const res = await fetch("/api/events/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...form,
+          _timestamp: timestamp,
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Nepodařilo se odeslat.");
+      }
+
+      setSuccess(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Nepodařilo se odeslat.");
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
+  if (success) {
+    return (
+      <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-8 text-center">
+        <CheckCircle2 className="mx-auto h-12 w-12 text-emerald-500" />
+        <h3 className="mt-4 text-xl font-bold text-emerald-800">
+          Děkujeme za přidání akce!
+        </h3>
+        <p className="mt-2 text-sm text-emerald-600">
+          Vaše akce bude zobrazena po schválení naším týmem. Potvrzení jsme
+          odeslali na váš e-mail.
+        </p>
+        <Link
+          href="/"
+          className="mt-4 inline-block text-sm font-medium text-emerald-700 hover:underline"
+        >
+          Zpět na úvodní stránku
+        </Link>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-6">
+      {error && (
+        <div className="flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700">
+          <AlertCircle className="h-4 w-4 shrink-0" />
+          {error}
+        </div>
+      )}
+
+      {/* Honeypot */}
+      <input
+        name="website_url"
+        value={form.website_url}
+        onChange={(e) => update("website_url", e.target.value)}
+        style={{ position: "absolute", left: "-9999px" }}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+      />
+
+      {/* Section 1: O akci */}
+      <fieldset className="space-y-4 rounded-2xl border border-zinc-200 bg-white p-6">
+        <legend className="px-2 text-sm font-semibold text-zinc-900">
+          O akci
+        </legend>
+
+        <div>
+          <label className="mb-1 block text-sm font-medium text-zinc-700">
+            Název akce *
+          </label>
+          <input
+            type="text"
+            required
+            maxLength={200}
+            placeholder="např. Jarní pochod přes Drahanskou vrchovinu"
+            value={form.name}
+            onChange={(e) => update("name", e.target.value)}
+            className={inputClass}
+          />
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div>
+            <label className="mb-1 block text-sm font-medium text-zinc-700">
+              Datum začátku *
+            </label>
+            <input
+              type="date"
+              required
+              value={form.dateStart}
+              onChange={(e) => update("dateStart", e.target.value)}
+              className={inputClass}
+            />
+          </div>
+          <div>
+            <label className="mb-1 block text-sm font-medium text-zinc-700">
+              Datum konce
+            </label>
+            <input
+              type="date"
+              value={form.dateEnd}
+              onChange={(e) => update("dateEnd", e.target.value)}
+              className={inputClass}
+            />
+            <p className="mt-1 text-xs text-zinc-400">
+              Pro vícedenní akce
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div>
+            <label className="mb-1 block text-sm font-medium text-zinc-700">
+              Město konání *
+            </label>
+            <input
+              type="text"
+              required
+              placeholder="např. Brno"
+              value={form.city}
+              onChange={(e) => update("city", e.target.value)}
+              className={inputClass}
+            />
+          </div>
+          <div>
+            <label className="mb-1 block text-sm font-medium text-zinc-700">
+              Okres / kraj
+            </label>
+            <input
+              type="text"
+              placeholder="např. Brno-venkov"
+              value={form.region}
+              onChange={(e) => update("region", e.target.value)}
+              className={inputClass}
+            />
+          </div>
+        </div>
+
+        <div>
+          <label className="mb-1 block text-sm font-medium text-zinc-700">
+            Krátký popis
+          </label>
+          <textarea
+            maxLength={500}
+            rows={3}
+            placeholder="Co účastníky čeká, trasa, délka..."
+            value={form.description}
+            onChange={(e) => update("description", e.target.value)}
+            className={inputClass}
+          />
+        </div>
+
+        <div>
+          <label className="mb-1 block text-sm font-medium text-zinc-700">
+            Odkaz na akci
+          </label>
+          <input
+            type="url"
+            placeholder="https://..."
+            value={form.externalUrl}
+            onChange={(e) => update("externalUrl", e.target.value)}
+            className={inputClass}
+          />
+        </div>
+      </fieldset>
+
+      {/* Section 2: Vaše údaje */}
+      <fieldset className="space-y-4 rounded-2xl border border-zinc-200 bg-white p-6">
+        <legend className="px-2 text-sm font-semibold text-zinc-900">
+          Vaše údaje
+        </legend>
+
+        <div>
+          <label className="mb-1 block text-sm font-medium text-zinc-700">
+            Vaše jméno *
+          </label>
+          <input
+            type="text"
+            required
+            placeholder="Jan Novák"
+            value={form.submitterName}
+            onChange={(e) => update("submitterName", e.target.value)}
+            className={inputClass}
+          />
+        </div>
+
+        <div>
+          <label className="mb-1 block text-sm font-medium text-zinc-700">
+            Váš e-mail *
+          </label>
+          <input
+            type="email"
+            required
+            placeholder="jan@example.com"
+            value={form.submitterEmail}
+            onChange={(e) => update("submitterEmail", e.target.value)}
+            className={inputClass}
+          />
+        </div>
+      </fieldset>
+
+      {/* Submit */}
+      <button
+        type="submit"
+        disabled={submitting}
+        className="flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-700 disabled:opacity-50"
+      >
+        <Send className="h-4 w-4" />
+        {submitting ? "Odesílání..." : "Odeslat akci ke schválení"}
+      </button>
+
+      <p className="text-center text-xs text-zinc-400">
+        Po odeslání bude akce zkontrolována a přidána do kalendáře.
+      </p>
+    </form>
+  );
+}
