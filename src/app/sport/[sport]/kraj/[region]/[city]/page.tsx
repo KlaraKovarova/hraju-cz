@@ -7,6 +7,7 @@ import { getFacilitiesByRegionCityAndSport } from "@/lib/data";
 import { getSportFacilityTypePlural, getSportFacilityTypePluralGenitive } from "@/lib/seo";
 import { FacilityCard } from "@/components/FacilityCard";
 import { FacilityMap } from "@/components/FacilityMap";
+import { AdSlot } from "@/components/AdSlot";
 import type { Metadata } from "next";
 
 interface CityPageProps {
@@ -168,6 +169,11 @@ export default async function CityPage({ params }: CityPageProps) {
           </div>
         )}
       </section>
+
+      {/* Ad: after facility cards */}
+      <div className="mx-auto max-w-6xl px-6 py-4">
+        <AdSlot slot="1234567892" format="horizontal" />
+      </div>
 
       {/* Other Sports */}
       <section className="border-t border-zinc-100 bg-white">

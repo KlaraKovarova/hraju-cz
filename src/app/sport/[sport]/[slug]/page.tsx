@@ -21,6 +21,7 @@ import EditSuggestionForm from "@/components/EditSuggestionForm";
 import { CityLandingContent } from "@/components/CityLandingContent";
 import { PhotoGallery } from "@/components/PhotoGallery";
 import { ShareButton } from "@/components/ShareButton";
+import { AdSlot } from "@/components/AdSlot";
 import type { Metadata } from "next";
 
 interface FacilityPageProps {
@@ -711,6 +712,11 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
             />
           </div>
         </div>
+      </div>
+
+      {/* Ad: below facility info, above related facilities */}
+      <div className="mx-auto max-w-6xl px-6 py-4">
+        <AdSlot slot="1234567893" format="rectangle" />
       </div>
 
       {/* Related Facilities */}

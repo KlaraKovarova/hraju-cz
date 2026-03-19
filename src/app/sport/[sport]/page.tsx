@@ -6,6 +6,7 @@ import { getRegionsBySport, getTopFacilitiesBySport, getTopCitiesBySport } from 
 import { getSportTitleSuffix, getSportFacilityTypePluralGenitive, getSportFacilityType } from "@/lib/seo";
 import { FacilityCard } from "@/components/FacilityCard";
 import { HeroSearchForm } from "@/components/HeroSearchForm";
+import { AdSlot } from "@/components/AdSlot";
 import type { Metadata } from "next";
 
 interface SportPageProps {
@@ -175,6 +176,11 @@ export default async function SportPage({ params }: SportPageProps) {
           </div>
         </section>
       )}
+
+      {/* Ad: after facility cards */}
+      <div className="mx-auto max-w-6xl px-6 py-4">
+        <AdSlot slot="1234567891" format="horizontal" />
+      </div>
 
       {/* Other Sports */}
       <section className="border-t border-zinc-100 bg-white">
