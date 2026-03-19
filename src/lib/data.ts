@@ -409,7 +409,10 @@ export async function getTopFacilitiesBySport(
   limit: number = 10
 ): Promise<FacilityWithDetails[]> {
   const facilities = staticFacilitiesBySport(sportSlug);
-  facilities.sort((a, b) => a.name.localeCompare(b.name, "cs"));
+  facilities.sort((a, b) => {
+    if (a.isPremium !== b.isPremium) return a.isPremium ? -1 : 1;
+    return a.name.localeCompare(b.name, "cs");
+  });
   return facilities.slice(0, limit);
 }
 
@@ -419,7 +422,10 @@ export async function getTopFacilitiesByRegionAndSport(
   limit: number = 10
 ): Promise<FacilityWithDetails[]> {
   const facilities = staticFacilitiesByRegionAndSport(regionSlug, sportSlug);
-  facilities.sort((a, b) => a.name.localeCompare(b.name, "cs"));
+  facilities.sort((a, b) => {
+    if (a.isPremium !== b.isPremium) return a.isPremium ? -1 : 1;
+    return a.name.localeCompare(b.name, "cs");
+  });
   return facilities.slice(0, limit);
 }
 
@@ -460,8 +466,9 @@ function staticFacilitiesByCityAndSport(
     if (results.length === 0) return { facilities: [], cityName: null };
 
     const mapped = results.map(toFacilityWithDetails);
-    // Sort: district asc, then name asc
+    // Sort: premium first, then district asc, then name asc
     mapped.sort((a, b) => {
+      if (a.isPremium !== b.isPremium) return a.isPremium ? -1 : 1;
       const distA = a.location.city;
       const distB = b.location.city;
       if (distA !== distB) return distA.localeCompare(distB, "cs", { numeric: true });
@@ -497,7 +504,10 @@ function staticFacilitiesByCityAndSport(
   });
 
   const mapped = results.map(toFacilityWithDetails);
-  mapped.sort((a, b) => a.name.localeCompare(b.name, "cs"));
+  mapped.sort((a, b) => {
+    if (a.isPremium !== b.isPremium) return a.isPremium ? -1 : 1;
+    return a.name.localeCompare(b.name, "cs");
+  });
 
   return { facilities: mapped, cityName };
 }

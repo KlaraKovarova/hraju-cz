@@ -58,6 +58,11 @@ export function FacilityCard({ facility, sportSlug }: FacilityCardProps) {
             </span>
           </div>
         </div>
+        {facility.isPremium && (
+          <span className="shrink-0 rounded-full bg-amber-50 px-2.5 py-1 text-xs font-semibold text-amber-700">
+            Premium
+          </span>
+        )}
       </div>
 
       {/* Info pills */}

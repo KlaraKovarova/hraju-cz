@@ -24,6 +24,7 @@ import { PhotoGallery } from "@/components/PhotoGallery";
 import { ShareButton } from "@/components/ShareButton";
 import { AdSlot } from "@/components/AdSlot";
 import { TrackPageView } from "@/components/TrackPageView";
+import { getOwnerSession } from "@/lib/owner-auth";
 import type { Metadata } from "next";
 
 interface FacilityPageProps {
@@ -198,6 +199,10 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
   // Related facilities in same city
   const relatedFacilities = await getRelatedFacilities(sportSlug, facility.location.city, slug, 5);
 
+  // Check if the current visitor is the facility owner
+  const ownerSession = await getOwnerSession();
+  const isOwner = ownerSession?.facilityId === facility.id;
+
   // Build JSON-LD LocalBusiness structured data for SEO
   const phone = facility.isClaimed
     ? facility.contacts.find((c) => c.type === "PHONE")?.value
@@ -371,6 +376,11 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
               <span className="flex items-center gap-1 rounded-full bg-emerald-50 px-3 py-1.5 text-sm font-semibold text-emerald-600">
                 <CheckCircle2 className="h-3.5 w-3.5" />
                 Ověřeno
+              </span>
+            )}
+            {facility.isPremium && (
+              <span className="rounded-full bg-amber-50 px-3 py-1.5 text-sm font-semibold text-amber-700">
+                Premium
               </span>
             )}
           </div>
@@ -711,6 +721,21 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
               </div>
             )}
 
+            {/* Upgrade CTA for claimed non-premium owners */}
+            {isOwner && facility.isClaimed && !facility.isPremium && (
+              <Link
+                href="/pro"
+                className="block rounded-2xl border border-amber-200 bg-amber-50 p-4 text-center transition hover:border-amber-300 hover:bg-amber-100"
+              >
+                <p className="text-sm font-semibold text-amber-800">
+                  Upgradujte na Premium pro více zákazníků
+                </p>
+                <p className="mt-1 text-xs text-amber-600">
+                  Zvýrazněný profil, bez reklam konkurence a statistiky zobrazení.
+                </p>
+              </Link>
+            )}
+
             {/* Edit Suggestion */}
             <EditSuggestionForm
               facilityId={facility.id}
@@ -720,10 +745,12 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
         </div>
       </div>
 
-      {/* Ad: below facility info, above related facilities */}
+      {/* Ad: below facility info, above related facilities (hidden for premium) */}
+      {!facility.isPremium && (
       <div className="mx-auto max-w-6xl px-6 py-4">
         <AdSlot slot="1234567893" format="rectangle" />
       </div>
+      )}
 
       {/* Related Facilities */}
       {relatedFacilities.length > 0 && (
