@@ -67,6 +67,12 @@ export const SPORT_LINKS: SportLinkGroup[] = [
         description: "Přehled squashových turnajů v České republice.",
         category: "tournaments",
       },
+      {
+        title: "Kalendář akcí",
+        url: "https://czechsquash.cz/kalendar-akci/",
+        description: "Kalendář squashových akcí a turnajů v ČR.",
+        category: "events",
+      },
     ],
   },
   {
@@ -89,6 +95,12 @@ export const SPORT_LINKS: SportLinkGroup[] = [
         url: "https://www.czechbadminton.cz/souteze",
         description: "Kalendář badmintonových soutěží a turnajů.",
         category: "tournaments",
+      },
+      {
+        title: "Termínový kalendář turnajů",
+        url: "https://www.czechbadminton.cz/turnaje/kalendar",
+        description: "Termínový kalendář badmintonových turnajů v ČR.",
+        category: "events",
       },
     ],
   },
