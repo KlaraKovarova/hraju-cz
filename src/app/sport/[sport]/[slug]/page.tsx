@@ -1,6 +1,5 @@
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import {
   MapPin,
   Phone,
@@ -13,6 +12,7 @@ import {
   Navigation,
   CheckCircle2,
   CalendarCheck,
+  Building2,
 } from "lucide-react";
 import { getSportBySlug } from "@/lib/sports";
 import { getFacilityBySlug, getInactiveFacilityRedirectInfo, getFacilitiesByCityAndSport } from "@/lib/data";
@@ -20,6 +20,8 @@ import { getRegionByName, cityToSlug } from "@/lib/regions";
 import { getSportFacilityType, getSportFacilityTypePluralGenitive } from "@/lib/seo";
 import EditSuggestionForm from "@/components/EditSuggestionForm";
 import { CityLandingContent } from "@/components/CityLandingContent";
+import { PhotoGallery } from "@/components/PhotoGallery";
+import { ShareButton } from "@/components/ShareButton";
 import type { Metadata } from "next";
 
 interface FacilityPageProps {
@@ -353,42 +355,13 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
       </section>
 
       {/* Facility Images */}
-      {(() => {
-        const primaryImage = facility.images.find((img) => img.isPrimary) ?? facility.images[0];
-        const displayImages = facility.isPremium ? facility.images : (primaryImage ? [primaryImage] : []);
-        if (displayImages.length === 0) return null;
-        return (
-          <section className="border-b border-zinc-100 bg-white">
-            <div className="mx-auto max-w-6xl px-6 py-6">
-              {displayImages.length === 1 ? (
-                <div className="overflow-hidden rounded-2xl">
-                  <Image
-                    src={displayImages[0].url}
-                    alt={displayImages[0].alt ?? facility.name}
-                    width={1200}
-                    height={600}
-                    className="h-auto max-h-[400px] w-full object-cover"
-                  />
-                </div>
-              ) : (
-                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                  {displayImages.map((img, i) => (
-                    <div key={i} className="overflow-hidden rounded-xl">
-                      <Image
-                        src={img.url}
-                        alt={img.alt ?? `${facility.name} — foto ${i + 1}`}
-                        width={400}
-                        height={300}
-                        className="h-48 w-full object-cover transition hover:scale-105"
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          </section>
-        );
-      })()}
+      <section className="border-b border-zinc-100 bg-white">
+        <PhotoGallery
+          images={facility.images}
+          facilityName={facility.name}
+          isPremium={facility.isPremium}
+        />
+      </section>
 
       {/* Content Grid */}
       <div className="mx-auto max-w-6xl px-6 py-8">
@@ -614,7 +587,10 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
               )}
 
               <a
-                href={osmLinkUrl}
+                href={mapLat && mapLng
+                  ? `https://www.google.com/maps/dir/?api=1&destination=${mapLat},${mapLng}`
+                  : `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(facility.address + ", " + facility.location.city)}`
+                }
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 rounded-2xl border border-zinc-100 bg-white p-4 text-sm font-medium text-zinc-700 transition hover:border-emerald-200 hover:shadow-sm"
@@ -625,6 +601,11 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                 Navigovat
                 <ExternalLink className="ml-auto h-3.5 w-3.5 text-zinc-400" />
               </a>
+
+              <ShareButton
+                title={`${facility.name} — ${sport.nameCs} v ${facility.location.city} | hraju.cz`}
+                url={`https://hraju.cz/sport/${sportSlug}/${slug}`}
+              />
             </div>
 
             {/* Amenities */}
@@ -644,6 +625,37 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                     </li>
                   ))}
                 </ul>
+              </div>
+            )}
+
+            {/* Claim CTA / Verified Badge */}
+            {!facility.isClaimed ? (
+              <Link
+                href="/moje-sportoviste"
+                className="block rounded-2xl border-2 border-dashed border-emerald-200 bg-emerald-50/50 p-5 text-center transition hover:border-emerald-300 hover:bg-emerald-50"
+              >
+                <Building2 className="mx-auto h-8 w-8 text-emerald-500" />
+                <p className="mt-2 text-sm font-semibold text-zinc-900">
+                  Jste provozovatel?
+                </p>
+                <p className="mt-1 text-xs text-zinc-500">
+                  Převezměte svůj profil a získejte kontrolu nad svým zápisem.
+                </p>
+                <span className="mt-3 inline-block rounded-lg bg-emerald-600 px-4 py-2 text-xs font-bold text-white transition hover:bg-emerald-700">
+                  Převzít sportoviště
+                </span>
+              </Link>
+            ) : (
+              <div className="flex items-center gap-3 rounded-2xl border border-emerald-100 bg-emerald-50 p-4">
+                <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600" />
+                <div>
+                  <p className="text-sm font-semibold text-emerald-800">
+                    Ověřený provozovatel
+                  </p>
+                  <p className="text-xs text-emerald-600">
+                    Údaje spravuje provozovatel sportoviště.
+                  </p>
+                </div>
               </div>
             )}
 
