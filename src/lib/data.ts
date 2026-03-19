@@ -1,6 +1,7 @@
 import { prisma } from "./prisma";
 import exportData from "@/data/facilities-export.json";
 import { getRegionByName, getRegionBySlug, cityToSlug, findCityBySlug, type Region } from "./regions";
+import { SPORTS } from "./sports";
 
 const DB_QUERY_TIMEOUT_MS = 3000;
 
@@ -82,6 +83,17 @@ for (const c of exportData.contacts) {
 
 // Slug -> facility index
 const facilityBySlug = new Map(exportData.facilities.map((f) => [f.slug, f]));
+
+// Visible sports: only those in the SPORTS config array
+const visibleSportSlugs: Set<string> = new Set(SPORTS.map((s) => s.slug));
+const visibleSportIds = new Set(
+  exportData.sports.filter((s) => visibleSportSlugs.has(s.slug)).map((s) => s.id)
+);
+// Facilities that belong to at least one visible sport
+const visibleFacilityIds = new Set<string>();
+for (const fs of exportData.facilitySports) {
+  if (visibleSportIds.has(fs.sportId)) visibleFacilityIds.add(fs.facilityId);
+}
 
 function toFacilityWithDetails(f: ExportData["facilities"][number]): FacilityWithDetails {
   const loc = locationById.get(f.locationId);
@@ -546,11 +558,11 @@ export async function getAllCitiesForSport(
 // --- Homepage queries ---
 
 export function getTotalFacilityCount(): number {
-  return exportData.facilities.filter((f) => f.isActive).length;
+  return exportData.facilities.filter((f) => f.isActive && visibleFacilityIds.has(f.id)).length;
 }
 
 export function getTotalSportCount(): number {
-  return new Set(exportData.facilitySports.map((fs) => fs.sportId)).size;
+  return SPORTS.length;
 }
 
 /** Featured facilities: claimed or any active, deterministic daily rotation */
