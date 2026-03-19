@@ -200,6 +200,14 @@ export function CityLandingContent({
               </Link>
             ))}
           </div>
+          <div className="mt-6 text-center">
+            <Link
+              href={`/mesto/${citySlug}`}
+              className="text-sm font-medium text-emerald-600 hover:text-emerald-700"
+            >
+              Všechny sporty v {cityName} &rarr;
+            </Link>
+          </div>
         </div>
       </section>
     </main>

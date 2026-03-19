@@ -44,6 +44,12 @@ export function Footer() {
         <div className="mt-6 flex flex-col items-center gap-3 border-t border-zinc-200 pt-6 text-xs text-zinc-400">
           <div className="flex gap-4">
             <Link
+              href="/mesta"
+              className="hover:text-zinc-600"
+            >
+              Města
+            </Link>
+            <Link
               href="/kontakt"
               className="hover:text-zinc-600"
             >

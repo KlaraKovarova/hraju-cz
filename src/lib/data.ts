@@ -671,6 +671,119 @@ export async function searchFacilities(
   return results.slice(0, limit).map(toFacilityWithDetails);
 }
 
+// --- Cross-sport city page queries (/mesto) ---
+
+export type SportGroup = {
+  sport: { slug: string; nameCs: string; icon: string | null };
+  facilities: FacilityWithDetails[];
+};
+
+/** Get all facilities in a city across all sports, grouped by sport */
+export async function getFacilitiesByCity(
+  citySlug: string
+): Promise<{ facilities: FacilityWithDetails[]; cityName: string | null; sportGroups: SportGroup[] }> {
+  const allCities = [...new Set(exportData.locations.map((l) => l.city))];
+
+  let matchedFacilities: FacilityWithDetails[];
+  let cityName: string | null;
+
+  // Special case: "praha" aggregates all Praha districts
+  if (citySlug === "praha") {
+    cityName = "Praha";
+    const results = exportData.facilities.filter((f) => {
+      if (!f.isActive) return false;
+      const loc = locationById.get(f.locationId);
+      return loc ? isPrahaDistrict(loc.city) : false;
+    });
+    matchedFacilities = results.map(toFacilityWithDetails);
+  } else {
+    cityName = findCityBySlug(allCities, citySlug) ?? null;
+    if (!cityName) return { facilities: [], cityName: null, sportGroups: [] };
+
+    const results = exportData.facilities.filter((f) => {
+      if (!f.isActive) return false;
+      const loc = locationById.get(f.locationId);
+      return loc?.city === cityName;
+    });
+    matchedFacilities = results.map(toFacilityWithDetails);
+  }
+
+  matchedFacilities.sort((a, b) => a.name.localeCompare(b.name, "cs"));
+
+  // Group by sport
+  const sportMap = new Map<string, { sport: { slug: string; nameCs: string; icon: string | null }; facilities: FacilityWithDetails[] }>();
+  for (const f of matchedFacilities) {
+    for (const fs of f.sports) {
+      const key = fs.sport.slug;
+      if (!sportMap.has(key)) {
+        sportMap.set(key, { sport: fs.sport, facilities: [] });
+      }
+      sportMap.get(key)!.facilities.push(f);
+    }
+  }
+
+  // Sort sport groups by facility count descending
+  const sportGroups = [...sportMap.values()].sort(
+    (a, b) => b.facilities.length - a.facilities.length
+  );
+
+  return { facilities: matchedFacilities, cityName, sportGroups };
+}
+
+/** Top cities across all sports for /mesta index (Praha districts aggregated) */
+export async function getTopCitiesOverallForMesto(limit: number = 20): Promise<CityForSport[]> {
+  const cityCounts = new Map<string, number>();
+  let prahaCount = 0;
+  for (const f of exportData.facilities) {
+    if (!f.isActive) continue;
+    const loc = locationById.get(f.locationId);
+    if (!loc) continue;
+    if (isPrahaDistrict(loc.city)) {
+      prahaCount++;
+    } else {
+      cityCounts.set(loc.city, (cityCounts.get(loc.city) || 0) + 1);
+    }
+  }
+  const results: CityForSport[] = [...cityCounts.entries()]
+    .filter(([, count]) => count >= 2)
+    .map(([city, count]) => ({
+      city,
+      citySlug: cityToSlug(city),
+      facilityCount: count,
+    }));
+  if (prahaCount >= 2) {
+    results.push({ city: "Praha", citySlug: "praha", facilityCount: prahaCount });
+  }
+  return results
+    .sort((a, b) => b.facilityCount - a.facilityCount)
+    .slice(0, limit);
+}
+
+/** Count distinct sports in a city (for meta descriptions) */
+export function getSportCountInCity(citySlug: string): number {
+  const allCities = [...new Set(exportData.locations.map((l) => l.city))];
+  const sportSlugs = new Set<string>();
+
+  const matchCity = citySlug === "praha"
+    ? (loc: { city: string }) => isPrahaDistrict(loc.city)
+    : (loc: { city: string }) => {
+        const cityName = findCityBySlug(allCities, citySlug);
+        return cityName ? loc.city === cityName : false;
+      };
+
+  for (const f of exportData.facilities) {
+    if (!f.isActive) continue;
+    const loc = locationById.get(f.locationId);
+    if (!loc || !matchCity(loc)) continue;
+    const fSportIds = sportsByFacilityId.get(f.id) || [];
+    for (const sid of fSportIds) {
+      const s = sportById.get(sid);
+      if (s) sportSlugs.add(s.slug);
+    }
+  }
+  return sportSlugs.size;
+}
+
 export async function getCities(): Promise<string[]> {
   try {
     const locations = await withTimeout(

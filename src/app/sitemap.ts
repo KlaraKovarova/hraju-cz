@@ -111,5 +111,39 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
+  // Cross-sport city pages: /mesta index + /mesto/[city] for top 20 cities
+  entries.push({
+    url: `${BASE_URL}/mesta`,
+    changeFrequency: "weekly",
+    priority: 0.8,
+  });
+
+  const crossCityCounts = new Map<string, number>();
+  let crossPrahaCount = 0;
+  for (const facility of facilities) {
+    if (/^Praha \d+$/.test(facility.city)) {
+      crossPrahaCount++;
+    } else {
+      crossCityCounts.set(facility.city, (crossCityCounts.get(facility.city) || 0) + 1);
+    }
+  }
+  const crossCityEntries: { city: string; slug: string; count: number }[] = [];
+  for (const [city, count] of crossCityCounts) {
+    if (count >= 2) {
+      crossCityEntries.push({ city, slug: cityToSlug(city), count });
+    }
+  }
+  if (crossPrahaCount >= 2) {
+    crossCityEntries.push({ city: "Praha", slug: "praha", count: crossPrahaCount });
+  }
+  crossCityEntries.sort((a, b) => b.count - a.count);
+  for (const entry of crossCityEntries.slice(0, 20)) {
+    entries.push({
+      url: `${BASE_URL}/mesto/${entry.slug}`,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    });
+  }
+
   return entries;
 }
