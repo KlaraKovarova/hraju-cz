@@ -71,9 +71,58 @@ export async function sendMagicLinkEmail(
   }
 }
 
+export async function sendDelistConfirmationEmail(
+  to: string,
+  facilityName: string
+): Promise<boolean> {
+  const transporter = createTransporter();
+  if (!transporter) {
+    console.warn("SMTP not configured, skipping delist confirmation email");
+    return false;
+  }
+
+  try {
+    await transporter.sendMail({
+      from: `"hraju.cz" <${process.env.SMTP_USER}>`,
+      to,
+      subject: `Potvrzení žádosti o odebrání – ${facilityName}`,
+      text: [
+        `Dobrý den,`,
+        ``,
+        `potvrzujeme přijetí vaší žádosti o odebrání sportoviště „${facilityName}" z portálu hraju.cz.`,
+        ``,
+        `Vaši žádost zpracujeme do 30 dnů v souladu s GDPR. O výsledku vás budeme informovat e-mailem.`,
+        ``,
+        `Máte otázky? Napište nám na klara@hraju.cz.`,
+        ``,
+        `S pozdravem,`,
+        `tým hraju.cz`,
+      ].join("\n"),
+      html: `
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #18181b;">Potvrzení žádosti o odebrání</h2>
+          <p>Dobrý den,</p>
+          <p>potvrzujeme přijetí vaší žádosti o odebrání sportoviště <strong>${facilityName}</strong> z portálu hraju.cz.</p>
+          <p>Vaši žádost zpracujeme do 30 dnů v souladu s GDPR. O výsledku vás budeme informovat e-mailem.</p>
+          <p style="color: #71717a; font-size: 14px;">
+            Máte otázky? Napište nám na <a href="mailto:klara@hraju.cz" style="color: #059669;">klara@hraju.cz</a>.
+          </p>
+          <hr style="border: none; border-top: 1px solid #e4e4e7; margin: 24px 0;" />
+          <p style="color: #a1a1aa; font-size: 12px;">hraju.cz – sportoviště v Česku</p>
+        </div>
+      `,
+    });
+    return true;
+  } catch (error) {
+    console.error("Failed to send delist confirmation email:", error);
+    return false;
+  }
+}
+
 interface OutreachEmailParams {
   facilityName: string;
   facilityUrl: string;
+  facilitySlug: string;
   claimUrl: string;
   sportName: string;
   city: string;
@@ -98,6 +147,7 @@ function renderOutreachTemplate(params: OutreachEmailParams): string {
   html = html.replace(/\{claimUrl\}/g, params.claimUrl);
   html = html.replace(/\{sportName\}/g, params.sportName);
   html = html.replace(/\{city\}/g, params.city);
+  html = html.replace(/\{facilitySlug\}/g, params.facilitySlug);
   return html;
 }
 
@@ -138,7 +188,8 @@ export async function sendClaimOutreachEmail(
         `tým hraju.cz`,
         ``,
         `---`,
-        `Pokud si nepřejete dostávat další e-maily, odpovězte s předmětem „Odhlásit".`,
+        `Pokud si nepřejete být uvedeni na hraju.cz, můžete požádat o odebrání:`,
+        `https://hraju.cz/odhlasit?facility=${params.facilitySlug}`,
         `Silex, spol. s r.o. · hraju.cz`,
       ].join("\n"),
       html,

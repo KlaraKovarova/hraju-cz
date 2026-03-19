@@ -66,6 +66,7 @@ export async function POST(request: NextRequest) {
     const sent = await sendClaimOutreachEmail(emailContact.value, {
       facilityName: facility.name,
       facilityUrl,
+      facilitySlug: facility.slug,
       claimUrl,
       sportName,
       city: facility.location.city,

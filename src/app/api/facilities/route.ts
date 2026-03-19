@@ -5,12 +5,18 @@ export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const sport = searchParams.get("sport");
   const city = searchParams.get("city");
+  const slug = searchParams.get("slug");
+  const search = searchParams.get("search");
+  const limit = searchParams.get("limit");
 
   try {
     const facilities = await prisma.facility.findMany({
       where: {
+        isActive: true,
+        ...(slug ? { slug } : {}),
         ...(sport ? { sports: { some: { sport: { slug: sport } } } } : {}),
         ...(city ? { location: { city: { contains: city } } } : {}),
+        ...(search ? { name: { contains: search, mode: "insensitive" as const } } : {}),
       },
       include: {
         location: { select: { city: true, region: true } },
@@ -19,6 +25,7 @@ export async function GET(request: NextRequest) {
         images: { where: { isPrimary: true }, take: 1 },
       },
       orderBy: [{ isPremium: "desc" }, { name: "asc" }],
+      ...(limit ? { take: Number(limit) } : {}),
     });
     return NextResponse.json(facilities);
   } catch (error) {
