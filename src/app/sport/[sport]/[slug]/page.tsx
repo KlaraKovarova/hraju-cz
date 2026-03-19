@@ -25,6 +25,7 @@ import { ShareButton } from "@/components/ShareButton";
 import { AdSlot } from "@/components/AdSlot";
 import { TrackPageView } from "@/components/TrackPageView";
 import { getOwnerSession } from "@/lib/owner-auth";
+import { prisma } from "@/lib/prisma";
 import type { Metadata } from "next";
 
 interface FacilityPageProps {
@@ -202,6 +203,15 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
   // Check if the current visitor is the facility owner
   const ownerSession = await getOwnerSession();
   const isOwner = ownerSession?.facilityId === facility.id;
+
+  // Track page view (fire-and-forget)
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  prisma.facilityView.upsert({
+    where: { facilityId_date: { facilityId: facility.id, date: today } },
+    update: { views: { increment: 1 } },
+    create: { facilityId: facility.id, date: today, views: 1 },
+  }).catch(() => {});
 
   // Build JSON-LD LocalBusiness structured data for SEO
   const phone = facility.isClaimed

@@ -11,6 +11,10 @@ import {
   Building2,
   Loader2,
   Mail,
+  BarChart3,
+  Lock,
+  TrendingUp,
+  TrendingDown,
 } from "lucide-react";
 
 interface FacilityData {
@@ -25,6 +29,14 @@ interface FacilityData {
   website: string | null;
   contacts: { id: string; type: string; value: string; isPrimary: boolean }[];
   sports: { sport: { slug: string; nameCs: string } }[];
+}
+
+interface AnalyticsData {
+  totalViews: number;
+  thisWeekViews: number;
+  lastWeekViews: number;
+  dailyViews: { date: string; views: number }[];
+  isPremium: boolean;
 }
 
 type AuthState = "loading" | "unauthenticated" | "authenticating" | "authenticated";
@@ -53,6 +65,7 @@ function MojeSportovisteContent() {
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
+  const [analytics, setAnalytics] = useState<AnalyticsData | null>(null);
 
   const [form, setForm] = useState({
     name: "",
@@ -94,6 +107,10 @@ function MojeSportovisteContent() {
             : "",
         });
         setAuthState("authenticated");
+        // Fetch analytics in background
+        fetch("/api/owner/analytics").then(async (r) => {
+          if (r.ok) setAnalytics(await r.json());
+        }).catch(() => {});
       } else {
         setAuthState("unauthenticated");
       }
@@ -276,6 +293,76 @@ function MojeSportovisteContent() {
             Změny se projeví okamžitě na webu.
           </p>
         </div>
+
+        {/* Analytics section */}
+        {analytics && (
+          <section className="mb-6 rounded-2xl border border-zinc-200 bg-white p-6">
+            <div className="mb-4 flex items-center gap-2">
+              <BarChart3 className="h-5 w-5 text-zinc-600" />
+              <h2 className="font-semibold text-zinc-900">Statistiky</h2>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-3">
+              <div className="rounded-xl bg-zinc-50 p-4">
+                <p className="text-2xl font-bold text-zinc-900">{analytics.totalViews}</p>
+                <p className="text-xs text-zinc-500">Zobrazení za 30 dní</p>
+              </div>
+              <div className="rounded-xl bg-zinc-50 p-4">
+                <p className="text-2xl font-bold text-zinc-900">{analytics.thisWeekViews}</p>
+                <p className="text-xs text-zinc-500">Tento týden</p>
+              </div>
+              <div className="rounded-xl bg-zinc-50 p-4">
+                <div className="flex items-center gap-2">
+                  <p className="text-2xl font-bold text-zinc-900">{analytics.lastWeekViews}</p>
+                  {analytics.thisWeekViews > analytics.lastWeekViews ? (
+                    <TrendingUp className="h-4 w-4 text-emerald-500" />
+                  ) : analytics.thisWeekViews < analytics.lastWeekViews ? (
+                    <TrendingDown className="h-4 w-4 text-red-400" />
+                  ) : null}
+                </div>
+                <p className="text-xs text-zinc-500">Minulý týden</p>
+              </div>
+            </div>
+
+            {/* Daily chart (premium) or upgrade CTA (free) */}
+            {analytics.isPremium ? (
+              analytics.dailyViews.length > 0 && (
+                <div className="mt-4">
+                  <p className="mb-2 text-xs font-medium text-zinc-500">Posledních 14 dní</p>
+                  <div className="flex items-end gap-1" style={{ height: 80 }}>
+                    {analytics.dailyViews.map((d) => {
+                      const max = Math.max(...analytics.dailyViews.map((v) => v.views), 1);
+                      const h = Math.max((d.views / max) * 100, 4);
+                      return (
+                        <div
+                          key={d.date}
+                          className="flex-1 rounded-t bg-emerald-400"
+                          style={{ height: `${h}%` }}
+                          title={`${d.date}: ${d.views} zobrazení`}
+                        />
+                      );
+                    })}
+                  </div>
+                </div>
+              )
+            ) : (
+              <div className="relative mt-4 overflow-hidden rounded-xl border border-zinc-100 bg-zinc-50 p-6 text-center">
+                <div className="absolute inset-0 bg-zinc-50/80 backdrop-blur-sm" />
+                <div className="relative">
+                  <Lock className="mx-auto h-6 w-6 text-amber-500" />
+                  <p className="mt-2 text-sm font-semibold text-zinc-700">
+                    Podrobné statistiky jsou dostupné v Premium
+                  </p>
+                  <a
+                    href="/pro"
+                    className="mt-3 inline-block rounded-lg bg-amber-500 px-4 py-2 text-xs font-bold text-white transition hover:bg-amber-600"
+                  >
+                    Upgradovat na Premium
+                  </a>
+                </div>
+              </div>
+            )}
+          </section>
+        )}
 
         <form onSubmit={handleSave} className="space-y-6">
           {/* Basic info */}

@@ -70,6 +70,7 @@ model Facility {
   images        FacilityImage[]
   editRequests  EditRequest[]
   ownerTokens   OwnerToken[]
+  views         FacilityView[]
 
   @@index([locationId])
   @@index([slug])
@@ -182,6 +183,20 @@ model OwnerToken {
 
   @@index([facilityId])
   @@index([token])
+}
+
+model FacilityView {
+  id                String   @id @default(cuid())
+  facilityId        String
+  facility          Facility @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  date              DateTime @db.Date
+  views             Int      @default(0)
+  searchImpressions Int      @default(0)
+  createdAt         DateTime @default(now())
+
+  @@unique([facilityId, date])
+  @@index([facilityId])
+  @@index([date])
 }
 
 model ContactMessage {
