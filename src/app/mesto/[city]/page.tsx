@@ -6,6 +6,7 @@ import { getFacilitiesByCity, getTopCitiesOverallForMesto } from "@/lib/data";
 import { SPORTS, getSportBySlug } from "@/lib/sports";
 import { FacilityCard } from "@/components/FacilityCard";
 import { FacilityMap } from "@/components/FacilityMap";
+import { TrackPageView } from "@/components/TrackPageView";
 
 type Props = {
   params: Promise<{ city: string }>;
@@ -92,6 +93,10 @@ export default async function CrossSportCityPage({ params }: Props) {
 
   return (
     <main className="min-h-screen bg-zinc-50/50">
+      <TrackPageView
+        eventName="city_page_view"
+        params={{ city: cityName }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}

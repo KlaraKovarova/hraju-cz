@@ -22,6 +22,7 @@ import { CityLandingContent } from "@/components/CityLandingContent";
 import { PhotoGallery } from "@/components/PhotoGallery";
 import { ShareButton } from "@/components/ShareButton";
 import { AdSlot } from "@/components/AdSlot";
+import { TrackPageView } from "@/components/TrackPageView";
 import type { Metadata } from "next";
 
 interface FacilityPageProps {
@@ -297,6 +298,10 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
 
   return (
     <main className="min-h-screen bg-zinc-50/50">
+      <TrackPageView
+        eventName="facility_view"
+        params={{ sport: sport.slug, city: facility.location.city, facilitySlug: facility.slug }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

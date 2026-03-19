@@ -4,6 +4,7 @@ import { searchFacilities } from "@/lib/data";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
 import { FacilityCard } from "@/components/FacilityCard";
 import { AdSlot } from "@/components/AdSlot";
+import { TrackPageView } from "@/components/TrackPageView";
 import type { Metadata } from "next";
 
 interface SearchPageProps {
@@ -35,6 +36,12 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
 
   return (
     <main className="min-h-screen bg-zinc-50/50">
+      {query.length >= 2 && (
+        <TrackPageView
+          eventName="search"
+          params={{ query, resultCount: facilities.length }}
+        />
+      )}
       {/* Header */}
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">

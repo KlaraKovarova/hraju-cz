@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Send, CheckCircle2, AlertCircle } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 
 interface EditSuggestionFormProps {
   facilityId: string;
@@ -176,7 +177,12 @@ export default function EditSuggestionForm({
           <input
             type="checkbox"
             checked={form.isOwner}
-            onChange={(e) => update("isOwner", e.target.checked)}
+            onChange={(e) => {
+              update("isOwner", e.target.checked);
+              if (e.target.checked) {
+                trackEvent("claim_click", { facilityId });
+              }
+            }}
             className="h-4 w-4 rounded border-zinc-300 text-emerald-600 focus:ring-emerald-500"
           />
           Jsem provozovatel tohoto sportoviště
