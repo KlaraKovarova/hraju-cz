@@ -7,14 +7,12 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 interface PhotoGalleryProps {
   images: { url: string; alt: string | null }[];
   facilityName: string;
-  isPremium: boolean;
 }
 
-export function PhotoGallery({ images, facilityName, isPremium }: PhotoGalleryProps) {
+export function PhotoGallery({ images, facilityName }: PhotoGalleryProps) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-  const primaryImage = images.find((img) => (img as { isPrimary?: boolean }).isPrimary) ?? images[0];
-  const displayImages = isPremium ? images : primaryImage ? [primaryImage] : [];
+  const displayImages = images.length > 0 ? images : [];
 
   if (displayImages.length === 0) {
     return (

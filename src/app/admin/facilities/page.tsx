@@ -68,11 +68,6 @@ export default async function AdminFacilitiesPage() {
               <tr key={facility.id} className="hover:bg-zinc-50">
                 <td className="px-4 py-3 font-medium text-zinc-900">
                   {facility.name}
-                  {facility.isPremium && (
-                    <span className="ml-2 rounded-full bg-indigo-50 px-2 py-0.5 text-xs text-indigo-600">
-                      Premium
-                    </span>
-                  )}
                 </td>
                 <td className="px-4 py-3 text-zinc-500">{facility.location.city}</td>
                 <td className="px-4 py-3 text-zinc-500">

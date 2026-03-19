@@ -10,9 +10,6 @@ import {
   Save,
   Building2,
   Loader2,
-  Star,
-  CreditCard,
-  ExternalLink,
   Mail,
 } from "lucide-react";
 
@@ -26,16 +23,8 @@ interface FacilityData {
   pricing: string | null;
   openingHours: Record<string, string> | null;
   website: string | null;
-  isPremium: boolean;
   contacts: { id: string; type: string; value: string; isPrimary: boolean }[];
   sports: { sport: { slug: string; nameCs: string } }[];
-}
-
-interface BillingInfo {
-  isPremium: boolean;
-  subscriptionStatus: string | null;
-  premiumExpiresAt: string | null;
-  hasSubscription: boolean;
 }
 
 type AuthState = "loading" | "unauthenticated" | "authenticating" | "authenticated";
@@ -57,7 +46,6 @@ export default function MojeSportovistePage() {
 function MojeSportovisteContent() {
   const searchParams = useSearchParams();
   const token = searchParams.get("token");
-  const billingResult = searchParams.get("billing");
 
   const [authState, setAuthState] = useState<AuthState>("loading");
   const [authError, setAuthError] = useState<string | null>(null);
@@ -65,8 +53,6 @@ function MojeSportovisteContent() {
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
-  const [billing, setBilling] = useState<BillingInfo | null>(null);
-  const [billingLoading, setBillingLoading] = useState(false);
 
   const [form, setForm] = useState({
     name: "",
@@ -108,11 +94,6 @@ function MojeSportovisteContent() {
             : "",
         });
         setAuthState("authenticated");
-        // Load billing info
-        fetch("/api/owner/billing")
-          .then((r) => r.ok ? r.json() : null)
-          .then((b) => { if (b) setBilling(b); })
-          .catch(() => {});
       } else {
         setAuthState("unauthenticated");
       }
@@ -198,44 +179,6 @@ function MojeSportovisteContent() {
       setSaveError("Chyba při ukládání.");
     } finally {
       setSaving(false);
-    }
-  }
-
-  async function handleCheckout(plan: "monthly" | "yearly") {
-    setBillingLoading(true);
-    try {
-      const res = await fetch("/api/owner/billing", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ plan }),
-      });
-      const data = await res.json();
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        setSaveError(data.error || "Nepodařilo se spustit platbu");
-        setBillingLoading(false);
-      }
-    } catch {
-      setSaveError("Chyba při spouštění platby");
-      setBillingLoading(false);
-    }
-  }
-
-  async function handleManageBilling() {
-    setBillingLoading(true);
-    try {
-      const res = await fetch("/api/owner/billing/portal", { method: "POST" });
-      const data = await res.json();
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        setSaveError(data.error || "Nepodařilo se otevřít správu předplatného");
-        setBillingLoading(false);
-      }
-    } catch {
-      setSaveError("Chyba při otevírání správy předplatného");
-      setBillingLoading(false);
     }
   }
 
@@ -468,102 +411,6 @@ function MojeSportovisteContent() {
                 />
               </div>
             </div>
-          </section>
-
-          {/* Premium / Billing */}
-          <section className="rounded-2xl border border-zinc-200 bg-white p-6">
-            <h2 className="mb-4 flex items-center gap-2 font-semibold text-zinc-900">
-              <Star className="h-5 w-5 text-amber-500" />
-              Premium
-            </h2>
-
-            {billingResult === "success" && (
-              <div className="mb-4 flex items-center gap-2 rounded-lg bg-emerald-50 p-3 text-sm text-emerald-700">
-                <CheckCircle2 className="h-4 w-4 shrink-0" />
-                Platba proběhla úspěšně! Premium funkce se aktivují během chvíle.
-              </div>
-            )}
-
-            {billing?.isPremium && billing?.subscriptionStatus === "active" ? (
-              <div>
-                <div className="flex items-center gap-2 rounded-lg bg-amber-50 p-3 text-sm text-amber-800">
-                  <Star className="h-4 w-4 fill-amber-500 text-amber-500 shrink-0" />
-                  Máte aktivní Premium předplatné
-                  {billing.premiumExpiresAt && (
-                    <span className="text-amber-600">
-                      {" "}— platné do{" "}
-                      {new Date(billing.premiumExpiresAt).toLocaleDateString("cs-CZ")}
-                    </span>
-                  )}
-                </div>
-                <button
-                  type="button"
-                  onClick={handleManageBilling}
-                  disabled={billingLoading}
-                  className="mt-4 flex items-center gap-2 rounded-lg border border-zinc-200 px-4 py-2 text-sm text-zinc-700 transition hover:border-zinc-300 hover:shadow-sm disabled:opacity-50"
-                >
-                  <CreditCard className="h-4 w-4" />
-                  Spravovat předplatné
-                  <ExternalLink className="h-3 w-3" />
-                </button>
-              </div>
-            ) : billing?.subscriptionStatus === "past_due" ? (
-              <div>
-                <div className="flex items-center gap-2 rounded-lg bg-red-50 p-3 text-sm text-red-700">
-                  <AlertCircle className="h-4 w-4 shrink-0" />
-                  Platba se nezdařila. Aktualizujte platební údaje.
-                </div>
-                <button
-                  type="button"
-                  onClick={handleManageBilling}
-                  disabled={billingLoading}
-                  className="mt-4 flex items-center gap-2 rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-red-700 disabled:opacity-50"
-                >
-                  <CreditCard className="h-4 w-4" />
-                  Aktualizovat platební údaje
-                </button>
-              </div>
-            ) : (
-              <div>
-                <p className="mb-4 text-sm text-zinc-500">
-                  Zvýrazněte své sportoviště, přidejte fotogalerii, tlačítko pro
-                  rezervaci a získejte vyšší prioritu ve výsledcích.
-                </p>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <button
-                    type="button"
-                    onClick={() => handleCheckout("monthly")}
-                    disabled={billingLoading}
-                    className="flex items-center justify-center gap-2 rounded-xl border-2 border-amber-300 bg-amber-50 px-4 py-3 text-sm font-semibold text-amber-800 transition hover:bg-amber-100 disabled:opacity-50"
-                  >
-                    {billingLoading ? (
-                      <Loader2 className="h-4 w-4 animate-spin" />
-                    ) : (
-                      <Star className="h-4 w-4 fill-amber-500 text-amber-500" />
-                    )}
-                    499 Kč / měsíc
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => handleCheckout("yearly")}
-                    disabled={billingLoading}
-                    className="flex flex-col items-center justify-center gap-1 rounded-xl border-2 border-emerald-400 bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-800 transition hover:bg-emerald-100 disabled:opacity-50"
-                  >
-                    <span className="flex items-center gap-2">
-                      {billingLoading ? (
-                        <Loader2 className="h-4 w-4 animate-spin" />
-                      ) : (
-                        <Star className="h-4 w-4 fill-emerald-500 text-emerald-500" />
-                      )}
-                      3 990 Kč / rok
-                    </span>
-                    <span className="text-xs font-normal text-emerald-600">
-                      Ušetříte 2 měsíce
-                    </span>
-                  </button>
-                </div>
-              </div>
-            )}
           </section>
 
           {/* Save */}

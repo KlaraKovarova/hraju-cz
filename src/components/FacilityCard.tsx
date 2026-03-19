@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Phone, Star, ArrowRight, Clock } from "lucide-react";
+import { MapPin, Phone, ArrowRight, Clock } from "lucide-react";
 import type { FacilityWithDetails } from "@/lib/data";
 
 const DAY_KEYS = ["ne", "po", "út", "st", "čt", "pá", "so"] as const;
@@ -42,12 +42,6 @@ export function FacilityCard({ facility, sportSlug }: FacilityCardProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover transition-transform group-hover:scale-105"
           />
-          {facility.isPremium && (
-            <span className="absolute right-2 top-2 flex items-center gap-1 rounded-full bg-amber-50/90 px-2.5 py-1 text-xs font-semibold text-amber-600 backdrop-blur-sm">
-              <Star className="h-3 w-3 fill-amber-400 text-amber-400" />
-              Premium
-            </span>
-          )}
         </div>
       )}
       <div className="flex flex-1 flex-col p-5">
@@ -64,12 +58,6 @@ export function FacilityCard({ facility, sportSlug }: FacilityCardProps) {
             </span>
           </div>
         </div>
-        {facility.isPremium && !primaryImage && (
-          <span className="flex shrink-0 items-center gap-1 rounded-full bg-amber-50 px-2.5 py-1 text-xs font-semibold text-amber-600">
-            <Star className="h-3 w-3 fill-amber-400 text-amber-400" />
-            Premium
-          </span>
-        )}
       </div>
 
       {/* Info pills */}

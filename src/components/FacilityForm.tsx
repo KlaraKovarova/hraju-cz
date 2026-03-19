@@ -381,16 +381,6 @@ export function FacilityForm({ initialData, allAmenities = [] }: FacilityFormPro
             />
             Aktivní
           </label>
-          <label className="flex items-center gap-2 text-sm text-zinc-700">
-            <input
-              type="checkbox"
-              name="isPremium"
-              checked={form.isPremium}
-              onChange={handleChange}
-              className="rounded"
-            />
-            Premium
-          </label>
         </div>
       </div>
 

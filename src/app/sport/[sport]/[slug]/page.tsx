@@ -7,7 +7,6 @@ import {
   Globe,
   Clock,
   ExternalLink,
-  Star,
   ChevronRight,
   Navigation,
   CheckCircle2,
@@ -318,12 +317,6 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
             <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900">
               {facility.name}
             </h1>
-            {facility.isPremium && (
-              <span className="flex items-center gap-1 rounded-full bg-amber-50 px-3 py-1.5 text-sm font-semibold text-amber-600">
-                <Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
-                Premium
-              </span>
-            )}
             {facility.isClaimed && (
               <span className="flex items-center gap-1 rounded-full bg-emerald-50 px-3 py-1.5 text-sm font-semibold text-emerald-600">
                 <CheckCircle2 className="h-3.5 w-3.5" />
@@ -369,7 +362,6 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
         <PhotoGallery
           images={facility.images}
           facilityName={facility.name}
-          isPremium={facility.isPremium}
         />
       </section>
 
@@ -565,8 +557,8 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
               ) : null;
             })()}
 
-            {/* Booking CTA (Premium only) */}
-            {facility.isPremium && facility.bookingUrl && (
+            {/* Booking CTA */}
+            {facility.bookingUrl && (
               <a
                 href={facility.bookingUrl}
                 target="_blank"
