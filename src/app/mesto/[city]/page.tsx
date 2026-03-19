@@ -7,6 +7,7 @@ import { SPORTS, getSportBySlug } from "@/lib/sports";
 import { FacilityCard } from "@/components/FacilityCard";
 import { FacilityMap } from "@/components/FacilityMap";
 import { TrackPageView } from "@/components/TrackPageView";
+import { getCityInPhrase } from "@/lib/locative";
 
 type Props = {
   params: Promise<{ city: string }>;
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!cityName || facilities.length === 0) return {};
 
   const title = `Sportoviště ${cityName} \u2014 ${facilities.length} sportovišť v ${sportGroups.length} sportech`;
-  const description = `Najděte ${facilities.length} sportovišť v ${cityName}. ${sportGroups.map((g) => g.sport.nameCs).join(", ")}. Adresy, kontakty, otevírací doby.`;
+  const description = `Najděte ${facilities.length} sportovišť ${getCityInPhrase(cityName)}. ${sportGroups.map((g) => g.sport.nameCs).join(", ")}. Adresy, kontakty, otevírací doby.`;
 
   return {
     title,
@@ -136,7 +137,7 @@ export default async function CrossSportCityPage({ params }: Props) {
             </div>
             <div>
               <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900">
-                Sportoviště v {cityName === "Praha" ? "Praze" : cityName}
+                Sportoviště {getCityInPhrase(cityName)}
               </h1>
               <p className="mt-1 flex items-center gap-1.5 text-zinc-500">
                 <MapPin className="h-4 w-4" />
@@ -237,7 +238,7 @@ export default async function CrossSportCityPage({ params }: Props) {
       <section className="border-t border-zinc-100 bg-white">
         <div className="mx-auto max-w-6xl px-6 py-10">
           <h3 className="mb-4 text-center text-sm font-semibold uppercase tracking-wider text-zinc-400">
-            Sporty v {cityName === "Praha" ? "Praze" : cityName}
+            Sporty {getCityInPhrase(cityName)}
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
             {sportGroups.map((group) => {

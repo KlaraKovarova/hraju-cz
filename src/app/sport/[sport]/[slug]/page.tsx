@@ -17,6 +17,7 @@ import { getSportBySlug } from "@/lib/sports";
 import { getFacilityBySlug, getInactiveFacilityRedirectInfo, getFacilitiesByCityAndSport, getRelatedFacilities } from "@/lib/data";
 import { getRegionByName, cityToSlug } from "@/lib/regions";
 import { getSportFacilityType, getSportFacilityTypePluralGenitive } from "@/lib/seo";
+import { getCityInPhrase } from "@/lib/locative";
 import EditSuggestionForm from "@/components/EditSuggestionForm";
 import { CityLandingContent } from "@/components/CityLandingContent";
 import { PhotoGallery } from "@/components/PhotoGallery";
@@ -77,7 +78,7 @@ export async function generateMetadata({
       : `${sport.nameCs} ${cityName} — ${n} sportovišť`;
     const description = isPraha
       ? `Najděte ${n} ${getSportFacilityTypePluralGenitive(sport.slug)} v Praze. Přehled podle městských částí, kontakty a otevírací doby.`
-      : `Najděte ${n} ${getSportFacilityTypePluralGenitive(sport.slug)} v ${cityName}. Otevírací doby, ceny, kontakty.`;
+      : `Najděte ${n} ${getSportFacilityTypePluralGenitive(sport.slug)} ${getCityInPhrase(cityName)}. Otevírací doby, ceny, kontakty.`;
     const url = `https://hraju.cz/sport/${sportSlug}/${slug}`;
 
     return {

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MapPin, ChevronRight } from "lucide-react";
 import { SPORTS } from "@/lib/sports";
 import { getSportFacilityTypePlural } from "@/lib/seo";
+import { getCityInPhrase } from "@/lib/locative";
 import { FacilityCard } from "@/components/FacilityCard";
 import { FacilityMap } from "@/components/FacilityMap";
 import type { FacilityWithDetails, DistrictGroup } from "@/lib/data";
@@ -186,7 +187,7 @@ export function CityLandingContent({
       <section className="border-t border-zinc-100 bg-white">
         <div className="mx-auto max-w-6xl px-6 py-10">
           <h3 className="mb-4 text-center text-sm font-semibold uppercase tracking-wider text-zinc-400">
-            Další sporty v {cityName}
+            Další sporty {getCityInPhrase(cityName)}
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
             {SPORTS.filter((s) => s.slug !== sport.slug).map((s) => (
@@ -205,7 +206,7 @@ export function CityLandingContent({
               href={`/mesto/${citySlug}`}
               className="text-sm font-medium text-emerald-600 hover:text-emerald-700"
             >
-              Všechny sporty v {cityName} &rarr;
+              Všechny sporty {getCityInPhrase(cityName)} &rarr;
             </Link>
           </div>
         </div>
