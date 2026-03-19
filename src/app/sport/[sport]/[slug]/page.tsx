@@ -15,10 +15,11 @@ import {
   CalendarCheck,
 } from "lucide-react";
 import { getSportBySlug } from "@/lib/sports";
-import { getFacilityBySlug, getInactiveFacilityRedirectInfo } from "@/lib/data";
+import { getFacilityBySlug, getInactiveFacilityRedirectInfo, getFacilitiesByCityAndSport } from "@/lib/data";
 import { getRegionByName, cityToSlug } from "@/lib/regions";
-import { getSportFacilityType } from "@/lib/seo";
+import { getSportFacilityType, getSportFacilityTypePluralGenitive } from "@/lib/seo";
 import EditSuggestionForm from "@/components/EditSuggestionForm";
+import { CityLandingContent } from "@/components/CityLandingContent";
 import type { Metadata } from "next";
 
 interface FacilityPageProps {
@@ -30,33 +31,54 @@ export async function generateMetadata({
 }: FacilityPageProps): Promise<Metadata> {
   const { sport: sportSlug, slug } = await params;
   const sport = getSportBySlug(sportSlug);
+  if (!sport) return {};
+
+  // Try facility first
   const { facility } = await getFacilityBySlug(slug);
-  if (!facility || !sport) return {};
+  if (facility) {
+    const title = `${facility.name} — ${getSportFacilityType(sport.slug)}, ${facility.location.city}`;
+    const description = facility.description
+      ? facility.description.slice(0, 155)
+      : `${facility.name} — ${getSportFacilityType(sport.slug)} v ${facility.location.city}. Adresa, kontakt, otevírací doba a recenze na hraju.cz.`;
+    const url = `https://hraju.cz/sport/${sportSlug}/${slug}`;
 
-  const title = `${facility.name} — ${getSportFacilityType(sport.slug)}, ${facility.location.city}`;
-  const description = facility.description
-    ? facility.description.slice(0, 155)
-    : `${facility.name} — ${getSportFacilityType(sport.slug)} v ${facility.location.city}. Adresa, kontakt, otevírací doba a recenze na hraju.cz.`;
-  const url = `https://hraju.cz/sport/${sportSlug}/${slug}`;
+    return {
+      title,
+      description,
+      openGraph: {
+        title: `${facility.name} — ${sport.nameCs}, ${facility.location.city}`,
+        description,
+        url,
+        type: "website",
+        siteName: "hraju.cz",
+        locale: "cs_CZ",
+      },
+      twitter: {
+        card: "summary",
+        title: `${facility.name} — ${sport.nameCs}`,
+        description,
+      },
+      alternates: { canonical: url },
+    };
+  }
 
-  return {
-    title,
-    description,
-    openGraph: {
-      title: `${facility.name} — ${sport.nameCs}, ${facility.location.city}`,
+  // Try city landing page
+  const { facilities: cityFacilities, cityName } = await getFacilitiesByCityAndSport(slug, sport.slug);
+  if (cityName && cityFacilities.length >= 2) {
+    const n = cityFacilities.length;
+    const title = `${sport.nameCs} ${cityName} — ${n} sportovišť | hraju.cz`;
+    const description = `Najděte ${n} ${getSportFacilityTypePluralGenitive(sport.slug)} v ${cityName}. Otevírací doby, ceny, kontakty.`;
+    const url = `https://hraju.cz/sport/${sportSlug}/${slug}`;
+
+    return {
+      title,
       description,
-      url,
-      type: "website",
-      siteName: "hraju.cz",
-      locale: "cs_CZ",
-    },
-    twitter: {
-      card: "summary",
-      title: `${facility.name} — ${sport.nameCs}`,
-      description,
-    },
-    alternates: { canonical: url },
-  };
+      openGraph: { title, description, url, type: "website", siteName: "hraju.cz", locale: "cs_CZ" },
+      alternates: { canonical: url },
+    };
+  }
+
+  return {};
 }
 
 const CONTACT_ICONS: Record<string, React.ReactNode> = {
@@ -95,8 +117,23 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
     );
   }
 
-  // Facility not found — check if it's a deactivated facility in static data
+  // No facility found — try city landing page, then inactive redirect, then 404
   if (!facility) {
+    // Try city landing page (only for cities with 2+ facilities)
+    const { facilities: cityFacilities, cityName } = await getFacilitiesByCityAndSport(slug, sport.slug);
+    if (cityName && cityFacilities.length >= 2) {
+      return (
+        <CityLandingContent
+          sport={sport}
+          sportSlug={sportSlug}
+          cityName={cityName}
+          citySlug={slug}
+          facilities={cityFacilities}
+        />
+      );
+    }
+
+    // Check if it's a deactivated facility in static data
     const info = getInactiveFacilityRedirectInfo(slug);
     if (info) {
       const regionInfo = info.region ? getRegionByName(info.region) : null;

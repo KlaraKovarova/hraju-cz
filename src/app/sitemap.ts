@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { SPORTS } from "@/lib/sports";
 import { prisma } from "@/lib/prisma";
 import exportData from "@/data/facilities-export.json";
+import { cityToSlug } from "@/lib/regions";
 
 const BASE_URL = "https://hraju.cz";
 
@@ -79,18 +80,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  // City listing pages — distinct cities per sport
-  const cityBySport = new Map<string, Set<string>>();
+  // City landing pages — distinct cities per sport (only 2+ facilities)
+  const cityCountBySport = new Map<string, Map<string, number>>();
   for (const facility of facilities) {
     for (const sportSlug of facility.sportSlugs) {
-      if (!cityBySport.has(sportSlug)) cityBySport.set(sportSlug, new Set());
-      cityBySport.get(sportSlug)!.add(facility.city);
+      if (!cityCountBySport.has(sportSlug)) cityCountBySport.set(sportSlug, new Map());
+      const cityMap = cityCountBySport.get(sportSlug)!;
+      cityMap.set(facility.city, (cityMap.get(facility.city) || 0) + 1);
     }
   }
-  for (const [sportSlug, cities] of cityBySport) {
-    for (const city of cities) {
+  for (const [sportSlug, cityMap] of cityCountBySport) {
+    for (const [city, count] of cityMap) {
+      if (count < 2) continue;
       entries.push({
-        url: `${BASE_URL}/sport/${sportSlug}?city=${encodeURIComponent(city)}`,
+        url: `${BASE_URL}/sport/${sportSlug}/${cityToSlug(city)}`,
         changeFrequency: "weekly",
         priority: 0.8,
       });

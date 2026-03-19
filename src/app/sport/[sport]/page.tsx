@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { MapPin, ChevronRight } from "lucide-react";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
-import { getRegionsBySport, getTopFacilitiesBySport } from "@/lib/data";
+import { getRegionsBySport, getTopFacilitiesBySport, getTopCitiesBySport } from "@/lib/data";
 import { getSportTitleSuffix, getSportFacilityTypePluralGenitive, getSportFacilityType } from "@/lib/seo";
 import { FacilityCard } from "@/components/FacilityCard";
 import type { Metadata } from "next";
@@ -43,6 +43,7 @@ export default async function SportPage({ params }: SportPageProps) {
 
   const regions = await getRegionsBySport(sport.slug);
   const topFacilities = await getTopFacilitiesBySport(sport.slug, 10);
+  const topCities = await getTopCitiesBySport(sport.slug, 10);
   const totalFacilities = regions.reduce((sum, r) => sum + r.facilityCount, 0);
 
   return (
@@ -127,6 +128,33 @@ export default async function SportPage({ params }: SportPageProps) {
           ))}
         </div>
       </section>
+
+      {/* Top Cities */}
+      {topCities.length > 0 && (
+        <section className="mx-auto max-w-6xl px-6 py-8 border-t border-zinc-100">
+          <h2 className="mb-6 text-xl font-bold text-zinc-900">
+            Nejoblíbenější města
+          </h2>
+
+          <div className="flex flex-wrap gap-3">
+            {topCities.map(({ city, citySlug, facilityCount }) => (
+              <Link
+                key={citySlug}
+                href={`/sport/${sportSlug}/${citySlug}`}
+                className="group flex items-center gap-2 rounded-xl border border-zinc-100 bg-white px-4 py-3 transition-all hover:border-zinc-200 hover:shadow-lg hover:shadow-zinc-100"
+              >
+                <MapPin className="h-4 w-4 text-zinc-400 group-hover:text-emerald-500" />
+                <span className="text-sm font-semibold text-zinc-900 group-hover:text-emerald-700">
+                  {city}
+                </span>
+                <span className="text-xs text-zinc-400">
+                  {facilityCount}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Top Facilities */}
       {topFacilities.length > 0 && (

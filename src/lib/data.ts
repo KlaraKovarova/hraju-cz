@@ -417,6 +417,85 @@ export async function getTopFacilitiesByRegionAndSport(
   return facilities.slice(0, limit);
 }
 
+// --- City landing page queries ---
+
+export type CityForSport = {
+  city: string;
+  citySlug: string;
+  facilityCount: number;
+};
+
+function staticFacilitiesByCityAndSport(
+  citySlug: string,
+  sportSlug: string
+): { facilities: FacilityWithDetails[]; cityName: string | null } {
+  const facilityIds = facilitiesBySportSlug.get(sportSlug);
+  if (!facilityIds) return { facilities: [], cityName: null };
+
+  const allCities = [...new Set(exportData.locations.map((l) => l.city))];
+  const cityName = findCityBySlug(allCities, citySlug);
+  if (!cityName) return { facilities: [], cityName: null };
+
+  const results = exportData.facilities.filter((f) => {
+    if (!facilityIds.has(f.id) || !f.isActive) return false;
+    const loc = locationById.get(f.locationId);
+    return loc?.city === cityName;
+  });
+
+  // Sort: premium first, then name asc
+  const mapped = results.map(toFacilityWithDetails);
+  mapped.sort((a, b) => {
+    if (a.isPremium !== b.isPremium) return b.isPremium ? 1 : -1;
+    return a.name.localeCompare(b.name, "cs");
+  });
+
+  return { facilities: mapped, cityName };
+}
+
+export async function getFacilitiesByCityAndSport(
+  citySlug: string,
+  sportSlug: string
+): Promise<{ facilities: FacilityWithDetails[]; cityName: string | null }> {
+  return staticFacilitiesByCityAndSport(citySlug, sportSlug);
+}
+
+function staticTopCitiesBySport(sportSlug: string, limit: number = 10): CityForSport[] {
+  const facilityIds = facilitiesBySportSlug.get(sportSlug);
+  if (!facilityIds) return [];
+
+  const cityCounts = new Map<string, number>();
+  for (const f of exportData.facilities) {
+    if (!facilityIds.has(f.id) || !f.isActive) continue;
+    const loc = locationById.get(f.locationId);
+    if (!loc) continue;
+    cityCounts.set(loc.city, (cityCounts.get(loc.city) || 0) + 1);
+  }
+
+  return [...cityCounts.entries()]
+    .filter(([, count]) => count >= 2)
+    .map(([city, count]) => ({
+      city,
+      citySlug: cityToSlug(city),
+      facilityCount: count,
+    }))
+    .sort((a, b) => b.facilityCount - a.facilityCount)
+    .slice(0, limit);
+}
+
+export async function getTopCitiesBySport(
+  sportSlug: string,
+  limit: number = 10
+): Promise<CityForSport[]> {
+  return staticTopCitiesBySport(sportSlug, limit);
+}
+
+/** Get all cities with 2+ facilities for a sport (for sitemap) */
+export async function getAllCitiesForSport(
+  sportSlug: string
+): Promise<CityForSport[]> {
+  return staticTopCitiesBySport(sportSlug, 10000);
+}
+
 export async function getCities(): Promise<string[]> {
   try {
     const locations = await withTimeout(
