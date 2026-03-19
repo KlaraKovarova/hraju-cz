@@ -496,6 +496,90 @@ export async function getAllCitiesForSport(
   return staticTopCitiesBySport(sportSlug, 10000);
 }
 
+// --- Homepage queries ---
+
+export function getTotalFacilityCount(): number {
+  return exportData.facilities.filter((f) => f.isActive).length;
+}
+
+export function getTotalSportCount(): number {
+  return new Set(exportData.facilitySports.map((fs) => fs.sportId)).size;
+}
+
+/** Featured facilities: premium/claimed, deterministic daily rotation */
+export async function getFeaturedFacilities(limit: number = 6): Promise<FacilityWithDetails[]> {
+  const candidates = exportData.facilities.filter(
+    (f) => f.isActive && (f.isPremium || f.isClaimed)
+  );
+  if (candidates.length === 0) {
+    // Fallback to any active facilities
+    const all = exportData.facilities.filter((f) => f.isActive);
+    all.sort((a, b) => a.name.localeCompare(b.name, "cs"));
+    return all.slice(0, limit).map(toFacilityWithDetails);
+  }
+  // Deterministic daily rotation based on day-of-year
+  const dayOfYear = Math.floor(Date.now() / 86400000);
+  const offset = dayOfYear % Math.max(1, candidates.length - limit + 1);
+  const rotated = [...candidates.slice(offset), ...candidates.slice(0, offset)];
+  return rotated.slice(0, limit).map(toFacilityWithDetails);
+}
+
+/** Top cities across all sports */
+export async function getTopCitiesOverall(limit: number = 10): Promise<CityForSport[]> {
+  const cityCounts = new Map<string, number>();
+  for (const f of exportData.facilities) {
+    if (!f.isActive) continue;
+    const loc = locationById.get(f.locationId);
+    if (!loc) continue;
+    cityCounts.set(loc.city, (cityCounts.get(loc.city) || 0) + 1);
+  }
+  return [...cityCounts.entries()]
+    .filter(([, count]) => count >= 2)
+    .map(([city, count]) => ({
+      city,
+      citySlug: cityToSlug(city),
+      facilityCount: count,
+    }))
+    .sort((a, b) => b.facilityCount - a.facilityCount)
+    .slice(0, limit);
+}
+
+/** Recently added facilities (by createdAt descending) */
+export async function getRecentFacilities(limit: number = 4): Promise<FacilityWithDetails[]> {
+  const sorted = exportData.facilities
+    .filter((f) => f.isActive)
+    .sort((a, b) => {
+      const aDate = (a as Record<string, unknown>).createdAt as string || "";
+      const bDate = (b as Record<string, unknown>).createdAt as string || "";
+      return bDate.localeCompare(aDate);
+    });
+  return sorted.slice(0, limit).map(toFacilityWithDetails);
+}
+
+/** Related facilities in same city for same sport (for "Další [sport] v [city]") */
+export async function getRelatedFacilities(
+  sportSlug: string,
+  city: string,
+  excludeSlug: string,
+  limit: number = 5
+): Promise<FacilityWithDetails[]> {
+  const facilityIds = facilitiesBySportSlug.get(sportSlug);
+  if (!facilityIds) return [];
+
+  const results = exportData.facilities.filter((f) => {
+    if (!facilityIds.has(f.id) || !f.isActive || f.slug === excludeSlug) return false;
+    const loc = locationById.get(f.locationId);
+    return loc?.city === city;
+  });
+
+  const mapped = results.map(toFacilityWithDetails);
+  mapped.sort((a, b) => {
+    if (a.isPremium !== b.isPremium) return b.isPremium ? 1 : -1;
+    return a.name.localeCompare(b.name, "cs");
+  });
+  return mapped.slice(0, limit);
+}
+
 export async function getCities(): Promise<string[]> {
   try {
     const locations = await withTimeout(

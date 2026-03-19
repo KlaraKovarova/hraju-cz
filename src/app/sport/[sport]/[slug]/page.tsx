@@ -15,7 +15,7 @@ import {
   Building2,
 } from "lucide-react";
 import { getSportBySlug } from "@/lib/sports";
-import { getFacilityBySlug, getInactiveFacilityRedirectInfo, getFacilitiesByCityAndSport } from "@/lib/data";
+import { getFacilityBySlug, getInactiveFacilityRedirectInfo, getFacilitiesByCityAndSport, getRelatedFacilities } from "@/lib/data";
 import { getRegionByName, cityToSlug } from "@/lib/regions";
 import { getSportFacilityType, getSportFacilityTypePluralGenitive } from "@/lib/seo";
 import EditSuggestionForm from "@/components/EditSuggestionForm";
@@ -184,6 +184,9 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
   // Region/city for breadcrumb links
   const regionInfo = facility.location.region ? getRegionByName(facility.location.region) : null;
   const citySl = cityToSlug(facility.location.city);
+
+  // Related facilities in same city
+  const relatedFacilities = await getRelatedFacilities(sportSlug, facility.location.city, slug, 5);
 
   // Build JSON-LD structured data for SEO
   const phone = facility.isClaimed
@@ -667,6 +670,39 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
           </div>
         </div>
       </div>
+
+      {/* Related Facilities */}
+      {relatedFacilities.length > 0 && (
+        <section className="border-t border-zinc-100 bg-white">
+          <div className="mx-auto max-w-6xl px-6 py-8">
+            <h2 className="mb-6 text-xl font-bold text-zinc-900">
+              Další {sport.nameCs.toLowerCase()} v {facility.location.city}
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {relatedFacilities.map((rel) => (
+                <Link
+                  key={rel.id}
+                  href={`/sport/${sportSlug}/${rel.slug}`}
+                  className="group flex items-center gap-4 rounded-2xl border border-zinc-100 bg-zinc-50/50 p-4 transition hover:border-zinc-200 hover:shadow-sm"
+                >
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-2xl">
+                    {sport.icon}
+                  </div>
+                  <div className="min-w-0">
+                    <p className="truncate text-sm font-semibold text-zinc-900 group-hover:text-emerald-700">
+                      {rel.name}
+                    </p>
+                    <p className="mt-0.5 flex items-center gap-1 text-xs text-zinc-500">
+                      <MapPin className="h-3 w-3" />
+                      {rel.address}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </main>
   );
 }
