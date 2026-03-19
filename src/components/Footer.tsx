@@ -50,6 +50,12 @@ export function Footer() {
               Města
             </Link>
             <Link
+              href="/odkazy"
+              className="hover:text-zinc-600"
+            >
+              Odkazy
+            </Link>
+            <Link
               href="/kontakt"
               className="hover:text-zinc-600"
             >

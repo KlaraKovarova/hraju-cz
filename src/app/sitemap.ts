@@ -111,6 +111,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
+  // Static pages
+  entries.push({
+    url: `${BASE_URL}/odkazy`,
+    changeFrequency: "monthly",
+    priority: 0.5,
+  });
+
   // Cross-sport city pages: /mesta index + /mesto/[city] for top 20 cities
   entries.push({
     url: `${BASE_URL}/mesta`,
