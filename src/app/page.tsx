@@ -12,6 +12,7 @@ import { cityToSlug } from "@/lib/regions";
 import { FacilityCard } from "@/components/FacilityCard";
 import { HeroSearchForm } from "@/components/HeroSearchForm";
 import { AdSlot } from "@/components/AdSlot";
+import { WeekendEvents } from "@/components/WeekendEvents";
 
 export default async function Home() {
   const totalFacilities = getTotalFacilityCount();
@@ -269,6 +270,9 @@ export default async function Home() {
           </div>
         </section>
       )}
+
+      {/* Weekend Tourist Events */}
+      <WeekendEvents />
 
       {/* CTA / Info Section */}
       <section className="mx-auto max-w-6xl px-6 py-16">
