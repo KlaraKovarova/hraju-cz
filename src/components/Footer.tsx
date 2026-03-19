@@ -56,6 +56,12 @@ export function Footer() {
               Odkazy
             </Link>
             <Link
+              href="/pridat-sportoviste"
+              className="hover:text-zinc-600"
+            >
+              Přidat sportoviště
+            </Link>
+            <Link
               href="/kontakt"
               className="hover:text-zinc-600"
             >
