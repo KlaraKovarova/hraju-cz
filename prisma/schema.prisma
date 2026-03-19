@@ -209,3 +209,26 @@ model ContactMessage {
 
   @@index([createdAt])
 }
+
+model TouristEvent {
+  id          String   @id @default(cuid())
+  sourceId    String   @unique
+  name        String
+  dateStart   DateTime
+  dateEnd     DateTime?
+  city        String
+  region      String?
+  description String?  @db.Text
+  externalUrl String?
+  lat         Float?
+  lng         Float?
+  source      String   @default("kct")
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([city])
+  @@index([region])
+  @@index([dateStart])
+  @@index([source])
+}
