@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: "/hledat",
     },
     sitemap: "https://hraju.cz/sitemap.xml",
   };

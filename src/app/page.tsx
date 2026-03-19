@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Search, ArrowRight, ChevronDown, Building2, Trophy } from "lucide-react";
+import { MapPin, ArrowRight, ChevronDown } from "lucide-react";
 import { SPORTS } from "@/lib/sports";
 import {
   getTotalFacilityCount,
@@ -10,6 +10,7 @@ import {
 } from "@/lib/data";
 import { cityToSlug } from "@/lib/regions";
 import { FacilityCard } from "@/components/FacilityCard";
+import { HeroSearchForm } from "@/components/HeroSearchForm";
 
 export default async function Home() {
   const totalFacilities = getTotalFacilityCount();
@@ -102,20 +103,7 @@ export default async function Home() {
             </p>
 
             {/* Search Box */}
-            <div className="mt-8 flex max-w-lg overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-lg shadow-emerald-100/50">
-              <div className="flex flex-1 items-center gap-2 px-4">
-                <Search className="h-5 w-5 shrink-0 text-zinc-400" />
-                <input
-                  type="text"
-                  placeholder="Město nebo název sportoviště..."
-                  className="w-full py-4 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none"
-                  readOnly
-                />
-              </div>
-              <button className="m-2 rounded-xl bg-emerald-600 px-6 text-sm font-semibold text-white transition hover:bg-emerald-700">
-                Hledat
-              </button>
-            </div>
+            <HeroSearchForm />
 
             {/* Quick city links */}
             <div className="mt-5 flex flex-wrap items-center gap-2 text-sm">

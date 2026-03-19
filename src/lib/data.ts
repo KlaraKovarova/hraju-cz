@@ -633,6 +633,44 @@ export async function getRelatedFacilities(
   return mapped.slice(0, limit);
 }
 
+/** Search facilities by name, city, or sport name */
+export async function searchFacilities(
+  query: string,
+  sportSlug?: string,
+  limit: number = 50
+): Promise<FacilityWithDetails[]> {
+  const lower = query.toLowerCase();
+
+  let candidates = exportData.facilities.filter((f) => f.isActive);
+
+  // Filter by sport if specified
+  if (sportSlug) {
+    const sportFacilityIds = facilitiesBySportSlug.get(sportSlug);
+    if (!sportFacilityIds) return [];
+    candidates = candidates.filter((f) => sportFacilityIds.has(f.id));
+  }
+
+  const results = candidates.filter((f) => {
+    if (f.name.toLowerCase().includes(lower)) return true;
+    const loc = locationById.get(f.locationId);
+    if (loc?.city.toLowerCase().includes(lower)) return true;
+    const fSportIds = sportsByFacilityId.get(f.id) || [];
+    for (const sid of fSportIds) {
+      const s = sportById.get(sid);
+      if (s?.nameCs.toLowerCase().includes(lower)) return true;
+    }
+    return false;
+  });
+
+  // Sort: premium first, then alphabetically
+  results.sort((a, b) => {
+    if (a.isPremium !== b.isPremium) return a.isPremium ? -1 : 1;
+    return a.name.localeCompare(b.name, "cs");
+  });
+
+  return results.slice(0, limit).map(toFacilityWithDetails);
+}
+
 export async function getCities(): Promise<string[]> {
   try {
     const locations = await withTimeout(

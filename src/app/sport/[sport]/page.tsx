@@ -5,6 +5,7 @@ import { getSportBySlug, SPORTS } from "@/lib/sports";
 import { getRegionsBySport, getTopFacilitiesBySport, getTopCitiesBySport } from "@/lib/data";
 import { getSportTitleSuffix, getSportFacilityTypePluralGenitive, getSportFacilityType } from "@/lib/seo";
 import { FacilityCard } from "@/components/FacilityCard";
+import { HeroSearchForm } from "@/components/HeroSearchForm";
 import type { Metadata } from "next";
 
 interface SportPageProps {
@@ -95,6 +96,7 @@ export default async function SportPage({ params }: SportPageProps) {
             Celkem <span className="font-semibold text-zinc-700">{totalFacilities}</span> sportovišť
             {" "}v <span className="font-semibold text-zinc-700">{regions.length}</span> krajích
           </p>
+          <HeroSearchForm sportSlug={sport.slug} />
         </div>
       </section>
 
