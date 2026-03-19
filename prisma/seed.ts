@@ -1,21 +1,8 @@
-import { PrismaMariaDb } from "@prisma/adapter-mariadb";
+import { PrismaNeon } from "@prisma/adapter-neon";
 import { PrismaClient } from "@prisma/client";
 
-function parseDbUrl(url: string) {
-  const u = new URL(url);
-  return {
-    host: u.hostname,
-    port: u.port ? Number(u.port) : 3306,
-    user: u.username,
-    password: u.password,
-    database: u.pathname.replace(/^\//, ""),
-  };
-}
-
-const dbUrl =
-  process.env.DATABASE_URL ||
-  "mysql://root:@localhost:3306/hraju_cz";
-const adapter = new PrismaMariaDb(parseDbUrl(dbUrl));
+const connStr = process.env.DIRECT_URL || process.env.DATABASE_URL;
+const adapter = new PrismaNeon({ connectionString: connStr! });
 const prisma = new PrismaClient({ adapter });
 
 async function main() {

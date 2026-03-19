@@ -1,20 +1,9 @@
-import { PrismaMariaDb } from "@prisma/adapter-mariadb";
+import { PrismaNeon } from "@prisma/adapter-neon";
 import { PrismaClient } from "@prisma/client";
 
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined;
 };
-
-function parseDbUrl(url: string) {
-  const u = new URL(url);
-  return {
-    host: u.hostname,
-    port: u.port ? Number(u.port) : 3306,
-    user: u.username,
-    password: u.password,
-    database: u.pathname.replace(/^\//, ""),
-  };
-}
 
 function createPrismaClient(): PrismaClient {
   if (!process.env.DATABASE_URL) {
@@ -26,12 +15,7 @@ function createPrismaClient(): PrismaClient {
       },
     });
   }
-  const dbConfig = parseDbUrl(process.env.DATABASE_URL);
-  const adapter = new PrismaMariaDb({
-    ...dbConfig,
-    connectTimeout: 5000,
-    socketTimeout: 5000,
-  });
+  const adapter = new PrismaNeon({ connectionString: process.env.DATABASE_URL });
   return new PrismaClient({
     adapter,
     log:
