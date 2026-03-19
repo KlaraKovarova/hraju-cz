@@ -195,14 +195,51 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
   // Related facilities in same city
   const relatedFacilities = await getRelatedFacilities(sportSlug, facility.location.city, slug, 5);
 
-  // Build JSON-LD structured data for SEO
+  // Build JSON-LD LocalBusiness structured data for SEO
   const phone = facility.isClaimed
     ? facility.contacts.find((c) => c.type === "PHONE")?.value
     : undefined;
   const email = facility.contacts.find((c) => c.type === "EMAIL")?.value;
+  const primaryImage = facility.images?.find((img) => img.isPrimary) ?? facility.images?.[0];
+
+  // Sport-specific schema.org types
+  const sportTypeMap: Record<string, string> = {
+    tenis: "TennisComplex",
+    golf: "GolfCourse",
+    fitness: "ExerciseGym",
+  };
+  const schemaType = sportTypeMap[sportSlug] ?? "SportsActivityLocation";
+
+  // Parse opening hours into schema.org OpeningHoursSpecification
+  const czDayToSchemaDay: Record<string, string> = {
+    po: "Monday",
+    út: "Tuesday",
+    st: "Wednesday",
+    čt: "Thursday",
+    pá: "Friday",
+    so: "Saturday",
+    ne: "Sunday",
+  };
+  const openingHoursSpecs: Record<string, unknown>[] = [];
+  if (openingHours) {
+    for (const [day, hours] of Object.entries(openingHours)) {
+      const schemaDay = czDayToSchemaDay[day];
+      if (!schemaDay || !hours) continue;
+      const match = hours.match(/(\d{1,2}:\d{2})\s*[-–]\s*(\d{1,2}:\d{2})/);
+      if (match) {
+        openingHoursSpecs.push({
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: schemaDay,
+          opens: match[1],
+          closes: match[2],
+        });
+      }
+    }
+  }
+
   const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
-    "@type": "SportsActivityLocation",
+    "@type": schemaType,
     name: facility.name,
     url: `https://hraju.cz/sport/${sportSlug}/${slug}`,
     address: {
@@ -217,6 +254,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
     ...(phone && { telephone: phone }),
     ...(email && { email }),
     ...(facility.website && { sameAs: facility.website }),
+    ...(primaryImage && { image: primaryImage.url }),
     ...(mapLat && mapLng && {
       geo: {
         "@type": "GeoCoordinates",
@@ -227,6 +265,10 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
     ...(facility.sports.length > 0 && {
       sport: facility.sports.map((s) => s.sport.nameCs),
     }),
+    ...(openingHoursSpecs.length > 0 && {
+      openingHoursSpecification: openingHoursSpecs,
+    }),
+    isAccessibleForFree: false,
   };
 
   // BreadcrumbList structured data for SEO
