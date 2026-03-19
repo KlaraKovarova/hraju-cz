@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
 
     if (!facilityId || !submitterName || !submitterEmail || !changes) {
       return NextResponse.json(
-        { error: "facilityId, submitterName, submitterEmail, and changes are required" },
+        { error: "Vyplňte prosím všechna povinná pole." },
         { status: 400 }
       );
     }
@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
     // Validate email format
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(submitterEmail)) {
       return NextResponse.json(
-        { error: "Invalid email format" },
+        { error: "Neplatný formát e-mailu." },
         { status: 400 }
       );
     }
@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
 
     if (!facility) {
       return NextResponse.json(
-        { error: "Facility not found" },
+        { error: "Sportoviště nebylo nalezeno." },
         { status: 404 }
       );
     }
@@ -100,7 +100,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error("Failed to create edit request:", error);
     return NextResponse.json(
-      { error: "Failed to submit edit request" },
+      { error: "Nepodařilo se odeslat návrh úpravy. Zkuste to prosím později." },
       { status: 500 }
     );
   }
@@ -124,7 +124,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(editRequests);
   } catch {
     return NextResponse.json(
-      { error: "Database unavailable" },
+      { error: "Databáze je nedostupná." },
       { status: 503 }
     );
   }
