@@ -53,6 +53,7 @@ export async function generateMetadata({
         type: "website",
         siteName: "hraju.cz",
         locale: "cs_CZ",
+        images: ["/og-image.jpg"],
       },
       twitter: {
         card: "summary",
@@ -80,7 +81,7 @@ export async function generateMetadata({
     return {
       title,
       description,
-      openGraph: { title, description, url, type: "website", siteName: "hraju.cz", locale: "cs_CZ" },
+      openGraph: { title, description, url, type: "website", siteName: "hraju.cz", locale: "cs_CZ", images: ["/og-image.jpg"] },
       alternates: { canonical: url },
     };
   }

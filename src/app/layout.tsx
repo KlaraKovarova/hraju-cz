@@ -28,6 +28,14 @@ export const metadata: Metadata = {
     siteName: "hraju.cz",
     locale: "cs_CZ",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1653,
+        height: 1229,
+        alt: "hraju.cz — Sportoviště v České republice",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
