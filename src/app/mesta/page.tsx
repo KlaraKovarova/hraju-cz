@@ -4,7 +4,7 @@ import { MapPin, ChevronRight, Building2 } from "lucide-react";
 import { getTopCitiesOverallForMesto, getTotalFacilityCount } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Města se sportovišti | hraju.cz",
+  title: "Města se sportovišti",
   description:
     "Přehled měst s nejvíce sportovišti v České republice. Najděte sportoviště ve svém městě — tenis, squash, badminton, volejbal a další.",
   openGraph: {

@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { cityName, facilities, sportGroups } = await getFacilitiesByCity(citySlug);
   if (!cityName || facilities.length === 0) return {};
 
-  const title = `Sportoviště ${cityName} \u2014 ${facilities.length} sportovišť v ${sportGroups.length} sportech | hraju.cz`;
+  const title = `Sportoviště ${cityName} \u2014 ${facilities.length} sportovišť v ${sportGroups.length} sportech`;
   const description = `Najděte ${facilities.length} sportovišť v ${cityName}. ${sportGroups.map((g) => g.sport.nameCs).join(", ")}. Adresy, kontakty, otevírací doby.`;
 
   return {

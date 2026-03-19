@@ -15,13 +15,16 @@ export async function generateMetadata({
   searchParams,
 }: SearchPageProps): Promise<Metadata> {
   const { q } = await searchParams;
-  const title = q
-    ? `Hledání: ${q} | hraju.cz`
-    : "Hledání sportovišť | hraju.cz";
+  const title = q ? `Hledání: ${q}` : "Hledání sportovišť";
 
   return {
     title,
     robots: { index: false, follow: true },
+    alternates: {
+      canonical: q
+        ? `https://hraju.cz/hledat?q=${encodeURIComponent(q)}`
+        : "https://hraju.cz/hledat",
+    },
   };
 }
 
