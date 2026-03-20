@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Search, X } from "lucide-react";
+import { trackSearchPerformed } from "@/lib/analytics";
 
 interface SearchBarProps {
   currentCity?: string;
@@ -17,6 +18,7 @@ export function SearchBar({ currentCity, sportSlug }: SearchBarProps) {
     e.preventDefault();
     const trimmed = value.trim();
     if (trimmed) {
+      trackSearchPerformed(trimmed, sportSlug);
       router.push(`/sport/${sportSlug}?city=${encodeURIComponent(trimmed)}`);
     } else {
       router.push(`/sport/${sportSlug}`);

@@ -5,6 +5,7 @@ import { getSportFacilityTypePlural } from "@/lib/seo";
 import { getCityInPhrase } from "@/lib/locative";
 import { FacilityCard } from "@/components/FacilityCard";
 import { FacilityMap } from "@/components/FacilityMap";
+import { TrackPageView } from "@/components/TrackPageView";
 import type { FacilityWithDetails, DistrictGroup } from "@/lib/data";
 
 type Sport = (typeof SPORTS)[number];
@@ -63,6 +64,10 @@ export function CityLandingContent({
 
   return (
     <main className="min-h-screen bg-zinc-50/50">
+      <TrackPageView
+        eventName="city_page_view"
+        params={{ sport: sportSlug, city: cityName }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}

@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Search } from "lucide-react";
+import { trackSearchPerformed } from "@/lib/analytics";
 
 interface HeroSearchFormProps {
   sportSlug?: string;
@@ -16,6 +17,7 @@ export function HeroSearchForm({ sportSlug }: HeroSearchFormProps) {
     e.preventDefault();
     const trimmed = query.trim();
     if (trimmed.length < 2) return;
+    trackSearchPerformed(trimmed, sportSlug);
     const params = new URLSearchParams({ q: trimmed });
     if (sportSlug) params.set("sport", sportSlug);
     router.push(`/hledat?${params.toString()}`);

@@ -24,6 +24,7 @@ import { PhotoGallery } from "@/components/PhotoGallery";
 import { ShareButton } from "@/components/ShareButton";
 import { AdSlot } from "@/components/AdSlot";
 import { TrackPageView } from "@/components/TrackPageView";
+import { TrackClick } from "@/components/TrackClick";
 import { getOwnerSession } from "@/lib/owner-auth";
 import { prisma } from "@/lib/prisma";
 import type { Metadata } from "next";
@@ -596,28 +597,34 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                           </div>
                         )}
                         {contact.type === "PHONE" ? (
-                          <a
-                            href={`tel:${contact.value}`}
-                            className="font-medium text-zinc-700 hover:text-emerald-600"
-                          >
-                            {contact.value}
-                          </a>
+                          <TrackClick eventName="outbound_click" params={{ type: "phone", facilitySlug: facility.slug }}>
+                            <a
+                              href={`tel:${contact.value}`}
+                              className="font-medium text-zinc-700 hover:text-emerald-600"
+                            >
+                              {contact.value}
+                            </a>
+                          </TrackClick>
                         ) : contact.type === "EMAIL" ? (
-                          <a
-                            href={`mailto:${contact.value}`}
-                            className="truncate font-medium text-zinc-700 hover:text-emerald-600"
-                          >
-                            {contact.value}
-                          </a>
+                          <TrackClick eventName="outbound_click" params={{ type: "email", facilitySlug: facility.slug }}>
+                            <a
+                              href={`mailto:${contact.value}`}
+                              className="truncate font-medium text-zinc-700 hover:text-emerald-600"
+                            >
+                              {contact.value}
+                            </a>
+                          </TrackClick>
                         ) : (
-                          <a
-                            href={contact.value}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="truncate font-medium text-zinc-700 hover:text-emerald-600"
-                          >
-                            {contact.value}
-                          </a>
+                          <TrackClick eventName="outbound_click" params={{ type: "website", facilitySlug: facility.slug }}>
+                            <a
+                              href={contact.value}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="truncate font-medium text-zinc-700 hover:text-emerald-600"
+                            >
+                              {contact.value}
+                            </a>
+                          </TrackClick>
                         )}
                       </div>
                     </li>
@@ -629,33 +636,37 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
 
             {/* Booking CTA */}
             {facility.bookingUrl && (
-              <a
-                href={facility.bookingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded-2xl bg-emerald-600 px-5 py-4 text-sm font-bold text-white shadow-lg shadow-emerald-200 transition hover:bg-emerald-700 hover:shadow-emerald-300"
-              >
-                <CalendarCheck className="h-5 w-5" />
-                Rezervovat
-                <ExternalLink className="ml-1 h-3.5 w-3.5 opacity-70" />
-              </a>
+              <TrackClick eventName="outbound_click" params={{ type: "booking", facilitySlug: facility.slug }}>
+                <a
+                  href={facility.bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-2xl bg-emerald-600 px-5 py-4 text-sm font-bold text-white shadow-lg shadow-emerald-200 transition hover:bg-emerald-700 hover:shadow-emerald-300"
+                >
+                  <CalendarCheck className="h-5 w-5" />
+                  Rezervovat
+                  <ExternalLink className="ml-1 h-3.5 w-3.5 opacity-70" />
+                </a>
+              </TrackClick>
             )}
 
             {/* Quick Actions */}
             <div className="space-y-2">
               {facility.website && (
-                <a
-                  href={facility.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 rounded-2xl border border-zinc-100 bg-white p-4 text-sm font-medium text-zinc-700 transition hover:border-emerald-200 hover:shadow-sm"
-                >
-                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600">
-                    <Globe className="h-4 w-4" />
-                  </div>
-                  Webové stránky
-                  <ExternalLink className="ml-auto h-3.5 w-3.5 text-zinc-400" />
-                </a>
+                <TrackClick eventName="outbound_click" params={{ type: "website", facilitySlug: facility.slug }}>
+                  <a
+                    href={facility.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 rounded-2xl border border-zinc-100 bg-white p-4 text-sm font-medium text-zinc-700 transition hover:border-emerald-200 hover:shadow-sm"
+                  >
+                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600">
+                      <Globe className="h-4 w-4" />
+                    </div>
+                    Webové stránky
+                    <ExternalLink className="ml-auto h-3.5 w-3.5 text-zinc-400" />
+                  </a>
+                </TrackClick>
               )}
 
               <a
@@ -702,21 +713,23 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
 
             {/* Claim CTA / Verified Badge */}
             {!facility.isClaimed ? (
-              <Link
-                href="/moje-sportoviste"
-                className="block rounded-2xl border-2 border-dashed border-emerald-200 bg-emerald-50/50 p-5 text-center transition hover:border-emerald-300 hover:bg-emerald-50"
-              >
-                <Building2 className="mx-auto h-8 w-8 text-emerald-500" />
-                <p className="mt-2 text-sm font-semibold text-zinc-900">
-                  Jste provozovatel?
-                </p>
-                <p className="mt-1 text-xs text-zinc-500">
-                  Převezměte svůj profil a získejte kontrolu nad svým zápisem.
-                </p>
-                <span className="mt-3 inline-block rounded-lg bg-emerald-600 px-4 py-2 text-xs font-bold text-white transition hover:bg-emerald-700">
-                  Převzít sportoviště
-                </span>
-              </Link>
+              <TrackClick eventName="facility_claim_click" params={{ facilitySlug: facility.slug, sport: sportSlug, city: facility.location.city }}>
+                <Link
+                  href="/moje-sportoviste"
+                  className="block rounded-2xl border-2 border-dashed border-emerald-200 bg-emerald-50/50 p-5 text-center transition hover:border-emerald-300 hover:bg-emerald-50"
+                >
+                  <Building2 className="mx-auto h-8 w-8 text-emerald-500" />
+                  <p className="mt-2 text-sm font-semibold text-zinc-900">
+                    Jste provozovatel?
+                  </p>
+                  <p className="mt-1 text-xs text-zinc-500">
+                    Převezměte svůj profil a získejte kontrolu nad svým zápisem.
+                  </p>
+                  <span className="mt-3 inline-block rounded-lg bg-emerald-600 px-4 py-2 text-xs font-bold text-white transition hover:bg-emerald-700">
+                    Převzít sportoviště
+                  </span>
+                </Link>
+              </TrackClick>
             ) : (
               <div className="flex items-center gap-3 rounded-2xl border border-emerald-100 bg-emerald-50 p-4">
                 <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600" />
