@@ -167,6 +167,74 @@ export async function sendEventSubmissionConfirmationEmail(
   }
 }
 
+export async function sendReviewNotificationEmail(
+  to: string,
+  facilityName: string,
+  rating: number,
+  reviewText: string | null,
+  facilityUrl: string
+): Promise<boolean> {
+  const transporter = createTransporter();
+  if (!transporter) {
+    console.warn("SMTP not configured, skipping review notification email");
+    return false;
+  }
+
+  const stars = "\u2605".repeat(rating) + "\u2606".repeat(5 - rating);
+  const preview = reviewText ? reviewText.slice(0, 200) + (reviewText.length > 200 ? "\u2026" : "") : "";
+  const claimUrl = "https://hraju.cz/moje-sportoviste";
+
+  try {
+    await transporter.sendMail({
+      from: `"hraju.cz" <${process.env.SMTP_USER}>`,
+      to,
+      subject: `Nové hodnocení vašeho sportoviště ${facilityName}`,
+      text: [
+        `Dobrý den,`,
+        ``,
+        `vaše sportoviště „${facilityName}" na hraju.cz získalo nové hodnocení.`,
+        ``,
+        `Hodnocení: ${stars} (${rating}/5)`,
+        ...(preview ? [`Text: ${preview}`] : []),
+        ``,
+        `Chcete spravovat svůj profil a reagovat na hodnocení?`,
+        `Převezměte svůj profil: ${claimUrl}`,
+        ``,
+        `Zobrazit sportoviště: ${facilityUrl}`,
+        ``,
+        `S pozdravem,`,
+        `tým hraju.cz`,
+      ].join("\n"),
+      html: `
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #18181b;">Nové hodnocení vašeho sportoviště</h2>
+          <p>Dobrý den,</p>
+          <p>vaše sportoviště <strong>${facilityName}</strong> na hraju.cz získalo nové hodnocení.</p>
+          <div style="background: #f4f4f5; border-radius: 12px; padding: 16px; margin: 16px 0;">
+            <div style="font-size: 24px; color: #f59e0b;">${stars}</div>
+            ${preview ? `<p style="color: #3f3f46; margin-top: 8px;">${preview}</p>` : ""}
+          </div>
+          <p>Chcete spravovat svůj profil a reagovat na hodnocení?</p>
+          <p style="margin: 24px 0;">
+            <a href="${claimUrl}" style="background: #059669; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+              Spravujte své sportoviště
+            </a>
+          </p>
+          <p style="font-size: 14px;">
+            <a href="${facilityUrl}" style="color: #059669;">Zobrazit sportoviště na hraju.cz</a>
+          </p>
+          <hr style="border: none; border-top: 1px solid #e4e4e7; margin: 24px 0;" />
+          <p style="color: #a1a1aa; font-size: 12px;">hraju.cz – sportoviště v Česku</p>
+        </div>
+      `,
+    });
+    return true;
+  } catch (error) {
+    console.error("Failed to send review notification email:", error);
+    return false;
+  }
+}
+
 interface OutreachEmailParams {
   facilityName: string;
   facilityUrl: string;

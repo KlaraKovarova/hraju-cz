@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { sendReviewNotificationEmail } from "@/lib/email";
 
 // GET /api/facilities/[id]/reviews — list approved reviews (paginated, newest first)
 export async function GET(
@@ -58,8 +59,17 @@ export async function POST(
     return NextResponse.json({ error: "Hodnocení musí být 1–5." }, { status: 400 });
   }
 
-  // Check facility exists
-  const facility = await prisma.facility.findUnique({ where: { id }, select: { id: true } });
+  // Check facility exists and get details for notification
+  const facility = await prisma.facility.findUnique({
+    where: { id },
+    select: {
+      id: true,
+      name: true,
+      slug: true,
+      contacts: { where: { type: "EMAIL" }, select: { value: true }, take: 1 },
+      sports: { select: { sport: { select: { slug: true } } }, take: 1 },
+    },
+  });
   if (!facility) {
     return NextResponse.json({ error: "Sportoviště nenalezeno." }, { status: 404 });
   }
@@ -94,6 +104,27 @@ export async function POST(
       text: text?.trim() || null,
     },
   });
+
+  // Notify facility owner by email (fire-and-forget, idempotent via ownerNotifiedAt)
+  const ownerEmail = facility.contacts[0]?.value;
+  if (ownerEmail) {
+    const sportSlug = facility.sports[0]?.sport.slug || "tenis";
+    const facilityUrl = `https://hraju.cz/sport/${sportSlug}/${facility.slug}`;
+    sendReviewNotificationEmail(
+      ownerEmail,
+      facility.name,
+      rating,
+      text?.trim() || null,
+      facilityUrl
+    ).then(async (sent) => {
+      if (sent) {
+        await prisma.review.update({
+          where: { id: review.id },
+          data: { ownerNotifiedAt: new Date() },
+        }).catch(() => {});
+      }
+    }).catch(() => {});
+  }
 
   return NextResponse.json({ id: review.id, message: "Děkujeme za recenzi! Bude zobrazena po schválení." }, { status: 201 });
 }
