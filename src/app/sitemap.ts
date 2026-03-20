@@ -132,7 +132,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: isPraha ? 0.8 : 0.7,
       });
     }
-    // Add unified Praha entry per sport (if 2+ Praha facilities exist)
+    // Add unified Praha entry + district sub-pages per sport
     const prahaTotal = prahaCountBySport.get(sportSlug) || 0;
     if (prahaTotal >= 2) {
       // Compute Praha lastmod from all Praha district facilities
@@ -148,6 +148,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         changeFrequency: "weekly",
         priority: 0.8,
       });
+
+      // District sub-pages: /sport/{sport}/praha/{district}
+      for (const [city, count] of cityMap) {
+        if (count < 1 || !/^Praha \d+$/.test(city)) continue;
+        entries.push({
+          url: `${BASE_URL}/sport/${sportSlug}/praha/${cityToSlug(city)}`,
+          lastModified: sportCityLastmod.get(`${sportSlug}|${city}`),
+          changeFrequency: "weekly",
+          priority: 0.75,
+        });
+      }
     }
   }
 

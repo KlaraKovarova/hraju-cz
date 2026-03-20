@@ -158,7 +158,7 @@ export function CityLandingContent({
                     </span>
                   </h2>
                   <Link
-                    href={`/sport/${sportSlug}/${group.districtSlug}`}
+                    href={`/sport/${sportSlug}/${citySlug}/${group.districtSlug}`}
                     className="text-sm font-medium text-emerald-600 hover:text-emerald-700"
                   >
                     Zobrazit {group.district} &rarr;
