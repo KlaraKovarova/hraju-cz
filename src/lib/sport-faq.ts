@@ -180,48 +180,48 @@ const SPORT_FAQS: Record<string, FaqItem[]> = {
         "Ano, padel je ideální pro začátečníky. Menší kurt a pomalejší míč umožňují delší výměny od prvního dne. Mnoho center nabízí úvodní lekce s trenérem, kde se naučíte základní údery a pravidla.",
     },
   ],
-  "stolni-tenis": [
+  lezeni: [
     {
-      question: "Kde hrát stolní tenis v Česku?",
+      question: "Kolik stojí vstup do lezeckého centra?",
       answer:
-        "Na hraju.cz najdete přehled pingpongových heren, sportovních center a klubů po celé ČR. Stolní tenis se dá hrát i venku na veřejných stolech v parcích — ty jsou většinou zdarma.",
+        "Jednorázový vstup do lezeckého centra stojí obvykle 150–300 Kč. V Praze 200–350 Kč, v menších městech od 120 Kč. Většina center nabízí zvýhodněné permanentky a studentské ceny.",
     },
     {
-      question: "Kolik stojí hodina stolního tenisu?",
+      question: "Co potřebuji na lezení?",
       answer:
-        "Pronájem stolu stojí obvykle 80–200 Kč za hodinu. V klubech a sportovních centrech 100–250 Kč, v menších městech od 60 Kč. Některá centra nabízejí měsíční permanentky pro pravidelné hráče.",
+        "Na bouldering stačí sportovní oblečení a lezečky (půjčení 50–100 Kč). Na lezení s lanem navíc potřebujete sedací úvazek a jistící pomůcku — vše si půjčíte na místě. Doporučujeme magnézium na ruce.",
     },
     {
-      question: "Potřebuji vlastní pálku na stolní tenis?",
+      question: "Je lezení vhodné pro začátečníky?",
       answer:
-        "Pro rekreační hru si pálky půjčíte na místě. Pro pravidelnou hru doporučujeme vlastní pálku — začátečnická stojí od 300 Kč, pokročilejší od 800 Kč. Rozdíl v kvalitě potah výrazně ovlivňuje hru.",
+        "Ano, bouldering je ideální start — lezete do výšky 4 m nad měkkými matracemi bez lana. Většina center nabízí úvodní lekce s instruktorem. Cesty jsou barevně označené podle obtížnosti od nejlehčích.",
     },
     {
-      question: "Je stolní tenis dobrý sport pro děti?",
+      question: "Jaký je rozdíl mezi boulderingem a lezením s lanem?",
       answer:
-        "Ano, stolní tenis rozvíjí koordinaci, postřeh a strategické myšlení. Začít se dá od 6 let. Mnoho klubů nabízí juniorské tréninky. ČR má silnou tradici ve stolním tenise s kvalitními trenéry.",
+        "Bouldering je lezení na nízké stěně (do 4,5 m) bez lana nad matracemi. Lezení s lanem probíhá na vyšších stěnách (10–15 m) se jištěním. Bouldering je přístupnější pro začátečníky, lezení s lanem vyžaduje kurz jištění.",
     },
   ],
-  florbal: [
+  ferraty: [
     {
-      question: "Kde hrát florbal v Česku?",
+      question: "Co je to ferrata?",
       answer:
-        "Na hraju.cz najdete sportovní haly a centra, kde se florbal hraje. Florbal se hraje v tělocvičnách a sportovních halách. Mnoho měst má otevřené tréninky, kam se můžete přidat i bez zkušeností.",
+        "Ferrata (via ferrata) je zajištěná cesta v horském terénu s ocelovými lany, stupadly a žebříky. Vznikly v Alpách pro bezpečný pohyb ve skalách. V ČR najdete ferraty různé obtížnosti, od snadných po náročné.",
     },
     {
-      question: "Kolik stojí pronájem haly na florbal?",
+      question: "Co potřebuji na ferratu?",
       answer:
-        "Pronájem sportovní haly na florbal stojí 500–1 500 Kč za hodinu podle velikosti a lokality. V Praze 800–2 000 Kč, v menších městech od 400 Kč. Náklady se obvykle dělí mezi hráče.",
+        "Ferratový set (sedací úvazek, tlumič pádu, dvě karabiny), helmu a vhodnou obuv s pevnou podrážkou. Vybavení si lze půjčit v blízkých půjčovnách nebo outdoorových centrech. Doporučujeme rukavice.",
     },
     {
-      question: "Co potřebuji na florbal?",
+      question: "Jsou ferraty v ČR vhodné pro začátečníky?",
       answer:
-        "Sálovou obuv s nebarvicí podrážkou, sportovní oblečení a florbalovou hokejku. Hokejku si na začátek půjčíte v klubu. Brankáři navíc potřebují speciální výstroj — tu většinou poskytuje tým.",
+        "Ano, v ČR je řada ferrat obtížnosti A a B (snadné až mírně obtížné), vhodných pro začátečníky. Populární jsou ferraty v Děčínském Sněžníku, na Pastýřské stěně nebo v Českém Švýcarsku. Vždy respektujte obtížnost.",
     },
     {
-      question: "Je florbal vhodný pro začátečníky?",
+      question: "Kde najdu ferraty v České republice?",
       answer:
-        "Ano, florbal je přístupný sport s jednoduchými pravidly. Začít se dá v každém věku. Mnoho klubů pořádá volné tréninky a amatérské ligy pro rekreační hráče bez zkušeností.",
+        "Ferraty v ČR najdete hlavně v severních Čechách (Labské pískovce, Český ráj), na Vysočině a v Moravském krasu. Na hraju.cz máte přehled ferrat s popisem obtížnosti, délky a potřebného vybavení.",
     },
   ],
 };

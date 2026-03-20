@@ -142,6 +142,30 @@ async function main() {
         icon: "🏑",
       },
     }),
+    prisma.sport.upsert({
+      where: { slug: "lezeni" },
+      update: {},
+      create: {
+        slug: "lezeni",
+        name: "Climbing",
+        nameCs: "Lezení",
+        subdomain: "lezeni",
+        description: "Lezecká centra, bouldery a lezecké stěny v ČR",
+        icon: "🧗",
+      },
+    }),
+    prisma.sport.upsert({
+      where: { slug: "ferraty" },
+      update: {},
+      create: {
+        slug: "ferraty",
+        name: "Via Ferrata",
+        nameCs: "Ferraty",
+        subdomain: "ferraty",
+        description: "Ferraty a zajištěné cesty v České republice",
+        icon: "⛰️",
+      },
+    }),
   ]);
 
   console.log(`✓ ${sports.length} sports`);

@@ -136,12 +136,12 @@ export const SPORTS = [
     image: "/images/sports/padel-hero.webp",
   },
   {
-    slug: "stolni-tenis",
-    name: "Table Tennis",
-    nameCs: "Stolní tenis",
-    subdomain: "stolni-tenis",
-    description: "Stolní tenis — pingpong herny a kluby v ČR",
-    icon: "🏓",
+    slug: "lezeni",
+    name: "Climbing",
+    nameCs: "Lezení",
+    subdomain: "lezeni",
+    description: "Lezecká centra, bouldery a lezecké stěny v ČR",
+    icon: "🧗",
     color: "indigo",
     gradient: "from-indigo-500 to-blue-600",
     lightBg: "bg-indigo-50",
@@ -150,15 +150,15 @@ export const SPORTS = [
     accentHover: "hover:bg-indigo-700",
     ringColor: "ring-indigo-100",
     borderColor: "border-indigo-200",
-    image: "/images/sports/stolni-tenis-hero.webp",
+    image: "/images/sports/lezeni-hero.webp",
   },
   {
-    slug: "florbal",
-    name: "Floorball",
-    nameCs: "Florbal",
-    subdomain: "florbal",
-    description: "Florbalové haly a sportovní centra v ČR",
-    icon: "🏑",
+    slug: "ferraty",
+    name: "Via Ferrata",
+    nameCs: "Ferraty",
+    subdomain: "ferraty",
+    description: "Ferraty a zajištěné cesty v České republice",
+    icon: "⛰️",
     color: "lime",
     gradient: "from-lime-500 to-green-600",
     lightBg: "bg-lime-50",
@@ -167,8 +167,9 @@ export const SPORTS = [
     accentHover: "hover:bg-lime-700",
     ringColor: "ring-lime-100",
     borderColor: "border-lime-200",
-    image: "/images/sports/florbal-hero.webp",
+    image: "/images/sports/ferraty-hero.webp",
   },
+  // stolni-tenis and florbal hidden — launching late April (SIL-232)
   // bowling hidden until data is cleaned (SIL-67) — most records are unrelated businesses
 ] as const;
 
@@ -176,4 +177,11 @@ export type SportSlug = (typeof SPORTS)[number]["slug"];
 
 export function getSportBySlug(slug: string) {
   return SPORTS.find((s) => s.slug === slug);
+}
+
+/** Sports where facilities cannot be claimed or upgraded to premium (SIL-232) */
+const NON_CLAIMABLE_SPORTS = new Set<string>(["ferraty"]);
+
+export function isSportClaimable(sportSlug: string): boolean {
+  return !NON_CLAIMABLE_SPORTS.has(sportSlug);
 }

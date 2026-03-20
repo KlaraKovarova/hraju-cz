@@ -64,19 +64,19 @@ const SPORT_FACILITY_TYPES: Record<
     instrumental: "padelovými kurty",
     titleSuffix: "padelové kurty a centra v celé ČR",
   },
-  "stolni-tenis": {
-    singular: "herna stolního tenisu",
-    plural: "herny stolního tenisu",
-    pluralGenitive: "heren stolního tenisu",
-    instrumental: "hernami stolního tenisu",
-    titleSuffix: "stolní tenis a pingpong v celé ČR",
+  lezeni: {
+    singular: "lezecké centrum",
+    plural: "lezecká centra a bouldery",
+    pluralGenitive: "lezeckých center",
+    instrumental: "lezeckými centry",
+    titleSuffix: "lezecká centra a bouldery v celé ČR",
   },
-  florbal: {
-    singular: "florbalová hala",
-    plural: "florbalové haly",
-    pluralGenitive: "florbalových hal",
-    instrumental: "florbalovými halami",
-    titleSuffix: "florbalové haly a sportoviště v celé ČR",
+  ferraty: {
+    singular: "ferrata",
+    plural: "ferraty a zajištěné cesty",
+    pluralGenitive: "ferrat",
+    instrumental: "ferratami",
+    titleSuffix: "ferraty a zajištěné cesty v celé ČR",
   },
 };
 
