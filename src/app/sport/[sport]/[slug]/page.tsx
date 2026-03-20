@@ -24,6 +24,7 @@ import { ReviewForm } from "@/components/ReviewForm";
 import { ReviewList } from "@/components/ReviewList";
 import { CityLandingContent } from "@/components/CityLandingContent";
 import { PhotoGallery } from "@/components/PhotoGallery";
+import { OpeningHoursDisplay } from "@/components/OpeningHoursDisplay";
 import { ShareButton } from "@/components/ShareButton";
 import { AdSlot } from "@/components/AdSlot";
 import { TrackPageView } from "@/components/TrackPageView";
@@ -115,15 +116,6 @@ const CONTACT_ICONS: Record<string, React.ReactNode> = {
   INSTAGRAM: <Globe className="h-4 w-4" />,
 };
 
-const DAY_LABELS: Record<string, string> = {
-  po: "Pondělí",
-  út: "Úterý",
-  st: "Středa",
-  čt: "Čtvrtek",
-  pá: "Pátek",
-  so: "Sobota",
-  ne: "Neděle",
-};
 
 export default async function FacilityPage({ params }: FacilityPageProps) {
   const { sport: sportSlug, slug } = await params;
@@ -546,33 +538,29 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
             </section>
 
             {/* Opening Hours */}
-            {openingHours && (
-              <section className="rounded-2xl border border-zinc-100 bg-white p-6">
-                <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-zinc-900">
-                  <Clock className="h-5 w-5 text-emerald-500" />
-                  Otevírací doba
-                </h2>
-                <div className="divide-y divide-zinc-50 rounded-xl bg-zinc-50/50">
-                  {Object.keys(DAY_LABELS).map((day) => {
-                    const hours = openingHours[day];
-                    if (!hours) return null;
-                    return (
-                      <div
-                        key={day}
-                        className="flex justify-between px-4 py-3 text-sm"
-                      >
-                        <span className="font-medium text-zinc-600">
-                          {DAY_LABELS[day]}
-                        </span>
-                        <span className="font-semibold text-zinc-900">
-                          {hours}
-                        </span>
-                      </div>
-                    );
-                  })}
+            <section className="rounded-2xl border border-zinc-100 bg-white p-6">
+              <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-zinc-900">
+                <Clock className="h-5 w-5 text-emerald-500" />
+                Otevírací doba
+              </h2>
+              {openingHours ? (
+                <OpeningHoursDisplay hours={openingHours} />
+              ) : (
+                <div className="rounded-xl bg-zinc-50/50 p-4 text-center">
+                  <p className="text-sm text-zinc-500">
+                    Otevírací doba není k dispozici.
+                  </p>
+                  {!facility.isClaimed && (
+                    <Link
+                      href="/moje-sportoviste"
+                      className="mt-2 inline-block text-sm font-medium text-emerald-600 hover:text-emerald-700"
+                    >
+                      Jste provozovatel? Přidejte otevírací dobu &rarr;
+                    </Link>
+                  )}
                 </div>
-              </section>
-            )}
+              )}
+            </section>
 
             {/* Pricing */}
             {facility.pricing && (
