@@ -1,8 +1,9 @@
 "use client";
 
-import { Suspense, useEffect, useState, useCallback } from "react";
+import { Suspense, useEffect, useState, useCallback, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import {
   CheckCircle2,
   AlertCircle,
@@ -15,7 +16,25 @@ import {
   Lock,
   TrendingUp,
   TrendingDown,
+  Upload,
+  Trash2,
+  Star,
+  ImageIcon,
 } from "lucide-react";
+
+interface FacilityImage {
+  id: string;
+  url: string;
+  alt: string | null;
+  isPrimary: boolean;
+  order: number;
+}
+
+interface FacilityAmenity {
+  id: string;
+  amenityId: string;
+  amenity: { id: string; slug: string; name: string; nameCs: string; icon: string | null };
+}
 
 interface FacilityData {
   id: string;
@@ -29,6 +48,16 @@ interface FacilityData {
   website: string | null;
   contacts: { id: string; type: string; value: string; isPrimary: boolean }[];
   sports: { sport: { slug: string; nameCs: string } }[];
+  images: FacilityImage[];
+  amenities: FacilityAmenity[];
+}
+
+interface AmenityOption {
+  id: string;
+  slug: string;
+  name: string;
+  nameCs: string;
+  icon: string | null;
 }
 
 interface AnalyticsData {
@@ -121,7 +150,6 @@ function MojeSportovisteContent() {
 
   useEffect(() => {
     if (token) {
-      // Authenticate with token
       setAuthState("authenticating");
       fetch("/api/owner/auth", {
         method: "POST",
@@ -129,7 +157,6 @@ function MojeSportovisteContent() {
         body: JSON.stringify({ token }),
       }).then(async (res) => {
         if (res.ok) {
-          // Redirect to clean URL (remove token from address bar)
           window.history.replaceState({}, "", "/moje-sportoviste");
           await loadFacility();
         } else {
@@ -142,7 +169,6 @@ function MojeSportovisteContent() {
         setAuthState("unauthenticated");
       });
     } else {
-      // Check existing session
       loadFacility();
     }
   }, [token, loadFacility]);
@@ -158,7 +184,6 @@ function MojeSportovisteContent() {
     setSaveError(null);
     setSaved(false);
 
-    // Parse opening hours from text back to object
     let openingHours: Record<string, string> | undefined;
     if (form.openingHours.trim()) {
       openingHours = {};
@@ -323,7 +348,6 @@ function MojeSportovisteContent() {
               </div>
             </div>
 
-            {/* Daily chart (premium) or upgrade CTA (free) */}
             {analytics.isPremium ? (
               analytics.dailyViews.length > 0 && (
                 <div className="mt-4">
@@ -362,6 +386,23 @@ function MojeSportovisteContent() {
               </div>
             )}
           </section>
+        )}
+
+        {/* Photos section */}
+        {facility && (
+          <PhotoManager
+            facilityId={facility.id}
+            images={facility.images}
+            onUpdate={loadFacility}
+          />
+        )}
+
+        {/* Amenities section */}
+        {facility && (
+          <AmenityManager
+            currentAmenityIds={facility.amenities.map((a) => a.amenity.id)}
+            onUpdate={loadFacility}
+          />
         )}
 
         <form onSubmit={handleSave} className="space-y-6">
@@ -533,6 +574,277 @@ function MojeSportovisteContent() {
   );
 }
 
+// --- Photo Manager Component ---
+function PhotoManager({
+  facilityId,
+  images,
+  onUpdate,
+}: {
+  facilityId: string;
+  images: FacilityImage[];
+  onUpdate: () => Promise<void>;
+}) {
+  const [uploading, setUploading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  async function handleUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setUploading(true);
+    setError(null);
+
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+      const res = await fetch("/api/owner/photos", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (res.ok) {
+        await onUpdate();
+      } else {
+        const data = await res.json();
+        setError(data.error || "Nahrání selhalo.");
+      }
+    } catch {
+      setError("Chyba při nahrávání.");
+    } finally {
+      setUploading(false);
+      if (fileInputRef.current) fileInputRef.current.value = "";
+    }
+  }
+
+  async function handleDelete(imageId: string) {
+    try {
+      const res = await fetch(`/api/owner/photos/${imageId}`, {
+        method: "DELETE",
+      });
+      if (res.ok) await onUpdate();
+    } catch {
+      // ignore
+    }
+  }
+
+  async function handleSetPrimary(imageId: string) {
+    try {
+      const res = await fetch(`/api/owner/photos/${imageId}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ isPrimary: true }),
+      });
+      if (res.ok) await onUpdate();
+    } catch {
+      // ignore
+    }
+  }
+
+  return (
+    <section className="mb-6 rounded-2xl border border-zinc-200 bg-white p-6">
+      <div className="mb-4 flex items-center gap-2">
+        <ImageIcon className="h-5 w-5 text-zinc-600" />
+        <h2 className="font-semibold text-zinc-900">Fotky</h2>
+        <span className="text-xs text-zinc-400">({images.length}/10)</span>
+      </div>
+
+      {error && (
+        <div className="mb-4 flex items-center gap-2 rounded-lg bg-red-50 p-3 text-sm text-red-700">
+          <AlertCircle className="h-4 w-4 shrink-0" />
+          {error}
+        </div>
+      )}
+
+      {images.length > 0 && (
+        <div className="mb-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
+          {images.map((img) => (
+            <div
+              key={img.id}
+              className="group relative overflow-hidden rounded-xl border border-zinc-200"
+            >
+              <Image
+                src={img.url}
+                alt={img.alt ?? "Fotka sportoviště"}
+                width={300}
+                height={200}
+                className="h-32 w-full object-cover"
+              />
+              {img.isPrimary && (
+                <span className="absolute left-2 top-2 rounded-md bg-amber-500 px-1.5 py-0.5 text-[10px] font-bold text-white">
+                  Hlavní
+                </span>
+              )}
+              <div className="absolute right-1 top-1 flex gap-1 opacity-0 transition group-hover:opacity-100">
+                {!img.isPrimary && (
+                  <button
+                    type="button"
+                    onClick={() => handleSetPrimary(img.id)}
+                    className="rounded-md bg-white/90 p-1.5 text-amber-600 shadow hover:bg-white"
+                    title="Nastavit jako hlavní"
+                  >
+                    <Star className="h-3.5 w-3.5" />
+                  </button>
+                )}
+                <button
+                  type="button"
+                  onClick={() => handleDelete(img.id)}
+                  className="rounded-md bg-white/90 p-1.5 text-red-600 shadow hover:bg-white"
+                  title="Smazat"
+                >
+                  <Trash2 className="h-3.5 w-3.5" />
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {images.length < 10 && (
+        <label
+          className={`flex cursor-pointer items-center justify-center gap-2 rounded-xl border-2 border-dashed border-zinc-300 px-4 py-6 text-sm text-zinc-500 transition hover:border-emerald-400 hover:text-emerald-600 ${
+            uploading ? "pointer-events-none opacity-50" : ""
+          }`}
+        >
+          {uploading ? (
+            <Loader2 className="h-5 w-5 animate-spin" />
+          ) : (
+            <Upload className="h-5 w-5" />
+          )}
+          {uploading ? "Nahrávání..." : "Nahrát fotku"}
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="image/jpeg,image/png,image/webp"
+            onChange={handleUpload}
+            className="hidden"
+            disabled={uploading}
+          />
+        </label>
+      )}
+
+      <p className="mt-2 text-xs text-zinc-400">
+        JPEG, PNG nebo WebP. Max 5 MB na soubor.
+      </p>
+    </section>
+  );
+}
+
+// --- Amenity Manager Component ---
+function AmenityManager({
+  currentAmenityIds,
+  onUpdate,
+}: {
+  currentAmenityIds: string[];
+  onUpdate: () => Promise<void>;
+}) {
+  const [allAmenities, setAllAmenities] = useState<AmenityOption[]>([]);
+  const [selected, setSelected] = useState<Set<string>>(new Set(currentAmenityIds));
+  const [saving, setSaving] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setSelected(new Set(currentAmenityIds));
+  }, [currentAmenityIds]);
+
+  useEffect(() => {
+    fetch("/api/amenities")
+      .then(async (res) => {
+        if (res.ok) {
+          setAllAmenities(await res.json());
+          setLoaded(true);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
+  async function handleSave() {
+    setSaving(true);
+    setSaved(false);
+    try {
+      const res = await fetch("/api/owner/amenities", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ amenityIds: Array.from(selected) }),
+      });
+      if (res.ok) {
+        setSaved(true);
+        await onUpdate();
+      }
+    } catch {
+      // ignore
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  function toggle(id: string) {
+    setSelected((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+    setSaved(false);
+  }
+
+  if (!loaded || allAmenities.length === 0) return null;
+
+  const hasChanges = (() => {
+    if (selected.size !== currentAmenityIds.length) return true;
+    for (const id of currentAmenityIds) {
+      if (!selected.has(id)) return true;
+    }
+    return false;
+  })();
+
+  return (
+    <section className="mb-6 rounded-2xl border border-zinc-200 bg-white p-6">
+      <h2 className="mb-3 font-semibold text-zinc-900">Vybavení</h2>
+      <div className="flex flex-wrap gap-2">
+        {allAmenities.map((amenity) => (
+          <button
+            key={amenity.id}
+            type="button"
+            onClick={() => toggle(amenity.id)}
+            className={`rounded-xl border px-3 py-1.5 text-sm transition ${
+              selected.has(amenity.id)
+                ? "border-emerald-300 bg-emerald-50 text-emerald-700"
+                : "border-zinc-200 text-zinc-600 hover:bg-zinc-50"
+            }`}
+          >
+            {amenity.icon && <span className="mr-1">{amenity.icon}</span>}
+            {amenity.nameCs}
+          </button>
+        ))}
+      </div>
+      {hasChanges && (
+        <button
+          type="button"
+          onClick={handleSave}
+          disabled={saving}
+          className="mt-4 flex items-center gap-2 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-emerald-700 disabled:opacity-50"
+        >
+          {saving ? (
+            <Loader2 className="h-4 w-4 animate-spin" />
+          ) : (
+            <Save className="h-4 w-4" />
+          )}
+          {saving ? "Ukládání..." : "Uložit vybavení"}
+        </button>
+      )}
+      {saved && (
+        <p className="mt-2 flex items-center gap-1 text-sm text-emerald-600">
+          <CheckCircle2 className="h-4 w-4" />
+          Vybavení uloženo.
+        </p>
+      )}
+    </section>
+  );
+}
+
 function MagicLinkRequestForm() {
   const [email, setEmail] = useState("");
   const [sending, setSending] = useState(false);
@@ -550,7 +862,7 @@ function MagicLinkRequestForm() {
       });
       setSent(true);
     } catch {
-      setSent(true); // Show same message regardless to prevent enumeration
+      setSent(true);
     } finally {
       setSending(false);
     }

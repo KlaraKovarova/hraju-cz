@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import AdminLogoutButton from "@/components/AdminLogoutButton";
 import { getAdminSession } from "@/lib/admin-auth";
+import { prisma } from "@/lib/prisma";
 
 export const metadata: Metadata = {
   title: "Admin",
@@ -13,6 +14,13 @@ export default async function AdminLayout({ children }: { children: React.ReactN
 
   if (!isAuthenticated) {
     return <>{children}</>;
+  }
+
+  let pendingReviewCount = 0;
+  try {
+    pendingReviewCount = await prisma.review.count({ where: { isApproved: false } });
+  } catch {
+    // DB may be unavailable
   }
 
   return (
@@ -28,8 +36,13 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           <Link href="/admin/edit-requests" className="text-sm text-zinc-500 hover:text-zinc-900">
             Návrhy úprav
           </Link>
-          <Link href="/admin/reviews" className="text-sm text-zinc-500 hover:text-zinc-900">
+          <Link href="/admin/reviews" className="flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-900">
             Recenze
+            {pendingReviewCount > 0 && (
+              <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 px-1.5 text-[10px] font-bold text-white">
+                {pendingReviewCount}
+              </span>
+            )}
           </Link>
           <div className="ml-auto flex items-center gap-4">
             <Link href="/" className="text-sm text-zinc-400 hover:text-zinc-600">

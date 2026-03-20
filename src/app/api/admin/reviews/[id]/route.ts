@@ -16,8 +16,8 @@ export async function PATCH(
   }
 
   const { action } = body;
-  if (action !== "approve" && action !== "reject") {
-    return NextResponse.json({ error: "Action must be 'approve' or 'reject'." }, { status: 400 });
+  if (action !== "approve" && action !== "reject" && action !== "revoke") {
+    return NextResponse.json({ error: "Action must be 'approve', 'reject', or 'revoke'." }, { status: 400 });
   }
 
   const review = await prisma.review.findUnique({
@@ -33,6 +33,27 @@ export async function PATCH(
     await prisma.review.update({
       where: { id },
       data: { isApproved: true },
+    });
+
+    // Recalculate facility averageRating and reviewCount
+    const stats = await prisma.review.aggregate({
+      where: { facilityId: review.facilityId, isApproved: true },
+      _avg: { rating: true },
+      _count: { rating: true },
+    });
+
+    await prisma.facility.update({
+      where: { id: review.facilityId },
+      data: {
+        averageRating: stats._avg.rating ? Math.round(stats._avg.rating * 10) / 10 : null,
+        reviewCount: stats._count.rating,
+      },
+    });
+  } else if (action === "revoke") {
+    // Revoke approval
+    await prisma.review.update({
+      where: { id },
+      data: { isApproved: false },
     });
 
     // Recalculate facility averageRating and reviewCount

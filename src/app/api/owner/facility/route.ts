@@ -18,6 +18,7 @@ export async function GET() {
         sports: { include: { sport: { select: { slug: true, nameCs: true } } } },
         contacts: true,
         images: { orderBy: { order: "asc" } },
+        amenities: { include: { amenity: true } },
       },
     });
 

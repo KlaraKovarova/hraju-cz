@@ -36,7 +36,7 @@ export default function AdminReviews() {
     }
   }
 
-  async function handleAction(id: string, action: "approve" | "reject") {
+  async function handleAction(id: string, action: "approve" | "reject" | "revoke") {
     try {
       const res = await fetch(`/api/admin/reviews/${id}`, {
         method: "PATCH",
@@ -123,24 +123,34 @@ export default function AdminReviews() {
                 </p>
               )}
 
-              {!review.isApproved && (
-                <div className="flex gap-2 border-t border-zinc-100 pt-3">
+              <div className="flex gap-2 border-t border-zinc-100 pt-3">
+                {!review.isApproved ? (
+                  <>
+                    <button
+                      onClick={() => handleAction(review.id, "approve")}
+                      className="flex items-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700"
+                    >
+                      <CheckCircle2 className="h-4 w-4" />
+                      Schválit
+                    </button>
+                    <button
+                      onClick={() => handleAction(review.id, "reject")}
+                      className="flex items-center gap-1.5 rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700"
+                    >
+                      <XCircle className="h-4 w-4" />
+                      Smazat
+                    </button>
+                  </>
+                ) : (
                   <button
-                    onClick={() => handleAction(review.id, "approve")}
-                    className="flex items-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700"
-                  >
-                    <CheckCircle2 className="h-4 w-4" />
-                    Schválit
-                  </button>
-                  <button
-                    onClick={() => handleAction(review.id, "reject")}
-                    className="flex items-center gap-1.5 rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700"
+                    onClick={() => handleAction(review.id, "revoke")}
+                    className="flex items-center gap-1.5 rounded-lg bg-amber-500 px-4 py-2 text-sm font-medium text-white hover:bg-amber-600"
                   >
                     <XCircle className="h-4 w-4" />
-                    Smazat
+                    Zrušit schválení
                   </button>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           ))}
         </div>
