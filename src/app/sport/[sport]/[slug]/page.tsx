@@ -14,7 +14,7 @@ import {
   Building2,
   Pencil,
 } from "lucide-react";
-import { getSportBySlug } from "@/lib/sports";
+import { getSportBySlug, isSportClaimable } from "@/lib/sports";
 import { getFacilityBySlug, getInactiveFacilityRedirectInfo, getFacilitiesByCityAndSport, getRelatedFacilities } from "@/lib/data";
 import { getRegionByName, cityToSlug } from "@/lib/regions";
 import { getSportFacilityType, getSportFacilityTypePluralGenitive } from "@/lib/seo";
@@ -223,7 +223,9 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
   const phone = facility.isClaimed
     ? facility.contacts.find((c) => c.type === "PHONE")?.value
     : undefined;
-  const email = facility.contacts.find((c) => c.type === "EMAIL")?.value;
+  const email = facility.isClaimed
+    ? facility.contacts.find((c) => c.type === "EMAIL")?.value
+    : undefined;
   const primaryImage = facility.images?.find((img) => img.isPrimary) ?? facility.images?.[0];
 
   // Sport-specific schema.org types — use array with LocalBusiness for rich results
@@ -560,7 +562,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                   <p className="text-sm text-zinc-500">
                     Otevírací doba není k dispozici.
                   </p>
-                  {!facility.isClaimed && (
+                  {!facility.isClaimed && isSportClaimable(sportSlug) && (
                     <Link
                       href="/moje-sportoviste"
                       className="mt-2 inline-block text-sm font-medium text-emerald-600 hover:text-emerald-700"
@@ -589,7 +591,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
             {(() => {
               const visibleContacts = facility.isClaimed
                 ? facility.contacts
-                : facility.contacts.filter((c) => c.type !== "PHONE");
+                : facility.contacts.filter((c) => c.type !== "PHONE" && c.type !== "EMAIL");
               return visibleContacts.length > 0 ? (
               <div className="rounded-2xl border border-zinc-100 bg-white p-5">
                 <h3 className="mb-4 font-bold text-zinc-900">Kontakt</h3>
@@ -726,7 +728,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
             )}
 
             {/* Claim CTA / Verified Badge / Owner Login Prompt */}
-            {!facility.isClaimed ? (
+            {!facility.isClaimed && !isSportClaimable(sportSlug) ? null : !facility.isClaimed ? (
               <TrackClick eventName="facility_claim_click" params={{ facilitySlug: facility.slug, sport: sportSlug, city: facility.location.city }}>
                 <Link
                   href="/moje-sportoviste"
@@ -778,8 +780,8 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
               </div>
             )}
 
-            {/* Upgrade CTA for claimed non-premium owners */}
-            {isOwner && facility.isClaimed && !facility.isPremium && (
+            {/* Upgrade CTA for claimed non-premium owners (hidden for non-claimable sports) */}
+            {isOwner && facility.isClaimed && !facility.isPremium && isSportClaimable(sportSlug) && (
               <Link
                 href="/pro"
                 className="block rounded-2xl border border-amber-200 bg-amber-50 p-4 text-center transition hover:border-amber-300 hover:bg-amber-100"
