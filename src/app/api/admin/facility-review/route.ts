@@ -94,6 +94,7 @@ export async function GET(request: NextRequest) {
         id: f.id,
         name: f.name,
         slug: f.slug,
+        description: f.description ? f.description.slice(0, 200) : null,
         city: f.location.city,
         region: f.location.region,
         address: f.address,

@@ -3,36 +3,27 @@
 import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import {
-  MapPin,
-  Phone,
-  Globe,
-  Clock,
-  Image,
-  FileText,
-  AlertTriangle,
   ChevronLeft,
   ChevronRight,
   Search,
   ExternalLink,
-  CheckCircle2,
+  XCircle,
 } from "lucide-react";
 
 interface FacilityReview {
   id: string;
   name: string;
   slug: string;
+  description: string | null;
   city: string;
   region: string | null;
   address: string;
   sports: string[];
   sportSlugs: string[];
   hasPhone: boolean;
-  hasEmail: boolean;
   hasWebsite: boolean;
   hasCoords: boolean;
   hasDescription: boolean;
-  hasHours: boolean;
-  hasImages: boolean;
   isClaimed: boolean;
   isPremium: boolean;
   flags: string[];
@@ -47,42 +38,15 @@ interface ApiResponse {
   totalPages: number;
 }
 
-const ISSUE_FILTERS = [
-  { key: "", label: "Vše", icon: null },
-  { key: "NO_COORDS", label: "Bez souřadnic", icon: MapPin },
-  { key: "NO_CONTACTS", label: "Bez kontaktů", icon: Phone },
-  { key: "NO_PHONE", label: "Bez telefonu", icon: Phone },
-  { key: "NO_WEB", label: "Bez webu", icon: Globe },
-  { key: "NO_HOURS", label: "Bez hod.", icon: Clock },
-  { key: "NO_IMAGES", label: "Bez fotek", icon: Image },
-  { key: "NO_DESC", label: "Bez popisu", icon: FileText },
-] as const;
-
-const FLAG_LABELS: Record<string, { label: string; severity: "high" | "medium" | "low" }> = {
-  NO_COORDS: { label: "Souřadnice", severity: "high" },
-  NO_CONTACTS: { label: "Kontakty", severity: "high" },
-  NO_PHONE: { label: "Telefon", severity: "medium" },
-  NO_DESC: { label: "Popis", severity: "medium" },
-  NO_WEB: { label: "Web", severity: "medium" },
-  NO_HOURS: { label: "Hod. doba", severity: "medium" },
-  NO_ZIP: { label: "PSČ", severity: "medium" },
-  NO_IMAGES: { label: "Fotky", severity: "low" },
-};
-
-const SEVERITY_COLORS = {
-  high: "bg-red-100 text-red-700",
-  medium: "bg-amber-100 text-amber-700",
-  low: "bg-zinc-100 text-zinc-500",
-};
-
 export default function AdminReviewPage() {
   const [data, setData] = useState<ApiResponse | null>(null);
   const [loading, setLoading] = useState(true);
-  const [issueFilter, setIssueFilter] = useState("");
+  const [deactivating, setDeactivating] = useState<string | null>(null);
   const [sportFilter, setSportFilter] = useState("");
   const [search, setSearch] = useState("");
   const [searchInput, setSearchInput] = useState("");
   const [page, setPage] = useState(1);
+  const [deactivatedCount, setDeactivatedCount] = useState(0);
 
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -90,7 +54,6 @@ export default function AdminReviewPage() {
       const params = new URLSearchParams();
       params.set("page", page.toString());
       params.set("limit", "50");
-      if (issueFilter) params.set("issue", issueFilter);
       if (sportFilter) params.set("sport", sportFilter);
       if (search) params.set("search", search);
 
@@ -103,11 +66,41 @@ export default function AdminReviewPage() {
     } finally {
       setLoading(false);
     }
-  }, [page, issueFilter, sportFilter, search]);
+  }, [page, sportFilter, search]);
 
   useEffect(() => {
     fetchData();
   }, [fetchData]);
+
+  async function handleDeactivate(id: string, name: string) {
+    if (!confirm(`Opravdu deaktivovat "${name}"?`)) return;
+
+    setDeactivating(id);
+    try {
+      const res = await fetch(`/api/facilities/${id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ isActive: false }),
+      });
+      if (res.ok) {
+        setDeactivatedCount((c) => c + 1);
+        // Remove from current list
+        setData((prev) =>
+          prev
+            ? {
+                ...prev,
+                facilities: prev.facilities.filter((f) => f.id !== id),
+                total: prev.total - 1,
+              }
+            : prev
+        );
+      }
+    } catch {
+      // ignore
+    } finally {
+      setDeactivating(null);
+    }
+  }
 
   function handleSearch(e: React.FormEvent) {
     e.preventDefault();
@@ -115,23 +108,20 @@ export default function AdminReviewPage() {
     setPage(1);
   }
 
-  function handleIssueFilter(key: string) {
-    setIssueFilter(key);
-    setPage(1);
-  }
-
-  function handleSportFilter(slug: string) {
-    setSportFilter(slug);
-    setPage(1);
-  }
-
   return (
     <div>
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold text-zinc-900">Kontrola sportovist</h1>
-        <p className="mt-1 text-sm text-zinc-500">
-          Seznam sportovist k lidske kontrole spravnosti udaju
-        </p>
+      <div className="mb-6 flex items-start justify-between">
+        <div>
+          <h1 className="text-2xl font-bold text-zinc-900">Kontrola sportovišť</h1>
+          <p className="mt-1 text-sm text-zinc-500">
+            Zkontrolujte a deaktivujte nerelevantní sportoviště
+          </p>
+        </div>
+        {deactivatedCount > 0 && (
+          <span className="rounded-full bg-red-50 px-3 py-1 text-sm font-medium text-red-600">
+            Deaktivováno: {deactivatedCount}
+          </span>
+        )}
       </div>
 
       {/* Search */}
@@ -142,7 +132,7 @@ export default function AdminReviewPage() {
             type="text"
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
-            placeholder="Hledat nazev, mesto, adresu..."
+            placeholder="Hledat název, město, adresu..."
             className="w-full rounded-lg border border-zinc-200 bg-white py-2 pl-10 pr-4 text-sm outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400"
           />
         </div>
@@ -162,46 +152,31 @@ export default function AdminReviewPage() {
             }}
             className="rounded-lg bg-zinc-100 px-3 py-2 text-sm text-zinc-600 hover:bg-zinc-200"
           >
-            Zrusit
+            Zrušit
           </button>
         )}
       </form>
 
-      {/* Issue filters */}
-      <div className="mb-4 flex flex-wrap gap-2">
-        {ISSUE_FILTERS.map((f) => (
-          <button
-            key={f.key}
-            onClick={() => handleIssueFilter(f.key)}
-            className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-medium transition ${
-              issueFilter === f.key
-                ? "bg-zinc-900 text-white"
-                : "bg-white text-zinc-600 hover:bg-zinc-100"
-            }`}
-          >
-            {f.icon && <f.icon className="h-3.5 w-3.5" />}
-            {f.label}
-          </button>
-        ))}
-      </div>
-
       {/* Sport filter */}
       <div className="mb-6 flex flex-wrap gap-1.5">
         {[
-          { slug: "", label: "Vsechny sporty" },
+          { slug: "", label: "Všechny sporty" },
           { slug: "tenis", label: "Tenis" },
           { slug: "squash", label: "Squash" },
           { slug: "badminton", label: "Badminton" },
           { slug: "volejbal", label: "Volejbal" },
-          { slug: "plavani", label: "Plavani" },
+          { slug: "plavani", label: "Plavání" },
           { slug: "golf", label: "Golf" },
           { slug: "fitness", label: "Fitness" },
-          { slug: "lezeni", label: "Lezeni" },
+          { slug: "lezeni", label: "Lezení" },
           { slug: "ferraty", label: "Ferraty" },
         ].map((s) => (
           <button
             key={s.slug}
-            onClick={() => handleSportFilter(s.slug)}
+            onClick={() => {
+              setSportFilter(s.slug);
+              setPage(1);
+            }}
             className={`rounded-md px-2.5 py-1 text-xs font-medium transition ${
               sportFilter === s.slug
                 ? "bg-indigo-600 text-white"
@@ -215,9 +190,9 @@ export default function AdminReviewPage() {
 
       {/* Results summary */}
       {data && !loading && (
-        <div className="mb-4 flex items-center justify-between">
+        <div className="mb-4">
           <p className="text-sm text-zinc-500">
-            Celkem <span className="font-semibold text-zinc-900">{data.total}</span> sportovist
+            Celkem <span className="font-semibold text-zinc-900">{data.total}</span> aktivních sportovišť
             {data.totalPages > 1 && (
               <> &middot; strana {data.page} z {data.totalPages}</>
             )}
@@ -227,9 +202,9 @@ export default function AdminReviewPage() {
 
       {/* Facility list */}
       {loading ? (
-        <p className="py-8 text-center text-sm text-zinc-500">Nacitani...</p>
+        <p className="py-8 text-center text-sm text-zinc-500">Načítání...</p>
       ) : !data || data.facilities.length === 0 ? (
-        <p className="py-8 text-center text-sm text-zinc-500">Zadna sportoviste.</p>
+        <p className="py-8 text-center text-sm text-zinc-500">Žádná sportoviště.</p>
       ) : (
         <div className="space-y-2">
           {data.facilities.map((f) => (
@@ -237,83 +212,69 @@ export default function AdminReviewPage() {
               key={f.id}
               className="rounded-xl border border-zinc-200 bg-white px-4 py-3"
             >
-              <div className="flex items-start justify-between gap-3">
+              <div className="flex items-start justify-between gap-4">
                 <div className="min-w-0 flex-1">
+                  {/* Name */}
                   <div className="flex items-center gap-2">
-                    <span className="font-medium text-zinc-900 truncate">
+                    <span className="font-semibold text-zinc-900">
                       {f.name}
                     </span>
                     {f.isClaimed && (
-                      <span className="inline-flex items-center gap-0.5 rounded-full bg-blue-50 px-1.5 py-0.5 text-[10px] font-semibold text-blue-600">
-                        <CheckCircle2 className="h-3 w-3" /> claimed
-                      </span>
-                    )}
-                    {f.isPremium && (
-                      <span className="rounded-full bg-amber-50 px-1.5 py-0.5 text-[10px] font-semibold text-amber-600">
-                        premium
+                      <span className="rounded-full bg-blue-50 px-1.5 py-0.5 text-[10px] font-semibold text-blue-600">
+                        claimed
                       </span>
                     )}
                   </div>
+
+                  {/* Category (sports) + City */}
                   <div className="mt-0.5 flex items-center gap-2 text-xs text-zinc-500">
-                    <span>{f.city}{f.region ? `, ${f.region}` : ""}</span>
+                    <span className="font-medium text-zinc-600">
+                      {f.sports.join(", ") || "Bez kategorie"}
+                    </span>
                     <span>&middot;</span>
-                    <span>{f.sports.join(", ")}</span>
+                    <span>{f.city}{f.region ? `, ${f.region}` : ""}</span>
                   </div>
-                  <div className="mt-0.5 text-xs text-zinc-400 truncate">
-                    {f.address}
-                  </div>
+
+                  {/* Description */}
+                  {f.description ? (
+                    <p className="mt-1 text-xs leading-relaxed text-zinc-400 line-clamp-2">
+                      {f.description}
+                    </p>
+                  ) : (
+                    <p className="mt-1 text-xs italic text-zinc-300">
+                      Bez popisu
+                    </p>
+                  )}
                 </div>
 
+                {/* Actions */}
                 <div className="flex shrink-0 items-center gap-2">
-                  {/* Data completeness indicators */}
-                  <div className="flex gap-1">
-                    <Indicator ok={f.hasCoords} label="GPS" />
-                    <Indicator ok={f.hasPhone} label="Tel" />
-                    <Indicator ok={f.hasWebsite} label="Web" />
-                    <Indicator ok={f.hasDescription} label="Popis" />
-                    <Indicator ok={f.hasHours} label="Hod" />
-                    <Indicator ok={f.hasImages} label="Foto" />
-                  </div>
-
-                  <div className="flex gap-1.5">
-                    <Link
-                      href={`/admin/facilities/${f.id}`}
-                      className="rounded-lg bg-zinc-100 px-3 py-1.5 text-xs font-medium text-zinc-700 hover:bg-zinc-200"
-                    >
-                      Upravit
-                    </Link>
-                    <a
-                      href={f.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 rounded-lg bg-zinc-50 px-2 py-1.5 text-xs text-zinc-500 hover:bg-zinc-100"
-                    >
-                      <ExternalLink className="h-3 w-3" />
-                    </a>
-                  </div>
+                  <a
+                    href={f.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 rounded-lg bg-zinc-50 px-2.5 py-1.5 text-xs text-zinc-500 hover:bg-zinc-100"
+                    title="Zobrazit na webu"
+                  >
+                    <ExternalLink className="h-3 w-3" />
+                    Web
+                  </a>
+                  <Link
+                    href={`/admin/facilities/${f.id}`}
+                    className="rounded-lg bg-zinc-100 px-3 py-1.5 text-xs font-medium text-zinc-700 hover:bg-zinc-200"
+                  >
+                    Upravit
+                  </Link>
+                  <button
+                    onClick={() => handleDeactivate(f.id, f.name)}
+                    disabled={deactivating === f.id}
+                    className="flex items-center gap-1.5 rounded-lg bg-red-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-red-700 disabled:opacity-50"
+                  >
+                    <XCircle className="h-3.5 w-3.5" />
+                    {deactivating === f.id ? "..." : "Deaktivovat"}
+                  </button>
                 </div>
               </div>
-
-              {/* Quality flags */}
-              {f.flags.length > 0 && (
-                <div className="mt-2 flex flex-wrap gap-1">
-                  {f.flags.map((flag) => {
-                    const info = FLAG_LABELS[flag];
-                    if (!info) return null;
-                    return (
-                      <span
-                        key={flag}
-                        className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-medium ${SEVERITY_COLORS[info.severity]}`}
-                      >
-                        {info.severity === "high" && (
-                          <AlertTriangle className="h-2.5 w-2.5" />
-                        )}
-                        {info.label}
-                      </span>
-                    );
-                  })}
-                </div>
-              )}
             </div>
           ))}
         </div>
@@ -328,7 +289,7 @@ export default function AdminReviewPage() {
             className="flex items-center gap-1 rounded-lg bg-white px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-50 disabled:opacity-40"
           >
             <ChevronLeft className="h-4 w-4" />
-            Predchozi
+            Předchozí
           </button>
           <span className="text-sm text-zinc-500">
             {page} / {data.totalPages}
@@ -338,26 +299,11 @@ export default function AdminReviewPage() {
             disabled={page >= data.totalPages}
             className="flex items-center gap-1 rounded-lg bg-white px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-50 disabled:opacity-40"
           >
-            Dalsi
+            Další
             <ChevronRight className="h-4 w-4" />
           </button>
         </div>
       )}
     </div>
-  );
-}
-
-function Indicator({ ok, label }: { ok: boolean; label: string }) {
-  return (
-    <span
-      title={label}
-      className={`inline-block rounded px-1.5 py-0.5 text-[9px] font-bold ${
-        ok
-          ? "bg-emerald-50 text-emerald-600"
-          : "bg-red-50 text-red-400"
-      }`}
-    >
-      {label}
-    </span>
   );
 }
