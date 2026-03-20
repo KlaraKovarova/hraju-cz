@@ -158,6 +158,72 @@ const SPORT_FAQS: Record<string, FaqItem[]> = {
         "Posilovna se zaměřuje hlavně na silový trénink s činkami a stroji. Fitness centrum obvykle nabízí i kardio zónu, skupinové lekce (jóga, spinning, aerobik) a další služby jako sauna nebo masáže.",
     },
   ],
+  padel: [
+    {
+      question: "Co je to padel?",
+      answer:
+        "Padel je raketový sport kombinující prvky tenisu a squashe. Hraje se na menším kurtu obehnaném skleněnými stěnami, od kterých se míč odráží. Vždy se hraje ve čtyřhře (2 vs 2).",
+    },
+    {
+      question: "Kolik stojí hodina padelu?",
+      answer:
+        "Pronájem padelového kurtu stojí 400–800 Kč za hodinu v závislosti na lokalitě a denní době. V Praze je to 500–900 Kč, v menších městech od 300 Kč. Mnoho center nabízí zvýhodněné dopolední ceny.",
+    },
+    {
+      question: "Potřebuji vlastní padelovou raketu?",
+      answer:
+        "Pro začátek ne — většina padelových center nabízí půjčení raket. Padelová raketa je kratší než tenisová, bez výpletu, s perforovanou plochou. Pokud začnete hrát pravidelně, vlastní raketa stojí od 1 500 Kč.",
+    },
+    {
+      question: "Je padel vhodný pro začátečníky?",
+      answer:
+        "Ano, padel je ideální pro začátečníky. Menší kurt a pomalejší míč umožňují delší výměny od prvního dne. Mnoho center nabízí úvodní lekce s trenérem, kde se naučíte základní údery a pravidla.",
+    },
+  ],
+  "stolni-tenis": [
+    {
+      question: "Kde hrát stolní tenis v Česku?",
+      answer:
+        "Na hraju.cz najdete přehled pingpongových heren, sportovních center a klubů po celé ČR. Stolní tenis se dá hrát i venku na veřejných stolech v parcích — ty jsou většinou zdarma.",
+    },
+    {
+      question: "Kolik stojí hodina stolního tenisu?",
+      answer:
+        "Pronájem stolu stojí obvykle 80–200 Kč za hodinu. V klubech a sportovních centrech 100–250 Kč, v menších městech od 60 Kč. Některá centra nabízejí měsíční permanentky pro pravidelné hráče.",
+    },
+    {
+      question: "Potřebuji vlastní pálku na stolní tenis?",
+      answer:
+        "Pro rekreační hru si pálky půjčíte na místě. Pro pravidelnou hru doporučujeme vlastní pálku — začátečnická stojí od 300 Kč, pokročilejší od 800 Kč. Rozdíl v kvalitě potah výrazně ovlivňuje hru.",
+    },
+    {
+      question: "Je stolní tenis dobrý sport pro děti?",
+      answer:
+        "Ano, stolní tenis rozvíjí koordinaci, postřeh a strategické myšlení. Začít se dá od 6 let. Mnoho klubů nabízí juniorské tréninky. ČR má silnou tradici ve stolním tenise s kvalitními trenéry.",
+    },
+  ],
+  florbal: [
+    {
+      question: "Kde hrát florbal v Česku?",
+      answer:
+        "Na hraju.cz najdete sportovní haly a centra, kde se florbal hraje. Florbal se hraje v tělocvičnách a sportovních halách. Mnoho měst má otevřené tréninky, kam se můžete přidat i bez zkušeností.",
+    },
+    {
+      question: "Kolik stojí pronájem haly na florbal?",
+      answer:
+        "Pronájem sportovní haly na florbal stojí 500–1 500 Kč za hodinu podle velikosti a lokality. V Praze 800–2 000 Kč, v menších městech od 400 Kč. Náklady se obvykle dělí mezi hráče.",
+    },
+    {
+      question: "Co potřebuji na florbal?",
+      answer:
+        "Sálovou obuv s nebarvicí podrážkou, sportovní oblečení a florbalovou hokejku. Hokejku si na začátek půjčíte v klubu. Brankáři navíc potřebují speciální výstroj — tu většinou poskytuje tým.",
+    },
+    {
+      question: "Je florbal vhodný pro začátečníky?",
+      answer:
+        "Ano, florbal je přístupný sport s jednoduchými pravidly. Začít se dá v každém věku. Mnoho klubů pořádá volné tréninky a amatérské ligy pro rekreační hráče bez zkušeností.",
+    },
+  ],
 };
 
 export function getSportFaqs(sportSlug: string): FaqItem[] {

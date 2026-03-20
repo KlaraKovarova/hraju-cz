@@ -106,6 +106,42 @@ async function main() {
         icon: "🎳",
       },
     }),
+    prisma.sport.upsert({
+      where: { slug: "padel" },
+      update: {},
+      create: {
+        slug: "padel",
+        name: "Padel",
+        nameCs: "Padel",
+        subdomain: "padel",
+        description: "Padelové kurty v České republice",
+        icon: "🎾",
+      },
+    }),
+    prisma.sport.upsert({
+      where: { slug: "stolni-tenis" },
+      update: {},
+      create: {
+        slug: "stolni-tenis",
+        name: "Table Tennis",
+        nameCs: "Stolní tenis",
+        subdomain: "stolni-tenis",
+        description: "Stolní tenis — pingpong herny a kluby v ČR",
+        icon: "🏓",
+      },
+    }),
+    prisma.sport.upsert({
+      where: { slug: "florbal" },
+      update: {},
+      create: {
+        slug: "florbal",
+        name: "Floorball",
+        nameCs: "Florbal",
+        subdomain: "florbal",
+        description: "Florbalové haly a sportovní centra v ČR",
+        icon: "🏑",
+      },
+    }),
   ]);
 
   console.log(`✓ ${sports.length} sports`);

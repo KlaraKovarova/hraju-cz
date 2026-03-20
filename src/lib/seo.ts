@@ -57,6 +57,27 @@ const SPORT_FACILITY_TYPES: Record<
     instrumental: "fitness centry",
     titleSuffix: "posilovny a centra v celé ČR",
   },
+  padel: {
+    singular: "padelový kurt",
+    plural: "padelové kurty",
+    pluralGenitive: "padelových kurtů",
+    instrumental: "padelovými kurty",
+    titleSuffix: "padelové kurty a centra v celé ČR",
+  },
+  "stolni-tenis": {
+    singular: "herna stolního tenisu",
+    plural: "herny stolního tenisu",
+    pluralGenitive: "heren stolního tenisu",
+    instrumental: "hernami stolního tenisu",
+    titleSuffix: "stolní tenis a pingpong v celé ČR",
+  },
+  florbal: {
+    singular: "florbalová hala",
+    plural: "florbalové haly",
+    pluralGenitive: "florbalových hal",
+    instrumental: "florbalovými halami",
+    titleSuffix: "florbalové haly a sportoviště v celé ČR",
+  },
 };
 
 export function getSportFacilityType(slug: string): string {
