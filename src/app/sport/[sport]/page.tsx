@@ -1,12 +1,13 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { MapPin, ChevronRight } from "lucide-react";
+import { MapPin, ChevronRight, ChevronDown } from "lucide-react";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
 import { getRegionsBySport, getTopFacilitiesBySport, getTopCitiesBySport } from "@/lib/data";
 import { getSportTitleSuffix, getSportFacilityTypePluralGenitive, getSportFacilityType } from "@/lib/seo";
 import { FacilityCard } from "@/components/FacilityCard";
 import { HeroSearchForm } from "@/components/HeroSearchForm";
 import { AdSlot } from "@/components/AdSlot";
+import { getSportFaqs } from "@/lib/sport-faq";
 import type { Metadata } from "next";
 
 // ISR: revalidate sport pages every hour
@@ -66,6 +67,21 @@ export default async function SportPage({ params }: SportPageProps) {
     })),
   };
 
+  // FAQ data + JSON-LD
+  const faqItems = getSportFaqs(sport.slug);
+  const faqLd = faqItems.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  } : null;
+
   // BreadcrumbList JSON-LD
   const breadcrumbLd = {
     "@context": "https://schema.org",
@@ -86,6 +102,12 @@ export default async function SportPage({ params }: SportPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
+      {faqLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+      )}
       {/* Header */}
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -217,6 +239,28 @@ export default async function SportPage({ params }: SportPageProps) {
       <div className="mx-auto max-w-6xl px-6 py-4">
         <AdSlot slot="1234567891" format="horizontal" />
       </div>
+
+      {/* FAQ Section */}
+      {faqItems.length > 0 && (
+        <section className="mx-auto max-w-3xl px-6 py-12 border-t border-zinc-100">
+          <h2 className="mb-6 text-xl font-bold text-zinc-900">
+            Často kladené otázky — {sport.nameCs}
+          </h2>
+          <div className="space-y-3">
+            {faqItems.map((item, i) => (
+              <details key={i} className="group rounded-2xl border border-zinc-100 bg-white">
+                <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-sm font-semibold text-zinc-900">
+                  {item.question}
+                  <ChevronDown className="h-4 w-4 shrink-0 text-zinc-400 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="px-6 pb-4 text-sm leading-relaxed text-zinc-600">
+                  {item.answer}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Other Sports */}
       <section className="border-t border-zinc-100 bg-white">
