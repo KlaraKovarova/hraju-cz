@@ -66,6 +66,12 @@ export function FacilityMap({ markers, className }: FacilityMapProps) {
         map.fitBounds(bounds, { padding: [40, 40], maxZoom: 15 });
       }
 
+      // Fix blank tiles on initial hydration — container width may not
+      // be finalized when L.map() runs during SSR-to-client handoff.
+      requestAnimationFrame(() => {
+        map.invalidateSize();
+      });
+
       setLoaded(true);
     })();
 
