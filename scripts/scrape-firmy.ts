@@ -28,6 +28,9 @@ const SPORTS = [
   { slug: 'golf', query: 'golf+h%C5%99i%C5%A1t%C4%9B', label: 'golf hřiště' },
   { slug: 'fitness', query: 'fitness+centrum', label: 'fitness centrum' },
   { slug: 'bowling', query: 'bowling', label: 'bowling' },
+  { slug: 'padel', query: 'padel+kurty', label: 'padel kurty' },
+  { slug: 'stolni-tenis', query: 'stoln%C3%AD+tenis', label: 'stolní tenis' },
+  { slug: 'florbal', query: 'florbal', label: 'florbal' },
 ];
 
 const DATA_DIR = path.join(__dirname, 'data');
@@ -202,10 +205,20 @@ async function main() {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
 
+  // Optional: filter by sport slugs via CLI args (e.g. npx tsx scrape-firmy.ts padel florbal)
+  const filterSlugs = process.argv.slice(2).filter(a => !a.startsWith('-'));
+  const sportsToScrape = filterSlugs.length > 0
+    ? SPORTS.filter(s => filterSlugs.includes(s.slug))
+    : SPORTS;
+
+  if (filterSlugs.length > 0) {
+    console.log(`Filtering to sports: ${sportsToScrape.map(s => s.slug).join(', ')}`);
+  }
+
   const browser = await chromium.launch({ headless: true });
   const totals: Record<string, number> = {};
 
-  for (const sport of SPORTS) {
+  for (const sport of sportsToScrape) {
     const facilities = await scrapeSport(browser, sport);
     totals[sport.slug] = facilities.length;
 
