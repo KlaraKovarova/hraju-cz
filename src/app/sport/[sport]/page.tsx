@@ -143,7 +143,7 @@ export default async function SportPage({ params }: SportPageProps) {
             src={sport.image}
             alt={sport.nameCs}
             fill
-            className="object-cover object-center"
+            className="object-cover object-top"
             priority
             sizes="100vw"
           />
