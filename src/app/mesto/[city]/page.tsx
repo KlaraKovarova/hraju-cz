@@ -9,6 +9,9 @@ import { FacilityMap } from "@/components/FacilityMap";
 import { TrackPageView } from "@/components/TrackPageView";
 import { getCityInPhrase } from "@/lib/locative";
 
+// ISR: revalidate city pages every hour
+export const revalidate = 3600;
+
 type Props = {
   params: Promise<{ city: string }>;
 };

@@ -32,6 +32,9 @@ import { getOwnerSession } from "@/lib/owner-auth";
 import { prisma } from "@/lib/prisma";
 import type { Metadata } from "next";
 
+// ISR: revalidate facility/city pages every hour
+export const revalidate = 3600;
+
 interface FacilityPageProps {
   params: Promise<{ sport: string; slug: string }>;
 }

@@ -14,6 +14,9 @@ import { HeroSearchForm } from "@/components/HeroSearchForm";
 import { AdSlot } from "@/components/AdSlot";
 import { WeekendEvents } from "@/components/WeekendEvents";
 
+// ISR: revalidate homepage every 6 hours
+export const revalidate = 21600;
+
 export default async function Home() {
   const totalFacilities = getTotalFacilityCount();
   const totalSports = getTotalSportCount();

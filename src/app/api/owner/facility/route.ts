@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { getOwnerSession } from "@/lib/owner-auth";
 
@@ -99,6 +100,19 @@ export async function PATCH(request: NextRequest) {
           data: { facilityId: session.facilityId, type: "EMAIL", value: contactEmail, isPrimary: true },
         });
       }
+    }
+
+    // Revalidate cached pages for this facility
+    const updatedFacility = await prisma.facility.findUnique({
+      where: { id: session.facilityId },
+      select: { slug: true, sports: { select: { sport: { select: { slug: true } } } } },
+    });
+    if (updatedFacility) {
+      for (const s of updatedFacility.sports) {
+        revalidatePath(`/sport/${s.sport.slug}/${updatedFacility.slug}`);
+        revalidatePath(`/sport/${s.sport.slug}`);
+      }
+      revalidatePath("/");
     }
 
     return NextResponse.json(facility);

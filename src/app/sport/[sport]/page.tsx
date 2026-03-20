@@ -9,6 +9,9 @@ import { HeroSearchForm } from "@/components/HeroSearchForm";
 import { AdSlot } from "@/components/AdSlot";
 import type { Metadata } from "next";
 
+// ISR: revalidate sport pages every hour
+export const revalidate = 3600;
+
 interface SportPageProps {
   params: Promise<{ sport: string }>;
 }
