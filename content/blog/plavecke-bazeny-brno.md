@@ -4,6 +4,7 @@ date: "2026-03-10"
 category: "pruvodce-mesta"
 excerpt: "Přehled plaveckých bazénů a aquaparků v Brně. Kde zaplavat, kolik to stojí a na co se zaměřit při výběru."
 sportTags: ["plavani"]
+image: /images/blog/plavecke-bazeny-brno.jpg
 ---
 
 Brno má několik kvalitních plaveckých bazénů — od sportovních 50metrových drah po relaxační aquaparky. Přinášíme přehled těch nejlepších.

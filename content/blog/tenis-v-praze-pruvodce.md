@@ -4,6 +4,7 @@ date: "2026-03-15"
 category: "pruvodce-mesta"
 excerpt: "Kompletní přehled tenisových kurtů v Praze podle městských částí. Zjistěte, kde najdete nejlepší kurty, jaké jsou ceny a jak rezervovat."
 sportTags: ["tenis"]
+image: /images/blog/tenis-v-praze-pruvodce.jpg
 ---
 
 Praha nabízí desítky tenisových kurtů rozložených po celém městě. Ať už hledáte antukový kurt v centru nebo moderní halu na okraji, tento průvodce vám pomůže najít to pravé místo.

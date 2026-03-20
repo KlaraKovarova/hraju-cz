@@ -4,6 +4,7 @@ date: "2026-03-05"
 category: "tipy"
 excerpt: "Vybíráte sportovní centrum? Podívejte se, na jaké vybavení a služby se zaměřit, abyste našli to pravé místo pro váš sport."
 sportTags: ["tenis", "squash", "badminton", "fitness"]
+image: /images/blog/jak-vybrat-sportovni-centrum.jpg
 ---
 
 Výběr sportovního centra není jen o ceně. Správné zázemí vám zpříjemní každou návštěvu a pomůže k lepším výkonům. Přinášíme přehled toho, na co se zaměřit.

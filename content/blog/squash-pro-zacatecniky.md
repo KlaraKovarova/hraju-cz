@@ -4,6 +4,7 @@ date: "2026-03-12"
 category: "pruvodce-sporty"
 excerpt: "Začínáte se squashem? Přečtěte si, co budete potřebovat, kolik to stojí a kde najít nejbližší squashový kurt."
 sportTags: ["squash"]
+image: /images/blog/squash-pro-zacatecniky.jpg
 ---
 
 Squash je jeden z nejintenzivnějších raketových sportů. Na malém kurtu se odehrávají rychlé výměny, které prověří vaši kondici i postřeh. Dobrá zpráva: začít je snazší, než si myslíte.
