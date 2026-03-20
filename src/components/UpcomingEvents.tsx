@@ -1,6 +1,11 @@
 import { ExternalLink } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 
+function kctEventUrl(sourceId: string): string {
+  const xid = sourceId.replace("kct-", "");
+  return `https://kalendar.kct-db.cz/texty/kalendarakci-detail.php?xid=${xid}`;
+}
+
 interface UpcomingEventsProps {
   city: string;
   region?: string | null;
@@ -56,16 +61,14 @@ export async function UpcomingEvents({ city, region }: UpcomingEventsProps) {
                   {event.city}
                 </p>
               </div>
-              {event.externalUrl && (
-                <a
-                  href={event.externalUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="shrink-0 text-zinc-400 hover:text-emerald-600"
-                >
-                  <ExternalLink className="h-3.5 w-3.5" />
-                </a>
-              )}
+              <a
+                href={kctEventUrl(event.sourceId)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 text-zinc-400 hover:text-emerald-600"
+              >
+                <ExternalLink className="h-3.5 w-3.5" />
+              </a>
             </li>
           ))}
         </ul>

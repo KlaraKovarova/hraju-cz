@@ -1,6 +1,11 @@
 import { ExternalLink, Calendar } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 
+function kctEventUrl(sourceId: string): string {
+  const xid = sourceId.replace("kct-", "");
+  return `https://kalendar.kct-db.cz/texty/kalendarakci-detail.php?xid=${xid}`;
+}
+
 function formatCzechDate(date: Date): string {
   return date.toLocaleDateString("cs-CZ", {
     day: "numeric",
@@ -99,17 +104,15 @@ export async function WeekendEvents() {
                   {event.region && `, ${event.region}`}
                 </p>
               </div>
-              {event.externalUrl ? (
-                <a
-                  href={event.externalUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="shrink-0 rounded-lg border border-zinc-200 p-2 text-zinc-400 transition hover:border-emerald-300 hover:text-emerald-600"
-                  title="Zobrazit na webu organizátora"
-                >
-                  <ExternalLink className="h-3.5 w-3.5" />
-                </a>
-              ) : null}
+              <a
+                href={kctEventUrl(event.sourceId)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 rounded-lg border border-zinc-200 p-2 text-zinc-400 transition hover:border-emerald-300 hover:text-emerald-600"
+                title="Zobrazit detail akce"
+              >
+                <ExternalLink className="h-3.5 w-3.5" />
+              </a>
             </div>
           ))}
         </div>
