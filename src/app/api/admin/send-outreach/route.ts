@@ -57,7 +57,7 @@ export async function POST(request: NextRequest) {
       },
     });
 
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://hraju.cz";
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.hraju.cz";
     const sportSlug = facility.sports[0]?.sport.slug || "sport";
     const sportName = facility.sports[0]?.sport.nameCs || "Sport";
     const facilityUrl = `${baseUrl}/sport/${sportSlug}/${facility.slug}`;

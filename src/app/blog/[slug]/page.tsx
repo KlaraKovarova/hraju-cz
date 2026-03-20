@@ -23,7 +23,7 @@ export async function generateMetadata({
   const post = getPostBySlug(slug);
   if (!post) return {};
 
-  const url = `https://hraju.cz/blog/${slug}`;
+  const url = `https://www.hraju.cz/blog/${slug}`;
   return {
     title: `${post.title} — hraju.cz`,
     description: post.excerpt || post.title,
@@ -65,14 +65,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     author: {
       "@type": "Organization",
       name: "Redakce hraju.cz",
-      url: "https://hraju.cz",
+      url: "https://www.hraju.cz",
     },
     publisher: {
       "@type": "Organization",
       name: "hraju.cz",
-      url: "https://hraju.cz",
+      url: "https://www.hraju.cz",
     },
-    mainEntityOfPage: `https://hraju.cz/blog/${slug}`,
+    mainEntityOfPage: `https://www.hraju.cz/blog/${slug}`,
   };
 
   // BreadcrumbList JSON-LD
@@ -84,19 +84,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         "@type": "ListItem",
         position: 1,
         name: "hraju.cz",
-        item: "https://hraju.cz",
+        item: "https://www.hraju.cz",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blog",
-        item: "https://hraju.cz/blog",
+        item: "https://www.hraju.cz/blog",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: post.title,
-        item: `https://hraju.cz/blog/${slug}`,
+        item: `https://www.hraju.cz/blog/${slug}`,
       },
     ],
   };

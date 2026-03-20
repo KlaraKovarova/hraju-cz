@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
       },
     });
 
-    const claimUrl = `${process.env.NEXT_PUBLIC_BASE_URL || "https://hraju.cz"}/moje-sportoviste?token=${token}`;
+    const claimUrl = `${process.env.NEXT_PUBLIC_BASE_URL || "https://www.hraju.cz"}/moje-sportoviste?token=${token}`;
 
     return NextResponse.json({
       id: ownerToken.id,

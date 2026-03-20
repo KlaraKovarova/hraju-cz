@@ -22,7 +22,7 @@ export async function generateMetadata({
   return {
     title: `${label} — Blog — hraju.cz`,
     description: `Články v kategorii ${label} na hraju.cz`,
-    alternates: { canonical: `https://hraju.cz/blog/kategorie/${category}` },
+    alternates: { canonical: `https://www.hraju.cz/blog/kategorie/${category}` },
   };
 }
 

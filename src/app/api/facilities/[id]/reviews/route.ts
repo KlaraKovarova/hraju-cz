@@ -109,7 +109,7 @@ export async function POST(
   const ownerEmail = facility.contacts[0]?.value;
   if (ownerEmail) {
     const sportSlug = facility.sports[0]?.sport.slug || "tenis";
-    const facilityUrl = `https://hraju.cz/sport/${sportSlug}/${facility.slug}`;
+    const facilityUrl = `https://www.hraju.cz/sport/${sportSlug}/${facility.slug}`;
     sendReviewNotificationEmail(
       ownerEmail,
       facility.name,

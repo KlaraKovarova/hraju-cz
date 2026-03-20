@@ -54,7 +54,7 @@ export async function generateMetadata({
     const description = facility.description
       ? facility.description.slice(0, 155)
       : `${facility.name} — ${getSportFacilityType(sport.slug)} v ${facility.location.city}. Adresa, kontakt, otevírací doba a recenze na hraju.cz.`;
-    const url = `https://hraju.cz/sport/${sportSlug}/${slug}`;
+    const url = `https://www.hraju.cz/sport/${sportSlug}/${slug}`;
 
     const primaryImage = facility.images?.find((img: { isPrimary: boolean }) => img.isPrimary) ?? facility.images?.[0];
     const ogImage = primaryImage?.url
@@ -94,7 +94,7 @@ export async function generateMetadata({
     const description = isPraha
       ? `Najděte ${n} ${getSportFacilityTypePluralGenitive(sport.slug)} v Praze. Přehled podle městských částí, kontakty a otevírací doby.`
       : `Najděte ${n} ${getSportFacilityTypePluralGenitive(sport.slug)} ${getCityInPhrase(cityName)}. Otevírací doby, ceny, kontakty.`;
-    const url = `https://hraju.cz/sport/${sportSlug}/${slug}`;
+    const url = `https://www.hraju.cz/sport/${sportSlug}/${slug}`;
 
     return {
       title,
@@ -265,7 +265,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
     "@context": "https://schema.org",
     "@type": schemaType,
     name: facility.name,
-    url: `https://hraju.cz/sport/${sportSlug}/${slug}`,
+    url: `https://www.hraju.cz/sport/${sportSlug}/${slug}`,
     address: {
       "@type": "PostalAddress",
       streetAddress: facility.address,
@@ -297,15 +297,15 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
 
   // BreadcrumbList structured data for SEO
   const breadcrumbItems = [
-    { name: "hraju.cz", url: "https://hraju.cz" },
-    { name: sport.nameCs, url: `https://hraju.cz/sport/${sportSlug}` },
+    { name: "hraju.cz", url: "https://www.hraju.cz" },
+    { name: sport.nameCs, url: `https://www.hraju.cz/sport/${sportSlug}` },
     ...(regionInfo
       ? [
-          { name: regionInfo.name, url: `https://hraju.cz/sport/${sportSlug}/kraj/${regionInfo.slug}` },
-          { name: facility.location.city, url: `https://hraju.cz/sport/${sportSlug}/kraj/${regionInfo.slug}/${citySl}` },
+          { name: regionInfo.name, url: `https://www.hraju.cz/sport/${sportSlug}/kraj/${regionInfo.slug}` },
+          { name: facility.location.city, url: `https://www.hraju.cz/sport/${sportSlug}/kraj/${regionInfo.slug}/${citySl}` },
         ]
       : []),
-    { name: facility.name, url: `https://hraju.cz/sport/${sportSlug}/${slug}` },
+    { name: facility.name, url: `https://www.hraju.cz/sport/${sportSlug}/${slug}` },
   ];
   const breadcrumbLd = {
     "@context": "https://schema.org",
@@ -691,7 +691,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
 
               <ShareButton
                 title={`${facility.name} — ${sport.nameCs} v ${facility.location.city} | hraju.cz`}
-                url={`https://hraju.cz/sport/${sportSlug}/${slug}`}
+                url={`https://www.hraju.cz/sport/${sportSlug}/${slug}`}
               />
             </div>
 

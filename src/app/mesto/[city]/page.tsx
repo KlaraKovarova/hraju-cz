@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title,
       description,
-      url: `https://hraju.cz/mesto/${citySlug}`,
+      url: `https://www.hraju.cz/mesto/${citySlug}`,
       siteName: "hraju.cz",
       locale: "cs_CZ",
       type: "website",
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: { card: "summary_large_image" },
     alternates: {
-      canonical: `https://hraju.cz/mesto/${citySlug}`,
+      canonical: `https://www.hraju.cz/mesto/${citySlug}`,
     },
   };
 }
@@ -83,7 +83,7 @@ export default async function CrossSportCityPage({ params }: Props) {
       "@type": "ListItem",
       position: i + 1,
       name: f.name,
-      url: `https://hraju.cz/sport/${f.sports[0]?.sport.slug ?? "tenis"}/${f.slug}`,
+      url: `https://www.hraju.cz/sport/${f.sports[0]?.sport.slug ?? "tenis"}/${f.slug}`,
     })),
   };
 
@@ -92,9 +92,9 @@ export default async function CrossSportCityPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "hraju.cz", item: "https://hraju.cz" },
-      { "@type": "ListItem", position: 2, name: "Města", item: "https://hraju.cz/mesta" },
-      { "@type": "ListItem", position: 3, name: cityName, item: `https://hraju.cz/mesto/${citySlug}` },
+      { "@type": "ListItem", position: 1, name: "hraju.cz", item: "https://www.hraju.cz" },
+      { "@type": "ListItem", position: 2, name: "Města", item: "https://www.hraju.cz/mesta" },
+      { "@type": "ListItem", position: 3, name: cityName, item: `https://www.hraju.cz/mesto/${citySlug}` },
     ],
   };
 

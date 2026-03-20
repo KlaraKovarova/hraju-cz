@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://hraju.cz"),
+  metadataBase: new URL("https://www.hraju.cz"),
   title: {
     default: "Sportoviště v České republice | hraju.cz",
     template: "%s | hraju.cz",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://hraju.cz",
+    canonical: "https://www.hraju.cz",
   },
 };
 

@@ -82,7 +82,7 @@ export async function POST(request: NextRequest) {
           },
         });
 
-        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://hraju.cz";
+        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.hraju.cz";
         const magicLinkUrl = `${baseUrl}/moje-sportoviste?token=${token}`;
 
         magicLinkSent = await sendMagicLinkEmail(

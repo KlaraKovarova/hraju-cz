@@ -5,7 +5,7 @@ import exportData from "@/data/facilities-export.json";
 import { cityToSlug } from "@/lib/regions";
 import { getAllPosts, CATEGORIES } from "@/lib/blog";
 
-const BASE_URL = "https://hraju.cz";
+const BASE_URL = "https://www.hraju.cz";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [];

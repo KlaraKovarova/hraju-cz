@@ -182,7 +182,7 @@ export async function sendReviewNotificationEmail(
 
   const stars = "\u2605".repeat(rating) + "\u2606".repeat(5 - rating);
   const preview = reviewText ? reviewText.slice(0, 200) + (reviewText.length > 200 ? "\u2026" : "") : "";
-  const claimUrl = "https://hraju.cz/moje-sportoviste";
+  const claimUrl = "https://www.hraju.cz/moje-sportoviste";
 
   try {
     await transporter.sendMail({
@@ -305,7 +305,7 @@ export async function sendClaimOutreachEmail(
         ``,
         `---`,
         `Pokud si nepřejete být uvedeni na hraju.cz, můžete požádat o odebrání:`,
-        `https://hraju.cz/odhlasit?facility=${params.facilitySlug}`,
+        `https://www.hraju.cz/odhlasit?facility=${params.facilitySlug}`,
         `Silex, spol. s r.o. · hraju.cz`,
       ].join("\n"),
       html,

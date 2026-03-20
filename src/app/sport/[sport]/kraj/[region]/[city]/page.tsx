@@ -33,7 +33,7 @@ export async function generateMetadata({
 
   const title = `${sport.nameCs} ${cityName} — ${getSportFacilityTypePlural(sport.slug)}`;
   const description = `${facilities.length} ${getSportFacilityTypePluralGenitive(sport.slug)} ve městě ${cityName}. Adresy, telefonní čísla, otevírací doby a další informace na jednom místě.`;
-  const url = `https://hraju.cz/sport/${sportSlug}/kraj/${regionSlug}/${citySlug}`;
+  const url = `https://www.hraju.cz/sport/${sportSlug}/kraj/${regionSlug}/${citySlug}`;
 
   return {
     title,

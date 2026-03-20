@@ -29,7 +29,7 @@ export async function generateMetadata({
 
   const title = `${sport.nameCs} — ${getSportTitleSuffix(sport.slug)}`;
   const description = `${totalFacilities} ${getSportFacilityTypePluralGenitive(sport.slug)} ve všech 14 krajích. Najdi ${getSportFacilityType(sport.slug)} ve svém městě — adresy, kontakty, otevírací doby.`;
-  const url = `https://hraju.cz/sport/${sportSlug}`;
+  const url = `https://www.hraju.cz/sport/${sportSlug}`;
 
   return {
     title,
@@ -63,7 +63,7 @@ export default async function SportPage({ params }: SportPageProps) {
       "@type": "ListItem",
       position: i + 1,
       name: f.name,
-      url: `https://hraju.cz/sport/${sportSlug}/${f.slug}`,
+      url: `https://www.hraju.cz/sport/${sportSlug}/${f.slug}`,
     })),
   };
 
@@ -87,8 +87,8 @@ export default async function SportPage({ params }: SportPageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "hraju.cz", item: "https://hraju.cz" },
-      { "@type": "ListItem", position: 2, name: sport.nameCs, item: `https://hraju.cz/sport/${sportSlug}` },
+      { "@type": "ListItem", position: 1, name: "hraju.cz", item: "https://www.hraju.cz" },
+      { "@type": "ListItem", position: 2, name: sport.nameCs, item: `https://www.hraju.cz/sport/${sportSlug}` },
     ],
   };
 

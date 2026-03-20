@@ -12,12 +12,12 @@ export const metadata: Metadata = {
     title: "Užitečné odkazy ke sportům | hraju.cz",
     description:
       "Užitečné odkazy ke sportům v České republice — asociace, pravidla, turnaje a kalendáře akcí.",
-    url: "https://hraju.cz/odkazy",
+    url: "https://www.hraju.cz/odkazy",
     siteName: "hraju.cz",
     type: "website",
   },
   alternates: {
-    canonical: "https://hraju.cz/odkazy",
+    canonical: "https://www.hraju.cz/odkazy",
   },
 };
 
@@ -38,13 +38,13 @@ export default function OdkazyPage() {
         "@type": "ListItem",
         position: 1,
         name: "hraju.cz",
-        item: "https://hraju.cz",
+        item: "https://www.hraju.cz",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Užitečné odkazy",
-        item: "https://hraju.cz/odkazy",
+        item: "https://www.hraju.cz/odkazy",
       },
     ],
   };

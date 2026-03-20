@@ -40,7 +40,7 @@ export async function generateMetadata({
 
   const title = `${sport.nameCs} ${districtName} — ${facilities.length} sportovišť`;
   const description = `Najděte ${facilities.length} ${getSportFacilityTypePluralGenitive(sport.slug)} v ${districtName}. Adresy, kontakty, otevírací doby a recenze.`;
-  const url = `https://hraju.cz/sport/${sportSlug}/praha/${districtSlug}`;
+  const url = `https://www.hraju.cz/sport/${sportSlug}/praha/${districtSlug}`;
 
   return {
     title,
@@ -119,25 +119,25 @@ export default async function DistrictPage({ params }: DistrictPageProps) {
         "@type": "ListItem",
         position: 1,
         name: "hraju.cz",
-        item: "https://hraju.cz",
+        item: "https://www.hraju.cz",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: sport.nameCs,
-        item: `https://hraju.cz/sport/${sportSlug}`,
+        item: `https://www.hraju.cz/sport/${sportSlug}`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Praha",
-        item: `https://hraju.cz/sport/${sportSlug}/praha`,
+        item: `https://www.hraju.cz/sport/${sportSlug}/praha`,
       },
       {
         "@type": "ListItem",
         position: 4,
         name: districtName,
-        item: `https://hraju.cz/sport/${sportSlug}/praha/${districtSlug}`,
+        item: `https://www.hraju.cz/sport/${sportSlug}/praha/${districtSlug}`,
       },
     ],
   };
@@ -152,7 +152,7 @@ export default async function DistrictPage({ params }: DistrictPageProps) {
       "@type": "ListItem",
       position: i + 1,
       name: f.name,
-      url: `https://hraju.cz/sport/${sportSlug}/${f.slug}`,
+      url: `https://www.hraju.cz/sport/${sportSlug}/${f.slug}`,
     })),
   };
 

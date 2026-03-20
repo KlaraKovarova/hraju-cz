@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
       return genericResponse;
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://hraju.cz";
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.hraju.cz";
 
     for (const contact of contacts) {
       // Rate limit: max 1 token per hour per facility+email

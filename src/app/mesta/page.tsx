@@ -11,12 +11,12 @@ export const metadata: Metadata = {
     title: "Města se sportovišti | hraju.cz",
     description:
       "Přehled měst s nejvíce sportovišti v České republice.",
-    url: "https://hraju.cz/mesta",
+    url: "https://www.hraju.cz/mesta",
     siteName: "hraju.cz",
     type: "website",
   },
   alternates: {
-    canonical: "https://hraju.cz/mesta",
+    canonical: "https://www.hraju.cz/mesta",
   },
 };
 
@@ -29,8 +29,8 @@ export default async function MestaIndexPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "hraju.cz", item: "https://hraju.cz" },
-      { "@type": "ListItem", position: 2, name: "Města", item: "https://hraju.cz/mesta" },
+      { "@type": "ListItem", position: 1, name: "hraju.cz", item: "https://www.hraju.cz" },
+      { "@type": "ListItem", position: 2, name: "Města", item: "https://www.hraju.cz/mesta" },
     ],
   };
 

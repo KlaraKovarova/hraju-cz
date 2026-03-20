@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/hledat",
     },
-    sitemap: "https://hraju.cz/sitemap.xml",
+    sitemap: "https://www.hraju.cz/sitemap.xml",
   };
 }

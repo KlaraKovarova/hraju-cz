@@ -23,8 +23,8 @@ export async function generateMetadata({
     robots: { index: false, follow: true },
     alternates: {
       canonical: q
-        ? `https://hraju.cz/hledat?q=${encodeURIComponent(q)}`
-        : "https://hraju.cz/hledat",
+        ? `https://www.hraju.cz/hledat?q=${encodeURIComponent(q)}`
+        : "https://www.hraju.cz/hledat",
     },
   };
 }

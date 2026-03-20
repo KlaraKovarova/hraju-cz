@@ -49,7 +49,7 @@ export function CityLandingContent({
       "@type": "ListItem",
       position: i + 1,
       name: f.name,
-      url: `https://hraju.cz/sport/${sportSlug}/${f.slug}`,
+      url: `https://www.hraju.cz/sport/${sportSlug}/${f.slug}`,
     })),
   };
 
@@ -58,9 +58,9 @@ export function CityLandingContent({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "hraju.cz", item: "https://hraju.cz" },
-      { "@type": "ListItem", position: 2, name: sport.nameCs, item: `https://hraju.cz/sport/${sportSlug}` },
-      { "@type": "ListItem", position: 3, name: cityName, item: `https://hraju.cz/sport/${sportSlug}/${citySlug}` },
+      { "@type": "ListItem", position: 1, name: "hraju.cz", item: "https://www.hraju.cz" },
+      { "@type": "ListItem", position: 2, name: sport.nameCs, item: `https://www.hraju.cz/sport/${sportSlug}` },
+      { "@type": "ListItem", position: 3, name: cityName, item: `https://www.hraju.cz/sport/${sportSlug}/${citySlug}` },
     ],
   };
 

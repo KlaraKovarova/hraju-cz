@@ -25,7 +25,7 @@ export async function generateMetadata({
 
   const title = `${sport.nameCs} v kraji ${region.name}`;
   const description = `${totalFacilities} ${getSportFacilityTypePluralGenitive(sport.slug)} v kraji ${region.name}. Přehled měst s ${getSportFacilityTypeInstrumental(sport.slug)} — vyberte město a najděte sportoviště s kontakty.`;
-  const url = `https://hraju.cz/sport/${sportSlug}/kraj/${regionSlug}`;
+  const url = `https://www.hraju.cz/sport/${sportSlug}/kraj/${regionSlug}`;
 
   return {
     title,

@@ -11,12 +11,12 @@ export const metadata: Metadata = {
     title: "Blog — hraju.cz",
     description:
       "Průvodce sporty v Česku. Tipy kam na tenis, squash, padel a další sporty.",
-    url: "https://hraju.cz/blog",
+    url: "https://www.hraju.cz/blog",
     type: "website",
     siteName: "hraju.cz",
     locale: "cs_CZ",
   },
-  alternates: { canonical: "https://hraju.cz/blog" },
+  alternates: { canonical: "https://www.hraju.cz/blog" },
 };
 
 export default function BlogIndex() {
