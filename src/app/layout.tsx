@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { CookieConsent } from "@/components/CookieConsent";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Footer } from "@/components/Footer";
+import { UserNav } from "@/components/UserNav";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -64,6 +65,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="lazyOnload"
         />
+        <UserNav />
         {children}
         <Footer />
         <CookieConsent />
