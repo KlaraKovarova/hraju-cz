@@ -35,7 +35,7 @@ export async function generateMetadata({
       siteName: "hraju.cz",
       locale: "cs_CZ",
       publishedTime: post.date,
-      authors: ["Redakce hraju.cz"],
+      authors: ["Klára Kovářová"],
     },
     twitter: { card: "summary_large_image" },
     alternates: { canonical: url },
@@ -63,8 +63,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     description: post.excerpt,
     datePublished: post.date,
     author: {
-      "@type": "Organization",
-      name: "Redakce hraju.cz",
+      "@type": "Person",
+      name: "Klára Kovářová",
       url: "https://www.hraju.cz",
     },
     publisher: {
@@ -163,7 +163,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </h1>
 
         <p className="mt-2 text-sm text-zinc-500">
-          Autor: Redakce hraju.cz
+          Autor: Klára Kovářová
         </p>
 
         {/* Body */}
