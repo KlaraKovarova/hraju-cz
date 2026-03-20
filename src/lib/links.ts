@@ -34,7 +34,7 @@ export const SPORT_LINKS: SportLinkGroup[] = [
       },
       {
         title: "Pravidla tenisu",
-        url: "https://www.cztenis.cz/pravidla",
+        url: "https://www.cztenis.cz/pravidla-tenisu",
         description: "Kompletní pravidla tenisu v češtině.",
         category: "rules",
       },
@@ -51,19 +51,19 @@ export const SPORT_LINKS: SportLinkGroup[] = [
     links: [
       {
         title: "Česká asociace squashe",
-        url: "https://www.czsquash.cz",
+        url: "https://czechsquash.cz/asociace/",
         description: "Oficiální stránky České asociace squashe.",
         category: "associations",
       },
       {
         title: "Pravidla squashe",
-        url: "https://www.czsquash.cz/pravidla",
+        url: "https://czechsquash.cz/ke-stazeni/pravidla/",
         description: "Pravidla squashe pro hráče všech úrovní.",
         category: "rules",
       },
       {
         title: "Squashové turnaje",
-        url: "https://www.czsquash.cz/turnaje",
+        url: "https://czechsquash.cz/turnaje/",
         description: "Přehled squashových turnajů v České republice.",
         category: "tournaments",
       },
@@ -85,22 +85,10 @@ export const SPORT_LINKS: SportLinkGroup[] = [
         category: "associations",
       },
       {
-        title: "Pravidla badmintonu",
-        url: "https://www.czechbadminton.cz/pravidla",
-        description: "Pravidla badmintonu a herní řád.",
-        category: "rules",
-      },
-      {
-        title: "Turnaje a soutěže",
-        url: "https://www.czechbadminton.cz/souteze",
-        description: "Kalendář badmintonových soutěží a turnajů.",
-        category: "tournaments",
-      },
-      {
-        title: "Termínový kalendář turnajů",
+        title: "Kalendář turnajů",
         url: "https://www.czechbadminton.cz/turnaje/kalendar",
         description: "Termínový kalendář badmintonových turnajů v ČR.",
-        category: "events",
+        category: "tournaments",
       },
     ],
   },
@@ -114,9 +102,9 @@ export const SPORT_LINKS: SportLinkGroup[] = [
         category: "associations",
       },
       {
-        title: "Pravidla volejbalu",
-        url: "https://www.cvf.cz/pravidla",
-        description: "Pravidla volejbalu a beachvolejbalu.",
+        title: "Dokumenty a pravidla",
+        url: "https://www.cvf.cz/dokumenty",
+        description: "Pravidla volejbalu, beachvolejbalu a soutěžní řády.",
         category: "rules",
       },
       {
@@ -138,14 +126,14 @@ export const SPORT_LINKS: SportLinkGroup[] = [
       },
       {
         title: "Pravidla plavání",
-        url: "https://www.czechswimming.cz/pravidla",
+        url: "https://www.czechswimming.cz/index.php/dokumenty/pravidla",
         description: "Pravidla závodního i rekreačního plavání.",
         category: "rules",
       },
       {
-        title: "Plavecké závody",
-        url: "https://www.czechswimming.cz/zavody",
-        description: "Kalendář plaveckých závodů a akcí.",
+        title: "Výsledkový servis",
+        url: "https://vysledky.czechswimming.cz/prehled",
+        description: "Výsledky a přehled plaveckých závodů v ČR.",
         category: "events",
       },
     ],
@@ -160,9 +148,9 @@ export const SPORT_LINKS: SportLinkGroup[] = [
         category: "associations",
       },
       {
-        title: "Pravidla golfu",
-        url: "https://www.cgf.cz/pravidla",
-        description: "Pravidla golfu a golfová etiketa.",
+        title: "Pravidla golfu (PDF)",
+        url: "https://fls.cgf.cz/DBFL/CGSRedaction/Documents/Pravidla%20golfu%202023%20-%20v230508.pdf",
+        description: "Kompletní pravidla golfu v češtině (PDF ke stažení).",
         category: "rules",
       },
       {
