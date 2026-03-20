@@ -31,7 +31,7 @@ export async function sendMagicLinkEmail(
 
   try {
     await transporter.sendMail({
-      from: `"hraju.cz" <${process.env.SMTP_USER}>`,
+      from: `"Klára z hraju.cz" <${process.env.SMTP_USER}>`,
       to,
       subject: `Ověření vlastnictví – ${facilityName}`,
       text: [
@@ -83,7 +83,7 @@ export async function sendUserLoginEmail(
 
   try {
     await transporter.sendMail({
-      from: `"hraju.cz" <${process.env.SMTP_USER}>`,
+      from: `"Klára z hraju.cz" <${process.env.SMTP_USER}>`,
       to,
       subject: "Přihlášení na hraju.cz",
       text: [
@@ -132,7 +132,7 @@ export async function sendDelistConfirmationEmail(
 
   try {
     await transporter.sendMail({
-      from: `"hraju.cz" <${process.env.SMTP_USER}>`,
+      from: `"Klára z hraju.cz" <${process.env.SMTP_USER}>`,
       to,
       subject: `Potvrzení žádosti o odebrání – ${facilityName}`,
       text: [
@@ -180,7 +180,7 @@ export async function sendEventSubmissionConfirmationEmail(
 
   try {
     await transporter.sendMail({
-      from: `"hraju.cz" <${process.env.SMTP_USER}>`,
+      from: `"Klára z hraju.cz" <${process.env.SMTP_USER}>`,
       to,
       subject: `Akce „${eventName}" byla odeslána ke kontrole`,
       text: [
@@ -235,7 +235,7 @@ export async function sendReviewNotificationEmail(
 
   try {
     await transporter.sendMail({
-      from: `"hraju.cz" <${process.env.SMTP_USER}>`,
+      from: `"Klára z hraju.cz" <${process.env.SMTP_USER}>`,
       to,
       subject: `Nové hodnocení vašeho sportoviště ${facilityName}`,
       text: [
@@ -330,7 +330,7 @@ export async function sendClaimOutreachEmail(
     const html = renderOutreachTemplate(params);
 
     await transporter.sendMail({
-      from: `"hraju.cz" <${process.env.SMTP_USER}>`,
+      from: `"Klára z hraju.cz" <${process.env.SMTP_USER}>`,
       to,
       subject: `Vaše sportoviště ${params.facilityName} je na hraju.cz — převezměte si svůj profil`,
       text: [

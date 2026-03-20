@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
     // If user doesn't exist yet and name was provided, we'll use it during verification
     // Store name in a separate way — we'll pass it via the token URL
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.hraju.cz";
-    const loginUrl = new URL("/prihlaseni", baseUrl);
+    const loginUrl = new URL("/api/auth/verify", baseUrl);
     loginUrl.searchParams.set("token", token);
     if (name && !existingUser) {
       loginUrl.searchParams.set("name", name.trim());

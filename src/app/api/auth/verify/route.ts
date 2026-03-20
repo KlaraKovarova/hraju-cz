@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { createUserSession, setUserCookie } from "@/lib/user-auth";
+import { createUserSession } from "@/lib/user-auth";
 
 export async function GET(request: NextRequest) {
   const token = request.nextUrl.searchParams.get("token");
@@ -61,13 +61,19 @@ export async function GET(request: NextRequest) {
       });
     }
 
-    // Create session and set cookie
+    // Create session and set cookie on the redirect response directly
     const jwt = await createUserSession(user.id, user.email, user.name);
-    await setUserCookie(jwt);
-
-    return NextResponse.redirect(
+    const response = NextResponse.redirect(
       new URL("/prihlaseni?success=1", request.url)
     );
+    response.cookies.set("user_session", jwt, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      maxAge: 30 * 24 * 60 * 60, // 30 days
+      path: "/",
+    });
+    return response;
   } catch (error) {
     console.error("Failed to verify login token:", error);
     return NextResponse.redirect(

@@ -25,17 +25,6 @@ export async function createUserSession(
   return jwt;
 }
 
-export async function setUserCookie(jwt: string) {
-  const cookieStore = await cookies();
-  cookieStore.set(COOKIE_NAME, jwt, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    maxAge: 30 * 24 * 60 * 60, // 30 days
-    path: "/",
-  });
-}
-
 export async function getUserSession(): Promise<UserSession | null> {
   const cookieStore = await cookies();
   const token = cookieStore.get(COOKIE_NAME)?.value;
