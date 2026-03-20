@@ -53,7 +53,13 @@ export async function POST(request: NextRequest) {
       loginUrl.searchParams.set("name", name.trim());
     }
 
-    await sendUserLoginEmail(normalizedEmail, loginUrl.toString());
+    const sent = await sendUserLoginEmail(normalizedEmail, loginUrl.toString());
+    if (!sent) {
+      return NextResponse.json(
+        { error: "Nepodařilo se odeslat e-mail. Zkuste to prosím později." },
+        { status: 503 }
+      );
+    }
 
     return NextResponse.json({ ok: true });
   } catch (error) {
