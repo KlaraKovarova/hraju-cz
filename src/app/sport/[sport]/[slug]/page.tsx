@@ -55,6 +55,11 @@ export async function generateMetadata({
       : `${facility.name} — ${getSportFacilityType(sport.slug)} v ${facility.location.city}. Adresa, kontakt, otevírací doba a recenze na hraju.cz.`;
     const url = `https://hraju.cz/sport/${sportSlug}/${slug}`;
 
+    const primaryImage = facility.images?.find((img: { isPrimary: boolean }) => img.isPrimary) ?? facility.images?.[0];
+    const ogImage = primaryImage?.url
+      ? { url: primaryImage.url, alt: primaryImage.alt ?? facility.name }
+      : { url: "/og-image.jpg", width: 1200, height: 630, alt: `${facility.name} — hraju.cz` };
+
     return {
       title,
       description,
@@ -65,10 +70,10 @@ export async function generateMetadata({
         type: "website",
         siteName: "hraju.cz",
         locale: "cs_CZ",
-        images: ["/og-image.jpg"],
+        images: [ogImage],
       },
       twitter: {
-        card: "summary",
+        card: "summary_large_image",
         title: `${facility.name} — ${sport.nameCs}`,
         description,
       },
@@ -93,7 +98,8 @@ export async function generateMetadata({
     return {
       title,
       description,
-      openGraph: { title, description, url, type: "website", siteName: "hraju.cz", locale: "cs_CZ", images: ["/og-image.jpg"] },
+      openGraph: { title, description, url, type: "website", siteName: "hraju.cz", locale: "cs_CZ", images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: `${sport.nameCs} ${cityName} — hraju.cz` }] },
+      twitter: { card: "summary_large_image" },
       alternates: { canonical: url },
     };
   }

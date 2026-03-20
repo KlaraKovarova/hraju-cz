@@ -37,7 +37,8 @@ export async function generateMetadata({
   return {
     title,
     description,
-    openGraph: { title, description, url, type: "website", images: ["/og-image.jpg"] },
+    openGraph: { title, description, url, type: "website", siteName: "hraju.cz", locale: "cs_CZ", images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: `${sport.nameCs} ${cityName} — hraju.cz` }] },
+    twitter: { card: "summary_large_image" },
     alternates: { canonical: url },
   };
 }

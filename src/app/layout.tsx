@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og-image.jpg",
-        width: 1653,
-        height: 1229,
+        width: 1200,
+        height: 630,
         alt: "hraju.cz — Sportoviště v České republice",
       },
     ],
