@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, ArrowRight, ChevronDown } from "lucide-react";
+import { MapPin, ArrowRight, ChevronDown, Calendar } from "lucide-react";
 import { SPORTS } from "@/lib/sports";
 import {
   getTotalFacilityCount,
@@ -13,6 +13,7 @@ import { FacilityCard } from "@/components/FacilityCard";
 import { HeroSearchForm } from "@/components/HeroSearchForm";
 import { AdSlot } from "@/components/AdSlot";
 import { WeekendEvents } from "@/components/WeekendEvents";
+import { getAllPosts, CATEGORIES } from "@/lib/blog";
 
 // ISR: revalidate homepage every 6 hours
 export const revalidate = 21600;
@@ -23,6 +24,7 @@ export default async function Home() {
   const featuredFacilities = await getFeaturedFacilities(6);
   const topCities = await getTopCitiesOverall(10);
   const recentFacilities = await getRecentFacilities(4);
+  const latestPosts = getAllPosts().slice(0, 3);
 
   // FAQ data for structured markup
   const faqItems = [
@@ -81,6 +83,12 @@ export default async function Home() {
                 {sport.icon} {sport.nameCs}
               </Link>
             ))}
+            <Link
+              href="/blog"
+              className="transition hover:text-zinc-900"
+            >
+              Blog
+            </Link>
             <Link
               href="#sports"
               className="transition hover:text-zinc-900"
@@ -276,6 +284,53 @@ export default async function Home() {
 
       {/* Weekend Tourist Events */}
       <WeekendEvents />
+
+      {/* Latest Blog Posts */}
+      {latestPosts.length > 0 && (
+        <section className="border-t border-zinc-100 bg-white">
+          <div className="mx-auto max-w-6xl px-6 py-16">
+            <div className="mb-8 text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
+                Z našeho blogu
+              </h2>
+              <p className="mt-2 text-zinc-500">
+                Tipy, průvodce a novinky ze světa sportu
+              </p>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-3">
+              {latestPosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="group rounded-2xl border border-zinc-100 bg-zinc-50/50 p-6 transition hover:border-emerald-200 hover:shadow-sm"
+                >
+                  <span className="text-xs font-medium text-emerald-600">
+                    {CATEGORIES[post.category] || post.category}
+                  </span>
+                  <h3 className="mt-2 font-bold text-zinc-900 group-hover:text-emerald-700">
+                    {post.title}
+                  </h3>
+                  <p className="mt-2 line-clamp-2 text-sm text-zinc-500">
+                    {post.excerpt}
+                  </p>
+                  <div className="mt-3 flex items-center gap-1 text-xs text-zinc-400">
+                    <Calendar className="h-3 w-3" />
+                    {new Date(post.date).toLocaleDateString("cs-CZ")}
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-8 text-center">
+              <Link
+                href="/blog"
+                className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-600 transition hover:text-emerald-700"
+              >
+                Všechny články <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA / Info Section */}
       <section className="mx-auto max-w-6xl px-6 py-16">
