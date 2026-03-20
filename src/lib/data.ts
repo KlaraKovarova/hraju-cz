@@ -700,7 +700,12 @@ export async function searchFacilities(
   sportSlug?: string,
   limit: number = 50
 ): Promise<FacilityWithDetails[]> {
-  const lower = query.toLowerCase();
+  const tokens = query
+    .toLowerCase()
+    .split(/\s+/)
+    .filter((t) => t.length > 0);
+
+  if (tokens.length === 0) return [];
 
   let candidates = exportData.facilities.filter((f) => f.isActive);
 
@@ -712,15 +717,21 @@ export async function searchFacilities(
   }
 
   const results = candidates.filter((f) => {
-    if (f.name.toLowerCase().includes(lower)) return true;
+    const nameLower = f.name.toLowerCase();
     const loc = locationById.get(f.locationId);
-    if (loc?.city.toLowerCase().includes(lower)) return true;
+    const cityLower = loc?.city.toLowerCase() ?? "";
     const fSportIds = sportsByFacilityId.get(f.id) || [];
-    for (const sid of fSportIds) {
-      const s = sportById.get(sid);
-      if (s?.nameCs.toLowerCase().includes(lower)) return true;
-    }
-    return false;
+    const sportNames = fSportIds.map(
+      (sid) => sportById.get(sid)?.nameCs.toLowerCase() ?? ""
+    );
+
+    // Every token must match at least one field (name, city, or a sport)
+    return tokens.every(
+      (token) =>
+        nameLower.includes(token) ||
+        cityLower.includes(token) ||
+        sportNames.some((sn) => sn.includes(token))
+    );
   });
 
   // Sort: premium first, then alphabetically
