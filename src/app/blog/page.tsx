@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronRight, Calendar, Tag } from "lucide-react";
 import { getAllPosts, CATEGORIES } from "@/lib/blog";
 import type { Metadata } from "next";
@@ -78,9 +79,21 @@ export default function BlogIndex() {
             {posts.map((post) => (
               <article
                 key={post.slug}
-                className="rounded-2xl border border-zinc-100 bg-white p-6 transition hover:border-zinc-200 hover:shadow-sm"
+                className="overflow-hidden rounded-2xl border border-zinc-100 bg-white transition hover:border-zinc-200 hover:shadow-sm"
               >
                 <Link href={`/blog/${post.slug}`}>
+                  {post.image && (
+                    <div className="relative aspect-[16/9] w-full">
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 800px"
+                      />
+                    </div>
+                  )}
+                  <div className="p-6">
                   <div className="flex items-center gap-3 text-xs text-zinc-400">
                     <span className="flex items-center gap-1">
                       <Calendar className="h-3 w-3" />
@@ -111,6 +124,7 @@ export default function BlogIndex() {
                   <span className="mt-3 inline-block text-sm font-semibold text-emerald-600">
                     Číst dále &rarr;
                   </span>
+                  </div>
                 </Link>
               </article>
             ))}

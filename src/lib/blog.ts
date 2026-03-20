@@ -11,6 +11,7 @@ export interface BlogPost {
   category: string;
   excerpt: string;
   sportTags: string[];
+  image?: string;
   body: string;
 }
 
@@ -21,6 +22,7 @@ export interface BlogPostMeta {
   category: string;
   excerpt: string;
   sportTags: string[];
+  image?: string;
 }
 
 function parseMdFile(filePath: string): BlogPost | null {
@@ -35,6 +37,7 @@ function parseMdFile(filePath: string): BlogPost | null {
       category: data.category || "tipy",
       excerpt: data.excerpt || "",
       sportTags: data.sportTags || [],
+      image: data.image || undefined,
       body: content,
     };
   } catch {

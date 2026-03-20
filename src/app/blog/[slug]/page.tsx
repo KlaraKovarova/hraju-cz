@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronRight, Calendar, Tag, ArrowLeft } from "lucide-react";
 import Markdown from "react-markdown";
 import { getPostBySlug, getAllPosts, CATEGORIES } from "@/lib/blog";
@@ -24,6 +25,9 @@ export async function generateMetadata({
   if (!post) return {};
 
   const url = `https://www.hraju.cz/blog/${slug}`;
+  const ogImages = post.image
+    ? [{ url: `https://www.hraju.cz${post.image}`, width: 1200, height: 675 }]
+    : undefined;
   return {
     title: `${post.title} — hraju.cz`,
     description: post.excerpt || post.title,
@@ -36,8 +40,9 @@ export async function generateMetadata({
       locale: "cs_CZ",
       publishedTime: post.date,
       authors: ["Klára Kovářová"],
+      images: ogImages,
     },
-    twitter: { card: "summary_large_image" },
+    twitter: { card: "summary_large_image", images: ogImages },
     alternates: { canonical: url },
   };
 }
@@ -61,6 +66,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     "@type": "Article",
     headline: post.title,
     description: post.excerpt,
+    ...(post.image && { image: `https://www.hraju.cz${post.image}` }),
     datePublished: post.date,
     author: {
       "@type": "Person",
@@ -134,6 +140,20 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </div>
       </nav>
+
+      {/* Hero image */}
+      {post.image && (
+        <div className="relative mx-auto aspect-[21/9] max-w-4xl">
+          <Image
+            src={post.image}
+            alt={post.title}
+            fill
+            priority
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 896px"
+          />
+        </div>
+      )}
 
       {/* Article */}
       <article className="mx-auto max-w-3xl px-6 py-10">
@@ -210,8 +230,20 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <Link
                   key={p.slug}
                   href={`/blog/${p.slug}`}
-                  className="group rounded-xl border border-zinc-100 bg-zinc-50/50 p-4 transition hover:border-zinc-200 hover:shadow-sm"
+                  className="group overflow-hidden rounded-xl border border-zinc-100 bg-zinc-50/50 transition hover:border-zinc-200 hover:shadow-sm"
                 >
+                  {p.image && (
+                    <div className="relative aspect-[16/9] w-full">
+                      <Image
+                        src={p.image}
+                        alt={p.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 100vw, 33vw"
+                      />
+                    </div>
+                  )}
+                  <div className="p-4">
                   <p className="text-sm font-semibold text-zinc-900 group-hover:text-emerald-700">
                     {p.title}
                   </p>
@@ -222,6 +254,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       year: "numeric",
                     })}
                   </p>
+                  </div>
                 </Link>
               ))}
             </div>
