@@ -71,6 +71,9 @@ model Facility {
   editRequests  EditRequest[]
   ownerTokens   OwnerToken[]
   views         FacilityView[]
+  reviews       Review[]
+  averageRating Float?
+  reviewCount   Int              @default(0)
 
   @@index([locationId])
   @@index([slug])
@@ -197,6 +200,22 @@ model FacilityView {
   @@unique([facilityId, date])
   @@index([facilityId])
   @@index([date])
+}
+
+model Review {
+  id          String   @id @default(cuid())
+  facilityId  String
+  facility    Facility @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  authorName  String
+  authorEmail String
+  rating      Int      // 1-5
+  text        String?  @db.Text
+  isApproved  Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([facilityId])
+  @@index([isApproved])
 }
 
 model ContactMessage {

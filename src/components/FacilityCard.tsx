@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { MapPin, Phone, ArrowRight, Clock } from "lucide-react";
+import { StarRating } from "./StarRating";
 import type { FacilityWithDetails } from "@/lib/data";
 
 const DAY_KEYS = ["ne", "po", "út", "st", "čt", "pá", "so"] as const;
@@ -58,11 +59,16 @@ export function FacilityCard({ facility, sportSlug }: FacilityCardProps) {
             </span>
           </div>
         </div>
-        {facility.isPremium && (
-          <span className="shrink-0 rounded-full bg-amber-50 px-2.5 py-1 text-xs font-semibold text-amber-700">
-            Premium
-          </span>
-        )}
+        <div className="flex shrink-0 flex-col items-end gap-1">
+          {facility.isPremium && (
+            <span className="rounded-full bg-amber-50 px-2.5 py-1 text-xs font-semibold text-amber-700">
+              Premium
+            </span>
+          )}
+          {facility.averageRating != null && facility.reviewCount > 0 && (
+            <StarRating rating={facility.averageRating} count={facility.reviewCount} />
+          )}
+        </div>
       </div>
 
       {/* Info pills */}

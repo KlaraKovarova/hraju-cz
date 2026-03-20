@@ -43,6 +43,8 @@ export type FacilityWithDetails = {
     isPrimary: boolean;
   }[];
   images: { url: string; alt: string | null; isPrimary: boolean }[];
+  averageRating: number | null;
+  reviewCount: number;
 };
 
 // --- Static data from JSON export (pre-indexed) ---
@@ -132,6 +134,8 @@ function toFacilityWithDetails(f: ExportData["facilities"][number]): FacilityWit
       isPrimary: c.isPrimary,
     })),
     images: [],
+    averageRating: null,
+    reviewCount: 0,
   };
 }
 

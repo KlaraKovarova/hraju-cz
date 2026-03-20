@@ -19,6 +19,9 @@ import { getRegionByName, cityToSlug } from "@/lib/regions";
 import { getSportFacilityType, getSportFacilityTypePluralGenitive } from "@/lib/seo";
 import { getCityInPhrase } from "@/lib/locative";
 import EditSuggestionForm from "@/components/EditSuggestionForm";
+import { StarRating } from "@/components/StarRating";
+import { ReviewForm } from "@/components/ReviewForm";
+import { ReviewList } from "@/components/ReviewList";
 import { CityLandingContent } from "@/components/CityLandingContent";
 import { PhotoGallery } from "@/components/PhotoGallery";
 import { ShareButton } from "@/components/ShareButton";
@@ -395,6 +398,9 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                 Premium
               </span>
             )}
+            {facility.averageRating != null && facility.reviewCount > 0 && (
+              <StarRating rating={facility.averageRating} count={facility.reviewCount} size="md" />
+            )}
           </div>
 
           <div className="mt-3 flex flex-wrap items-center gap-4 text-sm text-zinc-500">
@@ -768,6 +774,26 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
           </div>
         </div>
       </div>
+
+      {/* Reviews Section */}
+      <section className="border-t border-zinc-100 bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-8">
+          <h2 className="mb-6 text-xl font-bold text-zinc-900">
+            Recenze
+          </h2>
+          <div className="grid gap-8 lg:grid-cols-2">
+            <div>
+              <ReviewList facilityId={facility.id} />
+            </div>
+            <div>
+              <h3 className="mb-3 text-sm font-semibold text-zinc-700">
+                Napsat recenzi
+              </h3>
+              <ReviewForm facilityId={facility.id} />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Ad: below facility info, above related facilities (hidden for premium) */}
       {!facility.isPremium && (

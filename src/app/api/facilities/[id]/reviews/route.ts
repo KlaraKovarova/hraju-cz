@@ -1,0 +1,99 @@
+import { NextRequest, NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
+
+// GET /api/facilities/[id]/reviews — list approved reviews (paginated, newest first)
+export async function GET(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  const { id } = await params;
+  const { searchParams } = new URL(request.url);
+  const page = Math.max(1, parseInt(searchParams.get("page") || "1", 10));
+  const limit = Math.min(50, Math.max(1, parseInt(searchParams.get("limit") || "10", 10)));
+
+  const [reviews, total] = await Promise.all([
+    prisma.review.findMany({
+      where: { facilityId: id, isApproved: true },
+      orderBy: { createdAt: "desc" },
+      skip: (page - 1) * limit,
+      take: limit,
+      select: {
+        id: true,
+        authorName: true,
+        rating: true,
+        text: true,
+        createdAt: true,
+      },
+    }),
+    prisma.review.count({ where: { facilityId: id, isApproved: true } }),
+  ]);
+
+  return NextResponse.json({ reviews, total, page, limit });
+}
+
+// POST /api/facilities/[id]/reviews — submit a review
+export async function POST(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  const { id } = await params;
+
+  let body: { authorName?: string; authorEmail?: string; rating?: number; text?: string };
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
+  }
+
+  const { authorName, authorEmail, rating, text } = body;
+
+  // Validation
+  if (!authorName || typeof authorName !== "string" || authorName.trim().length < 2) {
+    return NextResponse.json({ error: "Jméno je povinné (min. 2 znaky)." }, { status: 400 });
+  }
+  if (!authorEmail || typeof authorEmail !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(authorEmail)) {
+    return NextResponse.json({ error: "Zadejte platný e-mail." }, { status: 400 });
+  }
+  if (!rating || typeof rating !== "number" || rating < 1 || rating > 5 || !Number.isInteger(rating)) {
+    return NextResponse.json({ error: "Hodnocení musí být 1–5." }, { status: 400 });
+  }
+
+  // Check facility exists
+  const facility = await prisma.facility.findUnique({ where: { id }, select: { id: true } });
+  if (!facility) {
+    return NextResponse.json({ error: "Sportoviště nenalezeno." }, { status: 404 });
+  }
+
+  // Rate limit: 1 per email per facility
+  const existing = await prisma.review.findFirst({
+    where: { facilityId: id, authorEmail: authorEmail.toLowerCase() },
+  });
+  if (existing) {
+    return NextResponse.json({ error: "Toto sportoviště jste již hodnotili." }, { status: 409 });
+  }
+
+  // Rate limit: max 5 reviews per email per day
+  const dayStart = new Date();
+  dayStart.setHours(0, 0, 0, 0);
+  const dailyCount = await prisma.review.count({
+    where: {
+      authorEmail: authorEmail.toLowerCase(),
+      createdAt: { gte: dayStart },
+    },
+  });
+  if (dailyCount >= 5) {
+    return NextResponse.json({ error: "Překročen denní limit recenzí. Zkuste to zítra." }, { status: 429 });
+  }
+
+  const review = await prisma.review.create({
+    data: {
+      facilityId: id,
+      authorName: authorName.trim(),
+      authorEmail: authorEmail.toLowerCase().trim(),
+      rating,
+      text: text?.trim() || null,
+    },
+  });
+
+  return NextResponse.json({ id: review.id, message: "Děkujeme za recenzi! Bude zobrazena po schválení." }, { status: 201 });
+}
