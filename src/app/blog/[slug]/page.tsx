@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Calendar, Tag, ArrowLeft } from "lucide-react";
 import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { getPostBySlug, getAllPosts, CATEGORIES } from "@/lib/blog";
 import type { Metadata } from "next";
 
@@ -188,7 +189,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         {/* Body */}
         <div className="prose prose-zinc mt-8 max-w-none prose-headings:font-bold prose-a:text-emerald-600 prose-a:no-underline hover:prose-a:underline">
-          <Markdown>{post.body}</Markdown>
+          <Markdown remarkPlugins={[remarkGfm]}>{post.body}</Markdown>
         </div>
 
         {/* Sport tags */}
