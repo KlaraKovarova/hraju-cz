@@ -57,6 +57,7 @@ model Facility {
   isActive      Boolean           @default(true)
   isClaimed     Boolean           @default(false)
   isPremium              Boolean           @default(false)
+  isPromo                Boolean           @default(false) // true = promotional premium, auto-replaceable by paid
   bookingUrl             String?
   stripeCustomerId       String?
   stripeSubscriptionId   String?

@@ -71,6 +71,7 @@ interface FacilityFormData {
   bookingUrl: string;
   isActive: boolean;
   isPremium: boolean;
+  isPromo: boolean;
   sportSlugs: string[];
   openingHours?: Record<string, string> | null;
   amenityIds?: string[];
@@ -94,6 +95,7 @@ const DEFAULT_DATA: FacilityFormData = {
   bookingUrl: "",
   isActive: true,
   isPremium: false,
+  isPromo: false,
   sportSlugs: [],
   openingHours: null,
   amenityIds: [],
@@ -380,6 +382,26 @@ export function FacilityForm({ initialData, allAmenities = [] }: FacilityFormPro
               className="rounded"
             />
             Aktivní
+          </label>
+          <label className="flex items-center gap-2 text-sm text-zinc-700">
+            <input
+              type="checkbox"
+              name="isPremium"
+              checked={form.isPremium}
+              onChange={handleChange}
+              className="rounded"
+            />
+            Premium
+          </label>
+          <label className="flex items-center gap-2 text-sm text-zinc-700">
+            <input
+              type="checkbox"
+              name="isPromo"
+              checked={form.isPromo}
+              onChange={handleChange}
+              className="rounded"
+            />
+            Promo
           </label>
         </div>
       </div>

@@ -32,7 +32,7 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
     const {
       name, description, address, postalCode, city, region,
       lat, lng, courtsLanes, pricing, openingHours, website, bookingUrl,
-      isActive, isClaimed, isPremium, amenityIds,
+      isActive, isClaimed, isPremium, isPromo, amenityIds,
     } = body;
 
     let locationId: string | undefined;
@@ -67,6 +67,7 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
         ...(isActive !== undefined && { isActive }),
         ...(isClaimed !== undefined && { isClaimed }),
         ...(isPremium !== undefined && { isPremium }),
+        ...(isPromo !== undefined && { isPromo }),
       },
       include: { location: true, sports: { include: { sport: true } }, amenities: { include: { amenity: true } } },
     });

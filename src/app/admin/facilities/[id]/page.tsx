@@ -55,6 +55,7 @@ export default async function EditFacilityPage({ params }: EditFacilityPageProps
             bookingUrl: facility.bookingUrl ?? "",
             isActive: facility.isActive,
             isPremium: facility.isPremium,
+            isPromo: facility.isPromo,
             sportSlugs: facility.sports.map((s) => s.sport.slug),
             openingHours: facility.openingHours as Record<string, string> | null,
             amenityIds: facility.amenities.map((a) => a.amenityId),
