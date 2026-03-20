@@ -493,11 +493,12 @@ export function FacilityListWithFilters({
       {/* Facility Grid */}
       {paginatedFacilities.length > 0 ? (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {paginatedFacilities.map((facility) => (
+          {paginatedFacilities.map((facility, i) => (
             <FacilityCard
               key={facility.id}
               facility={facility}
               sportSlug={sportSlug}
+              priority={safePage === 1 && i < 4}
             />
           ))}
         </div>

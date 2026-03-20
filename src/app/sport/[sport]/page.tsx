@@ -224,11 +224,12 @@ export default async function SportPage({ params }: SportPageProps) {
             {sport.nameCs} sportoviště
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {topFacilities.map((facility) => (
+            {topFacilities.map((facility, i) => (
               <FacilityCard
                 key={facility.id}
                 facility={facility}
                 sportSlug={sportSlug}
+                priority={i < 4}
               />
             ))}
           </div>

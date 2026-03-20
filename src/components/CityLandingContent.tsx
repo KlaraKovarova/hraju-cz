@@ -166,11 +166,12 @@ export function CityLandingContent({
                   </Link>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {group.facilities.map((facility) => (
+                  {group.facilities.map((facility, i) => (
                     <FacilityCard
                       key={facility.id}
                       facility={facility}
                       sportSlug={sportSlug}
+                      priority={i < 4}
                     />
                   ))}
                 </div>

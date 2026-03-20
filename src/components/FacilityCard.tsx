@@ -19,9 +19,10 @@ function getTodayHours(
 interface FacilityCardProps {
   facility: FacilityWithDetails;
   sportSlug: string;
+  priority?: boolean;
 }
 
-export function FacilityCard({ facility, sportSlug }: FacilityCardProps) {
+export function FacilityCard({ facility, sportSlug, priority = false }: FacilityCardProps) {
   const primaryContact = facility.contacts.find((c) => c.isPrimary);
   const todayHours = getTodayHours(
     facility.openingHours as Record<string, string> | null,
@@ -41,6 +42,7 @@ export function FacilityCard({ facility, sportSlug }: FacilityCardProps) {
             alt={primaryImage.alt ?? facility.name}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={priority}
             className="object-cover transition-transform group-hover:scale-105"
           />
         </div>

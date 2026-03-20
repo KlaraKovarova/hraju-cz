@@ -41,6 +41,8 @@ export function PhotoGallery({ images, facilityName }: PhotoGalleryProps) {
               alt={displayImages[0].alt ?? facilityName}
               width={1200}
               height={600}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority
               className="h-auto max-h-[400px] w-full cursor-pointer object-cover transition hover:opacity-90"
             />
           </button>
@@ -58,6 +60,8 @@ export function PhotoGallery({ images, facilityName }: PhotoGalleryProps) {
                   alt={img.alt ?? `${facilityName} — foto ${i + 1}`}
                   width={400}
                   height={300}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority={i === 0}
                   className="h-48 w-full cursor-pointer object-cover transition hover:scale-105 hover:opacity-90"
                 />
               </button>

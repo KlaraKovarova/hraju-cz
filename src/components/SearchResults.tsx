@@ -117,11 +117,12 @@ export function SearchResults({
       )}
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {paginatedFacilities.map((facility) => (
+        {paginatedFacilities.map((facility, i) => (
           <FacilityCard
             key={facility.id}
             facility={facility}
             sportSlug={facility.sports[0]?.sport.slug || "tenis"}
+            priority={safePage === 1 && i < 4}
           />
         ))}
       </div>
