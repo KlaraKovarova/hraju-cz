@@ -347,7 +347,7 @@ async function dbFacilitiesBySport(
 }
 
 async function dbFacilityBySlug(slug: string): Promise<FacilityWithDetails | null> {
-  return prisma.facility.findUnique({
+  const facility = await prisma.facility.findUnique({
     where: { slug },
     include: {
       location: { select: { city: true, region: true } },
@@ -357,6 +357,9 @@ async function dbFacilityBySlug(slug: string): Promise<FacilityWithDetails | nul
       images: { select: { url: true, alt: true, isPrimary: true }, orderBy: { order: "asc" } },
     },
   }) as unknown as FacilityWithDetails | null;
+  // Hide deactivated facilities from public pages
+  if (facility && !facility.isActive) return null;
+  return facility;
 }
 
 // --- Public API: try DB first, fall back to static JSON export ---

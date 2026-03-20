@@ -18,7 +18,7 @@ export async function GET(_req: NextRequest, { params }: RouteParams) {
         images: { orderBy: { order: "asc" } },
       },
     });
-    if (!facility) return NextResponse.json({ error: "Not found" }, { status: 404 });
+    if (!facility || !facility.isActive) return NextResponse.json({ error: "Not found" }, { status: 404 });
     return NextResponse.json(facility);
   } catch {
     return NextResponse.json({ error: "Database unavailable" }, { status: 503 });
