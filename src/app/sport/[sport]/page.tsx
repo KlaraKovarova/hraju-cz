@@ -48,8 +48,40 @@ export default async function SportPage({ params }: SportPageProps) {
   const topCities = await getTopCitiesBySport(sport.slug, 10);
   const totalFacilities = regions.reduce((sum, r) => sum + r.facilityCount, 0);
 
+  // JSON-LD ItemList for top facilities
+  const itemListLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: sport.nameCs,
+    numberOfItems: topFacilities.length,
+    itemListElement: topFacilities.map((f, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: f.name,
+      url: `https://hraju.cz/sport/${sportSlug}/${f.slug}`,
+    })),
+  };
+
+  // BreadcrumbList JSON-LD
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "hraju.cz", item: "https://hraju.cz" },
+      { "@type": "ListItem", position: 2, name: sport.nameCs, item: `https://hraju.cz/sport/${sportSlug}` },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-zinc-50/50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       {/* Header */}
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">

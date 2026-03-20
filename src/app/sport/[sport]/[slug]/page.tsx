@@ -221,13 +221,14 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
   const email = facility.contacts.find((c) => c.type === "EMAIL")?.value;
   const primaryImage = facility.images?.find((img) => img.isPrimary) ?? facility.images?.[0];
 
-  // Sport-specific schema.org types
+  // Sport-specific schema.org types — use array with LocalBusiness for rich results
   const sportTypeMap: Record<string, string> = {
     tenis: "TennisComplex",
     golf: "GolfCourse",
     fitness: "ExerciseGym",
   };
-  const schemaType = sportTypeMap[sportSlug] ?? "SportsActivityLocation";
+  const specificType = sportTypeMap[sportSlug] ?? "SportsActivityLocation";
+  const schemaType = ["LocalBusiness", specificType];
 
   // Parse opening hours into schema.org OpeningHoursSpecification
   const czDayToSchemaDay: Record<string, string> = {
