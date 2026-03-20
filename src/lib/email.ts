@@ -71,6 +71,55 @@ export async function sendMagicLinkEmail(
   }
 }
 
+export async function sendUserLoginEmail(
+  to: string,
+  loginUrl: string
+): Promise<boolean> {
+  const transporter = createTransporter();
+  if (!transporter) {
+    console.warn("SMTP not configured, skipping user login email");
+    return false;
+  }
+
+  try {
+    await transporter.sendMail({
+      from: `"hraju.cz" <${process.env.SMTP_USER}>`,
+      to,
+      subject: "Přihlášení na hraju.cz",
+      text: [
+        `Dobrý den,`,
+        ``,
+        `pro přihlášení na hraju.cz klikněte na tento odkaz:`,
+        loginUrl,
+        ``,
+        `Odkaz je platný 1 hodinu. Pokud jste o přihlášení nežádali, tento e-mail ignorujte.`,
+        ``,
+        `S pozdravem,`,
+        `tým hraju.cz`,
+      ].join("\n"),
+      html: `
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #18181b;">Přihlášení na hraju.cz</h2>
+          <p>Dobrý den,</p>
+          <p>pro přihlášení na hraju.cz klikněte na tlačítko:</p>
+          <p style="margin: 24px 0;">
+            <a href="${loginUrl}" style="background: #059669; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+              Přihlásit se
+            </a>
+          </p>
+          <p style="color: #71717a; font-size: 14px;">Odkaz je platný 1 hodinu. Pokud jste o přihlášení nežádali, tento e-mail ignorujte.</p>
+          <hr style="border: none; border-top: 1px solid #e4e4e7; margin: 24px 0;" />
+          <p style="color: #a1a1aa; font-size: 12px;">hraju.cz – sportoviště v Česku</p>
+        </div>
+      `,
+    });
+    return true;
+  } catch (error) {
+    console.error("Failed to send user login email:", error);
+    return false;
+  }
+}
+
 export async function sendDelistConfirmationEmail(
   to: string,
   facilityName: string
