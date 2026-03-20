@@ -3,6 +3,7 @@ import { SPORTS } from "@/lib/sports";
 import { prisma } from "@/lib/prisma";
 import exportData from "@/data/facilities-export.json";
 import { cityToSlug } from "@/lib/regions";
+import { getAllPosts, CATEGORIES } from "@/lib/blog";
 
 const BASE_URL = "https://hraju.cz";
 
@@ -203,6 +204,33 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.7,
     });
+  }
+
+  // Blog pages
+  const blogPosts = getAllPosts();
+  if (blogPosts.length > 0) {
+    entries.push({
+      url: `${BASE_URL}/blog`,
+      lastModified: new Date(blogPosts[0].date),
+      changeFrequency: "weekly",
+      priority: 0.7,
+    });
+    for (const post of blogPosts) {
+      entries.push({
+        url: `${BASE_URL}/blog/${post.slug}`,
+        lastModified: new Date(post.date),
+        changeFrequency: "monthly",
+        priority: 0.6,
+      });
+    }
+    // Category pages
+    for (const category of Object.keys(CATEGORIES)) {
+      entries.push({
+        url: `${BASE_URL}/blog/kategorie/${category}`,
+        changeFrequency: "weekly",
+        priority: 0.5,
+      });
+    }
   }
 
   return entries;
