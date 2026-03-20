@@ -98,8 +98,8 @@ export function FacilityCard({ facility, sportSlug }: FacilityCardProps) {
 
       {/* Amenities */}
       {facility.amenities.length > 0 && (
-        <div className="mt-3 flex flex-wrap gap-1.5">
-          {facility.amenities.slice(0, 5).map((a) => (
+        <div className="mt-3 flex min-h-[28px] flex-wrap gap-1.5">
+          {facility.amenities.slice(0, 3).map((a) => (
             <span
               key={a.amenity.slug}
               className={
@@ -111,9 +111,9 @@ export function FacilityCard({ facility, sportSlug }: FacilityCardProps) {
               {a.amenity.icon} {a.amenity.nameCs}
             </span>
           ))}
-          {facility.amenities.length > 5 && (
+          {facility.amenities.length > 3 && (
             <span className="rounded-full bg-zinc-50 px-2.5 py-1 text-xs text-zinc-400">
-              +{facility.amenities.length - 5}
+              +{facility.amenities.length - 3}
             </span>
           )}
         </div>

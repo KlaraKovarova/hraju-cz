@@ -4,6 +4,7 @@ import { SPORTS } from "@/lib/sports";
 import { getSportFacilityTypePlural } from "@/lib/seo";
 import { getCityInPhrase } from "@/lib/locative";
 import { FacilityCard } from "@/components/FacilityCard";
+import { FacilityListWithFilters } from "@/components/FacilityListWithFilters";
 import { FacilityMap } from "@/components/FacilityMap";
 import { TrackPageView } from "@/components/TrackPageView";
 import type { FacilityWithDetails, DistrictGroup } from "@/lib/data";
@@ -176,15 +177,10 @@ export function CityLandingContent({
             ))}
           </div>
         ) : (
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {facilities.map((facility) => (
-              <FacilityCard
-                key={facility.id}
-                facility={facility}
-                sportSlug={sportSlug}
-              />
-            ))}
-          </div>
+          <FacilityListWithFilters
+            facilities={facilities}
+            sportSlug={sportSlug}
+          />
         )}
       </section>
 

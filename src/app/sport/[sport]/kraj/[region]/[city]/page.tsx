@@ -5,7 +5,7 @@ import { getSportBySlug, SPORTS } from "@/lib/sports";
 import { getRegionBySlug } from "@/lib/regions";
 import { getFacilitiesByRegionCityAndSport } from "@/lib/data";
 import { getSportFacilityTypePlural, getSportFacilityTypePluralGenitive } from "@/lib/seo";
-import { FacilityCard } from "@/components/FacilityCard";
+import { FacilityListWithFilters } from "@/components/FacilityListWithFilters";
 import { FacilityMap } from "@/components/FacilityMap";
 import { AdSlot } from "@/components/AdSlot";
 import { UpcomingEvents } from "@/components/UpcomingEvents";
@@ -135,14 +135,6 @@ export default async function CityPage({ params }: CityPageProps) {
 
       {/* Results */}
       <section className="mx-auto max-w-6xl px-6 py-8">
-        <div className="mb-4 flex items-center justify-between">
-          <p className="text-sm text-zinc-500">
-            {facilities.length > 0
-              ? `${facilities.length} sportovišť ve městě ${cityName}`
-              : "Žádná sportoviště nenalezena"}
-          </p>
-        </div>
-
         {facilities.length === 0 ? (
           <div className="mt-12 rounded-3xl border border-zinc-100 bg-white p-12 text-center">
             <span className="text-5xl">{sport.icon}</span>
@@ -160,15 +152,10 @@ export default async function CityPage({ params }: CityPageProps) {
             </Link>
           </div>
         ) : (
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {facilities.map((facility) => (
-              <FacilityCard
-                key={facility.id}
-                facility={facility}
-                sportSlug={sportSlug}
-              />
-            ))}
-          </div>
+          <FacilityListWithFilters
+            facilities={facilities}
+            sportSlug={sportSlug}
+          />
         )}
       </section>
 
