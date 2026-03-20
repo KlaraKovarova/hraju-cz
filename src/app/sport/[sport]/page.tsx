@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, ChevronRight, ChevronDown } from "lucide-react";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
 import { getRegionsBySport, getTopFacilitiesBySport, getTopCitiesBySport } from "@/lib/data";
@@ -136,24 +137,33 @@ export default async function SportPage({ params }: SportPageProps) {
       </nav>
 
       {/* Sport Hero */}
-      <section
-        className={`bg-gradient-to-br ${sport.lightBg} to-white border-b border-zinc-100`}
-      >
-        <div className="mx-auto max-w-6xl px-6 py-10">
+      <section className="relative border-b border-zinc-100 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src={sport.image}
+            alt={sport.nameCs}
+            fill
+            className="object-cover object-center"
+            priority
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-zinc-900/55" />
+        </div>
+        <div className="relative mx-auto max-w-6xl px-6 py-10">
           <div className="flex items-center gap-4">
             <span className="text-5xl">{sport.icon}</span>
             <div>
-              <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900">
+              <h1 className="text-3xl font-extrabold tracking-tight text-white">
                 {sport.nameCs}
               </h1>
-              <p className="mt-1 text-zinc-500">
+              <p className="mt-1 text-white/80">
                 {sport.description}
               </p>
             </div>
           </div>
-          <p className="mt-4 text-sm text-zinc-500">
-            Celkem <span className="font-semibold text-zinc-700">{totalFacilities}</span> sportovišť
-            {" "}v <span className="font-semibold text-zinc-700">{regions.length}</span> krajích
+          <p className="mt-4 text-sm text-white/70">
+            Celkem <span className="font-semibold text-white">{totalFacilities}</span> sportovišť
+            {" "}v <span className="font-semibold text-white">{regions.length}</span> krajích
           </p>
           <HeroSearchForm sportSlug={sport.slug} />
         </div>

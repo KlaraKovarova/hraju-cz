@@ -14,6 +14,7 @@ export const SPORTS = [
     accentHover: "hover:bg-emerald-700",
     ringColor: "ring-emerald-100",
     borderColor: "border-emerald-200",
+    image: "/images/sports/tenis-hero.webp",
   },
   {
     slug: "squash",
@@ -30,6 +31,7 @@ export const SPORTS = [
     accentHover: "hover:bg-orange-700",
     ringColor: "ring-orange-100",
     borderColor: "border-orange-200",
+    image: "/images/sports/squash-hero.webp",
   },
   {
     slug: "badminton",
@@ -46,6 +48,7 @@ export const SPORTS = [
     accentHover: "hover:bg-violet-700",
     ringColor: "ring-violet-100",
     borderColor: "border-violet-200",
+    image: "/images/sports/badminton-hero.webp",
   },
   {
     slug: "volejbal",
@@ -62,6 +65,7 @@ export const SPORTS = [
     accentHover: "hover:bg-sky-700",
     ringColor: "ring-sky-100",
     borderColor: "border-sky-200",
+    image: "/images/sports/volejbal-hero.webp",
   },
   {
     slug: "plavani",
@@ -78,6 +82,7 @@ export const SPORTS = [
     accentHover: "hover:bg-cyan-700",
     ringColor: "ring-cyan-100",
     borderColor: "border-cyan-200",
+    image: "/images/sports/plavani-hero.webp",
   },
   {
     slug: "golf",
@@ -94,6 +99,7 @@ export const SPORTS = [
     accentHover: "hover:bg-green-700",
     ringColor: "ring-green-100",
     borderColor: "border-green-200",
+    image: "/images/sports/golf-hero.webp",
   },
   {
     slug: "fitness",
@@ -110,6 +116,7 @@ export const SPORTS = [
     accentHover: "hover:bg-red-700",
     ringColor: "ring-red-100",
     borderColor: "border-red-200",
+    image: "/images/sports/fitness-hero.webp",
   },
   {
     slug: "padel",
@@ -126,6 +133,7 @@ export const SPORTS = [
     accentHover: "hover:bg-amber-700",
     ringColor: "ring-amber-100",
     borderColor: "border-amber-200",
+    image: "/images/sports/padel-hero.webp",
   },
   {
     slug: "stolni-tenis",
@@ -142,6 +150,7 @@ export const SPORTS = [
     accentHover: "hover:bg-indigo-700",
     ringColor: "ring-indigo-100",
     borderColor: "border-indigo-200",
+    image: "/images/sports/stolni-tenis-hero.webp",
   },
   {
     slug: "florbal",
@@ -158,6 +167,7 @@ export const SPORTS = [
     accentHover: "hover:bg-lime-700",
     ringColor: "ring-lime-100",
     borderColor: "border-lime-200",
+    image: "/images/sports/florbal-hero.webp",
   },
   // bowling hidden until data is cleaned (SIL-67) — most records are unrelated businesses
 ] as const;
