@@ -12,6 +12,7 @@ import {
   CheckCircle2,
   CalendarCheck,
   Building2,
+  Pencil,
 } from "lucide-react";
 import { getSportBySlug } from "@/lib/sports";
 import { getFacilityBySlug, getInactiveFacilityRedirectInfo, getFacilitiesByCityAndSport, getRelatedFacilities } from "@/lib/data";
@@ -402,6 +403,15 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
             {facility.averageRating != null && facility.reviewCount > 0 && (
               <StarRating rating={facility.averageRating} count={facility.reviewCount} size="md" />
             )}
+            {isOwner && (
+              <Link
+                href="/moje-sportoviste"
+                className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700 transition-colors"
+              >
+                <Pencil className="h-4 w-4" />
+                Upravit sportoviště
+              </Link>
+            )}
           </div>
 
           <div className="mt-3 flex flex-wrap items-center gap-4 text-sm text-zinc-500">
@@ -715,7 +725,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
               </div>
             )}
 
-            {/* Claim CTA / Verified Badge */}
+            {/* Claim CTA / Verified Badge / Owner Login Prompt */}
             {!facility.isClaimed ? (
               <TrackClick eventName="facility_claim_click" params={{ facilitySlug: facility.slug, sport: sportSlug, city: facility.location.city }}>
                 <Link
@@ -734,7 +744,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                   </span>
                 </Link>
               </TrackClick>
-            ) : (
+            ) : isOwner ? (
               <div className="flex items-center gap-3 rounded-2xl border border-emerald-100 bg-emerald-50 p-4">
                 <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600" />
                 <div>
@@ -745,6 +755,26 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                     Údaje spravuje provozovatel sportoviště.
                   </p>
                 </div>
+              </div>
+            ) : (
+              <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-4">
+                <div className="flex items-center gap-3">
+                  <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600" />
+                  <div>
+                    <p className="text-sm font-semibold text-emerald-800">
+                      Ověřený provozovatel
+                    </p>
+                    <p className="text-xs text-emerald-600">
+                      Údaje spravuje provozovatel sportoviště.
+                    </p>
+                  </div>
+                </div>
+                <Link
+                  href="/moje-sportoviste"
+                  className="mt-3 block text-center text-sm font-medium text-emerald-700 hover:text-emerald-800 transition-colors"
+                >
+                  Jste majitel? Přihlaste se pro úpravy &rarr;
+                </Link>
               </div>
             )}
 
