@@ -1,8 +1,9 @@
+import { Suspense } from "react";
 import Link from "next/link";
-import { MapPin, ChevronRight, Search } from "lucide-react";
+import { ChevronRight, Search } from "lucide-react";
 import { searchFacilities } from "@/lib/data";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
-import { FacilityCard } from "@/components/FacilityCard";
+import { SearchResults } from "@/components/SearchResults";
 import { AdSlot } from "@/components/AdSlot";
 import { TrackPageView } from "@/components/TrackPageView";
 import type { Metadata } from "next";
@@ -34,7 +35,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   const sport = sportSlug ? getSportBySlug(sportSlug) : null;
 
   const facilities = query.length >= 2
-    ? await searchFacilities(query, sportSlug)
+    ? await searchFacilities(query, sportSlug, 200)
     : [];
 
   return (
@@ -95,22 +96,16 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
             </p>
 
             {facilities.length > 0 ? (
-              <>
-                <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {facilities.map((facility) => (
-                    <FacilityCard
-                      key={facility.id}
-                      facility={facility}
-                      sportSlug={facility.sports[0]?.sport.slug || "tenis"}
-                    />
-                  ))}
-                </div>
+              <div className="mt-8">
+                <Suspense fallback={<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{Array.from({ length: 6 }).map((_, i) => <div key={i} className="h-48 animate-pulse rounded-2xl bg-zinc-100" />)}</div>}>
+                  <SearchResults facilities={facilities} />
+                </Suspense>
                 {facilities.length > 6 && (
                   <div className="mt-6">
                     <AdSlot slot="1234567894" format="horizontal" />
                   </div>
                 )}
-              </>
+              </div>
             ) : (
               <div className="mt-12 rounded-2xl border border-zinc-100 bg-white p-10 text-center">
                 <Search className="mx-auto h-10 w-10 text-zinc-300" />

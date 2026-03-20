@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import { MapPin, ChevronRight } from "lucide-react";
 import { SPORTS } from "@/lib/sports";
@@ -177,10 +178,12 @@ export function CityLandingContent({
             ))}
           </div>
         ) : (
-          <FacilityListWithFilters
-            facilities={facilities}
-            sportSlug={sportSlug}
-          />
+          <Suspense fallback={<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{facilities.slice(0, 6).map((f) => <div key={f.id} className="h-48 animate-pulse rounded-2xl bg-zinc-100" />)}</div>}>
+            <FacilityListWithFilters
+              facilities={facilities}
+              sportSlug={sportSlug}
+            />
+          </Suspense>
         )}
       </section>
 

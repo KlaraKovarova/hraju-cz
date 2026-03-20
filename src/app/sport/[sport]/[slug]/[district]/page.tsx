@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { MapPin, ChevronRight } from "lucide-react";
@@ -226,10 +227,12 @@ export default async function DistrictPage({ params }: DistrictPageProps) {
 
       {/* Facilities */}
       <section className="mx-auto max-w-6xl px-6 py-8">
-        <FacilityListWithFilters
-          facilities={facilities}
-          sportSlug={sportSlug}
-        />
+        <Suspense fallback={<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{Array.from({ length: 6 }).map((_, i) => <div key={i} className="h-48 animate-pulse rounded-2xl bg-zinc-100" />)}</div>}>
+          <FacilityListWithFilters
+            facilities={facilities}
+            sportSlug={sportSlug}
+          />
+        </Suspense>
       </section>
 
       {/* Sibling Districts */}
