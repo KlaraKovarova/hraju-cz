@@ -210,8 +210,8 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
   const regionInfo = facility.location.region ? getRegionByName(facility.location.region) : null;
   const citySl = cityToSlug(facility.location.city);
 
-  // Related facilities in same city
-  const relatedFacilities = await getRelatedFacilities(sportSlug, facility.location.city, slug, 5);
+  // Related facilities (same city, then region, then any)
+  const { facilities: relatedFacilities, isMixed: relatedIsMixed } = await getRelatedFacilities(sportSlug, facility.location.city, facility.location.region, slug, 6);
 
   // Check if the current visitor is the facility owner
   const ownerSession = await getOwnerSession();
@@ -816,7 +816,9 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
         <section className="border-t border-zinc-100 bg-white">
           <div className="mx-auto max-w-6xl px-6 py-8">
             <h2 className="mb-6 text-xl font-bold text-zinc-900">
-              Další {sport.nameCs.toLowerCase()} v {facility.location.city}
+              {relatedIsMixed
+                ? `Další ${sport.nameCs.toLowerCase()} sportoviště poblíž`
+                : `Další ${sport.nameCs.toLowerCase()} v ${facility.location.city}`}
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {relatedFacilities.map((rel) => (
@@ -832,10 +834,18 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                     <p className="truncate text-sm font-semibold text-zinc-900 group-hover:text-emerald-700">
                       {rel.name}
                     </p>
-                    <p className="mt-0.5 flex items-center gap-1 text-xs text-zinc-500">
-                      <MapPin className="h-3 w-3" />
-                      {rel.address}
-                    </p>
+                    <div className="mt-0.5 flex items-center gap-2 text-xs text-zinc-500">
+                      <span className="flex items-center gap-1">
+                        <MapPin className="h-3 w-3" />
+                        {rel.location.city}
+                      </span>
+                      {rel.averageRating != null && rel.reviewCount > 0 && (
+                        <span className="flex items-center gap-0.5 text-amber-500">
+                          <span>{"\u2605"}</span>
+                          <span className="text-zinc-600">{rel.averageRating.toFixed(1)}</span>
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </Link>
               ))}

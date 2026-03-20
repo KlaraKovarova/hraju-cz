@@ -642,21 +642,56 @@ export async function getRecentFacilities(limit: number = 4): Promise<FacilityWi
 export async function getRelatedFacilities(
   sportSlug: string,
   city: string,
+  region: string | null,
   excludeSlug: string,
-  limit: number = 5
-): Promise<FacilityWithDetails[]> {
+  limit: number = 6
+): Promise<{ facilities: FacilityWithDetails[]; isMixed: boolean }> {
   const facilityIds = facilitiesBySportSlug.get(sportSlug);
-  if (!facilityIds) return [];
+  if (!facilityIds) return { facilities: [], isMixed: false };
 
-  const results = exportData.facilities.filter((f) => {
-    if (!facilityIds.has(f.id) || !f.isActive || f.slug === excludeSlug) return false;
+  const candidates = exportData.facilities.filter((f) => {
+    return facilityIds.has(f.id) && f.isActive && f.slug !== excludeSlug;
+  });
+
+  // 1. Same city
+  const sameCity = candidates.filter((f) => {
     const loc = locationById.get(f.locationId);
     return loc?.city === city;
   });
 
-  const mapped = results.map(toFacilityWithDetails);
-  mapped.sort((a, b) => a.name.localeCompare(b.name, "cs"));
-  return mapped.slice(0, limit);
+  let results = sameCity.map(toFacilityWithDetails);
+  results.sort((a, b) => (b.averageRating ?? 0) - (a.averageRating ?? 0) || a.name.localeCompare(b.name, "cs"));
+
+  if (results.length >= limit) {
+    return { facilities: results.slice(0, limit), isMixed: false };
+  }
+
+  // 2. Expand to same region
+  if (region) {
+    const sameCitySlugs = new Set(sameCity.map((f) => f.slug));
+    const sameRegion = candidates.filter((f) => {
+      if (sameCitySlugs.has(f.slug)) return false;
+      const loc = locationById.get(f.locationId);
+      return loc?.region === region;
+    });
+    const regionMapped = sameRegion.map(toFacilityWithDetails);
+    regionMapped.sort((a, b) => (b.averageRating ?? 0) - (a.averageRating ?? 0) || a.name.localeCompare(b.name, "cs"));
+    results = [...results, ...regionMapped];
+  }
+
+  if (results.length >= limit) {
+    return { facilities: results.slice(0, limit), isMixed: results.some((f) => f.location.city !== city) };
+  }
+
+  // 3. Fill remaining from any city
+  const usedSlugs = new Set(results.map((f) => f.slug));
+  const remaining = candidates
+    .filter((f) => !usedSlugs.has(f.slug))
+    .map(toFacilityWithDetails);
+  remaining.sort((a, b) => (b.averageRating ?? 0) - (a.averageRating ?? 0));
+  results = [...results, ...remaining.slice(0, limit - results.length)];
+
+  return { facilities: results.slice(0, limit), isMixed: results.some((f) => f.location.city !== city) };
 }
 
 /** Search facilities by name, city, or sport name */
