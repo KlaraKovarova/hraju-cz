@@ -231,6 +231,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.5,
       });
     }
+    // Sport-filtered blog pages
+    for (const sport of SPORTS) {
+      entries.push({
+        url: `${BASE_URL}/blog/sport/${sport.slug}`,
+        changeFrequency: "weekly",
+        priority: 0.5,
+      });
+    }
   }
 
   return entries;

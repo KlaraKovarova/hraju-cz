@@ -79,4 +79,6 @@ export const CATEGORIES: Record<string, string> = {
   "pruvodce-sporty": "Průvodce sporty",
   "pruvodce-mesta": "Průvodce městy",
   tipy: "Tipy a rady",
+  vybaveni: "Vybavení a recenze",
+  novinky: "Novinky",
 };
