@@ -35,10 +35,18 @@ export function FacilityMap({ markers, className }: FacilityMapProps) {
       const map = L.map(mapRef.current, { scrollWheelZoom: false });
       mapInstanceRef.current = map;
 
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      const apiKey = process.env.NEXT_PUBLIC_MAPY_CZ_API_KEY;
+      const tileUrl = apiKey
+        ? `https://api.mapy.cz/v1/maptiles/outdoor/256/{z}/{x}/{y}?apikey=${apiKey}`
+        : "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+      const attribution = apiKey
+        ? '&copy; <a href="https://mapy.cz">Mapy.cz</a>, &copy; <a href="https://www.seznam.cz">Seznam.cz</a>'
+        : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+
+      L.tileLayer(tileUrl, {
+        attribution,
         maxZoom: 19,
+        ...(apiKey ? {} : { subdomains: "abc" }),
       }).addTo(map);
 
       const icon = L.divIcon({

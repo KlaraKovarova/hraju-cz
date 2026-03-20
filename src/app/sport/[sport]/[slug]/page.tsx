@@ -27,6 +27,7 @@ import { CityLandingContent } from "@/components/CityLandingContent";
 import { PhotoGallery } from "@/components/PhotoGallery";
 import { OpeningHoursDisplay } from "@/components/OpeningHoursDisplay";
 import { ShareButton } from "@/components/ShareButton";
+import { FacilityMap } from "@/components/FacilityMap";
 import { AdSlot } from "@/components/AdSlot";
 import { TrackPageView } from "@/components/TrackPageView";
 import { TrackClick } from "@/components/TrackClick";
@@ -188,15 +189,11 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
     }
   }
 
-  // OpenStreetMap links — free, no API key required
-  const osmLinkUrl =
+  // Map link for "Open map" button
+  const mapLinkUrl =
     mapLat && mapLng
-      ? `https://www.openstreetmap.org/?mlat=${mapLat}&mlon=${mapLng}&zoom=16`
-      : `https://www.openstreetmap.org/search?query=${encodeURIComponent(facility.address)}`;
-  const osmEmbedUrl =
-    mapLat && mapLng
-      ? `https://www.openstreetmap.org/export/embed.html?bbox=${mapLng - 0.008},${mapLat - 0.005},${mapLng + 0.008},${mapLat + 0.005}&layer=mapnik&marker=${mapLat},${mapLng}`
-      : null;
+      ? `https://mapy.cz/zakladni?x=${mapLng}&y=${mapLat}&z=16`
+      : `https://mapy.cz/zakladni?q=${encodeURIComponent(facility.address + ", " + facility.location.city)}`;
   const openingHours = facility.openingHours as Record<string, string> | null;
 
   // Region/city for breadcrumb links
@@ -476,32 +473,39 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                 <MapPin className="h-5 w-5 text-emerald-500" />
                 Mapa
               </h2>
-              {osmEmbedUrl ? (
-                <div className="overflow-hidden rounded-xl">
-                  <iframe
-                    title={`Mapa — ${facility.name}`}
-                    width="100%"
-                    height="300"
-                    style={{ border: 0 }}
-                    loading="lazy"
-                    allowFullScreen
-                    src={osmEmbedUrl}
+              {mapLat && mapLng ? (
+                <div>
+                  <FacilityMap
+                    markers={[{
+                      lat: mapLat,
+                      lng: mapLng,
+                      name: facility.name,
+                      address: `${facility.address}, ${facility.location.city}`,
+                      url: `/sport/${sportSlug}/${slug}`,
+                    }]}
+                    className="h-[300px] w-full rounded-xl border border-zinc-200"
                   />
-                  <p className="mt-1 text-right text-xs text-zinc-400">
-                    © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" className="underline hover:text-zinc-600">OpenStreetMap</a> přispěvatelé
+                  <p className="mt-2 text-right">
+                    <a
+                      href={mapLinkUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-600 hover:text-emerald-700"
+                    >
+                      <Navigation className="h-3.5 w-3.5" />
+                      Otevřít na Mapy.cz
+                    </a>
                   </p>
                 </div>
               ) : (
                 <div className="overflow-hidden rounded-xl">
-                  {/* Address placeholder — no coordinates in DB */}
                   <a
-                    href={osmLinkUrl}
+                    href={mapLinkUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group relative block"
                   >
                     <div className="relative h-[300px] w-full bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
-                      {/* Grid pattern to suggest a map */}
                       <div className="absolute inset-0 opacity-30" style={{
                         backgroundImage: `
                           linear-gradient(rgba(16,185,129,0.15) 1px, transparent 1px),
@@ -509,13 +513,10 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                         `,
                         backgroundSize: '40px 40px',
                       }} />
-                      {/* Road-like lines */}
                       <div className="absolute left-0 right-0 top-1/2 h-px bg-emerald-200/60" />
                       <div className="absolute bottom-0 left-1/3 top-0 w-px bg-emerald-200/60" />
                       <div className="absolute bottom-0 right-1/4 top-0 w-px bg-emerald-200/40" />
                       <div className="absolute left-0 right-0 top-1/3 h-px bg-emerald-200/40" />
-
-                      {/* Center pin */}
                       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-full">
                         <div className="flex flex-col items-center">
                           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-600 text-white shadow-lg shadow-emerald-200">
@@ -524,8 +525,6 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                           <div className="h-2 w-2 -mt-1 rotate-45 bg-emerald-600" />
                         </div>
                       </div>
-
-                      {/* Address overlay */}
                       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white/90 to-transparent px-4 pb-4 pt-10">
                         <div className="flex items-center justify-between">
                           <div>
@@ -539,7 +538,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                           </div>
                           <span className="flex items-center gap-1.5 rounded-lg bg-white px-3 py-1.5 text-xs font-semibold text-emerald-700 shadow-sm transition group-hover:bg-emerald-50">
                             <Navigation className="h-3.5 w-3.5" />
-                            Otevřít mapu
+                            Otevřít na Mapy.cz
                           </span>
                         </div>
                       </div>
