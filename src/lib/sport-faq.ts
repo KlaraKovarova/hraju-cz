@@ -158,28 +158,6 @@ const SPORT_FAQS: Record<string, FaqItem[]> = {
         "Posilovna se zaměřuje hlavně na silový trénink s činkami a stroji. Fitness centrum obvykle nabízí i kardio zónu, skupinové lekce (jóga, spinning, aerobik) a další služby jako sauna nebo masáže.",
     },
   ],
-  padel: [
-    {
-      question: "Co je to padel?",
-      answer:
-        "Padel je raketový sport kombinující prvky tenisu a squashe. Hraje se na menším kurtu obehnaném skleněnými stěnami, od kterých se míč odráží. Vždy se hraje ve čtyřhře (2 vs 2).",
-    },
-    {
-      question: "Kolik stojí hodina padelu?",
-      answer:
-        "Pronájem padelového kurtu stojí 400–800 Kč za hodinu v závislosti na lokalitě a denní době. V Praze je to 500–900 Kč, v menších městech od 300 Kč. Mnoho center nabízí zvýhodněné dopolední ceny.",
-    },
-    {
-      question: "Potřebuji vlastní padelovou raketu?",
-      answer:
-        "Pro začátek ne — většina padelových center nabízí půjčení raket. Padelová raketa je kratší než tenisová, bez výpletu, s perforovanou plochou. Pokud začnete hrát pravidelně, vlastní raketa stojí od 1 500 Kč.",
-    },
-    {
-      question: "Je padel vhodný pro začátečníky?",
-      answer:
-        "Ano, padel je ideální pro začátečníky. Menší kurt a pomalejší míč umožňují delší výměny od prvního dne. Mnoho center nabízí úvodní lekce s trenérem, kde se naučíte základní údery a pravidla.",
-    },
-  ],
   lezeni: [
     {
       question: "Kolik stojí vstup do lezeckého centra?",

@@ -170,7 +170,6 @@ async function main() {
     "golf",
     "fitness",
     "bowling",
-    "padel",
     "stolni-tenis",
     "florbal",
   ];

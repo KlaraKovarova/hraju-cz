@@ -6,11 +6,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog — hraju.cz",
   description:
-    "Průvodce sporty v Česku. Tipy kam na tenis, squash, padel a další sporty. Recenze sportovišť a průvodce po městech.",
+    "Průvodce sporty v Česku. Tipy kam na tenis, squash, badminton a další sporty. Recenze sportovišť a průvodce po městech.",
   openGraph: {
     title: "Blog — hraju.cz",
     description:
-      "Průvodce sporty v Česku. Tipy kam na tenis, squash, padel a další sporty.",
+      "Průvodce sporty v Česku. Tipy kam na tenis, squash, badminton a další sporty.",
     url: "https://www.hraju.cz/blog",
     type: "website",
     siteName: "hraju.cz",

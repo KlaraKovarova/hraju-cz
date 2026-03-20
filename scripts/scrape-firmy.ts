@@ -28,7 +28,6 @@ const SPORTS = [
   { slug: 'golf', query: 'golf+h%C5%99i%C5%A1t%C4%9B', label: 'golf hřiště' },
   { slug: 'fitness', query: 'fitness+centrum', label: 'fitness centrum' },
   { slug: 'bowling', query: 'bowling', label: 'bowling' },
-  { slug: 'padel', query: 'padel+kurty', label: 'padel kurty' },
   { slug: 'stolni-tenis', query: 'stoln%C3%AD+tenis', label: 'stolní tenis' },
   { slug: 'florbal', query: 'florbal', label: 'florbal' },
 ];

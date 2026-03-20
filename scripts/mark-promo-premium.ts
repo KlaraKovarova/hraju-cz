@@ -37,7 +37,7 @@ async function main() {
       },
     });
 
-    const limit = sport.slug === "padel" ? Math.min(candidates.length, 10) : 10;
+    const limit = 10;
     const picked = candidates.slice(0, limit);
 
     console.log(

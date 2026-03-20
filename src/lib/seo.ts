@@ -57,13 +57,6 @@ const SPORT_FACILITY_TYPES: Record<
     instrumental: "fitness centry",
     titleSuffix: "posilovny a centra v celé ČR",
   },
-  padel: {
-    singular: "padelový kurt",
-    plural: "padelové kurty",
-    pluralGenitive: "padelových kurtů",
-    instrumental: "padelovými kurty",
-    titleSuffix: "padelové kurty a centra v celé ČR",
-  },
   lezeni: {
     singular: "lezecké centrum",
     plural: "lezecká centra a bouldery",

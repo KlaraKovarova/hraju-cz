@@ -107,18 +107,6 @@ async function main() {
       },
     }),
     prisma.sport.upsert({
-      where: { slug: "padel" },
-      update: {},
-      create: {
-        slug: "padel",
-        name: "Padel",
-        nameCs: "Padel",
-        subdomain: "padel",
-        description: "Padelové kurty v České republice",
-        icon: "🎾",
-      },
-    }),
-    prisma.sport.upsert({
       where: { slug: "stolni-tenis" },
       update: {},
       create: {
