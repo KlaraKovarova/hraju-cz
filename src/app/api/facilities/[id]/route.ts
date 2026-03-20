@@ -37,11 +37,15 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
 
     let locationId: string | undefined;
     if (city) {
-      const location = await prisma.location.upsert({
-        where: { city_region: { city, region: region ?? null } },
-        create: { city, region: region ?? null },
-        update: {},
+      const regionVal = region ?? null;
+      let location = await prisma.location.findFirst({
+        where: { city, region: regionVal },
       });
+      if (!location) {
+        location = await prisma.location.create({
+          data: { city, region: regionVal },
+        });
+      }
       locationId = location.id;
     }
 

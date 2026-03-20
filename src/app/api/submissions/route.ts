@@ -106,20 +106,18 @@ export async function POST(request: NextRequest) {
     const baseSlug = slugify(name.trim());
     const slug = await uniqueSlug(baseSlug);
 
-    // Upsert location
-    const location = await prisma.location.upsert({
-      where: {
-        city_region: {
-          city: city.trim(),
-          region: region?.trim() || null,
-        },
-      },
-      create: {
-        city: city.trim(),
-        region: region?.trim() || null,
-      },
-      update: {},
+    // Find or create location (can't use upsert — compound unique rejects null region)
+    const trimmedCity = city.trim();
+    const trimmedRegion = region?.trim() || null;
+
+    let location = await prisma.location.findFirst({
+      where: { city: trimmedCity, region: trimmedRegion },
     });
+    if (!location) {
+      location = await prisma.location.create({
+        data: { city: trimmedCity, region: trimmedRegion },
+      });
+    }
 
     // Create facility + related records in transaction
     const facility = await prisma.$transaction(async (tx) => {
