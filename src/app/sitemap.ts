@@ -9,18 +9,6 @@ const BASE_URL = "https://hraju.cz";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [];
 
-  // Homepage
-  entries.push({ url: BASE_URL, changeFrequency: "weekly", priority: 1.0 });
-
-  // Sport index pages
-  for (const sport of SPORTS) {
-    entries.push({
-      url: `${BASE_URL}/sport/${sport.slug}`,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    });
-  }
-
   // Facility detail pages + city listing pages from DB (fallback to static export)
   let facilities: { slug: string; sportSlugs: string[]; city: string; updatedAt?: Date }[] = [];
 
@@ -65,6 +53,47 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }));
   }
 
+  // Pre-compute lastmod dates per sport and per sport+city
+  const sportLastmod = new Map<string, Date>();
+  const sportCityLastmod = new Map<string, Date>(); // key: "sport|city"
+  const crossCityLastmod = new Map<string, Date>(); // key: city
+
+  for (const facility of facilities) {
+    if (!facility.updatedAt) continue;
+    for (const sportSlug of facility.sportSlugs) {
+      const prev = sportLastmod.get(sportSlug);
+      if (!prev || facility.updatedAt > prev) {
+        sportLastmod.set(sportSlug, facility.updatedAt);
+      }
+      const key = `${sportSlug}|${facility.city}`;
+      const prevCity = sportCityLastmod.get(key);
+      if (!prevCity || facility.updatedAt > prevCity) {
+        sportCityLastmod.set(key, facility.updatedAt);
+      }
+    }
+    const prevCross = crossCityLastmod.get(facility.city);
+    if (!prevCross || facility.updatedAt > prevCross) {
+      crossCityLastmod.set(facility.city, facility.updatedAt);
+    }
+  }
+
+  // Homepage
+  const globalLastmod = facilities.reduce<Date | undefined>(
+    (latest, f) => f.updatedAt && (!latest || f.updatedAt > latest) ? f.updatedAt : latest,
+    undefined
+  );
+  entries.push({ url: BASE_URL, lastModified: globalLastmod, changeFrequency: "weekly", priority: 1.0 });
+
+  // Sport index pages
+  for (const sport of SPORTS) {
+    entries.push({
+      url: `${BASE_URL}/sport/${sport.slug}`,
+      lastModified: sportLastmod.get(sport.slug),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    });
+  }
+
   // Facility detail pages — one entry per sport×facility combination
   for (const facility of facilities) {
     for (const sportSlug of facility.sportSlugs) {
@@ -72,7 +101,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         url: `${BASE_URL}/sport/${sportSlug}/${facility.slug}`,
         lastModified: facility.updatedAt,
         changeFrequency: "monthly",
-        priority: 0.7,
+        priority: 0.6,
       });
     }
   }
@@ -91,22 +120,33 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       cityMap.set(facility.city, (cityMap.get(facility.city) || 0) + 1);
     }
   }
+
   for (const [sportSlug, cityMap] of cityCountBySport) {
     for (const [city, count] of cityMap) {
       if (count < 2) continue;
+      const isPraha = /^Praha \d+$/.test(city);
       entries.push({
         url: `${BASE_URL}/sport/${sportSlug}/${cityToSlug(city)}`,
+        lastModified: sportCityLastmod.get(`${sportSlug}|${city}`),
         changeFrequency: "weekly",
-        priority: 0.8,
+        priority: isPraha ? 0.8 : 0.7,
       });
     }
     // Add unified Praha entry per sport (if 2+ Praha facilities exist)
     const prahaTotal = prahaCountBySport.get(sportSlug) || 0;
     if (prahaTotal >= 2) {
+      // Compute Praha lastmod from all Praha district facilities
+      let prahaLastmod: Date | undefined;
+      for (const [key, date] of sportCityLastmod) {
+        if (key.startsWith(`${sportSlug}|Praha `)) {
+          if (!prahaLastmod || date > prahaLastmod) prahaLastmod = date;
+        }
+      }
       entries.push({
         url: `${BASE_URL}/sport/${sportSlug}/praha`,
+        lastModified: prahaLastmod,
         changeFrequency: "weekly",
-        priority: 0.85,
+        priority: 0.8,
       });
     }
   }
@@ -121,6 +161,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Cross-sport city pages: /mesta index + /mesto/[city] for top 20 cities
   entries.push({
     url: `${BASE_URL}/mesta`,
+    lastModified: globalLastmod,
     changeFrequency: "weekly",
     priority: 0.8,
   });
@@ -147,8 +188,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const entry of crossCityEntries.slice(0, 20)) {
     entries.push({
       url: `${BASE_URL}/mesto/${entry.slug}`,
+      lastModified: crossCityLastmod.get(entry.city),
       changeFrequency: "weekly",
-      priority: 0.8,
+      priority: 0.7,
     });
   }
 
