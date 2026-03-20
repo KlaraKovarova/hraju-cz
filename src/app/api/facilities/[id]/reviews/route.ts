@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { sendReviewNotificationEmail } from "@/lib/email";
+import { getUserSession } from "@/lib/user-auth";
 
 // GET /api/facilities/[id]/reviews — list approved reviews (paginated, newest first)
 export async function GET(
@@ -32,29 +33,36 @@ export async function GET(
   return NextResponse.json({ reviews, total, page, limit });
 }
 
-// POST /api/facilities/[id]/reviews — submit a review
+// POST /api/facilities/[id]/reviews — submit a review (requires user auth)
 export async function POST(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params;
 
-  let body: { authorName?: string; authorEmail?: string; rating?: number; text?: string };
+  // Require user authentication
+  const session = await getUserSession();
+  if (!session) {
+    return NextResponse.json(
+      { error: "Pro přidání recenze se musíte přihlásit." },
+      { status: 401 }
+    );
+  }
+
+  let body: { rating?: number; text?: string };
   try {
     body = await request.json();
   } catch {
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
   }
 
-  const { authorName, authorEmail, rating, text } = body;
+  const { rating, text } = body;
+
+  // Use session data for author info
+  const authorName = session.name || session.email.split("@")[0];
+  const authorEmail = session.email;
 
   // Validation
-  if (!authorName || typeof authorName !== "string" || authorName.trim().length < 2) {
-    return NextResponse.json({ error: "Jméno je povinné (min. 2 znaky)." }, { status: 400 });
-  }
-  if (!authorEmail || typeof authorEmail !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(authorEmail)) {
-    return NextResponse.json({ error: "Zadejte platný e-mail." }, { status: 400 });
-  }
   if (!rating || typeof rating !== "number" || rating < 1 || rating > 5 || !Number.isInteger(rating)) {
     return NextResponse.json({ error: "Hodnocení musí být 1–5." }, { status: 400 });
   }
@@ -74,20 +82,28 @@ export async function POST(
     return NextResponse.json({ error: "Sportoviště nenalezeno." }, { status: 404 });
   }
 
-  // Rate limit: 1 per email per facility
+  // Rate limit: 1 per user per facility
   const existing = await prisma.review.findFirst({
-    where: { facilityId: id, authorEmail: authorEmail.toLowerCase() },
+    where: { facilityId: id, userId: session.userId },
   });
   if (existing) {
     return NextResponse.json({ error: "Toto sportoviště jste již hodnotili." }, { status: 409 });
   }
 
-  // Rate limit: max 5 reviews per email per day
+  // Fallback: also check by email (for pre-auth reviews)
+  const existingByEmail = await prisma.review.findFirst({
+    where: { facilityId: id, authorEmail },
+  });
+  if (existingByEmail) {
+    return NextResponse.json({ error: "Toto sportoviště jste již hodnotili." }, { status: 409 });
+  }
+
+  // Rate limit: max 5 reviews per user per day
   const dayStart = new Date();
   dayStart.setHours(0, 0, 0, 0);
   const dailyCount = await prisma.review.count({
     where: {
-      authorEmail: authorEmail.toLowerCase(),
+      userId: session.userId,
       createdAt: { gte: dayStart },
     },
   });
@@ -98,6 +114,7 @@ export async function POST(
   const review = await prisma.review.create({
     data: {
       facilityId: id,
+      userId: session.userId,
       authorName: authorName.trim(),
       authorEmail: authorEmail.toLowerCase().trim(),
       rating,
@@ -105,7 +122,7 @@ export async function POST(
     },
   });
 
-  // Notify facility owner by email (fire-and-forget, idempotent via ownerNotifiedAt)
+  // Notify facility owner by email (fire-and-forget)
   const ownerEmail = facility.contacts[0]?.value;
   if (ownerEmail) {
     const sportSlug = facility.sports[0]?.sport.slug || "tenis";

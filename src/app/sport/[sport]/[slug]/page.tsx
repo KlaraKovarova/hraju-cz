@@ -818,7 +818,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
               <h3 className="mb-3 text-sm font-semibold text-zinc-700">
                 Napsat recenzi
               </h3>
-              <ReviewForm facilityId={facility.id} />
+              <ReviewForm facilityId={facility.id} currentPath={`/sport/${sportSlug}/${slug}`} />
             </div>
           </div>
         </div>
