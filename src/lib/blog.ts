@@ -71,6 +71,10 @@ export function getPostsByCategory(category: string): BlogPostMeta[] {
   return getAllPosts().filter((p) => p.category === category);
 }
 
+export function getPostsBySport(sportSlug: string): BlogPostMeta[] {
+  return getAllPosts().filter((p) => p.sportTags.includes(sportSlug));
+}
+
 export const CATEGORIES: Record<string, string> = {
   "pruvodce-sporty": "Průvodce sporty",
   "pruvodce-mesta": "Průvodce městy",

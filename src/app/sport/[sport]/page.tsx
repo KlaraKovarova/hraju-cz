@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, ChevronRight, ChevronDown } from "lucide-react";
+import { MapPin, ChevronRight, ChevronDown, Calendar, ArrowRight } from "lucide-react";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
 import { getRegionsBySport, getTopFacilitiesBySport, getTopCitiesBySport } from "@/lib/data";
 import { getSportTitleSuffix, getSportFacilityTypePluralGenitive, getSportFacilityType } from "@/lib/seo";
@@ -9,6 +9,7 @@ import { FacilityCard } from "@/components/FacilityCard";
 import { HeroSearchForm } from "@/components/HeroSearchForm";
 import { AdSlot } from "@/components/AdSlot";
 import { getSportFaqs } from "@/lib/sport-faq";
+import { getPostsBySport, CATEGORIES } from "@/lib/blog";
 import type { Metadata } from "next";
 
 // ISR: revalidate sport pages every hour
@@ -53,6 +54,7 @@ export default async function SportPage({ params }: SportPageProps) {
   const topFacilities = await getTopFacilitiesBySport(sport.slug, 10);
   const topCities = await getTopCitiesBySport(sport.slug, 10);
   const totalFacilities = regions.reduce((sum, r) => sum + r.facilityCount, 0);
+  const sportPosts = getPostsBySport(sport.slug).slice(0, 3);
 
   // JSON-LD ItemList for top facilities
   const itemListLd = {
@@ -269,6 +271,46 @@ export default async function SportPage({ params }: SportPageProps) {
                 </div>
               </details>
             ))}
+          </div>
+        </section>
+      )}
+
+      {/* Related Blog Posts */}
+      {sportPosts.length > 0 && (
+        <section className="mx-auto max-w-6xl px-6 py-12 border-t border-zinc-100">
+          <h2 className="mb-6 text-xl font-bold text-zinc-900">
+            Články o sportu {sport.nameCs.toLowerCase()}
+          </h2>
+          <div className="grid gap-6 sm:grid-cols-3">
+            {sportPosts.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group rounded-2xl border border-zinc-100 bg-white p-6 transition hover:border-emerald-200 hover:shadow-sm"
+              >
+                <span className="text-xs font-medium text-emerald-600">
+                  {CATEGORIES[post.category] || post.category}
+                </span>
+                <h3 className="mt-2 font-bold text-zinc-900 group-hover:text-emerald-700">
+                  {post.title}
+                </h3>
+                <p className="mt-2 line-clamp-2 text-sm text-zinc-500">
+                  {post.excerpt}
+                </p>
+                <div className="mt-3 flex items-center gap-1 text-xs text-zinc-400">
+                  <Calendar className="h-3 w-3" />
+                  {new Date(post.date).toLocaleDateString("cs-CZ")}
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-6 text-center">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-600 transition hover:text-emerald-700"
+            >
+              Všechny články <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </section>
       )}
