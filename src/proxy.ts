@@ -47,12 +47,12 @@ export async function proxy(request: NextRequest) {
   const isMutation = method === "POST" || method === "PATCH" || method === "DELETE";
 
   if (isMutation) {
-    // /api/facilities — all mutations are admin-only
+    // /api/facilities — all mutations are admin-only (except /reviews which is public)
     // /api/owner-tokens — generating claim tokens is admin-only
     // /api/edit-requests PATCH/DELETE — reviewing requests is admin-only
     // /api/edit-requests POST — public (anyone can submit a suggestion)
     const needsAdmin =
-      pathname.startsWith("/api/facilities") ||
+      (pathname.startsWith("/api/facilities") && !pathname.endsWith("/reviews")) ||
       pathname.startsWith("/api/owner-tokens") ||
       (pathname.startsWith("/api/edit-requests") && method !== "POST");
 
