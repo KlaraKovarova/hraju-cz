@@ -36,6 +36,9 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           <Link href="/admin/edit-requests" className="text-sm text-zinc-500 hover:text-zinc-900">
             Návrhy úprav
           </Link>
+          <Link href="/admin/review" className="text-sm text-zinc-500 hover:text-zinc-900">
+            Kontrola
+          </Link>
           <Link href="/admin/reviews" className="flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-900">
             Recenze
             {pendingReviewCount > 0 && (
