@@ -36,7 +36,7 @@ Většina hal nabízí zvýhodněné dopolední ceny a studentské slevy.
 
 ## Kde hrát squash
 
-Na [hraju.cz najdete přehled squashových kurtů](/sport/squash) po celé České republice. Filtrujte podle města a vybavení — některá centra nabízí sprchy, šatny i kavárnu.
+Na [hraju.cz evidujeme přes 270 squashových kurtů](/sport/squash) po celé České republice. Filtrujte podle města a vybavení — některá centra nabízí sprchy, šatny i kavárnu.
 
 ## Tipy pro začátečníky
 
@@ -47,6 +47,6 @@ Na [hraju.cz najdete přehled squashových kurtů](/sport/squash) po celé Česk
 
 ---
 
-## Byli jste tu? Podělte se o zkušenost!
+## Začali jste se squashem?
 
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.
+Máte tip na skvělý squashový kurt nebo zkušenost z první lekce? [Podělte se o ni](/prihlaseni) a pomozte dalším začátečníkům vybrat správné místo.

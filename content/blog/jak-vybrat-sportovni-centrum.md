@@ -40,7 +40,7 @@ Různé povrchy mají různé vlastnosti:
 
 ## Recenze a hodnocení
 
-Na hraju.cz můžete číst recenze ostatních sportovců a přidat vlastní hodnocení. Recenze vám pomohou zjistit:
+Na hraju.cz si můžete ke každému sportovišti přidat vlastní hodnocení a pomoci tak ostatním s výběrem. Při hodnocení se zaměřte na:
 
 - Kvalitu kurtů a vybavení
 - Přístup personálu
@@ -51,10 +51,10 @@ Na hraju.cz můžete číst recenze ostatních sportovců a přidat vlastní hod
 
 Než se rozhodnete pro dlouhodobé členství nebo permanentku, vyzkoušejte jednorázový vstup. Většina sportovních center ho nabízí a vy si ověříte, zda vám prostředí vyhovuje.
 
-Najděte sportoviště ve vašem okolí na [hraju.cz](/).
+V naší databázi najdete přes 8 900 sportovišť ve více než 2 000 městech po celé České republice. Vyberte si sport a město na [hraju.cz](/) a začněte hledat.
 
 ---
 
-## Byli jste tu? Podělte se o zkušenost!
+## Pomozte nám zmapovat sportoviště
 
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.
+Znáte sportoviště, které v naší databázi chybí, nebo chcete ohodnotit místo, kde pravidelně sportujete? [Přidejte hodnocení](/prihlaseni) a pomozte vybudovat nejlepšího průvodce sportem v Česku.

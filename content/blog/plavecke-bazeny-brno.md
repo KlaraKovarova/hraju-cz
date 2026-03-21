@@ -11,13 +11,14 @@ Brno má několik kvalitních plaveckých bazénů — od sportovních 50metrov�
 
 ## Sportovní bazény
 
-Pro pravidelné plavce jsou ideální bazény s 25m nebo 50m drahami. V Brně najdete několik takových:
+Pro pravidelné plavce jsou ideální bazény s 25m nebo 50m drahami. V Brně evidujeme 5 plaveckých zařízení, mezi nimi:
 
-- Bazény s vyhrazenými dráhami pro kondiční plavání
-- Ranní hodiny (6:00–8:00) bývají nejméně vytížené
-- Většina bazénů nabízí permanentky se slevou 20–30 %
+- **Bazén Ponávka** (Ponávka 808/3a) — sportovní bazén v centru města
+- **Koupaliště Kraví hora** (Údolní 532/76) — oblíbené letní koupaliště
+- **Sportareál Družstevní** (Družstevní 2223/21) — bazén s dobrým zázemím
+- **Koupaliště Riviéra** (Bauerova 322/7) — areál s beach volejbalem
 
-Najděte [plavecké bazény v Brně](/sport/plavani/brno) na hraju.cz.
+Ranní hodiny (6:00–8:00) bývají nejméně vytížené. Kompletní přehled najdete na stránce [plavecké bazény v Brně](/sport/plavani/brno).
 
 ## Aquaparky a wellness
 
@@ -42,6 +43,6 @@ Kompletní přehled bazénů najdete na [hraju.cz/sport/plavani](/sport/plavani)
 
 ---
 
-## Byli jste tu? Podělte se o zkušenost!
+## Plavete v Brně pravidelně?
 
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.
+Máte oblíbený bazén, který tu chybí? [Přidejte hodnocení](/prihlaseni) a pomozte ostatním plavcům vybrat to nejlepší místo pro trénink.

@@ -37,6 +37,6 @@ Budeme sledovat, jak se projekt vyvíjí, a jakmile bude koupaliště v provozu,
 
 ---
 
-## Byli jste tu? Podělte se o zkušenost!
+## Znáte koupaliště v okolí Benešova?
 
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.
+Máte tip na přírodní koupaliště nebo bazén v regionu? [Podělte se o něj](/prihlaseni) a pomozte ostatním najít místo ke koupání na léto 2026.

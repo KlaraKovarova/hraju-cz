@@ -54,10 +54,10 @@ Pro první návštěvu boulderovky stačí sportovní oblečení — lezečky a 
 
 Doporučujeme začít s kurzem pro začátečníky, který většina center nabízí. Naučíte se správnou techniku a bezpečné jištění.
 
-Kompletní přehled lezeckých center najdete na [hraju.cz/sport/lezeni](/sport/lezeni). Pro lezení v přírodě se podívejte na naši sekci [via ferraty](/sport/ferraty).
+V naší databázi evidujeme 10 lezeckých center v Praze a celkem 12 po celé republice. Kompletní přehled najdete na [hraju.cz/sport/lezeni](/sport/lezeni). Pro lezení v přírodě se podívejte na naši sekci [via ferraty](/sport/ferraty).
 
 ---
 
-## Byli jste tu? Podělte se o zkušenost!
+## Lezete pravidelně?
 
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.
+Která stěna nebo boulderovka je vaše oblíbená? [Ohodnoťte ji](/prihlaseni) a pomozte dalším lezcům vybrat to správné centrum pro svůj level.
