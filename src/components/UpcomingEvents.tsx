@@ -26,10 +26,7 @@ export async function UpcomingEvents({ city, region }: UpcomingEventsProps) {
       where: {
         isActive: true,
         dateStart: { gte: new Date() },
-        OR: [
-          { city: { contains: city, mode: "insensitive" } },
-          ...(region ? [{ region: { contains: region, mode: "insensitive" as const } }] : []),
-        ],
+        city: { equals: city, mode: "insensitive" },
       },
       orderBy: { dateStart: "asc" },
       take: 5,
