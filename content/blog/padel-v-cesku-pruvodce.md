@@ -100,3 +100,9 @@ Na začátek si raketu půjčte v centru. Až budete vědět, jaký styl hry vá
 - **Americanos** — pravidelné turnaje v centrech, ideální pro singles hráče
 
 Padel není módní výstřelek. Je to sport, který zůstane. Najděte si kurt na [hraju.cz](/sport/padel) a přijďte si zahrát.
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

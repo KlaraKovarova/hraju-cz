@@ -39,3 +39,9 @@ Pokud hledáte zábavu pro celou rodinu, Brno nabízí i aquaparky s tobogány, 
 - **Otevírací doby** — bazény mají často polední pauzu na údržbu
 
 Kompletní přehled bazénů najdete na [hraju.cz/sport/plavani](/sport/plavani).
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

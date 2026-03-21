@@ -6,7 +6,7 @@ category: "pruvodce-sporty"
 excerpt: "Výběr pěti nejlepších zajištěných cest (via ferrat) v Česku pro sezónu 2026. Obtížnost, popis tras, potřebné vybavení a praktické tipy pro každou ferratu."
 sportTags:
   - ferraty
-image: null
+image: /images/blog/top-5-ferrat-v-cesku.jpg
 ---
 
 # Top 5 ferrat v České republice pro sezónu 2026
@@ -164,3 +164,9 @@ Ochrana hlavy je na ferratě povinná. Lehká lezecká helma chrání před pada
 ## Najděte ferratu ve svém okolí
 
 Na [hraju.cz/sport/ferraty](/sport/ferraty) najdete kompletní přehled ferrat a zajištěných cest v celém Česku. Filtrujte podle obtížnosti, regionu a dostupnosti. Sezóna 2026 se blíží — naplánujte si svůj první (nebo další) ferratový výlet ještě dnes.
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

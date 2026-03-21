@@ -52,3 +52,9 @@ Na hraju.cz můžete číst recenze ostatních sportovců a přidat vlastní hod
 Než se rozhodnete pro dlouhodobé členství nebo permanentku, vyzkoušejte jednorázový vstup. Většina sportovních center ho nabízí a vy si ověříte, zda vám prostředí vyhovuje.
 
 Najděte sportoviště ve vašem okolí na [hraju.cz](/).
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

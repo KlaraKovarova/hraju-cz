@@ -86,3 +86,9 @@ Kompletní přehled ferrat najdete na [hraju.cz/sport/ferraty](/sport/ferraty).
 Na první ferratu jděte s průvodcem nebo zkušeným kamarádem. Naučíte se správnou techniku přepínání karabin a zacházení s ferratovým setem. Většina lezeckých center (kde trénujete základy) nabízí i ferratové kurzy.
 
 Pro trénink základů lezení se podívejte na [lezecká centra v Praze](/blog/lezecka-centra-v-praze) a pak vyrazte na [ferraty v Česku](/sport/ferraty).
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

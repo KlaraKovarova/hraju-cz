@@ -96,3 +96,9 @@ Oba sporty jsou dobře dostupné ve všech krajských městech. V menších měs
 Mnoho sportovních center nabízí squash i badminton pod jednou střechou. Oba sporty se skvěle doplňují — squash buduje kondici a rychlost, badminton jemnou motoriku a taktické myšlení. Zkuste oba a zjistěte, který vás víc vtáhne.
 
 Najděte squashové i badmintonové kurty ve vašem městě na [hraju.cz](/sport/squash) a [hraju.cz](/sport/badminton).
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

@@ -95,3 +95,9 @@ Při výběru zvažte:
 - **Podzim (září–listopad):** Klidné období, skvělé ceny
 
 Hledáte bazén nebo aquapark poblíž? Na [hraju.cz v sekci plavání](/sport/plavani) najdete kompletní přehled vodních areálů v celém Česku.
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

@@ -119,3 +119,9 @@ K tomu připočtěte náklady na košíčky — plastové od 30 Kč/ks, peříč
 - **Ručník a pití** — badminton vás pořádně zpotí
 
 Kompletní přehled badmintonových hal v celém Česku najdete na [hraju.cz v sekci badminton](/sport/badminton).
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

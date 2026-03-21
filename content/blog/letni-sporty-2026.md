@@ -99,3 +99,9 @@ Lezecká centra pro trénink na [hraju.cz](/sport/lezeni).
 Česko nabízí neskutečnou šíři sportovních možností — od městských fitness center po skalní stěny v přírodě. Léto 2026 je ideální příležitost zkusit něco nového. Nemusíte se stát profíkem — stačí si to užít.
 
 Najděte sportovní zařízení ve vašem okolí na [hraju.cz](/).
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

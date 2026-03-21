@@ -96,3 +96,9 @@ Pokud jste si Mladou Vožici užili a chcete víc, podívejte se na další [via
 3. **Informujte někoho** — řekněte, kam jdete a kdy se plánujete vrátit
 4. **Voda a svačina** — na trase nejsou žádné občerstvovací body
 5. **Respektujte přírodu** — nesbíhejte ze zajištěné trasy, neházejte kameny
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

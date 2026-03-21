@@ -74,3 +74,9 @@ Fitness centra najdete v každé městské části. Podívejte se na nabídku ve
 - [Fitness v Praha 6](/sport/fitness/praha/praha-6) — Dejvice, Břevnov
 
 Celkový přehled fitness center v celém Česku najdete na [hraju.cz/sport/fitness](/sport/fitness).
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

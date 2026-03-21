@@ -67,3 +67,9 @@ Stačí 4–12 lidí (podle varianty) a pronajmutý kurt. Mnoho hal nabízí pro
 Volejbal vypadá jednoduše, ale správná technika podání a příjmu vyžaduje trénink. Většina klubů a center nabízí kurzy pro začátečníky, kde se naučíte základy za pár lekcí.
 
 Najděte volejbalové sportoviště ve vašem okolí na [hraju.cz/sport/volejbal](/sport/volejbal).
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

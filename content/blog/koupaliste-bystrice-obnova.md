@@ -34,3 +34,9 @@ Budeme sledovat, jak se projekt vyvíjí, a jakmile bude koupaliště v provozu,
 ---
 
 *Zdroj: Benešovský deník*
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

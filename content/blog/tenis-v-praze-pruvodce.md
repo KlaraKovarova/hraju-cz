@@ -40,3 +40,9 @@ Ceny se liší podle lokality a sezóny:
 3. Rezervujte telefonicky nebo přes webové stránky sportoviště
 
 Tip: Mnoho sportovišť nabízí zvýhodněné permanentky pro pravidelné hráče. Vyplatí se zeptat přímo na recepci.
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

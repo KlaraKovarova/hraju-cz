@@ -100,3 +100,9 @@ Pro ty, kteří preferují pomalejší tempo. Nabídka zahrnuje hatha, vinyasa, 
 Brno nabízí fitness centrum pro každý styl tréninku i rozpočet. Od nonstop posiloven za 399 Kč měsíčně po prémiové kluby s wellness. Klíčem k úspěchu je vybrat si místo, kam vás baví chodit — to je nejlepší investice do vašeho zdraví.
 
 Hledáte fitness centrum v Brně? Na [hraju.cz](/sport/fitness) najdete kompletní přehled s cenami a hodnocením.
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

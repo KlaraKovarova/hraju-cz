@@ -85,3 +85,9 @@ Pro začátek počítejte s investicí okolo 5 000–10 000 Kč za kurz a zákla
 Nesnažte se odpálit míček co nejdále. Základem golfu je přesnost a konzistence. Investujte do pár lekcí s trenérem — špatné návyky se později těžko odnaučují.
 
 Najděte golfové hřiště ve vašem okolí na [hraju.cz/sport/golf](/sport/golf).
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

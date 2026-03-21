@@ -6,7 +6,7 @@ category: "pruvodce-mesta"
 excerpt: "Přehled nejlepších beach volejbalových hřišť v Česku — od Prahy přes Brno až po oblíbená letní střediska. Kde hrát, kolik to stojí a jak začít."
 sportTags:
   - volejbal
-image: null
+image: /images/blog/beach-volejbal-v-cesku.jpg
 ---
 
 # Beach volejbal v Česku: Kde najdete nejlepší hřiště
@@ -119,3 +119,9 @@ Ceny indoor kurtů bývají vyšší (700 — 1 200 Kč/hod), ale umožňují tr
 ## Najděte beach volejbalové hřiště
 
 Hledáte kurt ve svém okolí? Na [hraju.cz/sport/volejbal](/sport/volejbal) najdete přehled volejbalových areálů po celém Česku. Můžete filtrovat podle města, typu hřiště a dostupnosti. Sežeňte parťáka a vyražte na písek — beach volejbal je sport, který si zamilujete hned napoprvé.
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

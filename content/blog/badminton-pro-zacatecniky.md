@@ -65,3 +65,9 @@ Kompletní přehled badmintonových hal najdete na [hraju.cz/sport/badminton](/s
 ## Tip na závěr
 
 Většina badmintonových center nabízí možnost zapůjčení raket. Než investujete do vlastního vybavení, vyzkoušejte si sport v některé z hal ve vašem okolí. Najděte tu nejbližší na [hraju.cz](/sport/badminton).
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

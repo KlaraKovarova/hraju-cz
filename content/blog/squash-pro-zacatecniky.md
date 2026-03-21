@@ -44,3 +44,9 @@ Na [hraju.cz najdete přehled squashových kurtů](/sport/squash) po celé Česk
 - **Rozcvičte se** — squash je náročný na klouby, zahřátí je důležité
 - **Volte pomalejší míček** — delší výměny = víc zábavy
 - **Hrajte pravidelně** — 1–2x týdně stačí k rychlému pokroku
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

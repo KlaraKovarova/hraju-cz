@@ -6,7 +6,7 @@ category: "novinky"
 excerpt: "Přehled největších fitness trendů roku 2026 v Česku — od hybridních tréninků přes wearables až po nové koncepty posiloven. Co se mění a kam fitness směřuje."
 sportTags:
   - fitness
-image: null
+image: /images/blog/fitness-trendy-2026.jpg
 ---
 
 # Fitness trendy 2026: Co vás čeká v posilovnách
@@ -100,3 +100,9 @@ Boutique studia nabízejí osobnější přístup, menší skupiny a často spec
 Rok 2026 je pro fitness skvělý — nikdy nebylo tolik možností, jak se hýbat. Ať už preferujete silový trénink, skupinové lekce, venkovní bootcamp nebo klidnou jógu, české fitness scéna má co nabídnout.
 
 Najděte fitness centrum ve svém okolí na [hraju.cz/sport/fitness](/sport/fitness). Porovnejte nabídku, ceny a vybavení — a hlavně začněte. Nejlepší trénink je ten, který skutečně uděláte.
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

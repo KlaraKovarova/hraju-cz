@@ -102,3 +102,9 @@ Realistický rozpočet pro začátečníka:
 To je srovnatelné s fitness centrem nebo squashem.
 
 Kompletní přehled golfových hřišť, driving range a kurzů najdete na [hraju.cz v sekci golf](/sport/golf).
+
+---
+
+## Byli jste tu? Podělte se o zkušenost!
+
+Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.
