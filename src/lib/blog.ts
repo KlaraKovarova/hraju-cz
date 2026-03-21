@@ -51,10 +51,13 @@ export function getAllPosts(): BlogPostMeta[] {
     .readdirSync(CONTENT_DIR)
     .filter((f) => f.endsWith(".md"));
 
+  const today = new Date().toISOString().slice(0, 10);
   const posts: BlogPostMeta[] = [];
   for (const file of files) {
     const post = parseMdFile(path.join(CONTENT_DIR, file));
     if (post) {
+      // Skip posts scheduled for the future
+      if (post.date > today) continue;
       const { body: _, ...meta } = post;
       posts.push(meta);
     }
