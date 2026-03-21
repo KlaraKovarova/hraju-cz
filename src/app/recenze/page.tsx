@@ -156,7 +156,7 @@ export default async function RecenzePage() {
               {r.text && <p>{r.text}</p>}
               <p>
                 Sportoviště:{" "}
-                <Link href={`/sport/${r.facility.sport || "tenis"}/${r.facility.slug}`}>
+                <Link href={r.facility.sport ? `/sport/${r.facility.sport}/${r.facility.slug}` : `/recenze`}>
                   {r.facility.name}
                 </Link>
               </p>

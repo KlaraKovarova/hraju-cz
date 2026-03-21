@@ -211,7 +211,7 @@ export function ReviewsHubClient() {
 
             {/* Facility link */}
             <Link
-              href={`/sport/${review.facility.sport || "tenis"}/${review.facility.slug}`}
+              href={review.facility.sport ? `/sport/${review.facility.sport}/${review.facility.slug}` : `/recenze`}
               className="mt-3 flex items-center gap-2 rounded-xl bg-zinc-50 px-3 py-2 text-sm transition hover:bg-zinc-100"
             >
               <MapPin className="h-4 w-4 text-zinc-400" />

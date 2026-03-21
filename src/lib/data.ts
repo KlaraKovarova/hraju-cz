@@ -649,7 +649,7 @@ export async function getRecentReviews(limit: number = 6): Promise<RecentReview[
   try {
     const reviews = await withTimeout(
       prisma.review.findMany({
-        where: { isApproved: true },
+        where: { isApproved: true, facility: { sports: { some: {} } } },
         orderBy: { createdAt: "desc" },
         take: limit,
         select: {
@@ -734,6 +734,8 @@ export async function getAllApprovedReviews(opts: {
     const where: Record<string, unknown> = { isApproved: true };
     if (sport) {
       where.facility = { sports: { some: { sport: { slug: sport } } } };
+    } else {
+      where.facility = { sports: { some: {} } };
     }
 
     const orderBy: Record<string, string> =

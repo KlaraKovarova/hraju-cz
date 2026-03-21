@@ -295,7 +295,7 @@ export default async function Home() {
               {recentReviews.map((review) => (
                 <Link
                   key={review.id}
-                  href={`/sport/${review.facility.sport || "tenis"}/${review.facility.slug}`}
+                  href={review.facility.sport ? `/sport/${review.facility.sport}/${review.facility.slug}` : `/recenze`}
                   className="group rounded-2xl border border-zinc-100 bg-zinc-50/50 p-5 transition hover:border-emerald-200 hover:shadow-sm"
                 >
                   <div className="flex items-center gap-2">
