@@ -29,6 +29,7 @@ export async function GET(
       take: limit,
       select: {
         id: true,
+        userId: true,
         authorName: true,
         rating: true,
         title: true,

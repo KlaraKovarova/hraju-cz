@@ -713,6 +713,7 @@ export async function getTopRatedFacilities(limit: number = 6): Promise<Facility
 
 export type ReviewWithFacility = {
   id: string;
+  userId: string | null;
   authorName: string;
   rating: number;
   title: string | null;
@@ -751,6 +752,7 @@ export async function getAllApprovedReviews(opts: {
           take: limit,
           select: {
             id: true,
+            userId: true,
             authorName: true,
             rating: true,
             title: true,
@@ -776,6 +778,7 @@ export async function getAllApprovedReviews(opts: {
     return {
       reviews: reviews.map((r) => ({
         id: r.id,
+        userId: r.userId,
         authorName: r.authorName,
         rating: r.rating,
         title: r.title,

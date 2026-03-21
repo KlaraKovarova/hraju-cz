@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { StarRating } from "./StarRating";
 import { User, ThumbsUp, Flag } from "lucide-react";
 
 interface ReviewCardProps {
   id: string;
   facilityId: string;
+  userId?: string | null;
   authorName: string;
   rating: number;
   title: string | null;
@@ -18,6 +20,7 @@ interface ReviewCardProps {
 export function ReviewCard({
   id,
   facilityId,
+  userId,
   authorName,
   rating,
   title,
@@ -63,9 +66,18 @@ export function ReviewCard({
             <User className="h-4 w-4" />
           </div>
           <div>
-            <span className="text-sm font-semibold text-zinc-900">
-              {authorName}
-            </span>
+            {userId ? (
+              <Link
+                href={`/uzivatel/${userId}`}
+                className="text-sm font-semibold text-zinc-900 hover:text-emerald-600 hover:underline"
+              >
+                {authorName}
+              </Link>
+            ) : (
+              <span className="text-sm font-semibold text-zinc-900">
+                {authorName}
+              </span>
+            )}
             <div className="mt-0.5 flex items-center gap-2">
               <StarRating rating={rating} size="sm" />
               <span className="text-xs text-zinc-400">

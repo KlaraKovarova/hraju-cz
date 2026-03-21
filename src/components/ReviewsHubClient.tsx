@@ -18,6 +18,7 @@ const SORT_LABELS: Record<SortOption, string> = {
 
 interface Review {
   id: string;
+  userId: string | null;
   authorName: string;
   rating: number;
   title: string | null;
@@ -153,9 +154,18 @@ export function ReviewsHubClient() {
                   <User className="h-5 w-5" />
                 </div>
                 <div>
-                  <span className="text-sm font-semibold text-zinc-900">
-                    {review.authorName}
-                  </span>
+                  {review.userId ? (
+                    <Link
+                      href={`/uzivatel/${review.userId}`}
+                      className="text-sm font-semibold text-zinc-900 hover:text-emerald-600 hover:underline"
+                    >
+                      {review.authorName}
+                    </Link>
+                  ) : (
+                    <span className="text-sm font-semibold text-zinc-900">
+                      {review.authorName}
+                    </span>
+                  )}
                   <div className="mt-0.5 flex items-center gap-2">
                     <div className="flex items-center gap-0.5">
                       {Array.from({ length: 5 }).map((_, i) => (

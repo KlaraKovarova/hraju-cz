@@ -16,6 +16,7 @@ const SORT_LABELS: Record<SortOption, string> = {
 
 interface Review {
   id: string;
+  userId?: string | null;
   authorName: string;
   rating: number;
   title: string | null;
@@ -115,6 +116,7 @@ export function ReviewList({ facilityId, perPage = 10 }: ReviewListProps) {
             key={review.id}
             id={review.id}
             facilityId={facilityId}
+            userId={review.userId}
             authorName={review.authorName}
             rating={review.rating}
             title={review.title}
