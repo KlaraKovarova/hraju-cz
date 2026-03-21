@@ -707,6 +707,123 @@ export async function getTopRatedFacilities(limit: number = 6): Promise<Facility
   }
 }
 
+export type ReviewWithFacility = {
+  id: string;
+  authorName: string;
+  rating: number;
+  title: string | null;
+  text: string | null;
+  helpful: number;
+  createdAt: Date;
+  facility: { id: string; name: string; slug: string; city: string; sport: string | null; sportNameCs: string | null };
+};
+
+export async function getAllApprovedReviews(opts: {
+  sport?: string;
+  sort?: "newest" | "oldest" | "highest" | "lowest" | "helpful";
+  page?: number;
+  limit?: number;
+}): Promise<{ reviews: ReviewWithFacility[]; total: number }> {
+  const { sport, sort = "newest", page = 1, limit = 20 } = opts;
+  try {
+    const where: Record<string, unknown> = { isApproved: true };
+    if (sport) {
+      where.facility = { sports: { some: { sport: { slug: sport } } } };
+    }
+
+    const orderBy: Record<string, string> =
+      sort === "oldest" ? { createdAt: "asc" }
+        : sort === "highest" ? { rating: "desc" }
+        : sort === "lowest" ? { rating: "asc" }
+        : sort === "helpful" ? { helpful: "desc" }
+        : { createdAt: "desc" };
+
+    const [reviews, total] = await withTimeout(
+      Promise.all([
+        prisma.review.findMany({
+          where,
+          orderBy,
+          skip: (page - 1) * limit,
+          take: limit,
+          select: {
+            id: true,
+            authorName: true,
+            rating: true,
+            title: true,
+            text: true,
+            helpful: true,
+            createdAt: true,
+            facility: {
+              select: {
+                id: true,
+                name: true,
+                slug: true,
+                location: { select: { city: true } },
+                sports: { take: 1, select: { sport: { select: { slug: true, nameCs: true } } } },
+              },
+            },
+          },
+        }),
+        prisma.review.count({ where }),
+      ]),
+      DB_QUERY_TIMEOUT_MS
+    );
+
+    return {
+      reviews: reviews.map((r) => ({
+        id: r.id,
+        authorName: r.authorName,
+        rating: r.rating,
+        title: r.title,
+        text: r.text,
+        helpful: r.helpful,
+        createdAt: r.createdAt,
+        facility: {
+          id: r.facility.id,
+          name: r.facility.name,
+          slug: r.facility.slug,
+          city: r.facility.location.city,
+          sport: r.facility.sports[0]?.sport.slug ?? null,
+          sportNameCs: r.facility.sports[0]?.sport.nameCs ?? null,
+        },
+      })),
+      total,
+    };
+  } catch {
+    return { reviews: [], total: 0 };
+  }
+}
+
+export async function getReviewStats(): Promise<{
+  totalReviews: number;
+  totalFacilitiesReviewed: number;
+  averageRating: number;
+}> {
+  try {
+    const [total, facilitiesReviewed, avgResult] = await withTimeout(
+      Promise.all([
+        prisma.review.count({ where: { isApproved: true } }),
+        prisma.review.groupBy({
+          by: ["facilityId"],
+          where: { isApproved: true },
+        }).then((g) => g.length),
+        prisma.review.aggregate({
+          where: { isApproved: true },
+          _avg: { rating: true },
+        }),
+      ]),
+      DB_QUERY_TIMEOUT_MS
+    );
+    return {
+      totalReviews: total,
+      totalFacilitiesReviewed: facilitiesReviewed,
+      averageRating: Math.round((avgResult._avg.rating ?? 0) * 10) / 10,
+    };
+  } catch {
+    return { totalReviews: 0, totalFacilitiesReviewed: 0, averageRating: 0 };
+  }
+}
+
 export async function getCommunityStats(): Promise<{ totalReviews: number; totalUsers: number }> {
   try {
     const [reviews, users] = await withTimeout(

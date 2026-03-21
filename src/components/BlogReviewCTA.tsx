@@ -51,11 +51,11 @@ export function BlogReviewCTA({ sportTags = [] }: BlogReviewCTAProps) {
               Napsat recenzi
             </Link>
             <Link
-              href="/prihlaseni"
+              href="/recenze"
               className="inline-flex items-center gap-2 rounded-xl border border-zinc-200 bg-white px-5 py-2.5 text-sm font-medium text-zinc-700 transition hover:border-zinc-300 hover:shadow-sm"
             >
-              <Users className="h-4 w-4" />
-              Přidat se do komunity
+              <Star className="h-4 w-4" />
+              Všechny recenze
             </Link>
           </div>
 

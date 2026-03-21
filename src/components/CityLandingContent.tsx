@@ -8,6 +8,7 @@ import { FacilityCard } from "@/components/FacilityCard";
 import { FacilityListWithFilters } from "@/components/FacilityListWithFilters";
 import { FacilityMap } from "@/components/FacilityMap";
 import { TrackPageView } from "@/components/TrackPageView";
+import { AdSlot } from "@/components/AdSlot";
 import type { FacilityWithDetails, DistrictGroup } from "@/lib/data";
 
 type Sport = (typeof SPORTS)[number];
@@ -187,6 +188,11 @@ export function CityLandingContent({
           </Suspense>
         )}
       </section>
+
+      {/* Ad: between facility list and other sports */}
+      <div className="mx-auto max-w-6xl px-6 py-4">
+        <AdSlot slot="4567890123" format="horizontal" />
+      </div>
 
       {/* Other Sports in this City */}
       <section className="border-t border-zinc-100 bg-white">

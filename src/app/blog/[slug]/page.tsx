@@ -7,6 +7,7 @@ import remarkGfm from "remark-gfm";
 import { getPostBySlug, getAllPosts, CATEGORIES } from "@/lib/blog";
 import { ShareButton } from "@/components/ShareButton";
 import { BlogReviewCTA } from "@/components/BlogReviewCTA";
+import { AdSlot } from "@/components/AdSlot";
 import type { Metadata } from "next";
 
 export const revalidate = 3600;
@@ -203,6 +204,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           >
             {post.body}
           </Markdown>
+        </div>
+
+        {/* Ad: after article body */}
+        <div className="my-8">
+          <AdSlot slot="3456789012" format="horizontal" />
         </div>
 
         {/* Review CTA */}

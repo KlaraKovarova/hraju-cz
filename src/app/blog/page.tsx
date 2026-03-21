@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Calendar, Tag } from "lucide-react";
 import { getAllPosts, CATEGORIES } from "@/lib/blog";
+import { AdSlot } from "@/components/AdSlot";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -128,6 +129,11 @@ export default function BlogIndex() {
                 </article>
               </Link>
             )}
+
+            {/* Ad: between featured and grid */}
+            <div className="py-2">
+              <AdSlot slot="5678901234" format="horizontal" />
+            </div>
 
             {/* Grid of remaining posts */}
             {gridPosts.length > 0 && (

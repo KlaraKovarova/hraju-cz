@@ -91,6 +91,12 @@ export default async function Home() {
               </Link>
             ))}
             <Link
+              href="/recenze"
+              className="transition hover:text-zinc-900"
+            >
+              Recenze
+            </Link>
+            <Link
               href="/blog"
               className="transition hover:text-zinc-900"
             >
@@ -296,11 +302,11 @@ export default async function Home() {
             </div>
             <div className="mt-8 text-center">
               <Link
-                href="/registrace"
+                href="/recenze"
                 className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 text-sm font-bold text-white transition hover:bg-emerald-700"
               >
                 <MessageSquare className="h-4 w-4" />
-                Přihlásit se a napsat recenzi
+                Všechny recenze
               </Link>
             </div>
           </div>
