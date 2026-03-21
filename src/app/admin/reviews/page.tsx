@@ -7,6 +7,7 @@ interface Review {
   id: string;
   facilityId: string;
   facility: { id: string; name: string; slug: string };
+  user: { isSeed: boolean } | null;
   authorName: string;
   authorEmail: string;
   rating: number;
@@ -96,6 +97,11 @@ export default function AdminReviews() {
                     <span className="flex items-center gap-1">
                       <User className="h-3 w-3" />
                       {review.authorName} ({review.authorEmail})
+                      {review.user?.isSeed && (
+                        <span className="ml-1 rounded bg-amber-100 px-1.5 py-0.5 text-[10px] font-semibold uppercase text-amber-700">
+                          seed
+                        </span>
+                      )}
                     </span>
                     <span className="flex items-center gap-1">
                       <Clock className="h-3 w-3" />

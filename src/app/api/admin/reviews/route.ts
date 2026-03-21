@@ -16,6 +16,7 @@ export async function GET(request: NextRequest) {
       where,
       include: {
         facility: { select: { id: true, name: true, slug: true } },
+        user: { select: { isSeed: true } },
       },
       orderBy: { createdAt: "desc" },
     });
