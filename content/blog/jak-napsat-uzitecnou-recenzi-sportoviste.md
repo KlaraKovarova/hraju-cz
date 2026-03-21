@@ -4,7 +4,7 @@ date: "2026-03-23"
 category: "komunita"
 excerpt: "Ne každá recenze pomůže. Ukážeme vám, co přesně napsat, aby váš názor pomohl ostatním sportovcům vybrat si to pravé místo."
 sportTags: ["tenis", "squash", "plavani", "lezeni", "fitness", "badminton"]
-image: ""
+image: /images/blog/jak-napsat-uzitecnou-recenzi-sportoviste.jpg
 ---
 
 # Jak napsat užitečnou recenzi sportoviště
