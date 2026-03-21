@@ -146,10 +146,6 @@ export default async function Home() {
             <span className="text-2xl font-extrabold text-zinc-900">{totalSports}</span>
             <p className="text-xs text-zinc-500">sportů</p>
           </div>
-          <div>
-            <span className="text-2xl font-extrabold text-zinc-900">14</span>
-            <p className="text-xs text-zinc-500">krajů ČR</p>
-          </div>
         </div>
       </section>
 
