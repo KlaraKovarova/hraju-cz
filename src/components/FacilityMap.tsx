@@ -27,8 +27,20 @@ export function FacilityMap({ markers, className }: FacilityMapProps) {
 
     (async () => {
       const L = (await import("leaflet")).default;
-      // @ts-expect-error -- CSS module has no type declarations
-      await import("leaflet/dist/leaflet.css");
+
+      // Inject Leaflet CSS via <link> tag — dynamic import("…css") is
+      // silently dropped by Turbopack, so we load it manually.
+      if (!document.querySelector('link[href*="leaflet"]')) {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+        document.head.appendChild(link);
+        // Wait for CSS to load before rendering the map
+        await new Promise<void>((resolve) => {
+          link.onload = () => resolve();
+          link.onerror = () => resolve();
+        });
+      }
 
       if (cancelled || !mapRef.current || mapInstanceRef.current) return;
 
