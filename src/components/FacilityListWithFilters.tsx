@@ -9,13 +9,13 @@ import type { FacilityWithDetails } from "@/lib/data";
 
 const PAGE_SIZE = 20;
 
-type SortOption = "name-asc" | "name-desc" | "rating" | "newest";
+type SortOption = "recommended" | "name-asc" | "name-desc" | "rating";
 
 const SORT_OPTIONS: { value: SortOption; label: string }[] = [
+  { value: "recommended", label: "Doporučené" },
   { value: "name-asc", label: "Název A-Z" },
   { value: "name-desc", label: "Název Z-A" },
   { value: "rating", label: "Hodnocení" },
-  { value: "newest", label: "Nejnovější" },
 ];
 
 interface AmenityOption {
@@ -36,6 +36,23 @@ function sortFacilities(
 ): FacilityWithDetails[] {
   const sorted = [...facilities];
   switch (sort) {
+    case "recommended":
+      sorted.sort((a, b) => {
+        // Premium first
+        if (a.isPremium !== b.isPremium) return a.isPremium ? -1 : 1;
+        // Then facilities with reviews
+        const aHas = a.reviewCount > 0 ? 1 : 0;
+        const bHas = b.reviewCount > 0 ? 1 : 0;
+        if (aHas !== bHas) return bHas - aHas;
+        // Among reviewed: higher rating first
+        if (aHas && bHas) {
+          const ra = a.averageRating ?? 0;
+          const rb = b.averageRating ?? 0;
+          if (rb !== ra) return rb - ra;
+        }
+        return a.name.localeCompare(b.name, "cs");
+      });
+      return sorted; // premium handling is inline
     case "name-asc":
       sorted.sort((a, b) => a.name.localeCompare(b.name, "cs"));
       break;
@@ -49,9 +66,6 @@ function sortFacilities(
         if (rb !== ra) return rb - ra;
         return a.name.localeCompare(b.name, "cs");
       });
-      break;
-    case "newest":
-      sorted.sort((a, b) => b.name.localeCompare(a.name, "cs"));
       break;
   }
   // Premium facilities always first
@@ -68,7 +82,7 @@ export function FacilityListWithFilters({
 
   // Read initial values from URL
   const urlPage = parseInt(searchParams.get("page") || "1", 10);
-  const urlSort = (searchParams.get("sort") as SortOption) || "name-asc";
+  const urlSort = (searchParams.get("sort") as SortOption) || "recommended";
   const urlDistrict = searchParams.get("district") || "";
   const urlMinRating = parseInt(searchParams.get("minRating") || "0", 10);
   const urlContact = searchParams.get("contact") === "1";
@@ -79,7 +93,7 @@ export function FacilityListWithFilters({
   );
   const [showFilters, setShowFilters] = useState(false);
   const [currentSort, setCurrentSort] = useState<SortOption>(
-    SORT_OPTIONS.some((o) => o.value === urlSort) ? urlSort : "name-asc",
+    SORT_OPTIONS.some((o) => o.value === urlSort) ? urlSort : "recommended",
   );
   const [currentPage, setCurrentPage] = useState(
     urlPage >= 1 ? urlPage : 1,
@@ -117,7 +131,7 @@ export function FacilityListWithFilters({
       if (sp) params.set("sport", sp);
 
       if (page > 1) params.set("page", String(page));
-      if (sort !== "name-asc") params.set("sort", sort);
+      if (sort !== "recommended") params.set("sort", sort);
       if (district) params.set("district", district);
       if (rating > 0) params.set("minRating", String(rating));
       if (contact) params.set("contact", "1");

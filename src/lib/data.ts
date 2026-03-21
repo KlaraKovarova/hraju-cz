@@ -47,6 +47,20 @@ export type FacilityWithDetails = {
   reviewCount: number;
 };
 
+/** Recommended sort: premium first → facilities with reviews (by rating desc) → rest by name */
+function recommendedSort(a: FacilityWithDetails, b: FacilityWithDetails): number {
+  if (a.isPremium !== b.isPremium) return a.isPremium ? -1 : 1;
+  const aHas = a.reviewCount > 0 ? 1 : 0;
+  const bHas = b.reviewCount > 0 ? 1 : 0;
+  if (aHas !== bHas) return bHas - aHas;
+  if (aHas && bHas) {
+    const ra = a.averageRating ?? 0;
+    const rb = b.averageRating ?? 0;
+    if (rb !== ra) return rb - ra;
+  }
+  return a.name.localeCompare(b.name, "cs");
+}
+
 // --- Static data from JSON export (pre-indexed) ---
 
 type ExportData = typeof exportData;
@@ -416,10 +430,7 @@ export async function getTopFacilitiesBySport(
   limit: number = 10
 ): Promise<FacilityWithDetails[]> {
   const facilities = staticFacilitiesBySport(sportSlug);
-  facilities.sort((a, b) => {
-    if (a.isPremium !== b.isPremium) return a.isPremium ? -1 : 1;
-    return a.name.localeCompare(b.name, "cs");
-  });
+  facilities.sort(recommendedSort);
   return facilities.slice(0, limit);
 }
 
@@ -429,10 +440,7 @@ export async function getTopFacilitiesByRegionAndSport(
   limit: number = 10
 ): Promise<FacilityWithDetails[]> {
   const facilities = staticFacilitiesByRegionAndSport(regionSlug, sportSlug);
-  facilities.sort((a, b) => {
-    if (a.isPremium !== b.isPremium) return a.isPremium ? -1 : 1;
-    return a.name.localeCompare(b.name, "cs");
-  });
+  facilities.sort(recommendedSort);
   return facilities.slice(0, limit);
 }
 
@@ -473,13 +481,12 @@ function staticFacilitiesByCityAndSport(
     if (results.length === 0) return { facilities: [], cityName: null };
 
     const mapped = results.map(toFacilityWithDetails);
-    // Sort: premium first, then district asc, then name asc
+    // Sort: district asc, then recommended within each district
     mapped.sort((a, b) => {
-      if (a.isPremium !== b.isPremium) return a.isPremium ? -1 : 1;
       const distA = a.location.city;
       const distB = b.location.city;
       if (distA !== distB) return distA.localeCompare(distB, "cs", { numeric: true });
-      return a.name.localeCompare(b.name, "cs");
+      return recommendedSort(a, b);
     });
 
     // Group by district
@@ -511,10 +518,7 @@ function staticFacilitiesByCityAndSport(
   });
 
   const mapped = results.map(toFacilityWithDetails);
-  mapped.sort((a, b) => {
-    if (a.isPremium !== b.isPremium) return a.isPremium ? -1 : 1;
-    return a.name.localeCompare(b.name, "cs");
-  });
+  mapped.sort(recommendedSort);
 
   return { facilities: mapped, cityName };
 }
@@ -947,13 +951,10 @@ export async function searchFacilities(
     );
   });
 
-  // Sort: premium first, then alphabetically
-  results.sort((a, b) => {
-    if (a.isPremium !== b.isPremium) return a.isPremium ? -1 : 1;
-    return a.name.localeCompare(b.name, "cs");
-  });
+  const mapped = results.map(toFacilityWithDetails);
+  mapped.sort(recommendedSort);
 
-  return results.slice(0, limit).map(toFacilityWithDetails);
+  return mapped.slice(0, limit);
 }
 
 // --- Cross-sport city page queries (/mesto) ---
