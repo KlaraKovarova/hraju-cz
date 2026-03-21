@@ -6,6 +6,7 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getPostBySlug, getAllPosts, CATEGORIES } from "@/lib/blog";
 import { ShareButton } from "@/components/ShareButton";
+import { BlogReviewCTA } from "@/components/BlogReviewCTA";
 import type { Metadata } from "next";
 
 export const revalidate = 3600;
@@ -203,6 +204,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             {post.body}
           </Markdown>
         </div>
+
+        {/* Review CTA */}
+        <BlogReviewCTA sportTags={post.sportTags} />
 
         {/* Sport tags */}
         {post.sportTags.length > 0 && (

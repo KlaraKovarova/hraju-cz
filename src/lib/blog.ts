@@ -87,4 +87,5 @@ export const CATEGORIES: Record<string, string> = {
   tipy: "Tipy a rady",
   vybaveni: "Vybavení a recenze",
   novinky: "Novinky",
+  komunita: "Komunita",
 };
