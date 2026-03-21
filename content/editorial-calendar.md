@@ -12,17 +12,17 @@
 | Mar 22 | Badminton pro začátečníky | pruvodce-sporty | badminton | DONE |
 | Mar 23 | Fitness centra v Praze — průvodce | pruvodce-mesta | fitness | DONE |
 | Mar 24 | Volejbal v Česku — kde hrát | pruvodce-sporty | volejbal | DONE |
-| Mar 25 | Golf pro nováčky — základní pravidla a etiketa | pruvodce-sporty | golf | TODO |
-| Mar 26 | Via ferraty v Česku — průvodce pro začátečníky | pruvodce-sporty | ferraty | TODO |
-| Mar 27 | Nejlepší squashové centrum v Praze | pruvodce-mesta | squash | TODO |
+| Mar 25 | Golf pro nováčky — základní pravidla a etiketa | pruvodce-sporty | golf | DONE |
+| Mar 26 | Via ferraty v Česku — průvodce pro začátečníky | pruvodce-sporty | ferraty | DONE |
+| Mar 27 | Nejlepší squashové centrum v Praze | pruvodce-mesta | squash | DONE |
 
 ## Week 2 (Mar 28–Apr 3)
 
 | Date | Title | Category | Sport | Status |
 |------|-------|----------|-------|--------|
-| Mar 28 | Jak vybrat tenisovou raketu v 2026 | vybaveni-recenze | tenis | TODO |
-| Mar 29 | Plavecké bazény v Ostravě | pruvodce-mesta | plavani | TODO |
-| Mar 30 | Badminton vs. squash — jaký sport si vybrat? | pruvodce-sporty | badminton, squash | TODO |
+| Mar 28 | Nejlepší tenisové vybavení pro rok 2026 | vybaveni | tenis | DONE |
+| Mar 29 | Nová ferrata v Mladé Vožici — kompletní průvodce | novinky | ferraty | DONE |
+| Mar 30 | Padel v Česku — nový sport, který dobývá kurty | pruvodce-sporty | padel | DONE |
 | Mar 31 | CrossFit vs. klasická posilovna | tipy | fitness | TODO |
 | Apr 1 | Kde lézt v Brně — lezecká centra a bouldery | pruvodce-mesta | lezeni | TODO |
 | Apr 2 | Volejbalové kempy a turnaje 2026 | novinky | volejbal | TODO |
