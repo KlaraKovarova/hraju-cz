@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: "Jaké platební metody přijímáte?",
-    a: "Přijímáme platební karty (Visa, Mastercard, Maestro) prostřednictvím zabezpečené platební brány Stripe.",
+    a: "Přijímáme platební karty (Visa, Mastercard, Maestro) prostřednictvím zabezpečené platební brány Stripe a bankovní převod přes QR kód.",
   },
 ];
 
@@ -79,7 +79,7 @@ export default function ProPage() {
               Začít zdarma
             </Link>
             <span className="text-sm text-zinc-500">
-              29&nbsp;EUR / měsíc &middot; Zrušit kdykoliv
+              od 99&nbsp;Kč / měsíc &middot; Zrušit kdykoliv
             </span>
           </div>
         </div>
@@ -178,7 +178,7 @@ export default function ProPage() {
             Připraveni na více zákazníků?
           </h2>
           <p className="mt-3 text-emerald-100">
-            Nárokujte si svůj záznam a aktivujte Premium za 29&nbsp;EUR měsíčně.
+            Nárokujte si svůj záznam a aktivujte Premium od 99&nbsp;Kč měsíčně.
           </p>
           <Link
             href="/moje-sportoviste"
