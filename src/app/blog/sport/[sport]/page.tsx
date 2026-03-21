@@ -41,7 +41,7 @@ export default async function SportBlogPage({ params }: SportBlogPageProps) {
   return (
     <main className="min-h-screen bg-zinc-50/50">
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-4xl items-center px-6 py-4">
+        <div className="mx-auto flex max-w-6xl items-center px-6 py-4">
           <div className="flex items-center gap-2 text-sm text-zinc-500">
             <Link
               href="/"
@@ -63,7 +63,7 @@ export default async function SportBlogPage({ params }: SportBlogPageProps) {
       </nav>
 
       <section className="border-b border-zinc-100 bg-white">
-        <div className="mx-auto max-w-4xl px-6 py-10">
+        <div className="mx-auto max-w-6xl px-6 py-10">
           <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900">
             {sport.icon} {sport.nameCs}
           </h1>
@@ -79,66 +79,63 @@ export default async function SportBlogPage({ params }: SportBlogPageProps) {
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-6 py-8">
+      <section className="mx-auto max-w-6xl px-6 py-8">
         {posts.length === 0 ? (
           <p className="text-center text-sm text-zinc-500">
             Pro tento sport zatím nejsou žádné články. Brzy přidáme nový obsah!
           </p>
         ) : (
-          <div className="space-y-6">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {posts.map((post) => (
-              <article
+              <Link
                 key={post.slug}
-                className="overflow-hidden rounded-2xl border border-zinc-100 bg-white transition hover:border-zinc-200 hover:shadow-sm"
+                href={`/blog/${post.slug}`}
+                className="group block"
               >
-                <Link href={`/blog/${post.slug}`}>
+                <article className="h-full overflow-hidden rounded-2xl border border-zinc-100 bg-white transition hover:border-zinc-200 hover:shadow-md">
                   {post.image && (
                     <div className="relative aspect-[16/9] w-full">
                       <Image
                         src={post.image}
                         alt={post.title}
                         fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 800px"
+                        className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>
                   )}
-                  <div className="p-6">
-                  <div className="flex items-center gap-3 text-xs text-zinc-400">
-                    <span className="flex items-center gap-1">
-                      <Calendar className="h-3 w-3" />
-                      {new Date(post.date).toLocaleDateString("cs-CZ", {
-                        day: "numeric",
-                        month: "long",
-                        year: "numeric",
-                      })}
-                    </span>
-                    <span className="flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-emerald-700">
-                      <Tag className="h-3 w-3" />
-                      {CATEGORIES[post.category] || post.category}
-                    </span>
+                  <div className="p-5">
+                    <div className="flex items-center gap-2 text-xs text-zinc-400">
+                      <span className="flex items-center gap-1">
+                        <Calendar className="h-3 w-3" />
+                        {new Date(post.date).toLocaleDateString("cs-CZ", {
+                          day: "numeric",
+                          month: "long",
+                          year: "numeric",
+                        })}
+                      </span>
+                      <span className="rounded-full bg-emerald-50 px-2 py-0.5 text-emerald-700">
+                        {CATEGORIES[post.category] || post.category}
+                      </span>
+                    </div>
+                    <h2 className="mt-2 font-bold text-zinc-900 group-hover:text-emerald-700">
+                      {post.title}
+                    </h2>
+                    {post.excerpt && (
+                      <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-zinc-500">
+                        {post.excerpt}
+                      </p>
+                    )}
                   </div>
-                  <h2 className="mt-2 text-lg font-bold text-zinc-900 hover:text-emerald-700">
-                    {post.title}
-                  </h2>
-                  {post.excerpt && (
-                    <p className="mt-2 text-sm leading-relaxed text-zinc-600">
-                      {post.excerpt}
-                    </p>
-                  )}
-                  <span className="mt-3 inline-block text-sm font-semibold text-emerald-600">
-                    Číst dále &rarr;
-                  </span>
-                  </div>
-                </Link>
-              </article>
+                </article>
+              </Link>
             ))}
           </div>
         )}
       </section>
 
       {/* Link back to sport page */}
-      <section className="mx-auto max-w-4xl px-6 pb-8">
+      <section className="mx-auto max-w-6xl px-6 pb-8">
         <Link
           href={`/sport/${sportSlug}`}
           className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-600 transition hover:text-emerald-700"

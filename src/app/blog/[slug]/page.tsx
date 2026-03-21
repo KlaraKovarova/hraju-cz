@@ -121,7 +121,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       {/* Header */}
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-4xl items-center px-6 py-4">
+        <div className="mx-auto flex max-w-6xl items-center px-6 py-4">
           <div className="flex flex-wrap items-center gap-2 text-sm text-zinc-500">
             <Link
               href="/"
@@ -144,14 +144,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       {/* Hero image */}
       {post.image && (
-        <div className="relative mx-auto aspect-[21/9] max-w-4xl">
+        <div className="relative mx-auto aspect-[21/9] max-w-6xl">
           <Image
             src={post.image}
             alt={post.title}
             fill
             priority
             className="object-cover"
-            sizes="(max-width: 768px) 100vw, 896px"
+            sizes="(max-width: 768px) 100vw, 1152px"
           />
         </div>
       )}
@@ -222,16 +222,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       {/* Related posts */}
       {relatedPosts.length > 0 && (
         <section className="border-t border-zinc-100 bg-white">
-          <div className="mx-auto max-w-4xl px-6 py-10">
+          <div className="mx-auto max-w-6xl px-6 py-10">
             <h2 className="mb-6 text-center text-sm font-semibold uppercase tracking-wider text-zinc-400">
               Další články
             </h2>
-            <div className="grid gap-4 sm:grid-cols-3">
+            <div className="grid gap-6 sm:grid-cols-3">
               {relatedPosts.map((p) => (
                 <Link
                   key={p.slug}
                   href={`/blog/${p.slug}`}
-                  className="group overflow-hidden rounded-xl border border-zinc-100 bg-zinc-50/50 transition hover:border-zinc-200 hover:shadow-sm"
+                  className="group overflow-hidden rounded-2xl border border-zinc-100 bg-white transition hover:border-zinc-200 hover:shadow-md"
                 >
                   {p.image && (
                     <div className="relative aspect-[16/9] w-full">
@@ -239,13 +239,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                         src={p.image}
                         alt={p.title}
                         fill
-                        className="object-cover"
+                        className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                         sizes="(max-width: 640px) 100vw, 33vw"
                       />
                     </div>
                   )}
-                  <div className="p-4">
-                  <p className="text-sm font-semibold text-zinc-900 group-hover:text-emerald-700">
+                  <div className="p-5">
+                  <p className="font-bold text-zinc-900 group-hover:text-emerald-700">
                     {p.title}
                   </p>
                   <p className="mt-1 text-xs text-zinc-400">
