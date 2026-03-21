@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, ArrowRight, ChevronDown, Calendar } from "lucide-react";
+import { MapPin, ArrowRight, ChevronDown, Calendar, Star, MessageSquare, Users } from "lucide-react";
 import { SPORTS } from "@/lib/sports";
 import {
   getTotalFacilityCount,
@@ -7,6 +7,8 @@ import {
   getFeaturedFacilities,
   getTopCitiesOverall,
   getRecentFacilities,
+  getRecentReviews,
+  getCommunityStats,
 } from "@/lib/data";
 import { cityToSlug } from "@/lib/regions";
 import { FacilityCard } from "@/components/FacilityCard";
@@ -21,9 +23,14 @@ export const revalidate = 21600;
 export default async function Home() {
   const totalFacilities = getTotalFacilityCount();
   const totalSports = getTotalSportCount();
-  const featuredFacilities = await getFeaturedFacilities(6);
-  const topCities = await getTopCitiesOverall(10);
-  const recentFacilities = await getRecentFacilities(4);
+  const [featuredFacilities, topCities, recentFacilities, recentReviews, communityStats] =
+    await Promise.all([
+      getFeaturedFacilities(6),
+      getTopCitiesOverall(10),
+      getRecentFacilities(4),
+      getRecentReviews(6),
+      getCommunityStats(),
+    ]);
   const latestPosts = getAllPosts().slice(0, 3);
 
   // FAQ data for structured markup
@@ -146,6 +153,18 @@ export default async function Home() {
             <span className="text-2xl font-extrabold text-zinc-900">{totalSports}</span>
             <p className="text-xs text-zinc-500">sportů</p>
           </div>
+          {communityStats.totalReviews > 0 && (
+            <div>
+              <span className="text-2xl font-extrabold text-zinc-900">{communityStats.totalReviews}</span>
+              <p className="text-xs text-zinc-500">recenzí</p>
+            </div>
+          )}
+          {communityStats.totalUsers > 0 && (
+            <div>
+              <span className="text-2xl font-extrabold text-zinc-900">{communityStats.totalUsers}</span>
+              <p className="text-xs text-zinc-500">uživatelů</p>
+            </div>
+          )}
         </div>
       </section>
 
@@ -217,6 +236,76 @@ export default async function Home() {
       <div className="mx-auto max-w-6xl px-6 py-4">
         <AdSlot slot="1234567890" format="horizontal" />
       </div>
+
+      {/* Community Reviews */}
+      {recentReviews.length > 0 && (
+        <section className="border-t border-zinc-100 bg-white">
+          <div className="mx-auto max-w-6xl px-6 py-16">
+            <div className="mb-8 text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
+                Co říká komunita
+              </h2>
+              <p className="mt-2 text-zinc-500">
+                Skutečné recenze od sportovců z celé ČR
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {recentReviews.map((review) => (
+                <Link
+                  key={review.id}
+                  href={`/sport/${review.facility.sport || "tenis"}/${review.facility.slug}`}
+                  className="group rounded-2xl border border-zinc-100 bg-zinc-50/50 p-5 transition hover:border-emerald-200 hover:shadow-sm"
+                >
+                  <div className="flex items-center gap-2">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+                      <Users className="h-4 w-4" />
+                    </div>
+                    <div>
+                      <span className="text-sm font-semibold text-zinc-900">
+                        {review.authorName}
+                      </span>
+                      <div className="flex items-center gap-1">
+                        {Array.from({ length: 5 }).map((_, i) => (
+                          <Star
+                            key={i}
+                            className={`h-3 w-3 ${
+                              i < review.rating
+                                ? "fill-amber-400 text-amber-400"
+                                : "text-zinc-200"
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  {review.title && (
+                    <p className="mt-3 text-sm font-semibold text-zinc-800">
+                      {review.title}
+                    </p>
+                  )}
+                  {review.text && (
+                    <p className="mt-1 line-clamp-2 text-sm text-zinc-600">
+                      {review.text}
+                    </p>
+                  )}
+                  <p className="mt-3 text-xs font-medium text-emerald-600 group-hover:text-emerald-700">
+                    {review.facility.name}
+                  </p>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-8 text-center">
+              <Link
+                href="/registrace"
+                className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 text-sm font-bold text-white transition hover:bg-emerald-700"
+              >
+                <MessageSquare className="h-4 w-4" />
+                Přihlásit se a napsat recenzi
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Top Cities */}
       {topCities.length > 0 && (
