@@ -7,7 +7,7 @@ sportTags: ["badminton"]
 image: /images/blog/badminton-pro-zacatecniky.jpg
 ---
 
-Badminton je jeden z nejrychlejších raketových sportů na světě — profesionální smečované údery překračují rychlost 400 km/h. Přitom je to sport přístupný úplně každému. Stačí raketa, míček a kousek prostoru. Pokud chcete začít hrát seriózně, tady je vše, co potřebujete vědět.
+Badminton je jeden z nejrychlejších raketových sportů na světě — profesionální smečované údery překračují rychlost 400 km/h. Přitom je to sport přístupný úplně každému. Stačí raketa, míček a kousek prostoru. V Česku máme 149 hal ve 14 krajích, takže začít můžete skoro kdekoliv. Pokud chcete hrát seriózně, tady je vše, co potřebujete vědět.
 
 ## Proč si vybrat badminton?
 
@@ -46,7 +46,7 @@ Lehké sportovní oblečení umožňující volný pohyb. Badminton je intenzivn
 
 ## Kde hrát badminton v Česku?
 
-V Česku je přes **150 badmintonových hal a center**. Najdete je ve všech krajích:
+V naší databázi na hraju.cz evidujeme **149 badmintonových hal a center** po celém Česku. Najdete je ve všech krajích:
 
 - **Praha** — 20 badmintonových hal, včetně Badminton Arény Skalka
 - **Jihomoravský kraj** — 21 hal, silná scéna kolem Brna
@@ -62,12 +62,10 @@ Kompletní přehled badmintonových hal najdete na [hraju.cz/sport/badminton](/s
 - **Plastové míčky (tuba 6 ks):** 150–300 Kč
 - **Halová obuv:** od 1 000 Kč
 
-## Tip na závěr
+## Kam jít hrát poprvé?
 
-Většina badmintonových center nabízí možnost zapůjčení raket. Než investujete do vlastního vybavení, vyzkoušejte si sport v některé z hal ve vašem okolí. Najděte tu nejbližší na [hraju.cz](/sport/badminton).
+Pokud jste v Praze, zkuste třeba [Badminton Arénu Skalka](/sport/badminton/badminton-arena-skalka) na Praze 10 nebo [Best4Badminton](/sport/badminton/best4badminton) na Praze 9. V Brně najdete hned 13 hal — nejvíce ze všech měst v Česku.
 
----
+Většina badmintonových center nabízí možnost zapůjčení raket. Než investujete do vlastního vybavení, vyzkoušejte si sport v některé z hal ve vašem okolí.
 
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.
+Kompletní seznam badmintonových hal ve vašem kraji najdete na [hraju.cz/sport/badminton](/sport/badminton) — stačí kliknout na vaše město a vybrat si.

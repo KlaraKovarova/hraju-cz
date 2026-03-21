@@ -25,31 +25,17 @@ V Česku se beach volejbal těší velké popularitě — desítky tisíc rekrea
 
 Praha nabízí desítky beach volejbalových kurtů rozmístěných po celém městě.
 
-**Gutovka (Praha 10)** — Jeden z nejznámějších sportovních areálů s několika kvalitními písčitými kurty. Výhodná je dostupnost MHD a zázemí s šatnami a občerstvením. Kurty je nutné rezervovat, zejména ve večerních hodinách.
+V naší databázi evidujeme **101 volejbalových sportovišť** po celém Česku, z toho 11 v Praze. Některé z nich nabízejí i beach volejbalové kurty.
 
-**Hamr Sport (Praha 4 — Braník)** — Rozsáhlý areál přímo u Vltavy s top kvalitou písku. Nabízí osvětlení pro večerní hru a pravidelné turnaje. Cena se pohybuje kolem **500 — 800 Kč/hod**.
+**[Beachklub Praha Pankrác](/sport/volejbal/beachklub-praha-pankrac)** (Praha 4) — Beach volejbalové kurty na Pankráci.
 
-**Strahov** — Areál na Strahově poskytuje venkovní kurty s výhledem na Prahu. Populární mezi studenty díky blízkosti kolejí a příznivým cenám.
+**[Areál Císařská louka](/sport/volejbal/areal-cisarska-louka-beach-volleyball)** (Praha 5) — Beach volleyball u Vltavy.
 
-**Veřejné kurty v parcích** — Řada pražských parků (Stromovka, Letná, Ladronka) má volně přístupné kurty, kde si zahrajete zdarma. Kvalita písku bývá proměnlivá, ale pro rekreační hru postačí.
+**[GUTOVKA](/sport/volejbal/gutovka)** (Praha 10) — Jeden z nejznámějších sportovních areálů s kvalitními písčitými kurty.
 
 ### Brno
 
-**Sokolovna Brno-Královo Pole** — Oblíbená lokalita s kvalitními kurty a pravidelnou údržbou písku. Nabízí i možnost úvodních lekcí.
-
-**Beach Arena Brno** — Moderní areál zaměřený výhradně na plážové sporty. Kvalitní osvětlení umožňuje hrát i po setmění, ceny kurtů se pohybují kolem **400 — 700 Kč/hod**.
-
-**Brněnská přehrada** — V letních měsících fungují kurty přímo u přehrady, kde kombinujete sport s koupáním. Ideální pro rodinné výlety.
-
-### Ostatní města
-
-**Olomouc** — Areál Andrův stadion nabízí venkovní beach kurty s dobrým zázemím. Aktivní amatérská komunita pořádá pravidelné turnaje.
-
-**Plzeň** — Sportovní centrum Škodaland disponuje beach volejbalovými kurty v rámci většího sportovního komplexu.
-
-**Hradec Králové** — Beach Park u Orlice nabízí kurty v příjemném přírodním prostředí s možností občerstvení přímo u řeky.
-
-**České Budějovice** — Sportovní areál Dlouhá louka poskytuje kvalitní písčité kurty s osvětlením.
+V Brně najdete 4 volejbalová sportoviště, včetně [Volejbalových kurtů Lužánky](/sport/volejbal/volejbalove-kurty-luzanky) v největším brněnském parku.
 
 ## Kolik stojí pronájem beach volejbalového kurtu?
 
@@ -111,17 +97,8 @@ Pro registraci na turnaje sledujte webové stránky Českého volejbalového sva
 
 V zimních měsících se beach volejbal přesouvá pod střechu. Několik center v Česku provozuje indoor beach volejbalové haly s vyhřívaným pískem:
 
-- **Beach Praha (Letňany)**: Celoroční provoz, 4 kurty pod střechou.
-- **Indoor Beach Brno**: Vyhřívané kurty pro zimní sezónu.
-
 Ceny indoor kurtů bývají vyšší (700 — 1 200 Kč/hod), ale umožňují trénovat i v zimě.
 
 ## Najděte beach volejbalové hřiště
 
-Hledáte kurt ve svém okolí? Na [hraju.cz/sport/volejbal](/sport/volejbal) najdete přehled volejbalových areálů po celém Česku. Můžete filtrovat podle města, typu hřiště a dostupnosti. Sežeňte parťáka a vyražte na písek — beach volejbal je sport, který si zamilujete hned napoprvé.
-
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.
+Hledáte kurt ve svém okolí? Na [hraju.cz/sport/volejbal](/sport/volejbal) najdete přehled 101 volejbalových areálů po celém Česku. Sežeňte parťáka a vyražte na písek.

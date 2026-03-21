@@ -94,10 +94,4 @@ Při výběru zvažte:
 - **Léto (červen–srpen):** Venkovní areály v plném provozu, rezervujte předem
 - **Podzim (září–listopad):** Klidné období, skvělé ceny
 
-Hledáte bazén nebo aquapark poblíž? Na [hraju.cz v sekci plavání](/sport/plavani) najdete kompletní přehled vodních areálů v celém Česku.
-
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.
+Hledáte bazén nebo aquapark poblíž? Na [hraju.cz v sekci plavání](/sport/plavani) najdete přehled 322 plaveckých zařízení v celém Česku.

@@ -7,89 +7,44 @@ sportTags: ["badminton"]
 image: /images/blog/badmintonove-haly-v-praze-a-brne.jpg
 ---
 
-Badminton je jeden z nejdostupnějších halových sportů — stačí raketa, košíček a volné hřiště. V Praze a Brně najdete desítky hal s badmintonovými kurty. Připravili jsme přehled těch nejlepších.
+Badminton je jeden z nejdostupnějších halových sportů — stačí raketa, košíček a volné hřiště. V Praze evidujeme **20 badmintonových hal** a v Brně **13** — celkem v Česku jich máme 149. Připravili jsme přehled vybraných hal v obou městech.
 
 ## Badmintonové haly v Praze
 
-### Sport Club Štěrboholy (Praha 10)
+### [Badminton Aréna Skalka](/sport/badminton/badminton-arena-skalka) (Praha 10)
 
-Specializované badmintonové centrum s nejvíce kurty v Praze.
+Specializované badmintonové centrum na Praze 10.
 
-- **Kurty:** 12 badmintonových
-- **Povrch:** Speciální badmintonový povrch (odpružený)
-- **Cena:** 200–350 Kč/hod podle času
-- **Zázemí:** Šatny, sprchy, bar, proshop
-- **Výhoda:** Profesionální osvětlení, trenéři k dispozici
+### [Best4Badminton](/sport/badminton/best4badminton) (Praha 9)
 
-### SK Badminton Praha (Praha 6 — Vokovice)
+Badmintonové centrum na Praze 9.
 
-Tradační klub s bohatou historií a kvalitním zázemím.
+### [Sportovní areál Hamr](/sport/badminton/sportovni-areal-hamr) (Praha 10)
 
-- **Kurty:** 8 badmintonových
-- **Povrch:** Taraflex
-- **Cena:** 180–300 Kč/hod
-- **Zázemí:** Šatny, sprchy, klubovna
-- **Bonus:** Pravidelné turnaje a ligy pro všechny úrovně
+Velký sportovní areál s řadou aktivit včetně badmintonu.
 
-### Badminton Arena Satalice (Praha 9)
+### [Sport Centrum HECTOR](/sport/badminton/sport-centrum-hector) (Praha 10)
 
-Moderní hala zaměřená výhradně na badminton.
+Badmintonové centrum s dobrým zázemím.
 
-- **Kurty:** 6 badmintonových
-- **Povrch:** Sportovní lino
-- **Cena:** 180–280 Kč/hod
-- **Zázemí:** Šatny, parkování zdarma
-- **Ideální pro:** Rekreační hráče, klidné prostředí
+### Další haly v Praze
 
-### Sportcentrum YMCA (Praha 1)
-
-Multisportovní centrum v centru Prahy.
-
-- **Kurty:** 4 badmintonové
-- **Povrch:** Palubovka
-- **Cena:** 250–400 Kč/hod
-- **Zázemí:** Kompletní — posilovna, sauna, šatny
-- **Výhoda:** Centrální poloha
-
-### Hamr Sport (Praha 4 — Braník)
-
-Velký sportovní areál s řadou aktivit.
-
-- **Kurty:** 6 badmintonových
-- **Povrch:** Sportovní povrch
-- **Cena:** 200–350 Kč/hod
-- **Zázemí:** Restaurace, parkování, další sporty (tenis, squash)
+- [JEREMI sport](/sport/badminton/jeremi-sport) (Praha 5)
+- [Exe Sport Arena](/sport/badminton/exe-sport-arena) (Praha 4)
+- [SPORTCENTRUM AVION](/sport/badminton/sportcentrum-avion-s-r-o) (Praha 9)
+- [Sportcentrum Step](/sport/badminton/sportcentrum-step) (Praha 9)
 
 ## Badmintonové haly v Brně
 
-### Badminton Brno (Brno-Židenice)
+V Brně evidujeme 13 badmintonových zařízení. Mezi ně patří:
 
-Největší badmintonové centrum v Brně.
-
-- **Kurty:** 10 badmintonových
-- **Povrch:** Taraflex
-- **Cena:** 150–280 Kč/hod
-- **Zázemí:** Šatny, proshop, bar
-- **Bonus:** Badmintonová škola pro děti i dospělé
-
-### Sportovní hala Vodova (Brno-Královo Pole)
-
-Víceúčelová sportovní hala s badmintonovými kurty.
-
-- **Kurty:** 6 badmintonových
-- **Povrch:** Palubovka
-- **Cena:** 140–250 Kč/hod
-- **Zázemí:** Šatny, sprchy, bufet
-
-### Sokol Brno I (Brno-střed)
-
-Historická sokolovna s moderním vybavením.
-
-- **Kurty:** 4 badmintonové
-- **Povrch:** Sportovní povrch
-- **Cena:** 120–200 Kč/hod
-- **Zázemí:** Základní — šatny, sprchy
-- **Výhoda:** Nejnižší ceny v centru Brna
+- [SK Badminton Brno](/sport/badminton/sk-badminton-brno)
+- [Badminton Líšeň.cz](/sport/badminton/badminton-lisen-cz)
+- [ZONE4YOU](/sport/badminton/zone4you)
+- [VICTOR Sport](/sport/badminton/victor-sport-s-r-o)
+- [Xarena Slatina Badminton Club](/sport/badminton/xarena-slatina-badminton-club)
+- [CENTRUM VIKTORIA](/sport/badminton/centrum-viktoria-s-r-o)
+- [Tenisová a badmintonová hala Sprint](/sport/badminton/tenisova-a-badmintonova-hala-sprint)
 
 ## Kolik stojí badminton?
 
@@ -118,10 +73,4 @@ K tomu připočtěte náklady na košíčky — plastové od 30 Kč/ks, peříč
 - **Košíčky** — plastové pro rekreaci, peříčkové pro soutěže
 - **Ručník a pití** — badminton vás pořádně zpotí
 
-Kompletní přehled badmintonových hal v celém Česku najdete na [hraju.cz v sekci badminton](/sport/badminton).
-
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.
+Kompletní přehled 149 badmintonových hal v celém Česku najdete na [hraju.cz/sport/badminton](/sport/badminton).

@@ -46,21 +46,23 @@ Nemáte vlastní výbavu? Řada ferratových lokalit i lezeckých center nabíz�
 
 ## Kde najdete ferraty v Česku?
 
+V naší databázi evidujeme **27 ferrat v 8 krajích**. Nejvíce jich najdete v Ústeckém kraji (10) a v jižních Čechách (5).
+
 ### Nejpopulárnější lokality
 
-- **Děčínský Sněžník** — ferraty v Labském údolí, různé obtížnosti (K2–K4)
-- **Český ráj** — pískovcové ferraty s krásnými výhledy
-- **Hřensko a České Švýcarsko** — ferraty v národním parku
-- **Vysočina** — novější ferraty, ideální pro začátečníky (K1–K2)
-- **Jeseníky** — horské ferraty s alpským charakterem
+- **Děčín a okolí** — [Pastýřská Stěna](/sport/ferraty/pastyrska-stena-decin), [Ferrata Kolem Jalovce](/sport/ferraty/ferrata-kolem-jalovce-decin), [Ferrata Poustevna](/sport/ferraty/ferrata-poustevna-decin) a další
+- **Ústecko** — [Ferraty u Hradu Blansko](/sport/ferraty/ferraty-u-hradu-blansko-usti), [Lužická Spojka](/sport/ferraty/luzicka-spojka-vanov)
+- **Vysočina** — ferraty u [Víru](/sport/ferraty/jezerni-stena-vir) nad přehradou
+- **Jižní Čechy** — [Ferrata Havranka](/sport/ferraty/ferrata-havranka-cesky-krumlov) u Českého Krumlova, [Ferrata Bechyně](/sport/ferraty/ferrata-bechyne)
+- **Karlovarský kraj** — [Bioferrata Bečov](/sport/ferraty/bioferrata-becov-nad-teplou), [Via Ferrata Beduín](/sport/ferraty/via-ferrata-beduin-stribrna)
 
 ### Ferraty pro začátečníky (K1–K2)
 
 Pokud jdete na ferratu poprvé, začněte s lehčími trasami:
 
-- **Pastýřská stěna** (Děčín) — populární ferraty přímo nad městem
-- **Vír** (Vysočina) — nová ferrata nad přehradou, krásné prostředí
-- **Skalní město** (Český ráj) — kombinace ferraty a skal
+- **[Pastýřská Stěna](/sport/ferraty/pastyrska-stena-decin)** (Děčín) — populární ferraty přímo nad městem
+- **[Jezerní Stěna](/sport/ferraty/jezerni-stena-vir)** (Vír, Vysočina) — ferrata nad přehradou, krásné prostředí
+- **[Ferrata Hluboká](/sport/ferraty/ferata-hluboka-nad-vltavou)** — u Hluboké nad Vltavou
 
 Kompletní přehled ferrat najdete na [hraju.cz/sport/ferraty](/sport/ferraty).
 
@@ -85,10 +87,4 @@ Kompletní přehled ferrat najdete na [hraju.cz/sport/ferraty](/sport/ferraty).
 
 Na první ferratu jděte s průvodcem nebo zkušeným kamarádem. Naučíte se správnou techniku přepínání karabin a zacházení s ferratovým setem. Většina lezeckých center (kde trénujete základy) nabízí i ferratové kurzy.
 
-Pro trénink základů lezení se podívejte na [lezecká centra v Praze](/blog/lezecka-centra-v-praze) a pak vyrazte na [ferraty v Česku](/sport/ferraty).
-
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.
+Pro trénink základů lezení se podívejte na [lezecká centra v Praze](/blog/lezecka-centra-v-praze) a pak vyrazte na některou z [27 ferrat v Česku](/sport/ferraty).

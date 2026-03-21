@@ -101,8 +101,3 @@ Kompletní přehled lezeckých center s cenami a kontakty najdete na [hraju.cz](
 
 Lezení na stěně je sport, který vás vtáhne. Kombinuje fyzickou zdatnost s řešením problémů a pokaždé nabízí novou výzvu. Nepotřebujete být fit, silní nebo odvážní — stačí přijít, obout lezečky a zkusit první boulder. Uvidíte, že se budete chtít vracet.
 
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

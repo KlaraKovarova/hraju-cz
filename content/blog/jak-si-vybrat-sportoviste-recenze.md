@@ -1,6 +1,6 @@
 ---
 title: "Jak si vybrat sportoviště — proč se vyplatí číst recenze"
-date: "2026-04-10"
+date: "2099-01-01"
 category: "tipy"
 excerpt: "Recenze ostatních sportovců vám ušetří čas i peníze. Přečtěte si, na co se zaměřit při výběru sportoviště a jak vám zkušenosti komunity pomohou."
 sportTags: ["tenis", "squash", "fitness", "plavani", "badminton"]
@@ -53,12 +53,3 @@ Každé hodnocení, které na hraju.cz zanecháte, pomáhá:
 - **Sportovištím** získat zpětnou vazbu a zlepšit se
 - **Celé komunitě** růst a vytvářet lepší sportovní prostředí
 
----
-
-**Přidejte se k naší komunitě sportovců.** Navštivte [hraju.cz](/), najděte sportoviště ve svém okolí a podělte se o zkušenost. Vaše recenze má sílu změnit, jak sportujeme v Česku.
-
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

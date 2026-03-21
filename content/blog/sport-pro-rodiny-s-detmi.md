@@ -78,14 +78,5 @@ Via ferraty obtížnosti A a B jsou vhodné i pro děti od 8 let (s ferratovým 
 
 Ferraty v Česku na [hraju.cz](/sport/ferraty).
 
-## Zapojte se do komunity
+Najděte další sportoviště vhodná pro celou rodinu na [hraju.cz](/).
 
-Znáte sportoviště, které je skvělé pro rodiny s dětmi? Sdílejte svou zkušenost na hraju.cz! Vaše recenze pomůže dalším rodinám najít to pravé místo pro společný sport.
-
-[Přihlaste se](/prihlaseni) a napište svůj tip.
-
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

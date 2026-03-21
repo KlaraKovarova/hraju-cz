@@ -7,7 +7,7 @@ sportTags: ["volejbal"]
 image: /images/blog/volejbal-v-cesku-kde-hrat.jpg
 ---
 
-Volejbal patří k nejpopulárnějším týmovým sportům v Česku. Ať už preferujete halovou variantu nebo plážový volejbal v písku, v celé republice najdete přes **100 volejbalových hal a areálů**. Připravili jsme průvodce, který vám pomůže najít to pravé místo.
+Volejbal patří k nejpopulárnějším týmovým sportům v Česku. Ať už preferujete halovou variantu nebo plážový volejbal v písku, v naší databázi evidujeme **101 volejbalových hal a areálů** ve 14 krajích. Připravili jsme průvodce, který vám pomůže najít to pravé místo.
 
 ## Halový vs. plážový volejbal
 
@@ -27,7 +27,7 @@ Hraje se ve dvojicích na písku. V Česku existuje řada beach volejbalových c
 
 Volejbalová centra najdete napříč celou republikou:
 
-- **Praha** — 11 hal a beach center, včetně Areálu Císařská louka
+- **Praha** — 11 hal a beach center, včetně [Areálu Císařská louka](/sport/volejbal/areal-cisarska-louka-beach-volleyball)
 - **Jihomoravský kraj** — 14 sportovišť, nejsilnější zastoupení v ČR
 - **Jihočeský kraj** — 12 hal
 - **Pardubický kraj** — 10 sportovišť
@@ -70,6 +70,4 @@ Najděte volejbalové sportoviště ve vašem okolí na [hraju.cz/sport/volejbal
 
 ---
 
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.
+Znáte volejbalovou halu, která v našem přehledu chybí? Dejte nám vědět — pomůžete tak i ostatním hráčům najít nové místo na hru.

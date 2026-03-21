@@ -2,12 +2,12 @@
 title: "Fitness centra v Praze — jak vybrat to pravé pro vás"
 date: "2026-03-23"
 category: "pruvodce-mesta"
-excerpt: "Praha má přes 500 fitness center. Jak se v té nabídce zorientovat? Přinášíme průvodce výběrem posilovny podle lokality, vybavení a ceny."
+excerpt: "Praha má přes 530 fitness center. Jak se v té nabídce zorientovat? Přinášíme průvodce výběrem posilovny podle lokality, vybavení a ceny."
 sportTags: ["fitness"]
 image: /images/blog/fitness-centra-v-praze-pruvodce.jpg
 ---
 
-S více než **530 fitness centry** je Praha jedním z nejlépe vybavených měst v Česku pro cvičení. Jenže právě kvůli tak široké nabídce může být výběr toho správného fitness centra překvapivě těžký. Na co se zaměřit?
+S **534 fitness centry** v naší databázi je Praha jedním z nejlépe vybavených měst v Česku pro cvičení. Celkem v Česku evidujeme přes 2 200 fitness zařízení. Jenže právě kvůli tak široké nabídce může být výběr toho správného fitness centra překvapivě těžký. Na co se zaměřit?
 
 ## Na co se dívat při výběru
 
@@ -66,17 +66,15 @@ Cenově dostupné posilovny otevřené často 24/7. Základní vybavení bez fr�
 
 ## Praha po čtvrtích
 
-Fitness centra najdete v každé městské části. Podívejte se na nabídku ve vaší lokalitě:
+Fitness centra najdete v každé městské části. Nejvíc jich má Praha 4 (116), Praha 5 (79) a Praha 9 (64). Podívejte se na nabídku ve vaší lokalitě:
 
-- [Fitness v Praha 1](/sport/fitness/praha/praha-1) — centrum města
-- [Fitness v Praha 4](/sport/fitness/praha/praha-4) — Krč, Braník, Nusle
-- [Fitness v Praha 5](/sport/fitness/praha/praha-5) — Smíchov, Barrandov
-- [Fitness v Praha 6](/sport/fitness/praha/praha-6) — Dejvice, Břevnov
+- [Fitness v Praha 1](/sport/fitness/praha/praha-1) — 41 center v centru města
+- [Fitness v Praha 4](/sport/fitness/praha/praha-4) — 116 center, Krč, Braník, Nusle
+- [Fitness v Praha 5](/sport/fitness/praha/praha-5) — 79 center, Smíchov, Barrandov
+- [Fitness v Praha 6](/sport/fitness/praha/praha-6) — 44 center, Dejvice, Břevnov
 
 Celkový přehled fitness center v celém Česku najdete na [hraju.cz/sport/fitness](/sport/fitness).
 
 ---
 
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.
+Hledáte konkrétní typ cvičení? Filtrujte fitness centra ve vašem okolí na [hraju.cz](/sport/fitness) a najděte to, co vám sedne.

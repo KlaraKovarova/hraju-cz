@@ -62,12 +62,12 @@ Většina klubů nabízí intenzivní kurzy, obvykle 5–10 lekcí, po kterých 
 
 ### Golfová hřiště v Česku
 
-Česká republika má přes **100 golfových hřišť** od Karlových Varů po Ostravu:
+Na hraju.cz evidujeme **665 golfových zařízení** po celém Česku — od hřišť po driving range a golfové školy:
 
-- **Praha a okolí** — nejvyšší koncentrace hřišť (Albatross, Hostivař, Motol)
-- **Karlovy Vary** — tradiční golfová destinace s historickými hřišti
-- **Jižní Morava** — krásná hřiště ve vinařském kraji
-- **Středočeský kraj** — řada resort hřišť dostupných z Prahy
+- **Praha a Středočeský kraj** — dohromady 184 zařízení, včetně [Albatross Golf Resort](/sport/golf/albatross-golf-resort) nebo [Galerie Golf Hostivař](/sport/golf/galerie-golf-hostivar)
+- **Královéhradecký kraj** — 63 zařízení
+- **Moravskoslezský kraj** — 60 zařízení
+- **Karlovarský kraj** — 35 zařízení, tradiční golfová destinace
 
 Kompletní přehled golfových hřišť najdete na [hraju.cz/sport/golf](/sport/golf).
 
@@ -84,10 +84,4 @@ Pro začátek počítejte s investicí okolo 5 000–10 000 Kč za kurz a zákla
 
 Nesnažte se odpálit míček co nejdále. Základem golfu je přesnost a konzistence. Investujte do pár lekcí s trenérem — špatné návyky se později těžko odnaučují.
 
-Najděte golfové hřiště ve vašem okolí na [hraju.cz/sport/golf](/sport/golf).
-
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.
+Najděte golfové hřiště ve vašem okolí na [hraju.cz/sport/golf](/sport/golf) — máme přehled 665 golfových zařízení ve 14 krajích.

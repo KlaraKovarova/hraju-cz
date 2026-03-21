@@ -7,49 +7,42 @@ sportTags: ["squash"]
 image: /images/blog/nejlepsi-squashove-centrum-v-praze.jpg
 ---
 
-Praha nabízí přes **20 squashových center** rozložených po celém městě. Od moderních multisportovních areálů po specializované squashové haly — vybrat si může každý. Připravili jsme přehled těch nejlepších.
+V naší databázi evidujeme **27 squashových center v Praze** rozložených po celém městě. Od moderních multisportovních areálů po specializované squashové haly — vybrat si může každý. Celkem v Česku je to 215 squashových zařízení. Připravili jsme přehled vybraných pražských center.
 
-## Squash Centrum Strahov — Praha 6
+## [Squashcentrum Strahov](/sport/squash/squashcentrum-strahov) — Praha 6
 
 Jedno z největších squashových center v Praze se nachází přímo ve sportovním areálu na Strahově. Nabízí několik profesionálních kurtů, příjemné zázemí a dobrou dostupnost MHD.
 
 **Výhody:** kvalitní povrch, blízkost dalších sportovišť, parkování
-**Cena:** od 250 Kč/h (mimo špičku)
 
-## ASB Squash — Praha 4
-
-Oblíbené centrum v Praze 4 s několika kurty a profesionálním přístupem. Pravidelně pořádá turnaje a nabízí tréninky s instruktorem.
-
-**Výhody:** turnajová atmosféra, možnost individuálních lekcí
-**Cena:** od 280 Kč/h
-
-## Sportcentrum Step — Praha 9
+## [Sportcentrum Step](/sport/squash/sportcentrum-step) — Praha 9
 
 Velký sportovní areál na Praze 9 s nabídkou squashe jako součástí multisportovního zázemí. Squashové kurty jsou v dobrém stavu a centrum nabízí i fitness a badminton.
 
 **Výhody:** kombinace sportů pod jednou střechou, dlouhá otevírací doba
-**Cena:** od 220 Kč/h
 
-## Squash Park Hostivař — Praha 10
+## [Squash Haštal](/sport/squash/squash-hastal) — Praha 1
 
-Specializované squashové centrum ve východní části Prahy. Klidnější prostředí s méně vytíženými kurty, ideální pro pravidelné hráče hledající dostupné časy.
+Squash v centru města, specializované squashové centrum v Praze 1.
 
-**Výhody:** méně lidí, snadná rezervace, parkování
-**Cena:** od 200 Kč/h
+**Výhody:** centrální poloha
 
-## Sportovní centrum YMCA — Praha 1
+## [Sportcentrum Ymca](/sport/squash/sportcentrum-ymca) — Praha 1
 
-Squash v centru města. YMCA na Národní třídě nabízí squashové kurty v historických prostorách s moderním vybavením.
+YMCA na Národní třídě nabízí squashové kurty v historických prostorách s moderním vybavením.
 
 **Výhody:** centrální poloha, krásné prostředí
-**Cena:** od 300 Kč/h
+
+## [Squashpark Cibulka](/sport/squash/squashpark-cibulka) — Praha 5
+
+Squashové centrum na Praze 5, dostupné z centra.
 
 ## Další squashová centra v Praze
 
-- **Squash Centrum Letňany** (Praha 9) — dostupné ceny, blízko metra
-- **BBArena Michle** (Praha 4) — moderní areál s více sporty
-- **SC Olšanka** (Praha 3) — hotelový komplex se squashem
-- **Hamr Sport Braník** (Praha 4) — řetězec sportovních center
+- **[Sportovní centrum Olšanka](/sport/squash/sportovni-centrum-olsanka)** (Praha 3) — hotelový komplex se squashem
+- **[SQUASH HOLEŠOVICE](/sport/squash/squash-holesovice)** (Praha 7)
+- **[Squash SB Centrum](/sport/squash/squash-sb-centrum)** (Praha 4)
+- **[MTV Fitness & Squash](/sport/squash/mtv-fitness-squash)** (Praha 9)
 
 Kompletní přehled squashových center najdete na [hraju.cz/sport/squash](/sport/squash).
 
@@ -97,10 +90,4 @@ Více o tom, jak začít se squashem, najdete v našem článku [Squash pro zač
 
 Chcete squash vyzkoušet bez velkých investic? Většina center nabízí půjčení rakety za 50–100 Kč. Pozvěte kamaráda, zarezervujte kurt na hodinu a uvidíte, jestli vás to chytne. Squash je jeden z nejintenzivnějších sportů — za hodinu hry spálíte 500–800 kalorií.
 
-Najděte squashové centrum ve vašem okolí na [hraju.cz/sport/squash](/sport/squash).
-
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.
+Najděte squashové centrum ve vašem okolí na [hraju.cz/sport/squash](/sport/squash) — máme přehled 215 center po celém Česku.

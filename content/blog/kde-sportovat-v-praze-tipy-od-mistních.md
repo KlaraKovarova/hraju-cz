@@ -1,6 +1,6 @@
 ---
 title: "Kde sportovat v Praze — tipy od místních sportovců"
-date: "2026-04-13"
+date: "2099-01-01"
 category: "komunita"
 excerpt: "Zapomeňte na turistické průvodce. Přinášíme tipy na sportoviště v Praze přímo od lidí, kteří tam pravidelně sportují."
 sportTags: ["tenis", "squash", "fitness", "plavani", "lezeni"]
@@ -75,8 +75,3 @@ Máte vlastní tip na skvělé sportoviště v Praze? Sdílejte ho s komunitou! 
 
 [Přihlaste se](/prihlaseni) a napište svůj tip.
 
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

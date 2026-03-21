@@ -7,11 +7,11 @@ sportTags: ["squash"]
 image: /images/blog/kam-na-squash-v-brne.jpg
 ---
 
-Brno má překvapivě bohatou squashovou scénu. Od zavedených center s dlouhou tradicí po menší kluby s rodinnou atmosférou — možností je dost. Zeptali jsme se naší komunity hráčů, kam chodí nejraději.
+Brno má překvapivě bohatou squashovou scénu. Od zavedených center s dlouhou tradicí po menší kluby s rodinnou atmosférou — možností je dost. Připravili jsme přehled těch nejzajímavějších.
 
 ## Squash Slovan — Štolcova, Brno
 
-[Squash Slovan](/squash/squash-slovan) je jedním z nejznámějších squashových center v Brně. Kromě squashových kurtů zde najdete i fitness, stolní tenis a solárium. Naši uživatelé doporučují využít možnost tréninku s ligovým hráčem.
+[Squash Slovan](/squash/squash-slovan) je jedním z nejznámějších squashových center v Brně. Kromě squashových kurtů zde najdete i fitness, stolní tenis a solárium. Vyplatí se využít možnost tréninku s ligovým hráčem.
 
 **Co hráči chválí:** profesionální tréninky, kompletní zázemí, půjčovna vybavení
 
@@ -35,7 +35,7 @@ Na [Kraví hoře](/squash/tj-tabor-brno-z-s) najdete squashové kurty s příjem
 
 ## TENIS U LOMU — přírodní prostředí
 
-Hledáte squash v přírodě? [Tenis U Lomu](/squash/tenis-u-lomu) nabízí kurty v krásném prostředí u bývalého lomu. Netradiční zážitek, který naši uživatelé hodnotí velmi kladně.
+Hledáte squash v přírodě? [Tenis U Lomu](/squash/tenis-u-lomu) nabízí kurty v krásném prostředí u bývalého lomu. Netradiční zážitek v příjemném prostředí.
 
 **Co hráči chválí:** jedinečné prostředí v přírodě, klidná atmosféra
 
@@ -48,12 +48,3 @@ Hledáte squash v přírodě? [Tenis U Lomu](/squash/tenis-u-lomu) nabízí kurt
 
 Všechna squashová centra v Brně najdete na [hraju.cz/sport/squash](/sport/squash).
 
----
-
-**Máte svůj oblíbený squashový kurt v Brně?** Sdílejte svou zkušenost s ostatními hráči — vaše recenze pomůže začátečníkům i pokročilým najít to pravé centrum. [Zanechte hodnocení na hraju.cz](/sport/squash) a staňte se součástí naší squashové komunity.
-
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

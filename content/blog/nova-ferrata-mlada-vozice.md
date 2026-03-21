@@ -1,6 +1,6 @@
 ---
 title: "Nová ferrata v Mladé Vožici — kompletní průvodce pro rok 2026"
-date: "2026-03-29"
+date: "2099-01-01"
 category: "novinky"
 excerpt: "V Mladé Vožici roste nová via ferrata. Přinášíme kompletní průvodce — obtížnost, přístup, vybavení a co vás na trase čeká."
 sportTags: ["ferraty"]

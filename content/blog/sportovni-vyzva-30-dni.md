@@ -15,7 +15,7 @@ Pravidla jsou jednoduchá:
 
 1. **Během 30 dní vyzkoušejte 4 sporty, které normálně neděláte**
 2. **Navštivte alespoň jedno nové sportoviště**
-3. **Sdílejte svou zkušenost** — recenzi, fotku nebo tip pro ostatní
+3. **Sdílejte svou zkušenost** — fotku nebo tip pro přátele
 
 To je celé. Žádné registrace, žádné poplatky. Jen výzva pro vás a vaše přátele.
 
@@ -60,14 +60,9 @@ Přidejte se k amatérskému volejbalovému turnaji nebo najděte skupinu, kter�
 1. **Vyberte si sport** z našeho katalogu na [hraju.cz](/)
 2. **Najděte sportoviště** ve vašem městě
 3. **Jděte na to** — první krok je nejtěžší
-4. **Sdílejte zkušenost** — napište recenzi na hraju.cz, ať ostatní vědí, jak to tam vypadá
+4. **Sdílejte zkušenost** — pošlete tip přátelům, ať taky vědí, kam vyrazit
 
 ## Sdílejte výzvu
 
 Znáte někoho, kdo by se měl hýbat víc? Pošlete mu tenhle článek. Sportovat je lepší ve dvou — a ještě lepší s celou komunitou.
 
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

@@ -26,7 +26,7 @@ Najděte volejbalové kurty na [hraju.cz](/sport/volejbal).
 
 ## Via ferraty — adrenalin bez horolezeckých zkušeností
 
-Via ferraty jsou zajištěné cesty po skalních stěnách, které zpřístupňují lezení i lidem bez horolezeckých zkušeností. V Česku jich přibývá každý rok — v roce 2026 jich máme přes **30 po celé republice**.
+Via ferraty jsou zajištěné cesty po skalních stěnách, které zpřístupňují lezení i lidem bez horolezeckých zkušeností. V Česku jich přibývá každý rok — v roce 2026 jich máme téměř **30 po celé republice**.
 
 **Proč zkusit:**
 - Adrenalinový zážitek s výhledy
@@ -45,7 +45,7 @@ Přehled ferrat v Česku na [hraju.cz](/sport/ferraty).
 
 ## Tenis — klasika, která nikdy nezklame
 
-Tenis je nejlépe dostupný letní sport v Česku. S více než **2 000 venkovními kurty** najdete místo na hru prakticky všude. Letní sezóna (květen–září) nabízí nejlepší podmínky a nejnižší ceny.
+Tenis je nejlépe dostupný letní sport v Česku. S více než **1 000 venkovními kurty** najdete místo na hru prakticky všude. Letní sezóna (květen–září) nabízí nejlepší podmínky a nejnižší ceny.
 
 **Proč právě teď:**
 - Venkovní kurty jsou levnější než kryté (od 150 Kč/hod)
@@ -100,8 +100,3 @@ Lezecká centra pro trénink na [hraju.cz](/sport/lezeni).
 
 Najděte sportovní zařízení ve vašem okolí na [hraju.cz](/).
 
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

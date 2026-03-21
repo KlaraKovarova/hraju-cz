@@ -145,8 +145,3 @@ Každý pád je učení. Každý pokus je pokrok. A ten moment, kdy konečně do
 
 Na [hraju.cz/sport/lezeni](/sport/lezeni) najdete přehled lezeckých a boulderingových hal v celém Česku. Najděte halu ve svém městě, podívejte se na otevírací dobu a ceník — a vyražte na svou první cestu. Stěna čeká.
 
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

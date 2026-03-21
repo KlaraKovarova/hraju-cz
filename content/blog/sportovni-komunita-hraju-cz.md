@@ -1,6 +1,6 @@
 ---
 title: "Sportovní komunita hraju.cz — proč ji budujeme a jak se zapojit"
-date: "2026-04-12"
+date: "2099-01-01"
 category: "komunita"
 excerpt: "hraju.cz není jen katalog sportovišť. Budujeme komunitu sportovních nadšenců, kteří si navzájem pomáhají najít ta nejlepší místa pro sport."
 sportTags: []
@@ -57,8 +57,3 @@ Vaše zkušenost má hodnotu. Sdílejte ji a pomozte ostatním najít ideální 
 
 [Přihlaste se](/prihlaseni) a začněte sdílet své zkušenosti s komunitou hraju.cz.
 
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

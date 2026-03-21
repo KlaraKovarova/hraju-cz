@@ -44,21 +44,16 @@ Při výběru kurzu se zaměřte na:
 
 ## Kam na dětské plavání v Praze
 
-Praha nabízí desítky bazénů s dětskými kurzy. Mezi nejoblíbenější patří:
+V naší databázi evidujeme **37 plaveckých zařízení v Praze** a **322 po celém Česku**. V Praze patří mezi nejznámější:
 
-- **Aquacentrum Šutka** — moderní zázemí, kurzy od 3 měsíců
-- **Plavecký stadion Podolí** — historický areál, široká nabídka kurzů
-- **Bazén Hostivař** — příjemné prostředí, menší skupiny
-- **Aquapark Čestlice** — kombinace výuky a zábavy
+- **[Aquacentrum Šutka](/sport/plavani/aquacentrum-sutka)** (Praha 8) — moderní zázemí, kurzy od 3 měsíců
+- **[Plavecký stadion Podolí](/sport/plavani/plavecky-stadion-podoli)** (Praha 4) — historický areál, široká nabídka kurzů
 
 Kompletní přehled bazénů s dětskými kurzy najdete na [hraju.cz v sekci plavání](/sport/plavani).
 
 ## Kam v dalších městech
 
-- **Brno** — Městské lázně Rašínova, bazén na Kraví Hoře
-- **Ostrava** — Čapkárna, Vodní svět
-- **Plzeň** — bazén Lochotín, Plavecký areál Slovany
-- **Olomouc** — Městský bazén, Aquapark
+- **Brno** — [Koupaliště Kraví hora](/sport/plavani/koupaliste-kravi-hora) a další
 
 ## Co s sebou na první hodinu?
 
@@ -80,10 +75,4 @@ Chcete, aby dítě mělo z plavání radost? Dodržujte tato pravidla:
 4. **Pravidelnost** — vynechávání hodin brzdí pokrok
 5. **Trpělivost se strachem** — strach z vody je normální a překonatelný
 
-Plavání je investice do zdraví a bezpečnosti vašeho dítěte. Na [hraju.cz](/sport/plavani) najdete přehled všech bazénů a plaveckých areálů v Česku, kde můžete začít.
-
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.
+Plavání je investice do zdraví a bezpečnosti vašeho dítěte. Na [hraju.cz](/sport/plavani) najdete přehled 322 bazénů a plaveckých areálů v Česku, kde můžete začít.

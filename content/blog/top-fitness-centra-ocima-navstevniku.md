@@ -1,6 +1,6 @@
 ---
 title: "Top fitness centra očima návštěvníků — co doporučuje komunita"
-date: "2026-04-09"
+date: "2099-01-01"
 category: "pruvodce-sporty"
 excerpt: "Která fitness centra v Česku si získala srdce návštěvníků? Přinášíme přehled oblíbených posiloven a studií podle hodnocení naší komunity."
 sportTags: ["fitness"]
@@ -51,12 +51,3 @@ Než se zapíšete do nového fitness centra, zvažte tyto faktory:
 
 Kompletní přehled fitness center najdete na [hraju.cz/sport/fitness](/sport/fitness).
 
----
-
-**Máte svůj oblíbený gym?** Pomozte ostatním s výběrem — podělte se o svou zkušenost a zanechte hodnocení. [Napište recenzi na hraju.cz](/sport/fitness) a pomozte budovat komunitu fitness nadšenců v Česku.
-
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

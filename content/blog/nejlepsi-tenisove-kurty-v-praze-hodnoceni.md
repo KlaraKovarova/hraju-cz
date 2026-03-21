@@ -1,6 +1,6 @@
 ---
 title: "Nejlepší tenisové kurty v Praze — hodnocení a tipy od hráčů"
-date: "2026-04-07"
+date: "2099-01-01"
 category: "pruvodce-mesta"
 excerpt: "Jaké tenisové kurty v Praze doporučují ostatní hráči? Přinášíme přehled nejoblíbenějších areálů podle hodnocení naší komunity."
 sportTags: ["tenis"]
@@ -56,12 +56,3 @@ Při výběru tenisového kurtu v Praze doporučujeme zvážit:
 
 Kompletní přehled tenisových kurtů v Praze najdete na [hraju.cz/sport/tenis](/sport/tenis).
 
----
-
-**Hráli jste v některém z těchto areálů?** Podělte se o svůj zážitek s ostatními — vaše hodnocení pomůže dalším hráčům najít to pravé místo. [Zanechte recenzi na hraju.cz](/sport/tenis) a pomozte budovat komunitu tenistů v Praze.
-
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

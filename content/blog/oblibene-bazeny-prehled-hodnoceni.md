@@ -1,6 +1,6 @@
 ---
 title: "Oblíbené bazény v Česku — přehled hodnocení od plavců"
-date: "2026-04-11"
+date: "2099-01-01"
 category: "pruvodce-mesta"
 excerpt: "Které bazény a aquaparky v Česku doporučují plavci? Přinášíme přehled nejoblíbenějších plaveckých areálů podle hodnocení naší komunity."
 sportTags: ["plavani"]
@@ -55,12 +55,3 @@ Krytý bazén [Aquacentrum Vrchlabí](/plavani/aquacentrum-vrchlabi) je skvělou
 
 Všechny bazény a aquaparky v Česku najdete na [hraju.cz/sport/plavani](/sport/plavani).
 
----
-
-**Máte svůj oblíbený bazén?** Pomozte ostatním plavcům najít to pravé místo — sdílejte svou zkušenost a zanechte hodnocení. [Napište recenzi na hraju.cz](/sport/plavani) a staňte se součástí naší plavecké komunity.
-
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

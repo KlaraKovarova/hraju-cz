@@ -120,10 +120,5 @@ Cvičení je jen polovina úspěchu. Základní výživová doporučení:
 4. **Nikdo vás nesleduje** — každý je soustředěný na svůj trénink
 5. **Začněte pomalu** — 30 minut 2× týdně je skvělý start
 
-Hledáte fitness centrum poblíž? Na [hraju.cz](/sport/fitness) najdete přehled posiloven a fitness studií v celém Česku — s cenami, lekcemi a hodnocením.
+Hledáte fitness centrum poblíž? Na [hraju.cz](/sport/fitness) najdete přehled posiloven a fitness studií v celém Česku — s cenami a kontakty.
 
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

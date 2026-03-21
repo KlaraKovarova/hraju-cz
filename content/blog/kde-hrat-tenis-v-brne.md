@@ -7,45 +7,21 @@ sportTags: ["tenis"]
 image: /images/blog/kde-hrat-tenis-v-brne.jpg
 ---
 
-Brno je po Praze druhé největší tenisové město v Česku. S více než **40 tenisovými areály** rozmístěnými po celém městě tu najde svůj kurt každý — od úplných začátečníků po turnajové hráče. Připravili jsme kompletní průvodce, který vám pomůže vybrat ten pravý.
+Brno je po Praze druhé největší tenisové město v Česku. V naší databázi evidujeme **40 tenisových areálů** v Brně a celkem přes 1 000 v celém Česku. Připravili jsme kompletní průvodce, který vám pomůže vybrat ten pravý.
 
 ## Nejlepší tenisové areály v Brně
 
-### Tenisový klub Brno (Brno-střed)
+### [Tenisové kurty Lužánky](/sport/tenis/tenisove-kurty-luzanky) a [Tenis Park Lužánky](/sport/tenis/tenis-park-luzanky)
 
-Jeden z nejstarších tenisových klubů v Česku se sídlem přímo v centru města. Nabízí **8 antukových kurtů** a **2 kryté kurty** pro celoroční hru. Výhodou je snadná dostupnost MHD a kvalitní zázemí se šatnami a klubovnou.
+Tradiční areály v největším brněnském parku — ideální kombinace sportu a relaxace. V letních měsících bývají hodně vytížené, doporučujeme rezervovat dopředu.
 
-- **Cena**: od 250 Kč/hod (venkovní), od 450 Kč/hod (krytý)
-- **Povrch**: antuka, koberec (indoor)
-- **Rezervace**: online přes web klubu
+### [Sportovní Lesná](/sport/tenis/sportovni-lesna)
 
-### TK Žlutý kopec
+Multisportovní areál v městské části Brno-sever. Kromě tenisu nabízí i squash, badminton a fitness.
 
-Moderní areál v klidné rezidenční čtvrti s výhledem na město. Disponuje **6 venkovními kurty** a nově zrekonstruovanou nafukovací halou pro zimní sezónu. Populární mezi rodinami díky tenisové škole pro děti.
+### [Tenis Kraví Hora Brno](/sport/tenis/tenis-kravi-hora-brno)
 
-- **Cena**: od 200 Kč/hod (venkovní), od 400 Kč/hod (hala)
-- **Bonus**: tenisová škola pro děti od 5 let
-
-### Sportovní centrum Lesná
-
-Multisportovní areál v městské části Brno-sever. Kromě tenisu nabízí i squash, badminton a fitness. **4 tenisové kurty** s kvalitní antukou a osvětlením pro večerní hru.
-
-- **Cena**: od 220 Kč/hod
-- **Otevírací doba**: 7:00–22:00
-
-### TC Lužánky
-
-Tradiční areál v největším brněnském parku. **10 antukových kurtů** obklopených zelení — ideální kombinace sportu a relaxace. V letních měsících bývá hodně vytížený, doporučujeme rezervovat dopředu.
-
-- **Cena**: od 180 Kč/hod (nejlevnější v centru)
-- **Povrch**: antuka
-
-### Hotel Maximus Resort (Brno-Jundrov)
-
-Prémiový areál na okraji města s **4 kurty**, wellness centrem a restaurací. Ideální pro ty, kdo chtějí spojit tenis s relaxací. K dispozici je i osobní trenér.
-
-- **Cena**: od 350 Kč/hod
-- **Bonus**: wellness, sauna, restaurace
+Tenisové kurty s výhledem na město, oblíbená lokalita.
 
 ## Kde hrát v zimě?
 
@@ -90,10 +66,4 @@ Cena skupinové lekce se pohybuje od **150 Kč/osobu**, individuální trénink 
 
 Brno nabízí tenisové kurty pro každý rozpočet i úroveň. Ať už chcete rekreačně odpalit míčky o víkendu nebo se připravujete na turnaj, v moravské metropoli najdete ideální zázemí.
 
-Hledáte konkrétní tenisový areál v Brně? Na [hraju.cz](/sport/tenis) najdete kompletní přehled všech tenisových kurtů s cenami, kontakty a možností rezervace.
-
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.
+Hledáte konkrétní tenisový areál v Brně? Na [hraju.cz/sport/tenis](/sport/tenis) najdete kompletní přehled všech 1 021 tenisových zařízení v Česku.

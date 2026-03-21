@@ -67,8 +67,8 @@ Badmintonové košíčky jsou paradoxně dražší provozní náklad — péřov
 ## Dostupnost
 
 V Česku najdete:
-- **Squashových kurtů**: přes 300 (většina sportovních center má 2–4 kurty)
-- **Badmintonových hal**: přes 250 (často v multisportovních areálech)
+- **Squashových kurtů**: přes 200 (většina sportovních center má 2–4 kurty)
+- **Badmintonových hal**: téměř 150 (často v multisportovních areálech)
 
 Oba sporty jsou dobře dostupné ve všech krajských městech. V menších městech má obvykle lepší pokrytí badminton — kurty se snáze postaví v existujících halách.
 
@@ -97,8 +97,3 @@ Mnoho sportovních center nabízí squash i badminton pod jednou střechou. Oba 
 
 Najděte squashové i badmintonové kurty ve vašem městě na [hraju.cz](/sport/squash) a [hraju.cz](/sport/badminton).
 
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

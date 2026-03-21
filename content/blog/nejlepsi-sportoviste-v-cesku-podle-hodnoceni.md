@@ -1,6 +1,6 @@
 ---
 title: "Nejlepší sportoviště v Česku — jak poznat kvalitu předem"
-date: "2026-04-14"
+date: "2099-01-01"
 category: "tipy"
 excerpt: "Jak poznat kvalitní sportoviště bez osobní návštěvy? Sdílíme kritéria, podle kterých hodnotíme sportoviště, a na co se dívat v recenzích ostatních."
 sportTags: ["tenis", "squash", "badminton", "fitness", "plavani", "golf"]
@@ -69,8 +69,3 @@ Každá vaše recenze pomáhá ostatním sportovním nadšencům. Stačí pár v
 
 Najděte sportoviště ve vašem okolí na [hraju.cz](/) a sdílejte své zkušenosti.
 
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.

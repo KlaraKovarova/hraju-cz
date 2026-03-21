@@ -101,8 +101,3 @@ Rok 2026 je pro fitness skvělý — nikdy nebylo tolik možností, jak se hýba
 
 Najděte fitness centrum ve svém okolí na [hraju.cz/sport/fitness](/sport/fitness). Porovnejte nabídku, ceny a vybavení — a hlavně začněte. Nejlepší trénink je ten, který skutečně uděláte.
 
----
-
-## Byli jste tu? Podělte se o zkušenost!
-
-Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.
