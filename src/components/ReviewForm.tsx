@@ -20,6 +20,7 @@ export function ReviewForm({ facilityId, currentPath }: ReviewFormProps) {
   const [user, setUser] = useState<UserData | null>(null);
   const [authChecked, setAuthChecked] = useState(false);
   const [rating, setRating] = useState(0);
+  const [title, setTitle] = useState("");
   const [text, setText] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -50,6 +51,7 @@ export function ReviewForm({ facilityId, currentPath }: ReviewFormProps) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           rating,
+          title: title.trim() || undefined,
           text: text.trim() || undefined,
         }),
       });
@@ -132,6 +134,20 @@ export function ReviewForm({ facilityId, currentPath }: ReviewFormProps) {
           size="md"
           interactive
           onChange={setRating}
+        />
+      </div>
+
+      <div>
+        <label className="mb-1 block text-xs font-medium text-zinc-600">
+          Titulek (nepovinné)
+        </label>
+        <input
+          type="text"
+          maxLength={100}
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm focus:border-emerald-400 focus:outline-none"
+          placeholder="Shrňte svou zkušenost..."
         />
       </div>
 

@@ -23,6 +23,7 @@ import EditSuggestionForm from "@/components/EditSuggestionForm";
 import { StarRating } from "@/components/StarRating";
 import { ReviewForm } from "@/components/ReviewForm";
 import { ReviewList } from "@/components/ReviewList";
+import { AggregateRating } from "@/components/AggregateRating";
 import { CityLandingContent } from "@/components/CityLandingContent";
 import { PhotoGallery } from "@/components/PhotoGallery";
 import { OpeningHoursDisplay } from "@/components/OpeningHoursDisplay";
@@ -216,6 +217,36 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
     create: { facilityId: facility.id, date: today, views: 1 },
   }).catch(() => {});
 
+  // Query star distribution for AggregateRating component + Schema.org
+  const [starDistribution, recentApprovedReviews] = await Promise.all([
+    prisma.review.groupBy({
+      by: ["rating"],
+      where: { facilityId: facility.id, isApproved: true },
+      _count: { rating: true },
+    }),
+    prisma.review.findMany({
+      where: { facilityId: facility.id, isApproved: true },
+      orderBy: { createdAt: "desc" },
+      take: 10,
+      select: {
+        id: true,
+        authorName: true,
+        rating: true,
+        title: true,
+        text: true,
+        createdAt: true,
+      },
+    }),
+  ]);
+
+  // Build distribution array [1star, 2star, 3star, 4star, 5star]
+  const distribution = [0, 0, 0, 0, 0];
+  for (const row of starDistribution) {
+    if (row.rating >= 1 && row.rating <= 5) {
+      distribution[row.rating - 1] = row._count.rating;
+    }
+  }
+
   // Build JSON-LD LocalBusiness structured data for SEO
   const phone = facility.isClaimed
     ? facility.contacts.find((c) => c.type === "PHONE")?.value
@@ -293,6 +324,35 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
       openingHoursSpecification: openingHoursSpecs,
     }),
     isAccessibleForFree: false,
+    // Schema.org AggregateRating for Google rich snippets (stars in SERPs)
+    ...(facility.averageRating != null && facility.reviewCount > 0 && {
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: facility.averageRating.toFixed(1),
+        bestRating: "5",
+        worstRating: "1",
+        reviewCount: facility.reviewCount,
+      },
+    }),
+    // Schema.org Review markup for individual reviews
+    ...(recentApprovedReviews.length > 0 && {
+      review: recentApprovedReviews.map((r) => ({
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: r.authorName,
+        },
+        datePublished: new Date(r.createdAt).toISOString().split("T")[0],
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: r.rating,
+          bestRating: 5,
+          worstRating: 1,
+        },
+        ...(r.title && { name: r.title }),
+        ...(r.text && { reviewBody: r.text }),
+      })),
+    }),
   };
 
   // BreadcrumbList structured data for SEO
@@ -809,8 +869,20 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
           <h2 className="mb-6 text-xl font-bold text-zinc-900">
             Recenze
           </h2>
-          <div className="grid gap-8 lg:grid-cols-2">
-            <div>
+
+          {/* Aggregate rating summary */}
+          {facility.averageRating != null && facility.reviewCount > 0 && (
+            <div className="mb-8 rounded-2xl border border-zinc-100 bg-zinc-50/50 p-6">
+              <AggregateRating
+                averageRating={facility.averageRating}
+                reviewCount={facility.reviewCount}
+                distribution={distribution}
+              />
+            </div>
+          )}
+
+          <div className="grid gap-8 lg:grid-cols-3">
+            <div className="lg:col-span-2">
               <ReviewList facilityId={facility.id} />
             </div>
             <div>

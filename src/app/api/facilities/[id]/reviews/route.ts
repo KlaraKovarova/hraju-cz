@@ -12,18 +12,28 @@ export async function GET(
   const { searchParams } = new URL(request.url);
   const page = Math.max(1, parseInt(searchParams.get("page") || "1", 10));
   const limit = Math.min(50, Math.max(1, parseInt(searchParams.get("limit") || "10", 10)));
+  const sort = searchParams.get("sort") || "newest";
+
+  const orderBy: Record<string, string> =
+    sort === "highest" ? { rating: "desc" } :
+    sort === "lowest" ? { rating: "asc" } :
+    sort === "oldest" ? { createdAt: "asc" } :
+    sort === "helpful" ? { helpful: "desc" } :
+    { createdAt: "desc" };
 
   const [reviews, total] = await Promise.all([
     prisma.review.findMany({
       where: { facilityId: id, isApproved: true },
-      orderBy: { createdAt: "desc" },
+      orderBy,
       skip: (page - 1) * limit,
       take: limit,
       select: {
         id: true,
         authorName: true,
         rating: true,
+        title: true,
         text: true,
+        helpful: true,
         createdAt: true,
       },
     }),
@@ -49,14 +59,14 @@ export async function POST(
     );
   }
 
-  let body: { rating?: number; text?: string };
+  let body: { rating?: number; title?: string; text?: string };
   try {
     body = await request.json();
   } catch {
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
   }
 
-  const { rating, text } = body;
+  const { rating, title, text } = body;
 
   // Use session data for author info
   const authorName = session.name || session.email.split("@")[0];
@@ -118,6 +128,7 @@ export async function POST(
       authorName: authorName.trim(),
       authorEmail: authorEmail.toLowerCase().trim(),
       rating,
+      title: title?.trim() || null,
       text: text?.trim() || null,
     },
   });

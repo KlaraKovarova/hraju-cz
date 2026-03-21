@@ -125,3 +125,25 @@
     @apply bg-background text-foreground font-sans;
   }
 }
+
+/* Blog prose table styling */
+.prose table {
+  @apply w-full border-collapse text-sm;
+}
+.prose thead th {
+  @apply border-b-2 border-zinc-300 bg-zinc-50 px-3 py-2 text-left font-semibold text-zinc-700;
+}
+.prose tbody td {
+  @apply border-b border-zinc-200 px-3 py-2;
+}
+.prose tbody tr:last-child td {
+  @apply border-b-0;
+}
+.prose tbody tr:hover {
+  @apply bg-zinc-50;
+}
+
+/* Responsive table wrapper — applied via JS in blog page */
+.table-wrapper {
+  @apply overflow-x-auto -mx-4 px-4;
+}

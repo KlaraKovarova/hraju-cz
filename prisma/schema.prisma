@@ -212,7 +212,10 @@ model Review {
   authorName        String
   authorEmail       String
   rating            Int       // 1-5
+  title             String?
   text              String?   @db.Text
+  helpful           Int       @default(0)
+  flagged           Boolean   @default(false)
   isApproved        Boolean   @default(false)
   ownerNotifiedAt   DateTime? // when facility owner was emailed about this review
   createdAt         DateTime  @default(now())
