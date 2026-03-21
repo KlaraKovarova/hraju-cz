@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { SPORTS } from "@/lib/sports";
 import { prisma } from "@/lib/prisma";
 import exportData from "@/data/facilities-export.json";
-import { cityToSlug } from "@/lib/regions";
+import { cityToSlug, REGIONS } from "@/lib/regions";
 import { getAllPosts, CATEGORIES } from "@/lib/blog";
 
 const BASE_URL = "https://www.hraju.cz";
@@ -93,6 +93,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.9,
     });
+  }
+
+  // Region pages: /sport/{sport}/kraj/{region}
+  for (const sport of SPORTS) {
+    for (const region of REGIONS) {
+      entries.push({
+        url: `${BASE_URL}/sport/${sport.slug}/kraj/${region.slug}`,
+        lastModified: sportLastmod.get(sport.slug),
+        changeFrequency: "weekly",
+        priority: 0.7,
+      });
+    }
   }
 
   // Facility detail pages — one entry per sport×facility combination

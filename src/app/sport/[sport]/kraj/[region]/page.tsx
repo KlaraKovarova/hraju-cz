@@ -49,8 +49,23 @@ export default async function RegionPage({ params }: RegionPageProps) {
   const topFacilities = await getTopFacilitiesByRegionAndSport(regionSlug, sport.slug, 10);
   const totalFacilities = cities.reduce((sum, c) => sum + c.facilityCount, 0);
 
+  // BreadcrumbList JSON-LD
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "hraju.cz", item: "https://www.hraju.cz" },
+      { "@type": "ListItem", position: 2, name: sport.nameCs, item: `https://www.hraju.cz/sport/${sportSlug}` },
+      { "@type": "ListItem", position: 3, name: region.name, item: `https://www.hraju.cz/sport/${sportSlug}/kraj/${regionSlug}` },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-zinc-50/50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       {/* Header */}
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">

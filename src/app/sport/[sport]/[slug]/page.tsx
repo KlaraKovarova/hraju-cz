@@ -766,6 +766,40 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
               />
             </div>
 
+            {/* Internal Links: City & Sport pages */}
+            <div className="rounded-2xl border border-zinc-100 bg-white p-5">
+              <h3 className="mb-3 font-bold text-zinc-900">Prozkoumejte okolí</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href={`/sport/${sportSlug}/${citySl}`}
+                    className="flex items-center gap-2 text-sm font-medium text-emerald-600 hover:text-emerald-700"
+                  >
+                    <MapPin className="h-4 w-4" />
+                    {sport.nameCs} v {facility.location.city}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={`/mesto/${citySl}`}
+                    className="flex items-center gap-2 text-sm font-medium text-emerald-600 hover:text-emerald-700"
+                  >
+                    <MapPin className="h-4 w-4" />
+                    Všechny sporty v {facility.location.city}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={`/sport/${sportSlug}`}
+                    className="flex items-center gap-2 text-sm font-medium text-emerald-600 hover:text-emerald-700"
+                  >
+                    {sport.icon}{" "}
+                    {sport.nameCs} v celé ČR
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
             {/* Amenities */}
             {facility.amenities.length > 0 && (
               <div className="rounded-2xl border border-zinc-100 bg-white p-5">

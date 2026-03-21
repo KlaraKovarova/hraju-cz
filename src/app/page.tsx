@@ -62,11 +62,47 @@ export default async function Home() {
     })),
   };
 
+  const organizationLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "hraju.cz",
+    url: "https://www.hraju.cz",
+    logo: "https://www.hraju.cz/og-image.jpg",
+    description: "Sportoviště v České republice — tenisové kurty, squash, badminton, bazény, fitness a další.",
+    areaServed: {
+      "@type": "Country",
+      name: "Czech Republic",
+    },
+  };
+
+  const websiteLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "hraju.cz",
+    url: "https://www.hraju.cz",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://www.hraju.cz/hledat?q={search_term_string}",
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <main className="min-h-screen bg-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
       />
 
       {/* Navigation */}
@@ -137,7 +173,7 @@ export default async function Home() {
               {topCities.slice(0, 5).map((city) => (
                 <Link
                   key={city.citySlug}
-                  href={`/sport/tenis/${city.citySlug}`}
+                  href={`/mesto/${city.citySlug}`}
                   className="rounded-full border border-zinc-200 bg-white px-3 py-1 text-zinc-600 transition hover:border-emerald-300 hover:text-emerald-700"
                 >
                   {city.city}
@@ -330,7 +366,7 @@ export default async function Home() {
               {topCities.map((city) => (
                 <Link
                   key={city.citySlug}
-                  href={`/sport/tenis/${city.citySlug}`}
+                  href={`/mesto/${city.citySlug}`}
                   className="group flex items-center gap-3 rounded-2xl border border-zinc-100 bg-zinc-50/50 p-4 transition hover:border-emerald-200 hover:shadow-sm"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 transition group-hover:bg-emerald-100">
