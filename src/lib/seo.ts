@@ -71,6 +71,27 @@ const SPORT_FACILITY_TYPES: Record<
     instrumental: "ferratami",
     titleSuffix: "ferraty a zajištěné cesty v celé ČR",
   },
+  bowling: {
+    singular: "bowlingová dráha",
+    plural: "bowlingové dráhy a herny",
+    pluralGenitive: "bowlingových drah",
+    instrumental: "bowlingovými dráhami",
+    titleSuffix: "bowlingové dráhy a herny v celé ČR",
+  },
+  "stolni-tenis": {
+    singular: "herna stolního tenisu",
+    plural: "herny stolního tenisu",
+    pluralGenitive: "heren stolního tenisu",
+    instrumental: "hernami stolního tenisu",
+    titleSuffix: "stolní tenis a pingpong v celé ČR",
+  },
+  florbal: {
+    singular: "florbalová hala",
+    plural: "florbalové haly",
+    pluralGenitive: "florbalových hal",
+    instrumental: "florbalovými halami",
+    titleSuffix: "florbalové haly a sportoviště v celé ČR",
+  },
 };
 
 export function getSportFacilityType(slug: string): string {
