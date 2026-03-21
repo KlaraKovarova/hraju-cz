@@ -26,10 +26,23 @@ Jeden z nejlépe vybavených tenisových areálů na Moravě. 21 antukových kur
 
 **Tip:** V letní sezóně (květen–září) jsou antukové kurty levnější než hala. Rezervujte minimálně den předem — hlavně víkendová dopoledne se rychle obsazují.
 
-### Další tenisové možnosti
+### ČLTK 1928 Olomouc
 
-- **BEST Sportcentrum** (Dolní Hejčínská 1194/36) — multisportovní centrum u fotbalového stadionu Sigmy, kromě tenisu nabízí i squash a bowling
-- **Univerzitní sportoviště FTK** — kampus Palackého univerzity nabízí kurty pro studenty a veřejnost
+**Adresa:** Centrum města, v městských sadech
+
+Jeden z nejstarších tenisových klubů v regionu — tradice téměř sto let. 8 antukových venkovních kurtů (léto) a 4 kurty v hale (od října).
+
+**Cena:** 150 Kč/hod (všední dny do 14:00), 200 Kč/hod (odpoledne do 20:00). Online rezervace přes rezzy.eu.
+
+**Proč sem:** Centrální poloha, příjemné prostředí v parcích, nižší ceny než TK MILO. Ideální pro příležitostné hráče.
+
+### Tenis Centrum Olomouc
+
+**Adresa:** 17. listopadu 426/41, Olomouc
+
+5 venkovních antukových kurtů + 3 v kryté hale, nafukovací hala v zimě. Individuální i skupinové kurzy celoročně.
+
+**Kontakt:** 777 587 677
 
 ## Plavání
 
@@ -48,9 +61,15 @@ Největší plavecký areál ve městě. Dva padesátimetrové bazény — kryt�
 
 **Cena:** Orientačně 100–150 Kč za dospělého/2 hodiny. Děti, studenti a senioři mají slevu.
 
-### Aquacentrum Delfínek
+### Aquapark Olomouc
 
-Součást Plaveckého stadionu. Zaměřené na rodiny — vodní atrakce, skluzavky, dětský svět. Pokud hledáte zábavu pro děti a nechcete plavat v olympijském bazénu, tohle je správná volba.
+**Adresa:** Kafkova 526/21, Slavonín
+
+Samostatný aquapark mimo centrum města. Hlavní atrakce: 123metrový tobogán (jeden z nejdelších v ČR), relaxační bazén, masážní trysky, vířivky, dětská brouzdaliště. Celková vodní plocha 1 200 m² — polovina uvnitř, polovina venku.
+
+**Pro koho:** Rodiny s dětmi, relaxace, adrenalin (tobogán). Součástí je i wellness se saunami a masážemi.
+
+**Kontakt:** 588 517 770, aqua-olomouc.cz
 
 ## Lezení a bouldering
 
@@ -92,26 +111,88 @@ Fitko v unikátním prostoru — přímo na severní tribuně fotbalového stadi
 
 **Kontakt:** 725 751 547, natribune.cz
 
-### Další fitness centra
+### Eurogym Fitness
 
-Olomouc má desítky fitness center — od velkých řetězců po lokální posilovny. Při výběru sledujte:
-- **Umístění** — ideálně na trase z práce/školy domů, jinak nepůjdete
-- **Špičkové hodiny** — v 17–19 h jsou velká centra přeplněná, menší fitka méně
-- **Skupinové lekce** — pokud chcete komunitu, ne jen stroje
+**Adresa:** Stupkova 952/18, Nová Ulice
 
-## Squash a bowling
+Jedno z největších a nejmodernějších fitness center v Olomouci — 1 100 m². Kompletní vybavení od kardio strojů po volné váhy.
+
+**Kontakt:** 581 110 733, eurogym.cz
+
+### Posilovna Ganbare
+
+Nonstop posilovna (24/7) s moderním vybavením. Přátelská atmosféra, vhodná pro začátečníky i pokročilé. Ideální pro ty, kdo chtějí cvičit v nestandardní dobu.
+
+### Jak vybrat fitness v Olomouci
+
+- **Ranní ptáčata** → Fitcentrum Na tribuně (od 6:00)
+- **Noční sovy** → Posilovna Ganbare (24/7)
+- **Maximum prostoru a strojů** → Eurogym (1 100 m²)
+- **Multisport** → OMEGASPORT (fitness + tenis + squash pod jednou střechou)
+
+## Squash
+
+### OMEGASPORT
+
+**Adresa:** Legionářská 1299/19, Olomouc
+
+Největší multisportovní komplex v Olomouci. 3 squashové kurty (ASB), pravidelné turnaje a amatérská squashová liga. Součást areálu s tenisem, badmintonem, fitness a wellness.
+
+**Proč sem:** Pokud chcete squash brát vážněji — liga, turnaje, komunita hráčů.
+
+### Squash Club Koruna
+
+**Adresa:** Pekařská 1 / Zámečnická 2 (horní patro OD Koruna, boční vchod) — přímo v historickém centru
+
+2 klimatizované squashové kurty. Komorní klubová atmosféra. Nabízí i spinning a infrasaunu.
+
+**Kontakt:** 720 130 003
+
+**Proč sem:** Nejdostupnější squash v centru města. Po práci zastavíte cestou domů.
+
+### Relax Sports
+
+**Adresa:** Janského 8a, Povel
+
+4 squashové kurty v nejvyšší kvalitě, plně klimatizované. Nekuřácké prostředí, bar, pravidelné turnaje pro amatéry i pokročilé. Součástí je i fitness.
+
+**Kontakt:** relaxsports.cz
+
+## Bowling
+
+### BOWLAND Bowling Center
+
+**Adresa:** Galerie Šantovka, centrum města
+
+18 profesionálních drah — největší bowling v regionu. Automatické bočnice pro děti. Součástí je restaurace s neapolskou pizzou a točeným pivem.
+
+**Cena:** 450 Kč/hod (všední dny do 15:00), 550 Kč/hod (víkendy a večery). Boty v ceně. Max 6 hráčů na dráhu. Studentské karty se slevou až 40 %.
+
+**Otevírací doba:** Po–Pá 11:00–22:00, So 9:00–22:00, Ne 9:00–21:00
 
 ### BEST Sportcentrum
 
 **Adresa:** Dolní Hejčínská 1194/36 (u stadionu Sigmy)
 
-Multisportovní centrum s squashovými kurty, bowlingem, tanečním sálem a restaurací. Pár minut pěšky od centra města.
-
-**Co oceníte:** Pod jednou střechou vyřešíte squash, bowling i večeři. Vhodné pro skupiny a firemní akce. Online rezervace přes best-sportcentrum.isportsystem.cz.
+6 bowlingových drah + 2 squashové kurty, taneční sál, restaurace. Menší než BOWLAND, ale klidnější atmosféra a ideální pro firemní akce.
 
 ## Badminton
 
-Badminton v Olomouci hledejte v multisportovních halách. TK MILO nabízí badmintonové kurty (kontakt: 728 071 720) vedle tenisového areálu. Další možnosti nabízí univerzitní sportoviště a sportovní centra v okolí Nové Ulice.
+### Badminton Akademie Olomouc (hala MILO)
+
+**Adresa:** Na Střelnici 37, Olomouc (stejný areál jako TK MILO)
+
+4 badmintonové kurty. Sídlo Badminton Akademie Olomouc — profesionální tréninkové zázemí.
+
+**Kontakt:** 733 300 573, badminton-olomouc.cz
+
+### OMEGASPORT
+
+**Adresa:** Legionářská 1299/19
+
+4 badmintonové kurty s profesionálním odpruženým povrchem. Badmintonová škola pro děti, trénink s trenérem.
+
+**Kontakt:** 603 972 356
 
 ## Běh a venkovní sporty
 
@@ -139,12 +220,20 @@ Záleží na tom, co hledáte:
 
 | Co chcete | Kam jít |
 |-----------|---------|
-| Tenis celoročně | TK MILO (hala + venkovní kurty) |
-| Plavání / relax s dětmi | Plavecký stadion + Delfínek |
-| Lezení s lanem (výška) | Flash Wall |
+| Tenis (velký areál, turnaje) | TK MILO (24 kurtů) |
+| Tenis (centrum, nižší cena) | ČLTK 1928 (150–200 Kč/hod) |
+| Plavání (trénink, 50m) | Plavecký stadion |
+| Aquapark s dětmi | Aquapark Olomouc (123m tobogán) |
+| Lezení s lanem (výška) | Flash Wall (13m, 180 cest) |
 | Bouldering (sólo, komunita) | Pajkland |
-| Squash + bowling | BEST Sportcentrum |
+| Squash (liga, turnaje) | OMEGASPORT |
+| Squash (centrum města) | Squash Club Koruna |
+| Bowling (velký, rodiny) | BOWLAND (18 drah) |
+| Badminton (akademie) | Hala MILO |
 | Fitness (ranní ptáčata) | Na tribuně (od 6:00) |
+| Fitness (nonstop) | Ganbare (24/7) |
+| Fitness (největší prostor) | Eurogym (1 100 m²) |
+| Multisport pod jednou střechou | OMEGASPORT |
 | Běh | Smetanovy sady, podél Moravy |
 
 ---
