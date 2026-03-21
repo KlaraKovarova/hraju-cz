@@ -56,7 +56,10 @@ Prémiová posilovna v OC Pyramida — stejná síť jako v Hradci Králové.
 
 - **Adresa:** Tř. Míru 92, Pardubice (OC Pyramida)
 - **Vybavení:** Technogym, Life Fitness, Hammer Strength
+- **Ceny:** Jednorázový vstup 220 Kč (studenti 200 Kč), měsíční 1 190 Kč
 - **Web:** [fitness-suncity.cz](https://fitness-suncity.cz/)
+
+**Tip:** První návštěva je ZDARMA — můžete si vše vyzkoušet bez závazku.
 
 ### Fit-Sport Pardubice
 
@@ -106,11 +109,15 @@ Největší plavecký areál v Pardubickém kraji — 50m i 25m bazén, aqua zó
   - Tréningový 25m bazén
   - Aqua zóna s atrakcemi
 - **Wellness:** Finská sauna, parní komora, ochlazovací bazén, solná jeskyně
+- **Ceny (3 zóny):**
+  - Zóna 1 (bazény): 130 Kč/60 min
+  - Zóna 2 (bazény + wellness): 205 Kč/60 min
+  - Zóna 3 (vše včetně aqua): 365 Kč/60 min
 - **Otevírací doba:** Po–Pá 6:00–21:00, So–Ne a svátky 9:00–21:00
 - **Speciální:** Čtvrtek — wellness pouze pro ženy. Středa 10–12 — seniorský wellness.
 - **Web:** [aquapce.cz](https://www.aquapce.cz/)
 
-**Pro koho:** Sportovní plavci ocení 50m bazén, rodiny aqua zónu, relaxující wellness. Vše pod jednou střechou.
+**Pro koho:** Sportovní plavci ocení 50m bazén (zóna 1 za 130 Kč), rodiny aqua zónu, relaxující wellness. Vše pod jednou střechou.
 
 ### Koupaliště Cihelna
 
@@ -131,10 +138,11 @@ Legendární pardubické letní koupaliště — 1 km od centra.
 
 ### H Centrum
 
-Multisportovní centrum s lezeckou stěnou.
+Multisportovní centrum s lezeckou stěnou — 50–60 cest v obtížnosti UIAA 3–9.
 
 - **Adresa:** K Vápence 2677, Pardubice
-- **Nabídka:** Lezecká stěna, další sporty
+- **Nabídka:** Lezecká stěna (50–60 cest), další sporty
+- **Rezervace:** Není nutná — přijďte kdykoliv v otevírací době
 - **Web:** [hcentrum.net](https://hcentrum.net/)
 
 ### Jungle Sport Park Pardubice
@@ -143,20 +151,24 @@ Bouldering, parkour a pohybové aktivity.
 
 - **Adresa:** Ohrazenická 323, Pardubice
 - **Nabídka:** Boulderingová stěna, parkour, trampolíny
+- **Ceny:** Dospělí 220 Kč (bez limitu), studenti 160 Kč, děti 120 Kč. Lezečky k zapůjčení 70 Kč.
 - **Web:** [junglepardubice.cz](https://www.junglepardubice.cz/)
 
 ### Gekon Boulder Bar
 
-Čistě boulderingové centrum.
+Čistě boulderingové centrum — 270 m², maximální výška 9,3 m, 76 cest.
 
 - **Adresa:** Sládkovského 505, Pardubice
+- **Plocha:** 270 m², 76 cest, výška až 9,3 m
+- **Ceny:** Do 300 Kč za vstup
 - **Web:** [gekon-boulderbar.cz](https://gekon-boulderbar.cz/)
 
 ### Sokolovna Pardubice
 
-Lezecká stěna v historické sokolovně.
+Lezecká stěna v historické sokolovně — 12 m výšky, 36 cest, 3 autobelayové systémy.
 
 - **Adresa:** Jiráskova 29, Pardubice
+- **Stěna:** 12 m vysoká, 36 cest, 3 auto-belay systémy
 - **Web:** [sokolovnapardubice.cz](https://sokolovnapardubice.cz/)
 
 ## Squash a badminton
@@ -167,6 +179,7 @@ Squash, badminton a skupinové lekce pod jednou střechou.
 
 - **Adresa:** Přerovská 503, Pardubice – Svítkov
 - **Nabídka:** Squash (badminton na squashovém kurtu č. 3), posilovna, sauna, skupinové lekce (pilates, tabata, jóga, core trénink)
+- **Ceny:** Squash 320 Kč/hodina (dopoledne 250 Kč), badminton 280 Kč/hodina
 - **Otevírací doba:** Po–Pá 9:00–12:00 a 15:00–21:00, Ne 14:00–21:00 (So zavřeno)
 - **Kontakt:** +420 608 197 964
 - **Web:** [restaart.cz](https://restaart.cz/)
@@ -193,7 +206,7 @@ Domov hokejového Dynama Pardubice. Nabízí i veřejné bruslení.
 
 - **Adresa:** Sukova třída 1735, Pardubice
 - **Kapacita:** 10 194 diváků
-- **Veřejné bruslení:** V sezóně (říjen–březen), rozvrh na webu
+- **Veřejné bruslení:** V sezóně (říjen–březen), rozvrh na webu. Vstupné 60 Kč dospělí, 30 Kč děti.
 - **Web:** [arenapce.cz](https://arenapce.cz/)
 
 **Pro koho:** Hokej je v Pardubicích náboženství. Přijďte na zápas Dynama — atmosféra je nezapomenutelná. A veřejné bruslení je skvělá rodinná aktivita.
