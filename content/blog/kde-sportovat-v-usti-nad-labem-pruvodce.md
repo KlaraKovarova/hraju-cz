@@ -43,12 +43,17 @@ Celoroční tenisové centrum na Severní Terase s přetlakovou halou v zimě.
 
 ### Tenis Club Ústí nad Labem
 
-Tradiční tenisový klub u zimního stadionu.
+Největší tenisový areál v Ústí — 10 kurtů (8 antuka + 2 hard court US Open) + halový kurt.
 
-- **Adresa:** Masarykova ul., Ústí nad Labem (u zimního stadionu)
+- **Adresa:** Masarykova ul., 400 01 Ústí nad Labem – Klíše (u zimního stadionu)
+- **Kurty:** 10 venkovních (8 antuka + 2 tvrdý povrch) + 1 halový
+- **Ceny:** Jednorázový letní poplatek 500 Kč, pak 60 Kč/hodina za kurt
+- **Letní kempy:** 2 500 Kč (kurt + trenér + oběd + kondiční příprava)
 - **Otevírací doba:** Denně 8:00–20:00
 - **Kontakt:** +420 472 743 196, +420 602 188 002
 - **Web:** [tenisusti.cz](http://www.tenisusti.cz/)
+
+**Tip:** 60 Kč/hodina za kurt (po zaplacení sezónního poplatku) — mimořádně levný tenis.
 
 ### Sportovní areál Všebořice
 
@@ -102,10 +107,19 @@ Dvoupodlažní premium fitness s wellness a 7 saunami.
 Fitness centrum ve sportovní hale SLUNETA — stroje Technogym a Grünsport.
 
 - **Adresa:** Černá cesta 1111/4, Klíše, 400 01 Ústí nad Labem
+- **Ceny:**
+  - Jednorázový vstup: 160 Kč (studenti/senioři 130 Kč)
+  - 10 vstupů: 1 390 Kč (studenti 1 050 Kč, platnost 90 dní)
+  - Měsíční: 1 350 Kč (studenti 1 090 Kč)
+  - Půlroční: 6 500 Kč
+  - Roční: 12 000 Kč (bonus: hotelový pobyt)
+  - RFID čip: 200 Kč jednorázově
 - **Otevírací doba:** Po–Pá 6:30–21:00, So–Ne a svátky 7:00–20:00
 - **Kontakt:** +420 777 885 152
 - **Email:** info@slunetafitness.cz
 - **Web:** [slunetafitness.cz](https://www.slunetafitness.cz/)
+
+**Tip:** Přijímá Sodexo, Edenred, Cheque Déjeuner i Multisport.
 
 ### Fitness Factory
 
@@ -155,11 +169,18 @@ Historický městský bazén v centru s nejnižšími cenami.
 
 ### Termální koupaliště Brná
 
-Letní koupaliště s termální vodou v přírodním areálu.
+Letní koupaliště s termální vodou z hloubky 300+ metrů — teplota 30 °C.
 
 - **Adresa:** Brná, Ústí nad Labem (přírodní areál u Labe)
-- **Sezóna:** Červen–září
+- **Bazény:** Rekreační bazén, bazén s tobogánem, plavecký bazén, dětské brouzdaliště
+- **Ceny:**
+  - 1 hodina: 50 Kč (dospělí), 30 Kč (děti/senioři)
+  - 2 hodiny / celodenní (od 21. 5.): 100 Kč (dospělí), 60 Kč (děti/senioři)
+- **Sezóna:** 1. 5. – 15. 9. denně 9:00–19:00 (červenec–srpen do 21:00)
+- **Atrakce:** Tobogán, beach volejbal, minigolf, restaurace
 - **Web:** [msul.cz](https://www.msul.cz/)
+
+**Pro koho:** Termální voda z přírodního pramene (300+ m hloubka) — unikát v Ústeckém kraji. Od 50 Kč/hodina.
 
 ## Lezení a bouldering — 2 300 m² stěn
 
@@ -193,9 +214,12 @@ Největší lezecké centrum v Ústeckém kraji — 2 300 m² s boulderovkou.
 
 ### Harlem — lezecká stěna & klub
 
-Boulderovka v centru města.
+Boulderovka ve sklepení bývalého dominikánského kláštera — přímo v centru města.
 
+- **Adresa:** Hradiště 4, Ústí nad Labem (centrum, ~50 m od Mírového náměstí)
+- **Stěna:** ~120 m² boulderingových stěn
 - **Otevírací doba:** Denně od 16:00
+- **Doplňky:** Bar, prostor pro firemní akce a oslavy
 - **Web:** [Facebook: HARLEM](https://www.facebook.com/harlemymca/)
 
 ## Squash a badminton
@@ -205,7 +229,8 @@ Boulderovka v centru města.
 Squash, badminton, stolní tenis, fitness a wellness v jednom.
 
 - **Adresa:** Drážďanská 858/83B, 400 07 Ústí nad Labem
-- **Nabídka:** Squash kurty, badminton kurty, stolní tenis, fitness (Panatta stroje), skupinové lekce, solárium, InBody analýza
+- **Nabídka:** 2 squash kurty, 10 badminton kurtů (5 čtyřhry, povrch Regupol), stolní tenis, fitness (Panatta stroje), skupinové lekce (BARRE, Booty & Core), solárium, InBody analýza
+- **Squash/badminton:** 129–259 Kč/hodina (dle denní doby)
 - **Členství (měsíční):**
   - Student: 890 Kč
   - In Time (do 16:00): 990 Kč
@@ -223,10 +248,16 @@ Squash, badminton, stolní tenis, fitness a wellness v jednom.
 
 ### Squash & Café Svádov
 
-Squashové kurty s kavárnou v blízkosti Ústí.
+2 nové squashové kurty s kavárnou a stolním tenisem.
 
 - **Adresa:** Sokolovská 42, 403 22 Svádov (u Ústí nad Labem)
+- **Kurty:** 2 squashové + stolní tenis
+- **Ceny:** 150 Kč za 2 hodiny
+- **Kontakt:** +420 722 018 939
+- **Email:** ifo@squashsvadov.cz
 - **Web:** [squashsvadov.webnode.cz](https://squashsvadov.webnode.cz/)
+
+**Tip:** 150 Kč za 2 hodiny squashe — mimořádně nízká cena.
 
 ## Golf
 
@@ -269,6 +300,19 @@ Unikátní centrum propojující bojové sporty.
 - **Kontakt:** +420 606 649 474
 - **Email:** info@sportfightclub.cz
 - **Web:** [sportfightclub.cz](https://www.sportfightclub.cz/)
+
+## Hokej a bruslení
+
+### Zimní stadion Ústí nad Labem
+
+Domov hokejového HC Slovan Ústí nad Labem. Veřejné bruslení každou neděli.
+
+- **Adresa:** Masarykova 974/232, 400 01 Ústí nad Labem – Klíše
+- **Kapacita:** 6 500 diváků
+- **Veřejné bruslení:** Každou neděli od 17:30
+- **Vstupné:** Dospělí 70 Kč, studenti 50 Kč, děti (do 120 cm) 30 Kč
+- **Půjčovna bruslí:** 70 Kč + záloha 500 Kč
+- **Parkování:** 150 míst
 
 ## Sportovní mapa Ústí nad Labem
 
