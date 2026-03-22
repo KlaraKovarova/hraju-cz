@@ -1,9 +1,12 @@
 ---
-title: "Via ferraty v Česku 2026: Kompletní průvodce pro začátečníky i pokročilé"
-date: "2026-03-22"
-category: "pruvodce-sporty"
-excerpt: "Kde najít via ferraty v ČR, jaké vybavení potřebujete, obtížnostní stupnice, bezpečnostní pravidla a nejlepší ferraty podle regionu."
-sportTags: ["lezeni"]
+title: 'Via ferraty v Česku 2026: Kompletní průvodce pro začátečníky i pokročilé'
+date: '2026-03-22'
+category: pruvodce-sporty
+excerpt: >-
+  Kde najít via ferraty v ČR, jaké vybavení potřebujete, obtížnostní stupnice,
+  bezpečnostní pravidla a nejlepší ferraty podle regionu.
+sportTags:
+  - ferraty
 ---
 
 # Via ferraty v Česku 2026: Kompletní průvodce pro začátečníky i pokročilé
