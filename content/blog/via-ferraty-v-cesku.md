@@ -1,9 +1,12 @@
 ---
-title: "Via ferraty v Česku — průvodce pro začátečníky"
-date: "2026-03-26"
-category: "pruvodce-sporty"
-excerpt: "Kompletní průvodce via ferratami v České republice. Kde najdete zajištěné cesty, co potřebujete a jak se připravit na první ferratu."
-sportTags: ["ferraty"]
+title: Via ferraty v Česku — průvodce pro začátečníky
+date: '2026-04-06'
+category: pruvodce-sporty
+excerpt: >-
+  Kompletní průvodce via ferratami v České republice. Kde najdete zajištěné
+  cesty, co potřebujete a jak se připravit na první ferratu.
+sportTags:
+  - ferraty
 image: /images/blog/via-ferraty-v-cesku.jpg
 ---
 
