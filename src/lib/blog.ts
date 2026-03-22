@@ -58,6 +58,8 @@ export function getAllPosts(): BlogPostMeta[] {
     if (post) {
       // Skip posts scheduled for the future
       if (post.date > today) continue;
+      // Skip posts without a hero image
+      if (!post.image) continue;
       const { body: _, ...meta } = post;
       posts.push(meta);
     }
