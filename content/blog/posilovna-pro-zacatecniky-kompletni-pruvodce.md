@@ -1,9 +1,13 @@
 ---
-title: "Posilovna pro začátečníky: Kompletní průvodce od prvního tréninku"
-date: "2026-03-22"
-category: "pruvodce-sporty"
-excerpt: "Jak začít chodit do posilovny — výběr fitness centra, základní cviky, sestavení tréninku a nejčastější chyby, kterým se vyhnout."
-sportTags: ["fitness"]
+title: 'Posilovna pro začátečníky: Kompletní průvodce od prvního tréninku'
+date: '2099-01-01'
+category: pruvodce-sporty
+excerpt: >-
+  Jak začít chodit do posilovny — výběr fitness centra, základní cviky,
+  sestavení tréninku a nejčastější chyby, kterým se vyhnout.
+sportTags:
+  - fitness
+image: /images/blog/posilovna-pro-zacatecniky-kompletni-pruvodce.jpg
 ---
 
 # Posilovna pro začátečníky: Kompletní průvodce od prvního tréninku

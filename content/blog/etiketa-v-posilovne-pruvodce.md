@@ -1,9 +1,14 @@
 ---
-title: "Etiketa v posilovně: Nepsaná pravidla, která musíte znát"
-date: "2026-03-22"
-category: "tipy"
-excerpt: "Nepsaná pravidla posilovny — od uklízení závaží přes sdílení strojů po správné chování v šatně. Vše, co potřebujete vědět, abyste se cítili sebejistě a nevadili ostatním."
-sportTags: ["fitness"]
+title: 'Etiketa v posilovně: Nepsaná pravidla, která musíte znát'
+date: '2099-01-01'
+category: tipy
+excerpt: >-
+  Nepsaná pravidla posilovny — od uklízení závaží přes sdílení strojů po správné
+  chování v šatně. Vše, co potřebujete vědět, abyste se cítili sebejistě a
+  nevadili ostatním.
+sportTags:
+  - fitness
+image: /images/blog/etiketa-v-posilovne-pruvodce.jpg
 ---
 
 # Etiketa v posilovně: Nepsaná pravidla, která musíte znát

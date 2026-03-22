@@ -1,9 +1,14 @@
 ---
-title: "Prevence sportovních zranění: Jak sportovat bezpečně a bez bolesti"
-date: "2026-03-22"
-category: "tipy"
-excerpt: "Kompletní průvodce prevencí sportovních zranění — nejčastější zranění podle sportů, jak správně rozcvičit, regenerace, výživa pro klouby a kdy jít k lékaři."
-sportTags: ["fitness"]
+title: 'Prevence sportovních zranění: Jak sportovat bezpečně a bez bolesti'
+date: '2099-01-01'
+category: tipy
+excerpt: >-
+  Kompletní průvodce prevencí sportovních zranění — nejčastější zranění podle
+  sportů, jak správně rozcvičit, regenerace, výživa pro klouby a kdy jít k
+  lékaři.
+sportTags:
+  - fitness
+image: /images/blog/prevence-sportovnich-zraneni-pruvodce.jpg
 ---
 
 # Prevence sportovních zranění: Jak sportovat bezpečně a bez bolesti

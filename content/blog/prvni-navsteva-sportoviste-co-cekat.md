@@ -1,9 +1,17 @@
 ---
-title: "První návštěva sportoviště — co čekat a jak se připravit"
-date: "2026-03-25"
-category: "tipy"
-excerpt: "Jdete poprvé na squash, bouldering nebo do nové posilovny? Praktický průvodce: co si vzít, kolik zaplatíte, na co se zeptat a čeho se nebát."
-sportTags: ["squash", "badminton", "lezeni", "fitness", "plavani", "tenis"]
+title: První návštěva sportoviště — co čekat a jak se připravit
+date: '2099-01-01'
+category: tipy
+excerpt: >-
+  Jdete poprvé na squash, bouldering nebo do nové posilovny? Praktický průvodce:
+  co si vzít, kolik zaplatíte, na co se zeptat a čeho se nebát.
+sportTags:
+  - squash
+  - badminton
+  - lezeni
+  - fitness
+  - plavani
+  - tenis
 ---
 
 # První návštěva sportoviště — co čekat a jak se připravit

@@ -1,9 +1,16 @@
 ---
-title: "Kam sportovat, když prší: 10 indoor sportů, které zvládnete hned"
-date: "2026-03-22"
-category: "tipy"
-excerpt: "Déšť není výmluva — přehled 10 indoor sportů, které můžete zkusit v Česku bez předchozích zkušeností. Od boulderingu po stolní tenis."
-sportTags: ["squash", "badminton", "fitness", "plavani", "lezeni"]
+title: 'Kam sportovat, když prší: 10 indoor sportů, které zvládnete hned'
+date: '2099-01-01'
+category: tipy
+excerpt: >-
+  Déšť není výmluva — přehled 10 indoor sportů, které můžete zkusit v Česku bez
+  předchozích zkušeností. Od boulderingu po stolní tenis.
+sportTags:
+  - squash
+  - badminton
+  - fitness
+  - plavani
+  - lezeni
 ---
 
 # Kam sportovat, když prší: 10 indoor sportů, které zvládnete hned

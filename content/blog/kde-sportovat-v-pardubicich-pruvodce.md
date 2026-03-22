@@ -1,9 +1,18 @@
 ---
-title: "Kde sportovat v Pardubicích — kompletní průvodce 2026"
-date: "2026-03-23"
-category: "pruvodce-mesta"
-excerpt: "Přehled 18 ověřených sportovišť v Pardubicích — tenis, fitness, bazény, bouldering, squash, hokej i legendární závodiště. S adresami, cenami a tipy."
-sportTags: ["tenis", "fitness", "plavani", "lezeni", "squash", "badminton"]
+title: Kde sportovat v Pardubicích — kompletní průvodce 2026
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Přehled 18 ověřených sportovišť v Pardubicích — tenis, fitness, bazény,
+  bouldering, squash, hokej i legendární závodiště. S adresami, cenami a tipy.
+sportTags:
+  - tenis
+  - fitness
+  - plavani
+  - lezeni
+  - squash
+  - badminton
+image: /images/blog/kde-sportovat-v-pardubicich-pruvodce.jpg
 ---
 
 # Kde sportovat v Pardubicích — kompletní průvodce 2026

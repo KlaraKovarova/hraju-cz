@@ -1,9 +1,19 @@
 ---
-title: "Sportovní výzva: 30 dní pohybu — přidejte se ke komunitě"
-date: "2026-04-15"
-category: "komunita"
-excerpt: "Výzva pro celou komunitu hraju.cz: 30 dní aktivního pohybu. Zkuste nový sport, navštivte nové sportoviště a sdílejte své zkušenosti."
-sportTags: ["tenis", "squash", "badminton", "fitness", "plavani", "lezeni", "volejbal", "golf"]
+title: 'Sportovní výzva: 30 dní pohybu — přidejte se ke komunitě'
+date: '2026-04-16'
+category: komunita
+excerpt: >-
+  Výzva pro celou komunitu hraju.cz: 30 dní aktivního pohybu. Zkuste nový sport,
+  navštivte nové sportoviště a sdílejte své zkušenosti.
+sportTags:
+  - tenis
+  - squash
+  - badminton
+  - fitness
+  - plavani
+  - lezeni
+  - volejbal
+  - golf
 image: /images/blog/sportovni-vyzva-30-dni.jpg
 ---
 

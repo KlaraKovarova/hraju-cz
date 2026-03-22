@@ -1,9 +1,17 @@
 ---
-title: "Kde sportovat v Mostě: Kompletní průvodce sportovišti 2026"
-date: "2026-03-22"
-category: "pruvodce-mesta"
-excerpt: "Přehled sportovišť v Mostě — od Aquadromu přes Autodrom po Jezero Most. Tenis, fitness, squash, badminton, lezení, bruslení a unikátní sporty."
-sportTags: ["tenis", "fitness", "plavani", "squash", "badminton"]
+title: 'Kde sportovat v Mostě: Kompletní průvodce sportovišti 2026'
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Přehled sportovišť v Mostě — od Aquadromu přes Autodrom po Jezero Most. Tenis,
+  fitness, squash, badminton, lezení, bruslení a unikátní sporty.
+sportTags:
+  - tenis
+  - fitness
+  - plavani
+  - squash
+  - badminton
+image: /images/blog/kde-sportovat-v-moste-pruvodce.jpg
 ---
 
 # Kde sportovat v Mostě: Kompletní průvodce sportovišti 2026

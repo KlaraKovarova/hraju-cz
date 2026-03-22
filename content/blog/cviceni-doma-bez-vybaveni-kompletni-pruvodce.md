@@ -1,9 +1,13 @@
 ---
-title: "Cvičení doma bez vybavení: Kompletní průvodce domácím tréninkem"
-date: "2026-03-22"
-category: "tipy"
-excerpt: "Kompletní průvodce cvičením doma — 30+ cviků bez vybavení, 3 tréninkové plány podle úrovně, jak zhubnout i nabrat svaly doma a chyby, kterým se vyhnout."
-sportTags: ["fitness"]
+title: 'Cvičení doma bez vybavení: Kompletní průvodce domácím tréninkem'
+date: '2099-01-01'
+category: tipy
+excerpt: >-
+  Kompletní průvodce cvičením doma — 30+ cviků bez vybavení, 3 tréninkové plány
+  podle úrovně, jak zhubnout i nabrat svaly doma a chyby, kterým se vyhnout.
+sportTags:
+  - fitness
+image: /images/blog/cviceni-doma-bez-vybaveni-kompletni-pruvodce.jpg
 ---
 
 # Cvičení doma bez vybavení: Kompletní průvodce domácím tréninkem

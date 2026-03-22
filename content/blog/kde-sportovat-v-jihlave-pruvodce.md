@@ -1,9 +1,19 @@
 ---
-title: "Kde sportovat v Jihlavě — kompletní průvodce 2026"
-date: "2026-03-29"
-category: "pruvodce-mesta"
-excerpt: "Přehled 18 ověřených sportovišť v Jihlavě — 13 tenisových kurtů, aquapark Vodní ráj, 2 lezecké stěny, nová Horácká aréna, fitness od 50 Kč a squash i badminton pod jednou střechou."
-sportTags: ["tenis", "fitness", "plavani", "lezeni", "squash", "badminton"]
+title: Kde sportovat v Jihlavě — kompletní průvodce 2026
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Přehled 18 ověřených sportovišť v Jihlavě — 13 tenisových kurtů, aquapark
+  Vodní ráj, 2 lezecké stěny, nová Horácká aréna, fitness od 50 Kč a squash i
+  badminton pod jednou střechou.
+sportTags:
+  - tenis
+  - fitness
+  - plavani
+  - lezeni
+  - squash
+  - badminton
+image: /images/blog/kde-sportovat-v-jihlave-pruvodce.jpg
 ---
 
 # Kde sportovat v Jihlavě — kompletní průvodce 2026

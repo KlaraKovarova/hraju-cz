@@ -1,9 +1,18 @@
 ---
-title: "Sporty pro páry — 8 aktivit, které můžete dělat spolu"
-date: "2026-03-23"
-category: "tipy"
-excerpt: "Hledáte sportovní aktivitu pro dva? Přehled 8 sportů, které jsou ideální pro páry — od tenisu přes bouldering až po padel. S cenami a tipy, kde začít."
-sportTags: ["tenis", "squash", "badminton", "padel", "lezeni", "plavani", "fitness"]
+title: 'Sporty pro páry — 8 aktivit, které můžete dělat spolu'
+date: '2099-01-01'
+category: tipy
+excerpt: >-
+  Hledáte sportovní aktivitu pro dva? Přehled 8 sportů, které jsou ideální pro
+  páry — od tenisu přes bouldering až po padel. S cenami a tipy, kde začít.
+sportTags:
+  - tenis
+  - squash
+  - badminton
+  - padel
+  - lezeni
+  - plavani
+  - fitness
 ---
 
 # Sporty pro páry — 8 aktivit, které můžete dělat spolu

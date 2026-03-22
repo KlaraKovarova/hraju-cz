@@ -7,6 +7,7 @@ excerpt: >-
   bezpečnostní pravidla a nejlepší ferraty podle regionu.
 sportTags:
   - ferraty
+image: /images/blog/ferraty-v-cesku-kompletni-pruvodce-2026.jpg
 ---
 
 # Via ferraty v Česku 2026: Kompletní průvodce pro začátečníky i pokročilé

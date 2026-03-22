@@ -1,9 +1,12 @@
 ---
-title: "Turistika a hiking v Česku: Průvodce pro začátečníky i pokročilé"
-date: "2026-03-22"
-category: "pruvodce-sporty"
-excerpt: "Kompletní průvodce turistikou v Česku — české značení, nejlepší treky, vybavení, bezpečnost a jak z nedělní procházky udělat celodenní výšlap."
-sportTags: ["turistika"]
+title: 'Turistika a hiking v Česku: Průvodce pro začátečníky i pokročilé'
+date: '2099-01-01'
+category: pruvodce-sporty
+excerpt: >-
+  Kompletní průvodce turistikou v Česku — české značení, nejlepší treky,
+  vybavení, bezpečnost a jak z nedělní procházky udělat celodenní výšlap.
+sportTags:
+  - turistika
 ---
 
 # Turistika a hiking v Česku: Průvodce pro začátečníky i pokročilé

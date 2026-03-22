@@ -1,9 +1,13 @@
 ---
-title: "Inline bruslení pro začátečníky: Jak začít a kde bruslit v Česku"
-date: "2026-03-22"
-category: "pruvodce-sporty"
-excerpt: "Kompletní průvodce inline bruslením — výběr bruslí, základní technika, brzdění, nejlepší cyklostezky pro bruslaře a kolik to stojí."
-sportTags: ["brusleni"]
+title: 'Inline bruslení pro začátečníky: Jak začít a kde bruslit v Česku'
+date: '2099-01-01'
+category: pruvodce-sporty
+excerpt: >-
+  Kompletní průvodce inline bruslením — výběr bruslí, základní technika,
+  brzdění, nejlepší cyklostezky pro bruslaře a kolik to stojí.
+sportTags:
+  - brusleni
+image: /images/blog/inline-brusleni-pro-zacatecniky-pruvodce.jpg
 ---
 
 # Inline bruslení pro začátečníky: Jak začít a kde bruslit v Česku

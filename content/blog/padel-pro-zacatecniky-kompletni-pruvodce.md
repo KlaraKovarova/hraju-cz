@@ -1,9 +1,13 @@
 ---
-title: "Padel pro začátečníky: Kompletní průvodce nejrychleji rostoucím sportem"
-date: "2026-03-22"
-category: "pruvodce-sporty"
-excerpt: "Jak začít s padelem — pravidla, technika úderů, výběr rakety, kde hrát v Česku a kolik to stojí. Průvodce pro úplné nováčky."
-sportTags: ["padel"]
+title: 'Padel pro začátečníky: Kompletní průvodce nejrychleji rostoucím sportem'
+date: '2099-01-01'
+category: pruvodce-sporty
+excerpt: >-
+  Jak začít s padelem — pravidla, technika úderů, výběr rakety, kde hrát v Česku
+  a kolik to stojí. Průvodce pro úplné nováčky.
+sportTags:
+  - padel
+image: /images/blog/padel-pro-zacatecniky-kompletni-pruvodce.jpg
 ---
 
 # Padel pro začátečníky: Kompletní průvodce nejrychleji rostoucím sportem

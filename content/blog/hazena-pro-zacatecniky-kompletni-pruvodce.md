@@ -1,9 +1,14 @@
 ---
-title: "Házená pro začátečníky: Pravidla, technika a kde hrát v Česku"
-date: "2026-03-22"
-category: "pruvodce-sporty"
-excerpt: "Kompletní průvodce házenou — pravidla, základní technika střelby a obrany, pozice, jak začít hrát a přehled české házenářské scény od Extraligy po amatérské turnaje."
-sportTags: ["hazena"]
+title: 'Házená pro začátečníky: Pravidla, technika a kde hrát v Česku'
+date: '2099-01-01'
+category: pruvodce-sporty
+excerpt: >-
+  Kompletní průvodce házenou — pravidla, základní technika střelby a obrany,
+  pozice, jak začít hrát a přehled české házenářské scény od Extraligy po
+  amatérské turnaje.
+sportTags:
+  - hazena
+image: /images/blog/hazena-pro-zacatecniky-kompletni-pruvodce.jpg
 ---
 
 # Házená pro začátečníky: Pravidla, technika a kde hrát v Česku

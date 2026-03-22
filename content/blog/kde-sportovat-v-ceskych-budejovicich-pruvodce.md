@@ -1,9 +1,19 @@
 ---
-title: "Kde sportovat v Českých Budějovicích — kompletní průvodce 2026"
-date: "2026-03-25"
-category: "pruvodce-mesta"
-excerpt: "Přehled 14 ověřených sportovišť v Českých Budějovicích — tenis s padelem, 5 fitness center, 50m bazén, 2 lezecké stěny, squash, badminton i veřejné bruslení v Budvar Aréně."
-sportTags: ["tenis", "fitness", "plavani", "lezeni", "squash", "badminton"]
+title: Kde sportovat v Českých Budějovicích — kompletní průvodce 2026
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Přehled 14 ověřených sportovišť v Českých Budějovicích — tenis s padelem, 5
+  fitness center, 50m bazén, 2 lezecké stěny, squash, badminton i veřejné
+  bruslení v Budvar Aréně.
+sportTags:
+  - tenis
+  - fitness
+  - plavani
+  - lezeni
+  - squash
+  - badminton
+image: /images/blog/kde-sportovat-v-ceskych-budejovicich-pruvodce.jpg
 ---
 
 # Kde sportovat v Českých Budějovicích — kompletní průvodce 2026

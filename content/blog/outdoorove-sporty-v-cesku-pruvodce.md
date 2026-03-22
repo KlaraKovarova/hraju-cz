@@ -1,9 +1,14 @@
 ---
-title: "Outdoorové sporty v Česku: Kde a jak sportovat v přírodě"
-date: "2026-03-22"
-category: "tipy"
-excerpt: "Kompletní průvodce outdoorovými sporty v České republice — od turistiky a cyklistiky přes via ferraty a paddleboarding až po zimní sporty. Nejlepší lokality, vybavení a tipy."
-sportTags: ["fitness"]
+title: 'Outdoorové sporty v Česku: Kde a jak sportovat v přírodě'
+date: '2099-01-01'
+category: tipy
+excerpt: >-
+  Kompletní průvodce outdoorovými sporty v České republice — od turistiky a
+  cyklistiky přes via ferraty a paddleboarding až po zimní sporty. Nejlepší
+  lokality, vybavení a tipy.
+sportTags:
+  - fitness
+image: /images/blog/outdoorove-sporty-v-cesku-pruvodce.jpg
 ---
 
 # Outdoorové sporty v Česku: Kde a jak sportovat v přírodě

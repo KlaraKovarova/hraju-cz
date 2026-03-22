@@ -1,9 +1,17 @@
 ---
-title: "Kde sportovat v Ostravě — průvodce od místních"
-date: "2026-03-24"
-category: "pruvodce-mesta"
-excerpt: "Největší lezecká stěna na Moravě, 50m bazén s kamikaze skluzavkou, squash v top kvalitě. Přehled nejlepších sportovišť v Ostravě pro rok 2026."
-sportTags: ["tenis", "squash", "plavani", "lezeni", "fitness", "badminton"]
+title: Kde sportovat v Ostravě — průvodce od místních
+date: '2026-03-26'
+category: pruvodce-mesta
+excerpt: >-
+  Největší lezecká stěna na Moravě, 50m bazén s kamikaze skluzavkou, squash v
+  top kvalitě. Přehled nejlepších sportovišť v Ostravě pro rok 2026.
+sportTags:
+  - tenis
+  - squash
+  - plavani
+  - lezeni
+  - fitness
+  - badminton
 image: /images/blog/kde-sportovat-v-ostrave-pruvodce.jpg
 ---
 

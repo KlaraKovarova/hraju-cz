@@ -1,9 +1,13 @@
 ---
-title: "Jak začít běhat: Průvodce pro úplné začátečníky 2026"
-date: "2026-03-22"
-category: "tipy"
-excerpt: "Kompletní průvodce běháním pro začátečníky — výběr bot, technika běhu, 8týdenní plán od chůze k 5 km a nejčastější chyby."
-sportTags: ["fitness"]
+title: 'Jak začít běhat: Průvodce pro úplné začátečníky 2026'
+date: '2099-01-01'
+category: tipy
+excerpt: >-
+  Kompletní průvodce běháním pro začátečníky — výběr bot, technika běhu,
+  8týdenní plán od chůze k 5 km a nejčastější chyby.
+sportTags:
+  - fitness
+image: /images/blog/jak-zacit-behat-pruvodce-pro-zacatecniky.jpg
 ---
 
 # Jak začít běhat: Průvodce pro úplné začátečníky 2026

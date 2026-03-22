@@ -1,9 +1,13 @@
 ---
-title: "Badminton pro začátečníky: Kompletní průvodce od prvního úderu"
-date: "2026-03-22"
-category: "pruvodce-sporty"
-excerpt: "Naučte se badminton od základů — správný úchop rakety, základní údery, pravidla a 8týdenní tréninkový plán pro úplné začátečníky."
-sportTags: ["badminton"]
+title: 'Badminton pro začátečníky: Kompletní průvodce od prvního úderu'
+date: '2099-01-01'
+category: pruvodce-sporty
+excerpt: >-
+  Naučte se badminton od základů — správný úchop rakety, základní údery,
+  pravidla a 8týdenní tréninkový plán pro úplné začátečníky.
+sportTags:
+  - badminton
+image: /images/blog/badminton-pro-zacatecniky-kompletni-pruvodce.jpg
 ---
 
 # Badminton pro začátečníky: Kompletní průvodce od prvního úderu

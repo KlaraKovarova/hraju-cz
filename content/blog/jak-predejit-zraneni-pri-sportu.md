@@ -1,9 +1,18 @@
 ---
-title: "Jak předejít zranění při sportu: Průvodce prevencí pro rekreační sportovce"
-date: "2026-03-22"
-category: "tipy"
-excerpt: "Nejčastější sportovní zranění a jak jim předejít — rozcvičení, správná technika, vhodná obuv a kdy s bolestí přestat."
-sportTags: ["fitness", "tenis", "squash", "badminton", "volejbal", "lezeni"]
+title: 'Jak předejít zranění při sportu: Průvodce prevencí pro rekreační sportovce'
+date: '2099-01-01'
+category: tipy
+excerpt: >-
+  Nejčastější sportovní zranění a jak jim předejít — rozcvičení, správná
+  technika, vhodná obuv a kdy s bolestí přestat.
+sportTags:
+  - fitness
+  - tenis
+  - squash
+  - badminton
+  - volejbal
+  - lezeni
+image: /images/blog/jak-predejit-zraneni-pri-sportu.jpg
 ---
 
 # Jak předejít zranění při sportu: Průvodce prevencí pro rekreační sportovce

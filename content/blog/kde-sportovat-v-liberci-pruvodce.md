@@ -1,9 +1,18 @@
 ---
-title: "Kde sportovat v Liberci — kompletní průvodce 2026"
-date: "2026-03-24"
-category: "pruvodce-mesta"
-excerpt: "Přehled 14 sportovišť v Liberci — tenis, fitness, aquapark, bouldering, squash i badminton. S aktuálními cenami, adresami a upozorněními na rekonstrukce."
-sportTags: ["tenis", "fitness", "plavani", "lezeni", "squash", "badminton"]
+title: Kde sportovat v Liberci — kompletní průvodce 2026
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Přehled 14 sportovišť v Liberci — tenis, fitness, aquapark, bouldering, squash
+  i badminton. S aktuálními cenami, adresami a upozorněními na rekonstrukce.
+sportTags:
+  - tenis
+  - fitness
+  - plavani
+  - lezeni
+  - squash
+  - badminton
+image: /images/blog/kde-sportovat-v-liberci-pruvodce.jpg
 ---
 
 # Kde sportovat v Liberci — kompletní průvodce 2026

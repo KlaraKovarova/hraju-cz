@@ -1,9 +1,20 @@
 ---
-title: "Kde sportovat v Ústí nad Labem — kompletní průvodce 2026"
-date: "2026-03-28"
-category: "pruvodce-mesta"
-excerpt: "Přehled 16 ověřených sportovišť v Ústí nad Labem — tenis s padelem, fitness centra od non-stop po premium, 50m bazén s termálním koupalištěm, 2 300 m² lezeckých stěn, squash, badminton, golf i bojové sporty."
-sportTags: ["tenis", "fitness", "plavani", "lezeni", "squash", "badminton", "golf"]
+title: Kde sportovat v Ústí nad Labem — kompletní průvodce 2026
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Přehled 16 ověřených sportovišť v Ústí nad Labem — tenis s padelem, fitness
+  centra od non-stop po premium, 50m bazén s termálním koupalištěm, 2 300 m²
+  lezeckých stěn, squash, badminton, golf i bojové sporty.
+sportTags:
+  - tenis
+  - fitness
+  - plavani
+  - lezeni
+  - squash
+  - badminton
+  - golf
+image: /images/blog/kde-sportovat-v-usti-nad-labem-pruvodce.jpg
 ---
 
 # Kde sportovat v Ústí nad Labem — kompletní průvodce 2026

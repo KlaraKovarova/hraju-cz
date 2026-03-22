@@ -1,9 +1,14 @@
 ---
-title: "Nejlepší boulderingové a lezecké stěny v Česku 2026 — kompletní přehled"
-date: "2026-03-22"
-category: "pruvodce-sporty"
-excerpt: "Kompletní průvodce 17 nejlepších lezeckých a boulderingových center v Česku — Praha, Brno, Ostrava, Plzeň, Olomouc, Liberec a další. S cenami, adresami a reálnými tipy."
-sportTags: ["lezeni"]
+title: Nejlepší boulderingové a lezecké stěny v Česku 2026 — kompletní přehled
+date: '2099-01-01'
+category: pruvodce-sporty
+excerpt: >-
+  Kompletní průvodce 17 nejlepších lezeckých a boulderingových center v Česku —
+  Praha, Brno, Ostrava, Plzeň, Olomouc, Liberec a další. S cenami, adresami a
+  reálnými tipy.
+sportTags:
+  - lezeni
+image: /images/blog/nejlepsi-bouldrovky-v-cesku-2026.jpg
 ---
 
 # Nejlepší boulderingové a lezecké stěny v Česku 2026

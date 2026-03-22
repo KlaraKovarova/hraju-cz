@@ -1,9 +1,12 @@
 ---
-title: "Kam na squash v Brně — průvodce podle hodnocení hráčů"
-date: "2026-04-08"
-category: "pruvodce-mesta"
-excerpt: "Hledáte squashový kurt v Brně? Přinášíme přehled nejlepších center podle zkušeností místních hráčů a tipy, jak si vybrat."
-sportTags: ["squash"]
+title: Kam na squash v Brně — průvodce podle hodnocení hráčů
+date: '2026-04-15'
+category: pruvodce-mesta
+excerpt: >-
+  Hledáte squashový kurt v Brně? Přinášíme přehled nejlepších center podle
+  zkušeností místních hráčů a tipy, jak si vybrat.
+sportTags:
+  - squash
 image: /images/blog/kam-na-squash-v-brne.jpg
 ---
 

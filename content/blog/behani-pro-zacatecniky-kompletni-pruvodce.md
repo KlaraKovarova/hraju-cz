@@ -1,9 +1,14 @@
 ---
-title: "Běhání pro začátečníky: Jak začít běhat a vydržet"
-date: "2026-03-22"
-category: "pruvodce-sporty"
-excerpt: "Kompletní průvodce běháním — jak začít od nuly, správná technika, tréninkový plán na první 5 km, vybavení, prevence zranění a nejlepší běžecké trasy v Česku."
-sportTags: ["fitness"]
+title: 'Běhání pro začátečníky: Jak začít běhat a vydržet'
+date: '2099-01-01'
+category: pruvodce-sporty
+excerpt: >-
+  Kompletní průvodce běháním — jak začít od nuly, správná technika, tréninkový
+  plán na první 5 km, vybavení, prevence zranění a nejlepší běžecké trasy v
+  Česku.
+sportTags:
+  - fitness
+image: /images/blog/behani-pro-zacatecniky-kompletni-pruvodce.jpg
 ---
 
 # Běhání pro začátečníky: Jak začít běhat a vydržet

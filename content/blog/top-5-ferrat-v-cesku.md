@@ -1,9 +1,11 @@
 ---
-title: "Top 5 ferrat v České republice pro sezónu 2026"
-date: "2026-04-04"
-author: "Klára Kovářová"
-category: "pruvodce-sporty"
-excerpt: "Výběr pěti nejlepších zajištěných cest (via ferrat) v Česku pro sezónu 2026. Obtížnost, popis tras, potřebné vybavení a praktické tipy pro každou ferratu."
+title: Top 5 ferrat v České republice pro sezónu 2026
+date: '2026-04-13'
+author: Klára Kovářová
+category: pruvodce-sporty
+excerpt: >-
+  Výběr pěti nejlepších zajištěných cest (via ferrat) v Česku pro sezónu 2026.
+  Obtížnost, popis tras, potřebné vybavení a praktické tipy pro každou ferratu.
 sportTags:
   - ferraty
 image: /images/blog/top-5-ferrat-v-cesku.jpg

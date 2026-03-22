@@ -1,9 +1,12 @@
 ---
-title: "Nejlepší squashová centra v Praze — kde hrát v roce 2026"
-date: "2026-03-27"
-category: "pruvodce-mesta"
-excerpt: "Přehled nejlepších squashových center v Praze. Porovnání cen, vybavení a dostupnosti — kde rezervovat kurt pro rekreační i soutěžní hru."
-sportTags: ["squash"]
+title: Nejlepší squashová centra v Praze — kde hrát v roce 2026
+date: '2026-03-30'
+category: pruvodce-mesta
+excerpt: >-
+  Přehled nejlepších squashových center v Praze. Porovnání cen, vybavení a
+  dostupnosti — kde rezervovat kurt pro rekreační i soutěžní hru.
+sportTags:
+  - squash
 image: /images/blog/nejlepsi-squashove-centrum-v-praze.jpg
 ---
 

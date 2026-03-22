@@ -1,9 +1,12 @@
 ---
-title: "Stolní tenis pro začátečníky: Jak začít a kde hrát v Česku"
-date: "2026-03-22"
-category: "pruvodce-sporty"
-excerpt: "Kompletní průvodce stolním tenisem — výběr pálky, základní údery, pravidla, kde hrát v Česku a proč je ping-pong víc než hra v garáži."
-sportTags: ["stolni-tenis"]
+title: 'Stolní tenis pro začátečníky: Jak začít a kde hrát v Česku'
+date: '2099-01-01'
+category: pruvodce-sporty
+excerpt: >-
+  Kompletní průvodce stolním tenisem — výběr pálky, základní údery, pravidla,
+  kde hrát v Česku a proč je ping-pong víc než hra v garáži.
+sportTags:
+  - stolni-tenis
 ---
 
 # Stolní tenis pro začátečníky: Jak začít a kde hrát v Česku

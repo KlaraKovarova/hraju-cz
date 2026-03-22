@@ -1,9 +1,19 @@
 ---
-title: "Kde sportovat v Hradci Králové — kompletní průvodce 2026"
-date: "2026-03-22"
-category: "pruvodce-mesta"
-excerpt: "Přehled 14 ověřených sportovišť v Hradci Králové — tenisové kurty, fitness centra, bazény, lezecká stěna, squash i badminton. S adresami, cenami a praktickými tipy."
-sportTags: ["tenis", "fitness", "plavani", "lezeni", "squash", "badminton"]
+title: Kde sportovat v Hradci Králové — kompletní průvodce 2026
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Přehled 14 ověřených sportovišť v Hradci Králové — tenisové kurty, fitness
+  centra, bazény, lezecká stěna, squash i badminton. S adresami, cenami a
+  praktickými tipy.
+sportTags:
+  - tenis
+  - fitness
+  - plavani
+  - lezeni
+  - squash
+  - badminton
+image: /images/blog/kde-sportovat-v-hradci-kralove.jpg
 ---
 
 # Kde sportovat v Hradci Králové — kompletní průvodce 2026

@@ -1,9 +1,19 @@
 ---
-title: "Kde sportovat v Karlových Varech — kompletní průvodce 2026"
-date: "2026-03-26"
-category: "pruvodce-mesta"
-excerpt: "Přehled 16 ověřených sportovišť v Karlových Varech — tenis, fitness, bazény, lezecké stěny, badminton a 2 golfová hřiště včetně nejstaršího v Česku. S cenami a adresami."
-sportTags: ["tenis", "fitness", "plavani", "lezeni", "badminton", "golf"]
+title: Kde sportovat v Karlových Varech — kompletní průvodce 2026
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Přehled 16 ověřených sportovišť v Karlových Varech — tenis, fitness, bazény,
+  lezecké stěny, badminton a 2 golfová hřiště včetně nejstaršího v Česku. S
+  cenami a adresami.
+sportTags:
+  - tenis
+  - fitness
+  - plavani
+  - lezeni
+  - badminton
+  - golf
+image: /images/blog/kde-sportovat-v-karlovych-varech-pruvodce.jpg
 ---
 
 # Kde sportovat v Karlových Varech — kompletní průvodce 2026

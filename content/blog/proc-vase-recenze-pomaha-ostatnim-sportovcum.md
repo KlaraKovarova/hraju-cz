@@ -1,9 +1,17 @@
 ---
-title: "Proč vaše recenze pomáhá ostatním sportovcům"
-date: "2026-03-22"
-category: "komunita"
-excerpt: "97 % lidí čte recenze, než si vybere sportoviště. Každý váš názor pomáhá tisícům dalších sportovců. Přečtěte si, proč je vaše zkušenost tak cenná."
-sportTags: ["tenis", "squash", "plavani", "lezeni", "fitness", "badminton"]
+title: Proč vaše recenze pomáhá ostatním sportovcům
+date: '2026-03-23'
+category: komunita
+excerpt: >-
+  97 % lidí čte recenze, než si vybere sportoviště. Každý váš názor pomáhá
+  tisícům dalších sportovců. Přečtěte si, proč je vaše zkušenost tak cenná.
+sportTags:
+  - tenis
+  - squash
+  - plavani
+  - lezeni
+  - fitness
+  - badminton
 image: /images/blog/proc-vase-recenze-pomaha-ostatnim-sportovcum.jpg
 ---
 

@@ -1,9 +1,14 @@
 ---
-title: "Tanec a Zumba: Jak zhubnout a zpevnit tělo tancem"
-date: "2026-03-22"
-category: "pruvodce-sporty"
-excerpt: "Kompletní průvodce tanečním fitness — Zumba, body balance, taneční styly, kalorie, kde tančit v Česku a proč je tanec nejlepší cvičení, které nevypadá jako cvičení."
-sportTags: ["fitness", "tanec"]
+title: 'Tanec a Zumba: Jak zhubnout a zpevnit tělo tancem'
+date: '2099-01-01'
+category: pruvodce-sporty
+excerpt: >-
+  Kompletní průvodce tanečním fitness — Zumba, body balance, taneční styly,
+  kalorie, kde tančit v Česku a proč je tanec nejlepší cvičení, které nevypadá
+  jako cvičení.
+sportTags:
+  - fitness
+  - tanec
 ---
 
 # Tanec a Zumba: Jak zhubnout a zpevnit tělo tancem

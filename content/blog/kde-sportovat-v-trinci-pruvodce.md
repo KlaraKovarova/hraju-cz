@@ -1,9 +1,18 @@
 ---
-title: "Kde sportovat v Třinci: Kompletní průvodce sportovišti a kluby"
-date: "2026-03-22"
-category: "pruvodce-mesta"
-excerpt: "Třinec — město oceli a hokejové dynastie. HC Oceláři s 6 tituly Extraligy (5 v řadě!), Werk Arena, lyžování na Javorovém vrchu, florbalová Extraliga žen a sportovní komplex pro 300 000 návštěvníků ročně."
-sportTags: ["hokej", "fotbal", "plavani", "fitness", "lyzovani"]
+title: 'Kde sportovat v Třinci: Kompletní průvodce sportovišti a kluby'
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Třinec — město oceli a hokejové dynastie. HC Oceláři s 6 tituly Extraligy (5 v
+  řadě!), Werk Arena, lyžování na Javorovém vrchu, florbalová Extraliga žen a
+  sportovní komplex pro 300 000 návštěvníků ročně.
+sportTags:
+  - hokej
+  - fotbal
+  - plavani
+  - fitness
+  - lyzovani
+image: /images/blog/kde-sportovat-v-trinci-pruvodce.jpg
 ---
 
 # Kde sportovat v Třinci: Kompletní průvodce sportovišti a kluby

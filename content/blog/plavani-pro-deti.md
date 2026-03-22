@@ -1,9 +1,12 @@
 ---
-title: "Plavání pro děti: Kdy začít a kam v Praze i dalších městech"
-date: "2026-03-28"
-category: "tipy"
-excerpt: "Kdy je ideální věk pro start s plaváním? Přehled plaveckých kurzů pro děti v Praze, Brně a dalších městech. Tipy na výběr kurzu a co dětem přinese."
-sportTags: ["plavani"]
+title: 'Plavání pro děti: Kdy začít a kam v Praze i dalších městech'
+date: '2026-04-01'
+category: tipy
+excerpt: >-
+  Kdy je ideální věk pro start s plaváním? Přehled plaveckých kurzů pro děti v
+  Praze, Brně a dalších městech. Tipy na výběr kurzu a co dětem přinese.
+sportTags:
+  - plavani
 image: /images/blog/plavani-pro-deti.jpg
 ---
 

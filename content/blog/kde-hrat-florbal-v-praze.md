@@ -1,9 +1,13 @@
 ---
-title: "Kde hrát florbal v Praze: Kluby, hobby ligy i florbal pro děti"
-date: "2026-03-22"
-category: "pruvodce-mesta"
-excerpt: "Česko patří mezi florbalovou světovou špičku a Praha je jeho centrem. Přehled klubů, rekreačních lig a mládežnických akademií — od Tatran Střešovice po hobby florbal za pár korun."
-sportTags: ["florbal"]
+title: 'Kde hrát florbal v Praze: Kluby, hobby ligy i florbal pro děti'
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Česko patří mezi florbalovou světovou špičku a Praha je jeho centrem. Přehled
+  klubů, rekreačních lig a mládežnických akademií — od Tatran Střešovice po
+  hobby florbal za pár korun.
+sportTags:
+  - florbal
 image: /images/blog/kde-hrat-florbal-v-praze.jpg
 ---
 

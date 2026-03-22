@@ -1,9 +1,12 @@
 ---
-title: "Golf pro nováčky — základní pravidla, etiketa a kde začít v Česku"
-date: "2026-03-25"
-category: "pruvodce-sporty"
-excerpt: "Chcete začít s golfem? Průvodce základními pravidly, golfovou etiketou a přehledem hřišť v České republice, kde můžete udělat první odpal."
-sportTags: ["golf"]
+title: 'Golf pro nováčky — základní pravidla, etiketa a kde začít v Česku'
+date: '2026-03-28'
+category: pruvodce-sporty
+excerpt: >-
+  Chcete začít s golfem? Průvodce základními pravidly, golfovou etiketou a
+  přehledem hřišť v České republice, kde můžete udělat první odpal.
+sportTags:
+  - golf
 image: /images/blog/golf-pro-novacky.jpg
 ---
 

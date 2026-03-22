@@ -1,9 +1,17 @@
 ---
-title: "Nejlepší sporty na léto 2026 — venku i na vodě"
-date: "2026-03-27"
-category: "tipy"
-excerpt: "15 sportů, které si můžete užít od dubna do října — od plážového volejbalu po paddleboarding. S tipy, kde je vyzkoušet a kolik zaplatíte."
-sportTags: ["tenis", "plavani", "lezeni", "badminton", "golf"]
+title: Nejlepší sporty na léto 2026 — venku i na vodě
+date: '2099-01-01'
+category: tipy
+excerpt: >-
+  15 sportů, které si můžete užít od dubna do října — od plážového volejbalu po
+  paddleboarding. S tipy, kde je vyzkoušet a kolik zaplatíte.
+sportTags:
+  - tenis
+  - plavani
+  - lezeni
+  - badminton
+  - golf
+image: /images/blog/nejlepsi-sporty-na-leto-2026.jpg
 ---
 
 # Nejlepší sporty na léto 2026 — venku i na vodě

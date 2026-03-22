@@ -1,9 +1,13 @@
 ---
-title: "Squash pro začátečníky — kompletní průvodce pro první měsíc"
-date: "2026-03-28"
-category: "pruvodce-sporty"
-excerpt: "Chcete začít se squashem? Pravidla, vybavení, technika podání, výběr míčku a 4týdenní tréninkový plán pro úplné nováčky. S reálnými cenami z českých center."
-sportTags: ["squash"]
+title: Squash pro začátečníky — kompletní průvodce pro první měsíc
+date: '2099-01-01'
+category: pruvodce-sporty
+excerpt: >-
+  Chcete začít se squashem? Pravidla, vybavení, technika podání, výběr míčku a
+  4týdenní tréninkový plán pro úplné nováčky. S reálnými cenami z českých
+  center.
+sportTags:
+  - squash
 ---
 
 # Squash pro začátečníky — kompletní průvodce pro první měsíc

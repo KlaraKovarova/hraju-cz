@@ -1,9 +1,18 @@
 ---
-title: "Jaký sport začít? Průvodce výběrem sportu pro dospělé"
-date: "2026-03-22"
-category: "tipy"
-excerpt: "Nevíte, jaký sport zkusit? Porovnání 20 sportů podle kondice, ceny, sociálních aspektů a časové náročnosti — najděte sport, který vám sedne."
-sportTags: ["fitness", "tenis", "plavani", "squash", "badminton", "lezeni"]
+title: Jaký sport začít? Průvodce výběrem sportu pro dospělé
+date: '2099-01-01'
+category: tipy
+excerpt: >-
+  Nevíte, jaký sport zkusit? Porovnání 20 sportů podle kondice, ceny, sociálních
+  aspektů a časové náročnosti — najděte sport, který vám sedne.
+sportTags:
+  - fitness
+  - tenis
+  - plavani
+  - squash
+  - badminton
+  - lezeni
+image: /images/blog/jaky-sport-zacit-pruvodce-vyberem.jpg
 ---
 
 # Jaký sport začít? Průvodce výběrem sportu pro dospělé

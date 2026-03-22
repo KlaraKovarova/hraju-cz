@@ -1,9 +1,18 @@
 ---
-title: "Kde sportovat v Teplicích: Kompletní průvodce sportovišti 2026"
-date: "2026-03-22"
-category: "pruvodce-mesta"
-excerpt: "Přehled sportovišť v Teplicích — termální bazény, 22+ tenisových kurtů, FK Teplice (Chance Liga), 8 badmintonových kurtů, Thermalium s nejstarší léčivou vodou v ČR."
-sportTags: ["tenis", "fitness", "plavani", "squash", "badminton"]
+title: 'Kde sportovat v Teplicích: Kompletní průvodce sportovišti 2026'
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Přehled sportovišť v Teplicích — termální bazény, 22+ tenisových kurtů, FK
+  Teplice (Chance Liga), 8 badmintonových kurtů, Thermalium s nejstarší léčivou
+  vodou v ČR.
+sportTags:
+  - tenis
+  - fitness
+  - plavani
+  - squash
+  - badminton
+image: /images/blog/kde-sportovat-v-teplicich-pruvodce.jpg
 ---
 
 # Kde sportovat v Teplicích: Kompletní průvodce sportovišti 2026

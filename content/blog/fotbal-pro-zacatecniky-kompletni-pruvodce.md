@@ -1,9 +1,14 @@
 ---
-title: "Fotbal pro začátečníky: Pravidla, technika a kde hrát v Česku"
-date: "2026-03-22"
-category: "pruvodce-sporty"
-excerpt: "Kompletní průvodce fotbalem — pravidla, základní technika, pozice na hřišti, jak začít hrát rekreačně a přehled českého fotbalu od Chance Ligy po okresní přebor."
-sportTags: ["fotbal"]
+title: 'Fotbal pro začátečníky: Pravidla, technika a kde hrát v Česku'
+date: '2099-01-01'
+category: pruvodce-sporty
+excerpt: >-
+  Kompletní průvodce fotbalem — pravidla, základní technika, pozice na hřišti,
+  jak začít hrát rekreačně a přehled českého fotbalu od Chance Ligy po okresní
+  přebor.
+sportTags:
+  - fotbal
+image: /images/blog/fotbal-pro-zacatecniky-kompletni-pruvodce.jpg
 ---
 
 # Fotbal pro začátečníky: Pravidla, technika a kde hrát v Česku

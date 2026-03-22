@@ -1,9 +1,19 @@
 ---
-title: "12 indoor sportů, když venku prší — kam utéct před počasím"
-date: "2026-03-24"
-category: "tipy"
-excerpt: "Déšť nemusí znamenat konec sportu. Přehled 12 halových sportů, které můžete dělat kdykoli — bez ohledu na počasí. S cenami, tipy pro začátečníky a kde je najdete."
-sportTags: ["squash", "badminton", "plavani", "lezeni", "fitness", "tenis"]
+title: '12 indoor sportů, když venku prší — kam utéct před počasím'
+date: '2099-01-01'
+category: tipy
+excerpt: >-
+  Déšť nemusí znamenat konec sportu. Přehled 12 halových sportů, které můžete
+  dělat kdykoli — bez ohledu na počasí. S cenami, tipy pro začátečníky a kde je
+  najdete.
+sportTags:
+  - squash
+  - badminton
+  - plavani
+  - lezeni
+  - fitness
+  - tenis
+image: /images/blog/indoor-sporty-kdyz-prsi.jpg
 ---
 
 # 12 indoor sportů, když venku prší — kam utéct před počasím

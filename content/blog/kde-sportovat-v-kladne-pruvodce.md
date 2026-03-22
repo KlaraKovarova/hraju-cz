@@ -1,9 +1,18 @@
 ---
-title: "Kde sportovat v Kladně: Kompletní průvodce sportovišti 2026"
-date: "2026-03-22"
-category: "pruvodce-mesta"
-excerpt: "Přehled sportovišť v Kladně — tenisové areály, fitness centra, aquapark, lezecká stěna, squash, badminton, bruslení s Rytíři a další."
-sportTags: ["tenis", "fitness", "plavani", "lezeni", "squash", "badminton"]
+title: 'Kde sportovat v Kladně: Kompletní průvodce sportovišti 2026'
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Přehled sportovišť v Kladně — tenisové areály, fitness centra, aquapark,
+  lezecká stěna, squash, badminton, bruslení s Rytíři a další.
+sportTags:
+  - tenis
+  - fitness
+  - plavani
+  - lezeni
+  - squash
+  - badminton
+image: /images/blog/kde-sportovat-v-kladne-pruvodce.jpg
 ---
 
 # Kde sportovat v Kladně: Kompletní průvodce sportovišti 2026

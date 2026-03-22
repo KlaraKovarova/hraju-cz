@@ -1,9 +1,13 @@
 ---
-title: "Florbal pro začátečníky: Pravidla, technika a kde hrát v Česku"
-date: "2026-03-22"
-category: "pruvodce-sporty"
-excerpt: "Kompletní průvodce florbalem — pravidla, střelba, přihrávání, obrana, pozice na hřišti a přehled české florbalové scény od Superligy po hobby turnaje."
-sportTags: ["florbal"]
+title: 'Florbal pro začátečníky: Pravidla, technika a kde hrát v Česku'
+date: '2099-01-01'
+category: pruvodce-sporty
+excerpt: >-
+  Kompletní průvodce florbalem — pravidla, střelba, přihrávání, obrana, pozice
+  na hřišti a přehled české florbalové scény od Superligy po hobby turnaje.
+sportTags:
+  - florbal
+image: /images/blog/florbal-pro-zacatecniky-kompletni-pruvodce.jpg
 ---
 
 # Florbal pro začátečníky: Pravidla, technika a kde hrát v Česku

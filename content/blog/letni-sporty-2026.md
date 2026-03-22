@@ -1,9 +1,16 @@
 ---
-title: "Letní sporty 2026 — co zkusit nového letos v létě"
-date: "2026-04-04"
-category: "tipy"
-excerpt: "Léto se blíží a s ním příležitost vyzkoušet nové sporty. Přehled nejzajímavějších sportovních aktivit pro léto 2026 v Česku."
-sportTags: ["tenis", "volejbal", "plavani", "golf", "ferraty"]
+title: Letní sporty 2026 — co zkusit nového letos v létě
+date: '2026-04-12'
+category: tipy
+excerpt: >-
+  Léto se blíží a s ním příležitost vyzkoušet nové sporty. Přehled
+  nejzajímavějších sportovních aktivit pro léto 2026 v Česku.
+sportTags:
+  - tenis
+  - volejbal
+  - plavani
+  - golf
+  - ferraty
 image: /images/blog/letni-sporty-2026.jpg
 ---
 

@@ -1,9 +1,13 @@
 ---
-title: "Sportovní psychologie: Jak překonat mentální bariéry a zůstat motivovaní"
-date: "2026-03-22"
-category: "tipy"
-excerpt: "Průvodce sportovní psychologií — jak překonat strach, lenost a výmluvy, nastavit správné cíle, zvládnout závodní nervozitu a vybudovat sportovní návyk, který vydrží."
-sportTags: ["fitness"]
+title: 'Sportovní psychologie: Jak překonat mentální bariéry a zůstat motivovaní'
+date: '2099-01-01'
+category: tipy
+excerpt: >-
+  Průvodce sportovní psychologií — jak překonat strach, lenost a výmluvy,
+  nastavit správné cíle, zvládnout závodní nervozitu a vybudovat sportovní
+  návyk, který vydrží.
+sportTags:
+  - fitness
 ---
 
 # Sportovní psychologie: Jak překonat mentální bariéry a zůstat motivovaní

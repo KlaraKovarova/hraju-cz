@@ -1,9 +1,18 @@
 ---
-title: "Strečink po sportu — proč ho většina lidí dělá špatně"
-date: "2026-03-27"
-category: "tipy"
-excerpt: "Statický strečink před sportem škodí výkonu. Dynamické rozcvičení před, statický strečink po — tady je kompletní průvodce s konkrétními cviky pro 6 sportů."
-sportTags: ["tenis", "squash", "badminton", "fitness", "plavani", "lezeni"]
+title: Strečink po sportu — proč ho většina lidí dělá špatně
+date: '2099-01-01'
+category: tipy
+excerpt: >-
+  Statický strečink před sportem škodí výkonu. Dynamické rozcvičení před,
+  statický strečink po — tady je kompletní průvodce s konkrétními cviky pro 6
+  sportů.
+sportTags:
+  - tenis
+  - squash
+  - badminton
+  - fitness
+  - plavani
+  - lezeni
 ---
 
 # Strečink po sportu — proč ho většina lidí dělá špatně

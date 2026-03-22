@@ -1,9 +1,15 @@
 ---
-title: "CrossFit a funkční trénink: Kompletní průvodce pro začátečníky"
-date: "2026-03-22"
-category: "pruvodce-sporty"
-excerpt: "Co je CrossFit a funkční trénink, jak začít, základní cviky, WOD struktura, vybavení, ceny a přehled českých boxů. Vše, co potřebujete vědět před prvním tréninkem."
-sportTags: ["fitness", "crossfit"]
+title: 'CrossFit a funkční trénink: Kompletní průvodce pro začátečníky'
+date: '2099-01-01'
+category: pruvodce-sporty
+excerpt: >-
+  Co je CrossFit a funkční trénink, jak začít, základní cviky, WOD struktura,
+  vybavení, ceny a přehled českých boxů. Vše, co potřebujete vědět před prvním
+  tréninkem.
+sportTags:
+  - fitness
+  - crossfit
+image: /images/blog/crossfit-a-funkcni-trenink-pruvodce.jpg
 ---
 
 # CrossFit a funkční trénink: Kompletní průvodce pro začátečníky

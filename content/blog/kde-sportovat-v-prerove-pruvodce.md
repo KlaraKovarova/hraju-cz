@@ -1,9 +1,17 @@
 ---
-title: "Kde sportovat v Přerově: Kompletní průvodce sportovišti 2026"
-date: "2026-03-22"
-category: "pruvodce-mesta"
-excerpt: "Přehled sportovišť v Přerově — 50m bazén, hokejová MEO Aréna (HC ZUBR), 19 tenisových kurtů včetně padelu, Cyklostezka Bečva a legendární autokrosová trať s Mamutím skokem."
-sportTags: ["plavani", "fitness", "tenis", "lezeni"]
+title: 'Kde sportovat v Přerově: Kompletní průvodce sportovišti 2026'
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Přehled sportovišť v Přerově — 50m bazén, hokejová MEO Aréna (HC ZUBR), 19
+  tenisových kurtů včetně padelu, Cyklostezka Bečva a legendární autokrosová
+  trať s Mamutím skokem.
+sportTags:
+  - plavani
+  - fitness
+  - tenis
+  - lezeni
+image: /images/blog/kde-sportovat-v-prerove-pruvodce.jpg
 ---
 
 # Kde sportovat v Přerově: Kompletní průvodce sportovišti 2026

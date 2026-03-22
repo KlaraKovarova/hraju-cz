@@ -1,9 +1,18 @@
 ---
-title: "Kde sportovat ve Zlíně — kompletní průvodce 2026"
-date: "2026-03-24"
-category: "pruvodce-mesta"
-excerpt: "Přehled 13 ověřených sportovišť ve Zlíně — tenis, fitness, 50m bazén, lezecká stěna, squash i badminton. S adresami, cenami a tipy od místních."
-sportTags: ["tenis", "fitness", "plavani", "lezeni", "squash", "badminton"]
+title: Kde sportovat ve Zlíně — kompletní průvodce 2026
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Přehled 13 ověřených sportovišť ve Zlíně — tenis, fitness, 50m bazén, lezecká
+  stěna, squash i badminton. S adresami, cenami a tipy od místních.
+sportTags:
+  - tenis
+  - fitness
+  - plavani
+  - lezeni
+  - squash
+  - badminton
+image: /images/blog/kde-sportovat-ve-zline-pruvodce.jpg
 ---
 
 # Kde sportovat ve Zlíně — kompletní průvodce 2026

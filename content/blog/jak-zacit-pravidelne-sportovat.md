@@ -1,9 +1,17 @@
 ---
-title: "Jak začít pravidelně sportovat — praktický návod, který funguje"
-date: "2026-03-22"
-category: "tipy"
-excerpt: "Chcete sportovat pravidelně, ale nedaří se vám? Realistický průvodce, jak si vybudovat sportovní návyk — bez motivačních frází a nereálných plánů."
-sportTags: ["fitness", "tenis", "squash", "plavani", "lezeni"]
+title: 'Jak začít pravidelně sportovat — praktický návod, který funguje'
+date: '2099-01-01'
+category: tipy
+excerpt: >-
+  Chcete sportovat pravidelně, ale nedaří se vám? Realistický průvodce, jak si
+  vybudovat sportovní návyk — bez motivačních frází a nereálných plánů.
+sportTags:
+  - fitness
+  - tenis
+  - squash
+  - plavani
+  - lezeni
+image: /images/blog/jak-zacit-pravidelne-sportovat.jpg
 ---
 
 # Jak začít pravidelně sportovat — praktický návod, který funguje

@@ -1,9 +1,21 @@
 ---
-title: "Kde sportovat v Prostějově: Tenisová velmoc s volejbalovou dynastií"
-date: "2026-03-22"
-category: "pruvodce-mesta"
-excerpt: "Prostějov (43 000 obyvatel) je světový tenisový hub — odtud pochází Jakub Menšík (ATP #12), trénovali tu Berdych, Kvitová i Šafářová. VK Prostějov má 12 extraligových titulů ve volejbalu. Kompletní průvodce sportem v hanáckém městě."
-sportTags: ["tenis", "volejbal", "fotbal", "hokej", "plavani", "fitness", "cyklistika"]
+title: 'Kde sportovat v Prostějově: Tenisová velmoc s volejbalovou dynastií'
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Prostějov (43 000 obyvatel) je světový tenisový hub — odtud pochází Jakub
+  Menšík (ATP #12), trénovali tu Berdych, Kvitová i Šafářová. VK Prostějov má 12
+  extraligových titulů ve volejbalu. Kompletní průvodce sportem v hanáckém
+  městě.
+sportTags:
+  - tenis
+  - volejbal
+  - fotbal
+  - hokej
+  - plavani
+  - fitness
+  - cyklistika
+image: /images/blog/kde-sportovat-v-prostejove-pruvodce.jpg
 ---
 
 # Kde sportovat v Prostějově: Tenisová velmoc s volejbalovou dynastií

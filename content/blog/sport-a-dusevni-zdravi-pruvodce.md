@@ -1,9 +1,13 @@
 ---
-title: "Sport a duševní zdraví: Jak pohyb pomáhá proti stresu, úzkosti a depresi"
-date: "2026-03-22"
-category: "tipy"
-excerpt: "Vědecky podložený průvodce vlivem sportu na duševní zdraví. Jak pohyb snižuje stres, úzkost a depresi, které sporty pomáhají nejvíc a kolik cvičení stačí pro měřitelný efekt."
-sportTags: ["fitness"]
+title: 'Sport a duševní zdraví: Jak pohyb pomáhá proti stresu, úzkosti a depresi'
+date: '2099-01-01'
+category: tipy
+excerpt: >-
+  Vědecky podložený průvodce vlivem sportu na duševní zdraví. Jak pohyb snižuje
+  stres, úzkost a depresi, které sporty pomáhají nejvíc a kolik cvičení stačí
+  pro měřitelný efekt.
+sportTags:
+  - fitness
 ---
 
 # Sport a duševní zdraví: Jak pohyb pomáhá proti stresu, úzkosti a depresi

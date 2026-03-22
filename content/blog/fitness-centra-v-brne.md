@@ -1,9 +1,12 @@
 ---
-title: "Nejlepší fitness centra v Brně — kde cvičit v roce 2026"
-date: "2026-04-02"
-category: "pruvodce-mesta"
-excerpt: "Přehled nejlepších fitness center a posiloven v Brně. Porovnání cen, vybavení a služeb — od low-cost po prémiové kluby."
-sportTags: ["fitness"]
+title: Nejlepší fitness centra v Brně — kde cvičit v roce 2026
+date: '2026-04-08'
+category: pruvodce-mesta
+excerpt: >-
+  Přehled nejlepších fitness center a posiloven v Brně. Porovnání cen, vybavení
+  a služeb — od low-cost po prémiové kluby.
+sportTags:
+  - fitness
 image: /images/blog/fitness-centra-v-brne.jpg
 ---
 

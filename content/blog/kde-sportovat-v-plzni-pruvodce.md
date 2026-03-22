@@ -1,9 +1,18 @@
 ---
-title: "Kde sportovat v Plzni: Kompletní průvodce sportovišti 2026"
-date: "2026-03-22"
-category: "pruvodce-mesta"
-excerpt: "Plzeň má přes 500 sportovišť — od nejstaršího tenisového klubu v Česku (1893) po bezplatný Škoda Sport Park. Přehled s cenami, adresami a tipy pro každý sport."
-sportTags: ["fitness", "plavani", "tenis", "squash", "lezeni", "golf"]
+title: 'Kde sportovat v Plzni: Kompletní průvodce sportovišti 2026'
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Plzeň má přes 500 sportovišť — od nejstaršího tenisového klubu v Česku (1893)
+  po bezplatný Škoda Sport Park. Přehled s cenami, adresami a tipy pro každý
+  sport.
+sportTags:
+  - fitness
+  - plavani
+  - tenis
+  - squash
+  - lezeni
+  - golf
 image: /images/blog/kde-sportovat-v-plzni.jpg
 ---
 

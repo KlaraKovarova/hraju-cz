@@ -1,9 +1,15 @@
 ---
-title: "Sport pro rodiny s dětmi — kam vyrazit společně"
-date: "2026-04-16"
-category: "pruvodce-sporty"
-excerpt: "Hledáte sportovní aktivitu pro celou rodinu? Přinášíme přehled sportů a sportovišť v Česku, kam můžete vyrazit s dětmi."
-sportTags: ["plavani", "lezeni", "golf", "volejbal"]
+title: Sport pro rodiny s dětmi — kam vyrazit společně
+date: '2026-04-17'
+category: pruvodce-sporty
+excerpt: >-
+  Hledáte sportovní aktivitu pro celou rodinu? Přinášíme přehled sportů a
+  sportovišť v Česku, kam můžete vyrazit s dětmi.
+sportTags:
+  - plavani
+  - lezeni
+  - golf
+  - volejbal
 image: /images/blog/sport-pro-rodiny-s-detmi.jpg
 ---
 

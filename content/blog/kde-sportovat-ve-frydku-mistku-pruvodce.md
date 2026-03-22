@@ -1,9 +1,17 @@
 ---
-title: "Kde sportovat ve Frýdku-Místku: Kompletní průvodce sportovišti 2026"
-date: "2026-03-22"
-category: "pruvodce-mesta"
-excerpt: "Přehled sportovišť ve Frýdku-Místku — brána do Beskyd. Aquapark Olešná s 50m bazénem, Hala Polárka, extraligový házená i volejbal, české BJJ centrum a ski areály 20 minut od města."
-sportTags: ["plavani", "fitness", "tenis", "lezeni"]
+title: 'Kde sportovat ve Frýdku-Místku: Kompletní průvodce sportovišti 2026'
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Přehled sportovišť ve Frýdku-Místku — brána do Beskyd. Aquapark Olešná s 50m
+  bazénem, Hala Polárka, extraligový házená i volejbal, české BJJ centrum a ski
+  areály 20 minut od města.
+sportTags:
+  - plavani
+  - fitness
+  - tenis
+  - lezeni
+image: /images/blog/kde-sportovat-ve-frydku-mistku-pruvodce.jpg
 ---
 
 # Kde sportovat ve Frýdku-Místku: Kompletní průvodce sportovišti 2026

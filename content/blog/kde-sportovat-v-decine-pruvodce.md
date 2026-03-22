@@ -1,9 +1,17 @@
 ---
-title: "Kde sportovat v Děčíně: Kompletní průvodce sportovišti 2026"
-date: "2026-03-22"
-category: "pruvodce-mesta"
-excerpt: "Přehled sportovišť v Děčíně — brána do Českého Švýcarska s via ferratou v centru města, pískovcovým lezením, aquaparkem s termální vodou, kajakářskou scénou na Labi a basketbalovou NBL."
-sportTags: ["lezeni", "plavani", "tenis", "fitness"]
+title: 'Kde sportovat v Děčíně: Kompletní průvodce sportovišti 2026'
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Přehled sportovišť v Děčíně — brána do Českého Švýcarska s via ferratou v
+  centru města, pískovcovým lezením, aquaparkem s termální vodou, kajakářskou
+  scénou na Labi a basketbalovou NBL.
+sportTags:
+  - lezeni
+  - plavani
+  - tenis
+  - fitness
+image: /images/blog/kde-sportovat-v-decine-pruvodce.jpg
 ---
 
 # Kde sportovat v Děčíně: Kompletní průvodce sportovišti 2026

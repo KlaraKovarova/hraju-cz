@@ -1,9 +1,14 @@
 ---
-title: "Padel vs. tenis — který raketový sport je lepší pro vás?"
-date: "2026-03-28"
-category: "pruvodce-sporty"
-excerpt: "Podrobné srovnání padelu a tenisu: rychlost učení, fyzická náročnost, cena za hodinu, dostupnost kurtů v Česku a pro koho se který sport hodí lépe."
-sportTags: ["tenis", "padel"]
+title: Padel vs. tenis — který raketový sport je lepší pro vás?
+date: '2099-01-01'
+category: pruvodce-sporty
+excerpt: >-
+  Podrobné srovnání padelu a tenisu: rychlost učení, fyzická náročnost, cena za
+  hodinu, dostupnost kurtů v Česku a pro koho se který sport hodí lépe.
+sportTags:
+  - tenis
+  - padel
+image: /images/blog/padel-vs-tenis-co-je-lepsi-pro-vas.jpg
 ---
 
 # Padel vs. tenis — který raketový sport je lepší pro vás?

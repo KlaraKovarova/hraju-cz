@@ -1,9 +1,13 @@
 ---
-title: "Jak začít s cyklistikou: Průvodce pro začátečníky 2026"
-date: "2026-03-22"
-category: "pruvodce-sporty"
-excerpt: "Kompletní průvodce cyklistikou pro začátečníky — výběr kola, základní údržba, bezpečnost v provozu, tréninkový plán a nejlepší cyklotrasy v Česku."
-sportTags: ["cyklistika"]
+title: 'Jak začít s cyklistikou: Průvodce pro začátečníky 2026'
+date: '2099-01-01'
+category: pruvodce-sporty
+excerpt: >-
+  Kompletní průvodce cyklistikou pro začátečníky — výběr kola, základní údržba,
+  bezpečnost v provozu, tréninkový plán a nejlepší cyklotrasy v Česku.
+sportTags:
+  - cyklistika
+image: /images/blog/cyklistika-pro-zacatecniky-kompletni-pruvodce.jpg
 ---
 
 # Jak začít s cyklistikou: Průvodce pro začátečníky 2026

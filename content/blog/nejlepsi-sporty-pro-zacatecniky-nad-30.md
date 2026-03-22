@@ -1,9 +1,19 @@
 ---
-title: "Nejlepší sporty pro začátečníky nad 30 — co zkusit a čemu se vyhnout"
-date: "2026-03-26"
-category: "tipy"
-excerpt: "Je vám přes 30 a chcete začít sportovat? Přehled 10 sportů seřazených podle bezpečnosti, nákladů a rychlosti pokroku — s reálnými radami od těch, kteří začali pozdě."
-sportTags: ["fitness", "plavani", "lezeni", "tenis", "squash", "badminton"]
+title: Nejlepší sporty pro začátečníky nad 30 — co zkusit a čemu se vyhnout
+date: '2099-01-01'
+category: tipy
+excerpt: >-
+  Je vám přes 30 a chcete začít sportovat? Přehled 10 sportů seřazených podle
+  bezpečnosti, nákladů a rychlosti pokroku — s reálnými radami od těch, kteří
+  začali pozdě.
+sportTags:
+  - fitness
+  - plavani
+  - lezeni
+  - tenis
+  - squash
+  - badminton
+image: /images/blog/nejlepsi-sporty-pro-zacatecniky-nad-30.jpg
 ---
 
 # Nejlepší sporty pro začátečníky nad 30 — co zkusit a čemu se vyhnout

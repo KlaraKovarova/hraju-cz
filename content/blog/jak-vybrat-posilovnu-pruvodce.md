@@ -1,9 +1,14 @@
 ---
-title: "Jak vybrat posilovnu — 7 věcí, na které se podívejte dřív, než zaplatíte"
-date: "2026-03-24"
-category: "tipy"
-excerpt: "Ne každá posilovna je pro vás ta pravá. Praktický průvodce: na co se zaměřit při výběru fitness centra — vybavení, ceny, atmosféra, hygiena a skryté poplatky."
-sportTags: ["fitness"]
+title: 'Jak vybrat posilovnu — 7 věcí, na které se podívejte dřív, než zaplatíte'
+date: '2099-01-01'
+category: tipy
+excerpt: >-
+  Ne každá posilovna je pro vás ta pravá. Praktický průvodce: na co se zaměřit
+  při výběru fitness centra — vybavení, ceny, atmosféra, hygiena a skryté
+  poplatky.
+sportTags:
+  - fitness
+image: /images/blog/jak-vybrat-posilovnu-pruvodce.jpg
 ---
 
 # Jak vybrat posilovnu — 7 věcí, na které se podívejte dřív, než zaplatíte

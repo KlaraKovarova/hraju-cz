@@ -1,9 +1,19 @@
 ---
-title: "Kde sportovat v Havířově: Kompletní průvodce sportovišti a kluby"
-date: "2026-03-22"
-category: "pruvodce-mesta"
-excerpt: "Havířov — nejmladší město Česka postavené pro horníky má překvapivě silnou sportovní infrastrukturu. Hokej s 5 100 arénou, kickboxerští mistři Evropy, 18+ tenisových kurtů, skokanská věž 10 m a skatepark za 30 milionů."
-sportTags: ["hokej", "fotbal", "tenis", "fitness", "florbal", "plavani"]
+title: 'Kde sportovat v Havířově: Kompletní průvodce sportovišti a kluby'
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Havířov — nejmladší město Česka postavené pro horníky má překvapivě silnou
+  sportovní infrastrukturu. Hokej s 5 100 arénou, kickboxerští mistři Evropy,
+  18+ tenisových kurtů, skokanská věž 10 m a skatepark za 30 milionů.
+sportTags:
+  - hokej
+  - fotbal
+  - tenis
+  - fitness
+  - florbal
+  - plavani
+image: /images/blog/kde-sportovat-v-havirove-pruvodce.jpg
 ---
 
 # Kde sportovat v Havířově: Kompletní průvodce sportovišti a kluby

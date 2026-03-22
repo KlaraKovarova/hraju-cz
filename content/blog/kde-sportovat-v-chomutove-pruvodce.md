@@ -1,9 +1,17 @@
 ---
-title: "Kde sportovat v Chomutově: Kompletní průvodce sportovišti 2026"
-date: "2026-03-22"
-category: "pruvodce-mesta"
-excerpt: "Přehled sportovišť v Chomutově — Kamencové jezero (jediné kamenečné jezero v Evropě), hokejová Rocknet Arena, Bezručovo údolí s 13km cyklostezkou a brána do Krušných hor."
-sportTags: ["plavani", "fitness", "tenis", "lezeni"]
+title: 'Kde sportovat v Chomutově: Kompletní průvodce sportovišti 2026'
+date: '2099-01-01'
+category: pruvodce-mesta
+excerpt: >-
+  Přehled sportovišť v Chomutově — Kamencové jezero (jediné kamenečné jezero v
+  Evropě), hokejová Rocknet Arena, Bezručovo údolí s 13km cyklostezkou a brána
+  do Krušných hor.
+sportTags:
+  - plavani
+  - fitness
+  - tenis
+  - lezeni
+image: /images/blog/kde-sportovat-v-chomutove-pruvodce.jpg
 ---
 
 # Kde sportovat v Chomutově: Kompletní průvodce sportovišti 2026

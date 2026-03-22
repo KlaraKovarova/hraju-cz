@@ -1,9 +1,13 @@
 ---
-title: "Hokej pro začátečníky: Pravidla, technika bruslení a kde hrát v Česku"
-date: "2026-03-22"
-category: "pruvodce-sporty"
-excerpt: "Kompletní průvodce hokejem — pravidla, bruslení, střelba, přihrávání, pozice na ledě, výstroj a přehled české hokejové scény od Extraligy po hobby ledy."
-sportTags: ["hokej"]
+title: 'Hokej pro začátečníky: Pravidla, technika bruslení a kde hrát v Česku'
+date: '2099-01-01'
+category: pruvodce-sporty
+excerpt: >-
+  Kompletní průvodce hokejem — pravidla, bruslení, střelba, přihrávání, pozice
+  na ledě, výstroj a přehled české hokejové scény od Extraligy po hobby ledy.
+sportTags:
+  - hokej
+image: /images/blog/hokej-pro-zacatecniky-kompletni-pruvodce.jpg
 ---
 
 # Hokej pro začátečníky: Pravidla, technika bruslení a kde hrát v Česku

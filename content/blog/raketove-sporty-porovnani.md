@@ -1,9 +1,16 @@
 ---
-title: "Tenis, padel, squash nebo badminton? Velké porovnání raketových sportů"
-date: "2026-03-22"
-category: "pruvodce-sporty"
-excerpt: "Nevíte, který raketový sport si vybrat? Porovnáváme tenis, padel, squash a badminton — náročnost, cenu, dostupnost kurtů i to, jak rychle se naučíte hrát."
-sportTags: ["tenis", "squash", "badminton", "padel"]
+title: 'Tenis, padel, squash nebo badminton? Velké porovnání raketových sportů'
+date: '2099-01-01'
+category: pruvodce-sporty
+excerpt: >-
+  Nevíte, který raketový sport si vybrat? Porovnáváme tenis, padel, squash a
+  badminton — náročnost, cenu, dostupnost kurtů i to, jak rychle se naučíte
+  hrát.
+sportTags:
+  - tenis
+  - squash
+  - badminton
+  - padel
 ---
 
 # Tenis, padel, squash nebo badminton? Velké porovnání raketových sportů

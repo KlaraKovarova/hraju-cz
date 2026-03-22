@@ -1,9 +1,13 @@
 ---
-title: "Basketbal pro začátečníky: Pravidla, technika a kde hrát v Česku"
-date: "2026-03-22"
-category: "pruvodce-sporty"
-excerpt: "Kompletní průvodce basketbalem — pravidla, základní dovednosti, tréninkový plán, vybavení a přehled basketbalových hal a hřišť v Česku."
-sportTags: ["basketbal"]
+title: 'Basketbal pro začátečníky: Pravidla, technika a kde hrát v Česku'
+date: '2099-01-01'
+category: pruvodce-sporty
+excerpt: >-
+  Kompletní průvodce basketbalem — pravidla, základní dovednosti, tréninkový
+  plán, vybavení a přehled basketbalových hal a hřišť v Česku.
+sportTags:
+  - basketbal
+image: /images/blog/basketbal-pro-zacatecniky-kompletni-pruvodce.jpg
 ---
 
 # Basketbal pro začátečníky: Pravidla, technika a kde hrát v Česku

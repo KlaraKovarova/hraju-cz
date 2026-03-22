@@ -1,9 +1,11 @@
 ---
-title: "Beach volejbal v Česku: Kde najdete nejlepší hřiště"
-date: "2026-03-31"
-author: "Klára Kovářová"
-category: "pruvodce-mesta"
-excerpt: "Přehled nejlepších beach volejbalových hřišť v Česku — od Prahy přes Brno až po oblíbená letní střediska. Kde hrát, kolik to stojí a jak začít."
+title: 'Beach volejbal v Česku: Kde najdete nejlepší hřiště'
+date: '2026-04-04'
+author: Klára Kovářová
+category: pruvodce-mesta
+excerpt: >-
+  Přehled nejlepších beach volejbalových hřišť v Česku — od Prahy přes Brno až
+  po oblíbená letní střediska. Kde hrát, kolik to stojí a jak začít.
 sportTags:
   - volejbal
 image: /images/blog/beach-volejbal-v-cesku.jpg
