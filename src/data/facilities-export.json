@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-03-21T19:21:21.550Z",
+  "exportedAt": "2026-03-23T12:03:00.000Z",
   "sports": [
     {
       "id": "jk8Hpc3Zm68PmcBn",
@@ -158237,6 +158237,32 @@
         "note": "Sezónní provoz květen–září"
       },
       "website": "https://www.klajda.cz/olympia/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn0pqydy0000jb8ojhqu4y91",
+      "slug": "hangar-brno-climbing-playground",
+      "name": "Hangar Brno – Climbing playground by Adam Ondra",
+      "description": "Jedna z největších a nejmodernějších boulderových hal v Evropě s 1 000 m² lezecké plochy a více než 200 bouldrovými cestami. Projekt Adama Ondry. Dvě lezecké haly, tréninkové zóny, dětský koutek s lezeckou stěnou, posilovna, café bar a coworking.",
+      "address": "Pražákova 1027/53, 619 00 Brno",
+      "postalCode": "619 00",
+      "locationId": "QSkaD4ZV0MUuSQMO",
+      "lat": 49.167,
+      "lng": 16.6023,
+      "courtsLanes": null,
+      "pricing": "Dopolední vstupné (do 15:00): dospělí 210 Kč, studenti 170 Kč, děti/senioři/ZTP 125 Kč. Odpolední a víkendy: dospělí 260 Kč, studenti 205 Kč, děti/senioři/ZTP 125 Kč. Půjčovna lezeček 80 Kč.",
+      "openingHours": {
+        "ne": "09:00–22:00",
+        "po": "09:00–22:00",
+        "so": "09:00–22:00",
+        "st": "07:00–22:00",
+        "pá": "07:00–22:00",
+        "út": "07:00–22:00",
+        "čt": "07:00–22:00"
+      },
+      "website": "https://hangarbrno.cz/",
       "isActive": true,
       "isClaimed": false,
       "isPremium": false
