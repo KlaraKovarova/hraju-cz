@@ -978,6 +978,66 @@ export async function getSportReviewStats(sportSlug: string): Promise<{
   }
 }
 
+/** Review stats for a sport in a specific region */
+export async function getRegionSportReviewStats(
+  regionSlug: string,
+  sportSlug: string
+): Promise<{ totalReviews: number; averageRating: number }> {
+  const region = getRegionBySlug(regionSlug);
+  if (!region) return { totalReviews: 0, averageRating: 0 };
+  try {
+    const [total, avgResult] = await withTimeout(
+      Promise.all([
+        prisma.review.count({
+          where: {
+            isApproved: true,
+            facility: {
+              isActive: true,
+              sports: { some: { sport: { slug: sportSlug } } },
+              location: { region: region.name },
+            },
+          },
+        }),
+        prisma.review.aggregate({
+          where: {
+            isApproved: true,
+            facility: {
+              isActive: true,
+              sports: { some: { sport: { slug: sportSlug } } },
+              location: { region: region.name },
+            },
+          },
+          _avg: { rating: true },
+        }),
+      ]),
+      DB_QUERY_TIMEOUT_MS
+    );
+    return {
+      totalReviews: total,
+      averageRating: Math.round((avgResult._avg.rating ?? 0) * 10) / 10,
+    };
+  } catch {
+    return { totalReviews: 0, averageRating: 0 };
+  }
+}
+
+/** Map markers for facilities with coordinates in a sport × region */
+export function getFacilityMapMarkersByRegionAndSport(
+  regionSlug: string,
+  sportSlug: string
+): { lat: number; lng: number; name: string; address: string; url: string }[] {
+  const facilities = staticFacilitiesByRegionAndSport(regionSlug, sportSlug);
+  return facilities
+    .filter((f) => f.lat != null && f.lng != null)
+    .map((f) => ({
+      lat: f.lat!,
+      lng: f.lng!,
+      name: f.name,
+      address: f.address,
+      url: `/sport/${sportSlug}/${f.slug}`,
+    }));
+}
+
 /** Map markers for all facilities with coordinates in a sport */
 export function getFacilityMapMarkersBySport(sportSlug: string): {
   lat: number;
