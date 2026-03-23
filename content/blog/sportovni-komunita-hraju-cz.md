@@ -41,13 +41,14 @@ Našli jste na blogu užitečný článek? Pošlete ho kamarádovi, sdílejte na
 
 Znáte sportoviště, které v našem katalogu chybí? Dejte nám vědět! Chceme mít nejkompletnější přehled sportovních zařízení v Česku.
 
-## Co plánujeme
+## Co už funguje
 
-Komunita hraju.cz roste a my rosteme s ní. V nejbližších týdnech se můžete těšit na:
+Komunita hraju.cz roste a nabízí:
 
-- **Systém hodnocení** — ohodnoťte sportoviště hvězdičkami a napište recenzi
-- **Profily sportovců** — sledujte oblíbená místa a sdílejte doporučení
-- **Komunitní tipy** — nejoblíbenější sportoviště podle hodnocení komunity
+- **Recenze a hodnocení** — ohodnoťte sportoviště hvězdičkami a napište recenzi. Vaše zkušenost pomáhá stovkám dalších sportovců.
+- **Profily sportovců** — sledujte svou historii recenzí, sbírejte odznaky a lezte v žebříčku nejaktivnějších recenzentů.
+- **Check-in „Byl/a jsem tady"** — označte sportoviště, která jste navštívili.
+- **Žebříček recenzentů** — nejaktivnější členové komunity na jednom místě. Najdete ho na [/recenze](/recenze).
 
 ## Proč na tom záleží
 
