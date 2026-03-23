@@ -9,6 +9,12 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  outputFileTracingExcludes: {
+    "*": [
+      "./public/images/blog/**",
+      "./public/images/sports/**",
+    ],
+  },
 };
 
 export default nextConfig;
