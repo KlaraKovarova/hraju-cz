@@ -886,6 +886,123 @@ export async function getTopReviewers(limit: number = 10): Promise<TopReviewer[]
   }
 }
 
+/** Top reviews for a specific sport (for sport category pages) */
+export async function getTopReviewsBySport(
+  sportSlug: string,
+  limit: number = 3
+): Promise<ReviewWithFacility[]> {
+  try {
+    const reviews = await withTimeout(
+      prisma.review.findMany({
+        where: {
+          isApproved: true,
+          facility: { sports: { some: { sport: { slug: sportSlug } } } },
+        },
+        orderBy: [{ rating: "desc" }, { helpful: "desc" }, { createdAt: "desc" }],
+        take: limit,
+        select: {
+          id: true,
+          userId: true,
+          authorName: true,
+          rating: true,
+          title: true,
+          text: true,
+          helpful: true,
+          createdAt: true,
+          facility: {
+            select: {
+              id: true,
+              name: true,
+              slug: true,
+              location: { select: { city: true } },
+              sports: { take: 1, select: { sport: { select: { slug: true, nameCs: true } } } },
+            },
+          },
+        },
+      }),
+      DB_QUERY_TIMEOUT_MS
+    );
+    return reviews.map((r) => ({
+      id: r.id,
+      userId: r.userId,
+      authorName: r.authorName,
+      rating: r.rating,
+      title: r.title,
+      text: r.text,
+      helpful: r.helpful,
+      createdAt: r.createdAt,
+      facility: {
+        id: r.facility.id,
+        name: r.facility.name,
+        slug: r.facility.slug,
+        city: r.facility.location.city,
+        sport: r.facility.sports[0]?.sport.slug ?? null,
+        sportNameCs: r.facility.sports[0]?.sport.nameCs ?? null,
+      },
+    }));
+  } catch {
+    return [];
+  }
+}
+
+/** Review count + average for a sport (for sport category hero stats) */
+export async function getSportReviewStats(sportSlug: string): Promise<{
+  totalReviews: number;
+  averageRating: number;
+}> {
+  try {
+    const [total, avgResult] = await withTimeout(
+      Promise.all([
+        prisma.review.count({
+          where: {
+            isApproved: true,
+            facility: { sports: { some: { sport: { slug: sportSlug } } } },
+          },
+        }),
+        prisma.review.aggregate({
+          where: {
+            isApproved: true,
+            facility: { sports: { some: { sport: { slug: sportSlug } } } },
+          },
+          _avg: { rating: true },
+        }),
+      ]),
+      DB_QUERY_TIMEOUT_MS
+    );
+    return {
+      totalReviews: total,
+      averageRating: Math.round((avgResult._avg.rating ?? 0) * 10) / 10,
+    };
+  } catch {
+    return { totalReviews: 0, averageRating: 0 };
+  }
+}
+
+/** Map markers for all facilities with coordinates in a sport */
+export function getFacilityMapMarkersBySport(sportSlug: string): {
+  lat: number;
+  lng: number;
+  name: string;
+  address: string;
+  url: string;
+}[] {
+  const facilityIds = facilitiesBySportSlug.get(sportSlug);
+  if (!facilityIds) return [];
+
+  return exportData.facilities
+    .filter((f) => facilityIds.has(f.id) && f.isActive && f.lat != null && f.lng != null)
+    .map((f) => {
+      const loc = locationById.get(f.locationId);
+      return {
+        lat: f.lat!,
+        lng: f.lng!,
+        name: f.name,
+        address: loc ? `${f.address}, ${loc.city}` : f.address,
+        url: `/sport/${sportSlug}/${f.slug}`,
+      };
+    });
+}
+
 /** Recently added facilities (by createdAt descending) */
 export async function getRecentFacilities(limit: number = 4): Promise<FacilityWithDetails[]> {
   const sorted = exportData.facilities

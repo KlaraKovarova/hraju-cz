@@ -1,11 +1,12 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, ChevronRight, ChevronDown, Calendar, ArrowRight, PlusCircle } from "lucide-react";
+import { MapPin, ChevronRight, ChevronDown, Calendar, ArrowRight, PlusCircle, Star, Map } from "lucide-react";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
-import { getRegionsBySport, getTopFacilitiesBySport, getTopCitiesBySport } from "@/lib/data";
+import { getRegionsBySport, getTopFacilitiesBySport, getTopCitiesBySport, getTopReviewsBySport, getSportReviewStats, getFacilityMapMarkersBySport } from "@/lib/data";
 import { getSportTitleSuffix, getSportFacilityTypePluralGenitive, getSportFacilityType } from "@/lib/seo";
 import { FacilityCard } from "@/components/FacilityCard";
+import { FacilityMap } from "@/components/FacilityMap";
 import { HeroSearchForm } from "@/components/HeroSearchForm";
 import { AdSlot } from "@/components/AdSlot";
 import { getSportFaqs } from "@/lib/sport-faq";
@@ -42,6 +43,19 @@ export async function generateMetadata({
   };
 }
 
+function StarRating({ rating }: { rating: number }) {
+  return (
+    <span className="inline-flex items-center gap-0.5">
+      {Array.from({ length: 5 }, (_, i) => (
+        <Star
+          key={i}
+          className={`h-4 w-4 ${i < Math.round(rating) ? "fill-amber-400 text-amber-400" : "fill-zinc-200 text-zinc-200"}`}
+        />
+      ))}
+    </span>
+  );
+}
+
 export default async function SportPage({ params }: SportPageProps) {
   const { sport: sportSlug } = await params;
   const sport = getSportBySlug(sportSlug);
@@ -50,11 +64,17 @@ export default async function SportPage({ params }: SportPageProps) {
     notFound();
   }
 
-  const regions = await getRegionsBySport(sport.slug);
-  const topFacilities = await getTopFacilitiesBySport(sport.slug, 10);
-  const topCities = await getTopCitiesBySport(sport.slug, 10);
+  const [regions, topFacilities, topCities, reviewStats, topReviews] = await Promise.all([
+    getRegionsBySport(sport.slug),
+    getTopFacilitiesBySport(sport.slug, 10),
+    getTopCitiesBySport(sport.slug, 10),
+    getSportReviewStats(sport.slug),
+    getTopReviewsBySport(sport.slug, 3),
+  ]);
+
   const totalFacilities = regions.reduce((sum, r) => sum + r.facilityCount, 0);
-  const sportPosts = getPostsBySport(sport.slug).slice(0, 3);
+  const sportPosts = getPostsBySport(sport.slug);
+  const mapMarkers = getFacilityMapMarkersBySport(sport.slug);
 
   // JSON-LD ItemList for top facilities
   const itemListLd = {
@@ -95,6 +115,28 @@ export default async function SportPage({ params }: SportPageProps) {
     ],
   };
 
+  // CollectionPage JSON-LD with AggregateRating (if reviews exist)
+  const collectionLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: `${sport.nameCs} v České republice`,
+    description: sport.description,
+    url: `https://www.hraju.cz/sport/${sportSlug}`,
+    ...(reviewStats.totalReviews > 0 ? {
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: reviewStats.averageRating,
+        reviewCount: reviewStats.totalReviews,
+        bestRating: 5,
+        worstRating: 1,
+      },
+    } : {}),
+  };
+
+  // Split blog posts: first 3 for the grid, rest for the list
+  const featuredPosts = sportPosts.slice(0, 3);
+  const morePosts = sportPosts.slice(3, 9);
+
   return (
     <main className="min-h-screen bg-zinc-50/50">
       <script
@@ -104,6 +146,10 @@ export default async function SportPage({ params }: SportPageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionLd) }}
       />
       {faqLd && (
         <script
@@ -138,7 +184,7 @@ export default async function SportPage({ params }: SportPageProps) {
         </div>
       </nav>
 
-      {/* Sport Hero */}
+      {/* Sport Hero — enhanced with stats */}
       <section className="relative border-b border-zinc-100 overflow-hidden">
         <div className="absolute inset-0">
           <Image
@@ -163,10 +209,30 @@ export default async function SportPage({ params }: SportPageProps) {
               </p>
             </div>
           </div>
-          <p className="mt-4 text-sm text-white/70">
-            Celkem <span className="font-semibold text-white">{totalFacilities}</span> sportovišť
-            {" "}v <span className="font-semibold text-white">{regions.length}</span> krajích
-          </p>
+          <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-white/70">
+            <span>
+              <span className="font-semibold text-white">{totalFacilities}</span> sportovišť
+              {" "}v <span className="font-semibold text-white">{regions.length}</span> krajích
+            </span>
+            {reviewStats.totalReviews > 0 && (
+              <>
+                <span className="text-white/40">|</span>
+                <span className="flex items-center gap-1.5">
+                  <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
+                  <span className="font-semibold text-white">{reviewStats.averageRating}</span>
+                  {" "}z <span className="font-semibold text-white">{reviewStats.totalReviews}</span> recenzí
+                </span>
+              </>
+            )}
+            {sportPosts.length > 0 && (
+              <>
+                <span className="text-white/40">|</span>
+                <span>
+                  <span className="font-semibold text-white">{sportPosts.length}</span> článků
+                </span>
+              </>
+            )}
+          </div>
           <HeroSearchForm sportSlug={sport.slug} />
         </div>
       </section>
@@ -201,6 +267,23 @@ export default async function SportPage({ params }: SportPageProps) {
           ))}
         </div>
       </section>
+
+      {/* Map View — all facilities with coordinates */}
+      {mapMarkers.length > 0 && (
+        <section className="mx-auto max-w-6xl px-6 py-8 border-t border-zinc-100">
+          <h2 className="mb-6 flex items-center gap-2 text-xl font-bold text-zinc-900">
+            <Map className="h-5 w-5 text-zinc-400" />
+            Mapa — {sport.nameCs.toLowerCase()} v ČR
+          </h2>
+          <FacilityMap
+            markers={mapMarkers}
+            className="h-[400px] w-full rounded-2xl border border-zinc-200 overflow-hidden"
+          />
+          <p className="mt-2 text-xs text-zinc-400">
+            {mapMarkers.length} {mapMarkers.length === 1 ? "místo" : "míst"} na mapě
+          </p>
+        </section>
+      )}
 
       {/* Ad: between regions and cities */}
       <div className="mx-auto max-w-6xl px-6 py-4">
@@ -248,6 +331,58 @@ export default async function SportPage({ params }: SportPageProps) {
                 sportSlug={sportSlug}
                 priority={i < 4}
               />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Featured Reviews */}
+      {topReviews.length > 0 && (
+        <section className="mx-auto max-w-6xl px-6 py-8 border-t border-zinc-100">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-xl font-bold text-zinc-900">
+              Recenze — {sport.nameCs.toLowerCase()}
+            </h2>
+            <Link
+              href={`/recenze?sport=${sportSlug}`}
+              className="text-sm font-semibold text-emerald-600 transition hover:text-emerald-700"
+            >
+              Všechny recenze
+            </Link>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {topReviews.map((review) => (
+              <div
+                key={review.id}
+                className="rounded-2xl border border-zinc-100 bg-white p-5"
+              >
+                <div className="flex items-center justify-between">
+                  <StarRating rating={review.rating} />
+                  <span className="text-xs text-zinc-400">
+                    {new Date(review.createdAt).toLocaleDateString("cs-CZ")}
+                  </span>
+                </div>
+                {review.title && (
+                  <h3 className="mt-3 font-semibold text-zinc-900 text-sm">
+                    {review.title}
+                  </h3>
+                )}
+                {review.text && (
+                  <p className="mt-2 text-sm text-zinc-600 line-clamp-3">
+                    {review.text}
+                  </p>
+                )}
+                <div className="mt-3 pt-3 border-t border-zinc-50">
+                  <Link
+                    href={`/sport/${review.facility.sport ?? sportSlug}/${review.facility.slug}`}
+                    className="text-xs font-medium text-emerald-600 hover:text-emerald-700"
+                  >
+                    {review.facility.name}
+                  </Link>
+                  <span className="text-xs text-zinc-400"> — {review.facility.city}</span>
+                  <p className="text-xs text-zinc-500 mt-0.5">{review.authorName}</p>
+                </div>
+              </div>
             ))}
           </div>
         </section>
@@ -315,43 +450,83 @@ export default async function SportPage({ params }: SportPageProps) {
         </section>
       )}
 
-      {/* Related Blog Posts */}
-      {sportPosts.length > 0 && (
+      {/* Blog Posts — expanded section */}
+      {featuredPosts.length > 0 && (
         <section className="mx-auto max-w-6xl px-6 py-12 border-t border-zinc-100">
           <h2 className="mb-6 text-xl font-bold text-zinc-900">
             Články o sportu {sport.nameCs.toLowerCase()}
           </h2>
           <div className="grid gap-6 sm:grid-cols-3">
-            {sportPosts.map((post) => (
+            {featuredPosts.map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group rounded-2xl border border-zinc-100 bg-white p-6 transition hover:border-emerald-200 hover:shadow-sm"
+                className="group rounded-2xl border border-zinc-100 bg-white overflow-hidden transition hover:border-emerald-200 hover:shadow-sm"
               >
-                <span className="text-xs font-medium text-emerald-600">
-                  {CATEGORIES[post.category] || post.category}
-                </span>
-                <h3 className="mt-2 font-bold text-zinc-900 group-hover:text-emerald-700">
-                  {post.title}
-                </h3>
-                <p className="mt-2 line-clamp-2 text-sm text-zinc-500">
-                  {post.excerpt}
-                </p>
-                <div className="mt-3 flex items-center gap-1 text-xs text-zinc-400">
-                  <Calendar className="h-3 w-3" />
-                  {new Date(post.date).toLocaleDateString("cs-CZ")}
+                {post.image && (
+                  <div className="relative h-40 bg-zinc-100">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, 33vw"
+                    />
+                  </div>
+                )}
+                <div className="p-5">
+                  <span className="text-xs font-medium text-emerald-600">
+                    {CATEGORIES[post.category] || post.category}
+                  </span>
+                  <h3 className="mt-2 font-bold text-zinc-900 group-hover:text-emerald-700">
+                    {post.title}
+                  </h3>
+                  <p className="mt-2 line-clamp-2 text-sm text-zinc-500">
+                    {post.excerpt}
+                  </p>
+                  <div className="mt-3 flex items-center gap-1 text-xs text-zinc-400">
+                    <Calendar className="h-3 w-3" />
+                    {new Date(post.date).toLocaleDateString("cs-CZ")}
+                  </div>
                 </div>
               </Link>
             ))}
           </div>
-          <div className="mt-6 text-center">
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-600 transition hover:text-emerald-700"
-            >
-              Všechny články <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
+          {/* Additional posts in a compact list */}
+          {morePosts.length > 0 && (
+            <div className="mt-6 space-y-3">
+              {morePosts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="group flex items-center gap-4 rounded-xl border border-zinc-100 bg-white p-4 transition hover:border-emerald-200 hover:shadow-sm"
+                >
+                  <div className="min-w-0 flex-1">
+                    <span className="text-xs font-medium text-emerald-600">
+                      {CATEGORIES[post.category] || post.category}
+                    </span>
+                    <h3 className="mt-1 font-semibold text-sm text-zinc-900 group-hover:text-emerald-700 truncate">
+                      {post.title}
+                    </h3>
+                  </div>
+                  <span className="text-xs text-zinc-400 shrink-0">
+                    {new Date(post.date).toLocaleDateString("cs-CZ")}
+                  </span>
+                  <ArrowRight className="h-4 w-4 shrink-0 text-zinc-300 group-hover:text-emerald-500" />
+                </Link>
+              ))}
+            </div>
+          )}
+          {sportPosts.length > 9 && (
+            <div className="mt-6 text-center">
+              <Link
+                href={`/blog/sport/${sportSlug}`}
+                className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-600 transition hover:text-emerald-700"
+              >
+                Všech {sportPosts.length} článků <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          )}
         </section>
       )}
 
