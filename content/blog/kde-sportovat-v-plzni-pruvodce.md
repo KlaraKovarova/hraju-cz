@@ -4,8 +4,7 @@ date: '2026-03-11'
 category: pruvodce-mesta
 excerpt: >-
   Plzeň má přes 500 sportovišť — od nejstaršího tenisového klubu v Česku (1893)
-  po bezplatný Škoda Sport Park. Přehled s cenami, adresami a tipy pro každý
-  sport.
+  po bezplatný Škoda Sport Park. Přehled s ověřenými cenami 2026.
 sportTags:
   - fitness
   - plavani
@@ -13,231 +12,340 @@ sportTags:
   - squash
   - lezeni
   - golf
+  - padel
+  - badminton
 image: /images/blog/kde-sportovat-v-plzni.jpg
 ---
 
-Plzeň se sportovními možnostmi vyrovná mnohem větším městům. Najdete tu přes 500 sportovišť — od bazénu s relaxační zónou přes nejstarší tenisový klub v Česku až po moderní boulderovou stěnu. A na rozdíl od Prahy tu většina věcí stojí výrazně méně. Tady je kompletní průvodce.
+# Kde sportovat v Plzni: Kompletní průvodce sportovišti 2026
+
+Plzeň se sportovními možnostmi vyrovná mnohem větším městům. Najdete tu přes 500 sportovišť — od bazénu s minutovým tarifem přes nejstarší tenisový klub v Česku až po moderní boulderingovou stěnu. A na rozdíl od Prahy tu většina věcí stojí výrazně méně. Tady je kompletní průvodce s ověřenými cenami pro rok 2026.
 
 ## Plavání
 
 ### Plavecký areál Slovany
 
-[bazenslovany.cz](https://www.bazenslovany.cz/)
+Největší plavecký komplex v Plzni. 50m venkovní bazén (celoročně díky nafukovacímu krytu), vnitřní bazény, tobogán, divoká řeka, relaxační bazén, dětský bazén, vířivky a parní lázně. Zrekonstruovaný v lednu 2025.
 
-Největší plavecký komplex v Plzni. Vnitřní i venkovní bazény, sauna, tobogán, divoká řeka, relaxační bazén, dětský bazén, vířivky a parní lázně.
-
-- **Minutový tarif: 1 Kč/minuta** — hodina plavání za 60 Kč
-- Celodenní vstup: od 300 Kč (dospělí), 250 Kč (děti/studenti)
-- Rodiny: rodinné vstupné 850 Kč
-
-**Pro koho:** Rodiny (tobogán + dětský bazén), sportovní plavci (dráhy) i relaxace (sauna + vířivka) pod jednou střechou.
+- **Permanentka:** 1 Kč/minuta — hodina plavání za 60 Kč (min. nákup 500 min = 500 Kč)
+- **Vstup (vnitřní + venkovní):** Dospělí 135 Kč/1,5h, 250 Kč/3h, 300 Kč/den
+- **Zvýhodněný (děti, studenti 15–26, senioři 60+):** 105 Kč/1,5h, 200 Kč/3h, 250 Kč/den
+- **Rodina (2+2):** 375 Kč/1,5h, 700 Kč/3h, 850 Kč/den
+- **Sauna:** 180 Kč/1h, 260 Kč/1,5h, 335 Kč/2h (permanentka 2 Kč/min)
+- **Zdarma:** Děti pod 122 cm (s dospělým 18+); senioři s Plzeňskou kartou Po–Pá 9–11 (40 vstupů/rok)
+- **Web:** bazenslovany.cz
 
 ### Bazén Lochotín
 
-[bazenlochotin.cz](https://www.bazenlochotin.cz/)
+25m bazén (6 drah), dětský bazén, venkovní bazén (16,6 × 8,15 m), sauna a fitness — vše v ceně vstupného. Klidnější alternativa k Slovanům.
 
-6dráhový plavecký bazén s dětským bazénem a saunovým zázemím. Klidnější alternativa k Slovanům.
+- **Permanentka:** 1 Kč/minuta (platí i ve Slovanech!)
+- **Vstup:** Dospělí 110 Kč/1,5h, 200 Kč/3h, 250 Kč/den
+- **Zvýhodněný:** 95 Kč/1,5h, 150 Kč/3h, 200 Kč/den
+- **Rodina:** 315 Kč/1,5h, 550 Kč/3h, 700 Kč/den
+- **Zdarma:** Senioři s Plzeňskou kartou Po–Pá 12–14 (40 vstupů/rok)
+- **Web:** bazenlochotin.cz
 
-- **Minutový tarif: 1 Kč/minuta** (hodina = 60 Kč)
-- Seniorské plavání: Po–Pá 12:00–14:00
-
-**Pro koho:** Pravidelní plavci, kteří chtějí klid a prostor. Senioři ocení vyhrazené hodiny.
-
-**Srovnání:**
-
-| Bazén | Typ | Cena/hod | Bonus |
-|---|---|---|---|
-| Slovany | Komplex (bazény + aquapark) | 60 Kč | Tobogán, sauna, venkovní |
-| Lochotín | Sportovní (6 drah) | 60 Kč | Seniorské hodiny |
-
-60 Kč za hodinu v obou — to je o třetinu levnější než průměr v Praze (80–190 Kč).
+**Tip:** Permanentka za 1 Kč/min platí v obou bazénech. Na rok pravidelného plavání (3× týdně) ušetříte oproti Praze **3 000–20 000 Kč**.
+- **Najít bazén:** [hraju.cz/sport/plavani](/sport/plavani)
 
 ## Fitness
 
-Plzeň má fitness centra pro každý rozpočet — od 30 Kč po prémiové kluby.
+### 210 GYM — centrum města
 
-| Fitness | Lokalita | Vstup | Měsíční | Poznámka |
-|---|---|---|---|---|
-| **Fit Life Doubravka** | Doubravka | 30 Kč | — | Nejlevnější v Plzni + 6 squash kurtů |
-| **Fitness Aura** | Centrum | 100 Kč | 950 Kč | Studenti: 50 Kč vstup (do 13h v pracovní dny) |
-| **Premier Fitness** | Plzeň Plaza | 119 Kč | — | Shopping center, posilovací stroje |
-| **DrFit Fitness** | Centrum | 199 Kč | — | 24/7 provoz, 75 min pro 2 osoby |
-| **KWK FIT** | — | — | 900 Kč/měs* | 24/7 provoz, studenti 750 Kč/měs |
-| **Emotion Fitness** | — | — | — | Technogym vybavení, jóga, pilates, skupinové lekce |
+**2 100 m²** — největší fitness v Plzni. 1 500+ m² cvičební plochy, 80+ strojů Grun Sport, Technogym Ride indoor cycling.
 
-*\*KWK FIT: 3 600 Kč/4 měsíce*
+- **Otevřeno:** Denně 6:00–23:00 (i svátky)
+- **Od:** 1 250 Kč/měsíc (přes Avalon Fitness app)
+- **Adresa:** Poděbradova 1
+- **Web:** 210gym.cz
 
-**Nejlevnější varianta:** Fit Life Doubravka za 30 Kč. Toto je pravděpodobně nejlevnější fitness v celém Plzeňském kraji.
+### Form Factory Kasárny (NOVÉ)
 
-**Nejlepší pro studenty:** Fitness Aura — 50 Kč vstup a 475 Kč měsíčně pro studenty (dopoledne ve všední dny).
+1 410 m² v CTPark Kasárny. Součást největšího českého fitness řetězce (45 klubů). Plně vybavená posilovna, funkční/kardio zóny, skupinové lekce.
 
-## Tenis
+- **Od:** ~1 390 Kč/měsíc
+- **Studenti (ISIC):** Sleva 500 Kč/měsíc
+- **Akce (do 31. 3. 2026):** 1 Kč za první měsíc
+- **Web:** formfactory.cz
 
-Plzeň je tenisové město s bohatou tradicí. Najdete tu **nejstarší tenisový klub v Česku**.
+### eMOTION Fitness
 
-### I. ČLTK Plzeň — nejstarší tenisový klub v Česku
+Technogym vybavení, jóga, pilates, skupinové lekce. Přijímá MultiSport, Pluxee, Edenred, Benefit Plus.
 
-[cltkplzen.cz](http://www.cltkplzen.cz/) · Štruncovy sady
+- **Vstup:** 200 Kč (studenti 170 Kč)
+- **Měsíční (smlouva):** 1 350 Kč
+- **Permanentky:** 10 vstupů 1 800 Kč
+- **Roční:** 16 000 Kč
+- **Hodiny:** Po–Pá 6:00–21:00, So–Ne 7:00–20:00
+- **Web:** emotionfitness.cz
 
-Založen **v roce 1893** — nejstarší aktivní tenisový klub v České republice. Kurty stojí na soutoku řek Mže a Radbuzy ve Štruncových sadech. Hraje se tu tenis nepřetržitě přes 130 let.
+### Premier Fitness — Plzeň Plaza
 
-**Pro koho:** Kdo chce hrát na historickém místě. A kdo chce říct, že trénuje v nejstarším tenisovém klubu v zemi.
+840 m², Technogym vybavení, 3h parkování zdarma.
 
-### TJ Lokomotiva Plzeň
+- **Vstup:** 170 Kč (studenti 150 Kč)
+- **Měsíční:** 1 790 Kč (studenti 1 590 Kč)
+- **Roční (splátky):** 1 590 Kč/měsíc (studenti 1 290 Kč)
+- **Off-peak měsíční:** od 1 390 Kč
+- **Web:** premierfitness.cz
 
-[tjloko-plzen.cz](https://www.tjloko-plzen.cz/) · roh Táborské a Lobezské
+### Sportstudio V&S — Bory
 
-**8 antukových kurtů** — největší tenisový areál v Plzni. Letní sezóna. Součástí rozsáhlého sportovního areálu s dalšími sporty (squash, badminton, golf simulátory).
+Vstup od 130 Kč — jeden z nejdostupnějších fitness v Plzni. Boxerský ring, osobní tréninky.
 
-### TK Slavoj Plzeň
-
-Tomanů ulice · 3 kurty PAVITEX (zimní hala) + 2 antukové kurty
-
-**Celoroční tenis** — díky kryté hale s PAVITEX povrchem můžete hrát i v zimě.
-
-### Rapid Plzeň Tenis
-
-[rapidplzentenis.cz](https://www.rapidplzentenis.cz/)
-
-3 kryté kurty (2 antuka, 1 hard) — otevřeno od poloviny října. Zimní alternativa.
-
-### TK Škoda Plzeň
-
-Luční 60a · Tradiční klub spojený se Škodovkou.
-
-**Celkem 7 tenisových klubů** v Plzni — na město této velikosti nadprůměrné. Tenisová tradice sahá až do roku 1893.
-
-## Squash a badminton
+- **Vstup:** 130 Kč (studenti/senioři 110 Kč)
+- **Měsíční:** 1 100 Kč (studenti 1 000 Kč)
+- **Roční:** 8 400 Kč (700 Kč/měsíc)
+- **Web:** fitnessbory.cz
 
 ### Fit Life Doubravka
 
-[fitlifedoubravka.cz](https://www.fitlifedoubravka.cz/)
+Hammer Strength vybavení. Součástí jsou i squashové kurty (viz sekce Squash). Dětský koutek.
 
-**6 squashových kurtů + 3 badmintonové kurty** — největší kapacita v Plzni. Online rezervace.
+- **Vstup:** 180 Kč (studenti/IZS sleva 10 %)
+- **Měsíční:** 1 290–1 690 Kč
+- **Roční:** od 10 190 Kč
+- **Web:** fitlifedoubravka.cz
 
-- Fitness za 30 Kč jako bonus
-- Ideální pro skupiny (9 kurtů celkem)
+### KWK FIT — Doubravka (ZAVÍRÁ 31. 5. 2026)
 
-### Sportovní centrum Hrádek
+Největší silový gym v Plzni — ale uzavírá 31. května 2026. Cross room, solárium a boxerská místnost zavřeny od 31. 3. 2026.
 
-Červenohrádecká 396/9 · [hradeksport.cz](https://hradeksport.cz/)
-
-**3 squashové kurty + badminton.** Klimatizované prostory. Online rezervace.
-
-### TJ Lokomotiva Plzeň
-
-1 klimatizovaný squashový kurt (ASB Squashcourts) + 1 badmintonový kurt v suterénní tělocvičně. Pro ty, kdo chtějí kombinovat squash s tenisem nebo golfovým simulátorem v jednom areálu.
+- **Poslední nabídka:** 4 měsíce za cenu 3 (3 600 Kč dospělí, 3 000 Kč studenti)
+- **Členové:** 24/7 přístup do uzavření
+- **Web:** kwkfit.cz
+- **Najít fitness:** [hraju.cz/sport/fitness](/sport/fitness)
 
 ## Lezení a bouldering
 
-### Lezecké centrum V16
+### Lezecké centrum V16 — bouldering
 
-[v16.cz](https://www.v16.cz/)
+Prémiová boulderová hala od roku 2016. Hlavní stěna 180 m² (~70 cest, 5 stupňů obtížnosti), traversová stěna 98 m² (40 cest, vhodné pro začátečníky), performance zóna 51 m² (campus boardy). Max výška 4 m.
 
-**Prémiová boulderová hala** založená v roce 2016 — jedno z prvních specializovaných boulderingových center v Česku.
+- **Vstup:** 260 Kč dospělí, studenti/senioři 220 Kč, děti 6–15 let 170 Kč
+- **Off-peak (Po–Pá do 17:00):** 220 Kč dospělí, 190 Kč studenti, 160 Kč děti
+- **Rodina (2+2):** 610–690 Kč
+- **Pod 6 let:** Zdarma
+- **Registrace:** 60 Kč jednorázově
+- **Měsíční:** 1 880 Kč (studenti 1 590 Kč)
+- **Roční:** 16 200 Kč (studenti 13 700 Kč)
+- **Půjčení:** Lezečky 70 Kč, magnézium 30 Kč
+- **Otevřeno:** Denně 8:00–22:00 (Út+Čt od 7:00)
+- **Web:** v16.cz
 
-- **Plocha: ~350 m²** na více úrovních
-- Otevřeno denně 8:00–22:00
-- Vhodné pro začátečníky i pokročilé
+### Sport Centrum Koloseum — lezecká stěna s lanem
 
-**Pro koho:** Boulderisté všech úrovní. Moderní centrum s profesionálním přístupem.
+Výška 9,5 m (nejdelší cesta 13 m), 40 cest obtížnost 3–9 UIAA. Boulderová sekce 140 m², 4,5 m výška. Součástí fitness + sauna.
 
-### Sport Plzeň — Lezecká stěna
-
-[sport-plzen.cz](http://sport-plzen.cz/)
-
-- **Výška: 9,5 m** (nejdelší cesta 13 m)
-- **40 cest**, obtížnost 3–9 UIAA
-- **Boulderová sekce:** 140 m², 4,5 m výška
-
-**Pro koho:** Kdo preferuje lezení s lanem a delší cesty. 40 cest pokryje celé odpoledne.
+- **Vstup (fitness + kardio + stěna):** 150 Kč (s kartou), 200 Kč (bez karty)
+- **Půjčení:** Karabina 20 Kč, lano 40 Kč, lezečky 30 Kč, úvazek 20 Kč
+- **Měsíční:** 1 390 Kč, roční 10 990 Kč
+- **Web:** sport-plzen.cz
 
 ### Venkovní bouldering Bolevce (ZDARMA)
 
-Plaská ulice, Plzeň – Bolevce
+4 venkovní boulderové stěny u pump tracku. Výška 2,8 m, ~250 m², matrace na místě. Otevřeno únor 2025. Celoročně přístupné, zdarma.
 
-**4 venkovní boulderové stěny** u pump tracku. Výška 2,8 m, plocha ~250 m², matrace na místě. Celoročně přístupné, zdarma.
+- **Lokace:** Plaská ulice, Plzeň – Bolevce
+- **Najít stěnu:** [hraju.cz/sport/lezeni](/sport/lezeni)
 
-**Pro koho:** Letní bouldering venku, rodiny s dětmi, začátečníci, kteří chtějí zkusit lezení bez závazku.
+## Padel
+
+### Parkhotel Congress Center
+
+**Jediný existující padelový kurt** v Plzni. 1 padelový kurt + 2 tenisové kurty (Wimbledon povrch) + 3 kryté kurty (zimní vytápěná hala). Rakety a míčky zdarma na recepci hotelu.
+
+- **Rezervace:** rezervace.membex.cz/parkhotel nebo +420 378 772 977
+- **Hotelový host (2+ noci):** 50 % sleva na kurty
+- **Web:** parkhotel-czech.eu
+
+### Padel Powers Plzeň — Kasárny (Q3 2026)
+
+**9 prémiových indoor kurtů** v CTPark Kasárny. Bar, prodejna + půjčovna vybavení, šatny.
+
+- **Otevření:** Očekáváno Q3 2026
+- **Web:** padelpowers.com/plzen-kasarny
+- **Více o padelu v ČR:** [Padel boom 2026](/blog/padel-boom-cesko-2026-kam-hrat-mimo-prahu)
+- **Najít padel:** [hraju.cz/sport/padel](/sport/padel)
+
+## Tenis
+
+Plzeň je tenisové město s bohatou tradicí — 7+ klubů a nejstarší tenisový klub v Česku.
+
+### I. ČLTK Plzeň — nejstarší tenisový klub v Česku
+
+Založen **v roce 1893**. Kurty ve Štruncových sadech na soutoku řek Mže a Radbuzy. Nepřetržitá tenisová tradice přes 130 let.
+
+- **Web:** cltkplzen.cz
+
+### TK Slavia Plzeň
+
+Venkovní antuka + pevná hala + nafukovací haly. Celoroční provoz.
+
+- **Indoor (pevná hala):** 400–600 Kč/hod (členové 340–540 Kč)
+- **Indoor (nafukovací):** 350–540 Kč/hod (členové 290–480 Kč)
+- **Outdoor antuka:** 250 Kč/hod (členové 170 Kč)
+- **Víkend (nafukovací, nevytápěná):** 300 Kč (členové 250 Kč)
+- **Členství:** Dospělí 2 700 Kč/rok, studenti/senioři 2 200 Kč, do 14 let 1 600 Kč
+- **Web:** tkslaviaplzen.cz
+
+### TJ Lokomotiva Plzeň
+
+**8 antukových kurtů** — největší tenisový areál v Plzni. Letní sezóna. Součástí sportovního areálu se squashem, badmintonem a golf simulátory.
+
+- **Antuka:** 240 Kč/hod (dopoledne), 300 Kč/hod (odpoledne + víkend)
+- **S kreditem (min 1 000 Kč):** 220–280 Kč/hod
+- **Půjčení rakety:** 50 Kč
+- **Přijímá:** Pluxee
+- **Web:** tjloko-plzen.cz
+
+### TK Škoda Plzeň
+
+**12 venkovních + 2 indoor kurty** (pevná hala). Celoroční provoz. Tenisová akademie pro děti, letní kempy, potahování výpletů.
+
+- **Adresa:** Luční 60a, Plzeň – Roudná
+- **Kontakt:** +420 775 217 237
+- **Web:** tkskodaplzen.cz
+
+### TK Slavoj Plzeň
+
+3 kurty PAVITEX (zimní krytá hala) + 2 antukové kurty. Celoroční tenis díky kryté hale.
+
+- **Web:** slavojplzen.cz
+
+### Rapid Plzeň Tenis
+
+3 kryté kurty (2 antuka, 1 hard). Zimní alternativa od poloviny října.
+
+- **Web:** rapidplzentenis.cz
+- **Najít kurt:** [hraju.cz/sport/tenis](/sport/tenis)
+
+## Squash a badminton
+
+### TJ Lokomotiva Plzeň — squash
+
+2 klimatizované kurty ASB Squashcourts. Součástí multisportovního areálu.
+
+- **Ceny (sezóna):** 170 Kč/hod (dopoledne), 250 Kč/hod (odpoledne)
+- **Studenti:** 110 Kč/hod celý den
+- **Léto (červen–srpen):** 150–220 Kč
+- **Víkend:** 180 Kč/hod
+- **Půjčení:** Raketa 50 Kč, míček 20 Kč
+- **Hodiny:** Po–Pá 7:00–22:00, So–Ne 8:00–22:00
+
+### TJ Lokomotiva Plzeň — badminton
+
+1 kurt, 30 × 11 m, strop 5 m, dřevěná podlaha.
+
+- **Ceny:** 200–350 Kč/hod (dopoledne/odpoledne), víkend 300–400 Kč/hod
+- **Mládež:** 180–250 Kč/hod
+- **Léto:** 180–330 Kč/hod
+- **Půjčení:** Raketa 50 Kč, košíček 20 Kč
+
+### Fit Life Doubravka — squash
+
+6 squashových kurtů + 3 badmintonové kurty — největší kapacita v Plzni. Online rezervace.
+
+- **Squash:** 240 Kč/hod (dopoledne), 310–350 Kč/hod (odpoledne), 270 Kč/hod (víkend)
+- **Studenti/ligisté:** 180–290 Kč/hod
+- **Půjčení:** Raketa 30 Kč, míček 20 Kč
+- **Web:** fitlifedoubravka.cz
+
+### Sportovní centrum Hrádek
+
+3 squashové kurty + badminton. Klimatizované prostory, online rezervace. Beach volejbal, sauna, fitness.
+
+- **Squash:** 280 Kč/hod (dopoledne), 340 Kč (odpoledne), 370 Kč (večer)
+- **Studenti:** 10 % sleva dopoledne
+- **Půjčení:** Raketa 55 Kč, brýle 40 Kč, míček 30 Kč, boty 50 Kč
+- **Web:** hradeksport.cz
+- **Najít squash:** [hraju.cz/sport/squash](/sport/squash)
+
+## Bruslení
+
+### LOGSPEED CZ Aréna — tréninková hala
+
+Hlavní hokejová aréna Plzně (HC Škoda Plzeň). Veřejné bruslení v tréninkové hale.
+
+- **Vstup:** 80 Kč dospělí, 40 Kč děti 6–15, pod 6 let zdarma
+- **Max kapacita:** 300 osob na ledě
+- **Od 1. 1. 2026:** Pouze bezhotovostní platby!
+- **Vlastní brusle a rukavice nutné**
+- **Rozvrh:** Soboty a neděle, 1,5h bloky (ověřte na zimnistadionplzen.cz)
+- **Web:** zimnistadionplzen.cz
+
+### Kooperativa Aréna Kostutka
+
+2 kryté ledové plochy (28 × 58 m). CCM Performance Center. Restaurace.
+
+- **Vstup:** 200 Kč dospělí, 150 Kč děti do 15 let
+- **Půjčení bruslí:** 150 Kč/pár (záloha 1 000 Kč)
+- **Web:** icearenaplzen.cz
 
 ## Golf
 
-### Greensgate Golf & Leisure Resort
+### Greensgate Golf & Leisure Resort — Dýšina
 
-[greensgate.cz](https://www.greensgate.cz/) · Dýšina (okraj Plzně)
+18jamkové mistrovské hřiště v kopcovité krajině podél řeky Klabavy. Kompletní zázemí: driving range, putting/chipping green, klubovna, restaurace. Sezóna 2026 zahájena 20. března.
 
-**18jamkové mistrovské hřiště** — nejbližší prémiový golfový resort k Plzni. Kompletní zázemí: driving range, pitching/chipping green, putting green, klubovna, restaurace.
-
-### Darovanský dvůr Resort
-
-[darovanskydvur.cz](https://www.darovanskydvur.cz/)
-
-Golfový klub v rámci resortu. Klidnější alternativa ke Greensgate.
+- **Green fee (Po–Čt):** 1 750 Kč/18 jamek (junioři 950 Kč)
+- **Green fee (Pá–Ne):** 2 200 Kč/18 jamek (junioři 1 300 Kč)
+- **9 jamek:** 1 050 Kč (víkend 1 300 Kč)
+- **Happy Hour (Po–St 8–12):** 1 350 Kč
+- **Půjčení:** Golfový bag 750 Kč, vozík 200 Kč, e-vozík 400 Kč, Clubcar 1 100 Kč
+- **Rezervace:** Tycko app nebo +420 724 749 083
+- **Web:** greensgate.cz
 
 ### Indoor golf — TJ Lokomotiva Plzeň
 
-[tjloko-plzen.cz](https://www.tjloko-plzen.cz/cz/sportovni-areal/indoor-golf/)
+2 golfové simulátory + 5 driving rangů + 1 putting green. Prodejna Sympakt na místě. Celoroční trénink.
 
-**2 golfové simulátory** se skutečnými hřišti + 5 driving rangů + 1 putting green. Golfový obchod Sympakt na místě. Celoroční trénink bez ohledu na počasí.
-
-**Pro koho:** Začátečníci (zkusit golf bez investice do členství) a pokročilí (zimní trénink na simulátoru).
+- **Web:** tjloko-plzen.cz
 
 ## Zdarma: Škoda Sport Park a Štruncovy sady
 
 ### Škoda Sport Park
 
-[kudyznudy.cz](https://www.kudyznudy.cz/aktivity/skoda-sport-park-plzen)
-
-**Kompletně bezplatný multisportovní areál:**
-
-- Skatepark
-- 2 asfaltové hřiště
-- Futsal a volejbalové kurty
-- In-line dráha
-- Lezecká stěna
-- Pétanque
-
-Vše zdarma, celoročně přístupné. Nejlepší „sportoviště" v Plzni pro rodiny s nulovým rozpočtem.
+Kompletně bezplatný multisportovní areál — skatepark, 2 asfaltová hřiště, futsal a volejbalové kurty, in-line dráha, lezecká stěna, pétanque. Celoročně.
 
 ### Štruncovy sady
 
 Říční cesty, cyklostezky, venkovní cvičební stroje, multisportovní hřiště, boulderové stěny, skatepark, in-line dráha. Historické místo — tady stojí nejstarší tenisový klub v Česku (I. ČLTK, 1893).
 
-**Tip:** Kombinujte oba areály za jeden den — Štruncovy sady dopoledne (běh/kolo podél řeky), Škoda Sport Park odpoledne (skatepark/volejbal).
+**Tip:** Kombinujte oba areály za jeden den — Štruncovy sady dopoledne (běh/kolo podél řeky), Škoda Sport Park odpoledne (skatepark/volejbal). Kompletní sportovní den za 0 Kč.
 
-## Srovnání s Prahou
+## Cenový přehled — kolik stojí sport v Plzni
 
-| Sport | Plzeň | Praha | Úspora |
-|---|---|---|---|
-| Bazén (1 hod) | 60 Kč | 80–190 Kč | 25–68 % |
-| Fitness (vstup) | 30–119 Kč | 100–200 Kč | až 70 % |
-| Fitness (měsíc) | 475–950 Kč | 800–2 000 Kč | až 40 % |
-| Bouldering | — | — | Srovnatelné |
+| Sport | Cenové rozpětí | Poznámka |
+|-------|---------------|----------|
+| Plavání (permanentka) | 60 Kč/hod | 1 Kč/min, platí v obou bazénech |
+| Plavání (vstup) | 95–300 Kč/den | Lochotín levnější |
+| Fitness (vstup) | 130–200 Kč | V&S Bory od 130 Kč |
+| Fitness (měsíční) | 1 100–1 790 Kč | V&S Bory od 1 100 Kč |
+| Bouldering | 160–260 Kč | V16: off-peak od 220 Kč |
+| Lezení s lanem | 150–200 Kč | Koloseum vč. fitness |
+| Padel | — | Parkhotel (1 kurt), Padel Powers Q3 2026 |
+| Tenis (outdoor) | 170–300 Kč/hod | Slavia členové od 170 Kč |
+| Tenis (indoor) | 350–600 Kč/hod | Slavia nafukovací od 350 Kč |
+| Squash | 170–370 Kč/hod | TJ Loko studenti 110 Kč! |
+| Badminton | 180–400 Kč/hod | TJ Loko od 200 Kč |
+| Bruslení | 40–200 Kč | LOGSPEED děti od 40 Kč |
+| Golf (18 jamek) | 1 750–2 200 Kč | Greensgate Happy Hour 1 350 Kč |
 
-**Klíčový rozdíl:** V Plzni stojí hodina v bazénu 60 Kč (minutový tarif). V Praze zaplatíte za stejný čas 80–190 Kč. Na rok pravidelného plavání (3× týdně) ušetříte v Plzni **3 000–20 000 Kč**.
+## Co je nového v Plzni 2025–2026
 
-## Praktické rady
-
-- **TJ Lokomotiva Plzeň** je sportovní hub — tenis, squash, badminton, golf simulátory pod jednou střechou. Pokud nevíte, kam jít, začněte tam.
-- **Studentské slevy** — Fitness Aura a KWK FIT nabízejí výrazné studentské tarify. Plzeň je univerzitní město — využijte to.
-- **Doprava** — většina sportovišť je dostupná tramvají nebo autobusem PMDP. Bazén Slovany i Lochotín jsou na hlavních trasách.
-- **Rezervace** — squashové kurty a tenisové haly v zimě rezervujte dopředu, zejména v odpoledních hodinách.
-- **Venku zdarma** — Škoda Sport Park + Štruncovy sady + boulderové stěny v Bolecích = kompletní sportovní den za 0 Kč.
-
----
+| Novinka | Kdy |
+|---------|-----|
+| Plavecký areál Slovany — rekonstrukce dokončena | Leden 2025 |
+| Venkovní bouldering Bolevce — 4 stěny zdarma | Únor 2025 |
+| Form Factory Kasárny — 1 410 m² | 2025 |
+| LOGSPEED CZ Aréna — bezhotovostní platby | Leden 2026 |
+| KWK FIT Doubravka — uzavření | 31. 5. 2026 |
+| Padel Powers — 9 indoor kurtů | Q3 2026 |
 
 ## Sportujete v Plzni?
 
 Pomozte ostatním sportovcům vybrat to nejlepší — [napište recenzi](/prihlaseni) svého oblíbeného sportoviště v Plzni. Ohodnoťte zázemí, čistotu a poměr ceny a kvality. Každá recenze pomáhá plzeňské sportovní komunitě.
 
-## Najděte sportoviště v Česku
-
-Kompletní přehled najdete na:
-- [fitness centra v Česku na hraju.cz](/sport/fitness)
-- [fitness centra v Brně](/blog/fitness-centra-v-brne)
-- [bazény v Česku na hraju.cz](/sport/plavani)
-
-
----
-
-Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.
+Všechna sportoviště v Plzni najdete na [hraju.cz](/sport).
