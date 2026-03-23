@@ -3,8 +3,8 @@ title: Kde sportovat v Brně — kompletní průvodce 2026
 date: '2026-03-24'
 category: pruvodce-mesta
 excerpt: >-
-  Přehled 30+ sportovišť v Brně — tenisové areály, Hangar by Adam Ondra (1 000 m²),
-  Bazény Lužánky (50m), padel, fitness od 399 Kč/měsíc. Ověřené ceny a adresy.
+  Přehled 40+ sportovišť v Brně — 6 tenisových areálů, Hangar by Adam Ondra (1 000 m²),
+  5 lezeckých stěn, Bazény Lužánky (50m), 25 padelových kurtů, fitness od 399 Kč/měsíc. Ověřené ceny 2026.
 sportTags:
   - tenis
   - fitness
@@ -47,11 +47,18 @@ Celoroční areál s výhodnou polohou za fotbalovým stadionem.
 
 ### Tenis Park Lužánky (BLTC)
 
-8 venkovních antukových kurtů v největším brněnském parku — unikátní prostředí.
+8 venkovních antukových kurtů v největším brněnském parku — unikátní prostředí. Od zimy 2024/25 nově i 2 přetlakové haly.
 
-- **Adresa:** Park Lužánky, 602 00 Brno
-- **Nabídka:** Rekreační tenis, tenisová škola pro děti
+- **Adresa:** Lužánecká 7, 602 00 Brno
+- **Kurty léto:** 8 antukových venkovních
+- **Kurty zima:** 1 antukový krytý + 5 antukových ve 2 přetlakových halách + 1 minitenis/badminton
+- **Ceny zima 2025/26:** Antuka 500–680 Kč/hod (Po–Pá), víkend 500 Kč/hod
+- **Trenér:** 200–600 Kč/hod (dle velikosti skupiny)
+- **Otevírací doba:** Po–Ne 7:00–21:00
+- **Kontakt:** +420 778 791 014, rezervace@tenisparkluzanky.cz
 - **Web:** [tenisparkluzanky.cz](https://www.tenisparkluzanky.cz/)
+
+**Tip:** Věrnostní karta a dlouhodobé pronájmy -10 %.
 
 ### Club Classic (Žabovřeská)
 
@@ -65,17 +72,18 @@ Největší multisportovní areál v Brně — tenis, badminton, beach volejbal,
 
 **Tip:** Přijímá MultiSport karty. V nabídce i Slinger Bag (automatický podavač míčků) od 500 Kč/hod.
 
-### TK Tesla Brno
+### Sprint — tenisová a badmintonová hala
 
-Tradiční tenisový klub s kvalitním zázemím.
+Indoor hala s 6 tenisovými kurty (4 pomalejší koberec + 2 rychlejší hard court). V létě navíc 2 antukové + 1 umělá tráva.
 
-- **Web:** [teslabrno.cz](https://www.teslabrno.cz/)
-
-### Start Brno
-
-Výkonnostní tenisový klub zaměřený na výchovu nových hráčů všech věkových kategorií.
-
-- **Web:** [tenisstart.cz](https://www.tenisstart.cz/)
+- **Kurty indoor:** 6 (4 koberec + 2 hard court)
+- **Kurty outdoor (sezónní):** 2 antuka + 1 umělá tráva
+- **Ceny zima 2025/26:** 520–720 Kč/hod (Po–Pá), víkend 520 Kč/hod
+- **Ceny léto:** 380 Kč/hod
+- **Sleva:** Studenti -20 %
+- **Otevírací doba:** Po–Ne 7:00–22:00
+- **Kontakt:** +420 734 686 257, recepce@sprinttenis.cz
+- **Web:** [sprinttenis.cz](https://www.sprinttenis.cz/)
 
 ## Fitness — od 399 Kč po prémiové kluby
 
@@ -129,6 +137,36 @@ Mezinárodní řetězec s industriálním designem a živou hudbou.
 - **Otevírací doba:** 0:00–24:00 (nonstop)
 - **Výhoda:** Síť poboček v celém Česku, unikátní atmosféra
 
+### GymNation (Kaštanová)
+
+Moderní fitness s prémiový vybavením Precor a Panatty (USA). Fight Zone s MMA klecí a boxerským ringem.
+
+- **Adresa:** Kaštanová 579/76, Brno (OC Kaštanová, nad Lidlem)
+- **Ceny:**
+  - Měsíční neomezený: 1 750 Kč
+  - Měsíční (omezené hodiny): 1 490 Kč
+  - Čtvrtletní: 4 400 Kč
+  - Roční: 15 400 Kč
+  - Jednorázový: 220 Kč (mimo špičku 165 Kč)
+- **Otevírací doba:** Po–Pá 6:00–22:00, So–Ne 7:00–21:00
+- **Web:** [gymnation.cz](https://www.gymnation.cz/)
+
+**Pro koho:** Bojové sporty (MMA, box), funkční trénink, skupinové lekce.
+
+### AZ Fitness (AZ Tower)
+
+Fitness s výhledem v nejvyšší budově v ČR. Vybavení Life Fitness a Hammer Strength.
+
+- **Adresa:** Pražákova 1008/69, 639 00 Brno (AZ Tower)
+- **Vybavení:** Life Fitness, Hammer Strength, finská sauna, pára, solárium
+- **Lekce:** Jóga, pilates, tabata, fitbox
+- **Otevírací doba:** Po–Pá 6:00–21:00, So–Ne 8:00–20:00
+- **Kontakt:** +420 511 189 700, info@azfitnessbrno.cz
+- **Přijímá:** MultiSport
+- **Web:** [azfitnessbrno.cz](https://www.azfitnessbrno.cz/)
+
+**Bonus:** Bezplatné podzemní parkování, InBody analýza.
+
 ### Sportcentrum Machina (Královo Pole)
 
 1 500 m² plochy, vybavení Technogym a Life Fitness, funkční zóna, skupinové lekce.
@@ -149,6 +187,14 @@ Hlavní plavecký komplex v Brně — 50m bazén, 25m bazén, 16m bazén, wellne
   - 50m bazén: 6:00–21:30
   - 25m a 16m: 8:00–20:00
   - Wellness: 14:00–21:30
+- **Ceny bazén (mimo špičku 6–14h / 20–21:30h):**
+  - Dospělí: 170 Kč (2 hod), 355 Kč (neomezený)
+  - Děti 6–14: 85 Kč (2 hod)
+  - Senioři 65+: 100 Kč (2 hod)
+  - Rodina (2+3): 445 Kč (2 hod)
+- **Ceny bazén (špička 14–20h):** Dospělí 190 Kč (2 hod), rodina 500 Kč
+- **Wellness:** 360 Kč (2 hod), 5 saun na 816 m², vířivky, venkovní terasa
+- **Slevy:** Čipová karta -20 % (nabití min. 1 000 Kč), ISIC -30 %
 - **Kontakt:** +420 533 033 800, info@starezsport.cz
 - **Web:** [bazenyluzanky.starez.cz](https://bazenyluzanky.starez.cz/)
 
@@ -161,19 +207,29 @@ Jediný aquapark v Brně — bazény, 90m tobogán, sauny, fitness v ceně vstup
 - **Adresa:** Chalabalova 946/2a, 623 00 Brno-Kohoutovice
 - **Bazény:** 5 bazénů, 6 plaveckých drah, vířivky
 - **Atrakce:** 90m tobogán, finská sauna, střešní bazén (sezónní)
-- **Slevy:** Studenti -30 % (ISIC), čipový náramek -20 % (při nabití 1 000 Kč+)
+- **Ceny (2 hod, mimo špičku 8–14h):** Dospělí 220 Kč, děti 110 Kč, senioři 130 Kč
+- **Ceny (2 hod, špička 14–20h / víkend):** Dospělí 240 Kč, děti 110 Kč
+- **Kondiční plavání (6–8h / 20h+):** Dospělí 140 Kč
+- **Slevy:** Čipová karta -20 %, ISIC -30 %, skupiny 10+ -10 %
 - **Otevírací doba:** Bazény 6:00–21:30, finská sauna 14:00–21:30
 - **Kontakt:** +420 533 033 800
 - **Web:** [aquapark.starez.cz](https://aquapark.starez.cz/)
 
-**Bonus:** Fitness v ceně vstupu do aquaparku.
+**Bonus:** Fitness v ceně vstupu do aquaparku. Kondiční plavání od 6:00 za 140 Kč — nejlevnější bazén v Brně.
+
+### Sportovní a rekreační areál Kraví hora
+
+Celoroční komplex — krytý bazén, saunový svět, v létě venkovní bazény, hokejová hala, beach volejbal.
+
+- **Adresa:** Kraví hora, Brno (7 min tramvají z centra)
+- **Web:** [kravihora-brno.cz](https://www.kravihora-brno.cz/)
 
 ### Letní koupaliště
 
-- **Koupaliště Kraví hora** — oblíbené letní koupaliště s výhledem na město
+- **Koupaliště Kraví hora** — venkovní bazény s výhledem na město (červen–září)
 - **Koupaliště Riviéra** — areál s beach volejbalem, otevřeno červen–září
 
-## Lezení a bouldering — 3 centra, světová úroveň
+## Lezení a bouldering — 5 center, 4 000 m² stěn
 
 ### Hangar — climbing playground by Adam Ondra
 
@@ -220,70 +276,165 @@ Komunitní boulderovka v centru Brna — 24/7 přístup po registraci.
 
 **Unikát:** Jediná 24/7 boulderovka v Brně — ideální pro noční lezce a studenty.
 
-## Padel — nejrychleji rostoucí sport v Brně
+### Komec — lezecké centrum
+
+Největší lanová stěna v Brně — 16 m výška, 1 000 m² plochy, 62 cest (obtížnost 3–10 UIAA).
+
+- **Adresa:** Hněvkovského 62c, 617 00 Brno
+- **Plocha:** 1 000 m², výška 16 m
+- **Trasy:** 62 lezeckých cest (150 variant), speed stěna, 4 auto-jištění, bouldering (4m), campus board
+- **Ceny (registrovaní):** Dospělí 180–245 Kč, studenti 150–200 Kč, děti do 15 let 135–155 Kč
+- **Rodina:** 590 Kč (max 4 osoby)
+- **Půjčení vybavení:** 25–120 Kč/kus
+- **Otevírací doba:** Po–Pá 10:00–22:00, So–Ne 9:00–22:00
+- **Kontakt:** +420 727 952 768, info@komec.cz
+- **Web:** [komec.cz](https://www.komec.cz/)
+
+**Pro koho:** Lanové lezení (lead, top-rope), speed stěna, dětská sekce. Nejlepší volba pro lezce, kteří chtějí lanovou stěnu, ne jen bouldering.
+
+### Klajda — lezecké centrum (Malomněřice)
+
+Nejstarší moderní komerční stěna v Brně (od 2009). Téměř 1 000 m², 13 m výška.
+
+- **Adresa:** Kulkova 30, 614 00 Brno-Malomněřice
+- **Plocha:** ~1 000 m², výška 13 m
+- **Trasy:** 55 lezeckých linií, ~150 cest (obtížnost 3 až 8b+ Fr.)
+- **Ceny:** Dopoledne (10–15h) dospělí 130 Kč, studenti 100 Kč. Odpoledne/víkend dospělí 150 Kč, studenti 120 Kč, děti 70 Kč.
+- **Web:** [klajda.cz](https://www.klajda.cz/)
+
+**Tip:** Nejlevnější lezecká stěna v Brně — dopoledne od 130 Kč.
+
+## Padel — nejrychleji rostoucí sport v Brně (25 kurtů)
 
 ### Padel Brno (Za Lužánkami + Jehnice)
 
 - **Outdoor:** Sportovní 347, Brno-Královo Pole — 2 kurty MejorSet Panoramic (oficiální kurty Premier Padel)
-- **Indoor:** Blanenská 3, Brno-Jehnice — 1 krytý kurt (celoroční)
+- **Indoor:** Blanenská 3, Brno-Jehnice — 1 krytý kurt (celoroční, od září 2025)
+- **Ceny outdoor:** Dopoledne 440 Kč/hod, odpoledne 540 Kč/hod, víkend 500 Kč/hod
+- **Ceny indoor:** Dopoledne 580 Kč/hod, odpoledne 680 Kč/hod, víkend 610–700 Kč/hod
 - **Sezóna outdoor:** Od 1. dubna 2026 (nový povrch)
 - **První vstup:** 50 Kč (po registraci)
 - **Dětský padel:** 7 990 Kč/pololetí (Po + Čt 18–19h)
+- **Otevírací doba:** Outdoor 7:00–22:00, indoor 6:00–23:00
+- **Kontakt:** +420 604 924 533
 - **Přijímá:** MultiSport
 - **Web:** [padelbrno.com](https://padelbrno.com/)
 
-### Padel Powers Brno — NOVÉ 2026
+### Padel Powers — Brno-Slatina — NOVÉ (otevřeno 18. března 2026)
 
-Mezinárodní síť otevírá v Brně moderní indoor centrum.
+**Největší indoor padelové centrum v ČR.** 10 prémiových kurtů, strop 13 m.
 
-- **Plán:** 10 prémiových indoor kurtů + bar
-- **Lokace Kraví hora + Slatina**
+- **Adresa:** Vlastimila Pecha 627/00, 627 00 Brno-Černovice
+- **Kurty:** 10 indoor kurtů
+- **Vybavení:** Prodejna, půjčovna, moderní bar, zasedací místnost
+- **Otevírací doba:** Po–Pá 7:00–23:00, So–Ne 8:00–23:00
+- **Kontakt:** +420 601 280 568
+- **Web:** [padelpowers.com/brno-slatina](https://www.padelpowers.com/en/brno-slatina/)
+
+### Padel Powers — Kraví hora
+
+4 indoor kurty na Kraví hoře.
+
+- **Adresa:** Rybkova 948/23, 602 00 Brno
+- **Ceny:** Dopoledne 450 Kč/hod, odpoledne 550 Kč/hod, víkend 500 Kč/hod
+- **Půjčení rakety:** 50 Kč, míčky 160 Kč
 - **Úvodní lekce:** 150 Kč/osoba
-- **Web:** [padelpowers.com](https://www.padelpowers.com/)
+- **Přijímá:** MultiSport
+- **Kontakt:** +420 602 168 616
+- **Web:** [padelpowers.com/brno-kravi-hora](https://www.padelpowers.com/en/brno-kravi-hora/)
 
-### Tenis & Padel Kraví hora
+### Padel Park — NOVÉ Q1 2026 (Medlánky)
 
-Kombinace tenisu a padelu na Kraví hoře.
+4 indoor kurty včetně unikátního singlového kurtu — jediný v Brně.
 
-- **Web:** [tenisapadel.cz](https://www.tenisapadel.cz/)
+- **Adresa:** Hudcova 539/78d, 612 00 Brno-Medlánky (u Technologického parku)
+- **Kurty:** 3 standardní + 1 singlový, povrch JUTAGRASS, LED osvětlení, panoramické sklo
+- **Otevírací doba:** 7:00–22:00 denně
+- **Kontakt:** +420 777 760 737, padel@padelpark.cz
+- **Web:** [padelpark.cz](https://padelpark.cz/)
 
-## Squash
+### PadelClub Brno (na Dobráku)
 
-### Fitness Boby — Squash (viz fitness výše)
+4 outdoor kurty u koupaliště Dobrák.
 
-Squashové kurty přímo ve fitness centru za Lužánkami.
+- **Ceny:** 560 Kč/hod
+- **Členství:** Silver 5 000 Kč, Gold 10 000 Kč (slevy na kurty)
+- **Web:** [padelclub.cz](https://padelclub.cz/)
 
-- **Ceny:** 100–160 Kč/hodina
-- **Raketa:** 40 Kč, míček 20 Kč
-- **Adresa:** Sportovní 559/2A, Brno
+## Squash — 14 kurtů ve 4 centrech
+
+### Centrum Viktoria (Komárov)
+
+Největší squashové centrum v Brně — 6 klimatizovaných kurtů. Plus badminton, beach volejbal, bowling, tenis, fitness.
+
+- **Adresa:** Vodařská 232/2, 619 00 Brno-Komárov
+- **Kurty:** 6 squashových (klimatizace)
+- **Ceny:** Dopoledne (7–15h) 270 Kč/hod (studenti 220 Kč), odpoledne (15–22h) 370 Kč/hod, víkend 320 Kč/hod
+- **Vybavení:** Raketa 50 Kč, míček 20 Kč
+- **Otevírací doba:** Po–Pá 7:00–22:00, So–Ne 8:00–22:00
+- **Kontakt:** +420 776 282 575, recepce@centrumviktoria.cz
+- **Web:** [centrumviktoria.cz](https://www.centrumviktoria.cz/)
 
 ### Squash Slovan (Štolcova)
 
-Jedno z nejznámějších squashových center v Brně. Fitness, stolní tenis, solárium.
+3 klimatizované squashové kurty. Fitness, stolní tenis, solárium, infrasauna.
 
+- **Adresa:** Štolcova 693/6, 618 00 Brno
+- **Kurty:** 3 squashové
 - **Tréninky:** Možnost tréninku s ligovým hráčem
-- **Výhoda:** Kompletní zázemí, půjčovna vybavení
+- **Otevírací doba:** 6:00–22:00 (pouze na rezervaci)
+- **Kontakt:** +420 548 211 166
+- **Web:** [squashslovan.cz](https://www.squashslovan.cz/)
 
-### Squash Omega (Křídlovická)
+### Fitness Boby — Squash (viz fitness výše)
 
-Squash + badminton v centru Brna.
+- **Ceny:** 100–160 Kč/30 min, raketa 40 Kč, míček 20 Kč
+- **Adresa:** Sportovní 559/2A, Brno
 
-- **Výhoda:** Centrální poloha, kombinace raketových sportů
+**Upozornění:** Sport Balkan (4 squashové kurty) je od roku 2024 **trvale uzavřen**.
 
-## Badminton — 6 hal, 25+ kurtů
+## Badminton — 7 hal, 35+ kurtů
 
-### Hala Sprint
+### Badminton Líšeň
+
+6 profesionálních kurtů. Klimatizovaná hala, pružná podlaha, strop 10 m, tmavě modré stěny.
+
+- **Adresa:** Úlehlova 3050/16 (areál Zetoru), 628 00 Brno-Líšeň
+- **Kurty:** 6 profesionálních
+- **Ceny:** Dopoledne (7–15h) 280 Kč/hod (studenti 250 Kč), odpoledne (15–22h) 380 Kč/hod, víkend 380 Kč/hod
+- **Vybavení:** Raketa 50 Kč, míček 30 Kč
+- **Otevírací doba:** Po–Ne 7:00–22:00
+- **Kontakt:** +420 777 076 620, info@badmintonlisen.cz
+- **Web:** [badmintonlisen.cz](https://www.badmintonlisen.cz/)
+
+### Hala Sprint (viz tenis výše)
 
 6 badmintonových kurtů s kvalitním Graboflex povrchem, klimatizace, profesionální osvětlení.
 
+- **Ceny:** 280–380 Kč/hod, studenti -20 %
 - **Web:** [sprinttenis.cz](https://www.sprinttenis.cz/)
+
+### Xarena Slatina
+
+6 badmintonových kurtů, Tarkett podlaha (francouzská značka), strop 9,5 m. I 5 soutěžních stolů na stolní tenis.
+
+- **Adresa:** Tuřanka 55, 627 00 Brno-Slatina
+- **Kurty:** 6 badmintonových + 5 stolní tenis
+- **Kontakt:** +420 727 819 036
+- **Web:** [xarena.cz](https://www.xarena.cz/)
+
+### Centrum Viktoria (viz squash výše)
+
+3 klimatizované badmintonové kurty.
+
+- **Ceny:** Dopoledne (7–15h) 300 Kč/hod (studenti 250 Kč), odpoledne/víkend 400 Kč/hod
+- **Web:** [centrumviktoria.cz](https://www.centrumviktoria.cz/)
 
 ### Club Classic (viz tenis výše)
 
 5 badmintonových kurtů v kryté hale.
 
 - **Ceny:** 160–240 Kč/hodina
-- **Sezóna:** Duben–září denně 8–21h
 
 ### Sportcentrum Kuklenská (Židenice)
 
@@ -293,12 +444,6 @@ Squash + badminton v centru Brna.
 - **Ceny:** 200–240 Kč/hodina
 - **Otevírací doba:** Po–Pá 7:00–22:00, So–Ne 8:00–22:00
 - **Web:** [sportkuklenska.cz](https://www.sportkuklenska.cz/)
-
-### Badminton Líšeň
-
-6 kurtů v bývalém průmyslovém komplexu Zetor.
-
-- **Web:** [badmintonlisen.cz](https://www.badmintonlisen.cz/)
 
 ### FIT4ALL Centrum (Nový Lískovec)
 
@@ -313,32 +458,44 @@ Squash + badminton v centru Brna.
 
 | Sportoviště | Stav | Poznámka |
 |---|---|---|
-| Padel Powers Brno | **Otevírá Q1 2026** | 10 indoor kurtů, 2 lokace |
-| Padel Brno outdoor | **Nový povrch, duben 2026** | MejorSet Panoramic kurty |
+| Padel Powers Slatina | **Otevřeno 18. 3. 2026** | 10 indoor kurtů — největší v ČR |
+| Padel Park Medlánky | **Zkušební provoz Q1 2026** | 4 kurty vč. singlového |
+| Padel Brno Indoor Jehnice | **Otevřeno září 2025** | 1 celoroční indoor kurt |
+| Padel Brno Outdoor | **Nový povrch, duben 2026** | 2 MejorSet Panoramic kurty |
+| Bazény Lužánky renovace | **Dokončeno** | Nový 25m bazén, wellness 816 m² |
+| BLTC přetlakové haly | **Od zimy 2024/25** | 5 kurtů ve 2 halách |
+| T-Mobile Arena | **Otevírá podzim 2026** | 13 300 míst, domov HC Kometa |
 | Hangar Boulder Camp | **Srpen 2026** | Letní kemp pro lezce |
 | ME žen ve volejbale | **2026** | Brno jako hostitelské město |
+| Sport Balkan | **Trvale uzavřen (2024)** | 4 squashové kurty — už neexistují |
 
 ## Sportovní mapa Brna
 
-1. **Za Lužánkami / Královo Pole** — Bazény Lužánky (50m), Tenis Paradise, Fitness Boby, Padel Brno, TC Brno
-2. **Centrum** — Basecamp Boulder (24/7), Squash Omega, John Reed Fitness
-3. **Štýřice / Pražákova** — Hangar by Adam Ondra, HUDY stěna, Flash Boulder Bar
+1. **Za Lužánkami / Královo Pole** — Bazény Lužánky (50m), Tenis Paradise, Fitness Boby, Padel Brno outdoor, TC Brno, Sprint hala
+2. **Centrum** — Basecamp Boulder (24/7), John Reed Fitness
+3. **Štýřice / Pražákova** — Hangar by Adam Ondra, HUDY stěna, AZ Fitness (AZ Tower)
 4. **Žabovřeská** — Club Classic (10 tenisových + 5 badmintonových kurtů)
 5. **Kohoutovice** — Aquapark (5 bazénů + tobogán)
 6. **Černé Pole** — ZONE4YOU (premium fitness + wellness)
-7. **Kraví hora** — Koupaliště, Tenis & Padel, Squash TJ Tábor
+7. **Kraví hora** — Koupaliště, Padel Powers (4 kurty), Squash TJ Tábor
+8. **Slatina** — Padel Powers (10 kurtů), Xarena badminton (6 kurtů)
+9. **Komárov** — Centrum Viktoria (6 squash + 3 badminton + beach volejbal)
+10. **Hněvkovského** — Komec (1 000 m² lanová stěna, 16 m)
+11. **Malomněřice** — Klajda (1 000 m² stěna, nejlevnější od 130 Kč)
+12. **Medlánky** — Padel Park (4 indoor kurty, NOVÉ 2026)
 
 ## Přehled cen podle sportů
 
 | Sport | Cenové rozpětí | Poznámka |
 |---|---|---|
-| Tenis (antuka, léto) | 200–300 Kč/hod | Krytá hala 400–730 Kč |
+| Tenis (antuka, léto) | 200–380 Kč/hod | Krytá hala 500–730 Kč |
 | Fitness | 399–2 990 Kč/měsíc | FitUp nejlevnější, ZONE4YOU premium |
-| Plavání (bazén) | 70–120 Kč/hod | Aquapark 200–350 Kč |
-| Bouldering | 170–275 Kč/vstup | Hangar a HUDY |
-| Squash | 100–250 Kč/hod | Fitness Boby nejlevnější |
-| Badminton | 160–260 Kč/hod | 6 hal v Brně |
-| Padel | od 50 Kč (první vstup) | Rychle rostoucí nabídka |
+| Plavání (bazén) | 140–240 Kč/2 hod | Kondiční od 140 Kč, aquapark 220 Kč |
+| Lezení (lanové) | 130–245 Kč/vstup | Klajda nejlevnější, Komec největší |
+| Bouldering | 170–275 Kč/vstup | Hangar (Adam Ondra) a HUDY |
+| Squash | 100–370 Kč/hod | Fitness Boby nejlevnější |
+| Badminton | 200–400 Kč/hod | 7 hal, 35+ kurtů |
+| Padel | 440–700 Kč/hod | 25 kurtů, první vstup od 50 Kč |
 
 ## Najděte sportoviště v Brně
 
