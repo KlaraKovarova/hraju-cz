@@ -1,9 +1,11 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MapPin, ChevronRight, Building2 } from "lucide-react";
+import Image from "next/image";
+import { MapPin, ChevronRight, Building2, BookOpen } from "lucide-react";
 import { getFacilitiesByCity, getTopCitiesOverallForMesto } from "@/lib/data";
 import { SPORTS, getSportBySlug } from "@/lib/sports";
+import { getPostsBySport } from "@/lib/blog";
 import { FacilityCard } from "@/components/FacilityCard";
 import { FacilityMap } from "@/components/FacilityMap";
 import { TrackPageView } from "@/components/TrackPageView";
@@ -72,6 +74,18 @@ export default async function CrossSportCityPage({ params }: Props) {
 
   // Find top sport
   const topSport = sportGroups[0];
+
+  // Collect related blog posts for sports present in this city (deduplicated, max 3)
+  const citySportSlugs = sportGroups.map((g) => g.sport.slug);
+  const seenSlugs = new Set<string>();
+  const cityBlogPosts = citySportSlugs
+    .flatMap((slug) => getPostsBySport(slug))
+    .filter((p) => {
+      if (seenSlugs.has(p.slug)) return false;
+      seenSlugs.add(p.slug);
+      return true;
+    })
+    .slice(0, 3);
 
   // JSON-LD ItemList
   const itemListLd = {
@@ -239,6 +253,59 @@ export default async function CrossSportCityPage({ params }: Props) {
           })}
         </div>
       </section>
+
+      {/* Related Blog Posts */}
+      {cityBlogPosts.length > 0 && (
+        <section className="border-t border-zinc-100 bg-zinc-50/50">
+          <div className="mx-auto max-w-6xl px-6 py-10">
+            <h3 className="mb-6 flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wider text-zinc-400">
+              <BookOpen className="h-4 w-4" />
+              Články ze světa sportu
+            </h3>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {cityBlogPosts.map((p) => (
+                <Link
+                  key={p.slug}
+                  href={`/blog/${p.slug}`}
+                  className="group overflow-hidden rounded-2xl border border-zinc-100 bg-white transition hover:border-zinc-200 hover:shadow-md"
+                >
+                  {p.image && (
+                    <div className="relative aspect-[16/9] w-full">
+                      <Image
+                        src={p.image}
+                        alt={p.title}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                        sizes="(max-width: 640px) 100vw, 33vw"
+                      />
+                    </div>
+                  )}
+                  <div className="p-4">
+                    <p className="font-bold text-zinc-900 group-hover:text-emerald-700">
+                      {p.title}
+                    </p>
+                    <p className="mt-1 text-xs text-zinc-400">
+                      {new Date(p.date).toLocaleDateString("cs-CZ", {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric",
+                      })}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <p className="mt-4 text-center">
+              <Link
+                href="/blog"
+                className="text-sm font-medium text-emerald-600 hover:text-emerald-700"
+              >
+                Zobrazit všechny články &rarr;
+              </Link>
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* All Sports Quick Links */}
       <section className="border-t border-zinc-100 bg-white">

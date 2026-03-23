@@ -4,7 +4,9 @@ import Image from "next/image";
 import { ChevronRight, Calendar, Tag, ArrowLeft } from "lucide-react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { getPostBySlug, getAllPosts, CATEGORIES } from "@/lib/blog";
+import { getPostBySlug, getAllPosts, getPostsBySport, CATEGORIES } from "@/lib/blog";
+import { getTopFacilitiesBySport } from "@/lib/data";
+import { getSportBySlug } from "@/lib/sports";
 import { ShareButton } from "@/components/ShareButton";
 import { BlogReviewCTA } from "@/components/BlogReviewCTA";
 import { AdSlot } from "@/components/AdSlot";
@@ -60,9 +62,21 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const allPosts = getAllPosts();
-  const relatedPosts = allPosts
-    .filter((p) => p.slug !== slug)
-    .slice(0, 3);
+
+  // Prefer related posts with matching sport tags, then fill with newest
+  const sameTagPosts = allPosts.filter(
+    (p) => p.slug !== slug && p.sportTags.some((t) => post.sportTags.includes(t))
+  );
+  const otherPosts = allPosts.filter(
+    (p) => p.slug !== slug && !sameTagPosts.includes(p)
+  );
+  const relatedPosts = [...sameTagPosts, ...otherPosts].slice(0, 3);
+
+  // Fetch top facilities for the post's sport tags (max 6 total)
+  const facilityResults = await Promise.all(
+    post.sportTags.slice(0, 2).map((tag) => getTopFacilitiesBySport(tag, 3))
+  );
+  const relatedFacilities = facilityResults.flat().slice(0, 6);
 
   // Article JSON-LD
   const articleLd = {
@@ -226,6 +240,51 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {tag}
               </Link>
             ))}
+          </div>
+        )}
+
+        {/* Related Facilities */}
+        {relatedFacilities.length > 0 && (
+          <div className="mt-8 border-t border-zinc-100 pt-6">
+            <h2 className="mb-4 text-lg font-bold text-zinc-900">
+              Kam vyrazit
+            </h2>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {relatedFacilities.map((f) => {
+                const fSport = f.sports[0]?.sport;
+                const sportInfo = fSport ? getSportBySlug(fSport.slug) : null;
+                return (
+                  <Link
+                    key={f.id}
+                    href={`/sport/${fSport?.slug ?? post.sportTags[0]}/${f.slug}`}
+                    className="group flex items-center gap-3 rounded-xl border border-zinc-100 bg-white p-3 transition hover:border-zinc-200 hover:shadow-sm"
+                  >
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-emerald-50 text-lg">
+                      {sportInfo?.icon ?? "🏟️"}
+                    </div>
+                    <div className="min-w-0">
+                      <p className="truncate text-sm font-semibold text-zinc-900 group-hover:text-emerald-700">
+                        {f.name}
+                      </p>
+                      <p className="truncate text-xs text-zinc-500">
+                        {f.location.city}
+                        {fSport && ` · ${fSport.nameCs}`}
+                      </p>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+            {post.sportTags[0] && (
+              <p className="mt-3 text-right">
+                <Link
+                  href={`/sport/${post.sportTags[0]}`}
+                  className="text-sm font-medium text-emerald-600 hover:text-emerald-700"
+                >
+                  Zobrazit všechna sportoviště &rarr;
+                </Link>
+              </p>
+            )}
           </div>
         )}
 
