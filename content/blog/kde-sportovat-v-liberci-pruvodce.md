@@ -1,10 +1,10 @@
 ---
 title: Kde sportovat v Liberci — kompletní průvodce 2026
-date: '2099-01-01'
+date: '2026-03-23'
 category: pruvodce-mesta
 excerpt: >-
-  Přehled 14 sportovišť v Liberci — tenis, fitness, aquapark, bouldering, squash
-  i badminton. S aktuálními cenami, adresami a upozorněními na rekonstrukce.
+  Přehled 20+ sportovišť v Liberci — 6 tenisových areálů, 5 posiloven (vč. NOVÉ
+  Gym Arena 2026), aquapark Babylon, Boulder Point 1000 m², badminton. Ověřené ceny a adresy.
 sportTags:
   - tenis
   - fitness
@@ -21,7 +21,7 @@ Liberec je město pod Ještědem — a sportovní nabídka odpovídá krajskému
 
 Upozornění: V roce 2026 prochází Liberec sportovní proměnou — městský bazén je v rekonstrukci, lezecká stěna Šutr se stěhuje. Zmapovali jsme, co funguje TEĎ, a co se chystá.
 
-## Tenis — 4 areály, celoroční provoz
+## Tenis — 6 areálů, 30+ kurtů, celoroční provoz
 
 ### Tenis Rochlice (TK Liberec)
 
@@ -72,7 +72,28 @@ Multisportovní areál — tenis, badminton, stolní tenis, beach volejbal.
 
 **Tip:** Kreditní členství od 135 Kč/hodina — při pravidelné hře se vyplatí.
 
-## Fitness — 4 posilovny od non-stop po premium
+### LTK Liberec (Liberecký tenisový klub)
+
+Klub hostící ATP Svijany Open — 5 venkovních + 6 krytých kurtů.
+
+- **Adresa:** Fibichova 1377/8, 460 01 Liberec
+- **Kurty:** 5 antukových venkovních + 3 kryté v hale (1 koberec, 2 tvrdý povrch) + 3 pod nafukovací halou
+- **Kontakt:** info@ltkliberec.cz, tenisová škola +420 608 623 740
+- **Web:** [ltkliberec.cz](https://www.ltkliberec.cz/)
+
+**Tip:** Na stejné adrese i badmintonové kurty.
+
+### TK Slovan Liberec
+
+Historický klub v centru města, založený Theodorem Von Liebigem.
+
+- **Adresa:** Skřivánčí kámen, 460 01 Liberec
+- **Kurty:** 4 antukové + 1 volejbalový/nohejbalový
+- **Nabídka:** Tenisová škola pro děti, klubový bufet
+- **Kontakt:** +420 722 522 248
+- **Web:** [tenisklub.cz](https://tenisklub.cz/klub/TK-Slovan-Liberec)
+
+## Fitness — 5 posiloven včetně nové Gym Arena 2026
 
 ### MixGym Liberec
 
@@ -107,24 +128,38 @@ Fitness + 2 squashové kurty v centru města.
 
 **Tip:** Přijímá Multisport a Pluxee karty. Squash kurty přímo v posilovně — nemusíte nikam přejíždět.
 
-### Form Factory Liberec
+### FITMEXX Liberec
 
-Prémiové fitness v OC LBC.
+400 m² fitness + cvičební sál v centru města.
 
-- **Adresa:** OC LBC, 3. patro, Fügnerova 667/7, Liberec
-- **Ceny:** Jednorázový vstup 349 Kč, členské programy na dotaz
-- **Otevírací doba:** Po–Pá 6:00–22:00, So–Ne 8:00–21:00
-- **Web:** [formfactory.cz/klub/fitness-fugnerova](https://www.formfactory.cz/klub/fitness-fugnerova/)
+- **Adresa:** Soukenné náměstí 613, 460 01 Liberec (Dům kultury)
+- **Vybavení:** 47 stanovišť, Grunsport + Life Fitness stroje, kardio zóna (běžecké pásy, steppery, spinning), TRX, BOSU, kettlebelly, boxovací pytel
+- **Otevírací doba:** Po–Pá 7:00–22:00, So–Ne 9:00–20:00
+- **Kontakt:** +420 774 703 802
+- **Web:** [fitmexx.cz](https://www.fitmexx.cz/)
+
+**Bonus:** Klimatizace, bezplatné parkování.
+
+### Gym Arena Liberec — NOVÉ 2026
+
+Bývalá Squash Arena kompletně přestavěna na moderní fitness. Otevřeno **únor 2026**, téměř dvojnásobek původní plochy.
+
+- **Adresa:** Olbrachtova 820, 460 15 Liberec (Starý Harcov)
+- **Vybavení:** Technogym digitální stroje (auto-nastavení dle těla, pamatují si předchozí cvičení), InBody analýza složení těla, funkční zóna, kardio se screen-prostředím
+- **Ceny:** Jednorázový vstup 140 Kč, měsíční 1 200 Kč, roční 11 000 Kč
+- **Otevírací doba:** Po/St/Pá 6:30–21:00, Út/Čt/So/Ne 8:00–21:00
+- **Kontakt:** +420 482 750 506
+- **Web:** [squasharena.li](https://www.squasharena.li/)
+
+**Přijímá:** Multisport. Plánuje přidat pilates, jógu, wellness.
 
 ### Profitko Fitness
 
-Posilovna s 24/7 přístupem pro členy.
+Nejdéle fungující posilovna v Liberci. Specializace na silový a kondiční trénink.
 
 - **Adresa:** Krátká 905/4 (vchod z Annenské), 460 07 Liberec
 - **Kontakt:** +420 601 344 544
 - **Web:** [profitko.cz](https://www.profitko.cz/)
-
-**Pro koho:** Nepravidelný rozvrh? 24/7 přístup s čipovou kartou řeší vše.
 
 ## Plavání — aquapark + městský bazén v rekonstrukci
 
@@ -135,7 +170,7 @@ Jediná velká vodní plocha v Liberci v roce 2026 — steampunkový aquapark s 
 - **Adresa:** Nitranská 415/1, 460 07 Liberec
 - **Bazény:** Vyhřívané bazény (27–30 °C), vířivky, gejzírové fontány, jeskyně s akvárii
 - **Atrakce:** 4 tobogány (včetně Spacebowl), laserové show (10:45, 16:45, 20:30)
-- **Ceny:** Dospělí celodenní 450 Kč (online 405 Kč), rodinné balíčky od 1 320 Kč
+- **Ceny:** 2 hodiny dospělí 350 Kč, děti (100–140 cm) 250 Kč, celodenní dospělí 550 Kč, rodinné 2+1 od 1 320 Kč, děti pod 100 cm zdarma
 - **Otevírací doba:** Po–Čt a Ne 10:00–21:00, Pá–So 10:00–22:00
 - **Kontakt:** +420 485 249 406
 - **Web:** [centrumbabylon.cz/aquapark](https://www.centrumbabylon.cz/aquapark.html)
@@ -163,12 +198,12 @@ Jedna z největších boulderovek v Česku — 1 000 m² lezecké plochy.
 
 ### Power Fitness — Squash (viz fitness výše)
 
-2 squashové kurty přímo ve fitness centru v centru města.
+**Jediný squashový kurt v Liberci** — v centru města ve fitness centru.
 
 - **Ceny:** 250 Kč/hodina, raketa 50 Kč, míček 20 Kč
 - **Adresa:** Galerie Plaza Liberec, Palachova 1404/2
 
-**Poznámka:** Squash Arena Liberec (6 kurtů) pozastavila provoz squashe od ledna 2026. Power Fitness je aktuálně hlavní alternativa.
+**Upozornění:** Squash Arena Liberec (6 kurtů, 25 let provozu) byla v únoru 2026 **trvale přestavěna na Gym Arena fitness**. Power Fitness je nyní jediný squashový kurt v Liberci.
 
 ### Badminton LTK Liberec
 
@@ -197,17 +232,18 @@ Jedna z největších boulderovek v Česku — 1 000 m² lezecké plochy.
 |---|---|---|
 | Městský bazén Liberec (50m) | Rekonstrukce | Červen 2027 |
 | Lezecká stěna Šutr | Stěhování | Září 2026 |
-| Squash Arena Liberec (6 kurtů) | Pozastaven provoz | Neznámé |
+| Squash Arena → Gym Arena | **Trvale přestavěno** na fitness (únor 2026) | — |
 
 **Pozitivní zpráva:** Po dokončení rekonstrukce bude městský bazén moderní aquacentrum s 50m bazénem, 25m bazénem, tobogány, saunami a wellness za odhadovaných 784 milionů Kč.
 
 ## Sportovní mapa Liberce
 
-1. **Centrum / Plaza** — Power Fitness (fitness + squash), Badminton LTK
+1. **Centrum / Plaza** — Power Fitness (fitness + squash), LTK Liberec (tenis + badminton), FITMEXX, TK Slovan
 2. **Rochlice** — Tenis Rochlice (6 kurtů, beach volejbal)
 3. **Ještěd / Ruprechice** — Boulder Point (1 000 m²)
 4. **Babylon** — Aquapark Babylon (jediný funkční aquapark)
 5. **Jeronymova** — Sport Park (tenis, badminton, multisport)
+6. **Starý Harcov** — Gym Arena (NOVÉ 2026, Technogym)
 
 ## Najděte sportoviště v Liberci
 
