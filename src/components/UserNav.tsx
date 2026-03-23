@@ -16,9 +16,6 @@ export function UserNav() {
   const [user, setUser] = useState<UserData | null>(null);
   const [checked, setChecked] = useState(false);
 
-  // Hide on admin pages
-  if (pathname.startsWith("/admin")) return null;
-
   useEffect(() => {
     fetch("/api/auth/me")
       .then((res) => (res.ok ? res.json() : null))
@@ -28,6 +25,9 @@ export function UserNav() {
       })
       .catch(() => setChecked(true));
   }, []);
+
+  // Hide on admin pages
+  if (pathname.startsWith("/admin")) return null;
 
   if (!checked) return null;
 
@@ -42,10 +42,13 @@ export function UserNav() {
       <div className="mx-auto flex w-full max-w-6xl items-center justify-end gap-3">
         {user ? (
           <>
-            <span className="flex items-center gap-1.5">
+            <Link
+              href="/muj-ucet"
+              className="flex items-center gap-1.5 hover:text-emerald-600 transition-colors"
+            >
               <User className="h-3 w-3" />
               {user.name || user.email}
-            </span>
+            </Link>
             <button
               onClick={handleLogout}
               className="flex items-center gap-1 text-zinc-400 hover:text-zinc-700 transition-colors"
