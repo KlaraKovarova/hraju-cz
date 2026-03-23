@@ -7,7 +7,7 @@ excerpt: >-
   plán na první 5 km, vybavení, prevence zranění a nejlepší běžecké trasy v
   Česku.
 sportTags:
-  - fitness
+  - behani
 image: /images/blog/behani-pro-zacatecniky-kompletni-pruvodce.jpg
 ---
 
