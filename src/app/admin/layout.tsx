@@ -17,8 +17,12 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   }
 
   let pendingReviewCount = 0;
+  let pendingEventCount = 0;
   try {
-    pendingReviewCount = await prisma.review.count({ where: { isApproved: false } });
+    [pendingReviewCount, pendingEventCount] = await Promise.all([
+      prisma.review.count({ where: { isApproved: false } }),
+      prisma.touristEvent.count({ where: { isActive: false, source: "user" } }),
+    ]);
   } catch {
     // DB may be unavailable
   }
@@ -46,6 +50,20 @@ export default async function AdminLayout({ children }: { children: React.ReactN
                 {pendingReviewCount}
               </span>
             )}
+          </Link>
+          <Link href="/admin/events" className="flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-900">
+            Akce
+            {pendingEventCount > 0 && (
+              <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 px-1.5 text-[10px] font-bold text-white">
+                {pendingEventCount}
+              </span>
+            )}
+          </Link>
+          <Link href="/admin/users" className="text-sm text-zinc-500 hover:text-zinc-900">
+            Uživatelé
+          </Link>
+          <Link href="/admin/messages" className="text-sm text-zinc-500 hover:text-zinc-900">
+            Zprávy
           </Link>
           <div className="ml-auto flex items-center gap-4">
             <Link href="/" className="text-sm text-zinc-400 hover:text-zinc-600">

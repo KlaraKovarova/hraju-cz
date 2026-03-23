@@ -46,6 +46,7 @@ interface FacilityData {
   pricing: string | null;
   openingHours: Record<string, string> | null;
   website: string | null;
+  bookingUrl: string | null;
   contacts: { id: string; type: string; value: string; isPrimary: boolean }[];
   sports: { sport: { slug: string; nameCs: string } }[];
   images: FacilityImage[];
@@ -104,6 +105,7 @@ function MojeSportovisteContent() {
     phone: "",
     email: "",
     website: "",
+    bookingUrl: "",
     pricing: "",
     openingHours: "",
   });
@@ -128,6 +130,7 @@ function MojeSportovisteContent() {
           phone: primaryPhone?.value || "",
           email: primaryEmail?.value || "",
           website: data.website || "",
+          bookingUrl: data.bookingUrl || "",
           pricing: data.pricing || "",
           openingHours: data.openingHours
             ? Object.entries(data.openingHours)
@@ -207,6 +210,7 @@ function MojeSportovisteContent() {
           phone: form.phone || null,
           email: form.email || null,
           website: form.website || null,
+          bookingUrl: form.bookingUrl || null,
           pricing: form.pricing || null,
           openingHours: openingHours || null,
         }),
@@ -502,6 +506,21 @@ function MojeSportovisteContent() {
                   placeholder="https://"
                   className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm focus:border-emerald-400 focus:outline-none focus:ring-1 focus:ring-emerald-400"
                 />
+              </div>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-zinc-700">
+                  Rezervační systém
+                </label>
+                <input
+                  type="url"
+                  value={form.bookingUrl}
+                  onChange={(e) => update("bookingUrl", e.target.value)}
+                  placeholder="https://rezervace..."
+                  className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm focus:border-emerald-400 focus:outline-none focus:ring-1 focus:ring-emerald-400"
+                />
+                <p className="mt-1 text-xs text-zinc-400">
+                  Odkaz na online rezervace (pokud máte)
+                </p>
               </div>
             </div>
           </section>

@@ -6,6 +6,7 @@ import { getRegionBySlug } from "@/lib/regions";
 import { getCitiesByRegionAndSport, getTopFacilitiesByRegionAndSport } from "@/lib/data";
 import { getSportFacilityTypePluralGenitive, getSportFacilityTypeInstrumental } from "@/lib/seo";
 import { FacilityCard } from "@/components/FacilityCard";
+import { AdSlot } from "@/components/AdSlot";
 import type { Metadata } from "next";
 
 interface RegionPageProps {
@@ -179,6 +180,11 @@ export default async function RegionPage({ params }: RegionPageProps) {
           </div>
         </section>
       )}
+
+      {/* Ad: after facilities */}
+      <div className="mx-auto max-w-6xl px-6 py-4">
+        <AdSlot slot="1234567896" format="horizontal" />
+      </div>
 
       {/* Other Sports */}
       <section className="border-t border-zinc-100 bg-white">

@@ -43,7 +43,7 @@ export async function PATCH(request: NextRequest) {
     const body = await request.json();
     const {
       name, description, address, postalCode,
-      pricing, openingHours, website,
+      pricing, openingHours, website, bookingUrl,
       phone, email: contactEmail,
     } = body;
 
@@ -58,6 +58,7 @@ export async function PATCH(request: NextRequest) {
         ...(pricing !== undefined && { pricing }),
         ...(openingHours !== undefined && { openingHours }),
         ...(website !== undefined && { website }),
+        ...(bookingUrl !== undefined && { bookingUrl }),
       },
     });
 
