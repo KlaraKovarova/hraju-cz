@@ -27,11 +27,13 @@ interface Review {
 
 interface ReviewListProps {
   facilityId: string;
+  /** Full URL for sharing (e.g. https://www.hraju.cz/sport/tenis/slug) */
+  facilityUrl?: string;
   /** Number of reviews per page */
   perPage?: number;
 }
 
-export function ReviewList({ facilityId, perPage = 10 }: ReviewListProps) {
+export function ReviewList({ facilityId, facilityUrl, perPage = 10 }: ReviewListProps) {
   const [reviews, setReviews] = useState<Review[]>([]);
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
@@ -116,6 +118,7 @@ export function ReviewList({ facilityId, perPage = 10 }: ReviewListProps) {
             key={review.id}
             id={review.id}
             facilityId={facilityId}
+            facilityUrl={facilityUrl}
             userId={review.userId}
             authorName={review.authorName}
             rating={review.rating}

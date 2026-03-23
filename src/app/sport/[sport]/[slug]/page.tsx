@@ -29,7 +29,7 @@ import { AggregateRating } from "@/components/AggregateRating";
 import { CityLandingContent } from "@/components/CityLandingContent";
 import { PhotoGallery } from "@/components/PhotoGallery";
 import { OpeningHoursDisplay } from "@/components/OpeningHoursDisplay";
-import { ShareButton } from "@/components/ShareButton";
+import { SocialShareBar } from "@/components/SocialShareBar";
 import { FacilityMap } from "@/components/FacilityMap";
 import { AdSlot } from "@/components/AdSlot";
 import { TrackPageView } from "@/components/TrackPageView";
@@ -63,9 +63,16 @@ export async function generateMetadata({
     const url = `https://www.hraju.cz/sport/${sportSlug}/${slug}`;
 
     const primaryImage = facility.images?.find((img: { isPrimary: boolean }) => img.isPrimary) ?? facility.images?.[0];
+    const dynamicOgUrl = `/api/og?${new URLSearchParams({
+      title: facility.name,
+      subtitle: `${sport.nameCs} · ${facility.location.city}`,
+      icon: sport.icon,
+      type: "facility",
+      ...(facility.averageRating ? { rating: facility.averageRating.toFixed(1) } : {}),
+    }).toString()}`;
     const ogImage = primaryImage?.url
       ? { url: primaryImage.url, alt: primaryImage.alt ?? facility.name }
-      : { url: "/og-image.jpg", width: 1200, height: 630, alt: `${facility.name} — hraju.cz` };
+      : { url: dynamicOgUrl, width: 1200, height: 630, alt: `${facility.name} — hraju.cz` };
 
     return {
       title,
@@ -511,7 +518,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
 
           {/* Check-in button */}
           <div className="mt-4">
-            <CheckInButton facilityId={facility.id} currentPath={`/sport/${sportSlug}/${slug}`} />
+            <CheckInButton facilityId={facility.id} currentPath={`/sport/${sportSlug}/${slug}`} facilityName={facility.name} />
           </div>
         </div>
       </section>
@@ -771,10 +778,14 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                 <ExternalLink className="ml-auto h-3.5 w-3.5 text-zinc-400" />
               </a>
 
-              <ShareButton
-                title={`${facility.name} — ${sport.nameCs} v ${facility.location.city} | hraju.cz`}
-                url={`https://www.hraju.cz/sport/${sportSlug}/${slug}`}
-              />
+              <div className="rounded-2xl border border-zinc-100 bg-white p-4">
+                <p className="mb-3 text-xs font-semibold text-zinc-500">Sdílet</p>
+                <SocialShareBar
+                  title={`${facility.name} — ${sport.nameCs} v ${facility.location.city} | hraju.cz`}
+                  url={`https://www.hraju.cz/sport/${sportSlug}/${slug}`}
+                  compact
+                />
+              </div>
             </div>
 
             {/* Internal Links: City & Sport pages */}
@@ -933,13 +944,13 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
 
           <div className="grid gap-8 lg:grid-cols-3">
             <div className="lg:col-span-2">
-              <ReviewList facilityId={facility.id} />
+              <ReviewList facilityId={facility.id} facilityUrl={`https://www.hraju.cz/sport/${sportSlug}/${slug}`} />
             </div>
             <div>
               <h3 className="mb-3 text-sm font-semibold text-zinc-700">
                 Napsat recenzi
               </h3>
-              <ReviewForm facilityId={facility.id} currentPath={`/sport/${sportSlug}/${slug}`} />
+              <ReviewForm facilityId={facility.id} currentPath={`/sport/${sportSlug}/${slug}`} facilityName={facility.name} facilityUrl={`https://www.hraju.cz/sport/${sportSlug}/${slug}`} />
             </div>
           </div>
         </div>

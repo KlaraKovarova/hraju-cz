@@ -3,11 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import { StarRating } from "./StarRating";
-import { User, ThumbsUp, Flag } from "lucide-react";
+import { User, ThumbsUp, Flag, Link2, Check } from "lucide-react";
 
 interface ReviewCardProps {
   id: string;
   facilityId: string;
+  facilityUrl?: string;
   userId?: string | null;
   authorName: string;
   rating: number;
@@ -20,6 +21,7 @@ interface ReviewCardProps {
 export function ReviewCard({
   id,
   facilityId,
+  facilityUrl,
   userId,
   authorName,
   rating,
@@ -31,6 +33,18 @@ export function ReviewCard({
   const [helpful, setHelpful] = useState(initialHelpful);
   const [voted, setVoted] = useState(false);
   const [flagged, setFlagged] = useState(false);
+  const [linkCopied, setLinkCopied] = useState(false);
+
+  async function handleShareReview() {
+    const shareUrl = facilityUrl ? `${facilityUrl}#recenze` : window.location.href;
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setLinkCopied(true);
+      setTimeout(() => setLinkCopied(false), 2000);
+    } catch {
+      // Clipboard API not available
+    }
+  }
 
   async function handleHelpful() {
     if (voted) return;
@@ -127,6 +141,18 @@ export function ReviewCard({
         >
           <Flag className="h-3.5 w-3.5" />
           {flagged ? "Nahlášeno" : "Nahlásit"}
+        </button>
+        <button
+          type="button"
+          onClick={handleShareReview}
+          className={`ml-auto flex items-center gap-1.5 rounded-lg px-2.5 py-1 text-xs font-medium transition ${
+            linkCopied
+              ? "text-emerald-500"
+              : "text-zinc-400 hover:bg-zinc-50 hover:text-zinc-600"
+          }`}
+        >
+          {linkCopied ? <Check className="h-3.5 w-3.5" /> : <Link2 className="h-3.5 w-3.5" />}
+          {linkCopied ? "Zkopírováno" : "Sdílet"}
         </button>
       </div>
     </div>
