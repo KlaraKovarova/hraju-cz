@@ -237,8 +237,25 @@ export default async function SportPage({ params }: SportPageProps) {
         </div>
       </section>
 
+      {/* Map View — all facilities with coordinates */}
+      {mapMarkers.length > 0 && (
+        <section className="mx-auto max-w-6xl px-6 py-8">
+          <h2 className="mb-6 flex items-center gap-2 text-xl font-bold text-zinc-900">
+            <Map className="h-5 w-5 text-zinc-400" />
+            Mapa — {sport.nameCs.toLowerCase()} v ČR
+          </h2>
+          <FacilityMap
+            markers={mapMarkers}
+            className="h-[400px] w-full rounded-2xl border border-zinc-200 overflow-hidden"
+          />
+          <p className="mt-2 text-xs text-zinc-400">
+            {mapMarkers.length} {mapMarkers.length === 1 ? "místo" : "míst"} na mapě
+          </p>
+        </section>
+      )}
+
       {/* Regions Grid */}
-      <section className="mx-auto max-w-6xl px-6 py-8">
+      <section className="mx-auto max-w-6xl px-6 py-8 border-t border-zinc-100">
         <h2 className="mb-6 text-xl font-bold text-zinc-900">
           Vyberte kraj
         </h2>
@@ -267,23 +284,6 @@ export default async function SportPage({ params }: SportPageProps) {
           ))}
         </div>
       </section>
-
-      {/* Map View — all facilities with coordinates */}
-      {mapMarkers.length > 0 && (
-        <section className="mx-auto max-w-6xl px-6 py-8 border-t border-zinc-100">
-          <h2 className="mb-6 flex items-center gap-2 text-xl font-bold text-zinc-900">
-            <Map className="h-5 w-5 text-zinc-400" />
-            Mapa — {sport.nameCs.toLowerCase()} v ČR
-          </h2>
-          <FacilityMap
-            markers={mapMarkers}
-            className="h-[400px] w-full rounded-2xl border border-zinc-200 overflow-hidden"
-          />
-          <p className="mt-2 text-xs text-zinc-400">
-            {mapMarkers.length} {mapMarkers.length === 1 ? "místo" : "míst"} na mapě
-          </p>
-        </section>
-      )}
 
       {/* Ad: between regions and cities */}
       <div className="mx-auto max-w-6xl px-6 py-4">
