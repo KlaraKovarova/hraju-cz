@@ -72,7 +72,11 @@ export function getAllPosts(): BlogPostMeta[] {
 
 export function getPostBySlug(slug: string): BlogPost | null {
   const filePath = path.join(CONTENT_DIR, `${slug}.md`);
-  return parseMdFile(filePath);
+  const post = parseMdFile(filePath);
+  if (!post || !post.image) return null;
+  const today = new Date().toISOString().slice(0, 10);
+  if (post.date > today) return null;
+  return post;
 }
 
 export function getPostsByCategory(category: string): BlogPostMeta[] {
