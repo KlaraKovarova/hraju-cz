@@ -3,7 +3,12 @@ title: "Sportovní komunita hraju.cz — proč ji budujeme a jak se zapojit"
 date: '2026-03-20'
 category: "komunita"
 excerpt: "hraju.cz není jen katalog sportovišť. Budujeme komunitu sportovních nadšenců, kteří si navzájem pomáhají najít ta nejlepší místa pro sport."
-sportTags: []
+sportTags:
+  - tenis
+  - fitness
+  - plavani
+  - lezeni
+  - squash
 image: /images/blog/sportovni-komunita-hraju-cz.jpg
 ---
 

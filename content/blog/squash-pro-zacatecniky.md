@@ -1,6 +1,6 @@
 ---
 title: "Squash pro začátečníky — co potřebujete vědět"
-date: "2026-03-12"
+date: "2099-01-01"
 category: "pruvodce-sporty"
 excerpt: "Začínáte se squashem? Přečtěte si, co budete potřebovat, kolik to stojí a kde najít nejbližší squashový kurt."
 sportTags: ["squash"]

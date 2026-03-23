@@ -1,6 +1,6 @@
 ---
 title: "Badminton pro začátečníky — jak začít a kde hrát"
-date: "2026-03-22"
+date: "2099-01-01"
 category: "pruvodce-sporty"
 excerpt: "Chcete začít s badmintonem? Přečtěte si, co potřebujete vědět o vybavení, pravidlech a kde v Česku najdete badmintonové haly."
 sportTags: ["badminton"]
