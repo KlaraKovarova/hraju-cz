@@ -848,6 +848,44 @@ export async function getCommunityStats(): Promise<{ totalReviews: number; total
   }
 }
 
+export interface TopReviewer {
+  id: string;
+  name: string;
+  reviewCount: number;
+  helpfulVotes: number;
+}
+
+export async function getTopReviewers(limit: number = 10): Promise<TopReviewer[]> {
+  try {
+    const reviewers = await withTimeout(
+      prisma.user.findMany({
+        where: { isSeed: false },
+        select: {
+          id: true,
+          name: true,
+          reviews: {
+            where: { isApproved: true },
+            select: { helpful: true },
+          },
+        },
+      }),
+      DB_QUERY_TIMEOUT_MS
+    );
+    return reviewers
+      .map((u) => ({
+        id: u.id,
+        name: u.name || "Sportovec",
+        reviewCount: u.reviews.length,
+        helpfulVotes: u.reviews.reduce((sum, r) => sum + r.helpful, 0),
+      }))
+      .filter((u) => u.reviewCount > 0)
+      .sort((a, b) => b.helpfulVotes - a.helpfulVotes || b.reviewCount - a.reviewCount)
+      .slice(0, limit);
+  } catch {
+    return [];
+  }
+}
+
 /** Recently added facilities (by createdAt descending) */
 export async function getRecentFacilities(limit: number = 4): Promise<FacilityWithDetails[]> {
   const sorted = exportData.facilities

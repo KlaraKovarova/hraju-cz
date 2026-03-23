@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronRight, Star, MessageSquare, Calendar, User } from "lucide-react";
+import { ChevronRight, Star, MessageSquare, Calendar, User, Award } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { StarRating } from "@/components/StarRating";
 import { AdSlot } from "@/components/AdSlot";
@@ -79,6 +79,14 @@ export default async function UserProfilePage({ params }: Props) {
     year: "numeric",
   });
 
+  const badges: { label: string; threshold: number; emoji: string }[] = [
+    { label: "Recenzent", threshold: 5, emoji: "🥉" },
+    { label: "Zkušený recenzent", threshold: 10, emoji: "🥈" },
+    { label: "Expert", threshold: 25, emoji: "🥇" },
+    { label: "Mistr recenzí", threshold: 50, emoji: "🏆" },
+  ];
+  const earnedBadges = badges.filter((b) => totalReviews >= b.threshold);
+
   const breadcrumbLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -138,6 +146,21 @@ export default async function UserProfilePage({ params }: Props) {
               </p>
             </div>
           </div>
+
+          {/* Badges */}
+          {earnedBadges.length > 0 && (
+            <div className="mt-6 flex flex-wrap gap-2">
+              {earnedBadges.map((badge) => (
+                <span
+                  key={badge.threshold}
+                  className="flex items-center gap-1.5 rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-700 border border-amber-100"
+                >
+                  <Award className="h-3.5 w-3.5" />
+                  {badge.emoji} {badge.label}
+                </span>
+              ))}
+            </div>
+          )}
 
           {/* Stats */}
           <div className="mt-8 flex flex-wrap gap-6">
