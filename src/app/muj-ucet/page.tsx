@@ -38,13 +38,24 @@ interface UserVisit {
   };
 }
 
-type Tab = "reviews" | "visits";
+interface UserEvent {
+  id: string;
+  name: string;
+  dateStart: string;
+  dateEnd: string | null;
+  city: string;
+  isActive: boolean;
+  createdAt: string;
+}
+
+type Tab = "reviews" | "visits" | "events";
 
 export default function MujUcetPage() {
   const router = useRouter();
   const [user, setUser] = useState<UserData | null>(null);
   const [reviews, setReviews] = useState<UserReview[]>([]);
   const [visits, setVisits] = useState<UserVisit[]>([]);
+  const [events, setEvents] = useState<UserEvent[]>([]);
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<Tab>("reviews");
 
@@ -59,13 +70,15 @@ export default function MujUcetPage() {
         const userData = await meRes.json();
         setUser(userData);
 
-        const [revRes, visitRes] = await Promise.all([
+        const [revRes, visitRes, eventRes] = await Promise.all([
           fetch("/api/auth/my-reviews"),
           fetch("/api/auth/my-visits"),
+          fetch("/api/auth/my-events"),
         ]);
 
         if (revRes.ok) setReviews(await revRes.json());
         if (visitRes.ok) setVisits(await visitRes.json());
+        if (eventRes.ok) setEvents(await eventRes.json());
       } catch {
         router.push("/prihlaseni?redirect=/muj-ucet");
       } finally {
@@ -85,7 +98,7 @@ export default function MujUcetPage() {
 
   if (!user) return null;
 
-  const isNewUser = reviews.length === 0 && visits.length === 0;
+  const isNewUser = reviews.length === 0 && visits.length === 0 && events.length === 0;
   const approvedCount = reviews.filter((r) => r.isApproved).length;
   const pendingCount = reviews.filter((r) => !r.isApproved).length;
 
@@ -200,7 +213,7 @@ export default function MujUcetPage() {
 
       {/* Stats */}
       {!isNewUser && (
-      <div className="mb-8 grid grid-cols-4 gap-3">
+      <div className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-5">
         <div className="rounded-xl border border-zinc-200 bg-white p-4 text-center">
           <div className="text-2xl font-bold text-zinc-900">{reviews.length}</div>
           <div className="text-xs text-zinc-500">Recenzí</div>
@@ -216,6 +229,10 @@ export default function MujUcetPage() {
         <div className="rounded-xl border border-sky-200 bg-sky-50 p-4 text-center">
           <div className="text-2xl font-bold text-sky-700">{visits.length}</div>
           <div className="text-xs text-sky-600">Návštěv</div>
+        </div>
+        <div className="rounded-xl border border-orange-200 bg-orange-50 p-4 text-center">
+          <div className="text-2xl font-bold text-orange-700">{events.length}</div>
+          <div className="text-xs text-orange-600">Akcí</div>
         </div>
       </div>
       )}
@@ -242,7 +259,18 @@ export default function MujUcetPage() {
           }`}
         >
           <MapPinCheck className="h-4 w-4" />
-          Navštívená místa ({visits.length})
+          Návštěvy ({visits.length})
+        </button>
+        <button
+          onClick={() => setActiveTab("events")}
+          className={`flex flex-1 items-center justify-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition ${
+            activeTab === "events"
+              ? "bg-white text-zinc-900 shadow-sm"
+              : "text-zinc-500 hover:text-zinc-700"
+          }`}
+        >
+          <Calendar className="h-4 w-4" />
+          Akce ({events.length})
         </button>
       </div>}
 
@@ -412,6 +440,78 @@ export default function MujUcetPage() {
                   </div>
                 );
               })}
+            </div>
+          )}
+        </>
+      )}
+
+      {/* Events tab */}
+      {!isNewUser && activeTab === "events" && (
+        <>
+          {events.length === 0 ? (
+            <div className="rounded-xl border border-zinc-200 bg-white p-8 text-center">
+              <Calendar className="mx-auto mb-3 h-10 w-10 text-zinc-300" />
+              <p className="text-sm font-medium text-zinc-600">
+                Zatím jste nepřidal/a žádnou akci.
+              </p>
+              <p className="mt-1 text-xs text-zinc-400">
+                Pořádáte turistickou akci? Přidejte ji do našeho kalendáře.
+              </p>
+              <Link
+                href="/pridat-akci"
+                className="mt-4 inline-block rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700 transition-colors"
+              >
+                Přidat akci
+              </Link>
+            </div>
+          ) : (
+            <div className="space-y-3">
+              {events.map((event) => (
+                <div
+                  key={event.id}
+                  className="rounded-xl border border-zinc-200 bg-white p-4"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm font-semibold text-zinc-900">
+                        {event.name}
+                      </p>
+                      <p className="mt-0.5 flex items-center gap-1 text-xs text-zinc-400">
+                        <MapPin className="h-3 w-3" />
+                        {event.city}
+                        {" · "}
+                        {new Date(event.dateStart).toLocaleDateString("cs-CZ")}
+                        {event.dateEnd && ` – ${new Date(event.dateEnd).toLocaleDateString("cs-CZ")}`}
+                      </p>
+                    </div>
+                    <div className="flex shrink-0 items-center gap-1">
+                      {event.isActive ? (
+                        <span className="flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-xs font-medium text-emerald-700">
+                          <CheckCircle2 className="h-3 w-3" />
+                          Schváleno
+                        </span>
+                      ) : (
+                        <span className="flex items-center gap-1 rounded-full bg-amber-50 px-2 py-0.5 text-xs font-medium text-amber-700">
+                          <Clock className="h-3 w-3" />
+                          Čeká na schválení
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="mt-3 text-xs text-zinc-400">
+                    Přidáno {new Date(event.createdAt).toLocaleDateString("cs-CZ")}
+                  </div>
+                </div>
+              ))}
+
+              <Link
+                href="/pridat-akci"
+                className="flex items-center justify-center gap-2 rounded-xl border border-dashed border-zinc-300 p-4 text-sm text-zinc-500 transition hover:border-emerald-400 hover:text-emerald-600"
+              >
+                <PlusCircle className="h-4 w-4" />
+                Přidat další akci
+              </Link>
             </div>
           )}
         </>

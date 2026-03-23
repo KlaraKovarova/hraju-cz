@@ -238,6 +238,7 @@ model User {
   reviews      Review[]
   visits       Visit[]
   loginTokens  LoginToken[]
+  events       TouristEvent[]
 }
 
 model Visit {
@@ -293,6 +294,8 @@ model TouristEvent {
   lng         Float?
   source      String   @default("kct")
   isActive    Boolean  @default(true)
+  userId      String?
+  user        User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
@@ -300,4 +303,5 @@ model TouristEvent {
   @@index([region])
   @@index([dateStart])
   @@index([source])
+  @@index([userId])
 }
