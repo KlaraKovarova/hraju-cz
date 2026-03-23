@@ -47,6 +47,15 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Datum akce musí být v budoucnosti." }, { status: 400 });
     }
 
+    const twoMonthsLater = new Date();
+    twoMonthsLater.setMonth(twoMonthsLater.getMonth() + 2);
+    if (startDate > twoMonthsLater) {
+      return NextResponse.json(
+        { error: "Datum akce může být maximálně 2 měsíce dopředu." },
+        { status: 400 }
+      );
+    }
+
     if (!city?.trim()) {
       return NextResponse.json({ error: "Vyplňte město konání." }, { status: 400 });
     }

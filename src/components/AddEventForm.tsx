@@ -30,6 +30,14 @@ export default function AddEventForm() {
     setTimestamp(Date.now());
   }, []);
 
+  // 2-month rolling window for date inputs
+  const today = new Date().toISOString().split("T")[0];
+  const maxDate = (() => {
+    const d = new Date();
+    d.setMonth(d.getMonth() + 2);
+    return d.toISOString().split("T")[0];
+  })();
+
   function update(field: string, value: string) {
     setForm((prev) => ({ ...prev, [field]: value }));
   }
@@ -158,6 +166,8 @@ export default function AddEventForm() {
             <input
               type="date"
               required
+              min={today}
+              max={maxDate}
               value={form.dateStart}
               onChange={(e) => update("dateStart", e.target.value)}
               className={inputClass}
@@ -169,6 +179,8 @@ export default function AddEventForm() {
             </label>
             <input
               type="date"
+              min={today}
+              max={maxDate}
               value={form.dateEnd}
               onChange={(e) => update("dateEnd", e.target.value)}
               className={inputClass}

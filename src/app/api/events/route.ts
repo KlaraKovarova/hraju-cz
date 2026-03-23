@@ -14,12 +14,21 @@ export async function GET(request: NextRequest) {
   let dateFrom: Date;
   let dateTo: Date;
 
+  const twoMonthsCeiling = new Date(now);
+  twoMonthsCeiling.setMonth(twoMonthsCeiling.getMonth() + 2);
+
   if (month && /^\d{4}-\d{2}$/.test(month)) {
     const [year, mon] = month.split("-").map(Number);
     dateFrom = new Date(year, mon - 1, 1);
     dateTo = new Date(year, mon, 0, 23, 59, 59, 999); // last day of month
     // Don't show past events even when filtering by month
     if (dateFrom < now) dateFrom = now;
+    // Cap at 2-month rolling window
+    if (dateTo > twoMonthsCeiling) dateTo = twoMonthsCeiling;
+    // If the entire month is beyond the window, return empty
+    if (dateFrom > twoMonthsCeiling) {
+      return NextResponse.json({ events: [], total: 0, page: 1, pages: 0 });
+    }
   } else {
     dateFrom = now;
     dateTo = new Date(now);

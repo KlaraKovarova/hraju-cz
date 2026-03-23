@@ -22,10 +22,14 @@ function formatCzechDate(date: Date): string {
 export async function UpcomingEvents({ city, region }: UpcomingEventsProps) {
   let events;
   try {
+    const now = new Date();
+    const twoMonthsLater = new Date(now);
+    twoMonthsLater.setMonth(twoMonthsLater.getMonth() + 2);
+
     events = await prisma.touristEvent.findMany({
       where: {
         isActive: true,
-        dateStart: { gte: new Date() },
+        dateStart: { gte: now, lte: twoMonthsLater },
         city: { equals: city, mode: "insensitive" },
       },
       orderBy: { dateStart: "asc" },
