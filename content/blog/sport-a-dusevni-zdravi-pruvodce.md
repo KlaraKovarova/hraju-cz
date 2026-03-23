@@ -238,3 +238,14 @@ Deprese a úzkost způsobují, že **nemáte energii ani motivaci cvičit** — 
 7. **Pište si deník** — 1 věta po tréninku. Za měsíc uvidíte progres
 
 Na hraju.cz najdete sportovní zařízení ve vašem městě — od posiloven přes bazény po skupinové lekce. Najděte místo, kam se budete těšit, a začněte svou cestu k lepšímu duševnímu zdraví!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

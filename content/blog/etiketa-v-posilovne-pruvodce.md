@@ -172,3 +172,14 @@ Working in (sdílení stroje):
 - Těžké váhy nejsou „jen pro kluky" — zvedejte co chcete
 
 Na hraju.cz najdete fitness centra a posilovny ve vašem městě — s recenzemi od ostatních sportovců. Najděte místo, kde se budete cítit dobře, a začněte trénovat!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

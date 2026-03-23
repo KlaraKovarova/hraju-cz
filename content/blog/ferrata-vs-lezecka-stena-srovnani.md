@@ -1,6 +1,6 @@
 ---
 title: "Ferrata vs lezecká stěna: Co je lepší pro vás?"
-date: "2026-03-29"
+date: "2026-03-23"
 category: pruvodce-sporty
 excerpt: "Srovnání ferrat a lezeckých stěn — obtížnost, cena, vybavení, adrenalin a přístupnost. Který sport je pro vás ten pravý?"
 sportTags: ["ferraty", "lezeni"]

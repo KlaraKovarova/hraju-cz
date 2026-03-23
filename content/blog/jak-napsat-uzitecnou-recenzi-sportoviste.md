@@ -1,6 +1,6 @@
 ---
 title: Jak napsat užitečnou recenzi sportoviště
-date: '2026-03-25'
+date: '2026-03-23'
 category: komunita
 excerpt: >-
   Ne každá recenze pomůže. Ukážeme vám, co přesně napsat, aby váš názor pomohl

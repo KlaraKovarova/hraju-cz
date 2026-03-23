@@ -1,6 +1,6 @@
 ---
 title: Kde hrát tenis v Brně — přehled kurtů a cen pro rok 2026
-date: '2026-04-05'
+date: '2026-03-23'
 category: pruvodce-mesta
 excerpt: >-
   Kompletní přehled tenisových kurtů v Brně. Porovnání cen, povrchů a služeb —

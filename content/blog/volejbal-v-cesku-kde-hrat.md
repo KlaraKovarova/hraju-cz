@@ -1,6 +1,6 @@
 ---
 title: Volejbal v Česku — kde hrát halový i plážový volejbal
-date: '2026-03-27'
+date: '2026-03-23'
 category: pruvodce-sporty
 excerpt: >-
   Přehled volejbalových hal a beach volejbalových center v České republice. Kde

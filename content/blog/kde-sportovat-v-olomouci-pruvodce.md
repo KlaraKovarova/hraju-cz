@@ -240,3 +240,15 @@ Záleží na tom, co hledáte:
 ---
 
 *Byli jste na některém z těchto sportovišť? [Napište recenzi na hraju.cz](/) a pomozte ostatním sportovcům v Olomouci najít to pravé místo.*
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [tenisové areály v Česku na hraju.cz](/sport/tenis)
+- [kde hrát tenis v Brně](/blog/kde-hrat-tenis-v-brne)
+- [squashové kurty v Česku na hraju.cz](/sport/squash)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

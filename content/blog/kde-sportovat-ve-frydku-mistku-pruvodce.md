@@ -373,3 +373,15 @@ Web: fbcfm.cz.
 - **Sportplex** — městská společnost centrálně spravující všechna sportoviště
 
 Na hraju.cz najdete všechna sportoviště ve Frýdku-Místku s recenzemi od místních sportovců. Zanechte svůj názor!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [bazény v Česku na hraju.cz](/sport/plavani)
+- [bazény v Brně](/blog/plavecke-bazeny-brno)
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

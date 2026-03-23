@@ -257,3 +257,14 @@ Nejsilnější motivační nástroj = sportovní partner. Někdo na stejné úro
 5. **Profesionální pomoc** — sportovní psycholog (v ČR pokrývá pojišťovna s doporučením)
 
 Na hraju.cz najdete sportoviště ve vašem městě a komunitu sportovců, kteří zanechávají recenze. Připojte se a podělte se o svůj sportovní zážitek!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

@@ -209,3 +209,14 @@ Stand-Up Paddleboard (SUP) explodoval v Česku v posledních 5 letech. Stojíte 
 | Bazény | Celoročně | — |
 
 Na hraju.cz najdete bazény, koupaliště a vodní sportoviště ve vašem městě. Zanechte recenzi a pomozte ostatním najít nejlepší místo na vodu!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [bazény v Česku na hraju.cz](/sport/plavani)
+- [bazény v Brně](/blog/plavecke-bazeny-brno)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

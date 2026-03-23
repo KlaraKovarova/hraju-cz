@@ -298,3 +298,14 @@ Pokud chcete domácí trénink posunout, investujte postupně:
 **Celkem: od 1 400 Kč** — a máte plně vybavenou domácí posilovnu.
 
 Na hraju.cz najdete fitness centra a sportoviště ve vašem městě, když budete chtít trénink posunout na vyšší úroveň. Zanechte recenzi a pomozte ostatním!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

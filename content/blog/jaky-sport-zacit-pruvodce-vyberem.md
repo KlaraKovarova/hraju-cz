@@ -164,3 +164,15 @@ Neexistuje „nejlepší sport." Existuje jen sport, který:
 Zkuste to. Pokud vás to po měsíci nebaví, zkuste něco jiného. Hledání správného sportu je samo o sobě aktivita — a rozhodně lepší než sedět doma na gauči.
 
 Na hraju.cz najdete všechna sportoviště ve vašem městě — od posiloven přes tenisové kurty po boulderovací stěny. Vyberte si sport, najděte nejbližší místo a začněte ještě tento týden!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+- [tenisové areály v Česku na hraju.cz](/sport/tenis)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

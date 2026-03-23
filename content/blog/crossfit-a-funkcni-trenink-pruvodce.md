@@ -298,3 +298,14 @@ Většina boxů nabízí úvodní kurz (4–8 lekcí), kde se naučíte:
 5. **Odpočinek** — 2–3 tréninky týdně na začátek, max 5× pro pokročilé
 
 Na hraju.cz najdete fitness centra, CrossFit boxy a sportovní haly ve vašem městě. Zanechte recenzi a pomozte ostatním sportovců najít nejlepší místo pro trénink!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

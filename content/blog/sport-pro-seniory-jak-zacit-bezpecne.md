@@ -309,3 +309,14 @@ Většina sportovních zařízení nabízí slevy pro seniory 60+/65+:
 Nikdy není pozdě začít. Každý krok, každý dřep, každá délka v bazénu vás posouvá k lepšímu životu.
 
 Na hraju.cz najdete bazény, fitness centra, sportovní haly a další sportoviště ve vašem městě — s recenzemi od ostatních sportovců. Najděte místo, které je vám blízko, a začněte dnes!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

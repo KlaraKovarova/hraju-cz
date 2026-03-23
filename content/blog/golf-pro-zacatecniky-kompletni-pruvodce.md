@@ -183,3 +183,13 @@ Na začátek nepotřebujete kompletní bag 14 holí. Začněte se 7 holemi:
 - **Akademické kurzy** — krátké hřiště pro výuku, nižší green fee
 
 Na hraju.cz najdete golfová hřiště ve vašem kraji — porovnejte ceny, přečtěte si recenze od ostatních hráčů a najděte ideální místo pro svůj start do golfu!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [golfová hřiště na hraju.cz](/sport/golf)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

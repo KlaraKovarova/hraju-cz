@@ -1,6 +1,6 @@
 ---
 title: Sport pro rodiny s dětmi — kam vyrazit společně
-date: '2026-04-17'
+date: '2026-03-23'
 category: pruvodce-sporty
 excerpt: >-
   Hledáte sportovní aktivitu pro celou rodinu? Přinášíme přehled sportů a

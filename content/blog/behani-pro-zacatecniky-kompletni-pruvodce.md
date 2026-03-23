@@ -220,3 +220,14 @@ Běhat se dá celoročně. V Česku to znamená –10 °C, sníh a tmu v 16:00.
 5. **Pravidlo 3 km** — pokud se vám nechce, domluvte se sami se sebou: „Zaběhnu 3 km. Pokud se budu cítit špatně, vrátím se." V 95 % případů poběžíte dál.
 
 Na hraju.cz najdete sportovní areály, stadiony a běžecké trasy ve vašem městě. Zanechte recenzi oblíbené trasy a pomozte ostatním běžcům!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

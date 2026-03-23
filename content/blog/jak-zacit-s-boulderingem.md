@@ -1,6 +1,6 @@
 ---
 title: 'Jak začít s boulderingem: 7 tipů pro první návštěvu'
-date: '2026-04-14'
+date: '2026-03-23'
 author: Klára Kovářová
 category: tipy
 excerpt: >-

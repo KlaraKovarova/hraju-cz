@@ -262,3 +262,15 @@ Z Bezručova údolí přístup na **Klínovec** (1 244 m, ~25 km) — největš�
 - **Klínovec** — 25 km od města, největší skiareál v Krušných horách
 
 Na hraju.cz najdete všechna chomutovská sportoviště s recenzemi od místních sportovců. Zanechte svůj názor a pomozte ostatním!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [bazény v Česku na hraju.cz](/sport/plavani)
+- [bazény v Brně](/blog/plavecke-bazeny-brno)
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

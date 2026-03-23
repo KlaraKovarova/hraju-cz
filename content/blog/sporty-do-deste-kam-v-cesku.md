@@ -137,3 +137,15 @@ Volejbal vyžaduje skupinu (min. 8–12 lidí), ale jakmile ji máte, je to jede
 Špatné počasí je šance zkusit něco nového. Možná zjistíte, že bouldering nebo squash je zábavnější než ten běh, co jste plánovali.
 
 Na hraju.cz najdete všechna indoor sportoviště ve vašem městě — od bazénů přes boulderovky po squashové haly. Porovnejte ceny, přečtěte si recenze a vyberte si svůj deštivý plán B!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [squashové kurty v Česku na hraju.cz](/sport/squash)
+- [squash v Brně](/blog/kam-na-squash-v-brne)
+- [badmintonové haly na hraju.cz](/sport/badminton)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

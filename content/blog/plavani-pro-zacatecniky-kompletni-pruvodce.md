@@ -237,3 +237,14 @@ Babyswinning od 3 měsíců. Kurzy plavání pro děti od 3 let. Povinná výuka
 Český svaz plaveckých sportů (ČSPS) eviduje přes 200 klubů po celé ČR. Většina přijímá i dospělé rekreační plavce do tréninků.
 
 Na hraju.cz najdete bazény a aquaparky ve vašem městě. Přečtěte si recenze a zanechte svůj názor — pomůžete ostatním plavcům!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [bazény v Česku na hraju.cz](/sport/plavani)
+- [bazény v Brně](/blog/plavecke-bazeny-brno)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

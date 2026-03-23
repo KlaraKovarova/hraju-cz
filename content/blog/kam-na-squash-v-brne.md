@@ -1,6 +1,6 @@
 ---
 title: Kam na squash v Brně — průvodce podle hodnocení hráčů
-date: '2026-04-15'
+date: '2026-03-23'
 category: pruvodce-mesta
 excerpt: >-
   Hledáte squashový kurt v Brně? Přinášíme přehled nejlepších center podle

@@ -1,6 +1,6 @@
 ---
 title: "Nejlépe hodnocená sportoviště v Česku — březen 2026"
-date: "2026-03-31"
+date: "2026-03-23"
 category: komunita
 excerpt: "Měsíční přehled nejlépe hodnocených sportovišť na hraju.cz. Které haly, kurty a bazény si vysloužily nejlepší recenze od českých sportovců?"
 sportTags: ["tenis", "fitness", "plavani", "lezeni", "squash"]

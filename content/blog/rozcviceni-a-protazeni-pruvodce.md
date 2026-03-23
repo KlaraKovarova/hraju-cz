@@ -182,3 +182,14 @@ Každou pozici držte 20–30 sekund. Dýchejte klidně. NIKDY do bolesti — je
 **Realisticky:** 5 minut rozcvičení + 5 minut protažení = 10 minut navíc. To je méně než jedna epizoda seriálu. A může to být rozdíl mezi měsíci zdravého sportu a týdny na fyzioterapii.
 
 Na hraju.cz najdete sportoviště ve vašem městě — od posiloven po tenisové kurty. Ať už si vyberete jakýkoliv sport, nezapomeňte na rozcvičení a protažení. Vaše tělo vám poděkuje.
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

@@ -1,6 +1,6 @@
 ---
 title: 'Fitness pro ženy: Kam chodit a co cvičit v roce 2026'
-date: '2026-04-09'
+date: '2026-03-23'
 category: pruvodce-sporty
 excerpt: >-
   Průvodce fitness pro ženy — jak si vybrat posilovnu, které cvičení funguje a

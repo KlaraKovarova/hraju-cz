@@ -1,6 +1,6 @@
 ---
 title: 'Sportovní výzva: 30 dní pohybu — přidejte se ke komunitě'
-date: '2026-04-16'
+date: '2026-03-23'
 category: komunita
 excerpt: >-
   Výzva pro celou komunitu hraju.cz: 30 dní aktivního pohybu. Zkuste nový sport,

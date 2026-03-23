@@ -217,3 +217,15 @@ V Mladé Boleslavi aktuálně není žádná větší lezecká stěna. Nejbliž�
 - **Nejlevnější fitness:** Fenix (155 Kč vstup, studentská sleva)
 
 Na hraju.cz najdete všechna sportovní zařízení v Mladé Boleslavi s recenzemi od místních sportovců. Zanechte svůj názor a pomozte ostatním!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [tenisové areály v Česku na hraju.cz](/sport/tenis)
+- [kde hrát tenis v Brně](/blog/kde-hrat-tenis-v-brne)
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

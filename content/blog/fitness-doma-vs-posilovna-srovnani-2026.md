@@ -1,6 +1,6 @@
 ---
 title: "Fitness doma vs. posilovna — co se vyplatí v roce 2026?"
-date: '2026-03-26'
+date: '2026-03-23'
 category: tipy
 excerpt: >-
   Cvičit doma nebo v posilovně? Porovnání nákladů, vybavení a výsledků.

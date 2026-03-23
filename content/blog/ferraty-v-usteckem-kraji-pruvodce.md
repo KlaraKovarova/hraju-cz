@@ -1,6 +1,6 @@
 ---
 title: "Ferraty v Ústeckém kraji: Kde lézt a co vědět v 2026"
-date: "2026-03-24"
+date: "2026-03-23"
 category: pruvodce-sporty
 excerpt: "Ústecký kraj je českou ferratovou velmocí. Pastýřská stěna v Děčíně, ferraty u hradu Blansko, Lužická spojka — průvodce všemi zajištěnými cestami v regionu."
 sportTags: ["ferraty"]

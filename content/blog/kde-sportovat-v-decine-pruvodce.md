@@ -261,3 +261,15 @@ Kopec přímo u Děčína s nadmořskou výškou 723 m. Kamenná rozhledna z rok
 3. Neděle: výšlap na Děčínský Sněžník + regenerace v aquaparku
 
 Na hraju.cz najdete všechna děčínská sportoviště s recenzemi od místních sportovců. Zanechte svůj názor a pomozte ostatním!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [lezecké stěny v Česku na hraju.cz](/sport/lezeni)
+- [nejlepší boulderovky v Česku](/blog/nejlepsi-bouldrovky-v-cesku-2026)
+- [bazény v Česku na hraju.cz](/sport/plavani)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

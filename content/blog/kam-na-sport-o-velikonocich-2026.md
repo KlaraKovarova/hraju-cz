@@ -1,6 +1,6 @@
 ---
 title: "Kam na sport o Velikonocích 2026: sportoviště otevřená přes svátky"
-date: '2026-03-28'
+date: '2026-03-23'
 category: tipy
 excerpt: >-
   Velikonoce 2026 jsou 3.–6. dubna. Kam na sport přes svátky? Přehled sportovišť,

@@ -1,6 +1,6 @@
 ---
 title: "Padel boom 2026: kam hrát mimo Prahu — přehled nových kurtů v ČR"
-date: '2026-03-25'
+date: '2026-03-23'
 category: pruvodce-sporty
 excerpt: >-
   V březnu 2026 otevřelo v Brně největší indoor padelové centrum v ČR (10 kurtů).

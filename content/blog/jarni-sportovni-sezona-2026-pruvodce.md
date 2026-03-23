@@ -1,6 +1,6 @@
 ---
 title: "Jarní sportovní sezóna 2026: Kompletní průvodce pro návrat k pohybu"
-date: "2026-03-30"
+date: "2026-03-23"
 category: tipy
 excerpt: "Jak se vrátit ke sportu po zimě? Postupný plán pro 8 sportů, jarní tipy na oblečení, výživu a prevenci zranění. Česká sportoviště připravená na sezónu."
 sportTags: ["ferraty", "tenis", "lezeni", "plavani"]

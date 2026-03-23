@@ -223,3 +223,13 @@ Zeptejte se HR nebo kolegů — možná už firma tým má.
 ## Kde hledat sportoviště
 
 Na **hraju.cz** najdete přehled sportovních hal, hřišť, kurtů a stadionů ve vašem městě — s recenzemi od ostatních sportovců. Najděte místo blízko vás, zavolejte kamarády a přijďte si zahrát!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [volejbal na hraju.cz](/sport/volejbal)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

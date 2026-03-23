@@ -265,3 +265,13 @@ Vybírání tvrdých útoků v obraně. Stejná technika jako příjem (bagr), a
 - **Beach** — FIVB World Tour, olympiáda
 
 Na hraju.cz najdete sportovní haly a volejbalové kurty ve vašem městě. Zanechte recenzi a pomozte ostatním hráčům najít ideální místo!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [volejbal na hraju.cz](/sport/volejbal)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

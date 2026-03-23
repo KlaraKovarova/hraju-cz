@@ -1,6 +1,6 @@
 ---
 title: Nejlepší squashová centra v Praze — kde hrát v roce 2026
-date: '2026-03-30'
+date: '2026-03-23'
 category: pruvodce-mesta
 excerpt: >-
   Přehled nejlepších squashových center v Praze. Porovnání cen, vybavení a

@@ -261,3 +261,14 @@ Půjčení sněžnic: 200–400 Kč/den.
 | Listopad–prosinec | Poslední turistika, příprava na zimu, indoor alternativy |
 
 Na hraju.cz najdete sportoviště a outdoorové lokality ve vašem regionu. Zanechte recenzi — pomozte ostatním objevit nejlepší místa na sport v přírodě!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

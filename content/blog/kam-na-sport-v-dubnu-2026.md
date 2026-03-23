@@ -1,6 +1,6 @@
 ---
 title: "Kam na sport v dubnu 2026: Co se otevírá a kde začít sezónu"
-date: '2026-04-01'
+date: '2026-03-23'
 category: tipy
 excerpt: "Duben je start venkovní sezóny — otevírají ferraty, antukové kurty, padel. Přehled co kde začíná, ceny prvních vstupů a tipy na první výlet."
 sportTags:

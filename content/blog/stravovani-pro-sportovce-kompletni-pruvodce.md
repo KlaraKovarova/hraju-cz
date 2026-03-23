@@ -223,3 +223,14 @@ Suplementy = posledních 5 % výkonu. 95 % je strava, trénink, spánek. Nekupuj
 5. **Testujte na sobě.** Každé tělo reaguje jinak. Zkoušejte v tréninku, ne na závodech.
 
 Na hraju.cz najdete sportoviště, fitness centra a sportovní kluby ve vašem městě. Správná výživa + pravidelný pohyb = nejlepší investice do zdraví!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

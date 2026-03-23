@@ -1,6 +1,6 @@
 ---
 title: 'Golf za hubičku: Dostupné golfové kurzy a driving range v Česku'
-date: '2026-04-06'
+date: '2026-03-23'
 category: vybaveni
 excerpt: >-
   Golf nemusí být drahý sport. Přehled dostupných golfových kurzů, driving range

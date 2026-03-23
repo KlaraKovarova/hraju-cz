@@ -1,6 +1,6 @@
 ---
 title: Jak začít s lezením na stěně — kompletní průvodce pro začátečníky
-date: '2026-04-07'
+date: '2026-03-23'
 category: pruvodce-sporty
 excerpt: >-
   Chcete zkusit lezení nebo bouldering? Průvodce pro úplné začátečníky — co

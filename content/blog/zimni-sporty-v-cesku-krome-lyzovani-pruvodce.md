@@ -249,3 +249,15 @@ Jízda se psím spřežením není jen pro Aljašku. V ČR existuje aktivní mus
 5. **Nikdy sami v horách:** Informujte někoho o trase a očekávaném čase návratu
 
 Na hraju.cz najdete sportoviště pro zimní i letní aktivity — od ledových ploch přes posilovny po běžecké trasy. Podělte se o své oblíbené zimní místo v recenzi!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [bazény v Česku na hraju.cz](/sport/plavani)
+- [bazény v Brně](/blog/plavecke-bazeny-brno)
+- [cyklistika na hraju.cz](/sport/cyklistika)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

@@ -219,3 +219,15 @@ Karate, judo, box, kickbox, Muay Thai, MMA, BJJ, Krav Maga, filipínské bojové
 7. **Sportovní tradice od 1885** — od velocipedistů přes Sokol po ATP Challenger
 
 Na hraju.cz najdete sportoviště v Prostějově i dalších městech — od posiloven přes tenisové kurty po bazény. Zanechte recenzi a pomozte ostatním sportovcům najít nejlepší místo!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [tenisové areály v Česku na hraju.cz](/sport/tenis)
+- [kde hrát tenis v Brně](/blog/kde-hrat-tenis-v-brne)
+- [volejbal na hraju.cz](/sport/volejbal)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

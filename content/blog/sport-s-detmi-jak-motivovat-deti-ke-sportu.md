@@ -158,3 +158,14 @@ Dítě, které hraje POUZE fotbal od 5 let:
 5. **Buďte tam.** Přítomnost rodiče na zápase/tréninku = největší motivace pro dítě.
 
 Na hraju.cz najdete sportovní oddíly, haly a kurty ve vašem městě. Pomozte svým dětem najít sport, který je bude bavit — a zanechte recenzi, ať pomůžete dalším rodinám!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

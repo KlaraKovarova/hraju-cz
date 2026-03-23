@@ -229,3 +229,15 @@ Vše zdarma, celoročně přístupné. Nejlepší „sportoviště" v Plzni pro 
 ## Sportujete v Plzni?
 
 Pomozte ostatním sportovcům vybrat to nejlepší — [napište recenzi](/prihlaseni) svého oblíbeného sportoviště v Plzni. Ohodnoťte zázemí, čistotu a poměr ceny a kvality. Každá recenze pomáhá plzeňské sportovní komunitě.
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+- [bazény v Česku na hraju.cz](/sport/plavani)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

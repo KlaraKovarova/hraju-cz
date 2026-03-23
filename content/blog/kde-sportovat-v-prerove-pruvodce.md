@@ -319,3 +319,15 @@ Adresa: Teličkova 491/6b (centrum LEON), Přerov-Předmostí. Web: bowlingbarko
 - **Bouldering za 70 Kč** — nejlevnější indoor lezení v ČR
 
 Na hraju.cz najdete všechna přerovská sportoviště s recenzemi od místních sportovců. Zanechte svůj názor a pomozte ostatním!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [bazény v Česku na hraju.cz](/sport/plavani)
+- [bazény v Brně](/blog/plavecke-bazeny-brno)
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

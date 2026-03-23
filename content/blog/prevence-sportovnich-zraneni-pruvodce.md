@@ -294,3 +294,14 @@ Trénink je jen stimulus. Zlepšení přichází během regenerace.
 **Nikdy se nevracejte příliš brzy.** Nedoléčené zranění = chronický problém = konec sportu.
 
 Na hraju.cz najdete sportoviště ve vašem městě s recenzemi od ostatních sportovců. Sportujte bezpečně a zanechte svůj názor!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

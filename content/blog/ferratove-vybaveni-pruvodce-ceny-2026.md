@@ -1,6 +1,6 @@
 ---
 title: "Ferratové vybavení: Co potřebujete a kolik to stojí v 2026"
-date: "2026-03-27"
+date: "2026-03-23"
 category: vybaveni
 excerpt: "Kompletní přehled vybavení na via ferraty — ferratový set, sedák, helma, rukavice. České a světové značky, ceny 2026, kde koupit a kdy se vyplatí půjčit."
 sportTags: ["ferraty"]
@@ -203,3 +203,14 @@ Kupujte **pouze** v autorizovaných obchodech. Nekupujte ferratové vybavení z 
 Na ferratu se dá vyrazit s půjčeným vybavením za **350–500 Kč**. Vlastní kompletní výbava stojí od **3 850 Kč** (česká značka Ocún s helmou). Investice se vrátí po 2–3 sezónách. České značky Singing Rock a Ocún nabízí světovou kvalitu za lokální ceny.
 
 **Jaké vybavení používáte?** [Podělte se o zkušenost](/prihlaseni) a pomozte ostatním lezci s výběrem.
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [ferraty v Česku na hraju.cz](/sport/ferraty)
+- [ferratové vybavení — průvodce cenami](/blog/ferratove-vybaveni-pruvodce-ceny-2026)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

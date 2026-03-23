@@ -176,3 +176,13 @@ Volejbal je jeden z nejlevnějších sportů na provozování. Pronájem haly sd
 5. **Buďte trpěliví.** Přihrávka a nahrávka vyžadují stovky opakování. Po pár měsících to „cvakne."
 
 Na hraju.cz můžete vyhledávat sportovní haly s volejbalovými kurty ve vašem městě. Zanechte recenzi a pomozte dalším hráčům najít ideální místo pro jejich tréninky!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [volejbal na hraju.cz](/sport/volejbal)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

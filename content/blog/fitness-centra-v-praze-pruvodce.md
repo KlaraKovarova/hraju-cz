@@ -1,6 +1,6 @@
 ---
 title: Fitness centra v Praze — jak vybrat to pravé pro vás
-date: '2026-03-24'
+date: '2026-03-23'
 category: pruvodce-mesta
 excerpt: >-
   Praha má přes 530 fitness center. Jak se v té nabídce zorientovat? Přinášíme

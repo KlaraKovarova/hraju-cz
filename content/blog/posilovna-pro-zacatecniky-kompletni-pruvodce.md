@@ -191,3 +191,14 @@ Buďme upřímní:
 Klíč je **konzistence**. Lepší 3× týdně celý rok než 6× týdně 2 měsíce a pak nic.
 
 Na hraju.cz najdete fitness centra ve vašem městě — porovnejte vybavení, ceny a recenze od ostatních cvičenců. A až najdete svou posilovnu, zanechte recenzi a pomozte dalším začátečníkům s výběrem!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

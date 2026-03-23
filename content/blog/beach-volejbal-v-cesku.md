@@ -1,6 +1,6 @@
 ---
 title: 'Beach volejbal v Česku: Kde najdete nejlepší hřiště'
-date: '2026-04-04'
+date: '2026-03-23'
 author: Klára Kovářová
 category: pruvodce-mesta
 excerpt: >-

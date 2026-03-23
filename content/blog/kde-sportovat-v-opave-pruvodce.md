@@ -241,3 +241,15 @@ Město Opava investuje v roce 2026 celkem **630 milionů Kč**, z toho sportovn�
 | Colliery CrossFit | collieryopava.cz |
 
 Na hraju.cz najdete kompletní přehled sportovišť v Opavě s recenzemi od místních sportovců. Zanechte hodnocení a pomozte ostatním najít nejlepší místa na sport!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [tenisové areály v Česku na hraju.cz](/sport/tenis)
+- [kde hrát tenis v Brně](/blog/kde-hrat-tenis-v-brne)
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

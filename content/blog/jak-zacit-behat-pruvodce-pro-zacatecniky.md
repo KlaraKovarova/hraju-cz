@@ -163,3 +163,14 @@ Běh je jeden z nejlevnějších sportů — po pořízení bot jsou měsíční
 - **Běžecké skupiny** — běhejte s ostatními. Motivace + bezpečnost + zábava.
 
 Na hraju.cz najdete sportovní areály s atletickými drahami a parky vhodnými pro běh ve vašem městě. A až objevíte své oblíbené trasy, podělte se o ně s komunitou!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

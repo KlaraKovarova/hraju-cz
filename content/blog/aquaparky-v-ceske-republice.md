@@ -1,6 +1,6 @@
 ---
 title: 'Aquaparky v České republice: Kam na rodinný výlet'
-date: '2026-04-02'
+date: '2026-03-23'
 category: pruvodce-mesta
 excerpt: >-
   Přehled nejlepších aquaparků v Česku pro rodinné výlety. Tobogány, relaxační

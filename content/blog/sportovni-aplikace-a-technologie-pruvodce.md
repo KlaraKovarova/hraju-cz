@@ -188,3 +188,14 @@ Sportovní technologie se za posledních 10 let proměnily z luxusu pro profíky
 - Strava Premium (1 600 Kč/rok)
 
 Na hraju.cz najdete sportoviště ve vašem městě — od posiloven přes běžecké trasy po bazény. Technologie vám pomohou měřit pokrok, ale nejdůležitější je první krok — přijít a začít!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

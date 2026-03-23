@@ -1,6 +1,6 @@
 ---
 title: Top 5 ferrat v České republice pro sezónu 2026
-date: '2026-04-13'
+date: '2026-03-23'
 author: Klára Kovářová
 category: pruvodce-sporty
 excerpt: >-

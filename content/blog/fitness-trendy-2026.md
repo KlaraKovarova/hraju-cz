@@ -1,6 +1,6 @@
 ---
 title: 'Fitness trendy 2026: Co vás čeká v posilovnách'
-date: '2026-04-10'
+date: '2026-03-23'
 author: Klára Kovářová
 category: novinky
 excerpt: >-

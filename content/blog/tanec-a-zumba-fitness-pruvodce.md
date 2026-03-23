@@ -252,3 +252,14 @@ Každé větší české město má:
 - **Street dance battly** — Red Bull BC One qualifier, Streetstar CZ
 
 Na hraju.cz najdete taneční studia, fitness centra a sportovní haly ve vašem městě. Zanechte recenzi a pomozte ostatním najít nejlepší místo pro tanec a fitness!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

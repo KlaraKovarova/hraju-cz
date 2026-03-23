@@ -1,6 +1,6 @@
 ---
 title: "Ferraty v Jihočeském kraji: 7 lokalit od začátečníků po experty"
-date: "2026-03-28"
+date: "2026-03-23"
 category: pruvodce-sporty
 excerpt: "Kompletní průvodce ferratami v jižních Čechách — Hluboká nad Vltavou, Bechyně, Český Krumlov, Písek, Tábor a nová ferrata Mladá Vožice 2025."
 sportTags: ["ferraty"]
@@ -178,3 +178,14 @@ Ferrata Mladá Vožice — Hasičská (děti) + Paraplíčko (rodiče) na jednom
 Jihočeský kraj nabízí ferraty pro každého — od 15minutové začátečnické v Táboře po nejtěžší v celém Česku v Bechyni. S dvěma novými lokalitami v 2024–2025 (Písek a Mladá Vožice) se region stává ferratovou jedničkou jižních Čech.
 
 **Byli jste na jihočeské ferratě?** [Napište recenzi](/prihlaseni) a pomozte ostatním lezci vybrat tu správnou trasu.
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [ferraty v Česku na hraju.cz](/sport/ferraty)
+- [ferratové vybavení — průvodce cenami](/blog/ferratove-vybaveni-pruvodce-ceny-2026)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

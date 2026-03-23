@@ -205,3 +205,15 @@ Většina třineckých sportovišť je soustředěna na **Lesní ulici** pod spr
 | Infocentrum Třinec | info-trinec.cz |
 
 Na hraju.cz najdete kompletní přehled sportovišť v Třinci s recenzemi od místních sportovců. Zanechte hodnocení a pomozte ostatním najít nejlepší místa na sport!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [bazény v Česku na hraju.cz](/sport/plavani)
+- [bazény v Brně](/blog/plavecke-bazeny-brno)
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

@@ -1,6 +1,6 @@
 ---
 title: Kde sportovat v Brně — kompletní průvodce 2026
-date: '2026-03-24'
+date: '2026-03-23'
 category: pruvodce-mesta
 excerpt: >-
   Přehled 40+ sportovišť v Brně — 6 tenisových areálů, Hangar by Adam Ondra (1 000 m²),

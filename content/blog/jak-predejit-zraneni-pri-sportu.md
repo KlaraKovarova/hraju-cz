@@ -152,3 +152,15 @@ Ihned při:
 **Neuspěchejte to.** Předčasný návrat je nejčastější příčina opakovaného zranění.
 
 Na hraju.cz najdete sportoviště s kvalitním vybavením a bezpečnými povrchy — přečtěte si recenze od ostatních sportovců a vyberte si místo, kde budete sportovat bezpečně!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+- [tenisové areály v Česku na hraju.cz](/sport/tenis)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

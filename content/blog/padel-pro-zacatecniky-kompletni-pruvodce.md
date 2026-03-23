@@ -169,3 +169,14 @@ Na hraju.cz můžete vyhledávat padelové kurty ve vašem městě a přečíst 
 3. **Držte se u sítě.** Kdo je u sítě, vyhrává. Snažte se tam dostat a zůstat.
 4. **Využívejte sklo.** Nechte míč odrazit, pak ho zahrajte — máte víc času, než si myslíte.
 5. **Bavte se.** Padel je sociální sport. Smějte se, bavte se, najděte si partu — to je podstata padelu.
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [padelové kurty v Česku na hraju.cz](/sport/padel)
+- [padel boom 2026](/blog/padel-boom-cesko-2026-kam-hrat-mimo-prahu)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

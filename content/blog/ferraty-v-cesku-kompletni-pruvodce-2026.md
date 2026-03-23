@@ -193,3 +193,14 @@ Ferraty jsou jedním z nejlevnějších outdoorových sportů — většina je z
 5. **Pijte dostatek vody.** Na skále v létě je horko. Vezměte si minimálně 1,5 l.
 
 Na hraju.cz najdete outdoorová sportoviště a lezecké stěny ve vašem regionu. Zkuste nejdřív lezeckou stěnu a pak vyrazte na svou první ferratu!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [ferraty v Česku na hraju.cz](/sport/ferraty)
+- [ferratové vybavení — průvodce cenami](/blog/ferratove-vybaveni-pruvodce-ceny-2026)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

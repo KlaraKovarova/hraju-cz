@@ -230,3 +230,13 @@ Téměř každé české město má síť cyklostezek — podívejte se na mapy.
 - **Indoor cycling** — Zwift, spinning — trénink v zimě bez výmluv
 
 Na hraju.cz najdete sportovní areály s cyklistickým zázemím ve vašem městě. Až objevíte svou oblíbenou trasu, podělte se o ni s komunitou!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [cyklistika na hraju.cz](/sport/cyklistika)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

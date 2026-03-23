@@ -1,6 +1,6 @@
 ---
 title: Letní sporty 2026 — co zkusit nového letos v létě
-date: '2026-04-12'
+date: '2026-03-23'
 category: tipy
 excerpt: >-
   Léto se blíží a s ním příležitost vyzkoušet nové sporty. Přehled

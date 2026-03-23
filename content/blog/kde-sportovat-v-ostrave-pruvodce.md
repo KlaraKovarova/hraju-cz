@@ -1,6 +1,6 @@
 ---
 title: Kde sportovat v Ostravě — průvodce od místních
-date: '2026-03-26'
+date: '2026-03-23'
 category: pruvodce-mesta
 excerpt: >-
   Největší lezecká stěna na Moravě, 50m bazén s kamikaze skluzavkou, squash v
@@ -112,3 +112,15 @@ Moderní fitness centrum na ploše 1 000 m² se specializací na silový a hyper
 Tenhle průvodce jsme sestavili z veřejně dostupných hodnocení a zkušeností místních sportovců. Ale nejlepší tipy vždy přicházejí přímo od vás.
 
 **Znáte sportoviště v Ostravě, které tu chybí?** Nebo máte zkušenost s některým z uvedených? [Napište recenzi na hraju.cz](/) — pomůžete ostatním Ostravákům najít to správné místo pro jejich sport.
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [tenisové areály v Česku na hraju.cz](/sport/tenis)
+- [kde hrát tenis v Brně](/blog/kde-hrat-tenis-v-brne)
+- [squashové kurty v Česku na hraju.cz](/sport/squash)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

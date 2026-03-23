@@ -284,3 +284,15 @@ Teplice jsou jedním z mála českých měst, kde je termální voda přímo int
 - **Nejlepší fitness:** District Fitness (Technogym, 3 pobočky, od 850 Kč/měsíc)
 
 Na hraju.cz najdete všechna teplická sportoviště s recenzemi od místních sportovců. Zanechte svůj názor a pomozte ostatním!
+
+## Najděte sportoviště v Česku
+
+Kompletní přehled najdete na:
+- [tenisové areály v Česku na hraju.cz](/sport/tenis)
+- [kde hrát tenis v Brně](/blog/kde-hrat-tenis-v-brne)
+- [fitness centra v Česku na hraju.cz](/sport/fitness)
+
+
+---
+
+Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.
