@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, ChevronRight, ChevronDown, Calendar, ArrowRight } from "lucide-react";
+import { MapPin, ChevronRight, ChevronDown, Calendar, ArrowRight, PlusCircle } from "lucide-react";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
 import { getRegionsBySport, getTopFacilitiesBySport, getTopCitiesBySport } from "@/lib/data";
 import { getSportTitleSuffix, getSportFacilityTypePluralGenitive, getSportFacilityType } from "@/lib/seo";
@@ -202,6 +202,11 @@ export default async function SportPage({ params }: SportPageProps) {
         </div>
       </section>
 
+      {/* Ad: between regions and cities */}
+      <div className="mx-auto max-w-6xl px-6 py-4">
+        <AdSlot slot="1234567895" format="horizontal" />
+      </div>
+
       {/* Top Cities */}
       {topCities.length > 0 && (
         <section className="mx-auto max-w-6xl px-6 py-8 border-t border-zinc-100">
@@ -252,6 +257,41 @@ export default async function SportPage({ params }: SportPageProps) {
       <div className="mx-auto max-w-6xl px-6 py-4">
         <AdSlot slot="1234567891" format="horizontal" />
       </div>
+
+      {/* Community CTA */}
+      <section className="mx-auto max-w-6xl px-6 py-12 border-t border-zinc-100">
+        <div className="rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-100 p-8 text-center">
+          <h2 className="text-xl font-bold text-zinc-900">
+            Byl/a jsi tu sportovat?
+          </h2>
+          <p className="mt-2 text-sm text-zinc-600 max-w-lg mx-auto">
+            Pomoz ostatním sportovcům vybrat si to pravé sportoviště. Napiš recenzi a sdílej svou zkušenost s komunitou.
+          </p>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+            <Link
+              href="/recenze"
+              className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 text-sm font-bold text-white transition hover:bg-emerald-700"
+            >
+              Prohlédnout recenze
+            </Link>
+            <Link
+              href="/prihlaseni"
+              className="inline-flex items-center gap-2 rounded-xl border border-emerald-200 bg-white px-6 py-3 text-sm font-bold text-emerald-700 transition hover:bg-emerald-50"
+            >
+              Napsat recenzi
+            </Link>
+          </div>
+          <div className="mt-4">
+            <Link
+              href="/pridat-sportoviste"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-emerald-700 transition hover:text-emerald-800"
+            >
+              <PlusCircle className="h-4 w-4" />
+              Chybí ti sportoviště? Přidej ho
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* FAQ Section */}
       {faqItems.length > 0 && (

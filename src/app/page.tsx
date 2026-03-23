@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, ArrowRight, ChevronDown, Calendar, Star, MessageSquare, Users } from "lucide-react";
+import { MapPin, ArrowRight, ChevronDown, Calendar, Star, MessageSquare, Users, PlusCircle } from "lucide-react";
 import { SPORTS } from "@/lib/sports";
 import {
   getTotalFacilityCount,
@@ -179,6 +179,16 @@ export default async function Home() {
                   {city.city}
                 </Link>
               ))}
+            </div>
+
+            <div className="mt-4">
+              <Link
+                href="/pridat-sportoviste"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-emerald-700 transition hover:text-emerald-800"
+              >
+                <PlusCircle className="h-4 w-4" />
+                Chybí ti sportoviště? Přidej ho
+              </Link>
             </div>
           </div>
         </div>

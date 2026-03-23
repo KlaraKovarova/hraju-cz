@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Star, User, Clock, CheckCircle2, MessageSquare, ThumbsUp, Loader2, MapPinCheck, MapPin } from "lucide-react";
+import { Star, User, Clock, CheckCircle2, MessageSquare, ThumbsUp, Loader2, MapPinCheck, MapPin, PlusCircle, ArrowRight } from "lucide-react";
 
 interface UserData {
   userId: string;
@@ -85,6 +85,7 @@ export default function MujUcetPage() {
 
   if (!user) return null;
 
+  const isNewUser = reviews.length === 0 && visits.length === 0;
   const approvedCount = reviews.filter((r) => r.isApproved).length;
   const pendingCount = reviews.filter((r) => !r.isApproved).length;
 
@@ -122,7 +123,61 @@ export default function MujUcetPage() {
         </button>
       </div>
 
+      {/* Onboarding for new users */}
+      {isNewUser && (
+        <div className="mb-8 rounded-2xl border border-emerald-100 bg-gradient-to-br from-emerald-50 to-teal-50 p-6">
+          <h2 className="text-lg font-bold text-zinc-900">
+            Jak začít na hraju.cz
+          </h2>
+          <p className="mt-1 text-sm text-zinc-600">
+            Vyzkoušej jednu z těchto akcí a staň se součástí naší komunity sportovců.
+          </p>
+          <div className="mt-4 space-y-2">
+            <Link
+              href="/"
+              className="group flex items-center gap-3 rounded-xl bg-white p-4 transition hover:shadow-md"
+            >
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-amber-50 text-amber-600">
+                <Star className="h-5 w-5" />
+              </div>
+              <div className="flex-1">
+                <span className="text-sm font-semibold text-zinc-900 group-hover:text-emerald-700">Napsat první recenzi</span>
+                <p className="text-xs text-zinc-500">Najdi sportoviště a poděl se o svůj zážitek</p>
+              </div>
+              <ArrowRight className="h-4 w-4 text-zinc-300 group-hover:text-emerald-500" />
+            </Link>
+            <Link
+              href="/"
+              className="group flex items-center gap-3 rounded-xl bg-white p-4 transition hover:shadow-md"
+            >
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600">
+                <MapPinCheck className="h-5 w-5" />
+              </div>
+              <div className="flex-1">
+                <span className="text-sm font-semibold text-zinc-900 group-hover:text-emerald-700">Označit navštívené sportoviště</span>
+                <p className="text-xs text-zinc-500">Klikni &quot;Byl/a jsem tady&quot; na stránce sportoviště</p>
+              </div>
+              <ArrowRight className="h-4 w-4 text-zinc-300 group-hover:text-emerald-500" />
+            </Link>
+            <Link
+              href="/pridat-sportoviste"
+              className="group flex items-center gap-3 rounded-xl bg-white p-4 transition hover:shadow-md"
+            >
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-sky-50 text-sky-600">
+                <PlusCircle className="h-5 w-5" />
+              </div>
+              <div className="flex-1">
+                <span className="text-sm font-semibold text-zinc-900 group-hover:text-emerald-700">Přidat chybějící sportoviště</span>
+                <p className="text-xs text-zinc-500">Znáš sportoviště, které u nás chybí?</p>
+              </div>
+              <ArrowRight className="h-4 w-4 text-zinc-300 group-hover:text-emerald-500" />
+            </Link>
+          </div>
+        </div>
+      )}
+
       {/* Stats */}
+      {!isNewUser && (
       <div className="mb-8 grid grid-cols-4 gap-3">
         <div className="rounded-xl border border-zinc-200 bg-white p-4 text-center">
           <div className="text-2xl font-bold text-zinc-900">{reviews.length}</div>
@@ -141,9 +196,10 @@ export default function MujUcetPage() {
           <div className="text-xs text-sky-600">Návštěv</div>
         </div>
       </div>
+      )}
 
       {/* Tabs */}
-      <div className="mb-6 flex gap-1 rounded-lg bg-zinc-100 p-1">
+      {!isNewUser && <div className="mb-6 flex gap-1 rounded-lg bg-zinc-100 p-1">
         <button
           onClick={() => setActiveTab("reviews")}
           className={`flex flex-1 items-center justify-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition ${
@@ -166,10 +222,10 @@ export default function MujUcetPage() {
           <MapPinCheck className="h-4 w-4" />
           Navštívená místa ({visits.length})
         </button>
-      </div>
+      </div>}
 
       {/* Reviews tab */}
-      {activeTab === "reviews" && (
+      {!isNewUser && activeTab === "reviews" && (
         <>
           {reviews.length === 0 ? (
             <div className="rounded-xl border border-zinc-200 bg-white p-8 text-center">
@@ -273,7 +329,7 @@ export default function MujUcetPage() {
       )}
 
       {/* Visits tab */}
-      {activeTab === "visits" && (
+      {!isNewUser && activeTab === "visits" && (
         <>
           {visits.length === 0 ? (
             <div className="rounded-xl border border-zinc-200 bg-white p-8 text-center">

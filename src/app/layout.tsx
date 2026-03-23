@@ -5,6 +5,7 @@ import { CookieConsent } from "@/components/CookieConsent";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Footer } from "@/components/Footer";
 import { UserNav } from "@/components/UserNav";
+import { NewUserBanner } from "@/components/NewUserBanner";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -83,6 +84,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           strategy="lazyOnload"
         />
         <UserNav />
+        <NewUserBanner />
         {children}
         <Footer />
         <CookieConsent />

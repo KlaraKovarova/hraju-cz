@@ -62,6 +62,7 @@ export async function POST(request: NextRequest) {
 
     const response = NextResponse.json({
       ok: true,
+      isNewUser: !existing,
       user: { id: user.id, email: user.email, name: user.name },
     });
     response.cookies.set("user_session", jwt, {

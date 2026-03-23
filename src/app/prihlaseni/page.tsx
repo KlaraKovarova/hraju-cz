@@ -27,15 +27,16 @@ function LoginContent() {
   const success = searchParams.get("success");
   const tokenError = searchParams.get("error");
   const redirect = searchParams.get("redirect");
+  const isNewUser = searchParams.get("new") === "1";
 
   useEffect(() => {
     if (success === "1") {
       const timer = setTimeout(() => {
-        router.push(redirect || "/");
+        router.push(isNewUser ? "/vitejte" : (redirect || "/"));
       }, 2000);
       return () => clearTimeout(timer);
     }
-  }, [success, redirect, router]);
+  }, [success, redirect, isNewUser, router]);
 
   const errorMessages: Record<string, string> = {
     missing_token: "Chybí přihlašovací odkaz.",
@@ -59,7 +60,7 @@ function LoginContent() {
             Za okamžik budete přesměrováni...
           </p>
           <Link
-            href={redirect || "/"}
+            href={isNewUser ? "/vitejte" : (redirect || "/")}
             className="mt-4 inline-block text-sm font-medium text-emerald-600 hover:text-emerald-700"
           >
             Pokračovat &rarr;
@@ -92,7 +93,7 @@ function LoginContent() {
 
       const data = await res.json();
       if (res.ok) {
-        router.push(redirect || "/");
+        router.push(mode === "register" && data.isNewUser ? "/vitejte" : (redirect || "/"));
       } else {
         setError(data.error || "Nastala chyba. Zkuste to znovu.");
       }

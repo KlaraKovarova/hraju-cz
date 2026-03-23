@@ -46,7 +46,9 @@ export async function GET(request: NextRequest) {
       where: { email: loginToken.email },
     });
 
+    let isNewUser = false;
     if (!user) {
+      isNewUser = true;
       user = await prisma.user.create({
         data: {
           email: loginToken.email,
@@ -63,8 +65,9 @@ export async function GET(request: NextRequest) {
 
     // Create session and set cookie on the redirect response directly
     const jwt = await createUserSession(user.id, user.email, user.name);
+    const successUrl = isNewUser ? "/prihlaseni?success=1&new=1" : "/prihlaseni?success=1";
     const response = NextResponse.redirect(
-      new URL("/prihlaseni?success=1", request.url)
+      new URL(successUrl, request.url)
     );
     response.cookies.set("user_session", jwt, {
       httpOnly: true,
