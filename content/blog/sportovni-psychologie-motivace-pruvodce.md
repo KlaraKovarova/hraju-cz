@@ -1,6 +1,6 @@
 ---
 title: 'Sportovní psychologie: Jak překonat mentální bariéry a zůstat motivovaní'
-date: '2099-01-01'
+date: '2026-03-20'
 category: tipy
 excerpt: >-
   Průvodce sportovní psychologií — jak překonat strach, lenost a výmluvy,

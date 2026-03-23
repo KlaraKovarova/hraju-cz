@@ -1,6 +1,6 @@
 ---
 title: Kolik stojí sport v Česku v roce 2026 — kompletní cenový přehled
-date: '2099-01-01'
+date: '2026-03-13'
 category: tipy
 excerpt: >-
   Průměrné ceny 12 sportů v Česku: od 80 Kč za plavání po 2 000 Kč za golf.

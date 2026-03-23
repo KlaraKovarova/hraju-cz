@@ -1,6 +1,6 @@
 ---
 title: 'Sport s dětmi: Jak motivovat děti ke sportu a jaký sport vybrat'
-date: '2099-01-01'
+date: '2026-03-19'
 category: tipy
 excerpt: >-
   Průvodce sportem pro děti — kdy začít, jaký sport podle věku, jak motivovat

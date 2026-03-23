@@ -1,6 +1,6 @@
 ---
 title: 'Běhání pro začátečníky: Jak začít běhat a vydržet'
-date: '2099-01-01'
+date: '2026-03-01'
 category: pruvodce-sporty
 excerpt: >-
   Kompletní průvodce běháním — jak začít od nuly, správná technika, tréninkový

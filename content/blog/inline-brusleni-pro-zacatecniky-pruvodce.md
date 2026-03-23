@@ -1,6 +1,6 @@
 ---
 title: 'Inline bruslení pro začátečníky: Jak začít a kde bruslit v Česku'
-date: '2099-01-01'
+date: '2026-03-04'
 category: pruvodce-sporty
 excerpt: >-
   Kompletní průvodce inline bruslením — výběr bruslí, základní technika,

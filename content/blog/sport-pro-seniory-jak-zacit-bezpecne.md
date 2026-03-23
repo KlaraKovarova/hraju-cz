@@ -1,6 +1,6 @@
 ---
 title: 'Sport pro seniory: Jak začít bezpečně cvičit po 50, 60 i 70 letech'
-date: '2099-01-01'
+date: '2026-03-19'
 category: tipy
 excerpt: >-
   Kompletní průvodce sportem pro seniory — jak bezpečně začít, jaké sporty jsou

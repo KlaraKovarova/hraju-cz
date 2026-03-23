@@ -1,6 +1,6 @@
 ---
 title: Kde sportovat ve Zlíně — kompletní průvodce 2026
-date: '2099-01-01'
+date: '2026-03-13'
 category: pruvodce-mesta
 excerpt: >-
   Přehled 13 ověřených sportovišť ve Zlíně — tenis, fitness, 50m bazén, lezecká

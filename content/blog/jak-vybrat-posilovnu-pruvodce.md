@@ -1,6 +1,6 @@
 ---
 title: 'Jak vybrat posilovnu — 7 věcí, na které se podívejte dřív, než zaplatíte'
-date: '2099-01-01'
+date: '2026-03-05'
 category: tipy
 excerpt: >-
   Ne každá posilovna je pro vás ta pravá. Praktický průvodce: na co se zaměřit

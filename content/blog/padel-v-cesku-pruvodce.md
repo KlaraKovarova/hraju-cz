@@ -1,6 +1,6 @@
 ---
 title: "Padel v Česku — nový sport, který dobývá kurty"
-date: "2099-01-01"
+date: '2026-03-16'
 category: "pruvodce-sporty"
 excerpt: "Padel je nejrychleji rostoucí raketový sport v Evropě. Kde se dá hrát v Česku, kolik to stojí a jak začít?"
 sportTags: ["padel"]

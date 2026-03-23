@@ -1,6 +1,6 @@
 ---
 title: 'Kde sportovat v Mostě: Kompletní průvodce sportovišti 2026'
-date: '2099-01-01'
+date: '2026-03-10'
 category: pruvodce-mesta
 excerpt: >-
   Přehled sportovišť v Mostě — od Aquadromu přes Autodrom po Jezero Most. Tenis,

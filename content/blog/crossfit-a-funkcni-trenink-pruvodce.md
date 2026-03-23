@@ -1,6 +1,6 @@
 ---
 title: 'CrossFit a funkční trénink: Kompletní průvodce pro začátečníky'
-date: '2099-01-01'
+date: '2026-03-02'
 category: pruvodce-sporty
 excerpt: >-
   Co je CrossFit a funkční trénink, jak začít, základní cviky, WOD struktura,

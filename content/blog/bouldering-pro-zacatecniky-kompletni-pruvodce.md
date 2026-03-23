@@ -1,6 +1,6 @@
 ---
 title: Bouldering pro začátečníky — kompletní průvodce od první návštěvy po první 6a
-date: '2099-01-01'
+date: '2026-03-02'
 category: pruvodce-sporty
 excerpt: >-
   Vše, co potřebujete vědět o boulderingu: jak funguje hodnocení obtížnosti, jak

@@ -1,6 +1,6 @@
 ---
 title: 'Házená pro začátečníky: Pravidla, technika a kde hrát v Česku'
-date: '2099-01-01'
+date: '2026-03-04'
 category: pruvodce-sporty
 excerpt: >-
   Kompletní průvodce házenou — pravidla, základní technika střelby a obrany,

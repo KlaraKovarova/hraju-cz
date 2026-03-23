@@ -1,6 +1,6 @@
 ---
 title: 'Basketbal pro začátečníky: Pravidla, technika a kde hrát v Česku'
-date: '2099-01-01'
+date: '2026-03-01'
 category: pruvodce-sporty
 excerpt: >-
   Kompletní průvodce basketbalem — pravidla, základní dovednosti, tréninkový

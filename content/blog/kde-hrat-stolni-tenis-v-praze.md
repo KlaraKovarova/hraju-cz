@@ -1,6 +1,6 @@
 ---
 title: 'Kde hrát stolní tenis v Praze: Kluby, herny i venkovní stoly zdarma'
-date: '2099-01-01'
+date: '2026-03-07'
 category: pruvodce-mesta
 excerpt: >-
   Praha má desítky míst na ping pong — od profesionálních klubů s trenéry po

@@ -1,6 +1,6 @@
 ---
 title: 'Kde hrát bowling v Praze: Přehled bowlingů s cenami 2026'
-date: '2099-01-01'
+date: '2026-03-07'
 category: pruvodce-mesta
 excerpt: >-
   Praha má přes 20 bowlingových center — od 4dráhových hospůdek po 12dráhové

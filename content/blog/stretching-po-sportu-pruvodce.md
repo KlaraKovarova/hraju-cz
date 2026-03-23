@@ -1,6 +1,6 @@
 ---
 title: Strečink po sportu — proč ho většina lidí dělá špatně
-date: '2099-01-01'
+date: '2026-03-21'
 category: tipy
 excerpt: >-
   Statický strečink před sportem škodí výkonu. Dynamické rozcvičení před,

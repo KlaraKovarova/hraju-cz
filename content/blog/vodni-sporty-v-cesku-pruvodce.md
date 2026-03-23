@@ -1,6 +1,6 @@
 ---
 title: 'Vodní sporty v Česku: Kde si zaplavat, zajet na kajaku nebo paddleboardu'
-date: '2099-01-01'
+date: '2026-03-23'
 category: pruvodce-sporty
 excerpt: >-
   Kompletní průvodce vodními sporty v České republice — plavání, kajak, kánoe,

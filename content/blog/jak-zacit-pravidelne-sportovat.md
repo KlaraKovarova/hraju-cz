@@ -1,6 +1,6 @@
 ---
 title: 'Jak začít pravidelně sportovat — praktický návod, který funguje'
-date: '2099-01-01'
+date: '2026-03-06'
 category: tipy
 excerpt: >-
   Chcete sportovat pravidelně, ale nedaří se vám? Realistický průvodce, jak si

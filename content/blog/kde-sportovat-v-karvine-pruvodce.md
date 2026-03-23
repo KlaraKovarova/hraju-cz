@@ -1,6 +1,6 @@
 ---
 title: 'Kde sportovat v Karviné: Kompletní průvodce sportovišti 2026'
-date: '2099-01-01'
+date: '2026-03-09'
 category: pruvodce-mesta
 excerpt: >-
   Přehled sportovišť v Karviné — hornická metropole s Chance Ligou (MFK

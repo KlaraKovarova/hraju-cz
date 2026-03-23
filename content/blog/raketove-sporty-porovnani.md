@@ -1,6 +1,6 @@
 ---
 title: 'Tenis, padel, squash nebo badminton? Velké porovnání raketových sportů'
-date: '2099-01-01'
+date: '2026-03-18'
 category: pruvodce-sporty
 excerpt: >-
   Nevíte, který raketový sport si vybrat? Porovnáváme tenis, padel, squash a

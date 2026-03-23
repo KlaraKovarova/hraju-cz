@@ -1,6 +1,6 @@
 ---
 title: 'Sporty pro páry — 8 aktivit, které můžete dělat spolu'
-date: '2099-01-01'
+date: '2026-03-20'
 category: tipy
 excerpt: >-
   Hledáte sportovní aktivitu pro dva? Přehled 8 sportů, které jsou ideální pro

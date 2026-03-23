@@ -1,6 +1,6 @@
 ---
 title: 'Kde hrát florbal v Praze: Kluby, hobby ligy i florbal pro děti'
-date: '2099-01-01'
+date: '2026-03-07'
 category: pruvodce-mesta
 excerpt: >-
   Česko patří mezi florbalovou světovou špičku a Praha je jeho centrem. Přehled

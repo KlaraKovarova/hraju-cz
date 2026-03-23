@@ -1,6 +1,6 @@
 ---
 title: 'Jak začít s cyklistikou: Průvodce pro začátečníky 2026'
-date: '2099-01-01'
+date: '2026-03-02'
 category: pruvodce-sporty
 excerpt: >-
   Kompletní průvodce cyklistikou pro začátečníky — výběr kola, základní údržba,

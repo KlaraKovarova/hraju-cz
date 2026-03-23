@@ -1,6 +1,6 @@
 ---
 title: 'Jóga pro začátečníky: Jak začít a jaký styl vybrat'
-date: '2099-01-01'
+date: '2026-03-06'
 category: pruvodce-sporty
 excerpt: >-
   Kompletní průvodce jógou pro začátečníky — 7 hlavních stylů, 10 základních

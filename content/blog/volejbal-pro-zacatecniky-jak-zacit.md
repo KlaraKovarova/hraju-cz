@@ -1,6 +1,6 @@
 ---
 title: 'Volejbal pro začátečníky: Jak začít hrát a kde najít tým'
-date: '2099-01-01'
+date: '2026-03-23'
 category: pruvodce-sporty
 excerpt: >-
   Průvodce volejbalem pro začátečníky — základní technika (podání, přihrávka,

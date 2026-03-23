@@ -1,6 +1,6 @@
 ---
 title: 'Volejbal pro začátečníky: Pravidla, technika a kde hrát v Česku'
-date: '2099-01-01'
+date: '2026-03-23'
 category: pruvodce-sporty
 excerpt: >-
   Kompletní průvodce volejbalem — pravidla, základní údery a postavení, jak

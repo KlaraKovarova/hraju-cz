@@ -1,6 +1,6 @@
 ---
 title: 'Jak předejít zranění při sportu: Průvodce prevencí pro rekreační sportovce'
-date: '2099-01-01'
+date: '2026-03-05'
 category: tipy
 excerpt: >-
   Nejčastější sportovní zranění a jak jim předejít — rozcvičení, správná

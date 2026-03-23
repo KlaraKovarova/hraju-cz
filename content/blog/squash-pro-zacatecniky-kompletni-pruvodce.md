@@ -1,6 +1,6 @@
 ---
 title: Squash pro začátečníky — kompletní průvodce pro první měsíc
-date: '2099-01-01'
+date: '2026-03-21'
 category: pruvodce-sporty
 excerpt: >-
   Chcete začít se squashem? Pravidla, vybavení, technika podání, výběr míčku a

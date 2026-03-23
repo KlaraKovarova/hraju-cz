@@ -1,6 +1,6 @@
 ---
 title: První návštěva sportoviště — co čekat a jak se připravit
-date: '2099-01-01'
+date: '2026-03-18'
 category: tipy
 excerpt: >-
   Jdete poprvé na squash, bouldering nebo do nové posilovny? Praktický průvodce:

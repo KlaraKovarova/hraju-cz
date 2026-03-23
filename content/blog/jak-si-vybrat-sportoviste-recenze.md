@@ -1,6 +1,6 @@
 ---
 title: "Jak si vybrat sportoviště — proč se vyplatí číst recenze"
-date: "2099-01-01"
+date: '2026-03-05'
 category: "tipy"
 excerpt: "Recenze ostatních sportovců vám ušetří čas i peníze. Přečtěte si, na co se zaměřit při výběru sportoviště a jak vám zkušenosti komunity pomohou."
 sportTags: ["tenis", "squash", "fitness", "plavani", "badminton"]

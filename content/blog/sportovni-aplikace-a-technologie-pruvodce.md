@@ -1,6 +1,6 @@
 ---
 title: 'Sportovní aplikace a technologie: Jak sledovat svůj pokrok'
-date: '2099-01-01'
+date: '2026-03-19'
 category: tipy
 excerpt: >-
   Přehled nejlepších sportovních aplikací a technologií pro amatérské sportovce

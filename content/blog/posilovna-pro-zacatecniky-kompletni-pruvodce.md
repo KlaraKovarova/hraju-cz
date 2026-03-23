@@ -1,6 +1,6 @@
 ---
 title: 'Posilovna pro začátečníky: Kompletní průvodce od prvního tréninku'
-date: '2099-01-01'
+date: '2026-03-17'
 category: pruvodce-sporty
 excerpt: >-
   Jak začít chodit do posilovny — výběr fitness centra, základní cviky,

@@ -1,6 +1,6 @@
 ---
 title: 'Etiketa v posilovně: Nepsaná pravidla, která musíte znát'
-date: '2099-01-01'
+date: '2026-03-03'
 category: tipy
 excerpt: >-
   Nepsaná pravidla posilovny — od uklízení závaží přes sdílení strojů po správné

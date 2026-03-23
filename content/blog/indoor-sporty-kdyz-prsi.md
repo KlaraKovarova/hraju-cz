@@ -1,6 +1,6 @@
 ---
 title: '12 indoor sportů, když venku prší — kam utéct před počasím'
-date: '2099-01-01'
+date: '2026-03-04'
 category: tipy
 excerpt: >-
   Déšť nemusí znamenat konec sportu. Přehled 12 halových sportů, které můžete

@@ -1,6 +1,6 @@
 ---
 title: Kde sportovat s dětmi v Česku — průvodce pro rodiče
-date: '2099-01-01'
+date: '2026-03-07'
 category: tipy
 excerpt: >-
   Hledáte sport pro celou rodinu? Přehled nejlepších sportů pro děti podle věku,

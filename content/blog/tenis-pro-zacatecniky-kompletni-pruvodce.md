@@ -1,6 +1,6 @@
 ---
 title: Tenis pro začátečníky — kompletní průvodce prvním rokem
-date: '2099-01-01'
+date: '2026-03-22'
 category: pruvodce-sporty
 excerpt: >-
   Od výběru rakety po první turnaj: jak začít s tenisem v Česku, kolik vás to

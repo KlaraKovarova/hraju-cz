@@ -1,6 +1,6 @@
 ---
 title: Kde sportovat v Karlových Varech — kompletní průvodce 2026
-date: '2099-01-01'
+date: '2026-03-09'
 category: pruvodce-mesta
 excerpt: >-
   Přehled 16 ověřených sportovišť v Karlových Varech — tenis, fitness, bazény,

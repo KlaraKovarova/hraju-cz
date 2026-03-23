@@ -1,6 +1,6 @@
 ---
 title: Padel vs. tenis — který raketový sport je lepší pro vás?
-date: '2099-01-01'
+date: '2026-03-16'
 category: pruvodce-sporty
 excerpt: >-
   Podrobné srovnání padelu a tenisu: rychlost učení, fyzická náročnost, cena za

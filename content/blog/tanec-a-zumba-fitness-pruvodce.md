@@ -1,6 +1,6 @@
 ---
 title: 'Tanec a Zumba: Jak zhubnout a zpevnit tělo tancem'
-date: '2099-01-01'
+date: '2026-03-22'
 category: pruvodce-sporty
 excerpt: >-
   Kompletní průvodce tanečním fitness — Zumba, body balance, taneční styly,

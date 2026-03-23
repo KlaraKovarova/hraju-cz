@@ -1,6 +1,6 @@
 ---
 title: Kde sportovat v Jihlavě — kompletní průvodce 2026
-date: '2099-01-01'
+date: '2026-03-09'
 category: pruvodce-mesta
 excerpt: >-
   Přehled 18 ověřených sportovišť v Jihlavě — 13 tenisových kurtů, aquapark

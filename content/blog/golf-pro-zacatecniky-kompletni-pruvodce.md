@@ -1,6 +1,6 @@
 ---
 title: 'Golf pro začátečníky: Jak začít hrát golf v Česku'
-date: '2099-01-01'
+date: '2026-03-03'
 category: pruvodce-sporty
 excerpt: >-
   Kompletní průvodce golfem pro začátečníky — od výběru hole přes základní

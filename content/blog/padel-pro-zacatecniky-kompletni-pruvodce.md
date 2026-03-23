@@ -1,6 +1,6 @@
 ---
 title: 'Padel pro začátečníky: Kompletní průvodce nejrychleji rostoucím sportem'
-date: '2099-01-01'
+date: '2026-03-16'
 category: pruvodce-sporty
 excerpt: >-
   Jak začít s padelem — pravidla, technika úderů, výběr rakety, kde hrát v Česku

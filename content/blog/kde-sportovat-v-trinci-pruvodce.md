@@ -1,6 +1,6 @@
 ---
 title: 'Kde sportovat v Třinci: Kompletní průvodce sportovišti a kluby'
-date: '2099-01-01'
+date: '2026-03-12'
 category: pruvodce-mesta
 excerpt: >-
   Třinec — město oceli a hokejové dynastie. HC Oceláři s 6 tituly Extraligy (5 v

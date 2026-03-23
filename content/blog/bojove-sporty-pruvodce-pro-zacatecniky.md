@@ -1,6 +1,6 @@
 ---
 title: 'Bojové sporty pro začátečníky: Jak vybrat a kde trénovat v Česku'
-date: '2099-01-01'
+date: '2026-03-01'
 category: pruvodce-sporty
 excerpt: >-
   Kompletní průvodce bojovými sporty — porovnání 8 disciplín, co očekávat na

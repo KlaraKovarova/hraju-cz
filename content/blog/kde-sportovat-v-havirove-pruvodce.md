@@ -1,6 +1,6 @@
 ---
 title: 'Kde sportovat v Havířově: Kompletní průvodce sportovišti a kluby'
-date: '2099-01-01'
+date: '2026-03-08'
 category: pruvodce-mesta
 excerpt: >-
   Havířov — nejmladší město Česka postavené pro horníky má překvapivě silnou

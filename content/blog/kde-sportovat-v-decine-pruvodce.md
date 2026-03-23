@@ -1,6 +1,6 @@
 ---
 title: 'Kde sportovat v Děčíně: Kompletní průvodce sportovišti 2026'
-date: '2099-01-01'
+date: '2026-03-08'
 category: pruvodce-mesta
 excerpt: >-
   Přehled sportovišť v Děčíně — brána do Českého Švýcarska s via ferratou v

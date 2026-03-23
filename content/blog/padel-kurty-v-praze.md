@@ -1,6 +1,6 @@
 ---
 title: "Padel kurty v Praze a okolí: Kompletní přehled 2026"
-date: "2099-01-01"
+date: '2026-03-16'
 category: "pruvodce-mesta"
 excerpt: "Kde hrát padel v Praze? Přehled všech padelových center — adresy, ceny, počty kurtů a možnosti rezervace. Aktuální stav pro rok 2026."
 sportTags: ["padel"]

@@ -1,6 +1,6 @@
 ---
 title: Jaký sport začít? Průvodce výběrem sportu pro dospělé
-date: '2099-01-01'
+date: '2026-03-06'
 category: tipy
 excerpt: >-
   Nevíte, jaký sport zkusit? Porovnání 20 sportů podle kondice, ceny, sociálních

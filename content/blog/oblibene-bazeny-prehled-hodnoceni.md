@@ -1,6 +1,6 @@
 ---
 title: "Oblíbené bazény v Česku — přehled hodnocení od plavců"
-date: "2099-01-01"
+date: '2026-03-15'
 category: "pruvodce-mesta"
 excerpt: "Které bazény a aquaparky v Česku doporučují plavci? Přinášíme přehled nejoblíbenějších plaveckých areálů podle hodnocení naší komunity."
 sportTags: ["plavani"]

@@ -1,6 +1,6 @@
 ---
 title: 'Kde sportovat v Opavě: Kompletní průvodce sportovišti a kluby'
-date: '2099-01-01'
+date: '2026-03-10'
 category: pruvodce-mesta
 excerpt: >-
   Opava — basketbalové hlavní město Česka. BK Opava s 5 tituly a FIBA Champions

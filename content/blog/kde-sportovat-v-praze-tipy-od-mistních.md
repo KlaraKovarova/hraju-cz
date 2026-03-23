@@ -1,6 +1,6 @@
 ---
 title: "Kde sportovat v Praze — tipy od místních sportovců"
-date: "2099-01-01"
+date: '2026-03-11'
 category: "komunita"
 excerpt: "Zapomeňte na turistické průvodce. Přinášíme tipy na sportoviště v Praze přímo od lidí, kteří tam pravidelně sportují."
 sportTags: ["tenis", "squash", "fitness", "plavani", "lezeni"]

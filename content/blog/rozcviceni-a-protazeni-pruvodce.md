@@ -1,6 +1,6 @@
 ---
 title: 'Rozcvičení a protažení: Co dělat před a po sportu'
-date: '2099-01-01'
+date: '2026-03-18'
 category: tipy
 excerpt: >-
   Dynamické rozcvičení před sportem, statické protažení po sportu — konkrétní

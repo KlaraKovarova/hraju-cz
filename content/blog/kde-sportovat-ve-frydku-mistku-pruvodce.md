@@ -1,6 +1,6 @@
 ---
 title: 'Kde sportovat ve Frýdku-Místku: Kompletní průvodce sportovišti 2026'
-date: '2099-01-01'
+date: '2026-03-13'
 category: pruvodce-mesta
 excerpt: >-
   Přehled sportovišť ve Frýdku-Místku — brána do Beskyd. Aquapark Olešná s 50m

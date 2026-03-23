@@ -1,6 +1,6 @@
 ---
 title: Jak ušetřit za sport v Česku — 9 praktických tipů
-date: '2099-01-01'
+date: '2026-03-05'
 category: tipy
 excerpt: >-
   Sport nemusí být drahý. 9 ověřených tipů, jak platit méně za posilovny, kurty,

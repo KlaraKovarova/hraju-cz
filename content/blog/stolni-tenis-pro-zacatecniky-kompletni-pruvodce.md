@@ -1,6 +1,6 @@
 ---
 title: 'Stolní tenis pro začátečníky: Jak začít a kde hrát v Česku'
-date: '2099-01-01'
+date: '2026-03-21'
 category: pruvodce-sporty
 excerpt: >-
   Kompletní průvodce stolním tenisem — výběr pálky, základní údery, pravidla,

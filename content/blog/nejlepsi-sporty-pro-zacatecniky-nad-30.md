@@ -1,6 +1,6 @@
 ---
 title: Nejlepší sporty pro začátečníky nad 30 — co zkusit a čemu se vyhnout
-date: '2099-01-01'
+date: '2026-03-14'
 category: tipy
 excerpt: >-
   Je vám přes 30 a chcete začít sportovat? Přehled 10 sportů seřazených podle

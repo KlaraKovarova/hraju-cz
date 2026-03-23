@@ -1,6 +1,6 @@
 ---
 title: 'Kam sportovat, když prší: 10 indoor sportů, které zvládnete hned'
-date: '2099-01-01'
+date: '2026-03-20'
 category: tipy
 excerpt: >-
   Déšť není výmluva — přehled 10 indoor sportů, které můžete zkusit v Česku bez

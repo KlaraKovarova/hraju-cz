@@ -1,6 +1,6 @@
 ---
 title: "Nejlepší tenisové kurty v Praze — hodnocení a tipy od hráčů"
-date: "2099-01-01"
+date: '2026-03-15'
 category: "pruvodce-mesta"
 excerpt: "Jaké tenisové kurty v Praze doporučují ostatní hráči? Přinášíme přehled nejoblíbenějších areálů podle hodnocení naší komunity."
 sportTags: ["tenis"]

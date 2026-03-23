@@ -1,6 +1,6 @@
 ---
 title: 'Sport a duševní zdraví: Jak pohyb pomáhá proti stresu, úzkosti a depresi'
-date: '2099-01-01'
+date: '2026-03-19'
 category: tipy
 excerpt: >-
   Vědecky podložený průvodce vlivem sportu na duševní zdraví. Jak pohyb snižuje

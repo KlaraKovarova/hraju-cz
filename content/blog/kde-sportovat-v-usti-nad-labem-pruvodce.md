@@ -1,6 +1,6 @@
 ---
 title: Kde sportovat v Ústí nad Labem — kompletní průvodce 2026
-date: '2099-01-01'
+date: '2026-03-12'
 category: pruvodce-mesta
 excerpt: >-
   Přehled 16 ověřených sportovišť v Ústí nad Labem — tenis s padelem, fitness

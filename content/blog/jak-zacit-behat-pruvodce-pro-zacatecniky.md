@@ -1,6 +1,6 @@
 ---
 title: 'Jak začít běhat: Průvodce pro úplné začátečníky 2026'
-date: '2099-01-01'
+date: '2026-03-06'
 category: tipy
 excerpt: >-
   Kompletní průvodce běháním pro začátečníky — výběr bot, technika běhu,

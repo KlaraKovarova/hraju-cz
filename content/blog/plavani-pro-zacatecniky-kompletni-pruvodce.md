@@ -1,6 +1,6 @@
 ---
 title: 'Plavání pro začátečníky: Jak se naučit plavat a zlepšit techniku'
-date: '2099-01-01'
+date: '2026-03-17'
 category: pruvodce-sporty
 excerpt: >-
   Kompletní průvodce plaváním — 4 základní plavecké styly, jak se naučit plavat

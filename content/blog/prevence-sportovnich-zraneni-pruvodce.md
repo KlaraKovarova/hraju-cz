@@ -1,6 +1,6 @@
 ---
 title: 'Prevence sportovních zranění: Jak sportovat bezpečně a bez bolesti'
-date: '2099-01-01'
+date: '2026-03-17'
 category: tipy
 excerpt: >-
   Kompletní průvodce prevencí sportovních zranění — nejčastější zranění podle

@@ -1,6 +1,6 @@
 ---
 title: 'Turistika a hiking v Česku: Průvodce pro začátečníky i pokročilé'
-date: '2099-01-01'
+date: '2026-03-22'
 category: pruvodce-sporty
 excerpt: >-
   Kompletní průvodce turistikou v Česku — české značení, nejlepší treky,

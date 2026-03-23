@@ -1,6 +1,6 @@
 ---
 title: 'Sport a duševní zdraví: Jak pravidelný pohyb pomáhá proti stresu a úzkosti'
-date: '2099-01-01'
+date: '2026-03-18'
 category: tipy
 excerpt: >-
   Vědecky podložené benefity sportu pro duševní zdraví — jak cvičení snižuje

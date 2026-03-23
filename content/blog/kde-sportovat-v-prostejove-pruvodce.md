@@ -1,6 +1,6 @@
 ---
 title: 'Kde sportovat v Prostějově: Tenisová velmoc s volejbalovou dynastií'
-date: '2099-01-01'
+date: '2026-03-12'
 category: pruvodce-mesta
 excerpt: >-
   Prostějov (43 000 obyvatel) je světový tenisový hub — odtud pochází Jakub

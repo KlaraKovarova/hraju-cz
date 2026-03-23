@@ -1,6 +1,6 @@
 ---
 title: Nejlepší boulderingové a lezecké stěny v Česku 2026 — kompletní přehled
-date: '2099-01-01'
+date: '2026-03-14'
 category: pruvodce-sporty
 excerpt: >-
   Kompletní průvodce 17 nejlepších lezeckých a boulderingových center v Česku —

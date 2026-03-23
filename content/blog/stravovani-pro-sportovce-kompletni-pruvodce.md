@@ -1,6 +1,6 @@
 ---
 title: 'Stravování pro sportovce: Co jíst před, během a po sportu'
-date: '2099-01-01'
+date: '2026-03-21'
 category: tipy
 excerpt: >-
   Praktický průvodce sportovní výživou — co jíst před tréninkem, během výkonu a

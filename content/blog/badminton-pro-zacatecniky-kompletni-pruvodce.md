@@ -1,6 +1,6 @@
 ---
 title: 'Badminton pro začátečníky: Kompletní průvodce od prvního úderu'
-date: '2099-01-01'
+date: '2026-03-01'
 category: pruvodce-sporty
 excerpt: >-
   Naučte se badminton od základů — správný úchop rakety, základní údery,

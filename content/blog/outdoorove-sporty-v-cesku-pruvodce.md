@@ -1,6 +1,6 @@
 ---
 title: 'Outdoorové sporty v Česku: Kde a jak sportovat v přírodě'
-date: '2099-01-01'
+date: '2026-03-15'
 category: tipy
 excerpt: >-
   Kompletní průvodce outdoorovými sporty v České republice — od turistiky a

@@ -1,6 +1,6 @@
 ---
 title: Kde sportovat v Českých Budějovicích — kompletní průvodce 2026
-date: '2099-01-01'
+date: '2026-03-08'
 category: pruvodce-mesta
 excerpt: >-
   Přehled 14 ověřených sportovišť v Českých Budějovicích — tenis s padelem, 5

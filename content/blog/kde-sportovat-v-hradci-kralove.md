@@ -1,6 +1,6 @@
 ---
 title: Kde sportovat v Hradci Králové — kompletní průvodce 2026
-date: '2099-01-01'
+date: '2026-03-09'
 category: pruvodce-mesta
 excerpt: >-
   Přehled 14 ověřených sportovišť v Hradci Králové — tenisové kurty, fitness
