@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Star, User, Clock, CheckCircle2, MessageSquare, ThumbsUp, Loader2 } from "lucide-react";
+import { Star, User, Clock, CheckCircle2, MessageSquare, ThumbsUp, Loader2, MapPinCheck, MapPin } from "lucide-react";
 
 interface UserData {
   userId: string;
@@ -26,11 +26,27 @@ interface UserReview {
   };
 }
 
+interface UserVisit {
+  id: string;
+  note: string | null;
+  createdAt: string;
+  facility: {
+    name: string;
+    slug: string;
+    location: { city: string };
+    sports: { sport: { slug: string; nameCs: string } }[];
+  };
+}
+
+type Tab = "reviews" | "visits";
+
 export default function MujUcetPage() {
   const router = useRouter();
   const [user, setUser] = useState<UserData | null>(null);
   const [reviews, setReviews] = useState<UserReview[]>([]);
+  const [visits, setVisits] = useState<UserVisit[]>([]);
   const [loading, setLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState<Tab>("reviews");
 
   useEffect(() => {
     async function load() {
@@ -43,10 +59,13 @@ export default function MujUcetPage() {
         const userData = await meRes.json();
         setUser(userData);
 
-        const revRes = await fetch("/api/auth/my-reviews");
-        if (revRes.ok) {
-          setReviews(await revRes.json());
-        }
+        const [revRes, visitRes] = await Promise.all([
+          fetch("/api/auth/my-reviews"),
+          fetch("/api/auth/my-visits"),
+        ]);
+
+        if (revRes.ok) setReviews(await revRes.json());
+        if (visitRes.ok) setVisits(await visitRes.json());
       } catch {
         router.push("/prihlaseni?redirect=/muj-ucet");
       } finally {
@@ -104,10 +123,10 @@ export default function MujUcetPage() {
       </div>
 
       {/* Stats */}
-      <div className="mb-8 grid grid-cols-3 gap-3">
+      <div className="mb-8 grid grid-cols-4 gap-3">
         <div className="rounded-xl border border-zinc-200 bg-white p-4 text-center">
           <div className="text-2xl font-bold text-zinc-900">{reviews.length}</div>
-          <div className="text-xs text-zinc-500">Recenzí celkem</div>
+          <div className="text-xs text-zinc-500">Recenzí</div>
         </div>
         <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-center">
           <div className="text-2xl font-bold text-emerald-700">{approvedCount}</div>
@@ -115,113 +134,209 @@ export default function MujUcetPage() {
         </div>
         <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-center">
           <div className="text-2xl font-bold text-amber-700">{pendingCount}</div>
-          <div className="text-xs text-amber-600">Čeká na schválení</div>
+          <div className="text-xs text-amber-600">Čeká</div>
+        </div>
+        <div className="rounded-xl border border-sky-200 bg-sky-50 p-4 text-center">
+          <div className="text-2xl font-bold text-sky-700">{visits.length}</div>
+          <div className="text-xs text-sky-600">Návštěv</div>
         </div>
       </div>
 
-      {/* Reviews */}
-      <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold text-zinc-900">
-        <MessageSquare className="h-5 w-5 text-zinc-400" />
-        Moje recenze
-      </h2>
+      {/* Tabs */}
+      <div className="mb-6 flex gap-1 rounded-lg bg-zinc-100 p-1">
+        <button
+          onClick={() => setActiveTab("reviews")}
+          className={`flex flex-1 items-center justify-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition ${
+            activeTab === "reviews"
+              ? "bg-white text-zinc-900 shadow-sm"
+              : "text-zinc-500 hover:text-zinc-700"
+          }`}
+        >
+          <MessageSquare className="h-4 w-4" />
+          Recenze ({reviews.length})
+        </button>
+        <button
+          onClick={() => setActiveTab("visits")}
+          className={`flex flex-1 items-center justify-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition ${
+            activeTab === "visits"
+              ? "bg-white text-zinc-900 shadow-sm"
+              : "text-zinc-500 hover:text-zinc-700"
+          }`}
+        >
+          <MapPinCheck className="h-4 w-4" />
+          Navštívená místa ({visits.length})
+        </button>
+      </div>
 
-      {reviews.length === 0 ? (
-        <div className="rounded-xl border border-zinc-200 bg-white p-8 text-center">
-          <MessageSquare className="mx-auto mb-3 h-10 w-10 text-zinc-300" />
-          <p className="text-sm font-medium text-zinc-600">
-            Zatím jste nenapsal/a žádnou recenzi.
-          </p>
-          <p className="mt-1 text-xs text-zinc-400">
-            Navštivte sportoviště a podělte se o svůj zážitek.
-          </p>
-          <Link
-            href="/"
-            className="mt-4 inline-block rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700 transition-colors"
-          >
-            Procházet sportoviště
-          </Link>
-        </div>
-      ) : (
-        <div className="space-y-3">
-          {reviews.map((review) => {
-            const sport = review.facility.sports[0]?.sport;
-            const facilityUrl = sport
-              ? `/sport/${sport.slug}/${review.facility.slug}`
-              : `/${review.facility.slug}`;
-
-            return (
-              <div
-                key={review.id}
-                className="rounded-xl border border-zinc-200 bg-white p-4"
+      {/* Reviews tab */}
+      {activeTab === "reviews" && (
+        <>
+          {reviews.length === 0 ? (
+            <div className="rounded-xl border border-zinc-200 bg-white p-8 text-center">
+              <MessageSquare className="mx-auto mb-3 h-10 w-10 text-zinc-300" />
+              <p className="text-sm font-medium text-zinc-600">
+                Zatím jste nenapsal/a žádnou recenzi.
+              </p>
+              <p className="mt-1 text-xs text-zinc-400">
+                Navštivte sportoviště a podělte se o svůj zážitek.
+              </p>
+              <Link
+                href="/"
+                className="mt-4 inline-block rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700 transition-colors"
               >
-                <div className="flex items-start justify-between gap-3">
-                  <div className="min-w-0 flex-1">
-                    <Link
-                      href={facilityUrl}
-                      className="text-sm font-semibold text-zinc-900 hover:text-emerald-600 transition-colors"
-                    >
-                      {review.facility.name}
-                    </Link>
-                    {sport && (
-                      <span className="ml-2 text-xs text-zinc-400">
-                        {sport.nameCs}
-                      </span>
+                Procházet sportoviště
+              </Link>
+            </div>
+          ) : (
+            <div className="space-y-3">
+              {reviews.map((review) => {
+                const sport = review.facility.sports[0]?.sport;
+                const facilityUrl = sport
+                  ? `/sport/${sport.slug}/${review.facility.slug}`
+                  : `/${review.facility.slug}`;
+
+                return (
+                  <div
+                    key={review.id}
+                    className="rounded-xl border border-zinc-200 bg-white p-4"
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="min-w-0 flex-1">
+                        <Link
+                          href={facilityUrl}
+                          className="text-sm font-semibold text-zinc-900 hover:text-emerald-600 transition-colors"
+                        >
+                          {review.facility.name}
+                        </Link>
+                        {sport && (
+                          <span className="ml-2 text-xs text-zinc-400">
+                            {sport.nameCs}
+                          </span>
+                        )}
+                      </div>
+                      <div className="flex shrink-0 items-center gap-1">
+                        {review.isApproved ? (
+                          <span className="flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-xs font-medium text-emerald-700">
+                            <CheckCircle2 className="h-3 w-3" />
+                            Schváleno
+                          </span>
+                        ) : (
+                          <span className="flex items-center gap-1 rounded-full bg-amber-50 px-2 py-0.5 text-xs font-medium text-amber-700">
+                            <Clock className="h-3 w-3" />
+                            Čeká
+                          </span>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="mt-2 flex items-center gap-1">
+                      {[1, 2, 3, 4, 5].map((s) => (
+                        <Star
+                          key={s}
+                          className={`h-4 w-4 ${
+                            s <= review.rating
+                              ? "fill-amber-400 text-amber-400"
+                              : "text-zinc-200"
+                          }`}
+                        />
+                      ))}
+                    </div>
+
+                    {review.title && (
+                      <p className="mt-2 text-sm font-medium text-zinc-800">
+                        {review.title}
+                      </p>
                     )}
-                  </div>
-                  <div className="flex shrink-0 items-center gap-1">
-                    {review.isApproved ? (
-                      <span className="flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-xs font-medium text-emerald-700">
-                        <CheckCircle2 className="h-3 w-3" />
-                        Schváleno
-                      </span>
-                    ) : (
-                      <span className="flex items-center gap-1 rounded-full bg-amber-50 px-2 py-0.5 text-xs font-medium text-amber-700">
-                        <Clock className="h-3 w-3" />
-                        Čeká
-                      </span>
+                    {review.text && (
+                      <p className="mt-1 text-sm text-zinc-600 line-clamp-3">
+                        {review.text}
+                      </p>
                     )}
+
+                    <div className="mt-3 flex items-center gap-4 text-xs text-zinc-400">
+                      <span>
+                        {new Date(review.createdAt).toLocaleDateString("cs-CZ")}
+                      </span>
+                      {review.helpful > 0 && (
+                        <span className="flex items-center gap-1">
+                          <ThumbsUp className="h-3 w-3" />
+                          {review.helpful} užitečné
+                        </span>
+                      )}
+                    </div>
                   </div>
-                </div>
+                );
+              })}
+            </div>
+          )}
+        </>
+      )}
 
-                <div className="mt-2 flex items-center gap-1">
-                  {[1, 2, 3, 4, 5].map((s) => (
-                    <Star
-                      key={s}
-                      className={`h-4 w-4 ${
-                        s <= review.rating
-                          ? "fill-amber-400 text-amber-400"
-                          : "text-zinc-200"
-                      }`}
-                    />
-                  ))}
-                </div>
+      {/* Visits tab */}
+      {activeTab === "visits" && (
+        <>
+          {visits.length === 0 ? (
+            <div className="rounded-xl border border-zinc-200 bg-white p-8 text-center">
+              <MapPinCheck className="mx-auto mb-3 h-10 w-10 text-zinc-300" />
+              <p className="text-sm font-medium text-zinc-600">
+                Zatím jste neoznačil/a žádné sportoviště.
+              </p>
+              <p className="mt-1 text-xs text-zinc-400">
+                Označte sportoviště, která jste navštívil/a, tlačítkem &quot;Byl/a jsem tady&quot;.
+              </p>
+              <Link
+                href="/"
+                className="mt-4 inline-block rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700 transition-colors"
+              >
+                Procházet sportoviště
+              </Link>
+            </div>
+          ) : (
+            <div className="space-y-3">
+              {visits.map((visit) => {
+                const sport = visit.facility.sports[0]?.sport;
+                const facilityUrl = sport
+                  ? `/sport/${sport.slug}/${visit.facility.slug}`
+                  : `/${visit.facility.slug}`;
 
-                {review.title && (
-                  <p className="mt-2 text-sm font-medium text-zinc-800">
-                    {review.title}
-                  </p>
-                )}
-                {review.text && (
-                  <p className="mt-1 text-sm text-zinc-600 line-clamp-3">
-                    {review.text}
-                  </p>
-                )}
+                return (
+                  <div
+                    key={visit.id}
+                    className="rounded-xl border border-zinc-200 bg-white p-4"
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="min-w-0 flex-1">
+                        <Link
+                          href={facilityUrl}
+                          className="text-sm font-semibold text-zinc-900 hover:text-emerald-600 transition-colors"
+                        >
+                          {visit.facility.name}
+                        </Link>
+                        <p className="mt-0.5 flex items-center gap-1 text-xs text-zinc-400">
+                          <MapPin className="h-3 w-3" />
+                          {visit.facility.location.city}
+                          {sport && ` · ${sport.nameCs}`}
+                        </p>
+                      </div>
+                      <span className="flex shrink-0 items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-xs font-medium text-emerald-700">
+                        <MapPinCheck className="h-3 w-3" />
+                        Navštíveno
+                      </span>
+                    </div>
 
-                <div className="mt-3 flex items-center gap-4 text-xs text-zinc-400">
-                  <span>
-                    {new Date(review.createdAt).toLocaleDateString("cs-CZ")}
-                  </span>
-                  {review.helpful > 0 && (
-                    <span className="flex items-center gap-1">
-                      <ThumbsUp className="h-3 w-3" />
-                      {review.helpful} užitečné
-                    </span>
-                  )}
-                </div>
-              </div>
-            );
-          })}
-        </div>
+                    {visit.note && (
+                      <p className="mt-2 text-sm text-zinc-600">{visit.note}</p>
+                    )}
+
+                    <div className="mt-3 text-xs text-zinc-400">
+                      {new Date(visit.createdAt).toLocaleDateString("cs-CZ")}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </>
       )}
     </div>
   );

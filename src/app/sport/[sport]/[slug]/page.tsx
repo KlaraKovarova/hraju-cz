@@ -32,6 +32,7 @@ import { FacilityMap } from "@/components/FacilityMap";
 import { AdSlot } from "@/components/AdSlot";
 import { TrackPageView } from "@/components/TrackPageView";
 import { TrackClick } from "@/components/TrackClick";
+import { CheckInButton } from "@/components/CheckInButton";
 import { getOwnerSession } from "@/lib/owner-auth";
 import { prisma } from "@/lib/prisma";
 import type { Metadata } from "next";
@@ -502,6 +503,11 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
               </Link>
             ))}
           </div>
+
+          {/* Check-in button */}
+          <div className="mt-4">
+            <CheckInButton facilityId={facility.id} currentPath={`/sport/${sportSlug}/${slug}`} />
+          </div>
         </div>
       </section>
 
@@ -893,6 +899,11 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
               facilityId={facility.id}
               facilityName={facility.name}
             />
+
+            {/* Sidebar Ad (hidden for premium facilities) */}
+            {!facility.isPremium && (
+              <AdSlot slot="1234567894" format="rectangle" className="mt-4" />
+            )}
           </div>
         </div>
       </div>

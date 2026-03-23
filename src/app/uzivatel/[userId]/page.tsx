@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronRight, Star, MessageSquare, Calendar, User, Award } from "lucide-react";
+import { ChevronRight, Star, MessageSquare, Calendar, User, Award, MapPinCheck } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { StarRating } from "@/components/StarRating";
 import { AdSlot } from "@/components/AdSlot";
@@ -47,25 +47,28 @@ export default async function UserProfilePage({ params }: Props) {
 
   if (!user) notFound();
 
-  const reviews = await prisma.review.findMany({
-    where: { userId: user.id, isApproved: true },
-    orderBy: { createdAt: "desc" },
-    select: {
-      id: true,
-      rating: true,
-      title: true,
-      text: true,
-      createdAt: true,
-      facility: {
-        select: {
-          name: true,
-          slug: true,
-          location: { select: { city: true } },
-          sports: { take: 1, select: { sport: { select: { slug: true, nameCs: true } } } },
+  const [reviews, visitCount] = await Promise.all([
+    prisma.review.findMany({
+      where: { userId: user.id, isApproved: true },
+      orderBy: { createdAt: "desc" },
+      select: {
+        id: true,
+        rating: true,
+        title: true,
+        text: true,
+        createdAt: true,
+        facility: {
+          select: {
+            name: true,
+            slug: true,
+            location: { select: { city: true } },
+            sports: { take: 1, select: { sport: { select: { slug: true, nameCs: true } } } },
+          },
         },
       },
-    },
-  });
+    }),
+    prisma.visit.count({ where: { userId: user.id } }),
+  ]);
 
   const displayName = user.name || "Sportovec";
   const totalReviews = reviews.length;
@@ -183,6 +186,19 @@ export default async function UserProfilePage({ params }: Props) {
                 <div>
                   <span className="text-lg font-bold text-zinc-900">{avgRating}</span>
                   <p className="text-xs text-zinc-500">průměrné hodnocení</p>
+                </div>
+              </div>
+            )}
+            {visitCount > 0 && (
+              <div className="flex items-center gap-2">
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-sky-50">
+                  <MapPinCheck className="h-4 w-4 text-sky-500" />
+                </div>
+                <div>
+                  <span className="text-lg font-bold text-zinc-900">{visitCount}</span>
+                  <p className="text-xs text-zinc-500">
+                    {visitCount === 1 ? "navštívené místo" : visitCount >= 2 && visitCount <= 4 ? "navštívená místa" : "navštívených míst"}
+                  </p>
                 </div>
               </div>
             )}
