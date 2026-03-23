@@ -32,7 +32,7 @@ export function HeroSearchForm({ sportSlug }: HeroSearchFormProps) {
         <Search className="h-5 w-5 shrink-0 text-zinc-400" />
         <input
           type="text"
-          placeholder="Město nebo název sportoviště..."
+          placeholder="Hledat sportoviště, akce, články..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           className="w-full py-4 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none"

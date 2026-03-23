@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { User, LogOut } from "lucide-react";
+import { SiteSearch } from "@/components/SiteSearch";
 
 interface UserData {
   userId: string;
@@ -39,7 +40,9 @@ export function UserNav() {
 
   return (
     <div className="flex items-center justify-end px-4 py-1.5 text-xs text-zinc-500">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-end gap-3">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3">
+        <SiteSearch />
+        <div className="flex items-center gap-3">
         {user ? (
           <>
             <Link
@@ -66,6 +69,7 @@ export function UserNav() {
             Přihlásit se
           </Link>
         )}
+        </div>
       </div>
     </div>
   );
