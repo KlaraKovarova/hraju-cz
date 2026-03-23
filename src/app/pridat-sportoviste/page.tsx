@@ -1,14 +1,52 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { Loader2 } from "lucide-react";
 import AddListingForm from "@/components/AddListingForm";
 
-export const metadata: Metadata = {
-  title: "Přidat sportoviště",
-  description:
-    "Provozujete sportoviště? Přidejte ho zdarma do databáze hraju.cz a oslovte tisíce sportovců v České republice.",
-};
+interface UserData {
+  userId: string;
+  email: string;
+  name: string | null;
+}
 
 export default function PridatSportoviStePage() {
+  const router = useRouter();
+  const [user, setUser] = useState<UserData | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function checkAuth() {
+      try {
+        const res = await fetch("/api/auth/me");
+        if (!res.ok) {
+          router.push("/prihlaseni?redirect=/pridat-sportoviste");
+          return;
+        }
+        setUser(await res.json());
+      } catch {
+        router.push("/prihlaseni?redirect=/pridat-sportoviste");
+      } finally {
+        setLoading(false);
+      }
+    }
+    checkAuth();
+  }, [router]);
+
+  if (loading) {
+    return (
+      <main className="min-h-screen bg-zinc-50">
+        <div className="flex min-h-[50vh] items-center justify-center">
+          <Loader2 className="h-8 w-8 animate-spin text-emerald-500" />
+        </div>
+      </main>
+    );
+  }
+
+  if (!user) return null;
+
   return (
     <main className="min-h-screen bg-zinc-50">
       {/* Header */}
@@ -37,12 +75,12 @@ export default function PridatSportoviStePage() {
           Přidat sportoviště
         </h1>
         <p className="mt-2 text-zinc-500">
-          Provozujete sportoviště? Přidejte ho zdarma do naší databáze a
-          oslovte tisíce sportovců po celé České republice.
+          Znáte sportoviště, které u nás chybí? Přidejte ho a pomozte rozšířit
+          naši databázi pro všechny sportovce v České republice.
         </p>
 
         <div className="mt-8">
-          <AddListingForm />
+          <AddListingForm user={user} />
         </div>
       </div>
     </main>

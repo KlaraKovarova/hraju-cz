@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { getUserSession } from "@/lib/user-auth";
 
 function slugify(name: string): string {
   return name
@@ -55,17 +56,10 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: true }, { status: 201 });
     }
 
-    // Anti-spam: rate limit by IP (5/hr)
-    const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-      request.headers.get("x-real-ip") || "unknown";
-    const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000);
-    const recentSubmissions = await prisma.editRequest.count({
-      where: {
-        createdAt: { gte: oneHourAgo },
-        submitterEmail: { contains: ip.slice(0, 20) }, // approximate — we store IP in message
-      },
-    });
-    // Skip strict IP rate limiting for now — we rely on honeypot + timing
+    // Check user session — logged-in users get priority and auto-filled info
+    const session = await getUserSession();
+    const effectiveName = session?.name || submitterName;
+    const effectiveEmail = session?.email || submitterEmail;
 
     // Validation
     if (!name?.trim()) {
@@ -80,13 +74,13 @@ export async function POST(request: NextRequest) {
     if (!city?.trim()) {
       return NextResponse.json({ error: "Vyplňte město." }, { status: 400 });
     }
-    if (!submitterName?.trim()) {
+    if (!effectiveName?.trim()) {
       return NextResponse.json({ error: "Vyplňte vaše jméno." }, { status: 400 });
     }
-    if (!submitterEmail?.trim()) {
+    if (!effectiveEmail?.trim()) {
       return NextResponse.json({ error: "Vyplňte váš e-mail." }, { status: 400 });
     }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(submitterEmail)) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(effectiveEmail)) {
       return NextResponse.json({ error: "Neplatný formát e-mailu." }, { status: 400 });
     }
     if (postalCode && !/^\d{5}$/.test(postalCode.replace(/\s/g, ""))) {
@@ -120,7 +114,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Create facility + related records in transaction
-    const facility = await prisma.$transaction(async (tx) => {
+    await prisma.$transaction(async (tx) => {
       const fac = await tx.facility.create({
         data: {
           name: name.trim(),
@@ -163,15 +157,16 @@ export async function POST(request: NextRequest) {
       }
 
       // Create edit request for admin review
+      // isOwner = false for community contributions (user is not the facility owner)
       await tx.editRequest.create({
         data: {
           facilityId: fac.id,
-          submitterName: submitterName.trim(),
-          submitterEmail: submitterEmail.trim(),
+          submitterName: effectiveName.trim(),
+          submitterEmail: effectiveEmail.trim(),
           submitterPhone: submitterPhone?.trim() || null,
-          isOwner: true,
+          isOwner: false,
           changes: {},
-          message: `Nový zápis sportoviště od: ${submitterName.trim()} (${submitterEmail.trim()})${submitterPhone?.trim() ? `, tel: ${submitterPhone.trim()}` : ""}`,
+          message: `Nový návrh sportoviště od: ${effectiveName.trim()} (${effectiveEmail.trim()})${session ? " [přihlášený uživatel]" : ""}`,
           status: "PENDING",
         },
       });

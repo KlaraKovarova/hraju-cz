@@ -115,12 +115,21 @@ export default function MujUcetPage() {
             </Link>
           </div>
         </div>
-        <button
-          onClick={handleLogout}
-          className="rounded-lg border border-zinc-200 px-3 py-1.5 text-sm text-zinc-500 hover:border-zinc-300 hover:text-zinc-700 transition-colors"
-        >
-          Odhlásit
-        </button>
+        <div className="flex items-center gap-2">
+          <Link
+            href="/pridat-sportoviste"
+            className="flex items-center gap-1.5 rounded-lg bg-emerald-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-emerald-700 transition-colors"
+          >
+            <PlusCircle className="h-3.5 w-3.5" />
+            Přidat sportoviště
+          </Link>
+          <button
+            onClick={handleLogout}
+            className="rounded-lg border border-zinc-200 px-3 py-1.5 text-sm text-zinc-500 hover:border-zinc-300 hover:text-zinc-700 transition-colors"
+          >
+            Odhlásit
+          </button>
+        </div>
       </div>
 
       {/* Onboarding for new users */}

@@ -26,9 +26,17 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
         reviewedAt: new Date(),
       },
       include: {
-        facility: { select: { id: true, name: true, slug: true } },
+        facility: { select: { id: true, name: true, slug: true, isActive: true } },
       },
     });
+
+    // When approving a new facility submission, activate the facility
+    if (status === "APPROVED" && !editRequest.facility.isActive) {
+      await prisma.facility.update({
+        where: { id: editRequest.facilityId },
+        data: { isActive: true },
+      });
+    }
 
     return NextResponse.json(editRequest);
   } catch {

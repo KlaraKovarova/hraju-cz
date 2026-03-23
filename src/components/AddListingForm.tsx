@@ -1,13 +1,18 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Send, CheckCircle2, AlertCircle } from "lucide-react";
+import { Send, CheckCircle2, AlertCircle, User } from "lucide-react";
+import Link from "next/link";
 import { SPORTS } from "@/lib/sports";
 
 const inputClass =
   "w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-emerald-400 focus:outline-none focus:ring-1 focus:ring-emerald-400";
 
-export default function AddListingForm() {
+interface AddListingFormProps {
+  user?: { userId: string; email: string; name: string | null };
+}
+
+export default function AddListingForm({ user }: AddListingFormProps) {
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -27,8 +32,8 @@ export default function AddListingForm() {
     website: "",
     openingHours: "",
     pricing: "",
-    submitterName: "",
-    submitterEmail: "",
+    submitterName: user?.name || "",
+    submitterEmail: user?.email || "",
     submitterPhone: "",
     website_url: "", // honeypot
   });
@@ -76,15 +81,19 @@ export default function AddListingForm() {
       setSubmitting(false);
       return;
     }
-    if (!form.submitterName.trim()) {
-      setError("Vyplňte vaše jméno.");
-      setSubmitting(false);
-      return;
-    }
-    if (!form.submitterEmail.trim()) {
-      setError("Vyplňte váš e-mail.");
-      setSubmitting(false);
-      return;
+
+    // If no user prop, require submitter fields
+    if (!user) {
+      if (!form.submitterName.trim()) {
+        setError("Vyplňte vaše jméno.");
+        setSubmitting(false);
+        return;
+      }
+      if (!form.submitterEmail.trim()) {
+        setError("Vyplňte váš e-mail.");
+        setSubmitting(false);
+        return;
+      }
     }
 
     try {
@@ -93,6 +102,9 @@ export default function AddListingForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...form,
+          // Always send submitter info from user session if available
+          submitterName: user?.name || form.submitterName,
+          submitterEmail: user?.email || form.submitterEmail,
           courtsLanes: form.courtsLanes ? Number(form.courtsLanes) : undefined,
           _timestamp: timestamp,
         }),
@@ -122,6 +134,12 @@ export default function AddListingForm() {
           Váš zápis byl odeslán ke schválení. Po kontrole administrátorem se
           sportoviště zobrazí na hraju.cz.
         </p>
+        <Link
+          href="/muj-ucet"
+          className="mt-4 inline-block text-sm font-medium text-emerald-700 hover:text-emerald-800"
+        >
+          Zpět na můj účet &rarr;
+        </Link>
       </div>
     );
   }
@@ -132,6 +150,19 @@ export default function AddListingForm() {
         <div className="flex items-center gap-2 rounded-lg bg-red-50 border border-red-200 p-3 text-sm text-red-700">
           <AlertCircle className="h-4 w-4 shrink-0" />
           {error}
+        </div>
+      )}
+
+      {/* Logged-in user info */}
+      {user && (
+        <div className="flex items-center gap-3 rounded-xl border border-emerald-200 bg-emerald-50 p-4">
+          <div className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-100">
+            <User className="h-4 w-4 text-emerald-600" />
+          </div>
+          <div className="text-sm">
+            <span className="font-medium text-zinc-900">{user.name || "Sportovec"}</span>
+            <span className="ml-2 text-zinc-500">{user.email}</span>
+          </div>
         </div>
       )}
 
@@ -146,10 +177,10 @@ export default function AddListingForm() {
         aria-hidden="true"
       />
 
-      {/* Section 1: O vašem sportovišti */}
+      {/* Section 1: O sportovišti */}
       <fieldset className="space-y-4 rounded-2xl border border-zinc-200 bg-white p-6">
         <legend className="px-2 text-sm font-semibold text-zinc-900">
-          O vašem sportovišti
+          O sportovišti
         </legend>
 
         <div>
@@ -360,53 +391,55 @@ export default function AddListingForm() {
         </div>
       </fieldset>
 
-      {/* Section 5: Vaše údaje */}
-      <fieldset className="space-y-4 rounded-2xl border border-zinc-200 bg-white p-6">
-        <legend className="px-2 text-sm font-semibold text-zinc-900">
-          Vaše údaje
-        </legend>
+      {/* Section 5: Vaše údaje — only if not logged in */}
+      {!user && (
+        <fieldset className="space-y-4 rounded-2xl border border-zinc-200 bg-white p-6">
+          <legend className="px-2 text-sm font-semibold text-zinc-900">
+            Vaše údaje
+          </legend>
 
-        <div>
-          <label className="mb-1 block text-sm font-medium text-zinc-700">
-            Vaše jméno *
-          </label>
-          <input
-            type="text"
-            required
-            placeholder="Jan Novák"
-            value={form.submitterName}
-            onChange={(e) => update("submitterName", e.target.value)}
-            className={inputClass}
-          />
-        </div>
+          <div>
+            <label className="mb-1 block text-sm font-medium text-zinc-700">
+              Vaše jméno *
+            </label>
+            <input
+              type="text"
+              required
+              placeholder="Jan Novák"
+              value={form.submitterName}
+              onChange={(e) => update("submitterName", e.target.value)}
+              className={inputClass}
+            />
+          </div>
 
-        <div>
-          <label className="mb-1 block text-sm font-medium text-zinc-700">
-            Váš e-mail *
-          </label>
-          <input
-            type="email"
-            required
-            placeholder="jan@example.com"
-            value={form.submitterEmail}
-            onChange={(e) => update("submitterEmail", e.target.value)}
-            className={inputClass}
-          />
-        </div>
+          <div>
+            <label className="mb-1 block text-sm font-medium text-zinc-700">
+              Váš e-mail *
+            </label>
+            <input
+              type="email"
+              required
+              placeholder="jan@example.com"
+              value={form.submitterEmail}
+              onChange={(e) => update("submitterEmail", e.target.value)}
+              className={inputClass}
+            />
+          </div>
 
-        <div>
-          <label className="mb-1 block text-sm font-medium text-zinc-700">
-            Váš telefon
-          </label>
-          <input
-            type="tel"
-            placeholder="+420 123 456 789"
-            value={form.submitterPhone}
-            onChange={(e) => update("submitterPhone", e.target.value)}
-            className={inputClass}
-          />
-        </div>
-      </fieldset>
+          <div>
+            <label className="mb-1 block text-sm font-medium text-zinc-700">
+              Váš telefon
+            </label>
+            <input
+              type="tel"
+              placeholder="+420 123 456 789"
+              value={form.submitterPhone}
+              onChange={(e) => update("submitterPhone", e.target.value)}
+              className={inputClass}
+            />
+          </div>
+        </fieldset>
+      )}
 
       {/* Submit */}
       <button
