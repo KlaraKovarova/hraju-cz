@@ -62,6 +62,12 @@ export function Footer() {
               Odkazy
             </Link>
             <Link
+              href="/akce"
+              className="hover:text-zinc-600"
+            >
+              Akce
+            </Link>
+            <Link
               href="/pridat-sportoviste"
               className="hover:text-zinc-600"
             >

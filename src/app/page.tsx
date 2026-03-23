@@ -139,6 +139,12 @@ export default async function Home() {
               Blog
             </Link>
             <Link
+              href="/akce"
+              className="transition hover:text-zinc-900"
+            >
+              <Calendar className="inline h-3.5 w-3.5" /> Akce
+            </Link>
+            <Link
               href="#sports"
               className="transition hover:text-zinc-900"
             >

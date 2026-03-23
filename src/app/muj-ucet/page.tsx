@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Star, User, Clock, CheckCircle2, MessageSquare, ThumbsUp, Loader2, MapPinCheck, MapPin, PlusCircle, ArrowRight } from "lucide-react";
+import { Star, User, Clock, CheckCircle2, MessageSquare, ThumbsUp, Loader2, MapPinCheck, MapPin, PlusCircle, ArrowRight, Calendar } from "lucide-react";
 
 interface UserData {
   userId: string;
@@ -178,6 +178,19 @@ export default function MujUcetPage() {
               <div className="flex-1">
                 <span className="text-sm font-semibold text-zinc-900 group-hover:text-emerald-700">Přidat chybějící sportoviště</span>
                 <p className="text-xs text-zinc-500">Znáš sportoviště, které u nás chybí?</p>
+              </div>
+              <ArrowRight className="h-4 w-4 text-zinc-300 group-hover:text-emerald-500" />
+            </Link>
+            <Link
+              href="/pridat-akci"
+              className="group flex items-center gap-3 rounded-xl bg-white p-4 transition hover:shadow-md"
+            >
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-orange-50 text-orange-600">
+                <Calendar className="h-5 w-5" />
+              </div>
+              <div className="flex-1">
+                <span className="text-sm font-semibold text-zinc-900 group-hover:text-emerald-700">Přidat akci</span>
+                <p className="text-xs text-zinc-500">Pořádáš turistickou akci? Přidej ji do kalendáře</p>
               </div>
               <ArrowRight className="h-4 w-4 text-zinc-300 group-hover:text-emerald-500" />
             </Link>
