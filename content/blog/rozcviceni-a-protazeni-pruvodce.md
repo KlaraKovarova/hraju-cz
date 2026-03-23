@@ -7,6 +7,7 @@ excerpt: >-
   cviky pro 8 nejpopulárnějších sportů. Kolik minut stačí a co nikdy nedělat.
 sportTags:
   - fitness
+image: /images/blog/rozcviceni-a-protazeni-pruvodce.jpg
 ---
 
 # Rozcvičení a protažení: Co dělat před a po sportu

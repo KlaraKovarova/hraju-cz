@@ -7,6 +7,7 @@ excerpt: >-
   začít hrát, beach volejbal a přehled českých lig a turnajů.
 sportTags:
   - volejbal
+image: /images/blog/volejbal-pro-zacatecniky-kompletni-pruvodce.jpg
 ---
 
 # Volejbal pro začátečníky: Pravidla, technika a kde hrát v Česku

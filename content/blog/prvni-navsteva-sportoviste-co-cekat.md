@@ -12,6 +12,7 @@ sportTags:
   - fitness
   - plavani
   - tenis
+image: /images/blog/prvni-navsteva-sportoviste-co-cekat.jpg
 ---
 
 # První návštěva sportoviště — co čekat a jak se připravit

@@ -7,6 +7,7 @@ excerpt: >-
   vybavení, bezpečnost a jak z nedělní procházky udělat celodenní výšlap.
 sportTags:
   - turistika
+image: /images/blog/turistika-a-hiking-v-cesku-pruvodce.jpg
 ---
 
 # Turistika a hiking v Česku: Průvodce pro začátečníky i pokročilé

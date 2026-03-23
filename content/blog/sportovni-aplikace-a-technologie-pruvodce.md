@@ -8,6 +8,7 @@ excerpt: >-
   vyplatí a co ne.
 sportTags:
   - fitness
+image: /images/blog/sportovni-aplikace-a-technologie-pruvodce.jpg
 ---
 
 # Sportovní aplikace a technologie: Jak sledovat svůj pokrok

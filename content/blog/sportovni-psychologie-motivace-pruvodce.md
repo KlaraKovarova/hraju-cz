@@ -8,6 +8,7 @@ excerpt: >-
   návyk, který vydrží.
 sportTags:
   - fitness
+image: /images/blog/sportovni-psychologie-motivace-pruvodce.jpg
 ---
 
 # Sportovní psychologie: Jak překonat mentální bariéry a zůstat motivovaní

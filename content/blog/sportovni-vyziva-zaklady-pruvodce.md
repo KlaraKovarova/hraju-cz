@@ -4,6 +4,7 @@ date: "2026-03-22"
 category: "tipy"
 excerpt: "Kompletní průvodce sportovní výživou — makronutrienty, timing jídel, hydratace, suplementy. Co skutečně funguje podle vědy a co je marketing. Praktické jídelníčky pro různé sporty."
 sportTags: ["fitness", "behani", "cyklistika", "plavani"]
+image: /images/blog/sportovni-vyziva-zaklady-pruvodce.jpg
 ---
 
 # Sportovní výživa: Co jíst před tréninkem, během něj a po něm

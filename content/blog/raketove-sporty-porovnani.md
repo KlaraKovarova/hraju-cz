@@ -11,6 +11,7 @@ sportTags:
   - squash
   - badminton
   - padel
+image: /images/blog/raketove-sporty-porovnani.jpg
 ---
 
 # Tenis, padel, squash nebo badminton? Velké porovnání raketových sportů

@@ -11,6 +11,7 @@ sportTags:
   - fitness
   - plavani
   - lezeni
+image: /images/blog/sporty-do-deste-kam-v-cesku.jpg
 ---
 
 # Kam sportovat, když prší: 10 indoor sportů, které zvládnete hned

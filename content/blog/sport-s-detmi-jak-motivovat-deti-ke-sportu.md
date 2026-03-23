@@ -7,6 +7,7 @@ excerpt: >-
   bez tlaku, kolik to stojí a jak poznat dobrého trenéra.
 sportTags:
   - fitness
+image: /images/blog/sport-s-detmi-jak-motivovat-deti-ke-sportu.jpg
 ---
 
 # Sport s dětmi: Jak motivovat děti ke sportu a jaký sport vybrat

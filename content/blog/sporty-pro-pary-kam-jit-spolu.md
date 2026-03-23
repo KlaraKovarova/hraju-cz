@@ -13,6 +13,7 @@ sportTags:
   - lezeni
   - plavani
   - fitness
+image: /images/blog/sporty-pro-pary-kam-jit-spolu.jpg
 ---
 
 # Sporty pro páry — 8 aktivit, které můžete dělat spolu

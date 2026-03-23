@@ -7,6 +7,7 @@ excerpt: >-
   po sportu. Hydratace, makroživiny, timing a nejčastější chyby.
 sportTags:
   - fitness
+image: /images/blog/stravovani-pro-sportovce-kompletni-pruvodce.jpg
 ---
 
 # Stravování pro sportovce: Co jíst před, během a po sportu

@@ -9,6 +9,7 @@ excerpt: >-
 sportTags:
   - fitness
   - tanec
+image: /images/blog/tanec-a-zumba-fitness-pruvodce.jpg
 ---
 
 # Tanec a Zumba: Jak zhubnout a zpevnit tělo tancem

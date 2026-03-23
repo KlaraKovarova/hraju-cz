@@ -7,6 +7,7 @@ excerpt: >-
   kde hrát v Česku a proč je ping-pong víc než hra v garáži.
 sportTags:
   - stolni-tenis
+image: /images/blog/stolni-tenis-pro-zacatecniky-kompletni-pruvodce.jpg
 ---
 
 # Stolní tenis pro začátečníky: Jak začít a kde hrát v Česku

@@ -13,6 +13,7 @@ sportTags:
   - fitness
   - plavani
   - lezeni
+image: /images/blog/stretching-po-sportu-pruvodce.jpg
 ---
 
 # Strečink po sportu — proč ho většina lidí dělá špatně

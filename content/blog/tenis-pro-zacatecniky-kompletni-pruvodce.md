@@ -8,6 +8,7 @@ excerpt: >-
   začátečníky.
 sportTags:
   - tenis
+image: /images/blog/tenis-pro-zacatecniky-kompletni-pruvodce.jpg
 ---
 
 # Tenis pro začátečníky — kompletní průvodce prvním rokem

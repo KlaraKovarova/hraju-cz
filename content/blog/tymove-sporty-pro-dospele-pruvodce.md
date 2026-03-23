@@ -11,6 +11,7 @@ sportTags:
   - volejbal
   - basketbal
   - florbal
+image: /images/blog/tymove-sporty-pro-dospele-pruvodce.jpg
 ---
 
 # Týmové sporty pro dospělé: Kde a jak začít hrát v Česku

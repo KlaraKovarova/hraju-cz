@@ -8,6 +8,7 @@ excerpt: >-
   center.
 sportTags:
   - squash
+image: /images/blog/squash-pro-zacatecniky-kompletni-pruvodce.jpg
 ---
 
 # Squash pro začátečníky — kompletní průvodce pro první měsíc

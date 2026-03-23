@@ -7,6 +7,7 @@ excerpt: >-
   smeč), pravidla, jak najít amatérský tým a kolik to stojí.
 sportTags:
   - volejbal
+image: /images/blog/volejbal-pro-zacatecniky-jak-zacit.jpg
 ---
 
 # Volejbal pro začátečníky: Jak začít hrát a kde najít tým

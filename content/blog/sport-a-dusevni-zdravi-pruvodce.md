@@ -8,6 +8,7 @@ excerpt: >-
   pro měřitelný efekt.
 sportTags:
   - fitness
+image: /images/blog/sport-a-dusevni-zdravi-pruvodce.jpg
 ---
 
 # Sport a duševní zdraví: Jak pohyb pomáhá proti stresu, úzkosti a depresi

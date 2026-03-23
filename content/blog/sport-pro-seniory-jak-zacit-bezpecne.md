@@ -8,6 +8,7 @@ excerpt: >-
   sportovce.
 sportTags:
   - fitness
+image: /images/blog/sport-pro-seniory-jak-zacit-bezpecne.jpg
 ---
 
 # Sport pro seniory: Jak začít bezpečně cvičit po 50, 60 i 70 letech

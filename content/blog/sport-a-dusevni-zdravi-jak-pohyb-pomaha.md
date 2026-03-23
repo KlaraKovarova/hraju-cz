@@ -9,6 +9,7 @@ sportTags:
   - fitness
   - plavani
   - lezeni
+image: /images/blog/sport-a-dusevni-zdravi-jak-pohyb-pomaha.jpg
 ---
 
 # Sport a duševní zdraví: Jak pravidelný pohyb pomáhá proti stresu a úzkosti

@@ -9,6 +9,7 @@ excerpt: >-
 sportTags:
   - plavani
   - vodni-sporty
+image: /images/blog/vodni-sporty-v-cesku-pruvodce.jpg
 ---
 
 # Vodní sporty v Česku: Kde si zaplavat, zajet na kajaku nebo paddleboardu
