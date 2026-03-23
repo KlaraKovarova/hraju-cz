@@ -284,6 +284,213 @@ export async function sendReviewNotificationEmail(
   }
 }
 
+export async function sendNewReviewOnFacilityEmail(
+  to: string,
+  userName: string | null,
+  facilityName: string,
+  reviewerName: string,
+  rating: number,
+  reviewText: string | null,
+  facilityUrl: string,
+  unsubscribeUrl: string
+): Promise<boolean> {
+  const transporter = createTransporter();
+  if (!transporter) {
+    console.warn("SMTP not configured, skipping review activity email");
+    return false;
+  }
+
+  const stars = "\u2605".repeat(rating) + "\u2606".repeat(5 - rating);
+  const preview = reviewText
+    ? reviewText.slice(0, 200) + (reviewText.length > 200 ? "\u2026" : "")
+    : "";
+  const greeting = userName ? `Ahoj ${userName}` : "Dobrý den";
+
+  try {
+    await transporter.sendMail({
+      from: `"hraju.cz" <${process.env.SMTP_USER}>`,
+      to,
+      subject: `Nová recenze na ${facilityName}`,
+      headers: {
+        "List-Unsubscribe": `<${unsubscribeUrl}>`,
+        "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+      },
+      text: [
+        `${greeting},`,
+        ``,
+        `na sportoviště „${facilityName}", které jste navštívili nebo hodnotili, přibyla nová recenze.`,
+        ``,
+        `${reviewerName} hodnotí: ${stars} (${rating}/5)`,
+        ...(preview ? [preview] : []),
+        ``,
+        `Zobrazit sportoviště: ${facilityUrl}`,
+        ``,
+        `S pozdravem,`,
+        `tým hraju.cz`,
+        ``,
+        `---`,
+        `Nechcete dostávat tyto e-maily? Odhlaste se: ${unsubscribeUrl}`,
+      ].join("\n"),
+      html: `
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #18181b;">Nová recenze na ${facilityName}</h2>
+          <p>${greeting},</p>
+          <p>na sportoviště <strong>${facilityName}</strong>, které jste navštívili nebo hodnotili, přibyla nová recenze.</p>
+          <div style="background: #f4f4f5; border-radius: 12px; padding: 16px; margin: 16px 0;">
+            <p style="margin: 0 0 4px; font-weight: 600;">${reviewerName}</p>
+            <div style="font-size: 24px; color: #f59e0b;">${stars}</div>
+            ${preview ? `<p style="color: #3f3f46; margin-top: 8px;">${preview}</p>` : ""}
+          </div>
+          <p style="margin: 24px 0;">
+            <a href="${facilityUrl}" style="background: #059669; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+              Zobrazit sportoviště
+            </a>
+          </p>
+          <hr style="border: none; border-top: 1px solid #e4e4e7; margin: 24px 0;" />
+          <p style="color: #a1a1aa; font-size: 12px;">
+            hraju.cz – sportoviště v Česku |
+            <a href="${unsubscribeUrl}" style="color: #a1a1aa;">Odhlásit se z notifikací</a>
+          </p>
+        </div>
+      `,
+    });
+    return true;
+  } catch (error) {
+    console.error("Failed to send review activity email:", error);
+    return false;
+  }
+}
+
+export interface WeeklyDigestData {
+  userName: string | null;
+  newReviews: Array<{
+    facilityName: string;
+    facilityUrl: string;
+    reviewerName: string;
+    rating: number;
+  }>;
+  newPosts: Array<{
+    title: string;
+    url: string;
+  }>;
+  upcomingEvents: Array<{
+    name: string;
+    date: string;
+    city: string;
+  }>;
+}
+
+export async function sendWeeklyDigestEmail(
+  to: string,
+  data: WeeklyDigestData,
+  unsubscribeUrl: string
+): Promise<boolean> {
+  const transporter = createTransporter();
+  if (!transporter) {
+    console.warn("SMTP not configured, skipping weekly digest email");
+    return false;
+  }
+
+  const greeting = data.userName ? `Ahoj ${data.userName}` : "Dobrý den";
+  const hasContent =
+    data.newReviews.length > 0 ||
+    data.newPosts.length > 0 ||
+    data.upcomingEvents.length > 0;
+
+  if (!hasContent) return false;
+
+  const reviewsHtml = data.newReviews.length > 0
+    ? `<h3 style="color:#18181b;margin-top:24px;">Nové recenze</h3>
+       <ul style="padding-left:20px;">${data.newReviews
+         .slice(0, 5)
+         .map(
+           (r) =>
+             `<li><a href="${r.facilityUrl}" style="color:#059669;font-weight:600;">${r.facilityName}</a> — ${r.reviewerName} (${"★".repeat(r.rating)}${"☆".repeat(5 - r.rating)})</li>`
+         )
+         .join("")}</ul>`
+    : "";
+
+  const postsHtml = data.newPosts.length > 0
+    ? `<h3 style="color:#18181b;margin-top:24px;">Nové články</h3>
+       <ul style="padding-left:20px;">${data.newPosts
+         .slice(0, 5)
+         .map(
+           (p) =>
+             `<li><a href="${p.url}" style="color:#059669;">${p.title}</a></li>`
+         )
+         .join("")}</ul>`
+    : "";
+
+  const eventsHtml = data.upcomingEvents.length > 0
+    ? `<h3 style="color:#18181b;margin-top:24px;">Nadcházející akce</h3>
+       <ul style="padding-left:20px;">${data.upcomingEvents
+         .slice(0, 5)
+         .map((e) => `<li><strong>${e.name}</strong> — ${e.date}, ${e.city}</li>`)
+         .join("")}</ul>`
+    : "";
+
+  const reviewsText = data.newReviews.length > 0
+    ? `\nNové recenze:\n${data.newReviews.slice(0, 5).map((r) => `- ${r.facilityName}: ${r.reviewerName} (${"★".repeat(r.rating)})`).join("\n")}\n`
+    : "";
+
+  const postsText = data.newPosts.length > 0
+    ? `\nNové články:\n${data.newPosts.slice(0, 5).map((p) => `- ${p.title}: ${p.url}`).join("\n")}\n`
+    : "";
+
+  const eventsText = data.upcomingEvents.length > 0
+    ? `\nNadcházející akce:\n${data.upcomingEvents.slice(0, 5).map((e) => `- ${e.name} — ${e.date}, ${e.city}`).join("\n")}\n`
+    : "";
+
+  try {
+    await transporter.sendMail({
+      from: `"hraju.cz" <${process.env.SMTP_USER}>`,
+      to,
+      subject: "Týdenní přehled z hraju.cz",
+      headers: {
+        "List-Unsubscribe": `<${unsubscribeUrl}>`,
+        "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+      },
+      text: [
+        `${greeting},`,
+        ``,
+        `tady je váš týdenní přehled z hraju.cz.`,
+        reviewsText,
+        postsText,
+        eventsText,
+        `S pozdravem,`,
+        `tým hraju.cz`,
+        ``,
+        `---`,
+        `Nechcete dostávat týdenní přehled? Odhlaste se: ${unsubscribeUrl}`,
+      ].join("\n"),
+      html: `
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #18181b;">Týdenní přehled z hraju.cz</h2>
+          <p>${greeting},</p>
+          <p>tady je váš týdenní přehled z hraju.cz.</p>
+          ${reviewsHtml}
+          ${postsHtml}
+          ${eventsHtml}
+          <p style="margin: 24px 0;">
+            <a href="https://www.hraju.cz" style="background: #059669; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+              Prozkoumat hraju.cz
+            </a>
+          </p>
+          <hr style="border: none; border-top: 1px solid #e4e4e7; margin: 24px 0;" />
+          <p style="color: #a1a1aa; font-size: 12px;">
+            hraju.cz – sportoviště v Česku |
+            <a href="${unsubscribeUrl}" style="color: #a1a1aa;">Odhlásit se z týdenního přehledu</a>
+          </p>
+        </div>
+      `,
+    });
+    return true;
+  } catch (error) {
+    console.error("Failed to send weekly digest email:", error);
+    return false;
+  }
+}
+
 interface OutreachEmailParams {
   facilityName: string;
   facilityUrl: string;

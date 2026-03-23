@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { sendReviewNotificationEmail } from "@/lib/email";
+import { sendReviewNotificationEmail, sendNewReviewOnFacilityEmail } from "@/lib/email";
 import { getUserSession } from "@/lib/user-auth";
+import { findUsersToNotifyAboutReview, getUnsubscribeToken, buildUnsubscribeUrl } from "@/lib/notifications";
 
 // GET /api/facilities/[id]/reviews — list approved reviews (paginated, newest first)
 export async function GET(
@@ -154,6 +155,30 @@ export async function POST(
       }
     }).catch(() => {});
   }
+
+  // Notify users who checked in or reviewed this facility (fire-and-forget)
+  findUsersToNotifyAboutReview(id, session.userId).then(async (users) => {
+    const sportSlug = facility.sports[0]?.sport.slug || "tenis";
+    const facilityUrl = `https://www.hraju.cz/sport/${sportSlug}/${facility.slug}`;
+    for (const user of users) {
+      try {
+        const token = await getUnsubscribeToken(user.id);
+        const unsubUrl = buildUnsubscribeUrl(token, "all");
+        await sendNewReviewOnFacilityEmail(
+          user.email,
+          user.name,
+          facility.name,
+          authorName.trim(),
+          rating,
+          text?.trim() || null,
+          facilityUrl,
+          unsubUrl
+        );
+      } catch {
+        // fire-and-forget, don't block
+      }
+    }
+  }).catch(() => {});
 
   return NextResponse.json({ id: review.id, message: "Děkujeme za recenzi! Bude zobrazena po schválení." }, { status: 201 });
 }

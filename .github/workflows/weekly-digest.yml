@@ -1,0 +1,18 @@
+name: Weekly Email Digest
+
+on:
+  schedule:
+    # Monday 7:00 UTC = 9:00 CEST (9 AM Czech time)
+    - cron: '0 7 * * 1'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  send-digest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send weekly digest emails
+        run: |
+          curl -s -X POST \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            -H "Content-Type: application/json" \
+            "${{ vars.PRODUCTION_URL || 'https://www.hraju.cz' }}/api/cron/weekly-digest"

@@ -228,17 +228,20 @@ model Review {
 }
 
 model User {
-  id           String   @id @default(cuid())
-  email        String   @unique
-  name         String?
-  passwordHash String?
-  isSeed       Boolean  @default(false)
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
-  reviews      Review[]
-  visits       Visit[]
-  loginTokens  LoginToken[]
-  events       TouristEvent[]
+  id                 String   @id @default(cuid())
+  email              String   @unique
+  name               String?
+  passwordHash       String?
+  isSeed             Boolean  @default(false)
+  emailNotifications Boolean  @default(true)
+  weeklyDigest       Boolean  @default(true)
+  unsubscribeToken   String?  @unique
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  reviews            Review[]
+  visits             Visit[]
+  loginTokens        LoginToken[]
+  events             TouristEvent[]
 }
 
 model Visit {
