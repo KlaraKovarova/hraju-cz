@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-03-23T12:03:00.000Z",
+  "exportedAt": "2026-03-23T21:32:23.558Z",
   "sports": [
     {
       "id": "jk8Hpc3Zm68PmcBn",
@@ -16762,6 +16762,54 @@
       "country": "CZ",
       "lat": null,
       "lng": null
+    },
+    {
+      "id": "cmn3pa0gh0046w48o9u9z0u6g",
+      "city": "Vsetín",
+      "region": "Zlínský kraj",
+      "country": "CZ",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "cmn3pa0md004aw48ohmi1ga91",
+      "city": "Rožnov pod Radhoštěm",
+      "region": "Zlínský kraj",
+      "country": "CZ",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "cmn3pa1l1004qw48oqodgxllg",
+      "city": "Černožice nad Labem",
+      "region": "Královéhradecký kraj",
+      "country": "CZ",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "cmn3pa2v5005cw48o2xawsgrj",
+      "city": "Přerov",
+      "region": "Olomoucký kraj",
+      "country": "CZ",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "cmn3pa428005yw48opqwhyxrz",
+      "city": "Polička",
+      "region": "Pardubický kraj",
+      "country": "CZ",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "cmn3pa47r0062w48ozis2hitg",
+      "city": "Zubří",
+      "region": "Zlínský kraj",
+      "country": "CZ",
+      "lat": null,
+      "lng": null
     }
   ],
   "amenities": [
@@ -19480,7 +19528,7 @@
       "pricing": null,
       "openingHours": null,
       "website": null,
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -19498,7 +19546,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.heliosjeseniky.cz/apartman-staric/",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -22198,7 +22246,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.babolatstore.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -27004,7 +27052,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.bowlingpec.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -27814,7 +27862,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "http://bowlingholesov.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -29236,7 +29284,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.bowlingvinarna.com",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -29254,7 +29302,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://bowlingvinarna.com",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -30532,7 +30580,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.bytstyl.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -30892,7 +30940,7 @@
       "pricing": null,
       "openingHours": null,
       "website": null,
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -37894,7 +37942,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.zsterera.com",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -50098,7 +50146,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.moraviangolf.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -50782,7 +50830,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.golfplan.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -51178,7 +51226,7 @@
       "pricing": null,
       "openingHours": null,
       "website": null,
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -53176,7 +53224,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://discgolfpark.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -53932,7 +53980,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.penzionykamenice.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -57838,7 +57886,7 @@
       "pricing": null,
       "openingHours": null,
       "website": null,
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -58504,7 +58552,7 @@
       "pricing": null,
       "openingHours": null,
       "website": null,
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -58900,7 +58948,7 @@
       "pricing": null,
       "openingHours": null,
       "website": null,
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -60376,7 +60424,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "http://www.kvbillard.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -65272,7 +65320,7 @@
       "pricing": null,
       "openingHours": null,
       "website": null,
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -66460,7 +66508,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.lingmei.eu",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -66874,7 +66922,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://lovevelo.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -68818,7 +68866,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.dobrenavyky.cz/",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -72202,7 +72250,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://vizezdravi.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -75010,7 +75058,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.montkovo.cz/",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -75388,7 +75436,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.venkovnihry.eu",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -78592,7 +78640,7 @@
       "pricing": null,
       "openingHours": null,
       "website": null,
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -80806,7 +80854,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.dusek-sportservis.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -81238,7 +81286,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://vyhlidkalipno.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -81256,7 +81304,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "http://www.bowling-bar-zdirec.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -83398,7 +83446,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "http://www.pktenis.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -87106,7 +87154,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.rakety-online.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -89068,7 +89116,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.mestanskydum.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -89086,7 +89134,7 @@
       "pricing": null,
       "openingHours": null,
       "website": null,
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -90202,7 +90250,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.sportcentrum-smilovice.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -97762,7 +97810,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.sporthotel-bohemia.cz/",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -110776,7 +110824,7 @@
       "pricing": null,
       "openingHours": null,
       "website": null,
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -110794,7 +110842,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.tenislife.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -126202,7 +126250,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.vypleteno.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -127012,7 +127060,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "http://martinadubova2sweb.webmium.com",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -128182,7 +128230,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.zsmecholupy.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -128650,7 +128698,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "http://www.modraskola.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -128686,7 +128734,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "http://www.zsvychodni.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -149932,7 +149980,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://shop.gulls.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -158266,6 +158314,1356 @@
       "isActive": true,
       "isClaimed": false,
       "isPremium": false
+    },
+    {
+      "id": "cmn3l4ghf0000078oojnd434f",
+      "slug": "via-ferraty-peklo-kolin",
+      "name": "Via Ferraty Peklo",
+      "description": "Zajištěné cesty nad rybníkem Peklo v Kolíně. Dvě trasy — Školka (B, 35 m) pro začátečníky a děti, a Peklo (C, 220 m) s lanovým mostem a výhledy. Otevřeno v červenci 2025.",
+      "address": "Rybník Peklo, Kolín",
+      "postalCode": null,
+      "locationId": "jNFjwM0ofK4oJ_Vx",
+      "lat": 50.0258,
+      "lng": 15.173,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.mukolin.cz/via-ferraty/ds-1612",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3l4gs00003078osv8088jn",
+      "slug": "certovy-skaly-as",
+      "name": "Čertovy Skály",
+      "description": "Ferratová trasa na Čertových skalách u Aše v nadmořské výšce 666 m. Obtížnost A–C, délka 80 m. Trasa po skalách s lávkou a výhledy do okolí. Otevřeno v dubnu 2025.",
+      "address": "Čertovy skály, Aš",
+      "postalCode": null,
+      "locationId": "T8Hnqs5ciKkMEJKt",
+      "lat": 50.2415,
+      "lng": 12.2056,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.ferratacertovyskaly.cz",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3l4h2g0006078ocj2dnwxy",
+      "slug": "ferrata-mlada-vozice",
+      "name": "Ferrata Mladá Vožice",
+      "description": "Ferratový areál v Podhradí u Mladé Vožice se třemi trasami — Hasičská (B, 40 m), Paraplíčko (C, 70 m) a Cesta na hrad (D, 80 m). Celková délka 190 m. Vhodné pro začátečníky i pokročilé.",
+      "address": "Podhradí, Mladá Vožice",
+      "postalCode": null,
+      "locationId": "3j_mwsEQrpX25eHu",
+      "lat": 49.5323,
+      "lng": 14.8151,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.ferratavozice.cz",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9pfe0000w48oui314s82",
+      "slug": "boulder-bar-holesovice",
+      "name": "Boulder Bar Holešovice (Jungle)",
+      "description": "Jedna z nejznámějších boulderových stěn v Praze v areálu Holešovice.",
+      "address": "U Výstaviště 11",
+      "postalCode": "170 00",
+      "locationId": "praha-7-loc",
+      "lat": 50.1044,
+      "lng": 14.4253,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://holesovice.jungle.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9pmd0003w48opexy9316",
+      "slug": "lezecka-stena-gutovka",
+      "name": "Lezecká stěna Gutovka",
+      "description": "Lezecká stěna ve sportovním areálu Gutovka na Praze 10 s venkovní i vnitřní částí.",
+      "address": "Gutova 39",
+      "postalCode": "100 00",
+      "locationId": "praha-10-loc",
+      "lat": 50.0714,
+      "lng": 14.4702,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://gutovka.cz/lezecka-stena/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9px90006w48ov2jzl24d",
+      "slug": "lokal-blok-praha",
+      "name": "Lokal Blok",
+      "description": "Boulderová hala s více než 500 m² lezeckých profilů a 55+ vyznačenými cestami různé obtížnosti.",
+      "address": "Náměstí 14. října 10",
+      "postalCode": "150 00",
+      "locationId": "praha-5-loc",
+      "lat": 50.0718,
+      "lng": 14.4035,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.lokalblok.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9q4b0009w48ogsny20rt",
+      "slug": "sc-palmovka-lezeni",
+      "name": "SC Palmovka",
+      "description": "Sportovní centrum s lezeckou stěnou a boulderem.",
+      "address": "Na Žertvách 34",
+      "postalCode": "180 00",
+      "locationId": "praha-8-loc",
+      "lat": 50.1013,
+      "lng": 14.4713,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.scpalmovka.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9qd4000cw48oa6zklnbx",
+      "slug": "ultraant-lezecke-centrum",
+      "name": "UltraAnt lezecké centrum",
+      "description": "Lezecké centrum v centru Prahy nabízející boulder a tréninkové kurzy.",
+      "address": "Týnská 21",
+      "postalCode": "110 00",
+      "locationId": "praha-1-loc",
+      "lat": 50.088,
+      "lng": 14.4235,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://ultraant.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9qjr000fw48ozoulhuul",
+      "slug": "boulder-myway-cakovice",
+      "name": "Boulder MyWay Čakovice",
+      "description": "Boulderová stěna na okraji Prahy v Čakovicích.",
+      "address": "Oderská 335",
+      "postalCode": "196 00",
+      "locationId": "praha-9-loc",
+      "lat": 50.1553,
+      "lng": 14.4987,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://lezeckastenacakovice.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9qt6000iw48obs9czz3s",
+      "slug": "lezecke-centrum-radotin",
+      "name": "Lezecké centrum Radotín",
+      "description": "Lezecké centrum v radotínské sportovní hale s lezeckými a boulderovými stěnami.",
+      "address": "U Starého Stadionu 1585/4",
+      "postalCode": "153 00",
+      "locationId": "praha-5-loc",
+      "lat": 49.9857,
+      "lng": 14.3558,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://halaradotin.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9r1o000lw48ouu0vb6zr",
+      "slug": "prostor-letnany",
+      "name": "Prostor Letňany",
+      "description": "Moderní lezecké centrum v Letňanech.",
+      "address": "Veselská 699",
+      "postalCode": "199 00",
+      "locationId": "praha-9-loc",
+      "lat": 50.1289,
+      "lng": 14.5142,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://prostorletnany.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9r8j000ow48ouyf94k8l",
+      "slug": "horolezecka-stena-cibulka",
+      "name": "Horolezecká stěna Cibulka",
+      "description": "Horolezecká stěna ve Squash Parku Cibulka na Praze 5 s výškou až 11 m.",
+      "address": "Fabiánova 1134/20",
+      "postalCode": "150 00",
+      "locationId": "praha-5-loc",
+      "lat": 50.0614,
+      "lng": 14.3614,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.squashpark.cz/cs/sport/horolezecka-stena",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9rgn000rw48oulzlu9o7",
+      "slug": "spin-climbing-praha",
+      "name": "Spin Climbing Praha",
+      "description": "Boulderový a tréninkový prostor na Praze 4.",
+      "address": "Herrmannova 24",
+      "postalCode": "140 00",
+      "locationId": "praha-4-loc",
+      "lat": 50.0492,
+      "lng": 14.4454,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://spinclimbing.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9rln000uw48o0xcpa9es",
+      "slug": "flash-boulder-bar-brno",
+      "name": "Flash Boulder Bar Brno",
+      "description": "Boulder bar v Brně s pravidelně přestavovanými boulderovými cestami.",
+      "address": "Jaroslava Foglara 3149/13",
+      "postalCode": "612 00",
+      "locationId": "QSkaD4ZV0MUuSQMO",
+      "lat": 49.2272,
+      "lng": 16.617,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "http://flashbb.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9rrs000xw48opajrpph2",
+      "slug": "horolezecka-stena-komec-brno",
+      "name": "Horolezecká stěna Komec Brno",
+      "description": "Lezecká stěna ve sportovním areálu Komec se stěnami pro lezení s lanem i bouldering.",
+      "address": "Kounicova 22",
+      "postalCode": "602 00",
+      "locationId": "QSkaD4ZV0MUuSQMO",
+      "lat": 49.2047,
+      "lng": 16.5918,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.komec.cz/lezecka-stena/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9s160010w48onhij9l9q",
+      "slug": "hudy-lezecka-stena-brno",
+      "name": "Hudy lezecká stěna Brno",
+      "description": "Lezecká stěna sítě HUDY v Brně s lezením s lanem i boulderem.",
+      "address": "Vídeňská 99",
+      "postalCode": "639 00",
+      "locationId": "QSkaD4ZV0MUuSQMO",
+      "lat": 49.1745,
+      "lng": 16.5967,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.hudysteny.cz/brno/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9sa10013w48ofw431g0h",
+      "slug": "kotelna-boulder-brno",
+      "name": "Kotelna Boulder Brno",
+      "description": "Boulderová stěna v brněnské Zábrdovicích.",
+      "address": "Zábrdovická 10",
+      "postalCode": "615 00",
+      "locationId": "QSkaD4ZV0MUuSQMO",
+      "lat": 49.2048,
+      "lng": 16.6264,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://kotelna-boulder8.webnode.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9skc0016w48ovw0mjrgu",
+      "slug": "tendon-blok-ostrava",
+      "name": "Tendon Blok Ostrava",
+      "description": "Jedno z největších lezeckých center na severní Moravě, součást sítě Tendon s lezením i boulderem.",
+      "address": "Sady Jožky Jabůrkové",
+      "postalCode": "702 00",
+      "locationId": "KbTVx9oWTuXVciZK",
+      "lat": 49.8378,
+      "lng": 18.2928,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://blokcentrum.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9svc0019w48oxc6d3pez",
+      "slug": "tendon-hlubina-ostrava",
+      "name": "Tendon Hlubina Ostrava",
+      "description": "Lezecké centrum v industriálním areálu Dolní oblasti Vítkovic.",
+      "address": "Dolní oblast Vítkovice",
+      "postalCode": "703 00",
+      "locationId": "KbTVx9oWTuXVciZK",
+      "lat": 49.8165,
+      "lng": 18.2774,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://tendonhlubina.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9t6t001cw48ocltmaltm",
+      "slug": "horolezecka-stena-eliass-ostrava",
+      "name": "Horolezecká stěna Eliass Ostrava",
+      "description": "Horolezecká stěna v Ostravě provozovaná společností Alpsport.",
+      "address": "Hrušovská 2583/20",
+      "postalCode": "702 00",
+      "locationId": "KbTVx9oWTuXVciZK",
+      "lat": 49.835,
+      "lng": 18.2683,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://lezeckastena.alpsport.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9thv001fw48owoocnhw6",
+      "slug": "druzba-boulder-ostrava",
+      "name": "Družba Boulder Ostrava",
+      "description": "Boulderová stěna v Ostravě-Porubě.",
+      "address": "Žilinská 13",
+      "postalCode": "709 00",
+      "locationId": "KbTVx9oWTuXVciZK",
+      "lat": 49.8203,
+      "lng": 18.1718,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.facebook.com/Druzbaboulder/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9tqw001iw48oxnp0c81r",
+      "slug": "cdu-sport-ostrava-vyskovice",
+      "name": "CDU Sport Ostrava-Výškovice",
+      "description": "Lezecká stěna v Ostravě-Výškovicích.",
+      "address": "Charvátská 10",
+      "postalCode": "700 30",
+      "locationId": "KbTVx9oWTuXVciZK",
+      "lat": 49.7954,
+      "lng": 18.2198,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.cdusport.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9tzz001lw48owe6aamgq",
+      "slug": "sport-centrum-koloseum-plzen",
+      "name": "Sport Centrum Koloseum Plzeň",
+      "description": "Horolezecká stěna ve Sport Centru Koloseum v Plzni s výškou přes 10 m.",
+      "address": "Sokolovská 74",
+      "postalCode": "323 00",
+      "locationId": "JUHRH-tN8bQaFHGS",
+      "lat": 49.7488,
+      "lng": 13.3694,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://sport-plzen.cz/sluzby/horolezecka-stena-plzen",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9ua4001ow48o14xmgt5w",
+      "slug": "lezecka-stena-hannah-plzen",
+      "name": "Lezecká stěna Hannah Plzeň",
+      "description": "Městská sportovní hala v Plzni s lezeckou stěnou provozovanou TJ Lokomotiva.",
+      "address": "Úslavská 75",
+      "postalCode": "301 00",
+      "locationId": "JUHRH-tN8bQaFHGS",
+      "lat": 49.7269,
+      "lng": 13.3787,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.tjloko-plzen.cz/cz/sportovni-areal/lezecka-stena/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9ug1001rw48olfajqvkl",
+      "slug": "skoda-sport-park-lezecka-vez-plzen",
+      "name": "Škoda Sport Park – Lezecká věž Plzeň",
+      "description": "Venkovní lezecká věž ve Škoda Sport Parku v Plzni.",
+      "address": "Malostranská 2",
+      "postalCode": "301 00",
+      "locationId": "JUHRH-tN8bQaFHGS",
+      "lat": 49.7498,
+      "lng": 13.3535,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://skodasportpark.cz/sportoviste/lezecka-vez/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9uqa001uw48odvqh7vee",
+      "slug": "sutr-liberec",
+      "name": "Šutr Liberec",
+      "description": "Největší boulderové centrum v Liberci s moderními stěnami a kavárnou.",
+      "address": "Hrazená 470",
+      "postalCode": "460 01",
+      "locationId": "9-vrx5y_dZlyEix0",
+      "lat": 50.7628,
+      "lng": 15.0565,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://sutr.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9uzp001xw48oflkj89cc",
+      "slug": "lezecka-stena-harcov-liberec",
+      "name": "Lezecká stěna Harcov Liberec",
+      "description": "Lezecká stěna TU Liberec v Harcově, přístupná i veřejnosti.",
+      "address": "Na Bohdalci 715",
+      "postalCode": "460 15",
+      "locationId": "9-vrx5y_dZlyEix0",
+      "lat": 50.7567,
+      "lng": 15.0829,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://ktv.fp.tul.cz/katedra/sportoviste",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9vag0020w48o20asmlex",
+      "slug": "flash-wall-olomouc",
+      "name": "FLASH WALL Olomouc",
+      "description": "Lezecké centrum v Olomouci s 1 200 m² lezecké plochy, výškou 13 m a 180 cestami od obtížnosti 3 do 8a.",
+      "address": "U Panelárny 4",
+      "postalCode": "772 00",
+      "locationId": "Qc-xdcIGA7eAL0I0",
+      "lat": 49.5852,
+      "lng": 17.2722,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "http://flashwall.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9vlv0023w48oyy98240v",
+      "slug": "lezecke-centrum-u-pajka-olomouc",
+      "name": "Lezecké centrum U Pajka Olomouc",
+      "description": "Tradiční olomoucké lezecké centrum s lezením na laně i boulderem.",
+      "address": "Karolíny Světlé 14",
+      "postalCode": "779 00",
+      "locationId": "Qc-xdcIGA7eAL0I0",
+      "lat": 49.5953,
+      "lng": 17.2508,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.pajkland.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9vwe0026w48oo53hjaec",
+      "slug": "lezecka-stena-hradec-kralove",
+      "name": "Lezecká stěna Hradec Králové",
+      "description": "Největší lezecká stěna v Hradci Králové se 600 m² pro lezení na laně a 200+ m² boulderingu.",
+      "address": "Brněnská 302",
+      "postalCode": "500 06",
+      "locationId": "i7F5IkNFpaN-WWW_",
+      "lat": 50.2049,
+      "lng": 15.8199,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.stenahk.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9w5h0029w48o3gm8bsrb",
+      "slug": "lezecka-stena-lanovka-ceske-budejovice",
+      "name": "Lezecká stěna Lanovka České Budějovice",
+      "description": "Oblíbená lezecká stěna v centru Českých Budějovic.",
+      "address": "Lannova 2",
+      "postalCode": "370 01",
+      "locationId": "bjFGoXrrYwx4nEqO",
+      "lat": 48.9756,
+      "lng": 14.4742,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.stenalanovka.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9wft002cw48o62arros8",
+      "slug": "skp-policie-ceske-budejovice",
+      "name": "SKP Policie České Budějovice",
+      "description": "Lezecká stěna provozovaná SKP Policie v Českých Budějovicích.",
+      "address": "Kubatova 25",
+      "postalCode": "370 04",
+      "locationId": "bjFGoXrrYwx4nEqO",
+      "lat": 48.9693,
+      "lng": 14.4465,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://vylezskp.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9wlc002fw48ou5kig4qq",
+      "slug": "jungle-pardubice-4-move",
+      "name": "Jungle Pardubice (4 Move)",
+      "description": "Největší lezecké centrum v Pardubicích s boulderem i lezením na laně.",
+      "address": "Sladkovského 505",
+      "postalCode": "530 02",
+      "locationId": "MjUe9XsefdKsRUip",
+      "lat": 50.0314,
+      "lng": 15.7681,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.junglepardubice.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9wsn002iw48odqlmf7qa",
+      "slug": "boulder-bar-gekon-pardubice",
+      "name": "Boulder Bar Gekon Pardubice",
+      "description": "Boulderový bar v Pardubicích.",
+      "address": "Sladkovského 505",
+      "postalCode": "530 02",
+      "locationId": "MjUe9XsefdKsRUip",
+      "lat": 50.0314,
+      "lng": 15.7685,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "http://www.gekon-boulderbar.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9wxm002lw48oz14mg7he",
+      "slug": "h-centrum-lezecka-stena-pardubice",
+      "name": "H-centrum lezecká stěna",
+      "description": "Lezecká stěna v areálu H-centra u Pardubic.",
+      "address": "Staré Hradiště 197",
+      "postalCode": "533 52",
+      "locationId": "MjUe9XsefdKsRUip",
+      "lat": 50.0644,
+      "lng": 15.7368,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://hcentrum.net/lezecka-stena/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9x5h002ow48ocjomvw4i",
+      "slug": "lezecka-stena-karlovy-vary",
+      "name": "Lezecká stěna Karlovy Vary",
+      "description": "Lezecká stěna v Karlových Varech o ploše ~550 m², výšce 11 m a ~100 cestami.",
+      "address": "Kapitána Jaroše 376",
+      "postalCode": "360 01",
+      "locationId": "7jfV4wpW3taLLauY",
+      "lat": 50.2324,
+      "lng": 12.8589,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://kvstena.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9xai002rw48o4ppwionk",
+      "slug": "crux-boulder-karlovy-vary",
+      "name": "Crux Boulder Karlovy Vary",
+      "description": "Boulderová stěna v centru Karlových Varů.",
+      "address": "T.G. Masaryka 12",
+      "postalCode": "360 01",
+      "locationId": "7jfV4wpW3taLLauY",
+      "lat": 50.2286,
+      "lng": 12.8714,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.facebook.com/stenacrux/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9xfq002uw48o76uekobo",
+      "slug": "outdoorcentrum-kladno",
+      "name": "OUTDOORCENTRUM Kladno",
+      "description": "Lezecká stěna v Kladně s výškou až 18 m a cestami obtížnosti 3–9 UIAA, pravidelně přestavovanými.",
+      "address": "Huťská",
+      "postalCode": "272 01",
+      "locationId": "stq27X9XZqxltSsc",
+      "lat": 50.1437,
+      "lng": 14.1031,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.stenakladno.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9xnf002xw48oc2segz0u",
+      "slug": "hudy-lezecka-stena-usti-nad-labem",
+      "name": "Hudy Lezecká Stěna Ústí nad Labem",
+      "description": "Lezecká stěna sítě HUDY v Ústí nad Labem s lezením a boulderem.",
+      "address": "Pražská 21",
+      "postalCode": "400 01",
+      "locationId": "1Lu08o1BZb-xmjW_",
+      "lat": 50.6611,
+      "lng": 14.0383,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.hudysteny.cz/usti/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9xsl0030w48oimdwoe3f",
+      "slug": "lezecke-centrum-vertikon-zlin",
+      "name": "Lezecké centrum Vertikon Zlín",
+      "description": "Jedno z největších lezeckých center v ČR s 900 m² stěn v 15×18 m hale, výška 16 m.",
+      "address": "K Pasekám 623",
+      "postalCode": "760 01",
+      "locationId": "mrl_LFtGQSoihRAh",
+      "lat": 49.2189,
+      "lng": 17.6611,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.vertikon.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9xzy0033w48oqehsuvhq",
+      "slug": "wall-street-tendon-jihlava",
+      "name": "Wall Street Tendon Jihlava",
+      "description": "Lezecké centrum Tendon v Jihlavě s lezením na laně i boulderem.",
+      "address": "Strojírenská 4/7",
+      "postalCode": "586 01",
+      "locationId": "aRURo1xiywaK5u0f",
+      "lat": 49.3932,
+      "lng": 15.5785,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "http://www.lezecke-centrum-jihlava.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9y5j0036w48okfv0tz37",
+      "slug": "lezecka-arena-makakarena-jablonec",
+      "name": "Lezecká aréna Makakaréna Jablonec",
+      "description": "Lezecká aréna v Jablonci nad Nisou s širokou nabídkou lezeckých cest.",
+      "address": "Liberecká 104",
+      "postalCode": "466 01",
+      "locationId": "taU-bMcjqt9ygcIo",
+      "lat": 50.7297,
+      "lng": 15.1531,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.makakarena.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9ydb0039w48oun2usvzh",
+      "slug": "horolezecka-stena-frydek-mistek",
+      "name": "Horolezecká stěna Frýdek-Místek",
+      "description": "Lezecká stěna ve Frýdku-Místku s lezením na laně a boulderem.",
+      "address": "Pionýrů 2069",
+      "postalCode": "738 01",
+      "locationId": "eOCmgWE-isHj18bE",
+      "lat": 49.6869,
+      "lng": 18.3469,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.horolezeckastenafm.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9yim003cw48o91st36fl",
+      "slug": "atlas-opava-lezecka-stena",
+      "name": "Atlas Opava – lezecká stěna",
+      "description": "Lezecká stěna v Opavě v rámci centra Atlas.",
+      "address": "Purkyňova 12",
+      "postalCode": "746 01",
+      "locationId": "ePB_9BegWMW-0fR-",
+      "lat": 49.9371,
+      "lng": 17.8973,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://atlasopava.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9ynp003fw48ou4xbc5rp",
+      "slug": "lezecka-stena-havlickuv-brod",
+      "name": "Lezecká stěna Havlíčkův Brod",
+      "description": "Lezecká stěna provozovaná Road Outdoor v Havlíčkově Brodě.",
+      "address": "Wolkerova 2941",
+      "postalCode": "580 01",
+      "locationId": "EGdr_tyHuReaA_QY",
+      "lat": 49.6038,
+      "lng": 15.5701,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.roadoutdoor.cz/lezecka-stena",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9yuj003iw48ozzctcvtw",
+      "slug": "lezecka-stena-jicin",
+      "name": "Lezecká stěna Jičín",
+      "description": "Lezecká stěna v Jičíně provozovaná LKP.",
+      "address": "Poděbradova 18",
+      "postalCode": "506 01",
+      "locationId": "HEnQAfP-W_EhheOx",
+      "lat": 50.4378,
+      "lng": 15.3591,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.lkp.cz/stena/informace/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9yz6003lw48oytjkz4na",
+      "slug": "lezetop-pisek",
+      "name": "LezeTop Písek",
+      "description": "Lezecká stěna v Písku s cestami pro začátečníky i pokročilé.",
+      "address": "U Vodárny 1506",
+      "postalCode": "397 01",
+      "locationId": "SSSZVIvk_2qt_x1P",
+      "lat": 49.3132,
+      "lng": 14.1459,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.stenapisek.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9z6r003ow48ohv5zcbez",
+      "slug": "boulder-bar-novy-jicin",
+      "name": "Boulder Bar Nový Jičín",
+      "description": "Boulderový bar v Novém Jičíně.",
+      "address": "Mendelova střední škola",
+      "postalCode": "741 01",
+      "locationId": "yeUd4Yerei-pKc_z",
+      "lat": 49.5946,
+      "lng": 18.0092,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.facebook.com/BoulderBarNovyJicin/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9zdk003rw48o184yyanz",
+      "slug": "horolezecka-stena-lanskroun",
+      "name": "Horolezecká stěna Lanškroun",
+      "description": "Horolezecká stěna v Lanškrouně.",
+      "address": "Nám. A. Jiráska 139",
+      "postalCode": "563 01",
+      "locationId": "6ayGLPOomBkAFLaJ",
+      "lat": 49.9123,
+      "lng": 16.6117,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.hkla.cz/stena/o-stene",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9znw003uw48ocdqnhy2s",
+      "slug": "lezecka-stena-svitavy",
+      "name": "Lezecká stěna Svitavy",
+      "description": "Horolezecká stěna ve sportovním areálu Svitav.",
+      "address": "Pražská 2",
+      "postalCode": "568 02",
+      "locationId": "nIzLNCvH7WlQtFtL",
+      "lat": 49.7551,
+      "lng": 16.4689,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.sportes.svitavy.cz/cs/m-25-horolezecka-stena/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3p9zuj003xw48og0oum9e8",
+      "slug": "horolezecka-stena-sumperk",
+      "name": "Horolezecká stěna Šumperk",
+      "description": "Lezecká stěna v Šumperku.",
+      "address": "Jesenická",
+      "postalCode": "787 01",
+      "locationId": "pG7KLFImB_v1A1TH",
+      "lat": 49.9678,
+      "lng": 16.9744,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://stenaspk.cz/lezecka-stena/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa02g0040w48o7mtc6u8z",
+      "slug": "tj-alpin-trebic-lezecka-stena",
+      "name": "TJ Alpin Třebíč – lezecká stěna",
+      "description": "Lezecká stěna provozovaná TJ Alpin v Třebíči s pravidelnými tréninky.",
+      "address": "Benešova 585",
+      "postalCode": "674 01",
+      "locationId": "_PaywG4xzvmM2sIy",
+      "lat": 49.2177,
+      "lng": 15.8863,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.tj-alpin.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa0a20043w48ofim4m3fx",
+      "slug": "lezecka-stena-svc-trutnov",
+      "name": "Lezecká stěna SVČ Trutnov",
+      "description": "Lezecká stěna ve Středisku volného času v Trutnově.",
+      "address": "Komenského 399",
+      "postalCode": "541 01",
+      "locationId": "QxjWShX7rtcVC1Wv",
+      "lat": 50.5612,
+      "lng": 15.9143,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.svctrutnov.cz/lezecka-stena-p111/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa0hq0047w48o9v1wdsj6",
+      "slug": "lezecka-stena-vsetin",
+      "name": "Lezecká stěna Vsetín",
+      "description": "Lezecká stěna na Vsetíně v areálu na Luhu.",
+      "address": "Luh 1544",
+      "postalCode": "755 01",
+      "locationId": "cmn3pa0gh0046w48o9u9z0u6g",
+      "lat": 49.3392,
+      "lng": 17.9919,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "http://stenaluh.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa0o2004bw48ow35i7e2k",
+      "slug": "lezecka-stena-roznov-pod-radhostem",
+      "name": "Lezecká stěna Rožnov pod Radhoštěm",
+      "description": "Horolezecká stěna v Rožnově pod Radhoštěm.",
+      "address": "5. května 1700",
+      "postalCode": "756 61",
+      "locationId": "cmn3pa0md004aw48ohmi1ga91",
+      "lat": 49.4581,
+      "lng": 18.1426,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.facebook.com/HorolezeckaStenaRoznovPodRadhostem",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa0vu004ew48orrjscl8f",
+      "slug": "boulder-bar-znojmo",
+      "name": "Boulder Bar Znojmo",
+      "description": "Boulderový bar ve Znojmě.",
+      "address": "Husovy sady",
+      "postalCode": "669 02",
+      "locationId": "3kHKxIKrG-JDE2ts",
+      "lat": 48.8564,
+      "lng": 16.0504,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.facebook.com/HorolezeckaStenaZnojmo/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa111004hw48o16hl7zs9",
+      "slug": "horolezecka-stena-breclav",
+      "name": "Horolezecká stěna Břeclav",
+      "description": "Horolezecká stěna v Břeclavi provozovaná HK Pálavský Věšák.",
+      "address": "Veslařská 1",
+      "postalCode": "690 02",
+      "locationId": "weamXz1_9fje6GOa",
+      "lat": 48.7561,
+      "lng": 16.8854,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.facebook.com/hkpalavskyvesak/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa18y004kw48ofx2xp4k9",
+      "slug": "lsd-lezecka-stena-dufek-kurim",
+      "name": "L.S.D. – Lezecká Stěna Dufek Kuřim",
+      "description": "Lezecká stěna v Kuřimi u Brna s lezením na laně i boulderem.",
+      "address": "Tyršova 480",
+      "postalCode": "664 34",
+      "locationId": "vo71cuVUm-6fHsoV",
+      "lat": 49.2994,
+      "lng": 16.5313,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.lezeckastenakurim.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa1e7004nw48ovohnoeex",
+      "slug": "replay-boulder-frenstat",
+      "name": "Replay Boulder Frenštát",
+      "description": "Boulderová stěna ve Frenštátu pod Radhoštěm v rámci Replay Sport Centra.",
+      "address": "Rožnovská 241",
+      "postalCode": "744 01",
+      "locationId": "nfJ6iEtyz5SkWBo4",
+      "lat": 49.5483,
+      "lng": 18.2111,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.replaysc.cz/boulder-lezecka-stena-2/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa1m9004rw48o7efwfjhs",
+      "slug": "lezecka-stena-cernozice",
+      "name": "Lezecká stěna Černožice",
+      "description": "Lezecká a bouldrová stěna v Černožicích nad Labem.",
+      "address": "Generála Svobody 177",
+      "postalCode": "503 04",
+      "locationId": "cmn3pa1l1004qw48oqodgxllg",
+      "lat": 50.3444,
+      "lng": 15.8386,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.cernozice.cz/stena/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa1rm004uw48o4hga8nbo",
+      "slug": "lezecka-stena-ceska-trebova",
+      "name": "Lezecká stěna Česká Třebová",
+      "description": "Lezecká stěna v České Třebové.",
+      "address": "Habrmanova 1500",
+      "postalCode": "560 02",
+      "locationId": "oqIvbiUcz7oE6oe7",
+      "lat": 49.9017,
+      "lng": 16.4439,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.horo-ct.cz/domains/horo-ct.cz/lezecka-stena/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa1zv004xw48o83wkq09h",
+      "slug": "lezecka-stena-bela-decin",
+      "name": "Lezecká stěna Bělá (Děčín)",
+      "description": "Lezecká stěna v Děčíně-Bělé, oblíbená díky blízkosti Labských pískovců.",
+      "address": "Tělocvičná 9",
+      "postalCode": "405 02",
+      "locationId": "PAK1tRWujhEO4r_4",
+      "lat": 50.7718,
+      "lng": 14.2303,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://lezeckastenabela.wixsite.com/lezeckastenabela/cs",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa26e0050w48o2nuk75na",
+      "slug": "lezecka-stena-kolin",
+      "name": "Lezecká stěna Kolín",
+      "description": "Lezecká stěna v Kolíně.",
+      "address": "Pod Novým Mostem",
+      "postalCode": "280 02",
+      "locationId": "jNFjwM0ofK4oJ_Vx",
+      "lat": 50.0302,
+      "lng": 15.199,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://hopsuk.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa2dz0053w48o3akixmyc",
+      "slug": "lezecka-stena-kutna-hora",
+      "name": "Lezecká stěna Kutná Hora",
+      "description": "Lezecká stěna v areálu gymnázia v Kutné Hoře.",
+      "address": "Jaselská 932",
+      "postalCode": "284 01",
+      "locationId": "QrNr5hdblLcEXGOM",
+      "lat": 49.9528,
+      "lng": 15.2639,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://stenakh.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa2jf0056w48ogg9bg33l",
+      "slug": "walzel-lezecka-stena-mezimesti",
+      "name": "Walzel lezecká stěna Meziměstí",
+      "description": "Lezecká stěna v areálu Walzel v Meziměstí.",
+      "address": "Dlouhá 138",
+      "postalCode": "549 81",
+      "locationId": "OtdL0-a2-s6wgFwY",
+      "lat": 50.6246,
+      "lng": 16.2424,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.walzel.cz/lezecka-stena",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa2os0059w48owar61veb",
+      "slug": "lezecka-stena-mseno",
+      "name": "Lezecká stěna Mšeno",
+      "description": "Lezecká stěna ve Mšeně – vstupní brána do Kokořínského dolu.",
+      "address": "Sokolovna",
+      "postalCode": "277 35",
+      "locationId": "2UA7cpm3Y0f5OWeU",
+      "lat": 50.4408,
+      "lng": 14.6327,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.mestomseno.cz/zivot-ve-meste/sport/tj-sokol-mseno/lezecka-stena/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa2we005dw48o0dca9bn9",
+      "slug": "base-camp-prerov",
+      "name": "Base Camp Přerov",
+      "description": "Lezecké centrum Base Camp v Přerově.",
+      "address": "Kainarova 58",
+      "postalCode": "750 02",
+      "locationId": "cmn3pa2v5005cw48o2xawsgrj",
+      "lat": 49.4584,
+      "lng": 17.4566,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://bcprerov.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa317005gw48o9i7dpl41",
+      "slug": "horolezecka-stena-mango-vrchlabi",
+      "name": "Horolezecká stěna Mango Vrchlabí",
+      "description": "Lezecká stěna Mango v Tyršově domě ve Vrchlabí.",
+      "address": "Krkonošská 186",
+      "postalCode": "543 01",
+      "locationId": "KHmiVaufOzhLMANa",
+      "lat": 50.627,
+      "lng": 15.6102,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.facebook.com/lezeckastenaVrchlabi/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa38y005jw48ow03u6btz",
+      "slug": "lezecka-stena-jesenik",
+      "name": "Lezecká stěna Jeseník",
+      "description": "Lezecká stěna v Jeseníku v areálu gymnázia, provozovaná horolezeckým oddílem.",
+      "address": "Komenského 281",
+      "postalCode": "790 01",
+      "locationId": "Yl6FFiVkE_ZdfPjR",
+      "lat": 50.2291,
+      "lng": 17.2064,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://hojesenik.cz/cz/stena/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa3dm005mw48oa10lqxdd",
+      "slug": "lezecka-arena-jirkov",
+      "name": "Lezecká Arena Jirkov",
+      "description": "Lezecká aréna v Jirkově nedaleko Chomutova.",
+      "address": "Ervěnická 1147",
+      "postalCode": "431 11",
+      "locationId": "6ST8iLVBmTiCGTT5",
+      "lat": 50.4989,
+      "lng": 13.4372,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.facebook.com/LezeckaArenaJirkov/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa3l2005pw48o41jttaau",
+      "slug": "boulder-pentagon-tabor",
+      "name": "Boulder Pentagon Tábor",
+      "description": "Boulderová stěna v Táboře.",
+      "address": "Kpt. Jaroše 1290",
+      "postalCode": "390 03",
+      "locationId": "-7ZtKwPl34h17s-j",
+      "lat": 49.414,
+      "lng": 14.6579,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://boulderpentagon.com/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa3qn005sw48ohwfmuef3",
+      "slug": "lezecka-stena-bystrice-nad-pernstejnem",
+      "name": "Lezecká stěna Bystřice nad Pernštejnem",
+      "description": "Lezecká stěna v Areálu sportu v Bystřici nad Pernštejnem.",
+      "address": "Dr. Veselého 754",
+      "postalCode": "593 01",
+      "locationId": "jnapH-rHUQeGKimb",
+      "lat": 49.5229,
+      "lng": 16.2594,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.arealsportu.cz/sportovni-hala",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa3vi005vw48onagd99cc",
+      "slug": "lezu-v-mezu-velke-mezirici",
+      "name": "Lezu v Mezu Velké Meziříčí",
+      "description": "Lezecká stěna ve Velkém Meziříčí.",
+      "address": "Sportovní 7",
+      "postalCode": "594 01",
+      "locationId": "1lWWYOFtD1zhzBnH",
+      "lat": 49.3555,
+      "lng": 16.0133,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.facebook.com/lezuvmezu",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa43f005zw48o6mrw5ufe",
+      "slug": "lezecka-stena-policka",
+      "name": "Lezecká stěna Polička",
+      "description": "Lezecká stěna v Poličce.",
+      "address": "Švermova 401",
+      "postalCode": "572 01",
+      "locationId": "cmn3pa428005yw48opqwhyxrz",
+      "lat": 49.7148,
+      "lng": 16.2645,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.facebook.com/stenapolicka/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn3pa48x0063w48ot20nsnmk",
+      "slug": "lezecka-stena-zubri",
+      "name": "Lezecká stěna Zubří",
+      "description": "Lezecká stěna v Zubří u Rožnova pod Radhoštěm.",
+      "address": "Převrátí 1009",
+      "postalCode": "756 54",
+      "locationId": "cmn3pa47r0062w48ozis2hitg",
+      "lat": 49.4653,
+      "lng": 18.0896,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.facebook.com/HorolezeckaStenaZubri/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
     }
   ],
   "facilitySports": [
@@ -158287,7 +159685,7 @@
     },
     {
       "facilityId": "-3b82BP7ODvIg6qY",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "-3nIjSebuOJN1pMi",
@@ -158411,7 +159809,7 @@
     },
     {
       "facilityId": "-THLKnvZv57d3FyA",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "-UxAVFmWaup4qnao",
@@ -158524,6 +159922,10 @@
     {
       "facilityId": "-qwzWkmhSW5CsdpP",
       "sportId": "Uh0ktCqcr3Dxee5g"
+    },
+    {
+      "facilityId": "-rmydx2dCB841LI0",
+      "sportId": "jk8Hpc3Zm68PmcBn"
     },
     {
       "facilityId": "-rmydx2dCB841LI0",
@@ -158683,7 +160085,7 @@
     },
     {
       "facilityId": "0CkOoAHE8OUvcpud",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "0Cxtd6rAb1bSwpzL",
@@ -158851,7 +160253,7 @@
     },
     {
       "facilityId": "0_lApZ0IgSOiPWLe",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "0aK7_EbiSiNZkITO",
@@ -158915,7 +160317,7 @@
     },
     {
       "facilityId": "0jYdR3-T_iIGcFW2",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "0jtLKAWXRE6rzDpG",
@@ -159099,6 +160501,10 @@
     },
     {
       "facilityId": "17nxc3CphtSEtWDx",
+      "sportId": "gfKg-rNgESqqh8sX"
+    },
+    {
+      "facilityId": "17nxc3CphtSEtWDx",
       "sportId": "vnOjIE7Csm18mSLp"
     },
     {
@@ -159167,7 +160573,7 @@
     },
     {
       "facilityId": "1GW03cqHwVVQxRma",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "1GprpYT2mnvS2d_q",
@@ -159203,7 +160609,7 @@
     },
     {
       "facilityId": "1KTlC37NOtkVg1bR",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "1KiFQFDUTXfrf2Jq",
@@ -159523,7 +160929,7 @@
     },
     {
       "facilityId": "2CQC_7h3NIbZ-o9I",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "2DV0Ry6M8S56mJQ-",
@@ -159699,6 +161105,14 @@
     },
     {
       "facilityId": "2dCTAf-Fu7Lo2FAu",
+      "sportId": "a1DtDqL1SQUZe7RG"
+    },
+    {
+      "facilityId": "2dCTAf-Fu7Lo2FAu",
+      "sportId": "jk8Hpc3Zm68PmcBn"
+    },
+    {
+      "facilityId": "2dCTAf-Fu7Lo2FAu",
       "sportId": "yMCWy0g5FP2FPUle"
     },
     {
@@ -159779,7 +161193,7 @@
     },
     {
       "facilityId": "2p18gG6bSYyhQuS7",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "2pK0dfvryxblLWO-",
@@ -159871,7 +161285,7 @@
     },
     {
       "facilityId": "2zsNE6H0tzlUdH3L",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "3-1N30bYZptim10o",
@@ -159923,6 +161337,10 @@
     },
     {
       "facilityId": "38S_ALKkZIigDSaB",
+      "sportId": "jk8Hpc3Zm68PmcBn"
+    },
+    {
+      "facilityId": "38S_ALKkZIigDSaB",
       "sportId": "vnOjIE7Csm18mSLp"
     },
     {
@@ -159971,7 +161389,7 @@
     },
     {
       "facilityId": "3GqIErFCxsGJkTGm",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "3H1Iyfm3os4UvBAN",
@@ -160031,7 +161449,7 @@
     },
     {
       "facilityId": "3UNOkTyo5hDPCmpU",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "3UStj1Q-2J7x69q9",
@@ -160191,7 +161609,11 @@
     },
     {
       "facilityId": "3wy_Eav9sajN6zGz",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
+    },
+    {
+      "facilityId": "3wy_Eav9sajN6zGz",
+      "sportId": "jk8Hpc3Zm68PmcBn"
     },
     {
       "facilityId": "3xqFGogsj2UkLHhb",
@@ -160279,7 +161701,7 @@
     },
     {
       "facilityId": "49t5az2XK8UxjNK_",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "4B2MZUnLs1FcaYIQ",
@@ -160883,6 +162305,10 @@
     },
     {
       "facilityId": "5s991nmQWSp8juPw",
+      "sportId": "jk8Hpc3Zm68PmcBn"
+    },
+    {
+      "facilityId": "5s991nmQWSp8juPw",
       "sportId": "yMCWy0g5FP2FPUle"
     },
     {
@@ -160911,7 +162337,7 @@
     },
     {
       "facilityId": "5wHnSf4Zb-J7BbRL",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "5wPqHYpuAG1eVihU",
@@ -161147,7 +162573,7 @@
     },
     {
       "facilityId": "6Zma1QsuFBvlJJ_3",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "6_03hFV0nj7CZ_3Y",
@@ -161291,7 +162717,7 @@
     },
     {
       "facilityId": "6qXwZlWG5wJcc5so",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "6rRH_68FcjWQJVoF",
@@ -161491,7 +162917,7 @@
     },
     {
       "facilityId": "7MSTj_GrWV-Qi0OP",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "7NAz8KItZryLiJaB",
@@ -161667,7 +163093,7 @@
     },
     {
       "facilityId": "7ohomsBPTTE5KTe0",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "7p6HZaoelEEr73l3",
@@ -162171,7 +163597,7 @@
     },
     {
       "facilityId": "8xIeiLzHgcfjoE6A",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "8xxStkF4HHCBtmK6",
@@ -162271,7 +163697,7 @@
     },
     {
       "facilityId": "9Cxwhtw5F4SLlRDU",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "9Dgpvu17PKxdjrrj",
@@ -163039,7 +164465,7 @@
     },
     {
       "facilityId": "BQHa31hKwHepKU1e",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "BR1moq0PV8EEjy0p",
@@ -163148,6 +164574,10 @@
     {
       "facilityId": "BgpSp8K9Mrk9L1gI",
       "sportId": "Uh0ktCqcr3Dxee5g"
+    },
+    {
+      "facilityId": "BgpysdDuFjbMYk_g",
+      "sportId": "jk8Hpc3Zm68PmcBn"
     },
     {
       "facilityId": "BgpysdDuFjbMYk_g",
@@ -163327,7 +164757,7 @@
     },
     {
       "facilityId": "C6fTEMsST7Egt9g-",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "C7FUt5Li_mjiwx_X",
@@ -163767,7 +165197,7 @@
     },
     {
       "facilityId": "D9Mr9h4rHZCHiFIh",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "D9X_kAdmoS8Kt6u5",
@@ -163899,6 +165329,10 @@
     },
     {
       "facilityId": "DMoqARsgHp7MnNKw",
+      "sportId": "jk8Hpc3Zm68PmcBn"
+    },
+    {
+      "facilityId": "DMoqARsgHp7MnNKw",
       "sportId": "yMCWy0g5FP2FPUle"
     },
     {
@@ -164027,7 +165461,7 @@
     },
     {
       "facilityId": "DgDkqzVGY_nzRo_8",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "DgGcKI-Ot5lX_qT2",
@@ -164699,7 +166133,7 @@
     },
     {
       "facilityId": "FGh9l4E1iwDRw-oz",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "FGoCK3EvuRD3FrOr",
@@ -164795,7 +166229,7 @@
     },
     {
       "facilityId": "FT5ImNMDUu9s0JOE",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "FTcPfBKVfTaJBIFo",
@@ -164867,7 +166301,7 @@
     },
     {
       "facilityId": "FbFMz4KYQVemAytS",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "FbL9l4QXANF-I-Vj",
@@ -164879,7 +166313,7 @@
     },
     {
       "facilityId": "Fcs4sb-sP5fMHONZ",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "FdLbp1D5hAfWJNqp",
@@ -165239,6 +166673,10 @@
     },
     {
       "facilityId": "GVsBX739ObNb5lTz",
+      "sportId": "jk8Hpc3Zm68PmcBn"
+    },
+    {
+      "facilityId": "GVsBX739ObNb5lTz",
       "sportId": "yMCWy0g5FP2FPUle"
     },
     {
@@ -165543,7 +166981,7 @@
     },
     {
       "facilityId": "HFzhHCRJ6BQdPzVu",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "HGrvhPGth_fqYl1h",
@@ -165560,6 +166998,10 @@
     {
       "facilityId": "HJTiEOJHp2n-oy1i",
       "sportId": "vnOjIE7Csm18mSLp"
+    },
+    {
+      "facilityId": "HJUsjfJZa4fLcTMS",
+      "sportId": "jk8Hpc3Zm68PmcBn"
     },
     {
       "facilityId": "HJUsjfJZa4fLcTMS",
@@ -165672,6 +167114,10 @@
     {
       "facilityId": "HY_xf-JWTul1pNnd",
       "sportId": "gfKg-rNgESqqh8sX"
+    },
+    {
+      "facilityId": "HYnP3FWMD8jtxKla",
+      "sportId": "jk8Hpc3Zm68PmcBn"
     },
     {
       "facilityId": "HYnP3FWMD8jtxKla",
@@ -166003,7 +167449,7 @@
     },
     {
       "facilityId": "IU42NQhyVitqB5BC",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "IUCoovWbtTYOt7Hv",
@@ -166163,7 +167609,7 @@
     },
     {
       "facilityId": "Iw985P7bPLL5PlW-",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "IwdG2VNXYCvWKXJo",
@@ -166491,6 +167937,10 @@
     },
     {
       "facilityId": "JrkGYfXH0afTIbDO",
+      "sportId": "jk8Hpc3Zm68PmcBn"
+    },
+    {
+      "facilityId": "JrkGYfXH0afTIbDO",
       "sportId": "yMCWy0g5FP2FPUle"
     },
     {
@@ -166547,7 +167997,7 @@
     },
     {
       "facilityId": "K0gdbADh20h8xaCy",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "K1euedjlADOWZfya",
@@ -166603,7 +168053,7 @@
     },
     {
       "facilityId": "KBWC-0bHAcH3jFSU",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "KBl43GSybhW374Hs",
@@ -166655,7 +168105,7 @@
     },
     {
       "facilityId": "KMSSUL5c1pP5ypYM",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "KNJSnIJQsAM9w1Oc",
@@ -166955,7 +168405,7 @@
     },
     {
       "facilityId": "L5PlU0r-CAPKIWpA",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "L5aN-X52mGIB7xWW",
@@ -167087,6 +168537,10 @@
     },
     {
       "facilityId": "LOUA4yswvWaR1Wao",
+      "sportId": "jk8Hpc3Zm68PmcBn"
+    },
+    {
+      "facilityId": "LOUA4yswvWaR1Wao",
       "sportId": "yMCWy0g5FP2FPUle"
     },
     {
@@ -167147,7 +168601,7 @@
     },
     {
       "facilityId": "LYge3YNEvd6dajqg",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "LZ_KAG9sorEqS0dL",
@@ -167623,6 +169077,10 @@
     },
     {
       "facilityId": "MdTVQkbYMpQtsVKN",
+      "sportId": "jk8Hpc3Zm68PmcBn"
+    },
+    {
+      "facilityId": "MdTVQkbYMpQtsVKN",
       "sportId": "yMCWy0g5FP2FPUle"
     },
     {
@@ -167639,7 +169097,7 @@
     },
     {
       "facilityId": "MlVloG6NZaKhk9MJ",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "MneAa1s0Gr3VEzwS",
@@ -167947,6 +169405,10 @@
     },
     {
       "facilityId": "N_gxYFzGeug50hNo",
+      "sportId": "jk8Hpc3Zm68PmcBn"
+    },
+    {
+      "facilityId": "N_gxYFzGeug50hNo",
       "sportId": "yMCWy0g5FP2FPUle"
     },
     {
@@ -168019,7 +169481,7 @@
     },
     {
       "facilityId": "NlLeYmbjVXatrUdw",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "NlWZzhMPXlU5FR27",
@@ -168159,7 +169621,7 @@
     },
     {
       "facilityId": "O9aaj9Sl7d0hHtU0",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "OBZ2nAzNBTINIKpO",
@@ -168383,7 +169845,7 @@
     },
     {
       "facilityId": "Ou1AlfxmcyPcd-SX",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "OueHm3nU99V9JA0e",
@@ -168444,6 +169906,10 @@
     {
       "facilityId": "P1DTLN_TwGyMO3QQ",
       "sportId": "gfKg-rNgESqqh8sX"
+    },
+    {
+      "facilityId": "P1Jp6MzDsKZzrtYh",
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "P1Jp6MzDsKZzrtYh",
@@ -168743,7 +170209,7 @@
     },
     {
       "facilityId": "PrfUsyCzE7WWBEYx",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "PsI5N22iFo3BhE1s",
@@ -168956,6 +170422,10 @@
     {
       "facilityId": "QT02N6QJ5GsyFFrp",
       "sportId": "vnOjIE7Csm18mSLp"
+    },
+    {
+      "facilityId": "QT9uZaO-EjVBG9Xe",
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "QT9uZaO-EjVBG9Xe",
@@ -169231,7 +170701,7 @@
     },
     {
       "facilityId": "R2ogWdz5djugHxtL",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "R40yRYGZDrVBUDmO",
@@ -169488,6 +170958,10 @@
     {
       "facilityId": "RexRHubEoBRHi1Ya",
       "sportId": "gfKg-rNgESqqh8sX"
+    },
+    {
+      "facilityId": "RfCwOR6QyyFkUV6i",
+      "sportId": "jk8Hpc3Zm68PmcBn"
     },
     {
       "facilityId": "RfCwOR6QyyFkUV6i",
@@ -169931,7 +171405,7 @@
     },
     {
       "facilityId": "Smls-mLimlDCInjg",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "Sp33L1boejDmdZvh",
@@ -170031,7 +171505,11 @@
     },
     {
       "facilityId": "T2paJiPeZdGqXfwV",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
+    },
+    {
+      "facilityId": "T2paJiPeZdGqXfwV",
+      "sportId": "jk8Hpc3Zm68PmcBn"
     },
     {
       "facilityId": "T31pqwEQrYw8aoTh",
@@ -170079,7 +171557,7 @@
     },
     {
       "facilityId": "TBjK4EXoIsBbT2M5",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "TBnh2WMUyaHM8-G1",
@@ -170139,7 +171617,7 @@
     },
     {
       "facilityId": "THIHcH-K5L5zH8j0",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "TIMpxTY2DfQ1wQDH",
@@ -170771,7 +172249,7 @@
     },
     {
       "facilityId": "Up2cWLGJvbZQDVWq",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "UpXWtSRrXGrV9X66",
@@ -171043,6 +172521,10 @@
     },
     {
       "facilityId": "VaZQjpm2S29xNNvf",
+      "sportId": "jk8Hpc3Zm68PmcBn"
+    },
+    {
+      "facilityId": "VaZQjpm2S29xNNvf",
       "sportId": "yMCWy0g5FP2FPUle"
     },
     {
@@ -171255,7 +172737,7 @@
     },
     {
       "facilityId": "WBXqLmueF1HT9-0l",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "WD5Y_2ndY8qKNxpK",
@@ -172343,7 +173825,11 @@
     },
     {
       "facilityId": "Z9aNkVu0MWwfhG1n",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
+    },
+    {
+      "facilityId": "Z9aNkVu0MWwfhG1n",
+      "sportId": "jk8Hpc3Zm68PmcBn"
     },
     {
       "facilityId": "ZAwDG3XAOSFoJlMF",
@@ -172387,7 +173873,7 @@
     },
     {
       "facilityId": "ZK10wN9K7DHzr2QZ",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "ZL8DGbwAh3wGz38N",
@@ -172483,7 +173969,7 @@
     },
     {
       "facilityId": "Zd6GFVrbBHWpx2zZ",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "Zdv7KGn3L0UkNjdu",
@@ -172931,7 +174417,7 @@
     },
     {
       "facilityId": "_dv5nqZh0QDvoAWB",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "_eBZS-A7VlRqlowB",
@@ -173135,7 +174621,7 @@
     },
     {
       "facilityId": "a5G_2sppvLR6eWs1",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "a63hvD1M5ZrrOn1s",
@@ -173343,6 +174829,10 @@
     },
     {
       "facilityId": "ad3Fo7yUhaCc3BMg",
+      "sportId": "jk8Hpc3Zm68PmcBn"
+    },
+    {
+      "facilityId": "ad3Fo7yUhaCc3BMg",
       "sportId": "yMCWy0g5FP2FPUle"
     },
     {
@@ -173539,7 +175029,7 @@
     },
     {
       "facilityId": "b8TXI5fFArBXdfgX",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "b9LaCE0Z4HzviIMv",
@@ -174023,7 +175513,7 @@
     },
     {
       "facilityId": "cKtLHcBXtgr4BAYF",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "cLO1kVRcI2lJUN9h",
@@ -185143,6 +186633,10 @@
     },
     {
       "facilityId": "cmmyw62fo000tdb8oa45moyum",
+      "sportId": "cmmyvhqzr0000rb8o98d4p5dv"
+    },
+    {
+      "facilityId": "cmmyw62fo000tdb8oa45moyum",
       "sportId": "cmmyvhqzt0001rb8oa2mb424o"
     },
     {
@@ -185259,6 +186753,306 @@
     },
     {
       "facilityId": "cmn0pqydy0000jb8ojhqu4y91",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3l4ghf0000078oojnd434f",
+      "sportId": "cmmyvhqzr0000rb8o98d4p5dv"
+    },
+    {
+      "facilityId": "cmn3l4gs00003078osv8088jn",
+      "sportId": "cmmyvhqzr0000rb8o98d4p5dv"
+    },
+    {
+      "facilityId": "cmn3l4h2g0006078ocj2dnwxy",
+      "sportId": "cmmyvhqzr0000rb8o98d4p5dv"
+    },
+    {
+      "facilityId": "cmn3p9pfe0000w48oui314s82",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9pmd0003w48opexy9316",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9px90006w48ov2jzl24d",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9q4b0009w48ogsny20rt",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9qd4000cw48oa6zklnbx",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9qjr000fw48ozoulhuul",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9qt6000iw48obs9czz3s",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9r1o000lw48ouu0vb6zr",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9r8j000ow48ouyf94k8l",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9rgn000rw48oulzlu9o7",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9rln000uw48o0xcpa9es",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9rrs000xw48opajrpph2",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9s160010w48onhij9l9q",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9sa10013w48ofw431g0h",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9skc0016w48ovw0mjrgu",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9svc0019w48oxc6d3pez",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9t6t001cw48ocltmaltm",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9thv001fw48owoocnhw6",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9tqw001iw48oxnp0c81r",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9tzz001lw48owe6aamgq",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9ua4001ow48o14xmgt5w",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9ug1001rw48olfajqvkl",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9uqa001uw48odvqh7vee",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9uzp001xw48oflkj89cc",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9vag0020w48o20asmlex",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9vlv0023w48oyy98240v",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9vwe0026w48oo53hjaec",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9w5h0029w48o3gm8bsrb",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9wft002cw48o62arros8",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9wlc002fw48ou5kig4qq",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9wsn002iw48odqlmf7qa",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9wxm002lw48oz14mg7he",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9x5h002ow48ocjomvw4i",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9xai002rw48o4ppwionk",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9xfq002uw48o76uekobo",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9xnf002xw48oc2segz0u",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9xsl0030w48oimdwoe3f",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9xzy0033w48oqehsuvhq",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9y5j0036w48okfv0tz37",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9ydb0039w48oun2usvzh",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9yim003cw48o91st36fl",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9ynp003fw48ou4xbc5rp",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9yuj003iw48ozzctcvtw",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9yz6003lw48oytjkz4na",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9z6r003ow48ohv5zcbez",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9zdk003rw48o184yyanz",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9znw003uw48ocdqnhy2s",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9zuj003xw48og0oum9e8",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa02g0040w48o7mtc6u8z",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa0a20043w48ofim4m3fx",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa0hq0047w48o9v1wdsj6",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa0o2004bw48ow35i7e2k",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa0vu004ew48orrjscl8f",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa111004hw48o16hl7zs9",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa18y004kw48ofx2xp4k9",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa1e7004nw48ovohnoeex",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa1m9004rw48o7efwfjhs",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa1rm004uw48o4hga8nbo",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa1zv004xw48o83wkq09h",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa26e0050w48o2nuk75na",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa2dz0053w48o3akixmyc",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa2jf0056w48ogg9bg33l",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa2os0059w48owar61veb",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa2we005dw48o0dca9bn9",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa317005gw48o9i7dpl41",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa38y005jw48ow03u6btz",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa3dm005mw48oa10lqxdd",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa3l2005pw48o41jttaau",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa3qn005sw48ohwfmuef3",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa3vi005vw48onagd99cc",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa43f005zw48o6mrw5ufe",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa48x0063w48ot20nsnmk",
       "sportId": "cmmyvhqzt0001rb8oa2mb424o"
     },
     {
@@ -185619,7 +187413,7 @@
     },
     {
       "facilityId": "dhFPYxGniGWbfTsZ",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "dhWu7fQfk5OyVPvc",
@@ -185903,6 +187697,10 @@
     },
     {
       "facilityId": "eS4hyzV69A3JkGCW",
+      "sportId": "jk8Hpc3Zm68PmcBn"
+    },
+    {
+      "facilityId": "eS4hyzV69A3JkGCW",
       "sportId": "yMCWy0g5FP2FPUle"
     },
     {
@@ -185943,7 +187741,7 @@
     },
     {
       "facilityId": "ec0OXFbps7x-EIwl",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "ece5_JGdjh0X57gn",
@@ -186407,7 +188205,7 @@
     },
     {
       "facilityId": "flpqCOKw5V2OiyRl",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "fnmec8fo_cxqItO9",
@@ -186567,7 +188365,7 @@
     },
     {
       "facilityId": "g9GBcEEI2ABIZLm1",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "gAJHs7_6V2CP0PRz",
@@ -186775,7 +188573,7 @@
     },
     {
       "facilityId": "gld31ajox7lh3wAm",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "glgtDlULrtg23AMr",
@@ -186899,7 +188697,7 @@
     },
     {
       "facilityId": "h6lGZ8HV6tS9Yu8z",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "h7QYnv0yH1hav_Gl",
@@ -187231,6 +189029,10 @@
     },
     {
       "facilityId": "hg1btuH0eIusqYeG",
+      "sportId": "jk8Hpc3Zm68PmcBn"
+    },
+    {
+      "facilityId": "hg1btuH0eIusqYeG",
       "sportId": "yMCWy0g5FP2FPUle"
     },
     {
@@ -187299,7 +189101,7 @@
     },
     {
       "facilityId": "hqLxRv8OoHbRF3-q",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "hqUuGeLkto53yIDM",
@@ -187359,7 +189161,7 @@
     },
     {
       "facilityId": "i2JeENAOLWfQGKDi",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "i3iaVLjc6funU-uZ",
@@ -187495,7 +189297,7 @@
     },
     {
       "facilityId": "iMycPjnD6EWUxkLC",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "iNiTR0dMtZfUFMBx",
@@ -187567,7 +189369,7 @@
     },
     {
       "facilityId": "iXIqTCBpv1krtoAk",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "iYwMtNO36MxA1zOW",
@@ -187767,7 +189569,7 @@
     },
     {
       "facilityId": "izqK-IXPXu18Cuqs",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "izyVYlEM55cakapc",
@@ -187819,7 +189621,7 @@
     },
     {
       "facilityId": "j7wndq-51MO6zQ9u",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "j8AuUVaEBsPaEKX9",
@@ -187883,7 +189685,7 @@
     },
     {
       "facilityId": "jGOQIyUh7fKwhVwz",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "jGioVHUxFLdFLpva",
@@ -187971,7 +189773,11 @@
     },
     {
       "facilityId": "jVBpGSj6THRIXBrj",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
+    },
+    {
+      "facilityId": "jVBpGSj6THRIXBrj",
+      "sportId": "jk8Hpc3Zm68PmcBn"
     },
     {
       "facilityId": "jVEVZBeDqezvepeb",
@@ -188171,6 +189977,10 @@
     },
     {
       "facilityId": "jtc7uazC8VknwAnK",
+      "sportId": "jk8Hpc3Zm68PmcBn"
+    },
+    {
+      "facilityId": "jtc7uazC8VknwAnK",
       "sportId": "yMCWy0g5FP2FPUle"
     },
     {
@@ -188323,7 +190133,7 @@
     },
     {
       "facilityId": "kHLrd1MxSPHzLM-e",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "kHr8fob-39-g1l0_",
@@ -188519,7 +190329,7 @@
     },
     {
       "facilityId": "klYBUV1KCYpsABW0",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "km0H_OJjJdqF-xKw",
@@ -188971,7 +190781,7 @@
     },
     {
       "facilityId": "logFsuQ3jntSPMlx",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "lov6voQFxTDPWv1i",
@@ -189007,7 +190817,7 @@
     },
     {
       "facilityId": "lw66LVdGCrOdgFUz",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "lwNWMPK-Js9L6rns",
@@ -189055,7 +190865,7 @@
     },
     {
       "facilityId": "m0oxf4wFFZoRZtnI",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "m0pRVprJxSgY0vON",
@@ -189107,6 +190917,14 @@
     },
     {
       "facilityId": "m8rmHZu9_oOZ82Ow",
+      "sportId": "gfKg-rNgESqqh8sX"
+    },
+    {
+      "facilityId": "m8rmHZu9_oOZ82Ow",
+      "sportId": "jk8Hpc3Zm68PmcBn"
+    },
+    {
+      "facilityId": "m8rmHZu9_oOZ82Ow",
       "sportId": "yMCWy0g5FP2FPUle"
     },
     {
@@ -189123,7 +190941,7 @@
     },
     {
       "facilityId": "m9Q2XtkQsMTUcXZq",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "mBcMS1NOAGhP2K24",
@@ -189135,7 +190953,7 @@
     },
     {
       "facilityId": "mCazCiEZF1aw605x",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "mDZY9UVTOTlohZ6W",
@@ -189363,7 +191181,7 @@
     },
     {
       "facilityId": "mwao7POy8W_mRohV",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "mwoUCfADWD-AC5Ac",
@@ -189583,7 +191401,7 @@
     },
     {
       "facilityId": "nWysxKyCGw0kmWmo",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "nXnxuA1ffmFgut-2",
@@ -189743,7 +191561,7 @@
     },
     {
       "facilityId": "nrCVaX11lNg1ihyN",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "nrsPCk7oyGRT6dtx",
@@ -189847,7 +191665,7 @@
     },
     {
       "facilityId": "o2lgzutWGXmgmsf3",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "o2qhlLZJp33W0fEx",
@@ -189867,7 +191685,7 @@
     },
     {
       "facilityId": "o6XOOH9m0xRzHwq7",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "o9ZXdzIVBwUB_ql1",
@@ -189975,7 +191793,7 @@
     },
     {
       "facilityId": "oPFlM2vn4gh34m86",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "oPqNY5tTyxaqcyrU",
@@ -190035,7 +191853,7 @@
     },
     {
       "facilityId": "oXNgHah-y5-2zoYS",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "oXYe6_6sSkEWPkEc",
@@ -190163,7 +191981,7 @@
     },
     {
       "facilityId": "ooriOWTFx34DSdj6",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "opD4B4cV7BqiJKH0",
@@ -190459,7 +192277,7 @@
     },
     {
       "facilityId": "pVE6x82UjCthtn2-",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "pVgroQ4f-UHuVbLW",
@@ -190567,7 +192385,7 @@
     },
     {
       "facilityId": "pn4H8vuyBDbGDw8Y",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "pqqeHOP75mFpgsle",
@@ -190703,7 +192521,7 @@
     },
     {
       "facilityId": "qDernznOe5v58ZYp",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "qDfQ_vSzW15CXvTm",
@@ -191015,7 +192833,7 @@
     },
     {
       "facilityId": "r-nHovs8pHVwFFNX",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "r1O_ANK2lEGrHPFS",
@@ -191148,6 +192966,10 @@
     {
       "facilityId": "rUigwsG1P6JSTGWB",
       "sportId": "vnOjIE7Csm18mSLp"
+    },
+    {
+      "facilityId": "rWrJE3hWixyWmBwv",
+      "sportId": "jk8Hpc3Zm68PmcBn"
     },
     {
       "facilityId": "rWrJE3hWixyWmBwv",
@@ -191735,7 +193557,7 @@
     },
     {
       "facilityId": "t6KDSggJhNjJJvVk",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "t9Nx3-E2K1B6YLTY",
@@ -191936,6 +193758,10 @@
     {
       "facilityId": "te5OjM01S-04UUz7",
       "sportId": "a1DtDqL1SQUZe7RG"
+    },
+    {
+      "facilityId": "tfEn2BTJjKj-1EIO",
+      "sportId": "jk8Hpc3Zm68PmcBn"
     },
     {
       "facilityId": "tfEn2BTJjKj-1EIO",
@@ -192367,7 +194193,7 @@
     },
     {
       "facilityId": "unnDpc_TMk7fI4w1",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "uoHDb-NZigZ9k3-I",
@@ -192803,7 +194629,7 @@
     },
     {
       "facilityId": "vv1zrtj7KU5jnrhV",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "vwG-Qp8HENswlaDa",
@@ -192923,7 +194749,7 @@
     },
     {
       "facilityId": "wGJR1YlMPTufFb5H",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "wGT3tjQq2K0IwP15",
@@ -193023,7 +194849,7 @@
     },
     {
       "facilityId": "wSiJIQBIJucThfSF",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "wVzOW-gACsXE1TeT",
@@ -193731,7 +195557,7 @@
     },
     {
       "facilityId": "yJl0g96izvzPoLC9",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "yJl2Ae-CKrTwOSyu",
@@ -193855,7 +195681,7 @@
     },
     {
       "facilityId": "y_kFC0OVJ8lc3rD6",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "yaJjnSFoilrMud1d",
@@ -193911,7 +195737,7 @@
     },
     {
       "facilityId": "ygpRUKaD6JnTnn4p",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "yhF1NCQ4EttK_pB9",
@@ -193931,7 +195757,7 @@
     },
     {
       "facilityId": "yiwzYCQ5_4j5XJFl",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "ykfq23OZDTtD0wwP",
@@ -194159,7 +195985,7 @@
     },
     {
       "facilityId": "zIZNh3FWM3KAGUt7",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "zJ0x6-5WGUOgpz5A",
@@ -194291,7 +196117,7 @@
     },
     {
       "facilityId": "za0TgthhRu04bgVX",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "zbI89TxixQKr7iZN",
@@ -194383,7 +196209,7 @@
     },
     {
       "facilityId": "zq-WIwXSm37apHUZ",
-      "sportId": "yMCWy0g5FP2FPUle"
+      "sportId": "a1DtDqL1SQUZe7RG"
     },
     {
       "facilityId": "zqcz7pIFI0wOBvnG",
@@ -194420,6 +196246,306 @@
     {
       "facilityId": "zzBfXJR8lZ3WPRYp",
       "sportId": "vnOjIE7Csm18mSLp"
+    },
+    {
+      "facilityId": "cmn3l4ghf0000078oojnd434f",
+      "sportId": "cmmyvhqzr0000rb8o98d4p5dv"
+    },
+    {
+      "facilityId": "cmn3l4gs00003078osv8088jn",
+      "sportId": "cmmyvhqzr0000rb8o98d4p5dv"
+    },
+    {
+      "facilityId": "cmn3l4h2g0006078ocj2dnwxy",
+      "sportId": "cmmyvhqzr0000rb8o98d4p5dv"
+    },
+    {
+      "facilityId": "cmn3p9pfe0000w48oui314s82",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9pmd0003w48opexy9316",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9px90006w48ov2jzl24d",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9q4b0009w48ogsny20rt",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9qd4000cw48oa6zklnbx",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9qjr000fw48ozoulhuul",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9qt6000iw48obs9czz3s",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9r1o000lw48ouu0vb6zr",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9r8j000ow48ouyf94k8l",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9rgn000rw48oulzlu9o7",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9rln000uw48o0xcpa9es",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9rrs000xw48opajrpph2",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9s160010w48onhij9l9q",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9sa10013w48ofw431g0h",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9skc0016w48ovw0mjrgu",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9svc0019w48oxc6d3pez",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9t6t001cw48ocltmaltm",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9thv001fw48owoocnhw6",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9tqw001iw48oxnp0c81r",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9tzz001lw48owe6aamgq",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9ua4001ow48o14xmgt5w",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9ug1001rw48olfajqvkl",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9uqa001uw48odvqh7vee",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9uzp001xw48oflkj89cc",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9vag0020w48o20asmlex",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9vlv0023w48oyy98240v",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9vwe0026w48oo53hjaec",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9w5h0029w48o3gm8bsrb",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9wft002cw48o62arros8",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9wlc002fw48ou5kig4qq",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9wsn002iw48odqlmf7qa",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9wxm002lw48oz14mg7he",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9x5h002ow48ocjomvw4i",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9xai002rw48o4ppwionk",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9xfq002uw48o76uekobo",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9xnf002xw48oc2segz0u",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9xsl0030w48oimdwoe3f",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9xzy0033w48oqehsuvhq",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9y5j0036w48okfv0tz37",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9ydb0039w48oun2usvzh",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9yim003cw48o91st36fl",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9ynp003fw48ou4xbc5rp",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9yuj003iw48ozzctcvtw",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9yz6003lw48oytjkz4na",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9z6r003ow48ohv5zcbez",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9zdk003rw48o184yyanz",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9znw003uw48ocdqnhy2s",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3p9zuj003xw48og0oum9e8",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa02g0040w48o7mtc6u8z",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa0a20043w48ofim4m3fx",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa0hq0047w48o9v1wdsj6",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa0o2004bw48ow35i7e2k",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa0vu004ew48orrjscl8f",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa111004hw48o16hl7zs9",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa18y004kw48ofx2xp4k9",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa1e7004nw48ovohnoeex",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa1m9004rw48o7efwfjhs",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa1rm004uw48o4hga8nbo",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa1zv004xw48o83wkq09h",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa26e0050w48o2nuk75na",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa2dz0053w48o3akixmyc",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa2jf0056w48ogg9bg33l",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa2os0059w48owar61veb",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa2we005dw48o0dca9bn9",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa317005gw48o9i7dpl41",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa38y005jw48ow03u6btz",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa3dm005mw48oa10lqxdd",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa3l2005pw48o41jttaau",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa3qn005sw48ohwfmuef3",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa3vi005vw48onagd99cc",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa43f005zw48o6mrw5ufe",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn3pa48x0063w48ot20nsnmk",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
     }
   ],
   "contacts": [
@@ -305516,6 +307642,606 @@
       "facilityId": "cmn0phor9000anp8omt8k2o71",
       "type": "WEBSITE",
       "value": "https://www.klajda.cz/olympia/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3l4gj00002078opk00swdr",
+      "facilityId": "cmn3l4ghf0000078oojnd434f",
+      "type": "WEBSITE",
+      "value": "https://www.mukolin.cz/via-ferraty/ds-1612",
+      "label": "Web",
+      "isPrimary": true
+    },
+    {
+      "id": "cmn3l4gtb0005078ormkdxb5c",
+      "facilityId": "cmn3l4gs00003078osv8088jn",
+      "type": "WEBSITE",
+      "value": "https://www.ferratacertovyskaly.cz",
+      "label": "Web",
+      "isPrimary": true
+    },
+    {
+      "id": "cmn3l4h3i0008078o42uv16kz",
+      "facilityId": "cmn3l4h2g0006078ocj2dnwxy",
+      "type": "WEBSITE",
+      "value": "https://www.ferratavozice.cz",
+      "label": "Web",
+      "isPrimary": true
+    },
+    {
+      "id": "cmn3p9pgs0002w48o8ewz3rtx",
+      "facilityId": "cmn3p9pfe0000w48oui314s82",
+      "type": "WEBSITE",
+      "value": "https://holesovice.jungle.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9poc0005w48oz0j6dond",
+      "facilityId": "cmn3p9pmd0003w48opexy9316",
+      "type": "WEBSITE",
+      "value": "https://gutovka.cz/lezecka-stena/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9pyw0008w48o9i61uuur",
+      "facilityId": "cmn3p9px90006w48ov2jzl24d",
+      "type": "WEBSITE",
+      "value": "https://www.lokalblok.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9q8g000bw48o17j02cz5",
+      "facilityId": "cmn3p9q4b0009w48ogsny20rt",
+      "type": "WEBSITE",
+      "value": "https://www.scpalmovka.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9qeq000ew48op4sc52kd",
+      "facilityId": "cmn3p9qd4000cw48oa6zklnbx",
+      "type": "WEBSITE",
+      "value": "https://ultraant.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9qn1000hw48o0eiczsz5",
+      "facilityId": "cmn3p9qjr000fw48ozoulhuul",
+      "type": "WEBSITE",
+      "value": "https://lezeckastenacakovice.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9quu000kw48oulvd1y0h",
+      "facilityId": "cmn3p9qt6000iw48obs9czz3s",
+      "type": "WEBSITE",
+      "value": "https://halaradotin.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9r38000nw48o3hyw1m4m",
+      "facilityId": "cmn3p9r1o000lw48ouu0vb6zr",
+      "type": "WEBSITE",
+      "value": "https://prostorletnany.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9raf000qw48okhexfaa9",
+      "facilityId": "cmn3p9r8j000ow48ouyf94k8l",
+      "type": "WEBSITE",
+      "value": "https://www.squashpark.cz/cs/sport/horolezecka-stena",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9rht000tw48o6ln164e1",
+      "facilityId": "cmn3p9rgn000rw48oulzlu9o7",
+      "type": "WEBSITE",
+      "value": "https://spinclimbing.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9rn3000ww48odpewp9ab",
+      "facilityId": "cmn3p9rln000uw48o0xcpa9es",
+      "type": "WEBSITE",
+      "value": "http://flashbb.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9rvh000zw48o4xeyas2a",
+      "facilityId": "cmn3p9rrs000xw48opajrpph2",
+      "type": "WEBSITE",
+      "value": "https://www.komec.cz/lezecka-stena/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9s3c0012w48odg6ucmun",
+      "facilityId": "cmn3p9s160010w48onhij9l9q",
+      "type": "WEBSITE",
+      "value": "https://www.hudysteny.cz/brno/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9sco0015w48ofyuhkegt",
+      "facilityId": "cmn3p9sa10013w48ofw431g0h",
+      "type": "WEBSITE",
+      "value": "https://kotelna-boulder8.webnode.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9sog0018w48o5odkwg7f",
+      "facilityId": "cmn3p9skc0016w48ovw0mjrgu",
+      "type": "WEBSITE",
+      "value": "https://blokcentrum.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9swv001bw48o4wy4vxu0",
+      "facilityId": "cmn3p9svc0019w48oxc6d3pez",
+      "type": "WEBSITE",
+      "value": "https://tendonhlubina.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9t9o001ew48o0x3potlm",
+      "facilityId": "cmn3p9t6t001cw48ocltmaltm",
+      "type": "WEBSITE",
+      "value": "https://lezeckastena.alpsport.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9tjk001hw48os86tzl9c",
+      "facilityId": "cmn3p9thv001fw48owoocnhw6",
+      "type": "WEBSITE",
+      "value": "https://www.facebook.com/Druzbaboulder/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9tsp001kw48o6tvdgbua",
+      "facilityId": "cmn3p9tqw001iw48oxnp0c81r",
+      "type": "WEBSITE",
+      "value": "https://www.cdusport.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9u2g001nw48om9of9o5a",
+      "facilityId": "cmn3p9tzz001lw48owe6aamgq",
+      "type": "WEBSITE",
+      "value": "https://sport-plzen.cz/sluzby/horolezecka-stena-plzen",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9ubj001qw48osz3fptpw",
+      "facilityId": "cmn3p9ua4001ow48o14xmgt5w",
+      "type": "WEBSITE",
+      "value": "https://www.tjloko-plzen.cz/cz/sportovni-areal/lezecka-stena/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9uhx001tw48oanv7x8qm",
+      "facilityId": "cmn3p9ug1001rw48olfajqvkl",
+      "type": "WEBSITE",
+      "value": "https://skodasportpark.cz/sportoviste/lezecka-vez/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9uth001ww48onph9z21i",
+      "facilityId": "cmn3p9uqa001uw48odvqh7vee",
+      "type": "WEBSITE",
+      "value": "https://sutr.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9v38001zw48ojk77jh7a",
+      "facilityId": "cmn3p9uzp001xw48oflkj89cc",
+      "type": "WEBSITE",
+      "value": "https://ktv.fp.tul.cz/katedra/sportoviste",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9vcw0022w48ob82zocod",
+      "facilityId": "cmn3p9vag0020w48o20asmlex",
+      "type": "WEBSITE",
+      "value": "http://flashwall.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9vo20025w48onksmqj6o",
+      "facilityId": "cmn3p9vlv0023w48oyy98240v",
+      "type": "WEBSITE",
+      "value": "https://www.pajkland.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9vyx0028w48ojaultt5h",
+      "facilityId": "cmn3p9vwe0026w48oo53hjaec",
+      "type": "WEBSITE",
+      "value": "https://www.stenahk.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9w7u002bw48og257fgpl",
+      "facilityId": "cmn3p9w5h0029w48o3gm8bsrb",
+      "type": "WEBSITE",
+      "value": "https://www.stenalanovka.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9whl002ew48oznmj1r2j",
+      "facilityId": "cmn3p9wft002cw48o62arros8",
+      "type": "WEBSITE",
+      "value": "https://vylezskp.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9wmr002hw48oxnggnkt5",
+      "facilityId": "cmn3p9wlc002fw48ou5kig4qq",
+      "type": "WEBSITE",
+      "value": "https://www.junglepardubice.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9wtu002kw48o5b43hm43",
+      "facilityId": "cmn3p9wsn002iw48odqlmf7qa",
+      "type": "WEBSITE",
+      "value": "http://www.gekon-boulderbar.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9wz8002nw48om3qt07yx",
+      "facilityId": "cmn3p9wxm002lw48oz14mg7he",
+      "type": "WEBSITE",
+      "value": "https://hcentrum.net/lezecka-stena/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9x6m002qw48okttk63w5",
+      "facilityId": "cmn3p9x5h002ow48ocjomvw4i",
+      "type": "WEBSITE",
+      "value": "https://kvstena.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9xbp002tw48o8lexj3lx",
+      "facilityId": "cmn3p9xai002rw48o4ppwionk",
+      "type": "WEBSITE",
+      "value": "https://www.facebook.com/stenacrux/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9xja002ww48ocwwrz5l9",
+      "facilityId": "cmn3p9xfq002uw48o76uekobo",
+      "type": "WEBSITE",
+      "value": "https://www.stenakladno.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9xok002zw48o7rw1az0r",
+      "facilityId": "cmn3p9xnf002xw48oc2segz0u",
+      "type": "WEBSITE",
+      "value": "https://www.hudysteny.cz/usti/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9xtr0032w48oomnugpvd",
+      "facilityId": "cmn3p9xsl0030w48oimdwoe3f",
+      "type": "WEBSITE",
+      "value": "https://www.vertikon.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9y120035w48oqp2ukdff",
+      "facilityId": "cmn3p9xzy0033w48oqehsuvhq",
+      "type": "WEBSITE",
+      "value": "http://www.lezecke-centrum-jihlava.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9y6v0038w48ooe3fwt8c",
+      "facilityId": "cmn3p9y5j0036w48okfv0tz37",
+      "type": "WEBSITE",
+      "value": "https://www.makakarena.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9yeq003bw48ouzck4b4v",
+      "facilityId": "cmn3p9ydb0039w48oun2usvzh",
+      "type": "WEBSITE",
+      "value": "https://www.horolezeckastenafm.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9yjr003ew48orx92k7dq",
+      "facilityId": "cmn3p9yim003cw48o91st36fl",
+      "type": "WEBSITE",
+      "value": "https://atlasopava.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9yqv003hw48orhtcnsh4",
+      "facilityId": "cmn3p9ynp003fw48ou4xbc5rp",
+      "type": "WEBSITE",
+      "value": "https://www.roadoutdoor.cz/lezecka-stena",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9yvn003kw48onqzjilos",
+      "facilityId": "cmn3p9yuj003iw48ozzctcvtw",
+      "type": "WEBSITE",
+      "value": "https://www.lkp.cz/stena/informace/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9z0c003nw48oltl1yzv7",
+      "facilityId": "cmn3p9yz6003lw48oytjkz4na",
+      "type": "WEBSITE",
+      "value": "https://www.stenapisek.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9z80003qw48ovqrg5fs1",
+      "facilityId": "cmn3p9z6r003ow48ohv5zcbez",
+      "type": "WEBSITE",
+      "value": "https://www.facebook.com/BoulderBarNovyJicin/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9zf1003tw48oagcudu69",
+      "facilityId": "cmn3p9zdk003rw48o184yyanz",
+      "type": "WEBSITE",
+      "value": "https://www.hkla.cz/stena/o-stene",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9zpv003ww48o012f4xtp",
+      "facilityId": "cmn3p9znw003uw48ocdqnhy2s",
+      "type": "WEBSITE",
+      "value": "https://www.sportes.svitavy.cz/cs/m-25-horolezecka-stena/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3p9zy0003zw48ohh8e35ri",
+      "facilityId": "cmn3p9zuj003xw48og0oum9e8",
+      "type": "WEBSITE",
+      "value": "https://stenaspk.cz/lezecka-stena/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa04t0042w48o8g1fteno",
+      "facilityId": "cmn3pa02g0040w48o7mtc6u8z",
+      "type": "WEBSITE",
+      "value": "https://www.tj-alpin.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa0dk0045w48ojrbtf9sy",
+      "facilityId": "cmn3pa0a20043w48ofim4m3fx",
+      "type": "WEBSITE",
+      "value": "https://www.svctrutnov.cz/lezecka-stena-p111/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa0j30049w48one8kxsms",
+      "facilityId": "cmn3pa0hq0047w48o9v1wdsj6",
+      "type": "WEBSITE",
+      "value": "http://stenaluh.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa0rz004dw48oyevn0i2p",
+      "facilityId": "cmn3pa0o2004bw48ow35i7e2k",
+      "type": "WEBSITE",
+      "value": "https://www.facebook.com/HorolezeckaStenaRoznovPodRadhostem",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa0x0004gw48o0quz2gh5",
+      "facilityId": "cmn3pa0vu004ew48orrjscl8f",
+      "type": "WEBSITE",
+      "value": "https://www.facebook.com/HorolezeckaStenaZnojmo/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa12t004jw48ol9wvtg88",
+      "facilityId": "cmn3pa111004hw48o16hl7zs9",
+      "type": "WEBSITE",
+      "value": "https://www.facebook.com/hkpalavskyvesak/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa1a7004mw48o5hhro50w",
+      "facilityId": "cmn3pa18y004kw48ofx2xp4k9",
+      "type": "WEBSITE",
+      "value": "https://www.lezeckastenakurim.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa1fd004pw48opjxp7g2n",
+      "facilityId": "cmn3pa1e7004nw48ovohnoeex",
+      "type": "WEBSITE",
+      "value": "https://www.replaysc.cz/boulder-lezecka-stena-2/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa1no004tw48opfbzcrwl",
+      "facilityId": "cmn3pa1m9004rw48o7efwfjhs",
+      "type": "WEBSITE",
+      "value": "https://www.cernozice.cz/stena/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa1sz004ww48o65hlz2xr",
+      "facilityId": "cmn3pa1rm004uw48o4hga8nbo",
+      "type": "WEBSITE",
+      "value": "https://www.horo-ct.cz/domains/horo-ct.cz/lezecka-stena/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa226004zw48o09n6tvaz",
+      "facilityId": "cmn3pa1zv004xw48o83wkq09h",
+      "type": "WEBSITE",
+      "value": "https://lezeckastenabela.wixsite.com/lezeckastenabela/cs",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa27l0052w48ouusqfqyk",
+      "facilityId": "cmn3pa26e0050w48o2nuk75na",
+      "type": "WEBSITE",
+      "value": "https://hopsuk.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa2f50055w48ohnna6yc0",
+      "facilityId": "cmn3pa2dz0053w48o3akixmyc",
+      "type": "WEBSITE",
+      "value": "https://stenakh.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa2kj0058w48otujtjhgz",
+      "facilityId": "cmn3pa2jf0056w48ogg9bg33l",
+      "type": "WEBSITE",
+      "value": "https://www.walzel.cz/lezecka-stena",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa2ry005bw48oy1cwem0z",
+      "facilityId": "cmn3pa2os0059w48owar61veb",
+      "type": "WEBSITE",
+      "value": "https://www.mestomseno.cz/zivot-ve-meste/sport/tj-sokol-mseno/lezecka-stena/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa2xj005fw48omixfv5lg",
+      "facilityId": "cmn3pa2we005dw48o0dca9bn9",
+      "type": "WEBSITE",
+      "value": "https://bcprerov.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa32c005iw48o5ls2e1cl",
+      "facilityId": "cmn3pa317005gw48o9i7dpl41",
+      "type": "WEBSITE",
+      "value": "https://www.facebook.com/lezeckastenaVrchlabi/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa3a2005lw48okx3olzgk",
+      "facilityId": "cmn3pa38y005jw48ow03u6btz",
+      "type": "WEBSITE",
+      "value": "https://hojesenik.cz/cz/stena/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa3f9005ow48ofc1hbdxa",
+      "facilityId": "cmn3pa3dm005mw48oa10lqxdd",
+      "type": "WEBSITE",
+      "value": "https://www.facebook.com/LezeckaArenaJirkov/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa3m7005rw48ojx991srj",
+      "facilityId": "cmn3pa3l2005pw48o41jttaau",
+      "type": "WEBSITE",
+      "value": "https://boulderpentagon.com/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa3rx005uw48oen6vc1cl",
+      "facilityId": "cmn3pa3qn005sw48ohwfmuef3",
+      "type": "WEBSITE",
+      "value": "https://www.arealsportu.cz/sportovni-hala",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa3wn005xw48oa096tm8q",
+      "facilityId": "cmn3pa3vi005vw48onagd99cc",
+      "type": "WEBSITE",
+      "value": "https://www.facebook.com/lezuvmezu",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa44k0061w48o6mo05x5x",
+      "facilityId": "cmn3pa43f005zw48o6mrw5ufe",
+      "type": "WEBSITE",
+      "value": "https://www.facebook.com/stenapolicka/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn3pa4a20065w48o9b3gpmgo",
+      "facilityId": "cmn3pa48x0063w48ot20nsnmk",
+      "type": "WEBSITE",
+      "value": "https://www.facebook.com/HorolezeckaStenaZubri/",
       "label": null,
       "isPrimary": false
     }
