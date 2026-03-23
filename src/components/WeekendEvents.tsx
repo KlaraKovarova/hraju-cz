@@ -1,4 +1,5 @@
-import { ExternalLink, Calendar } from "lucide-react";
+import Link from "next/link";
+import { ExternalLink, Calendar, ArrowRight } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 
 function kctEventUrl(sourceId: string): string {
@@ -117,9 +118,18 @@ export async function WeekendEvents() {
           ))}
         </div>
 
-        <p className="mt-4 text-center text-[10px] text-zinc-400">
-          Zdroj: Kalendář akcí KČT
-        </p>
+        <div className="mt-4 flex items-center justify-center gap-4">
+          <Link
+            href="/akce"
+            className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-600 transition hover:text-emerald-700"
+          >
+            Všechny akce <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
+          <span className="text-zinc-300">|</span>
+          <span className="text-[10px] text-zinc-400">
+            Zdroj: Kalendář akcí KČT
+          </span>
+        </div>
       </div>
     </section>
   );

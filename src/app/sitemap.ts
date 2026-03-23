@@ -177,6 +177,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Static pages
   entries.push({
+    url: `${BASE_URL}/akce`,
+    changeFrequency: "weekly",
+    priority: 0.7,
+  });
+  entries.push({
     url: `${BASE_URL}/recenze`,
     changeFrequency: "weekly",
     priority: 0.7,
