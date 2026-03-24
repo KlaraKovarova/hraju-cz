@@ -144,4 +144,12 @@ Děti se učí příkladem. Pokud vidí, že rodiče sportují, sport pro ně bu
 
 Podívejte se na sportoviště ve vašem městě na [hraju.cz](https://hraju.cz). Přečtěte si recenze od ostatních rodičů — zjistíte, jestli je sportoviště skutečně vhodné pro děti.
 
-A pokud už sportujete s dětmi, napište recenzi. Pomůžete dalším rodičům najít to pravé místo.
+A pokud už sportujete s dětmi, [napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste). Pomůžete dalším rodičům najít to pravé místo.
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Sport pro rodiny s dětmi](/blog/sport-pro-rodiny-s-detmi)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

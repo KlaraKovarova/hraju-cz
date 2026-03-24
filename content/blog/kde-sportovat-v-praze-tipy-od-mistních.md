@@ -93,11 +93,13 @@ Kompletní přehled 15 tras a parků najdete v [průvodci běháním v Praze](/b
 
 Kompletní průvodce cyklotrasami v Praze najdete v [průvodci cyklistikou v Praze](/blog/cyklotrasy-praha-pruvodce).
 
-## Zapojte se
+## Zapojte se do pražské sportovní komunity
 
-Máte vlastní tip na skvělé sportoviště v Praze? Sdílejte ho s komunitou! Vaše zkušenost pomůže dalším sportovním nadšencům najít to pravé místo.
-
-[Přihlaste se](/prihlaseni) a napište svůj tip.
+- Po návštěvě sportoviště klikněte [„Byl/a jsem tady"](/blog/check-iny-na-hraju-cz-pruvodce) — budujte si mapu sportovních zážitků po Praze
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním Pražákům s výběrem
+- Přidejte [fotky z návštěvy](/blog/fotky-k-recenzim-a-check-inum-pruvodce) — ukažte, jak to na místě vypadá
+- Sbírejte [odznaky](/blog/odznaky-na-hraju-cz-jak-je-sbirat) a stoupejte na [žebříčku recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, check-iny, odznaky, akce
 
 ## Průvodci dalšími městy
 

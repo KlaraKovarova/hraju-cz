@@ -239,7 +239,13 @@ Záleží na tom, co hledáte:
 
 ---
 
-*Byli jste na některém z těchto sportovišť? [Napište recenzi na hraju.cz](/) a pomozte ostatním sportovcům v Olomouci najít to pravé místo.*
+## Zapojte se do olomoucké sportovní komunity
+
+- Po návštěvě sportoviště klikněte [„Byl/a jsem tady"](/blog/check-iny-na-hraju-cz-pruvodce) — budujte si mapu sportovních zážitků
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním v Olomouci s výběrem
+- Přidejte [fotky z návštěvy](/blog/fotky-k-recenzim-a-check-inum-pruvodce) — ukažte, jak to na místě vypadá
+- Sbírejte [odznaky](/blog/odznaky-na-hraju-cz-jak-je-sbirat) a stoupejte na [žebříčku recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, check-iny, odznaky, akce
 
 ## Průvodci dalšími městy
 
@@ -247,8 +253,3 @@ Záleží na tom, co hledáte:
 - [Kde sportovat v Brně — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
 - [Kde sportovat v Ostravě — kompletní průvodce](/blog/kde-sportovat-v-ostrave-pruvodce)
 - [Kde sportovat v Plzni — kompletní průvodce](/blog/kde-sportovat-v-plzni-pruvodce)
-
-
----
-
-Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.

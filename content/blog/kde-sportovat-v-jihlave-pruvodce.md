@@ -295,6 +295,14 @@ Multisportovní hala s 3 sály pro bojové sporty.
 
 Kompletní přehled sportovišť v Jihlavě najdete na [hraju.cz](https://hraju.cz). Přečtěte si recenze a pomožte dalším sportovcům najít to pravé místo na Vysočině.
 
+## Zapojte se do sportovní komunity
+
+- Po návštěvě sportoviště klikněte [„Byl/a jsem tady"](/blog/check-iny-na-hraju-cz-pruvodce) — budujte si mapu sportovních zážitků
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- Přidejte [fotky z návštěvy](/blog/fotky-k-recenzim-a-check-inum-pruvodce) — ukažte, jak to na místě vypadá
+- Sbírejte [odznaky](/blog/odznaky-na-hraju-cz-jak-je-sbirat) a stoupejte na [žebříčku recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, check-iny, odznaky, akce
+
 ## Průvodci dalšími městy
 
 - [Praha — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)
