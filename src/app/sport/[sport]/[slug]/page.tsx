@@ -35,7 +35,10 @@ import { AdSlot } from "@/components/AdSlot";
 import { TrackPageView } from "@/components/TrackPageView";
 import { TrackClick } from "@/components/TrackClick";
 import { CheckInButton } from "@/components/CheckInButton";
+import { FavoriteButton } from "@/components/FavoriteButton";
 import { FacilityGallery } from "@/components/FacilityGallery";
+import { TipList } from "@/components/TipList";
+import { TipForm } from "@/components/TipForm";
 import { getOwnerSession } from "@/lib/owner-auth";
 import { prisma } from "@/lib/prisma";
 import type { Metadata } from "next";
@@ -528,9 +531,12 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
             ))}
           </div>
 
-          {/* Check-in button */}
-          <div className="mt-4">
+          {/* Check-in & favorite buttons */}
+          <div className="mt-4 space-y-2">
             <CheckInButton facilityId={facility.id} currentPath={`/sport/${sportSlug}/${slug}`} facilityName={facility.name} />
+            <div className="flex items-center rounded-xl border border-zinc-100 bg-white px-4 py-2">
+              <FavoriteButton facilityId={facility.id} currentPath={`/sport/${sportSlug}/${slug}`} />
+            </div>
           </div>
         </div>
       </section>
@@ -963,6 +969,26 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                 Napsat recenzi
               </h3>
               <ReviewForm facilityId={facility.id} currentPath={`/sport/${sportSlug}/${slug}`} facilityName={facility.name} facilityUrl={`https://www.hraju.cz/sport/${sportSlug}/${slug}`} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tips Section */}
+      <section id="tipy" className="border-t border-zinc-100 bg-zinc-50/50 scroll-mt-4">
+        <div className="mx-auto max-w-6xl px-6 py-8">
+          <h2 className="mb-6 text-xl font-bold text-zinc-900">
+            Tipy od návštěvníků
+          </h2>
+          <div className="grid gap-8 lg:grid-cols-3">
+            <div className="lg:col-span-2">
+              <TipList facilityId={facility.id} />
+            </div>
+            <div>
+              <h3 className="mb-3 text-sm font-semibold text-zinc-700">
+                Přidat tip
+              </h3>
+              <TipForm facilityId={facility.id} currentPath={`/sport/${sportSlug}/${slug}`} />
             </div>
           </div>
         </div>

@@ -23,6 +23,7 @@ import {
   Trophy,
   Lock,
   Compass,
+  Heart,
 } from "lucide-react";
 import { BADGE_META } from "@/lib/badge-meta";
 
@@ -58,6 +59,20 @@ interface UserVisit {
     slug: string;
     location: { city: string };
     sports: { sport: { slug: string; nameCs: string } }[];
+  };
+}
+
+interface UserFavorite {
+  id: string;
+  createdAt: string;
+  facility: {
+    name: string;
+    slug: string;
+    address: string;
+    averageRating: number | null;
+    reviewCount: number;
+    location: { city: string };
+    sports: { sport: { slug: string; nameCs: string; icon: string | null } }[];
   };
 }
 
@@ -109,7 +124,7 @@ interface DashboardData {
   }[];
 }
 
-type Tab = "overview" | "reviews" | "visits" | "events";
+type Tab = "overview" | "reviews" | "visits" | "favorites" | "events";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────
 
@@ -137,6 +152,7 @@ export default function MujUcetPage() {
   const [reviews, setReviews] = useState<UserReview[]>([]);
   const [visits, setVisits] = useState<UserVisit[]>([]);
   const [events, setEvents] = useState<UserEvent[]>([]);
+  const [favorites, setFavorites] = useState<UserFavorite[]>([]);
   const [activity, setActivity] = useState<ActivityItem[]>([]);
   const [badges, setBadges] = useState<BadgeProgress[]>([]);
   const [dashboard, setDashboard] = useState<DashboardData | null>(null);
@@ -154,7 +170,7 @@ export default function MujUcetPage() {
         const userData = await meRes.json();
         setUser(userData);
 
-        const [revRes, visitRes, eventRes, actRes, badgeRes, dashRes] =
+        const [revRes, visitRes, eventRes, actRes, badgeRes, dashRes, favRes] =
           await Promise.all([
             fetch("/api/auth/my-reviews"),
             fetch("/api/auth/my-visits"),
@@ -162,6 +178,7 @@ export default function MujUcetPage() {
             fetch("/api/auth/my-activity"),
             fetch("/api/auth/my-badges/progress"),
             fetch("/api/auth/my-dashboard"),
+            fetch("/api/auth/my-favorites"),
           ]);
 
         if (revRes.ok) setReviews(await revRes.json());
@@ -173,6 +190,7 @@ export default function MujUcetPage() {
           setBadges(data.progress);
         }
         if (dashRes.ok) setDashboard(await dashRes.json());
+        if (favRes.ok) setFavorites(await favRes.json());
       } catch {
         router.push("/prihlaseni?redirect=/muj-ucet");
       } finally {
@@ -450,6 +468,17 @@ export default function MujUcetPage() {
           >
             <MapPinCheck className="h-4 w-4" />
             Návštěvy
+          </button>
+          <button
+            onClick={() => setActiveTab("favorites")}
+            className={`flex flex-1 items-center justify-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium transition ${
+              activeTab === "favorites"
+                ? "bg-white text-zinc-900 shadow-sm"
+                : "text-zinc-500 hover:text-zinc-700"
+            }`}
+          >
+            <Heart className="h-4 w-4" />
+            Oblíbené
           </button>
           <button
             onClick={() => setActiveTab("events")}
@@ -735,6 +764,69 @@ export default function MujUcetPage() {
 
                     <div className="mt-3 text-xs text-zinc-400">
                       {formatDate(visit.createdAt)}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </>
+      )}
+
+      {/* Favorites tab */}
+      {!isNewUser && activeTab === "favorites" && (
+        <>
+          {favorites.length === 0 ? (
+            <EmptyState
+              icon={<Heart className="mx-auto mb-3 h-10 w-10 text-zinc-300" />}
+              title="Zatím nemáte žádná oblíbená sportoviště."
+              subtitle="Klikněte na srdíčko u sportoviště a uložte si ho sem."
+              href="/sport/tenis"
+              cta="Prozkoumat sportoviště"
+            />
+          ) : (
+            <div className="space-y-3">
+              {favorites.map((fav) => {
+                const sport = fav.facility.sports[0]?.sport;
+                const url = facilityUrl(fav.facility.slug, sport?.slug ?? null);
+
+                return (
+                  <div
+                    key={fav.id}
+                    className="rounded-xl border border-zinc-200 bg-white p-4"
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="min-w-0 flex-1">
+                        <Link
+                          href={url}
+                          className="text-sm font-semibold text-zinc-900 hover:text-emerald-600 transition-colors"
+                        >
+                          {fav.facility.name}
+                        </Link>
+                        <p className="mt-0.5 flex items-center gap-1 text-xs text-zinc-400">
+                          <MapPin className="h-3 w-3" />
+                          {fav.facility.location.city}
+                          {sport && ` · ${sport.nameCs}`}
+                        </p>
+                      </div>
+                      <span className="flex shrink-0 items-center gap-1 rounded-full bg-rose-50 px-2 py-0.5 text-xs font-medium text-rose-600">
+                        <Heart className="h-3 w-3 fill-rose-500" />
+                        Oblíbené
+                      </span>
+                    </div>
+
+                    {fav.facility.averageRating && (
+                      <div className="mt-2 flex items-center gap-1 text-xs text-zinc-500">
+                        <Star className="h-3 w-3 fill-amber-400 text-amber-400" />
+                        {fav.facility.averageRating.toFixed(1)}
+                        <span className="text-zinc-400">
+                          ({fav.facility.reviewCount} {fav.facility.reviewCount === 1 ? "recenze" : fav.facility.reviewCount >= 2 && fav.facility.reviewCount <= 4 ? "recenze" : "recenzí"})
+                        </span>
+                      </div>
+                    )}
+
+                    <div className="mt-3 text-xs text-zinc-400">
+                      Přidáno {formatDate(fav.createdAt)}
                     </div>
                   </div>
                 );
