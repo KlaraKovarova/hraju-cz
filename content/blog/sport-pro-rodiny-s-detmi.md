@@ -10,6 +10,9 @@ sportTags:
   - lezeni
   - golf
   - volejbal
+  - tenis
+  - cyklistika
+  - ferraty
 image: /images/blog/sport-pro-rodiny-s-detmi.jpg
 ---
 
@@ -82,7 +85,38 @@ Via ferraty obtížnosti A a B jsou vhodné i pro děti od 8 let (s ferratovým 
 - Dospělý vždy nad dítětem (pro případ pádu)
 - Helma povinná pro všechny
 
-Ferraty v Česku na [hraju.cz](/sport/ferraty).
+Ferraty v Česku na [hraju.cz](/sport/ferraty). Kompletní průvodce: [Via ferraty v Česku →](/blog/ferraty-v-cesku-kompletni-pruvodce-2026) | [Ferraty pro rodiny s dětmi →](/blog/ferraty-pro-rodiny-s-detmi-pruvodce)
 
-Najděte další sportoviště vhodná pro celou rodinu na [hraju.cz](/).
+## Tenis — po celé rodině
+
+Venkovní antukové kurty jsou pro rodiny ideální od dubna do října. Měkký povrch, pomalejší odraz a spoustu prostoru.
+
+**Pro děti od 5 let:** Mini tenis — kratší rakety, pěnové míčky, menší hřiště. Většina klubů nabízí dětské skupinové kurzy (od 150 Kč/lekce) a příměstské kempy (2 000–4 000 Kč/týden).
+
+**Pro celou rodinu:** Rodinné debly — 2 dospělí + 2 děti na jednom kurtu. Veřejné antukové kurty v parcích od 100 Kč/h, půjčení raket přímo na místě.
+
+Tenisové kurty na [hraju.cz](/sport/tenis). Víc: [Venkovní tenis v dubnu a květnu →](/blog/venkovni-tenis-duben-kveten-2026)
+
+## Cyklistika — od odrážedla po rodinné výlety
+
+**Pro nejmenší (2–4 roky):** Balance bike (odrážedlo) — naučí rovnováhu bez pedálů.
+**Pro školáky (5–12 let):** Dětská kola 16"–24", cyklostezky (asfalt, bez aut).
+**Pro celou rodinu:** Cyklostezky podél řek (Vltava, Labe, Dyje) — rovné, bezpečné, se zastávkami. Tip: [Cyklotrasy v Praze →](/blog/cyklotrasy-praha-pruvodce)
+
+## Jak začít jako rodina — 3 kroky
+
+1. **Vyberte sport, který baví všechny** — ne ten, co baví jen rodiče. Nechte děti vybrat.
+2. **Začněte nenásilně** — první návštěva = zábava, ne výkon. 30 minut stačí.
+3. **Zaznamenejte to** — po návštěvě klikněte [„Byl/a jsem tady"](/blog/check-iny-na-hraju-cz-pruvodce) na hraju.cz. Děti milují sledovat, kolik míst navštívily.
+
+Najděte sportoviště vhodná pro celou rodinu na [hraju.cz](/).
+
+---
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [30 dní pohybu — rodinná výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak najít sportovního parťáka](/blog/jak-najit-sportovniho-partnera)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 

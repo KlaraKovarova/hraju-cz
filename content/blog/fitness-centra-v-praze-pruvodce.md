@@ -60,12 +60,33 @@ Specializovaná na jeden typ cvičení — CrossFit boxy, jógová studia, HIIT 
 
 Cenově dostupné posilovny otevřené často 24/7. Základní vybavení bez frází. Ideální pro zkušené cvičence, kteří nepotřebují vedení.
 
+## Srovnání typů fitness center
+
+| Typ | Cena/měsíc | Vybavení | Atmosféra | Pro koho |
+|---|---|---|---|---|
+| Klasická posilovna | 500–1 200 Kč | Volné váhy, stroje | Soustředěná | Silový trénink |
+| Multisport centrum | 1 000–3 000 Kč | Bazén, sály, kurty | Rodinná | Pestrost sportů |
+| Boutique studio | 200–400 Kč/lekce | Specializované | Komunitní | Konkrétní styl |
+| Low-cost řetězec | 300–600 Kč | Základní, 24/7 | Nezávislá | Zkušení cvičenci |
+
+## Co vzít na první návštěvu
+
+Většina fitness center nabízí zkušební vstup zdarma nebo za zvýhodněnou cenu. S sebou potřebujete:
+
+- **Sportovní oblečení** — prodyšné tričko, šortky nebo legíny, čistá sálová obuv
+- **Ručník** — většina center vyžaduje vlastní ručník na stroje
+- **Láhev s vodou** — automaty na vodu nebývají samozřejmostí
+- **Zámek na skříňku** — některá centra je nepůjčují
+
+**Tip:** Přijďte mimo špičku (dopoledne nebo po 19:00), abyste měli prostor se rozhlédnout a vyzkoušet stroje v klidu.
+
 ## Jak začít?
 
 1. Vyberte 2–3 fitness centra ve vaší lokalitě na [hraju.cz/sport/fitness](/sport/fitness)
 2. Využijte zkušební vstup nebo den otevřených dveří
 3. Zeptejte se na podmínky členství — vyhněte se dlouhodobým smlouvám na začátku
 4. Začněte s 2–3 tréninky týdně a postupně přidávejte
+5. Po návštěvě klikněte [„Byl/a jsem tady"](/blog/check-iny-na-hraju-cz-pruvodce) na stránce centra — budujte si mapu sportovních zážitků
 
 ## Praha po čtvrtích
 
@@ -75,15 +96,17 @@ Fitness centra najdete v každé městské části. Nejvíc jich má Praha 4 (11
 - [Fitness v Praha 4](/sport/fitness/praha/praha-4) — 116 center, Krč, Braník, Nusle
 - [Fitness v Praha 5](/sport/fitness/praha/praha-5) — 79 center, Smíchov, Barrandov
 - [Fitness v Praha 6](/sport/fitness/praha/praha-6) — 44 center, Dejvice, Břevnov
+- [Fitness v Praha 9](/sport/fitness/praha/praha-9) — 64 center, Vysočany, Letňany
 
 Celkový přehled fitness center v celém Česku najdete na [hraju.cz/sport/fitness](/sport/fitness).
 
 ---
 
-Hledáte konkrétní typ cvičení? Filtrujte fitness centra ve vašem okolí na [hraju.cz](/sport/fitness) a najděte to, co vám sedne.
-
 ## Zapojte se do komunity
 
-- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
-- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak najít sportovního parťáka](/blog/jak-najit-sportovniho-partnera)

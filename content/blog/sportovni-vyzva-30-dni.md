@@ -69,12 +69,44 @@ Přidejte se k amatérskému volejbalovému turnaji nebo najděte skupinu, kter�
 - [Volejbal v Česku](/sport/volejbal)
 - Průvodce: [Jak najít sportovního partnera](/blog/jak-najit-sportovniho-partnera)
 
-## Jak se zapojit
+## Jak na to — den po dni
 
-1. **Vyberte si sport** z našeho katalogu na [hraju.cz](/)
-2. **Najděte sportoviště** ve vašem městě
-3. **Jděte na to** — první krok je nejtěžší
-4. **Sdílejte zkušenost** — pošlete tip přátelům, ať taky vědí, kam vyrazit
+Nemusíte plánovat celý měsíc dopředu. Tady je jednoduchý postup:
+
+**Dny 1–3:** Vyberte si sport z týdne 1 a najděte sportoviště na [hraju.cz](/). Zarezervujte.
+**Den 4–7:** Jděte sportovat. Po návštěvě klikněte [„Byl/a jsem tady"](/blog/check-iny-na-hraju-cz-pruvodce) na stránce sportoviště.
+**Den 8:** Napište [krátkou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — 2–3 věty o tom, co vás zaujalo. Přidejte fotku.
+**Dny 9–14:** Opakujte s týdnem 2.
+**Dny 15–28:** Týdny 3 a 4.
+**Den 29–30:** Shrnutí — kolik sportů jste vyzkoušeli? Kolik check-inů máte?
+
+## Co za to získáte
+
+### Odznaky na profilu
+Za 5 recenzí během sezóny získáte odznak **📝 Recenzent sezóny**. Během 30denní výzvy to zvládnete snadno — stačí ohodnotit 5 z navštívených sportovišť. [Jak odznaky fungují →](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+
+### Pozice v žebříčku
+Každá recenze vás posouvá v [žebříčku nejaktivnějších recenzentů](/blog/zebricek-recenzentu-hraju-cz). Po 30 dnech budete mít náskok před většinou uživatelů.
+
+### Mapu sportovních zážitků
+Každý check-in se zaznamenává do vašeho profilu. Po 30 dnech máte vizuální mapu míst, kde jste sportovali — osobní sportovní deník.
+
+### Nové kontakty
+Nový sport = nová komunita. Lezci, padelisté, plavci — každý sport má své lidi. A společný sport je nejlepší způsob, jak někoho poznat.
+
+## Časté otázky
+
+**Musím začít prvního v měsíci?**
+Ne. Výzva je osobní — začněte kdykoli a počítejte 30 dní od startu.
+
+**Co když nestihnu 4 sporty?**
+I 2 nové sporty za měsíc jsou víc, než většina lidí zkusí za rok. Každý pokus se počítá.
+
+**Můžu opakovat sport, který už znám?**
+Samozřejmě — ale výzva je o **nových** sportech. Zkuste alespoň 2 sporty, které jste nikdy nedělali.
+
+**Potřebuju speciální vybavení?**
+Ne. Většina center nabízí půjčení vybavení pro nováčky. Na bouldering stačí sportovní oblečení (lezečky si půjčíte). Na padel si půjčíte raketu. Na ferratu set.
 
 ## Sdílejte výzvu
 
@@ -84,5 +116,7 @@ Znáte někoho, kdo by se měl hýbat víc? Pošlete mu tenhle článek. Sportov
 
 - [7 sportů za 7 dní — intenzivní výzva](/blog/7-sportu-za-7-dni-vyzva)
 - [Jak najít sportovního partnera](/blog/jak-najit-sportovniho-partnera)
+- [Check-iny — budujte si mapu zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 
