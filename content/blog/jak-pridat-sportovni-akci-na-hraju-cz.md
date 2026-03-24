@@ -142,6 +142,7 @@ Ne. Akci může přidat kdokoli — stačí registrace na hraju.cz. Nemusíte b�
 
 - [Check-iny na hraju.cz — jak fungují](/blog/check-iny-na-hraju-cz-pruvodce)
 - [Odznaky na hraju.cz — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Jak najít sportovního parťáka](/blog/jak-najit-sportovniho-partnera)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 - [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)

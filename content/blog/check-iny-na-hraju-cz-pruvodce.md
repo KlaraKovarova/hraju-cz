@@ -107,6 +107,8 @@ Check-in můžete zrušit — tlačítko funguje jako přepínač.
 ## Zapojte se do komunity
 
 - [Odznaky na hraju.cz — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Žebříček recenzentů — jak se dostat na vrchol](/blog/zebricek-recenzentu-hraju-cz)
 - [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 - [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)

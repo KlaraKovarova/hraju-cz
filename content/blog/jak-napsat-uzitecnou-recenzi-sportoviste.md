@@ -83,7 +83,7 @@ Strukturovaná, pokrývá všechny kategorie, založená na opakované zkušenos
 2. **Buďte féroví.** Zmiňte pozitiva i negativa — zvyšuje to důvěryhodnost. „Kurty super, sprchy průměrné" je užitečnější než samá chvála nebo samá kritika.
 3. **Pište jako kamarádovi.** Konverzační tón funguje lépe než formální hodnocení.
 4. **Ideální délka je 50–200 slov.** Dost na to, abyste řekli podstatné, málo na to, aby to někdo nečetl.
-5. **Fotky jsou bonus.** Stav kurtů, šaten, vybavení — fotka řekne víc než odstavec textu.
+5. **Fotky jsou bonus.** Stav kurtů, šaten, vybavení — fotka řekne víc než odstavec textu. [Průvodce fotkami →](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
 
 ## Napište svou první recenzi
 
@@ -97,5 +97,7 @@ Na hraju.cz najdete tisíce sportovišť po celé republice. Vyberte to, které 
 - [Jak si vybrat sportoviště — proč číst recenze](/blog/jak-si-vybrat-sportoviste-recenze)
 - [Check-iny na hraju.cz — budujte si mapu zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
 - [Odznaky — jak je sbírat a co znamenají](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Fotky k recenzím — proč a jak je přidávat](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 - [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)

@@ -53,7 +53,8 @@ Komunita hraju.cz roste a nabízí:
 - **Recenze a hodnocení** — ohodnoťte sportoviště hvězdičkami a napište recenzi. Vaše zkušenost pomáhá stovkám dalších sportovců. [Jak napsat užitečnou recenzi →](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
 - **Profily sportovců** — sledujte svou historii recenzí, sbírejte odznaky a lezte v žebříčku nejaktivnějších recenzentů.
 - **Check-in „Byl/a jsem tady"** — označte sportoviště, která jste navštívili. Budujte si mapu svých sportovních zážitků. [Jak check-iny fungují →](/blog/check-iny-na-hraju-cz-pruvodce)
-- **Žebříček recenzentů** — nejaktivnější členové komunity na jednom místě. Najdete ho na [/recenze](/recenze).
+- **Žebříček recenzentů** — nejaktivnější členové komunity na jednom místě. [Jak se dostat na vrchol →](/blog/zebricek-recenzentu-hraju-cz)
+- **Fotky k recenzím** — přidejte fotky a ukažte ostatním, jak sportoviště skutečně vypadá. [Průvodce fotkami →](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
 - **Odznaky** — sbírejte odznaky za recenze, check-iny a aktivitu. Čím víc sdílíte, tím víc odznaků získáte. [Průvodce odznaky →](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - **Sportovní akce** — přidejte vlastní turnaj, výlet nebo společný trénink. [Jak přidat akci →](/blog/jak-pridat-sportovni-akci-na-hraju-cz)
 

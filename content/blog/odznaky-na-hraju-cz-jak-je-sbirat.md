@@ -142,6 +142,8 @@ Ano. Systém vyhodnocuje celou vaši historii — pokud jste už v minulosti nav
 ## Zapojte se do komunity
 
 - [Check-iny na hraju.cz — jak fungují](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Žebříček recenzentů — jak se dostat na vrchol](/blog/zebricek-recenzentu-hraju-cz)
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
 - [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 - [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
