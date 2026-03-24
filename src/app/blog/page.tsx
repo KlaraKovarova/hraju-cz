@@ -25,8 +25,21 @@ export default function BlogIndex() {
   const posts = getAllPosts();
   const [featuredPost, ...gridPosts] = posts;
 
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "hraju.cz", item: "https://www.hraju.cz" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.hraju.cz/blog" },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-zinc-50/50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       {/* Header */}
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center px-6 py-4">

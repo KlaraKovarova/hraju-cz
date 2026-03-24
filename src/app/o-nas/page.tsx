@@ -8,8 +8,21 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "hraju.cz", item: "https://www.hraju.cz" },
+      { "@type": "ListItem", position: 2, name: "O nás", item: "https://www.hraju.cz/o-nas" },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link href="/" className="text-xl font-extrabold tracking-tight text-zinc-900">

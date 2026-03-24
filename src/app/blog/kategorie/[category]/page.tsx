@@ -37,8 +37,22 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   const posts = getPostsByCategory(category);
 
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "hraju.cz", item: "https://www.hraju.cz" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.hraju.cz/blog" },
+      { "@type": "ListItem", position: 3, name: label, item: `https://www.hraju.cz/blog/kategorie/${category}` },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-zinc-50/50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center px-6 py-4">
           <div className="flex items-center gap-2 text-sm text-zinc-500">
