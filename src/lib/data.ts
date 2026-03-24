@@ -45,6 +45,7 @@ export type FacilityWithDetails = {
   images: { url: string; alt: string | null; isPrimary: boolean }[];
   averageRating: number | null;
   reviewCount: number;
+  tipCount: number;
 };
 
 /** Recommended sort: premium first → facilities with reviews (by rating desc) → rest by name */
@@ -150,6 +151,7 @@ function toFacilityWithDetails(f: ExportData["facilities"][number]): FacilityWit
     images: [],
     averageRating: null,
     reviewCount: 0,
+    tipCount: 0,
   };
 }
 
@@ -1075,14 +1077,31 @@ export async function getRecentFacilities(limit: number = 4): Promise<FacilityWi
   return sorted.slice(0, limit).map(toFacilityWithDetails);
 }
 
-/** Related facilities in same city for same sport (for "Další [sport] v [city]") */
+/** Haversine distance in km between two GPS coordinates */
+function haversineKm(lat1: number, lng1: number, lat2: number, lng2: number): number {
+  const R = 6371;
+  const dLat = ((lat2 - lat1) * Math.PI) / 180;
+  const dLng = ((lng2 - lng1) * Math.PI) / 180;
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos((lat1 * Math.PI) / 180) *
+      Math.cos((lat2 * Math.PI) / 180) *
+      Math.sin(dLng / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+export type NearbyFacility = FacilityWithDetails & { distanceKm: number | null };
+
+/** Related facilities for same sport, sorted by GPS distance when coordinates available */
 export async function getRelatedFacilities(
   sportSlug: string,
   city: string,
   region: string | null,
   excludeSlug: string,
-  limit: number = 6
-): Promise<{ facilities: FacilityWithDetails[]; isMixed: boolean }> {
+  limit: number = 6,
+  originLat?: number | null,
+  originLng?: number | null,
+): Promise<{ facilities: NearbyFacility[]; isMixed: boolean }> {
   const facilityIds = facilitiesBySportSlug.get(sportSlug);
   if (!facilityIds) return { facilities: [], isMixed: false };
 
@@ -1090,13 +1109,50 @@ export async function getRelatedFacilities(
     return facilityIds.has(f.id) && f.isActive && f.slug !== excludeSlug;
   });
 
+  const hasOrigin = originLat != null && originLng != null;
+
+  // Attach distance to each candidate
+  type CandidateWithDist = { raw: ExportData["facilities"][number]; distKm: number | null };
+  const withDist: CandidateWithDist[] = candidates.map((f) => ({
+    raw: f,
+    distKm: hasOrigin && f.lat && f.lng ? haversineKm(originLat!, originLng!, f.lat, f.lng) : null,
+  }));
+
+  if (hasOrigin) {
+    // GPS-based: sort all candidates by distance, take closest
+    const withCoords = withDist.filter((c) => c.distKm != null);
+    withCoords.sort((a, b) => a.distKm! - b.distKm!);
+
+    // Also include candidates without coords (appended at end, sorted by city match then rating)
+    const noCoords = withDist.filter((c) => c.distKm == null);
+    noCoords.sort((a, b) => {
+      const locA = locationById.get(a.raw.locationId);
+      const locB = locationById.get(b.raw.locationId);
+      const aCityMatch = locA?.city === city ? 0 : 1;
+      const bCityMatch = locB?.city === city ? 0 : 1;
+      if (aCityMatch !== bCityMatch) return aCityMatch - bCityMatch;
+      return a.raw.name.localeCompare(b.raw.name, "cs");
+    });
+
+    const sorted = [...withCoords, ...noCoords].slice(0, limit);
+    const results: NearbyFacility[] = sorted.map((c) => ({
+      ...toFacilityWithDetails(c.raw),
+      distanceKm: c.distKm,
+    }));
+    return { facilities: results, isMixed: results.some((f) => f.location.city !== city) };
+  }
+
+  // Fallback: city/region grouping (no GPS available)
   // 1. Same city
-  const sameCity = candidates.filter((f) => {
-    const loc = locationById.get(f.locationId);
+  const sameCity = withDist.filter((c) => {
+    const loc = locationById.get(c.raw.locationId);
     return loc?.city === city;
   });
 
-  let results = sameCity.map(toFacilityWithDetails);
+  let results: NearbyFacility[] = sameCity.map((c) => ({
+    ...toFacilityWithDetails(c.raw),
+    distanceKm: null,
+  }));
   results.sort((a, b) => (b.averageRating ?? 0) - (a.averageRating ?? 0) || a.name.localeCompare(b.name, "cs"));
 
   if (results.length >= limit) {
@@ -1105,13 +1161,16 @@ export async function getRelatedFacilities(
 
   // 2. Expand to same region
   if (region) {
-    const sameCitySlugs = new Set(sameCity.map((f) => f.slug));
-    const sameRegion = candidates.filter((f) => {
-      if (sameCitySlugs.has(f.slug)) return false;
-      const loc = locationById.get(f.locationId);
+    const sameCitySlugs = new Set(sameCity.map((c) => c.raw.slug));
+    const sameRegion = withDist.filter((c) => {
+      if (sameCitySlugs.has(c.raw.slug)) return false;
+      const loc = locationById.get(c.raw.locationId);
       return loc?.region === region;
     });
-    const regionMapped = sameRegion.map(toFacilityWithDetails);
+    const regionMapped: NearbyFacility[] = sameRegion.map((c) => ({
+      ...toFacilityWithDetails(c.raw),
+      distanceKm: null,
+    }));
     regionMapped.sort((a, b) => (b.averageRating ?? 0) - (a.averageRating ?? 0) || a.name.localeCompare(b.name, "cs"));
     results = [...results, ...regionMapped];
   }
@@ -1122,9 +1181,9 @@ export async function getRelatedFacilities(
 
   // 3. Fill remaining from any city
   const usedSlugs = new Set(results.map((f) => f.slug));
-  const remaining = candidates
-    .filter((f) => !usedSlugs.has(f.slug))
-    .map(toFacilityWithDetails);
+  const remaining: NearbyFacility[] = withDist
+    .filter((c) => !usedSlugs.has(c.raw.slug))
+    .map((c) => ({ ...toFacilityWithDetails(c.raw), distanceKm: null }));
   remaining.sort((a, b) => (b.averageRating ?? 0) - (a.averageRating ?? 0));
   results = [...results, ...remaining.slice(0, limit - results.length)];
 

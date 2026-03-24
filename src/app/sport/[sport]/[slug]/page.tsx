@@ -15,7 +15,7 @@ import {
   Building2,
 } from "lucide-react";
 import { getSportBySlug, isSportClaimable } from "@/lib/sports";
-import { getFacilityBySlug, getInactiveFacilityRedirectInfo, getFacilitiesByCityAndSport, getRelatedFacilities } from "@/lib/data";
+import { getFacilityBySlug, getInactiveFacilityRedirectInfo, getFacilitiesByCityAndSport, getRelatedFacilities, type NearbyFacility } from "@/lib/data";
 import { getPostsBySport } from "@/lib/blog";
 import { getRegionByName, cityToSlug } from "@/lib/regions";
 import { getSportFacilityType, getSportFacilityTypePluralGenitive } from "@/lib/seo";
@@ -215,8 +215,8 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
   const regionInfo = facility.location.region ? getRegionByName(facility.location.region) : null;
   const citySl = cityToSlug(facility.location.city);
 
-  // Related facilities (same city, then region, then any)
-  const { facilities: relatedFacilities, isMixed: relatedIsMixed } = await getRelatedFacilities(sportSlug, facility.location.city, facility.location.region, slug, 6);
+  // Related facilities (GPS distance when available, then city/region fallback)
+  const { facilities: relatedFacilities, isMixed: relatedIsMixed } = await getRelatedFacilities(sportSlug, facility.location.city, facility.location.region, slug, 6, mapLat, mapLng);
 
   // Related blog posts for this sport
   const relatedBlogPosts = getPostsBySport(sportSlug).slice(0, 3);
@@ -913,6 +913,33 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
         </div>
       </div>
 
+      {/* "Have you been here?" CTA */}
+      <section className="border-t border-zinc-100 bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-8 text-center sm:flex-row sm:text-left">
+          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-emerald-100 text-3xl">
+            {sport.icon}
+          </div>
+          <div className="flex-1">
+            <h2 className="text-lg font-bold text-zinc-900">
+              Byli jste tady?
+            </h2>
+            <p className="mt-1 text-sm text-zinc-600">
+              Podělte se o svůj zážitek — napište recenzi nebo se přihlaste jako návštěvník. Pomůžete ostatním při výběru sportoviště.
+            </p>
+          </div>
+          <div className="flex shrink-0 items-center gap-3">
+            <CheckInButton facilityId={facility.id} currentPath={`/sport/${sportSlug}/${slug}`} facilityName={facility.name} />
+            <a
+              href="#recenze"
+              className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700"
+            >
+              <CalendarCheck className="h-4 w-4" />
+              Napsat recenzi
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Reviews Section */}
       <section id="recenze" className="border-t border-zinc-100 bg-white scroll-mt-4">
         <div className="mx-auto max-w-6xl px-6 py-8">
@@ -1054,11 +1081,19 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                     <p className="truncate text-sm font-semibold text-zinc-900 group-hover:text-emerald-700">
                       {rel.name}
                     </p>
-                    <div className="mt-0.5 flex items-center gap-2 text-xs text-zinc-500">
+                    <div className="mt-0.5 flex flex-wrap items-center gap-2 text-xs text-zinc-500">
                       <span className="flex items-center gap-1">
                         <MapPin className="h-3 w-3" />
                         {rel.location.city}
                       </span>
+                      {rel.distanceKm != null && (
+                        <span className="flex items-center gap-1">
+                          <Navigation className="h-3 w-3" />
+                          {rel.distanceKm < 1
+                            ? `${Math.round(rel.distanceKm * 1000)} m`
+                            : `${rel.distanceKm.toFixed(1)} km`}
+                        </span>
+                      )}
                       {rel.averageRating != null && rel.reviewCount > 0 && (
                         <span className="flex items-center gap-0.5 text-amber-500">
                           <span>{"\u2605"}</span>
