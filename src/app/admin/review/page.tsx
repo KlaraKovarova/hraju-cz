@@ -27,7 +27,8 @@ interface FacilityReview {
   isClaimed: boolean;
   isPremium: boolean;
   flags: string[];
-  url: string;
+  website: string | null;
+  listingUrl: string;
 }
 
 interface ApiResponse {
@@ -249,16 +250,30 @@ export default function AdminReviewPage() {
 
                 {/* Actions */}
                 <div className="flex shrink-0 items-center gap-2">
-                  <a
-                    href={f.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  {f.website ? (
+                    <a
+                      href={f.website.startsWith("http") ? f.website : `https://${f.website}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 rounded-lg bg-zinc-50 px-2.5 py-1.5 text-xs text-zinc-500 hover:bg-zinc-100"
+                      title="Web sportoviště"
+                    >
+                      <ExternalLink className="h-3 w-3" />
+                      Web
+                    </a>
+                  ) : (
+                    <span className="inline-flex items-center gap-1 rounded-lg bg-zinc-50 px-2.5 py-1.5 text-xs text-zinc-300" title="Nemá web">
+                      <ExternalLink className="h-3 w-3" />
+                      Web
+                    </span>
+                  )}
+                  <Link
+                    href={f.listingUrl}
                     className="inline-flex items-center gap-1 rounded-lg bg-zinc-50 px-2.5 py-1.5 text-xs text-zinc-500 hover:bg-zinc-100"
-                    title="Zobrazit na webu"
+                    title="Zobrazit listing"
                   >
-                    <ExternalLink className="h-3 w-3" />
-                    Web
-                  </a>
+                    Listing
+                  </Link>
                   <Link
                     href={`/admin/facilities/${f.id}`}
                     className="rounded-lg bg-zinc-100 px-3 py-1.5 text-xs font-medium text-zinc-700 hover:bg-zinc-200"

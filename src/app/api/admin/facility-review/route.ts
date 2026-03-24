@@ -110,7 +110,8 @@ export async function GET(request: NextRequest) {
         isClaimed: f.isClaimed,
         isPremium: f.isPremium,
         flags,
-        url: f.sports[0]
+        website: f.website,
+        listingUrl: f.sports[0]
           ? `/${f.sports[0].sport.slug}/${f.slug}`
           : `/${f.slug}`,
       };
