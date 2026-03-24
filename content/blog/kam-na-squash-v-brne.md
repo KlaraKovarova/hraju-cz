@@ -10,44 +10,96 @@ sportTags:
 image: /images/blog/kam-na-squash-v-brne.jpg
 ---
 
-Brno má překvapivě bohatou squashovou scénu. Od zavedených center s dlouhou tradicí po menší kluby s rodinnou atmosférou — možností je dost. Připravili jsme přehled těch nejzajímavějších.
+Brno má překvapivě bohatou squashovou scénu — 14 kurtů ve 4 aktivních centrech. Od největšího klimatizovaného komplexu po kluby s rodinnou atmosférou. Připravili jsme přehled s cenami a praktickými tipy.
 
-## Squash Slovan — Štolcova, Brno
+## Centrum Viktoria — největší v Brně
 
-[Squash Slovan](/squash/squash-slovan) je jedním z nejznámějších squashových center v Brně. Kromě squashových kurtů zde najdete i fitness, stolní tenis a solárium. Vyplatí se využít možnost tréninku s ligovým hráčem.
+**Adresa:** Vodařská 232/2, Brno-Komárov · [centrumviktoria.cz](https://www.centrumviktoria.cz/)
 
-**Co hráči chválí:** profesionální tréninky, kompletní zázemí, půjčovna vybavení
+Největší squashové centrum v Brně — **6 klimatizovaných kurtů**. Součástí je i badminton, beach volejbal, bowling, tenis a fitness.
+
+- **Kurty:** 6 squashových (klimatizace)
+- **Otevírací doba:** Po–Pá 7:00–22:00, So–Ne 8:00–22:00
+- **Půjčovna:** Raketa 50 Kč, míček 20 Kč
+- **Kontakt:** +420 776 282 575
+
+| Vstupné | Cena za hodinu |
+|---|---|
+| Dopoledne (7–15h) | 270 Kč |
+| Studenti dopoledne | 220 Kč |
+| Odpoledne (15–22h) | 370 Kč |
+| Víkend | 320 Kč |
+
+**Co hráči chválí:** klimatizace (klíčové v létě), velikost areálu, kombinace sportů pod jednou střechou
+
+## Squash Slovan — tradice a tréninky
+
+**Adresa:** Štolcova 693/6, Brno · [squashslovan.cz](https://www.squashslovan.cz/)
+
+Jedno z nejznámějších squashových center v Brně — **3 klimatizované kurty**. Kromě squashe fitness, stolní tenis, solárium a infrasauna. Funguje pouze na rezervaci.
+
+- **Kurty:** 3 squashové (klimatizace)
+- **Otevírací doba:** 6:00–22:00 (pouze na rezervaci)
+- **Tréninky:** Možnost tréninku s ligovým hráčem
+- **Kontakt:** +420 548 211 166
+
+**Co hráči chválí:** profesionální tréninky s ligovými hráči, kompletní zázemí, půjčovna vybavení
+
+## Fitness Boby — nejlevnější squash v Brně
+
+**Adresa:** Sportovní 559/2A, Brno · [fitnessboby.cz](https://www.fitnessboby.cz/)
+
+Osvědčená posilovna se squashem přímo u sportovního areálu Lužánky. Nejnižší ceny squashe v Brně.
+
+- **Ceny:** 100–160 Kč/30 min
+- **Půjčovna:** Raketa 40 Kč, míček 20 Kč
+- **Otevírací doba:** Po–Pá 6:00–22:00, So–Ne 7:00–21:00
+- **Bonus:** Fitness od 99 Kč (dopoledne), squash se dá spojit s posilováním
+
+**Co hráči chválí:** nejnižší ceny v Brně, kombinace fitness + squash, dlouhá otevírací doba
 
 ## TJ Tábor Brno — Kraví hora
 
-Na [Kraví hoře](/squash/tj-tabor-brno-z-s) najdete squashové kurty s příjemnou atmosférou. Centrum nabízí půjčovnu raket i míčků a pravidelně pořádá amatérské turnaje. Pro pravidelné hráče se vyplatí permanentka.
+Na [Kraví hoře](/squash/tj-tabor-brno-z-s) najdete squashové kurty s příjemnou atmosférou. Centrum nabízí půjčovnu raket i míčků a pravidelně pořádá amatérské turnaje.
 
 **Co hráči chválí:** turnaje pro amatéry, možnost permanentky, přátelská komunita
 
-## Squash Omega — Křídlovická
+## Squash Omega — centrum města
 
-[Squash Omega](/badminton/squash-omega) v centru Brna kombinuje squash s badmintonem. Ideální volba pro ty, kdo rádi střídají raketové sporty. Nabízí půjčovnu míčků i raket.
+**Adresa:** Křídlovická, Brno-střed
 
-**Co hráči chválí:** centrální poloha, kombinace squashe a badmintonu
+[Squash Omega](/badminton/squash-omega) v centru Brna kombinuje squash s badmintonem. Ideální pro ty, kdo rádi střídají raketové sporty.
 
-## 1. SQ Diana Brno — Haškova
+**Co hráči chválí:** centrální poloha, kombinace squashe a badmintonu, půjčovna vybavení
 
-[SQ Diana Brno](/squash/1-sq-diana-brno) je tradiční squashový klub s věrnou komunitou hráčů. Nachází se v klidné části Brna a nabízí prostředí, kde se snadno seznámíte s dalšími hráči.
+## 1. SQ Diana Brno — klubová atmosféra
 
-**Co hráči chválí:** klubová atmosféra, tradice, pravidelní spoluhráči
+[SQ Diana Brno](/squash/1-sq-diana-brno) na Haškově ulici je tradiční squashový klub s věrnou komunitou hráčů. Klidná část Brna, prostředí, kde se snadno seznámíte s dalšími hráči.
 
-## TENIS U LOMU — přírodní prostředí
+**Co hráči chválí:** klubová atmosféra, pravidelní spoluhráči, tradice
 
-Hledáte squash v přírodě? [Tenis U Lomu](/squash/tenis-u-lomu) nabízí kurty v krásném prostředí u bývalého lomu. Netradiční zážitek v příjemném prostředí.
+## Sport Balkan — TRVALE UZAVŘEN
 
-**Co hráči chválí:** jedinečné prostředí v přírodě, klidná atmosféra
+**Pozor:** Sport Balkan (4 squashové kurty) je od roku 2024 **trvale uzavřen**. Pokud na něj narazíte v jiných průvodcích, informace je zastaralá.
 
-## Na co se zaměřit při výběru squashového centra
+## Srovnání cen
 
+| Centrum | Kurty | Nejlevnější cena | Poznámka |
+|---|---|---|---|
+| Fitness Boby | nespecifikováno | 100 Kč/30 min | Nejlevnější v Brně |
+| Centrum Viktoria | 6 | 220 Kč/hod (studenti) | Největší, klimatizace |
+| Centrum Viktoria | 6 | 270 Kč/hod (standard) | Dopoledne |
+| Squash Slovan | 3 | individuální | Pouze na rezervaci |
+
+## Na co se zaměřit při výběru
+
+- **Klimatizace** — v létě zásadní. Viktoria a Squash Slovan ji mají, ostatní ne vždy.
 - **Stav kurtů** — kvalita podlahy a osvětlení výrazně ovlivňuje hru
-- **Vybavení k zapůjčení** — důležité zejména pro začátečníky
-- **Možnost tréninku** — zkušený trenér vám pomůže zlepšit techniku
-- **Komunita** — turnaje a pravidelné akce pomáhají najít spoluhráče
+- **Půjčovna vybavení** — důležité pro začátečníky (raketa 40–50 Kč, míček 20 Kč)
+- **Možnost tréninku** — Squash Slovan nabízí tréninky s ligovými hráči
+- **Komunita** — TJ Tábor a SQ Diana pořádají amatérské turnaje
+
+**Začínáte se squashem?** Přečtěte si [kompletní průvodce squashem pro začátečníky](/blog/squash-pro-zacatecniky-kompletni-pruvodce) — pravidla, vybavení, technika.
 
 Všechna squashová centra v Brně najdete na [hraju.cz/sport/squash](/sport/squash).
 
