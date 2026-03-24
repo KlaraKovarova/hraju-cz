@@ -190,7 +190,10 @@ export default function PrivacyPolicyPage() {
                     základě smlouvy,
                   </li>
                   <li>podílející se na zajištění provozu služeb,</li>
-                  <li>zajišťující marketingové služby.</li>
+                  <li>zajišťující marketingové služby,</li>
+                  <li>
+                    zajišťující zobrazování reklamy (viz čl. V.a níže).
+                  </li>
                 </ul>
               </li>
               <li>
@@ -198,6 +201,62 @@ export default function PrivacyPolicyPage() {
                 mimo EU) nebo mezinárodní organizaci. Příjemci osobních údajů ve
                 třetích zemích jsou poskytovatelé mailingových služeb /
                 cloudových služeb.
+              </li>
+            </ol>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-bold text-zinc-900">
+              V.a Zobrazování reklamy a soubory cookies třetích stran
+            </h2>
+            <ol className="mt-3 list-decimal space-y-2 pl-5">
+              <li>
+                Tento web využívá službu <strong>Google AdSense</strong>{" "}
+                provozovanou společností Google LLC pro zobrazování
+                reklamních sdělení. Služba Google AdSense může používat
+                soubory cookies a webové signály (web beacons) ke
+                shromažďování informací za účelem zobrazování
+                relevantních reklam.
+              </li>
+              <li>
+                Společnost Google a její partneři mohou používat soubory
+                cookies k zobrazování reklam na základě předchozích
+                návštěv uživatele na tomto webu nebo jiných webech.
+                Používání reklamních souborů cookies umožňuje společnosti
+                Google a jejím partnerům zobrazovat reklamy na základě
+                návštěv na tomto webu a/nebo jiných webech na internetu.
+              </li>
+              <li>
+                Uživatelé mohou personalizovanou reklamu odmítnout v{" "}
+                <a
+                  href="https://www.google.com/settings/ads"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-600 hover:underline"
+                >
+                  Nastavení reklam Google
+                </a>
+                . Případně mohou odmítnout používání souborů cookies
+                třetích stran pro personalizovanou reklamu na stránce{" "}
+                <a
+                  href="https://www.aboutads.info/choices/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-600 hover:underline"
+                >
+                  www.aboutads.info
+                </a>
+                .
+              </li>
+              <li>
+                Tento web dále využívá službu <strong>Google Analytics</strong>{" "}
+                pro analýzu návštěvnosti. Google Analytics používá soubory
+                cookies ke shromažďování anonymních statistických údajů
+                o tom, jak návštěvníci web používají.
+              </li>
+              <li>
+                Tento web využívá službu <strong>Google Tag Manager</strong>{" "}
+                (GTM) pro správu měřicích a reklamních skriptů.
               </li>
             </ol>
           </section>

@@ -191,6 +191,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: "monthly",
     priority: 0.5,
   });
+  entries.push({
+    url: `${BASE_URL}/o-nas`,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  });
+  entries.push({
+    url: `${BASE_URL}/kontakt`,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  });
+  entries.push({
+    url: `${BASE_URL}/podminky-pouziti`,
+    changeFrequency: "monthly",
+    priority: 0.4,
+  });
+  entries.push({
+    url: `${BASE_URL}/ochrana-osobnich-udaju`,
+    changeFrequency: "monthly",
+    priority: 0.4,
+  });
 
   // Cross-sport city pages: /mesta index + /mesto/[city] for top 20 cities
   entries.push({

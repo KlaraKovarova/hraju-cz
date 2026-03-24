@@ -74,10 +74,22 @@ export function Footer() {
               Přidat sportoviště
             </Link>
             <Link
+              href="/o-nas"
+              className="hover:text-zinc-600"
+            >
+              O nás
+            </Link>
+            <Link
               href="/kontakt"
               className="hover:text-zinc-600"
             >
               Kontakt
+            </Link>
+            <Link
+              href="/podminky-pouziti"
+              className="hover:text-zinc-600"
+            >
+              Podmínky použití
             </Link>
             <Link
               href="/ochrana-osobnich-udaju"

@@ -36,7 +36,8 @@ export function CookieConsent() {
     <div className="fixed inset-x-0 bottom-0 z-50 p-4">
       <div className="mx-auto flex max-w-4xl flex-col gap-4 rounded-2xl border border-zinc-200 bg-white p-5 shadow-xl sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-zinc-600">
-          Tento web používá cookies pro analýzu návštěvnosti (Google Analytics).{" "}
+          Tento web používá cookies pro analýzu návštěvnosti a zobrazování
+          relevantní reklamy (Google Analytics, Google AdSense).{" "}
           <Link
             href="/ochrana-osobnich-udaju"
             className="font-medium text-emerald-600 hover:underline"
