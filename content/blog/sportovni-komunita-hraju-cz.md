@@ -90,5 +90,9 @@ Internet je plný generických informací. My chceme vytvořit místo, kde sport
 
 Vaše zkušenost má hodnotu. Sdílejte ji a pomozte ostatním najít ideální místo pro sport.
 
-[Přihlaste se](/prihlaseni) a začněte sdílet své zkušenosti s komunitou hraju.cz.
+[Přihlaste se](/prihlaseni) a začněte sdílet své zkušenosti s komunitou hraju.cz. [Proč se registrovat — co získáte zdarma →](/blog/proc-se-registrovat-na-hraju-cz)
+
+## Co je nového — jaro 2026
+
+Přečtěte si [jarní přehled novinek](/blog/jaro-2026-sportovni-komunita-startuje) — check-iny, odznaky, sportovní akce a další funkce, které jsme pro vás připravili.
 
