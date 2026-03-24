@@ -30,9 +30,9 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
   try {
     const body = await request.json();
     const {
-      name, description, address, postalCode, city, region,
+      name, slug, description, address, postalCode, city, region,
       lat, lng, courtsLanes, pricing, openingHours, website, bookingUrl,
-      isActive, isClaimed, isPremium, isPromo, amenityIds,
+      isActive, isClaimed, isPremium, isPromo, amenityIds, sportSlugs,
     } = body;
 
     let locationId: string | undefined;
@@ -53,6 +53,7 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
       where: { id },
       data: {
         ...(name !== undefined && { name }),
+        ...(slug !== undefined && { slug }),
         ...(description !== undefined && { description }),
         ...(address !== undefined && { address }),
         ...(postalCode !== undefined && { postalCode }),
@@ -71,6 +72,37 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
       },
       include: { location: true, sports: { include: { sport: true } }, amenities: { include: { amenity: true } } },
     });
+
+    // Sync sports if provided
+    if (Array.isArray(sportSlugs)) {
+      const sports = await prisma.sport.findMany({
+        where: { slug: { in: sportSlugs as string[] } },
+        select: { id: true, slug: true },
+      });
+      const desiredSportIds = new Set(sports.map((s) => s.id));
+
+      const currentSports = await prisma.facilitySport.findMany({
+        where: { facilityId: id },
+        select: { sportId: true },
+      });
+      const currentSportIds = new Set(currentSports.map((s) => s.sportId));
+
+      const toAdd = [...desiredSportIds].filter((sid) => !currentSportIds.has(sid));
+      const toRemove = [...currentSportIds].filter((sid) => !desiredSportIds.has(sid));
+
+      await Promise.all([
+        ...toAdd.map((sportId) =>
+          prisma.facilitySport.create({ data: { facilityId: id, sportId } })
+        ),
+        ...(toRemove.length > 0
+          ? [
+              prisma.facilitySport.deleteMany({
+                where: { facilityId: id, sportId: { in: toRemove } },
+              }),
+            ]
+          : []),
+      ]);
+    }
 
     // Sync amenities if provided
     if (Array.isArray(amenityIds)) {
