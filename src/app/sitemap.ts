@@ -6,7 +6,7 @@ import { cityToSlug, REGIONS } from "@/lib/regions";
 import { getAllPosts, CATEGORIES } from "@/lib/blog";
 
 const BASE_URL = "https://www.hraju.cz";
-const VISIBLE_SPORT_SLUGS = new Set(SPORTS.map((s) => s.slug));
+const VISIBLE_SPORT_SLUGS: Set<string> = new Set(SPORTS.map((s) => s.slug));
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [];

@@ -9,6 +9,8 @@ import { FacilityCard } from "@/components/FacilityCard";
 import { FacilityMap } from "@/components/FacilityMap";
 import { HeroSearchForm } from "@/components/HeroSearchForm";
 import { AdSlot } from "@/components/AdSlot";
+import { BannerSlot } from "@/components/BannerSlot";
+import { ChallengeCards } from "@/components/ChallengeCards";
 import { getSportFaqs } from "@/lib/sport-faq";
 import { getPostsBySport, CATEGORIES } from "@/lib/blog";
 import type { Metadata } from "next";
@@ -290,6 +292,13 @@ export default async function SportPage({ params }: SportPageProps) {
         <AdSlot slot="1234567895" format="horizontal" />
       </div>
 
+      {/* Sport-specific challenges (ferraty, lezeni) */}
+      {(sportSlug === "ferraty" || sportSlug === "lezeni") && (
+        <section className="mx-auto max-w-6xl px-6 pt-4">
+          <ChallengeCards filter="sport" />
+        </section>
+      )}
+
       {/* Top Cities */}
       {topCities.length > 0 && (
         <section className="mx-auto max-w-6xl px-6 py-8 border-t border-zinc-100">
@@ -324,7 +333,7 @@ export default async function SportPage({ params }: SportPageProps) {
             {sport.nameCs} sportoviště
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {topFacilities.map((facility, i) => (
+            {topFacilities.slice(0, 3).map((facility, i) => (
               <FacilityCard
                 key={facility.id}
                 facility={facility}
@@ -333,6 +342,28 @@ export default async function SportPage({ params }: SportPageProps) {
               />
             ))}
           </div>
+          {topFacilities.length > 3 && (
+            <>
+              <div className="my-4 flex justify-center">
+                <BannerSlot placement="listing_inline" sport={sportSlug} className="mx-auto" />
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {topFacilities.slice(3).map((facility, i) => (
+                  <FacilityCard
+                    key={facility.id}
+                    facility={facility}
+                    sportSlug={sportSlug}
+                    priority={i + 3 < 4}
+                  />
+                ))}
+              </div>
+            </>
+          )}
+          {topFacilities.length <= 3 && (
+            <div className="mt-4 flex justify-center">
+              <BannerSlot placement="listing_inline" sport={sportSlug} className="mx-auto" />
+            </div>
+          )}
         </section>
       )}
 

@@ -143,6 +143,12 @@ export default async function AdminPage() {
           badge={stats?.unapprovedFacilities}
         />
         <NavCard
+          href="/admin/ads"
+          icon="📢"
+          title="Reklamy"
+          desc="Správa bannerů — zobrazení, kliky, CTR"
+        />
+        <NavCard
           href="/"
           icon="🌐"
           title="Zobrazit web"

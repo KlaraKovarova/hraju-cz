@@ -16,6 +16,7 @@ import {
 import { FacilityCard } from "@/components/FacilityCard";
 import { FacilityMap } from "@/components/FacilityMap";
 import { AdSlot } from "@/components/AdSlot";
+import { BannerSlot } from "@/components/BannerSlot";
 import type { Metadata } from "next";
 
 // ISR: revalidate region pages every hour
@@ -325,8 +326,9 @@ export default async function RegionPage({ params }: RegionPageProps) {
         </section>
       )}
 
-      {/* Ad: after facilities */}
-      <div className="mx-auto max-w-6xl px-6 py-4">
+      {/* Banner + Ad: after facilities */}
+      <div className="mx-auto max-w-6xl px-6 py-4 flex flex-col items-center gap-4">
+        <BannerSlot placement="listing_inline" sport={sportSlug} className="mx-auto" />
         <AdSlot slot="1234567896" format="horizontal" />
       </div>
 

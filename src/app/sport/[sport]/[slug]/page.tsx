@@ -32,6 +32,7 @@ import { OpeningHoursDisplay } from "@/components/OpeningHoursDisplay";
 import { SocialShareBar } from "@/components/SocialShareBar";
 import { FacilityMap } from "@/components/FacilityMap";
 import { AdSlot } from "@/components/AdSlot";
+import { BannerSlot } from "@/components/BannerSlot";
 import { TrackPageView } from "@/components/TrackPageView";
 import { TrackClick } from "@/components/TrackClick";
 import { CheckInButton } from "@/components/CheckInButton";
@@ -934,9 +935,12 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
               facilityName={facility.name}
             />
 
-            {/* Sidebar Ad (hidden for premium facilities) */}
+            {/* Sidebar Banner + Ad (hidden for premium facilities) */}
             {!facility.isPremium && (
-              <AdSlot slot="1234567894" format="rectangle" className="mt-4" />
+              <>
+                <BannerSlot placement="detail_sidebar" sport={sportSlug} className="mt-4" />
+                <AdSlot slot="1234567894" format="rectangle" className="mt-4" />
+              </>
             )}
           </div>
         </div>

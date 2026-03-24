@@ -18,10 +18,12 @@ export default async function AdminLayout({ children }: { children: React.ReactN
 
   let pendingReviewCount = 0;
   let pendingEventCount = 0;
+  let pendingTipCount = 0;
   try {
-    [pendingReviewCount, pendingEventCount] = await Promise.all([
+    [pendingReviewCount, pendingEventCount, pendingTipCount] = await Promise.all([
       prisma.review.count({ where: { isApproved: false } }),
       prisma.touristEvent.count({ where: { isActive: false, source: "user" } }),
+      prisma.facilityTip.count({ where: { isApproved: false } }),
     ]);
   } catch {
     // DB may be unavailable
@@ -51,6 +53,14 @@ export default async function AdminLayout({ children }: { children: React.ReactN
               </span>
             )}
           </Link>
+          <Link href="/admin/tips" className="flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-900">
+            Tipy
+            {pendingTipCount > 0 && (
+              <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 px-1.5 text-[10px] font-bold text-white">
+                {pendingTipCount}
+              </span>
+            )}
+          </Link>
           <Link href="/admin/events" className="flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-900">
             Akce
             {pendingEventCount > 0 && (
@@ -64,6 +74,9 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           </Link>
           <Link href="/admin/messages" className="text-sm text-zinc-500 hover:text-zinc-900">
             Zprávy
+          </Link>
+          <Link href="/admin/ads" className="text-sm text-zinc-500 hover:text-zinc-900">
+            Reklamy
           </Link>
           <div className="ml-auto flex items-center gap-4">
             <Link href="/" className="text-sm text-zinc-400 hover:text-zinc-600">
