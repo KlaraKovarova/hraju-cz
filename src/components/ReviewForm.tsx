@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { StarRating } from "./StarRating";
+import { PhotoUpload } from "./PhotoUpload";
 import { User, Share2, Check, Link2 } from "lucide-react";
 
 interface ReviewFormProps {
@@ -24,6 +25,7 @@ export function ReviewForm({ facilityId, currentPath, facilityName, facilityUrl 
   const [rating, setRating] = useState(0);
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
+  const [photos, setPhotos] = useState<{ id: string; url: string }[]>([]);
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
@@ -55,6 +57,7 @@ export function ReviewForm({ facilityId, currentPath, facilityName, facilityUrl 
           rating,
           title: title.trim() || undefined,
           text: text.trim() || undefined,
+          photoIds: photos.map((p) => p.id),
         }),
       });
 
@@ -195,6 +198,14 @@ export function ReviewForm({ facilityId, currentPath, facilityName, facilityUrl 
           placeholder="Popište svou zkušenost..."
         />
       </div>
+
+      <PhotoUpload
+        facilityId={facilityId}
+        context="review"
+        maxPhotos={3}
+        photos={photos}
+        onPhotosChange={setPhotos}
+      />
 
       {error && (
         <p className="text-xs font-medium text-red-600">{error}</p>

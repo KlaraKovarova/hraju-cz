@@ -35,6 +35,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { TrackPageView } from "@/components/TrackPageView";
 import { TrackClick } from "@/components/TrackClick";
 import { CheckInButton } from "@/components/CheckInButton";
+import { FacilityGallery } from "@/components/FacilityGallery";
 import { getOwnerSession } from "@/lib/owner-auth";
 import { prisma } from "@/lib/prisma";
 import type { Metadata } from "next";
@@ -231,7 +232,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
   }).catch(() => {});
 
   // Query star distribution for AggregateRating component + Schema.org
-  const [starDistribution, recentApprovedReviews] = await Promise.all([
+  const [starDistribution, recentApprovedReviews, userPhotos] = await Promise.all([
     prisma.review.groupBy({
       by: ["rating"],
       where: { facilityId: facility.id, isApproved: true },
@@ -249,6 +250,12 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
         text: true,
         createdAt: true,
       },
+    }),
+    prisma.userPhoto.findMany({
+      where: { facilityId: facility.id, isHidden: false },
+      orderBy: { createdAt: "desc" },
+      take: 5,
+      select: { url: true },
     }),
   ]);
 
@@ -322,7 +329,12 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
     ...(phone && { telephone: phone }),
     ...(email && { email }),
     ...(facility.website && { sameAs: facility.website }),
-    ...(primaryImage && { image: primaryImage.url }),
+    ...((primaryImage || userPhotos.length > 0) && {
+      image: [
+        ...(primaryImage ? [`https://www.hraju.cz${primaryImage.url}`] : []),
+        ...userPhotos.map((p) => `https://www.hraju.cz${p.url}`),
+      ],
+    }),
     ...(mapLat && mapLng && {
       geo: {
         "@type": "GeoCoordinates",
@@ -953,6 +965,13 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
               <ReviewForm facilityId={facility.id} currentPath={`/sport/${sportSlug}/${slug}`} facilityName={facility.name} facilityUrl={`https://www.hraju.cz/sport/${sportSlug}/${slug}`} />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* User Photos Gallery */}
+      <section className="border-t border-zinc-100 bg-zinc-50/50">
+        <div className="mx-auto max-w-6xl px-6 py-8">
+          <FacilityGallery facilityId={facility.id} />
         </div>
       </section>
 

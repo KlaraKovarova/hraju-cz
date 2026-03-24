@@ -126,6 +126,12 @@ export default async function AdminPage() {
           badge={stats?.totalContacts}
         />
         <NavCard
+          href="/admin/photos"
+          icon="📷"
+          title="Fotky uživatelů"
+          desc="Moderace fotek z recenzí a check-inů"
+        />
+        <NavCard
           href="/admin/review"
           icon="🔍"
           title="Kontrola kvality"

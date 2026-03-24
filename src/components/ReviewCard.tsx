@@ -3,7 +3,14 @@
 import { useState } from "react";
 import Link from "next/link";
 import { StarRating } from "./StarRating";
+import { PhotoLightbox } from "./PhotoLightbox";
 import { User, ThumbsUp, Flag, Link2, Check } from "lucide-react";
+
+interface ReviewPhoto {
+  id: string;
+  url: string;
+  alt?: string | null;
+}
 
 interface ReviewCardProps {
   id: string;
@@ -16,6 +23,7 @@ interface ReviewCardProps {
   text: string | null;
   helpful: number;
   createdAt: string;
+  photos?: ReviewPhoto[];
 }
 
 export function ReviewCard({
@@ -29,11 +37,13 @@ export function ReviewCard({
   text,
   helpful: initialHelpful,
   createdAt,
+  photos,
 }: ReviewCardProps) {
   const [helpful, setHelpful] = useState(initialHelpful);
   const [voted, setVoted] = useState(false);
   const [flagged, setFlagged] = useState(false);
   const [linkCopied, setLinkCopied] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   async function handleShareReview() {
     const shareUrl = facilityUrl ? `${facilityUrl}#recenze` : window.location.href;
@@ -112,6 +122,35 @@ export function ReviewCard({
 
       {text && (
         <p className="mt-2 text-sm leading-relaxed text-zinc-600">{text}</p>
+      )}
+
+      {/* Photos */}
+      {photos && photos.length > 0 && (
+        <div className="mt-3 flex gap-2">
+          {photos.map((photo, i) => (
+            <button
+              key={photo.id}
+              type="button"
+              onClick={() => setLightboxIndex(i)}
+              className="h-16 w-16 overflow-hidden rounded-lg border border-zinc-100 transition hover:opacity-80"
+            >
+              <img
+                src={photo.url}
+                alt={photo.alt || "Fotka z recenze"}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </button>
+          ))}
+        </div>
+      )}
+
+      {lightboxIndex !== null && photos && photos.length > 0 && (
+        <PhotoLightbox
+          photos={photos}
+          initialIndex={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+        />
       )}
 
       {/* Actions */}

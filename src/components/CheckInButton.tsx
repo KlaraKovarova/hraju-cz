@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { MapPinCheck, Loader2, LogIn, Share2, Check } from "lucide-react";
+import { MapPinCheck, Loader2, LogIn, Share2, Check, Camera } from "lucide-react";
 import Link from "next/link";
+import { PhotoUpload } from "./PhotoUpload";
 
 interface CheckInButtonProps {
   facilityId: string;
@@ -19,6 +20,9 @@ export function CheckInButton({ facilityId, currentPath, facilityName }: CheckIn
   const [isLoggedIn, setIsLoggedIn] = useState<boolean | null>(null);
   const [showSharePrompt, setShowSharePrompt] = useState(false);
   const [shareCopied, setShareCopied] = useState(false);
+  const [showPhotoUpload, setShowPhotoUpload] = useState(false);
+  const [photos, setPhotos] = useState<{ id: string; url: string }[]>([]);
+  const [visitId, setVisitId] = useState<string | null>(null);
 
   useEffect(() => {
     async function load() {
@@ -65,6 +69,8 @@ export function CheckInButton({ facilityId, currentPath, facilityName }: CheckIn
           body: JSON.stringify({}),
         });
         if (res.ok) {
+          const data = await res.json();
+          setVisitId(data.id);
           setHasVisited(true);
           setCount((c) => c + 1);
           setShowSharePrompt(true);
@@ -112,6 +118,23 @@ export function CheckInButton({ facilityId, currentPath, facilityName }: CheckIn
         </Link>
       </div>
     );
+  }
+
+  async function handleVisitPhotos(newPhotos: { id: string; url: string }[]) {
+    setPhotos(newPhotos);
+    // Link new photos to the visit
+    if (visitId && newPhotos.length > photos.length) {
+      const latest = newPhotos[newPhotos.length - 1];
+      try {
+        await fetch(`/api/facilities/${facilityId}/visit/photo`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ photoId: latest.id }),
+        });
+      } catch {
+        // silent
+      }
+    }
   }
 
   async function handleShare() {
@@ -169,25 +192,48 @@ export function CheckInButton({ facilityId, currentPath, facilityName }: CheckIn
         )}
       </div>
 
-      {/* Share prompt after check-in */}
+      {/* Share prompt + photo upload after check-in */}
       {showSharePrompt && (
-        <div className="flex items-center gap-3 rounded-xl border border-emerald-100 bg-emerald-50/50 px-4 py-3 animate-in fade-in slide-in-from-top-1">
-          <span className="text-sm text-emerald-700">Sdílejte svou návštěvu!</span>
-          <button
-            type="button"
-            onClick={handleShare}
-            className="ml-auto flex items-center gap-1.5 rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-medium text-white transition hover:bg-emerald-700"
-          >
-            {shareCopied ? <Check className="h-3.5 w-3.5" /> : <Share2 className="h-3.5 w-3.5" />}
-            {shareCopied ? "Zkopírováno!" : "Sdílet"}
-          </button>
-          <button
-            type="button"
-            onClick={() => setShowSharePrompt(false)}
-            className="text-xs text-emerald-600 hover:text-emerald-800"
-          >
-            Zavřít
-          </button>
+        <div className="space-y-2 animate-in fade-in slide-in-from-top-1">
+          <div className="flex items-center gap-3 rounded-xl border border-emerald-100 bg-emerald-50/50 px-4 py-3">
+            <span className="text-sm text-emerald-700">Sdílejte svou návštěvu!</span>
+            <button
+              type="button"
+              onClick={handleShare}
+              className="ml-auto flex items-center gap-1.5 rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-medium text-white transition hover:bg-emerald-700"
+            >
+              {shareCopied ? <Check className="h-3.5 w-3.5" /> : <Share2 className="h-3.5 w-3.5" />}
+              {shareCopied ? "Zkopírováno!" : "Sdílet"}
+            </button>
+            {!showPhotoUpload && (
+              <button
+                type="button"
+                onClick={() => setShowPhotoUpload(true)}
+                className="flex items-center gap-1.5 rounded-lg bg-white px-3 py-1.5 text-xs font-medium text-zinc-600 transition hover:bg-zinc-50"
+              >
+                <Camera className="h-3.5 w-3.5" />
+                Přidat fotku
+              </button>
+            )}
+            <button
+              type="button"
+              onClick={() => { setShowSharePrompt(false); setShowPhotoUpload(false); }}
+              className="text-xs text-emerald-600 hover:text-emerald-800"
+            >
+              Zavřít
+            </button>
+          </div>
+          {showPhotoUpload && (
+            <div className="rounded-xl border border-zinc-100 bg-white px-4 py-3">
+              <PhotoUpload
+                facilityId={facilityId}
+                context="visit"
+                maxPhotos={1}
+                photos={photos}
+                onPhotosChange={handleVisitPhotos}
+              />
+            </div>
+          )}
         </div>
       )}
     </div>

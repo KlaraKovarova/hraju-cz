@@ -14,6 +14,12 @@ const SORT_LABELS: Record<SortOption, string> = {
   helpful: "Nejužitečnější",
 };
 
+interface ReviewPhoto {
+  id: string;
+  url: string;
+  alt?: string | null;
+}
+
 interface Review {
   id: string;
   userId?: string | null;
@@ -23,6 +29,7 @@ interface Review {
   text: string | null;
   helpful: number;
   createdAt: string;
+  photos?: ReviewPhoto[];
 }
 
 interface ReviewListProps {
@@ -126,6 +133,7 @@ export function ReviewList({ facilityId, facilityUrl, perPage = 10 }: ReviewList
             text={review.text}
             helpful={review.helpful}
             createdAt={review.createdAt}
+            photos={review.photos}
           />
         ))}
       </div>

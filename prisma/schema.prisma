@@ -74,6 +74,7 @@ model Facility {
   views         FacilityView[]
   reviews       Review[]
   visits        Visit[]
+  userPhotos    UserPhoto[]
   averageRating Float?
   reviewCount   Int              @default(0)
 
@@ -221,6 +222,7 @@ model Review {
   ownerNotifiedAt   DateTime? // when facility owner was emailed about this review
   createdAt         DateTime  @default(now())
   updatedAt         DateTime  @updatedAt
+  photos            UserPhoto[]
 
   @@index([facilityId])
   @@index([isApproved])
@@ -240,6 +242,7 @@ model User {
   updatedAt          DateTime @updatedAt
   reviews            Review[]
   visits             Visit[]
+  userPhotos         UserPhoto[]
   loginTokens        LoginToken[]
   events             TouristEvent[]
 }
@@ -252,6 +255,7 @@ model Visit {
   facility   Facility @relation(fields: [facilityId], references: [id], onDelete: Cascade)
   note       String?  @db.VarChar(280)
   createdAt  DateTime @default(now())
+  photos     UserPhoto[]
 
   @@unique([userId, facilityId])
   @@index([facilityId])
@@ -306,5 +310,26 @@ model TouristEvent {
   @@index([region])
   @@index([dateStart])
   @@index([source])
+  @@index([userId])
+}
+
+model UserPhoto {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  facilityId String
+  facility   Facility @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  reviewId   String?
+  review     Review?  @relation(fields: [reviewId], references: [id], onDelete: SetNull)
+  visitId    String?
+  visit      Visit?   @relation(fields: [visitId], references: [id], onDelete: SetNull)
+  url        String
+  alt        String?
+  isHidden   Boolean  @default(false)
+  createdAt  DateTime @default(now())
+
+  @@index([facilityId])
+  @@index([reviewId])
+  @@index([visitId])
   @@index([userId])
 }

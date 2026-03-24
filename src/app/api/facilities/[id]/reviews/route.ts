@@ -37,6 +37,11 @@ export async function GET(
         text: true,
         helpful: true,
         createdAt: true,
+        photos: {
+          where: { isHidden: false },
+          select: { id: true, url: true, alt: true },
+          orderBy: { createdAt: "asc" },
+        },
       },
     }),
     prisma.review.count({ where: { facilityId: id, isApproved: true } }),
@@ -61,14 +66,14 @@ export async function POST(
     );
   }
 
-  let body: { rating?: number; title?: string; text?: string };
+  let body: { rating?: number; title?: string; text?: string; photoIds?: string[] };
   try {
     body = await request.json();
   } catch {
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
   }
 
-  const { rating, title, text } = body;
+  const { rating, title, text, photoIds } = body;
 
   // Use session data for author info
   const authorName = session.name || session.email.split("@")[0];
@@ -134,6 +139,19 @@ export async function POST(
       text: text?.trim() || null,
     },
   });
+
+  // Link uploaded photos to the review
+  if (photoIds && Array.isArray(photoIds) && photoIds.length > 0) {
+    await prisma.userPhoto.updateMany({
+      where: {
+        id: { in: photoIds.slice(0, 3) },
+        userId: session.userId,
+        facilityId: id,
+        reviewId: null,
+      },
+      data: { reviewId: review.id },
+    });
+  }
 
   // Notify facility owner by email (fire-and-forget)
   const ownerEmail = facility.contacts[0]?.value;
