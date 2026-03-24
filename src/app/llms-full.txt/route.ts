@@ -39,24 +39,45 @@ Všechna data se týkají výhradně České republiky. Jazyk stránek je češt
   ).join("\n");
   sections.push(`## Kraje (14 krajů ČR)\n\n${regionLines}`);
 
-  // Facility stats from DB (with fallback)
+  // Facility stats from DB (with fallback) — only real/live data
   try {
     const stats = await Promise.race([
       Promise.all([
         prisma.facility.count({ where: { isActive: true } }),
-        prisma.review.count({ where: { isApproved: true } }),
-        prisma.user.count(),
+        prisma.review.count({
+          where: { isApproved: true, user: { isSeed: false } },
+        }),
+        prisma.user.count({ where: { isSeed: false } }),
         prisma.touristEvent.count({ where: { isActive: true } }),
+        prisma.$queryRaw<{ sport: string; count: bigint }[]>`
+          SELECT s.slug as sport, COUNT(*) as count
+          FROM "Facility" f
+          JOIN "FacilitySport" fs ON fs."facilityId" = f.id
+          JOIN "Sport" s ON s.id = fs."sportId"
+          WHERE f."isActive" = true
+          GROUP BY s.slug
+          ORDER BY count DESC
+        `,
       ]),
       new Promise<never>((_, reject) =>
         setTimeout(() => reject(new Error("timeout")), 3000)
       ),
     ]);
-    const [facilityCount, reviewCount, userCount, eventCount] = stats;
+    const [facilityCount, reviewCount, userCount, eventCount, sportCounts] =
+      stats;
+    const sportLines = sportCounts
+      .map((sc) => {
+        const sport = SPORTS.find((s) => s.slug === sc.sport);
+        return sport
+          ? `  - ${sport.nameCs}: ${sc.count}`
+          : `  - ${sc.sport}: ${sc.count}`;
+      })
+      .join("\n");
     sections.push(`## Statistiky
 
 - Aktivních sportovišť: ${facilityCount.toLocaleString("cs-CZ")}
-- Schválených recenzí: ${reviewCount.toLocaleString("cs-CZ")}
+${sportLines}
+- Recenzí od uživatelů: ${reviewCount.toLocaleString("cs-CZ")}
 - Registrovaných uživatelů: ${userCount.toLocaleString("cs-CZ")}
 - Aktivních akcí: ${eventCount.toLocaleString("cs-CZ")}`);
   } catch {
