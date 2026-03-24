@@ -133,3 +133,11 @@ Trasy instaloval Karel Bělina v roce 2020.
 Ústecký kraj je pro české ferraty to, co Dolomity pro Alpy — koncentrace tras na malém prostoru, snadná dostupnost a spektakulární scenérie nad Labem. Ať jste začátečník nebo zkušený ferratista, tenhle region stojí za výlet.
 
 Na [hraju.cz](/sport/ferraty) najdete kompletní přehled všech ferrat v Česku s mapou, obtížností a kontakty.
+
+## Další průvodci ferratami
+
+- [Via ferraty v Česku 2026 — kompletní průvodce (30+ lokalit)](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
+- [Top 5 ferrat v Česku](/blog/top-5-ferrat-v-cesku)
+- [Ferraty v Jihočeském kraji](/blog/ferraty-v-jihoceskem-kraji-pruvodce)
+- [Nejlepší ferraty na jaro 2026](/blog/nejlepsi-ferraty-na-jaro-2026)
+- [Ferratové vybavení — průvodce cenami 2026](/blog/ferratove-vybaveni-pruvodce-ceny-2026)

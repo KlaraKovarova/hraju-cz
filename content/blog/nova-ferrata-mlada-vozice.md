@@ -102,3 +102,10 @@ Pokud jste si Mladou Vožici užili a chcete víc, podívejte se na další [via
 ## Byli jste tu? Podělte se o zkušenost!
 
 Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [Napište recenzi](/prihlaseni) a sdílejte svůj názor s komunitou hraju.cz.
+
+## Další průvodci ferratami
+
+- [Via ferraty v Česku 2026 — kompletní průvodce (30+ lokalit)](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
+- [Ferraty v Jihočeském kraji](/blog/ferraty-v-jihoceskem-kraji-pruvodce)
+- [Ferratové vybavení — průvodce cenami 2026](/blog/ferratove-vybaveni-pruvodce-ceny-2026)
+- [Všechny ferraty na hraju.cz](/sport/ferraty)

@@ -179,13 +179,12 @@ Jihočeský kraj nabízí ferraty pro každého — od 15minutové začátečnic
 
 **Byli jste na jihočeské ferratě?** [Napište recenzi](/prihlaseni) a pomozte ostatním lezci vybrat tu správnou trasu.
 
-## Najděte sportoviště v Česku
+## Další průvodci ferratami
 
-Kompletní přehled najdete na:
-- [ferraty v Česku na hraju.cz](/sport/ferraty)
-- [ferratové vybavení — průvodce cenami](/blog/ferratove-vybaveni-pruvodce-ceny-2026)
-
-
----
-
-Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.
+- [Via ferraty v Česku 2026 — kompletní průvodce (30+ lokalit)](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
+- [Top 5 ferrat v Česku](/blog/top-5-ferrat-v-cesku)
+- [Ferraty pro rodiny s dětmi](/blog/ferraty-pro-rodiny-s-detmi-pruvodce)
+- [Ferraty v Ústeckém kraji](/blog/ferraty-v-usteckem-kraji-pruvodce)
+- [Nejlepší ferraty na jaro 2026](/blog/nejlepsi-ferraty-na-jaro-2026)
+- [Ferratové vybavení — průvodce cenami 2026](/blog/ferratove-vybaveni-pruvodce-ceny-2026)
+- [Všechny ferraty na hraju.cz](/sport/ferraty)

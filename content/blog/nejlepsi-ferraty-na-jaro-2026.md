@@ -131,3 +131,12 @@ Jaro vyžaduje trochu víc vybavení než léto:
 Jaro 2026 je skvělý čas začít s ferratami — nebo se vrátit po zimní pauze. Začněte na snazších trasách (K1–K2), dejte si čas na rozlezení a sledujte počasí. České ferraty jsou zdarma nebo velmi levné, takže jediná investice je vaše vybavení a čas.
 
 **Už jste letos byli na ferratě?** [Podělte se o zážitek](/prihlaseni) a pomozte ostatním lezci vybrat tu správnou trasu.
+
+## Další průvodci ferratami
+
+- [Via ferraty v Česku 2026 — kompletní průvodce (30+ lokalit)](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
+- [Top 5 ferrat v Česku](/blog/top-5-ferrat-v-cesku)
+- [Ferraty pro rodiny s dětmi](/blog/ferraty-pro-rodiny-s-detmi-pruvodce)
+- [Ferratové vybavení — průvodce cenami 2026](/blog/ferratove-vybaveni-pruvodce-ceny-2026)
+- [Ferraty v Ústeckém kraji](/blog/ferraty-v-usteckem-kraji-pruvodce)
+- [Ferraty v Jihočeském kraji](/blog/ferraty-v-jihoceskem-kraji-pruvodce)

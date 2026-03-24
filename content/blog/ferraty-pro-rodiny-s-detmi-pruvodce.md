@@ -157,3 +157,10 @@ Strach z výšky je přirozený a zdravý. Nepokoušejte se ho „překonat" sil
 Ferraty s dětmi jsou nezapomenutelný rodinný zážitek — ale vyžadují přípravu. Začněte na nejsnazších trasách (K1–K2), investujte do správného vybavení a nikdy netlačte na výkon. České ferraty jsou zdarma a nabízí trasy pro každý věk.
 
 **Byli jste s dětmi na ferratě?** [Podělte se o zkušenost](/prihlaseni) — vaše recenze pomůže dalším rodinám vybrat tu správnou trasu.
+
+## Další průvodci ferratami
+
+- [Via ferraty v Česku 2026 — kompletní průvodce (30+ lokalit)](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
+- [Top 5 ferrat v Česku](/blog/top-5-ferrat-v-cesku)
+- [Ferraty v Jihočeském kraji](/blog/ferraty-v-jihoceskem-kraji-pruvodce)
+- [Ferratové vybavení — průvodce cenami 2026](/blog/ferratove-vybaveni-pruvodce-ceny-2026)

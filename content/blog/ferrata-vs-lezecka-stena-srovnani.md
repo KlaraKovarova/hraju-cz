@@ -135,3 +135,10 @@ Na [hraju.cz](/sport/ferraty) najdete všechny české ferraty s recenzemi od sk
 Lezecké stěny najdete v sekci [lezení](/sport/lezeni) — přes 60 hal po celé republice s cenami, fotkami a hodnocením.
 
 **Zkusili jste obojí?** [Napište recenzi](/prihlaseni) a řekněte ostatním, co vám sedí víc.
+
+## Další průvodci
+
+- [Via ferraty v Česku 2026 — kompletní průvodce (30+ lokalit)](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
+- [Ferratové vybavení — průvodce cenami 2026](/blog/ferratove-vybaveni-pruvodce-ceny-2026)
+- [Lezecká centra v Praze](/blog/lezecka-centra-v-praze)
+- [Bouldering pro začátečníky](/blog/bouldering-pro-zacatecniky-kompletni-pruvodce)

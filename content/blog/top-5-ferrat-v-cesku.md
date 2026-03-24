@@ -165,5 +165,14 @@ Ochrana hlavy je na ferratě povinná. Lehká lezecká helma chrání před pada
 
 ## Najděte ferratu ve svém okolí
 
-Na [hraju.cz/sport/ferraty](/sport/ferraty) najdete kompletní přehled ferrat a zajištěných cest v celém Česku. Filtrujte podle obtížnosti, regionu a dostupnosti. Sezóna 2026 se blíží — naplánujte si svůj první (nebo další) ferratový výlet ještě dnes.
+Na [hraju.cz/sport/ferraty](/sport/ferraty) najdete kompletní přehled ferrat a zajištěných cest v celém Česku.
+
+## Další průvodci ferratami
+
+- [Via ferraty v Česku 2026 — kompletní průvodce (30+ lokalit)](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
+- [Nejlepší ferraty na jaro 2026](/blog/nejlepsi-ferraty-na-jaro-2026)
+- [Ferraty pro rodiny s dětmi](/blog/ferraty-pro-rodiny-s-detmi-pruvodce)
+- [Ferratové vybavení — průvodce cenami 2026](/blog/ferratove-vybaveni-pruvodce-ceny-2026)
+
+Byli jste na ferratě? [Napište recenzi](/prihlaseni) — pomůžete ostatním vybrat tu správnou trasu!
 
