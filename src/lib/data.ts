@@ -721,6 +721,7 @@ export type ReviewWithFacility = {
   title: string | null;
   text: string | null;
   helpful: number;
+  replyCount: number;
   createdAt: Date;
   facility: { id: string; name: string; slug: string; city: string; sport: string | null; sportNameCs: string | null };
 };
@@ -762,6 +763,7 @@ export async function getAllApprovedReviews(opts: {
             title: true,
             text: true,
             helpful: true,
+            replyCount: true,
             createdAt: true,
             facility: {
               select: {
@@ -788,6 +790,7 @@ export async function getAllApprovedReviews(opts: {
         title: r.title,
         text: r.text,
         helpful: r.helpful,
+        replyCount: r.replyCount,
         createdAt: r.createdAt,
         facility: {
           id: r.facility.id,
@@ -910,6 +913,7 @@ export async function getTopReviewsBySport(
           title: true,
           text: true,
           helpful: true,
+          replyCount: true,
           createdAt: true,
           facility: {
             select: {
@@ -932,6 +936,7 @@ export async function getTopReviewsBySport(
       title: r.title,
       text: r.text,
       helpful: r.helpful,
+      replyCount: r.replyCount,
       createdAt: r.createdAt,
       facility: {
         id: r.facility.id,

@@ -248,6 +248,15 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
         title: true,
         text: true,
         createdAt: true,
+        replies: {
+          select: {
+            body: true,
+            createdAt: true,
+            user: { select: { name: true } },
+          },
+          orderBy: { createdAt: "asc" },
+          take: 5,
+        },
       },
     }),
     prisma.userPhoto.findMany({
@@ -375,6 +384,17 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
         },
         ...(r.title && { name: r.title }),
         ...(r.text && { reviewBody: r.text }),
+        ...(r.replies.length > 0 && {
+          comment: r.replies.map((reply) => ({
+            "@type": "Comment",
+            author: {
+              "@type": "Person",
+              name: reply.user.name || "Uživatel",
+            },
+            datePublished: new Date(reply.createdAt).toISOString().split("T")[0],
+            text: reply.body,
+          })),
+        }),
       })),
     }),
   };

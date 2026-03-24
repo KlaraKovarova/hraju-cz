@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { sendReviewNotificationEmail, sendNewReviewOnFacilityEmail } from "@/lib/email";
 import { getUserSession } from "@/lib/user-auth";
-import { findUsersToNotifyAboutReview, getUnsubscribeToken, buildUnsubscribeUrl } from "@/lib/notifications";
+import { findUsersToNotifyAboutReview, getUnsubscribeToken, buildUnsubscribeUrl, createFavoriteNotifications } from "@/lib/notifications";
+import { checkBadgesByCategory, getBadgeDefinition } from "@/lib/challenges";
 
 // GET /api/facilities/[id]/reviews — list approved reviews (paginated, newest first)
 export async function GET(
@@ -36,6 +37,7 @@ export async function GET(
         title: true,
         text: true,
         helpful: true,
+        replyCount: true,
         createdAt: true,
         photos: {
           where: { isHidden: false },
@@ -198,5 +200,23 @@ export async function POST(
     }
   }).catch(() => {});
 
-  return NextResponse.json({ id: review.id, message: "Děkujeme za recenzi! Bude zobrazena po schválení." }, { status: 201 });
+  // Create in-app notifications for users who favorited this facility (fire-and-forget)
+  createFavoriteNotifications(id, session.userId, "review", authorName.trim()).catch(() => {});
+
+  // Check for newly earned review/community badges
+  let newBadges: { slug: string; name: string; emoji: string }[] = [];
+  try {
+    const reviewBadges = await checkBadgesByCategory(session.userId, "review");
+    const communityBadges = await checkBadgesByCategory(session.userId, "community");
+    newBadges = [...reviewBadges, ...communityBadges]
+      .map((slug) => {
+        const def = getBadgeDefinition(slug);
+        return def ? { slug: def.slug, name: def.name, emoji: def.emoji } : null;
+      })
+      .filter((b): b is { slug: string; name: string; emoji: string } => b !== null);
+  } catch {
+    // Badge check failure shouldn't block the review
+  }
+
+  return NextResponse.json({ id: review.id, message: "Děkujeme za recenzi! Bude zobrazena po schválení.", newBadges }, { status: 201 });
 }

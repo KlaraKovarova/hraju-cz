@@ -79,6 +79,7 @@ model Facility {
   userPhotos    UserPhoto[]
   tips          FacilityTip[]
   favorites     Favorite[]
+  favoriteNotifications FavoriteNotification[]
   averageRating Float?
   reviewCount   Int              @default(0)
   tipCount      Int              @default(0)
@@ -227,12 +228,28 @@ model Review {
   flagged           Boolean   @default(false)
   isApproved        Boolean   @default(false)
   ownerNotifiedAt   DateTime? // when facility owner was emailed about this review
+  replyCount        Int       @default(0)
   createdAt         DateTime  @default(now())
   updatedAt         DateTime  @updatedAt
   photos            UserPhoto[]
+  replies           ReviewReply[]
 
   @@index([facilityId])
   @@index([isApproved])
+  @@index([userId])
+}
+
+model ReviewReply {
+  id        String   @id @default(cuid())
+  reviewId  String
+  review    Review   @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  body      String   @db.Text
+  flagged   Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([reviewId])
   @@index([userId])
 }
 
@@ -248,6 +265,7 @@ model User {
   createdAt          DateTime @default(now())
   updatedAt          DateTime @updatedAt
   reviews            Review[]
+  reviewReplies      ReviewReply[]
   visits             Visit[]
   userPhotos         UserPhoto[]
   loginTokens        LoginToken[]
@@ -255,6 +273,7 @@ model User {
   badges             UserBadge[]
   tips               FacilityTip[]
   favorites          Favorite[]
+  favoriteNotifications FavoriteNotification[]
 }
 
 model Visit {
@@ -384,6 +403,22 @@ model Favorite {
   @@unique([userId, facilityId])
   @@index([facilityId])
   @@index([userId])
+}
+
+model FavoriteNotification {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  facilityId String
+  facility   Facility @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  type       String   // "review" | "checkin"
+  actorName  String?
+  isRead     Boolean  @default(false)
+  createdAt  DateTime @default(now())
+
+  @@index([userId, isRead])
+  @@index([facilityId])
+  @@index([createdAt])
 }
 
 model Banner {

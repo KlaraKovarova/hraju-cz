@@ -28,6 +28,7 @@ interface Review {
   title: string | null;
   text: string | null;
   helpful: number;
+  replyCount: number;
   createdAt: string;
   photos?: ReviewPhoto[];
 }
@@ -132,6 +133,7 @@ export function ReviewList({ facilityId, facilityUrl, perPage = 10 }: ReviewList
             title={review.title}
             text={review.text}
             helpful={review.helpful}
+            replyCount={review.replyCount}
             createdAt={review.createdAt}
             photos={review.photos}
           />

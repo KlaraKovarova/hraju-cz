@@ -524,6 +524,76 @@ export async function sendWeeklyDigestEmail(
   }
 }
 
+export async function sendReviewReplyNotificationEmail(
+  to: string,
+  reviewAuthorName: string,
+  replierName: string,
+  replyText: string,
+  facilityName: string,
+  facilityUrl: string,
+  unsubscribeUrl: string
+): Promise<boolean> {
+  const transporter = createTransporter();
+  if (!transporter) {
+    console.warn("SMTP not configured, skipping review reply email");
+    return false;
+  }
+
+  const preview = replyText.slice(0, 200) + (replyText.length > 200 ? "\u2026" : "");
+  const greeting = reviewAuthorName ? `Ahoj ${reviewAuthorName}` : "Dobrý den";
+
+  try {
+    await transporter.sendMail({
+      from: `"hraju.cz" <${process.env.SMTP_USER}>`,
+      to,
+      subject: `${replierName} odpověděl/a na vaši recenzi – ${facilityName}`,
+      headers: {
+        "List-Unsubscribe": `<${unsubscribeUrl}>`,
+        "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+      },
+      text: [
+        `${greeting},`,
+        ``,
+        `${replierName} odpověděl/a na vaši recenzi sportoviště „${facilityName}":`,
+        ``,
+        `"${preview}"`,
+        ``,
+        `Zobrazit diskuzi: ${facilityUrl}#recenze`,
+        ``,
+        `S pozdravem,`,
+        `tým hraju.cz`,
+        ``,
+        `---`,
+        `Nechcete dostávat tyto e-maily? Odhlaste se: ${unsubscribeUrl}`,
+      ].join("\n"),
+      html: `
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #18181b;">Nová odpověď na vaši recenzi</h2>
+          <p>${greeting},</p>
+          <p><strong>${replierName}</strong> odpověděl/a na vaši recenzi sportoviště <strong>${facilityName}</strong>:</p>
+          <div style="background: #f4f4f5; border-radius: 12px; padding: 16px; margin: 16px 0;">
+            <p style="color: #3f3f46; margin: 0;">${preview}</p>
+          </div>
+          <p style="margin: 24px 0;">
+            <a href="${facilityUrl}#recenze" style="background: #059669; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+              Zobrazit diskuzi
+            </a>
+          </p>
+          <hr style="border: none; border-top: 1px solid #e4e4e7; margin: 24px 0;" />
+          <p style="color: #a1a1aa; font-size: 12px;">
+            hraju.cz – sportoviště v Česku |
+            <a href="${unsubscribeUrl}" style="color: #a1a1aa;">Odhlásit se z notifikací</a>
+          </p>
+        </div>
+      `,
+    });
+    return true;
+  } catch (error) {
+    console.error("Failed to send review reply email:", error);
+    return false;
+  }
+}
+
 interface OutreachEmailParams {
   facilityName: string;
   facilityUrl: string;
