@@ -59,6 +59,8 @@ export default function RootLayout({
   return (
     <html lang="cs">
       <head>
+        <link rel="preconnect" href="https://www.hraju.cz" />
+        <link rel="alternate" type="text/plain" title="LLMs.txt" href="https://www.hraju.cz/llms.txt" />
         <Script id="gtm" strategy="beforeInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
