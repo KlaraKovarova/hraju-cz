@@ -59,8 +59,49 @@ export async function POST(request: NextRequest) {
       url: `https://www.hraju.cz/blog/${p.slug}`,
     }));
 
-  // Get upcoming events (next 2 weeks)
+  // Ferraty seasonal section
   const now = new Date();
+  const month = now.getMonth(); // 0-indexed: 0=Jan, 3=Apr, 9=Oct
+  const isFerrataSeason = month >= 3 && month <= 9; // April–October
+  const isPreSeason = month === 2 || month === 3; // March–April
+
+  let seasonalFerraty: WeeklyDigestData["seasonalFerraty"] = null;
+  if (isFerrataSeason || isPreSeason) {
+    const topFerraty = await prisma.facility.findMany({
+      where: {
+        isActive: true,
+        sports: { some: { sport: { slug: "ferraty" } } },
+      },
+      orderBy: { averageRating: "desc" },
+      take: 3,
+      select: {
+        name: true,
+        slug: true,
+        averageRating: true,
+        location: { select: { region: true } },
+      },
+    });
+
+    if (topFerraty.length > 0) {
+      seasonalFerraty = {
+        heading: isPreSeason
+          ? "Ferratová sezóna začíná!"
+          : "Ferraty sezóna v plném proudu",
+        description: isPreSeason
+          ? "Jaro je tady a ferraty se otevírají. Naplánujte svůj první výstup."
+          : "Využijte pěkné počasí a vyrazte na ferratu.",
+        facilities: topFerraty.map((f) => ({
+          name: f.name,
+          url: `https://www.hraju.cz/sport/ferraty/${f.slug}`,
+          rating: f.averageRating,
+          region: f.location?.region || null,
+        })),
+        categoryUrl: "https://www.hraju.cz/sport/ferraty",
+      };
+    }
+  }
+
+  // Get upcoming events (next 2 weeks)
   const twoWeeksFromNow = new Date();
   twoWeeksFromNow.setDate(twoWeeksFromNow.getDate() + 14);
   const upcomingEvents = await prisma.touristEvent.findMany({
@@ -150,13 +191,15 @@ export async function POST(request: NextRequest) {
           }),
           city: e.city,
         })),
+        seasonalFerraty,
       };
 
       // Skip if nothing to show
       if (
         digestData.newReviews.length === 0 &&
         digestData.newPosts.length === 0 &&
-        digestData.upcomingEvents.length === 0
+        digestData.upcomingEvents.length === 0 &&
+        !digestData.seasonalFerraty
       ) {
         skipped++;
         continue;

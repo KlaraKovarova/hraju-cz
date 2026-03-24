@@ -378,6 +378,17 @@ export interface WeeklyDigestData {
     date: string;
     city: string;
   }>;
+  seasonalFerraty: {
+    heading: string;
+    description: string;
+    facilities: Array<{
+      name: string;
+      url: string;
+      rating: number | null;
+      region: string | null;
+    }>;
+    categoryUrl: string;
+  } | null;
 }
 
 export async function sendWeeklyDigestEmail(
@@ -395,7 +406,8 @@ export async function sendWeeklyDigestEmail(
   const hasContent =
     data.newReviews.length > 0 ||
     data.newPosts.length > 0 ||
-    data.upcomingEvents.length > 0;
+    data.upcomingEvents.length > 0 ||
+    !!data.seasonalFerraty;
 
   if (!hasContent) return false;
 
@@ -441,6 +453,25 @@ export async function sendWeeklyDigestEmail(
     ? `\nNadcházející akce:\n${data.upcomingEvents.slice(0, 5).map((e) => `- ${e.name} — ${e.date}, ${e.city}`).join("\n")}\n`
     : "";
 
+  const sf = data.seasonalFerraty;
+  const seasonalHtml = sf
+    ? `<div style="background:#f0fdf4;border-radius:12px;padding:20px;margin:24px 0;">
+        <h3 style="color:#059669;margin:0 0 8px;">🧗 ${sf.heading}</h3>
+        <p style="color:#3f3f46;margin:0 0 12px;">${sf.description}</p>
+        <ul style="padding-left:20px;margin:0 0 12px;">${sf.facilities
+          .map((f) => {
+            const stars = f.rating ? ` (${"★".repeat(Math.round(f.rating))}${"☆".repeat(5 - Math.round(f.rating))})` : "";
+            return `<li><a href="${f.url}" style="color:#059669;font-weight:600;">${f.name}</a>${stars}${f.region ? ` — ${f.region}` : ""}</li>`;
+          })
+          .join("")}</ul>
+        <a href="${sf.categoryUrl}" style="color:#059669;font-weight:600;">Zobrazit všechny ferraty →</a>
+      </div>`
+    : "";
+
+  const seasonalText = sf
+    ? `\n${sf.heading}\n${sf.description}\n${sf.facilities.map((f) => `- ${f.name}${f.rating ? ` (${f.rating.toFixed(1)}/5)` : ""}${f.region ? ` — ${f.region}` : ""}`).join("\n")}\nVšechny ferraty: ${sf.categoryUrl}\n`
+    : "";
+
   try {
     await transporter.sendMail({
       from: `"hraju.cz" <${process.env.SMTP_USER}>`,
@@ -457,6 +488,7 @@ export async function sendWeeklyDigestEmail(
         reviewsText,
         postsText,
         eventsText,
+        seasonalText,
         `S pozdravem,`,
         `tým hraju.cz`,
         ``,
@@ -471,6 +503,7 @@ export async function sendWeeklyDigestEmail(
           ${reviewsHtml}
           ${postsHtml}
           ${eventsHtml}
+          ${seasonalHtml}
           <p style="margin: 24px 0;">
             <a href="https://www.hraju.cz" style="background: #059669; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">
               Prozkoumat hraju.cz
