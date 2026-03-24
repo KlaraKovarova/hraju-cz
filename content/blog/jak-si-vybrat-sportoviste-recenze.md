@@ -53,3 +53,13 @@ Každé hodnocení, které na hraju.cz zanecháte, pomáhá:
 - **Sportovištím** získat zpětnou vazbu a zlepšit se
 - **Celé komunitě** růst a vytvářet lepší sportovní prostředí
 
+[Přihlaste se](/prihlaseni) a napište svou první recenzi.
+
+## Průvodci po městech
+
+- [Kde sportovat v Praze — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)
+- [Kde sportovat v Brně](/blog/kde-sportovat-v-brne-pruvodce)
+- [Kde sportovat v Ostravě](/blog/kde-sportovat-v-ostrave-pruvodce)
+- [Jak napsat užitečnou recenzi sportoviště](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+

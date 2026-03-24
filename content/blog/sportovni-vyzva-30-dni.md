@@ -48,22 +48,26 @@ Různé sporty zatěžují tělo jinak. Plavání buduje vytrvalost, squash rych
 ### Týden 1: Raketové sporty
 Zkuste sport, který jste nikdy nehráli — squash, badminton nebo padel. Většina center nabízí půjčení vybavení, takže nepotřebujete nic vlastního.
 
-- [Squash v Česku](/sport/squash) | [Badminton v Česku](/sport/badminton)
+- [Squash v Česku](/sport/squash) | [Badminton v Česku](/sport/badminton) | [Padel v Česku](/sport/padel)
+- Průvodce: [Padel pro začátečníky](/blog/padel-pro-zacatecniky-kompletni-pruvodce) | [Squash pro začátečníky](/blog/squash-pro-zacatecniky-kompletni-pruvodce)
 
 ### Týden 2: Vodní sporty
 Jděte plavat do bazénu, který jste ještě nenavštívili. Nebo zkuste aqua aerobic, pokud jste nikdy nebyli.
 
 - [Bazény a koupaliště](/sport/plavani)
+- Průvodce: [Plavání pro začátečníky](/blog/plavani-pro-zacatecniky-kompletni-pruvodce) | [Kde plavat v Praze](/blog/kde-plavat-v-praze-pruvodce)
 
 ### Týden 3: Vertikální sport
 Zkuste lezení na stěně nebo ferratu. Obojí je přístupné úplným začátečníkům a zážitek je nezapomenutelný.
 
 - [Lezecká centra](/sport/lezeni) | [Via ferraty](/sport/ferraty)
+- Průvodce: [Bouldering pro začátečníky](/blog/bouldering-pro-zacatecniky-kompletni-pruvodce) | [Via ferraty v Česku — kompletní průvodce](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
 
 ### Týden 4: Týmový sport
 Přidejte se k amatérskému volejbalovému turnaji nebo najděte skupinu, která hledá hráče. Týmové sporty jsou nejlepší způsob, jak poznat nové lidi.
 
 - [Volejbal v Česku](/sport/volejbal)
+- Průvodce: [Jak najít sportovního partnera](/blog/jak-najit-sportovniho-partnera)
 
 ## Jak se zapojit
 
@@ -75,4 +79,10 @@ Přidejte se k amatérskému volejbalovému turnaji nebo najděte skupinu, kter�
 ## Sdílejte výzvu
 
 Znáte někoho, kdo by se měl hýbat víc? Pošlete mu tenhle článek. Sportovat je lepší ve dvou — a ještě lepší s celou komunitou.
+
+## Další výzvy a tipy
+
+- [7 sportů za 7 dní — intenzivní výzva](/blog/7-sportu-za-7-dni-vyzva)
+- [Jak najít sportovního partnera](/blog/jak-najit-sportovniho-partnera)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 

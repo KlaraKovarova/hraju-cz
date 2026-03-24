@@ -50,10 +50,37 @@ Znáte sportoviště, které v našem katalogu chybí? Dejte nám vědět! Chcem
 
 Komunita hraju.cz roste a nabízí:
 
-- **Recenze a hodnocení** — ohodnoťte sportoviště hvězdičkami a napište recenzi. Vaše zkušenost pomáhá stovkám dalších sportovců.
+- **Recenze a hodnocení** — ohodnoťte sportoviště hvězdičkami a napište recenzi. Vaše zkušenost pomáhá stovkám dalších sportovců. [Jak napsat užitečnou recenzi →](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
 - **Profily sportovců** — sledujte svou historii recenzí, sbírejte odznaky a lezte v žebříčku nejaktivnějších recenzentů.
-- **Check-in „Byl/a jsem tady"** — označte sportoviště, která jste navštívili.
+- **Check-in „Byl/a jsem tady"** — označte sportoviště, která jste navštívili. Budujte si mapu svých sportovních zážitků.
 - **Žebříček recenzentů** — nejaktivnější členové komunity na jednom místě. Najdete ho na [/recenze](/recenze).
+- **Odznaky** — sbírejte odznaky za recenze, check-iny a aktivitu. Čím víc sdílíte, tím víc odznaků získáte.
+
+## Výzvy pro komunitu
+
+Chcete se posunout dál? Zapojte se do komunitních výzev:
+
+- [30 dní pohybu — 4 nové sporty za měsíc](/blog/sportovni-vyzva-30-dni)
+- [7 sportů za 7 dní — intenzivní výzva](/blog/7-sportu-za-7-dni-vyzva)
+
+## Začněte s novým sportem
+
+Nevíte, kde začít? Připravili jsme průvodce pro začátečníky:
+
+- [Běhání pro začátečníky](/blog/behani-pro-zacatecniky-kompletni-pruvodce) | [Kde běhat v Praze](/blog/kde-behat-v-praze-pruvodce)
+- [Cyklistika pro začátečníky](/blog/cyklistika-pro-zacatecniky-kompletni-pruvodce) | [Cyklotrasy v Praze](/blog/cyklotrasy-praha-pruvodce)
+- [Via ferraty v Česku — kompletní průvodce](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
+- [Tenis pro začátečníky](/blog/tenis-pro-zacatecniky-kompletni-pruvodce)
+- [Bouldering pro začátečníky](/blog/bouldering-pro-zacatecniky-kompletni-pruvodce)
+- [Padel pro začátečníky](/blog/padel-pro-zacatecniky-kompletni-pruvodce)
+- [Plavání pro začátečníky](/blog/plavani-pro-zacatecniky-kompletni-pruvodce)
+
+## Kde sportovat — průvodci po městech
+
+- [Praha — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)
+- [Brno — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
+- [Ostrava — kompletní průvodce](/blog/kde-sportovat-v-ostrave-pruvodce)
+- [Plzeň — kompletní průvodce](/blog/kde-sportovat-v-plzni-pruvodce)
 
 ## Proč na tom záleží
 
