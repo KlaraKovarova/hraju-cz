@@ -184,3 +184,10 @@ Inline bruslení je sport, ve kterém můžete za hodinu spálit 500–700 kalor
 - **Brzda** — kontrolujte opotřebení, výměna za 100–200 Kč
 
 Na hraju.cz najdete sportoviště a cyklostezky ve vašem městě. Nasaďte chrániče, obujte brusle a vyražte — jaro je ideální čas začít!
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [7 sportů za 7 dní](/blog/7-sportu-za-7-dni-vyzva)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

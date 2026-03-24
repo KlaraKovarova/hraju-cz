@@ -261,3 +261,11 @@ Web: cfbu.cz — kompletní přehled klubů, soutěží, termínů. Česko je za
 **Ochranné brýle:** Florbalový míček letí až 200 km/h. Oční zranění jsou nejzávažnější florbalová zranění. Brýle stojí 500–1 500 Kč a chrání před trvalým poškozením zraku.
 
 Na hraju.cz najdete sportovní haly a florbalové kluby ve vašem městě. Zanechte recenzi a pomozte ostatním hráčům najít nejlepší místo na florbal!
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [7 sportů za 7 dní](/blog/7-sportu-za-7-dni-vyzva)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+- [Kde hrát florbal v Praze](/blog/kde-hrat-florbal-v-praze)

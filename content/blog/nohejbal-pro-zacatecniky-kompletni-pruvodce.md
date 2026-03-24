@@ -269,3 +269,10 @@ Web: nohejbal.org — kompletní přehled klubů, soutěží, pravidel a termín
 6. **Nebojte se hlaviček** — správná technika (čelo) nebolí
 
 Na hraju.cz najdete sportovní areály a nohejbalové kurty ve vašem městě. Zanechte recenzi a pomozte ostatním hráčům najít nejlepší místo na nohejbal!
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [7 sportů za 7 dní](/blog/7-sportu-za-7-dni-vyzva)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

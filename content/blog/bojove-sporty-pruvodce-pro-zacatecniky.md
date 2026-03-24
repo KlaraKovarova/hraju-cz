@@ -215,3 +215,10 @@ Většina klubů přijímá děti od 5–7 let. Trénink dětí je přizpůsoben
 **Doporučené disciplíny pro děti:** Karate (strukturovaný, pásky), judo (pádová technika, olympijský sport), kickbox (light-contact).
 
 Na hraju.cz najdete fitness centra a sportovní kluby s bojovými sporty ve vašem městě. Najděte klub, přijďte na první trénink — a překvapte sami sebe!
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [7 sportů za 7 dní](/blog/7-sportu-za-7-dni-vyzva)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

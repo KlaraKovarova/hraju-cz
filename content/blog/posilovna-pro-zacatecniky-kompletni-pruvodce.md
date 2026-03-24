@@ -202,3 +202,11 @@ Kompletní přehled najdete na:
 ---
 
 Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [7 sportů za 7 dní](/blog/7-sportu-za-7-dni-vyzva)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+- [Fitness centra v Praze](/blog/fitness-centra-v-praze-pruvodce) | [Fitness centra v Brně](/blog/fitness-centra-v-brne)

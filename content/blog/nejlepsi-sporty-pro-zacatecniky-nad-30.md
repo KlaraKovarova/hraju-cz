@@ -125,3 +125,10 @@ Ale ne každý sport je ideální pro dospělého začátečníka. Některé spo
 ## Najděte sportoviště poblíž
 
 Vyberte sport a najděte sportoviště s recenzemi na [hraju.cz](https://hraju.cz). Přečtěte si, co říkají ostatní — a až vyzkoušíte, přidejte svou recenzi. Pomůžete dalším, kteří začínají.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [7 sportů za 7 dní](/blog/7-sportu-za-7-dni-vyzva)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

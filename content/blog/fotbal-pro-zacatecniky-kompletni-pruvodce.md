@@ -282,3 +282,10 @@ Fotbal v chůzi — pro seniory 50+. Žádný běh, žádné kontakty, žádné 
 Program FIFA pro prevenci zranění. 20 minut před každým tréninkem. Prokazatelně snižuje zranění o 30–50 %. Zahrnuje: běh, posilování, rovnováhu, plyometrii.
 
 Na hraju.cz najdete fotbalová hřiště a sportovní areály ve vašem městě. Zanechte recenzi a pomozte ostatním hráčům!
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [7 sportů za 7 dní](/blog/7-sportu-za-7-dni-vyzva)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

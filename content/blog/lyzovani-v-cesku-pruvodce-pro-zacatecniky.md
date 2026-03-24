@@ -212,3 +212,10 @@ Pokud vám nevyhovuje cena sjezdového lyžování nebo fronty na vlecích:
 - **Tip:** Brusle (skating) je rychlejší a dynamičtější, klasika je přístupnější pro začátečníky
 
 Na hraju.cz najdete sportovní areály a outdoorová centra ve vašem regionu. Naplánujte si lyžařský výlet a podělte se o hodnocení skiareálu s komunitou!
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [7 sportů za 7 dní](/blog/7-sportu-za-7-dni-vyzva)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

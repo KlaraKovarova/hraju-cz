@@ -209,3 +209,11 @@ Technicky jde o stejný sport, ale kulturně existuje rozdíl:
 Obojí je skvělé — ale pokud chcete skutečný pokrok, přejděte z garáže do oddílu.
 
 Na hraju.cz najdete sportovní haly s možností stolního tenisu ve vašem městě. Najděte si klub a přijďte na trénink — většina oddílů nabízí první návštěvu zdarma!
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [7 sportů za 7 dní](/blog/7-sportu-za-7-dni-vyzva)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+- [Kde hrát stolní tenis v Praze](/blog/kde-hrat-stolni-tenis-v-praze)

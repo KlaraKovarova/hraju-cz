@@ -211,3 +211,10 @@ Ne. Jógu můžete cvičit čistě jako fyzický trénink. Mnoho studií nabíz�
 Řekněte lektorovi PŘED lekcí. Dobrý lektor nabídne modifikace. Pro specifické problémy existuje terapeutická jóga.
 
 Na hraju.cz najdete jógová studia a fitness centra s lekcemi jógy ve vašem městě. Začněte s první lekcí — většina studií nabízí zkušební hodinu zdarma!
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [7 sportů za 7 dní](/blog/7-sportu-za-7-dni-vyzva)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

@@ -320,3 +320,10 @@ Hokejisté trénují na suchu víc než na ledě:
 10. **Bavte se** — hokej je hra. Radost z ledu je důležitější než výsledek
 
 Na hraju.cz najdete zimní stadiony, hokejové haly a sportovní centra ve vašem městě. Zanechte recenzi a pomozte ostatním hráčům najít nejlepší místo na hokej!
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [7 sportů za 7 dní](/blog/7-sportu-za-7-dni-vyzva)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
