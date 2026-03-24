@@ -7,51 +7,93 @@ sportTags: ["plavani"]
 image: /images/blog/oblibene-bazeny-prehled-hodnoceni.jpg
 ---
 
-Najít kvalitní bazén pro pravidelné plavání nebo rodinný výlet do aquaparku není vždy jednoduché. Záleží na kvalitě vody, délce drah, zázemí i otevírací době. Proto jsme shromáždili doporučení od naší komunity plavců.
+Najít kvalitní bazén pro pravidelné plavání nebo rodinný výlet do aquaparku není vždy jednoduché. Záleží na kvalitě vody, délce drah, zázemí i ceně. Proto jsme shromáždili doporučení od naší komunity plavců — s praktickými detaily.
 
-## Bazén Radotín — Praha 5
+## Praha
 
-[Bazén Radotín](/plavani/bazen-radotin) patří mezi oblíbená místa pražských plavců. Nachází se v klidné části Radotína a nabízí příjemné prostředí pro sportovní i rekreační plavání.
+### Bazén Radotín — Praha 5
+
+[Bazén Radotín](/plavani/bazen-radotin) patří mezi oblíbená místa pražských plavců. Klidná část Radotína, příjemné prostředí pro sportovní i rekreační plavání. Výrazně méně přeplněný než centrální bazény.
+
+- **Výhoda:** Nižší vytíženost, klidné prostředí
+- **Pro koho:** Pravidelní plavci hledající klid
 
 **Co plavci chválí:** klidné prostředí, méně přeplněné než centrální bazény
 
-## Bazén Sportcentrum Suchdol ČZU — Praha 6
+### Bazén Sportcentrum Suchdol ČZU — Praha 6
 
-[Sportcentrum Suchdol](/plavani/bazen-sportcentrum-suchdol-czu) provozuje 25metrový krytý bazén se skokanskou věží. V létě je k dispozici venkovní pláž. Oblíbený je jak u studentů, tak u rodin z okolí.
+[Sportcentrum Suchdol](/plavani/bazen-sportcentrum-suchdol-czu) — **25m krytý bazén se skokanskou věží**. V létě venkovní pláž. Oblíbený u studentů i rodin z okolí.
+
+- **Bazén:** 25 m, krytý
+- **Atrakce:** Skokanská věž, letní venkovní pláž
+- **Pro koho:** Studenti, rodiny z Prahy 6
 
 **Co plavci chválí:** 25m dráhy, skokanská věž, letní venkovní pláž
 
-## Bazén Na Třebešíně — Praha 10
+### Bazén Na Třebešíně — Praha 10
 
-Krytý plavecký bazén [Na Třebešíně](/plavani/bazen-spsag-na-trebesine) je skvělou volbou pro plavce z východní Prahy. Naši uživatelé oceňují čistotu a klidnější provoz mimo víkendové špičky.
+Krytý plavecký bazén [Na Třebešíně](/plavani/bazen-spsag-na-trebesine) — nejlepší volba pro plavce z východní Prahy. Čistota a klidnější provoz mimo víkendové špičky.
+
+- **Pro koho:** Plavci z Prahy 10, Strašnice, Vršovice
 
 **Co plavci chválí:** čistota, dostupnost pro východní Prahu
 
-## AQUASVĚT — Chomutov
+## Mimo Prahu
 
-[AQUASVĚT](/plavani/aquasvet) v Chomutově patří k nejkomplexnějším vodním areálům v Ústeckém kraji. Nabízí bazén s divokou řekou, masážní trysky, houpací bazén, skluzavku, whirlpool i dětské brouzdaliště.
+### AQUASVĚT — Chomutov
+
+[AQUASVĚT](/plavani/aquasvet) — nejkomplexnější vodní areál v Ústeckém kraji. Divoká řeka, masážní trysky, houpací bazén, skluzavka, whirlpool, dětské brouzdaliště.
+
+- **Atrakce:** 6+ vodních atrakcí
+- **Pro koho:** Rodiny s dětmi, víkendové výlety
 
 **Co návštěvníci chválí:** pestrost atrakcí, skvělé pro rodiny s dětmi
 
-## Aqua v parku — Kyjov
+### Aqua v parku — Kyjov
 
-[Aqua v parku](/plavani/aqua-v-parku) v Kyjově kombinuje aquapark, letní koupaliště, wellness a saunové ceremoniály. Ideální destinace pro víkendový výlet na jižní Moravu.
+[Aqua v parku](/plavani/aqua-v-parku) — aquapark, letní koupaliště, wellness a **saunové ceremoniály**. Ideální destinace pro víkendový výlet na jižní Moravu.
+
+- **Nabídka:** Aquapark + wellness + saunové ceremoniály
+- **Pro koho:** Relaxační víkend, páry, rodiny
 
 **Co návštěvníci chválí:** kompletní wellness zázemí, saunové ceremoniály
 
-## Aquacentrum Vrchlabí
+### Aquacentrum Vrchlabí
 
-Krytý bazén [Aquacentrum Vrchlabí](/plavani/aquacentrum-vrchlabi) je skvělou volbou pro rodiny. Nabízí plavání a relaxaci v krásném podhorském prostředí Krkonoš.
+[Aquacentrum Vrchlabí](/plavani/aquacentrum-vrchlabi) — krytý bazén v podhorském prostředí Krkonoš. Plavání a relaxace s horským pozadím.
+
+- **Pro koho:** Rodiny, lyžaři (après-ski plavání)
 
 **Co návštěvníci chválí:** rodinná atmosféra, příjemné prostředí pod horami
 
+### Bazény Lužánky — Brno
+
+**Jediný 50m bazén na Moravě** + 25m a 16m výukový. 5 saun na 816 m². Nejlepší sportovní plavání v Brně.
+
+- **Bazény:** 50 m (6 drah), 25 m, 16 m
+- **Vstupné:** Od 170 Kč/2 hod (mimo špičku)
+- **Více:** [Podrobný průvodce bazény v Brně](/blog/plavecke-bazeny-brno)
+
+## Orientační ceny plavání v Česku
+
+| Typ | Cena |
+|---|---|
+| Veřejný bazén (1 hod) | 70–150 Kč |
+| Sportovní bazén (2 hod) | 140–250 Kč |
+| Aquapark (2 hod) | 200–350 Kč |
+| Permanentka (10 vstupů) | 600–1 500 Kč |
+| Wellness/sauna | 250–400 Kč/2 hod |
+
 ## Na co se zaměřit při výběru bazénu
 
-- **Délka drah** — pro sportovní plavání hledejte minimálně 25 m
-- **Kvalita vody** — sledujte, zda bazén zveřejňuje výsledky kontrol
-- **Otevírací doba pro veřejnost** — některé bazény mají omezené hodiny kvůli školám a klubům
-- **Wellness zóna** — sauna, pára a vířivka jsou příjemný bonus po plavání
-- **Rodinné zázemí** — dětský bazén, brouzdaliště a skluzavky pro nejmenší
+Naši uživatelé při hodnocení nejčastěji zmiňují:
+
+1. **Čistota a údržba** — #1 faktor hodnocení u bazénů
+2. **Délka drah** — pro sportovní plavání min. 25 m
+3. **Otevírací doba** — některé bazény omezují veřejné plavání kvůli školám/klubům
+4. **Cena vs. doba** — porovnávejte cenu za hodinu, ne za vstup (některé dávají 1 hod, jiné 2)
+5. **Wellness** — sauna + vířivka po plavání je příjemný bonus
+6. **Ranní hodiny** — 6:00–8:00 bývá nejklidnější a nejlevnější
 
 Všechny bazény a aquaparky v Česku najdete na [hraju.cz/sport/plavani](/sport/plavani).
 

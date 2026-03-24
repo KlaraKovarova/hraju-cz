@@ -37,17 +37,61 @@ Badmintonové centrum s dobrým zázemím.
 - [SPORTCENTRUM AVION](/sport/badminton/sportcentrum-avion-s-r-o) (Praha 9)
 - [Sportcentrum Step](/sport/badminton/sportcentrum-step) (Praha 9)
 
-## Badmintonové haly v Brně
+## Badmintonové haly v Brně — 7 hal, 35+ kurtů
 
-V Brně evidujeme 13 badmintonových zařízení. Mezi ně patří:
+V Brně evidujeme 13 badmintonových zařízení ve **7 halách s 35+ kurty**. Kvalita i ceny se liší — přinášíme detaily.
 
-- [SK Badminton Brno](/sport/badminton/sk-badminton-brno)
-- [Badminton Líšeň.cz](/sport/badminton/badminton-lisen-cz)
-- [ZONE4YOU](/sport/badminton/zone4you)
-- [VICTOR Sport](/sport/badminton/victor-sport-s-r-o)
-- [Xarena Slatina Badminton Club](/sport/badminton/xarena-slatina-badminton-club)
-- [CENTRUM VIKTORIA](/sport/badminton/centrum-viktoria-s-r-o)
-- [Tenisová a badmintonová hala Sprint](/sport/badminton/tenisova-a-badmintonova-hala-sprint)
+### [Badminton Líšeň](/sport/badminton/badminton-lisen-cz) — profesionální hala
+
+**Adresa:** Úlehlova 3050/16 (areál Zetoru), Brno-Líšeň · [badmintonlisen.cz](https://www.badmintonlisen.cz/)
+
+6 profesionálních kurtů. Klimatizovaná hala, pružná podlaha, strop 10 m, tmavě modré stěny (bez oslnění).
+
+- **Kurty:** 6
+- **Ceny:** Dopoledne (7–15h) 280 Kč/hod (studenti 250 Kč), odpoledne (15–22h) 380 Kč/hod, víkend 380 Kč/hod
+- **Půjčovna:** Raketa 50 Kč, míček 30 Kč
+
+### [Hala Sprint](/sport/badminton/tenisova-a-badmintonova-hala-sprint) — Graboflex povrch
+
+6 badmintonových kurtů s kvalitním Graboflex povrchem, klimatizace, profesionální osvětlení.
+
+- **Kurty:** 6
+- **Ceny:** 280–380 Kč/hod, studenti −20 %
+- **Web:** [sprinttenis.cz](https://www.sprinttenis.cz/)
+
+### [Xarena Slatina](/sport/badminton/xarena-slatina-badminton-club)
+
+6 badmintonových kurtů, Tarkett podlaha (francouzská značka), strop 9,5 m.
+
+- **Kurty:** 6 badmintonových + 5 stolů na stolní tenis
+- **Adresa:** Tuřanka 55, Brno-Slatina
+
+### [Club Classic](/sport/badminton/club-classic) — nejlevnější
+
+5 badmintonových kurtů v kryté hale. Nejnižší ceny badmintonu v Brně.
+
+- **Kurty:** 5
+- **Ceny:** 160–240 Kč/hod
+
+### [Centrum Viktoria](/sport/badminton/centrum-viktoria-s-r-o)
+
+3 klimatizované badmintonové kurty v multisportovním komplexu.
+
+- **Kurty:** 3
+- **Ceny:** Dopoledne (7–15h) 300 Kč/hod (studenti 250 Kč), odpoledne/víkend 400 Kč/hod
+
+### [Sportcentrum Kuklenská](/sport/badminton/sportcentrum-kuklenska)
+
+4 kurty, moderní klimatizovaná hala s pružným povrchem.
+
+- **Ceny:** 200–240 Kč/hod
+- **Adresa:** Kuklenská 46, Brno-Židenice
+
+### [FIT4ALL Centrum](/sport/badminton/fit4all-centrum)
+
+4 profesionální kurty v Novém Lískovci.
+
+- **Ceny:** 200–260 Kč/hod
 
 ## Kolik stojí badminton?
 
