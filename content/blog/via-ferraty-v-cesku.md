@@ -1,6 +1,6 @@
 ---
 title: Via ferraty v Česku — průvodce pro začátečníky
-date: '2026-03-23'
+date: '2099-01-01'
 category: pruvodce-sporty
 excerpt: >-
   Kompletní průvodce via ferratami v České republice. Kde najdete zajištěné

@@ -9,6 +9,7 @@ sportTags:
   - padel
   - lezeni
   - cyklistika
+  - behani
 image: /images/blog/letni-sporty-2026.jpg
 ---
 
@@ -72,7 +73,7 @@ Skály v dubnu postupně vysychají po zimě. Podmínky závisí na expozici a r
 Jarní silnice jsou proschlé, dny delší. Duben je ideální na:
 
 - **První delší výjezdy** po zimě (ale pozor na posyp v zatáčkách)
-- **Cyklostezky** podél Vltavy, Moravy, Labe — nejlepší v dubnu, než začne letní provoz
+- **Cyklostezky** podél Vltavy, Moravy, Labe — nejlepší v dubnu, než začne letní provoz. [Průvodce cyklotrasami v Praze](/blog/cyklotrasy-praha-pruvodce)
 - **Servis kola** — pokud jste nestihli v březnu, teď je poslední šance před sezónou
 
 ## 5 tipů na dubnový sport
@@ -85,8 +86,8 @@ Duben je ideální měsíc na první ferratu, první padel, první outdoor lezen
 
 Teploty 10–18 °C jsou ideální pro běh. Žádné vedro, žádný mráz. Parky jsou zelené, ale turisté ještě nepřijeli.
 
+**Pražský tip:** Stromovka, Divoká Šárka — kompletní přehled 15 tras v [průvodci běháním v Praze](/blog/kde-behat-v-praze-pruvodce)
 **Brněnský tip:** Park Lužánky, Kraví hora
-**Pražský tip:** Stromovka, Divoká Šárka
 **Liberecký tip:** okruh kolem přehrady
 
 ### 3. Zapište se na turnaj
@@ -122,3 +123,11 @@ Byli jste na sportovišti, které vás nadchlo? Nebo zklamalo? **Vaše recenze p
 ## Najděte sportoviště ve svém městě
 
 Na [hraju.cz](/) najdete přes **7 000 sportovišť** po celém Česku. Filtrujte podle sportu, města nebo hodnocení a najděte to pravé místo pro svůj dubnový start.
+
+### Průvodci podle měst a sportů
+
+- [Kde sportovat v Praze — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)
+- [Kde sportovat v Brně — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
+- [Kde sportovat v Ostravě — kompletní průvodce](/blog/kde-sportovat-v-ostrave-pruvodce)
+- [Nejlepší ferraty na jaro 2026](/blog/nejlepsi-ferraty-na-jaro-2026)
+- [Jarní sportovní sezóna 2026 — kompletní průvodce](/blog/jarni-sportovni-sezona-2026-pruvodce)
