@@ -245,6 +245,7 @@ model User {
   userPhotos         UserPhoto[]
   loginTokens        LoginToken[]
   events             TouristEvent[]
+  badges             UserBadge[]
 }
 
 model Visit {
@@ -310,6 +311,17 @@ model TouristEvent {
   @@index([region])
   @@index([dateStart])
   @@index([source])
+  @@index([userId])
+}
+
+model UserBadge {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  badgeSlug String   // references badge definition in config
+  earnedAt  DateTime @default(now())
+
+  @@unique([userId, badgeSlug])
   @@index([userId])
 }
 
