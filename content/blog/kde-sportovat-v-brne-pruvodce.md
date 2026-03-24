@@ -500,3 +500,10 @@ Největší squashové centrum v Brně — 6 klimatizovaných kurtů. Plus badmi
 ## Najděte sportoviště v Brně
 
 Kompletní přehled sportovišť v Brně najdete na [hraju.cz](https://hraju.cz). Přečtěte si recenze od ostatních sportovců a sdílejte své zkušenosti — pomůžete dalším sportovcům v Brně najít to pravé místo.
+
+## Průvodci dalšími městy
+
+- [Kde sportovat v Praze — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)
+- [Kde sportovat v Ostravě — kompletní průvodce](/blog/kde-sportovat-v-ostrave-pruvodce)
+- [Kde sportovat v Plzni — kompletní průvodce](/blog/kde-sportovat-v-plzni-pruvodce)
+- [Kde sportovat v Olomouci — kompletní průvodce](/blog/kde-sportovat-v-olomouci-pruvodce)

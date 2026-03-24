@@ -348,4 +348,11 @@ Kompletně bezplatný multisportovní areál — skatepark, 2 asfaltová hřišt
 
 Pomozte ostatním sportovcům vybrat to nejlepší — [napište recenzi](/prihlaseni) svého oblíbeného sportoviště v Plzni. Ohodnoťte zázemí, čistotu a poměr ceny a kvality. Každá recenze pomáhá plzeňské sportovní komunitě.
 
+## Průvodci dalšími městy
+
+- [Kde sportovat v Praze — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)
+- [Kde sportovat v Brně — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
+- [Kde sportovat v Ostravě — kompletní průvodce](/blog/kde-sportovat-v-ostrave-pruvodce)
+- [Kde sportovat v Olomouci — kompletní průvodce](/blog/kde-sportovat-v-olomouci-pruvodce)
+
 Všechna sportoviště v Plzni najdete na [hraju.cz](/sport).

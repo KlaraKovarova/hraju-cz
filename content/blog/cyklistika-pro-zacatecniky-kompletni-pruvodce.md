@@ -231,10 +231,13 @@ Téměř každé české město má síť cyklostezek — podívejte se na mapy.
 
 Na hraju.cz najdete sportovní areály s cyklistickým zázemím ve vašem městě. Až objevíte svou oblíbenou trasu, podělte se o ni s komunitou!
 
-## Najděte sportoviště v Česku
+## Kam na kolo — průvodci po městech
 
-Kompletní přehled najdete na:
-- [cyklistika na hraju.cz](/sport/cyklistika)
+- [Cyklotrasy v Praze a okolí — kam na kolo v roce 2026](/blog/cyklotrasy-praha-pruvodce)
+- [Kde sportovat v Brně — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
+- [Kde sportovat v Ostravě — kompletní průvodce](/blog/kde-sportovat-v-ostrave-pruvodce)
+- [Kde sportovat v Plzni — kompletní průvodce](/blog/kde-sportovat-v-plzni-pruvodce)
+- [Všechna sportoviště v Česku](/sport/cyklistika)
 
 
 ---

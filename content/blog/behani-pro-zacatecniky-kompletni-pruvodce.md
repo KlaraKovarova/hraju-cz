@@ -221,11 +221,13 @@ Běhat se dá celoročně. V Česku to znamená –10 °C, sníh a tmu v 16:00.
 
 Na hraju.cz najdete sportovní areály, stadiony a běžecké trasy ve vašem městě. Zanechte recenzi oblíbené trasy a pomozte ostatním běžcům!
 
-## Najděte sportoviště v Česku
+## Kam běhat — průvodci po městech
 
-Kompletní přehled najdete na:
-- [fitness centra v Česku na hraju.cz](/sport/fitness)
-- [fitness centra v Brně](/blog/fitness-centra-v-brne)
+- [Kde běhat v Praze — 15 nejlepších tras a parků](/blog/kde-behat-v-praze-pruvodce)
+- [Kde sportovat v Brně — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
+- [Kde sportovat v Ostravě — kompletní průvodce](/blog/kde-sportovat-v-ostrave-pruvodce)
+- [Kde sportovat v Plzni — kompletní průvodce](/blog/kde-sportovat-v-plzni-pruvodce)
+- [Všechna sportoviště v Česku](/sport)
 
 
 ---

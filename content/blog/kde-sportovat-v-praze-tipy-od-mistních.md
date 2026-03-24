@@ -3,7 +3,7 @@ title: "Kde sportovat v Praze — tipy od místních sportovců"
 date: '2026-03-11'
 category: "komunita"
 excerpt: "Zapomeňte na turistické průvodce. Přinášíme tipy na sportoviště v Praze přímo od lidí, kteří tam pravidelně sportují."
-sportTags: ["tenis", "squash", "fitness", "plavani", "lezeni"]
+sportTags: ["tenis", "squash", "fitness", "plavani", "lezeni", "behani", "cyklistika"]
 image: /images/blog/kde-sportovat-v-praze-tipy-od-mistních.jpg
 ---
 
@@ -68,6 +68,30 @@ Squash je ideální sport pro vytížené Pražáky — 45 minut intenzivního p
 **Tip:** „Hledejte centra s balíčky na 10 hodin. Ušetříte 15–20 % oproti jednorázovým vstupům."
 
 Squashové kurty v Praze na [hraju.cz](/sport/squash).
+
+## Běhání: kam vyrazit na trasu
+
+Praha je jedno z nejlepších evropských měst pro běhání — řeka, parky, kopce, lesy. Místní běžci doporučují:
+
+**Pro začátečníky:** Ladronka — plně osvětlený 4,2km okruh, rovný povrch, občerstvení na trase.
+
+**Pro trailový běh:** Divoká Šárka — kaňon s 5km okruhem a 159 m převýšení. Divočina uprostřed města.
+
+**Podél Vltavy:** Cyklostezka A2 od Podolí do Braníku — 8–10 km, rovný asfalt, stromy.
+
+Kompletní přehled 15 tras a parků najdete v [průvodci běháním v Praze](/blog/kde-behat-v-praze-pruvodce).
+
+## Cyklistika: nejlepší trasy z Prahy
+
+31 km Vltavské cyklostezky, víkendové výlety na Karlštejn — a s Lítačkou 2 jízdy na sdíleném kole zdarma denně.
+
+**Na rovné stezce:** Vltavská A2 — 31 km po pravém břehu, oddělená od aut.
+
+**Víkendový výlet:** Praha → Karlštejn (26 km) — podél Berounky, rovné, asfaltové, vlakem zpět.
+
+**MTB:** Prokopské údolí — 37 trailů na Trailforks, singletracky a technické výjezdy.
+
+Kompletní průvodce cyklotrasami v Praze najdete v [průvodci cyklistikou v Praze](/blog/cyklotrasy-praha-pruvodce).
 
 ## Zapojte se
 

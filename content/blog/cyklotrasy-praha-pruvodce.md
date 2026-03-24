@@ -176,4 +176,6 @@ Kryté přístřešky pro kola u metra a P+R parkovišť. Zdarma. Rozšiřuje se
 
 Máte oblíbenou trasu, která tu chybí? [Napište recenzi](/prihlaseni) na sportoviště nebo cyklotrasu, kterou znáte. Pomozte ostatním pražským cyklistům najít ideální trasu.
 
-Všechna sportoviště v Praze najdete na [hraju.cz](/sport).
+Teprve s cyklistikou začínáte? Přečtěte si [kompletní průvodce cyklistikou pro začátečníky](/blog/cyklistika-pro-zacatecniky-kompletni-pruvodce) — výběr kola, základní údržba a tréninkový plán.
+
+Všechna sportoviště v Praze najdete na [hraju.cz](/sport). Další tipy od místních sportovců v [průvodci sportem v Praze](/blog/kde-sportovat-v-praze-tipy-od-mistních).

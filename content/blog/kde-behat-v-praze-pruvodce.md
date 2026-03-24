@@ -206,4 +206,6 @@ Všechny skupiny jsou **zdarma a otevřené**. Většina nevyžaduje registraci.
 
 Máte oblíbenou trasu, která tu chybí? [Napište recenzi](/prihlaseni) na sportoviště nebo trasu, kterou znáte. Pomozte ostatním pražským běžcům najít ideální místo pro jejich trénink.
 
-Všechna sportoviště v Praze najdete na [hraju.cz](/sport).
+Teprve s běháním začínáte? Přečtěte si [kompletní průvodce běháním pro začátečníky](/blog/behani-pro-zacatecniky-kompletni-pruvodce) — tréninkový plán na první 5 km, správná technika a prevence zranění.
+
+Všechna sportoviště v Praze najdete na [hraju.cz](/sport). Další tipy od místních sportovců v [průvodci sportem v Praze](/blog/kde-sportovat-v-praze-tipy-od-mistních).

@@ -3,7 +3,7 @@ title: "Jarní sportovní sezóna 2026: Kompletní průvodce pro návrat k pohyb
 date: "2026-03-23"
 category: tipy
 excerpt: "Jak se vrátit ke sportu po zimě? Postupný plán pro 8 sportů, jarní tipy na oblečení, výživu a prevenci zranění. Česká sportoviště připravená na sezónu."
-sportTags: ["ferraty", "tenis", "lezeni", "plavani"]
+sportTags: ["ferraty", "tenis", "lezeni", "plavani", "behani", "cyklistika"]
 image: /images/blog/letni-sporty-2026.jpg
 ---
 
@@ -134,5 +134,13 @@ Březen a duben jsou přelomové měsíce — venkovní sportoviště otevíraj�
 ## Kde hledat sportoviště
 
 Na [hraju.cz](/) najdete přes **7 000 sportovišť** po celém Česku — s recenzemi od skutečných sportovců, cenami a kontakty.
+
+### Průvodci pro jarní sporty
+
+- [Kde běhat v Praze — 15 nejlepších tras](/blog/kde-behat-v-praze-pruvodce)
+- [Cyklotrasy v Praze a okolí](/blog/cyklotrasy-praha-pruvodce)
+- [Běhání pro začátečníky — kompletní průvodce](/blog/behani-pro-zacatecniky-kompletni-pruvodce)
+- [Cyklistika pro začátečníky — kompletní průvodce](/blog/cyklistika-pro-zacatecniky-kompletni-pruvodce)
+- [Nejlepší ferraty na jaro 2026](/blog/nejlepsi-ferraty-na-jaro-2026)
 
 **Už jste zahájili jarní sezónu?** [Podělte se o svůj oblíbený sport](/prihlaseni) a pomozte ostatním najít to pravé sportoviště.

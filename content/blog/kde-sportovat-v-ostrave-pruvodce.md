@@ -318,4 +318,11 @@ Tenhle průvodce jsme sestavili z veřejně dostupných hodnocení a zkušenost�
 
 **Znáte sportoviště v Ostravě, které tu chybí?** Nebo máte zkušenost s některým z uvedených? [Napište recenzi na hraju.cz](/prihlaseni) — pomůžete ostatním Ostravákům najít to správné místo pro jejich sport.
 
+## Průvodci dalšími městy
+
+- [Kde sportovat v Praze — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)
+- [Kde sportovat v Brně — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
+- [Kde sportovat v Plzni — kompletní průvodce](/blog/kde-sportovat-v-plzni-pruvodce)
+- [Kde sportovat v Olomouci — kompletní průvodce](/blog/kde-sportovat-v-olomouci-pruvodce)
+
 Všechna sportoviště v Ostravě najdete na [hraju.cz](/sport).
