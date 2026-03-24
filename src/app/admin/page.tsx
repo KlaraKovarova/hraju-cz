@@ -19,6 +19,7 @@ async function getAdminStats() {
       totalEvents,
       activeEvents,
       pendingEvents,
+      unapprovedFacilities,
     ] = await Promise.all([
       prisma.facility.count(),
       prisma.facility.count({ where: { isActive: true } }),
@@ -34,6 +35,7 @@ async function getAdminStats() {
       prisma.touristEvent.count(),
       prisma.touristEvent.count({ where: { isActive: true } }),
       prisma.touristEvent.count({ where: { isActive: false, source: "user" } }),
+      prisma.facility.count({ where: { isActive: true, isApproved: false } }),
     ]);
 
     return {
@@ -52,6 +54,7 @@ async function getAdminStats() {
       totalEvents,
       activeEvents,
       pendingEvents,
+      unapprovedFacilities,
     };
   } catch {
     return null;
@@ -79,6 +82,7 @@ export default async function AdminPage() {
           <StatCard label="Kontaktní zprávy" value={stats.totalContacts} />
           <StatCard label="Události" value={stats.totalEvents} sub={`${stats.activeEvents} aktivních`} />
           <StatCard label="Čeká na schválení (akce)" value={stats.pendingEvents} accent={stats.pendingEvents > 0 ? "amber" : undefined} />
+          <StatCard label="Neschválená sportoviště" value={stats.unapprovedFacilities} accent={stats.unapprovedFacilities > 0 ? "amber" : undefined} />
         </div>
       )}
 
@@ -135,7 +139,8 @@ export default async function AdminPage() {
           href="/admin/review"
           icon="🔍"
           title="Kontrola kvality"
-          desc="Audit sportovišť — telefony, weby, souřadnice"
+          desc="Audit sportovišť — schvalování, telefony, weby"
+          badge={stats?.unapprovedFacilities}
         />
         <NavCard
           href="/"

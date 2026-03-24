@@ -4,6 +4,40 @@ import { verifyAdminFromRequest } from "@/lib/admin-auth";
 
 export const dynamic = "force-dynamic";
 
+// PATCH /api/admin/facility-review — bulk or single facility approval
+export async function PATCH(request: NextRequest) {
+  const admin = await verifyAdminFromRequest(request);
+  if (!admin) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  try {
+    const body = await request.json();
+    const { facilityId, isApproved } = body;
+
+    if (!facilityId || typeof isApproved !== "boolean") {
+      return NextResponse.json(
+        { error: "facilityId and isApproved required" },
+        { status: 400 }
+      );
+    }
+
+    const facility = await prisma.facility.update({
+      where: { id: facilityId },
+      data: {
+        isApproved,
+        approvedAt: isApproved ? new Date() : null,
+      },
+      select: { id: true, isApproved: true, approvedAt: true },
+    });
+
+    return NextResponse.json(facility);
+  } catch (e) {
+    console.error("facility-review PATCH error:", e);
+    return NextResponse.json({ error: "Chyba při aktualizaci." }, { status: 500 });
+  }
+}
+
 // GET /api/admin/facility-review — list facilities with quality flags
 export async function GET(request: NextRequest) {
   const admin = await verifyAdminFromRequest(request);
@@ -14,6 +48,7 @@ export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const sport = searchParams.get("sport");
   const issue = searchParams.get("issue"); // NO_COORDS, NO_CONTACTS, NO_PHONE, NO_WEB, NO_HOURS, NO_ZIP, NO_IMAGES, NO_DESC
+  const approval = searchParams.get("approval"); // "approved", "unapproved", or null (all)
   const page = parseInt(searchParams.get("page") || "1");
   const limit = Math.min(parseInt(searchParams.get("limit") || "50"), 200);
   const search = searchParams.get("search")?.trim();
@@ -23,6 +58,12 @@ export async function GET(request: NextRequest) {
 
     if (sport) {
       where.sports = { some: { sport: { slug: sport } } };
+    }
+
+    if (approval === "approved") {
+      where.isApproved = true;
+    } else if (approval === "unapproved") {
+      where.isApproved = false;
     }
 
     if (search) {
@@ -63,7 +104,7 @@ export async function GET(request: NextRequest) {
       }
     }
 
-    const [facilities, total] = await Promise.all([
+    const [facilities, total, unapprovedCount] = await Promise.all([
       prisma.facility.findMany({
         where,
         include: {
@@ -72,11 +113,12 @@ export async function GET(request: NextRequest) {
           contacts: { select: { type: true, value: true } },
           images: { select: { id: true } },
         },
-        orderBy: { name: "asc" },
+        orderBy: [{ isApproved: "asc" }, { createdAt: "desc" }],
         skip: (page - 1) * limit,
         take: limit,
       }),
       prisma.facility.count({ where }),
+      prisma.facility.count({ where: { isActive: true, isApproved: false } }),
     ]);
 
     const results = facilities.map((f) => {
@@ -109,6 +151,8 @@ export async function GET(request: NextRequest) {
         hasImages: f.images.length > 0,
         isClaimed: f.isClaimed,
         isPremium: f.isPremium,
+        isApproved: f.isApproved,
+        approvedAt: f.approvedAt,
         flags,
         website: f.website,
         listingUrl: f.sports[0]
@@ -120,6 +164,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       facilities: results,
       total,
+      unapprovedCount,
       page,
       limit,
       totalPages: Math.ceil(total / limit),

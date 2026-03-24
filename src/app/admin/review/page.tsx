@@ -8,6 +8,8 @@ import {
   Search,
   ExternalLink,
   XCircle,
+  CheckCircle,
+  Circle,
 } from "lucide-react";
 
 interface FacilityReview {
@@ -26,6 +28,8 @@ interface FacilityReview {
   hasDescription: boolean;
   isClaimed: boolean;
   isPremium: boolean;
+  isApproved: boolean;
+  approvedAt: string | null;
   flags: string[];
   website: string | null;
   listingUrl: string;
@@ -34,6 +38,7 @@ interface FacilityReview {
 interface ApiResponse {
   facilities: FacilityReview[];
   total: number;
+  unapprovedCount: number;
   page: number;
   limit: number;
   totalPages: number;
@@ -43,7 +48,9 @@ export default function AdminReviewPage() {
   const [data, setData] = useState<ApiResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [deactivating, setDeactivating] = useState<string | null>(null);
+  const [approving, setApproving] = useState<string | null>(null);
   const [sportFilter, setSportFilter] = useState("");
+  const [approvalFilter, setApprovalFilter] = useState<"" | "unapproved" | "approved">("");
   const [search, setSearch] = useState("");
   const [searchInput, setSearchInput] = useState("");
   const [page, setPage] = useState(1);
@@ -56,6 +63,7 @@ export default function AdminReviewPage() {
       params.set("page", page.toString());
       params.set("limit", "50");
       if (sportFilter) params.set("sport", sportFilter);
+      if (approvalFilter) params.set("approval", approvalFilter);
       if (search) params.set("search", search);
 
       const res = await fetch(`/api/admin/facility-review?${params}`);
@@ -67,7 +75,7 @@ export default function AdminReviewPage() {
     } finally {
       setLoading(false);
     }
-  }, [page, sportFilter, search]);
+  }, [page, sportFilter, approvalFilter, search]);
 
   useEffect(() => {
     fetchData();
@@ -85,7 +93,6 @@ export default function AdminReviewPage() {
       });
       if (res.ok) {
         setDeactivatedCount((c) => c + 1);
-        // Remove from current list
         setData((prev) =>
           prev
             ? {
@@ -103,6 +110,36 @@ export default function AdminReviewPage() {
     }
   }
 
+  async function handleApproval(id: string, approve: boolean) {
+    setApproving(id);
+    try {
+      const res = await fetch("/api/admin/facility-review", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ facilityId: id, isApproved: approve }),
+      });
+      if (res.ok) {
+        setData((prev) =>
+          prev
+            ? {
+                ...prev,
+                unapprovedCount: prev.unapprovedCount + (approve ? -1 : 1),
+                facilities: prev.facilities.map((f) =>
+                  f.id === id
+                    ? { ...f, isApproved: approve, approvedAt: approve ? new Date().toISOString() : null }
+                    : f
+                ),
+              }
+            : prev
+        );
+      }
+    } catch {
+      // ignore
+    } finally {
+      setApproving(null);
+    }
+  }
+
   function handleSearch(e: React.FormEvent) {
     e.preventDefault();
     setSearch(searchInput);
@@ -115,14 +152,21 @@ export default function AdminReviewPage() {
         <div>
           <h1 className="text-2xl font-bold text-zinc-900">Kontrola sportovišť</h1>
           <p className="mt-1 text-sm text-zinc-500">
-            Zkontrolujte a deaktivujte nerelevantní sportoviště
+            Zkontrolujte, schvalte nebo deaktivujte sportoviště
           </p>
         </div>
-        {deactivatedCount > 0 && (
-          <span className="rounded-full bg-red-50 px-3 py-1 text-sm font-medium text-red-600">
-            Deaktivováno: {deactivatedCount}
-          </span>
-        )}
+        <div className="flex items-center gap-3">
+          {data && data.unapprovedCount > 0 && (
+            <span className="rounded-full bg-amber-50 px-3 py-1 text-sm font-medium text-amber-600">
+              Neschváleno: {data.unapprovedCount}
+            </span>
+          )}
+          {deactivatedCount > 0 && (
+            <span className="rounded-full bg-red-50 px-3 py-1 text-sm font-medium text-red-600">
+              Deaktivováno: {deactivatedCount}
+            </span>
+          )}
+        </div>
       </div>
 
       {/* Search */}
@@ -157,6 +201,31 @@ export default function AdminReviewPage() {
           </button>
         )}
       </form>
+
+      {/* Approval filter */}
+      <div className="mb-3 flex flex-wrap gap-1.5">
+        {([
+          { key: "" as const, label: "Vše" },
+          { key: "unapproved" as const, label: "Neschválené" },
+          { key: "approved" as const, label: "Schválené" },
+        ]).map((f) => (
+          <button
+            key={f.key}
+            onClick={() => {
+              setApprovalFilter(f.key);
+              setPage(1);
+            }}
+            className={`rounded-md px-2.5 py-1 text-xs font-medium transition ${
+              approvalFilter === f.key
+                ? "bg-emerald-600 text-white"
+                : "bg-zinc-50 text-zinc-500 hover:bg-zinc-100"
+            }`}
+          >
+            {f.label}
+            {f.key === "unapproved" && data ? ` (${data.unapprovedCount})` : ""}
+          </button>
+        ))}
+      </div>
 
       {/* Sport filter */}
       <div className="mb-6 flex flex-wrap gap-1.5">
@@ -193,7 +262,7 @@ export default function AdminReviewPage() {
       {data && !loading && (
         <div className="mb-4">
           <p className="text-sm text-zinc-500">
-            Celkem <span className="font-semibold text-zinc-900">{data.total}</span> aktivních sportovišť
+            Celkem <span className="font-semibold text-zinc-900">{data.total}</span> sportovišť
             {data.totalPages > 1 && (
               <> &middot; strana {data.page} z {data.totalPages}</>
             )}
@@ -211,15 +280,30 @@ export default function AdminReviewPage() {
           {data.facilities.map((f) => (
             <div
               key={f.id}
-              className="rounded-xl border border-zinc-200 bg-white px-4 py-3"
+              className={`rounded-xl border px-4 py-3 ${
+                f.isApproved
+                  ? "border-zinc-200 bg-white"
+                  : "border-amber-200 bg-amber-50/30"
+              }`}
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="min-w-0 flex-1">
-                  {/* Name */}
+                  {/* Name + badges */}
                   <div className="flex items-center gap-2">
                     <span className="font-semibold text-zinc-900">
                       {f.name}
                     </span>
+                    {f.isApproved ? (
+                      <span className="inline-flex items-center gap-0.5 rounded-full bg-emerald-50 px-1.5 py-0.5 text-[10px] font-semibold text-emerald-600">
+                        <CheckCircle className="h-2.5 w-2.5" />
+                        schváleno
+                      </span>
+                    ) : (
+                      <span className="inline-flex items-center gap-0.5 rounded-full bg-amber-50 px-1.5 py-0.5 text-[10px] font-semibold text-amber-600">
+                        <Circle className="h-2.5 w-2.5" />
+                        neschváleno
+                      </span>
+                    )}
                     {f.isClaimed && (
                       <span className="rounded-full bg-blue-50 px-1.5 py-0.5 text-[10px] font-semibold text-blue-600">
                         claimed
@@ -250,6 +334,28 @@ export default function AdminReviewPage() {
 
                 {/* Actions */}
                 <div className="flex shrink-0 items-center gap-2">
+                  {/* Approve / Unapprove */}
+                  {f.isApproved ? (
+                    <button
+                      onClick={() => handleApproval(f.id, false)}
+                      disabled={approving === f.id}
+                      className="inline-flex items-center gap-1 rounded-lg bg-zinc-50 px-2.5 py-1.5 text-xs text-zinc-500 hover:bg-zinc-100 disabled:opacity-50"
+                      title="Zrušit schválení"
+                    >
+                      <Circle className="h-3 w-3" />
+                      Odschválit
+                    </button>
+                  ) : (
+                    <button
+                      onClick={() => handleApproval(f.id, true)}
+                      disabled={approving === f.id}
+                      className="inline-flex items-center gap-1 rounded-lg bg-emerald-600 px-2.5 py-1.5 text-xs font-medium text-white hover:bg-emerald-700 disabled:opacity-50"
+                      title="Schválit sportoviště"
+                    >
+                      <CheckCircle className="h-3 w-3" />
+                      {approving === f.id ? "..." : "Schválit"}
+                    </button>
+                  )}
                   {f.website ? (
                     <a
                       href={f.website.startsWith("http") ? f.website : `https://${f.website}`}

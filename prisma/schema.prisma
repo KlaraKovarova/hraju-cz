@@ -63,6 +63,8 @@ model Facility {
   stripeSubscriptionId   String?
   subscriptionStatus     String?           // active, canceled, past_due, etc.
   premiumExpiresAt       DateTime?
+  isApproved             Boolean           @default(false) // admin has reviewed this listing
+  approvedAt             DateTime?
   createdAt              DateTime          @default(now())
   updatedAt              DateTime          @updatedAt
   sports        FacilitySport[]
@@ -75,12 +77,15 @@ model Facility {
   reviews       Review[]
   visits        Visit[]
   userPhotos    UserPhoto[]
+  tips          FacilityTip[]
   averageRating Float?
   reviewCount   Int              @default(0)
+  tipCount      Int              @default(0)
 
   @@index([locationId])
   @@index([slug])
   @@index([isActive])
+  @@index([isApproved])
 }
 
 model FacilitySport {
@@ -246,6 +251,7 @@ model User {
   loginTokens        LoginToken[]
   events             TouristEvent[]
   badges             UserBadge[]
+  tips               FacilityTip[]
 }
 
 model Visit {
@@ -344,4 +350,22 @@ model UserPhoto {
   @@index([reviewId])
   @@index([visitId])
   @@index([userId])
+}
+
+model FacilityTip {
+  id         String   @id @default(cuid())
+  facilityId String
+  facility   Facility @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  text       String   @db.VarChar(280)
+  helpful    Int      @default(0)
+  flagged    Boolean  @default(false)
+  isApproved Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([facilityId])
+  @@index([userId])
+  @@index([isApproved])
 }
