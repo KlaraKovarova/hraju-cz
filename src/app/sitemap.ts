@@ -6,6 +6,7 @@ import { cityToSlug, REGIONS } from "@/lib/regions";
 import { getAllPosts, CATEGORIES } from "@/lib/blog";
 
 const BASE_URL = "https://www.hraju.cz";
+const VISIBLE_SPORT_SLUGS = new Set(SPORTS.map((s) => s.slug));
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: MetadataRoute.Sitemap = [];
@@ -31,7 +32,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ]);
     facilities = dbFacilities.map((f) => ({
       slug: f.slug,
-      sportSlugs: f.sports.map((s) => s.sport.slug),
+      sportSlugs: f.sports.map((s) => s.sport.slug).filter((s) => VISIBLE_SPORT_SLUGS.has(s)),
       city: f.location.city,
       updatedAt: f.updatedAt,
     }));
@@ -42,7 +43,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const sportsByFacId = new Map<string, string[]>();
     for (const fs of exportData.facilitySports) {
       const sport = sportById.get(fs.sportId);
-      if (!sport) continue;
+      if (!sport || !VISIBLE_SPORT_SLUGS.has(sport.slug)) continue;
       const arr = sportsByFacId.get(fs.facilityId) || [];
       arr.push(sport.slug);
       sportsByFacId.set(fs.facilityId, arr);
@@ -53,6 +54,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       city: locationById.get(f.locationId)?.city || "",
     }));
   }
+
+  // Remove facilities with no visible sports
+  facilities = facilities.filter((f) => f.sportSlugs.length > 0);
 
   // Pre-compute lastmod dates per sport and per sport+city
   const sportLastmod = new Map<string, Date>();
