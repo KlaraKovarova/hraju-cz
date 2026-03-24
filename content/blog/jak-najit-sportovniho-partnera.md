@@ -123,4 +123,6 @@ A nezapomeňte: vaše zkušenosti se sportovišti pomohou ostatním. Když víte
 
 - [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
 - [7 sportů za 7 dní — intenzivní výzva](/blog/7-sportu-za-7-dni-vyzva)
+- [Jak přidat sportovní akci — pozvěte komunitu](/blog/jak-pridat-sportovni-akci-na-hraju-cz)
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

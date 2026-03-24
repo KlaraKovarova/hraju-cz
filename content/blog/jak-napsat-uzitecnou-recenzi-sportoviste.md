@@ -95,5 +95,7 @@ Na hraju.cz najdete tisíce sportovišť po celé republice. Vyberte to, které 
 
 - [Proč vaše recenze pomáhá ostatním sportovcům](/blog/proc-vase-recenze-pomaha-ostatnim-sportovcum)
 - [Jak si vybrat sportoviště — proč číst recenze](/blog/jak-si-vybrat-sportoviste-recenze)
+- [Check-iny na hraju.cz — budujte si mapu zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Odznaky — jak je sbírat a co znamenají](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 - [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)

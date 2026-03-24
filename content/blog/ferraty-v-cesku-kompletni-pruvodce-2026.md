@@ -280,4 +280,4 @@ Na hraju.cz najdete outdoorová sportoviště a lezecké stěny ve vašem region
 
 ---
 
-Byli jste na ferratě? [Napište recenzi](/prihlaseni) — pomůžete ostatním vybrat tu správnou trasu!
+Byli jste na ferratě? [Napište recenzi](/prihlaseni) — pomůžete ostatním vybrat tu správnou trasu! A nezapomeňte na [check-in „Byl/a jsem tady"](/blog/check-iny-na-hraju-cz-pruvodce) — po 3 ferratách získáte odznak **⛰️ Ferratový Průzkumník**. [Jak odznaky fungují →](/blog/odznaky-na-hraju-cz-jak-je-sbirat)

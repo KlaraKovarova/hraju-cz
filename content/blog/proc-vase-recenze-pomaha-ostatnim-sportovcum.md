@@ -80,4 +80,6 @@ Každý, kdo pravidelně sportuje, je expert na místa, kde hraje. Nepotřebujet
 
 - [Jak napsat užitečnou recenzi sportoviště](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
 - [Jak si vybrat sportoviště — proč číst recenze](/blog/jak-si-vybrat-sportoviste-recenze)
+- [Check-iny na hraju.cz — budujte si mapu zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Odznaky — jak je sbírat a co znamenají](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
