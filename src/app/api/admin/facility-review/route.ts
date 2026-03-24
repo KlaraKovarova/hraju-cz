@@ -112,7 +112,7 @@ export async function GET(request: NextRequest) {
         flags,
         website: f.website,
         listingUrl: f.sports[0]
-          ? `/${f.sports[0].sport.slug}/${f.slug}`
+          ? `/sport/${f.sports[0].sport.slug}/${f.slug}`
           : `/${f.slug}`,
       };
     });
