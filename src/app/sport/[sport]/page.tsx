@@ -18,6 +18,10 @@ import type { Metadata } from "next";
 // ISR: revalidate sport pages every hour
 export const revalidate = 3600;
 
+export function generateStaticParams() {
+  return SPORTS.map((s) => ({ sport: s.slug }));
+}
+
 interface SportPageProps {
   params: Promise<{ sport: string }>;
 }

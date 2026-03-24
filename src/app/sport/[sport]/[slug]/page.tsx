@@ -13,7 +13,6 @@ import {
   CheckCircle2,
   CalendarCheck,
   Building2,
-  Pencil,
 } from "lucide-react";
 import { getSportBySlug, isSportClaimable } from "@/lib/sports";
 import { getFacilityBySlug, getInactiveFacilityRedirectInfo, getFacilitiesByCityAndSport, getRelatedFacilities } from "@/lib/data";
@@ -40,7 +39,7 @@ import { FavoriteButton } from "@/components/FavoriteButton";
 import { FacilityGallery } from "@/components/FacilityGallery";
 import { TipList } from "@/components/TipList";
 import { TipForm } from "@/components/TipForm";
-import { getOwnerSession } from "@/lib/owner-auth";
+import { OwnerEditButton, OwnerUpgradeCTA } from "@/components/OwnerControls";
 import { prisma } from "@/lib/prisma";
 import type { Metadata } from "next";
 
@@ -221,10 +220,6 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
 
   // Related blog posts for this sport
   const relatedBlogPosts = getPostsBySport(sportSlug).slice(0, 3);
-
-  // Check if the current visitor is the facility owner
-  const ownerSession = await getOwnerSession();
-  const isOwner = ownerSession?.facilityId === facility.id;
 
   // Track page view (fire-and-forget)
   const today = new Date();
@@ -491,15 +486,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
             {facility.averageRating != null && facility.reviewCount > 0 && (
               <StarRating rating={facility.averageRating} count={facility.reviewCount} size="md" />
             )}
-            {isOwner && (
-              <Link
-                href="/moje-sportoviste"
-                className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700 transition-colors"
-              >
-                <Pencil className="h-4 w-4" />
-                Upravit sportoviště
-              </Link>
-            )}
+            <OwnerEditButton facilityId={facility.id} />
           </div>
 
           <div className="mt-3 flex flex-wrap items-center gap-4 text-sm text-zinc-500">
@@ -880,18 +867,6 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                   </span>
                 </Link>
               </TrackClick>
-            ) : isOwner ? (
-              <div className="flex items-center gap-3 rounded-2xl border border-emerald-100 bg-emerald-50 p-4">
-                <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600" />
-                <div>
-                  <p className="text-sm font-semibold text-emerald-800">
-                    Ověřený provozovatel
-                  </p>
-                  <p className="text-xs text-emerald-600">
-                    Údaje spravuje provozovatel sportoviště.
-                  </p>
-                </div>
-              </div>
             ) : (
               <div className="rounded-2xl border border-emerald-100 bg-emerald-50 p-4">
                 <div className="flex items-center gap-3">
@@ -914,20 +889,12 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
               </div>
             )}
 
-            {/* Upgrade CTA for claimed non-premium owners (hidden for non-claimable sports) */}
-            {isOwner && facility.isClaimed && !facility.isPremium && isSportClaimable(sportSlug) && (
-              <Link
-                href="/pro"
-                className="block rounded-2xl border border-amber-200 bg-amber-50 p-4 text-center transition hover:border-amber-300 hover:bg-amber-100"
-              >
-                <p className="text-sm font-semibold text-amber-800">
-                  Upgradujte na Premium pro více zákazníků
-                </p>
-                <p className="mt-1 text-xs text-amber-600">
-                  Zvýrazněný profil, bez reklam konkurence a statistiky zobrazení.
-                </p>
-              </Link>
-            )}
+            <OwnerUpgradeCTA
+              facilityId={facility.id}
+              isClaimed={facility.isClaimed}
+              isPremium={facility.isPremium}
+              isClaimable={isSportClaimable(sportSlug)}
+            />
 
             {/* Edit Suggestion */}
             <EditSuggestionForm

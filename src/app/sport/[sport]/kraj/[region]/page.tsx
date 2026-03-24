@@ -22,6 +22,12 @@ import type { Metadata } from "next";
 // ISR: revalidate region pages every hour
 export const revalidate = 3600;
 
+export function generateStaticParams() {
+  return SPORTS.flatMap((s) =>
+    REGIONS.map((r) => ({ sport: s.slug, region: r.slug }))
+  );
+}
+
 interface RegionPageProps {
   params: Promise<{ sport: string; region: string }>;
 }
