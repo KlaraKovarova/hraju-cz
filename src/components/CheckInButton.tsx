@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { MapPinCheck, Loader2, LogIn, Share2, Check, Camera } from "lucide-react";
+import { MapPinCheck, Loader2, LogIn, Share2, Check, Camera, Star } from "lucide-react";
 import Link from "next/link";
+import { trackEvent } from "@/lib/analytics";
 import { PhotoUpload } from "./PhotoUpload";
 
 interface CheckInButtonProps {
@@ -195,6 +196,18 @@ export function CheckInButton({ facilityId, currentPath, facilityName }: CheckIn
       {/* Share prompt + photo upload after check-in */}
       {showSharePrompt && (
         <div className="space-y-2 animate-in fade-in slide-in-from-top-1">
+          {/* Review CTA — prompt user to write a review after check-in */}
+          <a
+            href="#recenze"
+            onClick={() => trackEvent("checkin_review_cta_click", { facilityId })}
+            className="flex items-center gap-3 rounded-xl border border-amber-100 bg-amber-50/50 px-4 py-3 transition hover:bg-amber-50"
+          >
+            <Star className="h-5 w-5 text-amber-500 shrink-0" />
+            <span className="text-sm font-medium text-amber-800">
+              Jak se vám tu líbilo? Napište recenzi
+            </span>
+            <span className="ml-auto text-xs font-medium text-amber-600">&darr;</span>
+          </a>
           <div className="flex items-center gap-3 rounded-xl border border-emerald-100 bg-emerald-50/50 px-4 py-3">
             <span className="text-sm text-emerald-700">Sdílejte svou návštěvu!</span>
             <button

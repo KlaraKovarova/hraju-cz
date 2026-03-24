@@ -937,7 +937,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
       </div>
 
       {/* Reviews Section */}
-      <section className="border-t border-zinc-100 bg-white">
+      <section id="recenze" className="border-t border-zinc-100 bg-white scroll-mt-4">
         <div className="mx-auto max-w-6xl px-6 py-8">
           <h2 className="mb-6 text-xl font-bold text-zinc-900">
             Recenze
