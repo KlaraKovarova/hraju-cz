@@ -90,3 +90,10 @@ Strukturovaná, pokrývá všechny kategorie, založená na opakované zkušenos
 Na hraju.cz najdete tisíce sportovišť po celé republice. Vyberte to, které znáte, dejte hvězdičky a napište pár vět. Zabere to minutu — a pomůže to stovkám dalších sportovců.
 
 [Najděte své sportoviště na hraju.cz](/) a sdílejte svou zkušenost.
+
+## Další tipy pro komunitu
+
+- [Proč vaše recenze pomáhá ostatním sportovcům](/blog/proc-vase-recenze-pomaha-ostatnim-sportovcum)
+- [Jak si vybrat sportoviště — proč číst recenze](/blog/jak-si-vybrat-sportoviste-recenze)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)

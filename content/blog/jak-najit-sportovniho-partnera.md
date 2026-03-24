@@ -117,4 +117,10 @@ A nezapomeňte: vaše zkušenosti se sportovišti pomohou ostatním. Když víte
 
 ---
 
-*Hledáte sportoviště ve svém okolí? [Prozkoumejte katalog sportovišť na hraju.cz](/) — přes 3 000 míst po celé republice.*
+*Hledáte sportoviště ve svém okolí? [Prozkoumejte katalog sportovišť na hraju.cz](/) — přes 8 000 míst po celé republice.*
+
+## Další tipy
+
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [7 sportů za 7 dní — intenzivní výzva](/blog/7-sportu-za-7-dni-vyzva)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

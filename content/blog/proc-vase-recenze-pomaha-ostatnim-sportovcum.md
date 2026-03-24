@@ -75,3 +75,9 @@ Celé to zabere minutu. Všechny recenze na hraju.cz procházejí schválením, 
 Každý, kdo pravidelně sportuje, je expert na místa, kde hraje. Nepotřebujete certifikát ani novinářskou legitimaci. Stačí, že tam chodíte a víte, jak to tam funguje.
 
 [Přidejte svou recenzi na hraju.cz](/) — pomozte sportovní komunitě najít to správné místo.
+
+## Další tipy pro komunitu
+
+- [Jak napsat užitečnou recenzi sportoviště](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+- [Jak si vybrat sportoviště — proč číst recenze](/blog/jak-si-vybrat-sportoviste-recenze)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

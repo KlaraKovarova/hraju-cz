@@ -38,6 +38,7 @@ Raketový sport na rozjezd. Pokud jste nikdy nehráli tenis, zkuste padel — je
 - **Co potřebujete:** Sportovní oblečení, boty s neotěratelnou podrážkou. Rakety si půjčíte.
 - **Cena:** Tenis od 200 Kč/hod (antuka), padel od 440 Kč/hod (za 4 hráče = 110 Kč/osoba)
 - **Najít kurt:** [hraju.cz/sport/tenis](/sport/tenis) nebo [hraju.cz/sport/padel](/sport/padel)
+- **Průvodce:** [Tenis pro začátečníky](/blog/tenis-pro-zacatecniky-kompletni-pruvodce) | [Padel pro začátečníky](/blog/padel-pro-zacatecniky-kompletni-pruvodce)
 
 ### Úterý — Bouldering
 
@@ -47,6 +48,7 @@ Lezení bez lana na nízké stěně. Překvapivě návykové — řešíte bould
 - **Cena:** Od 130 Kč (Klajda Brno dopoledne) do 275 Kč (Hangar Brno odpoledne)
 - **Tip:** Jděte dopoledne — méně lidí, levnější vstup.
 - **Najít stěnu:** [hraju.cz/sport/lezeni](/sport/lezeni)
+- **Průvodce:** [Bouldering pro začátečníky](/blog/bouldering-pro-zacatecniky-kompletni-pruvodce)
 
 ### Středa — Plavání
 
@@ -56,6 +58,7 @@ Nulový náraz na klouby, kompletní kardio. Ideální regenerace po úterním l
 - **Cena:** Od 70 Kč (veřejný bazén) do 240 Kč (aquapark)
 - **Tip:** Kondiční plavání (6–8h) bývá nejlevnější — Aquapark Kohoutovice 140 Kč.
 - **Najít bazén:** [hraju.cz/sport/plavani](/sport/plavani)
+- **Průvodce:** [Plavání pro začátečníky](/blog/plavani-pro-zacatecniky-kompletni-pruvodce)
 
 ### Čtvrtek — Fitness (skupinová lekce)
 
@@ -74,6 +77,7 @@ Nejrychlejší raketový sport. 30 minut squashe = nejintenzivnější kardio, k
 - **Cena:** Od 100 Kč/30 min (Fitness Boby Brno) do 370 Kč/hod (Centrum Viktoria odpoledne)
 - **Tip:** Squash je tvrdý na tělo. Rozcvičte se 10 minut předem.
 - **Najít kurt:** [hraju.cz/sport/squash](/sport/squash)
+- **Průvodce:** [Squash pro začátečníky](/blog/squash-pro-zacatecniky-kompletni-pruvodce)
 
 ### Sobota — Badminton
 
@@ -94,6 +98,7 @@ Zakončete týden venku. Podle sezóny:
 
 - **Cena:** Zdarma (běh, cyklistika s vlastním kolem) nebo od 350 Kč/den (pronájem ferratového setu)
 - **Najít ferraty:** [hraju.cz/sport/ferraty](/sport/ferraty)
+- **Průvodce:** [Via ferraty v Česku](/blog/ferraty-v-cesku-kompletni-pruvodce-2026) | [Kde běhat v Praze](/blog/kde-behat-v-praze-pruvodce) | [Cyklotrasy v Praze](/blog/cyklotrasy-praha-pruvodce)
 
 ## Pravidla výzvy
 
@@ -122,3 +127,10 @@ Za cenu jednoho víkendu v restauraci zažijete 7 různých sportů. A možná n
 Zvládli jste výzvu? **Napište recenzi na každé sportoviště**, které jste navštívili. Vaše zkušenosti pomohou ostatním sportovcům v Česku.
 
 [Začít psát recenze →](/prihlaseni)
+
+## Další výzvy a tipy
+
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak najít sportovního partnera](/blog/jak-najit-sportovniho-partnera)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

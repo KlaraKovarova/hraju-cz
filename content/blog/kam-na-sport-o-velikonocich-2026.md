@@ -11,6 +11,8 @@ sportTags:
   - plavani
   - fitness
   - cyklistika
+  - behani
+  - padel
 image: /images/blog/jarni-sportovni-sezona-2026-pruvodce.jpg
 ---
 
@@ -54,7 +56,7 @@ Začátek dubna = začátek ferratové sezóny. Velikonoční víkend je ideáln
 
 **Důležité:** V dubnu může být na skalách mokro. Zkontrolujte vybavení a volte cestu o stupeň nižší, než je vaše běžná úroveň.
 
-[Ferraty v ČR na hraju.cz →](/sport/ferraty)
+[Ferraty v ČR na hraju.cz →](/sport/ferraty) | [Kompletní průvodce ferratami (30+ lokalit)](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
 
 ### 2. Cyklistický výlet po cyklostezce
 
@@ -120,3 +122,12 @@ Na [hraju.cz](/) najdete přes **7 000 sportovišť** po celém Česku. Zkontrol
 Byli jste na sportu přes Velikonoce? **Napište recenzi** a pomozte ostatním sportovcům naplánovat svůj příští výlet.
 
 [Napsat recenzi →](/prihlaseni)
+
+## Průvodci pro velikonoční sport
+
+- [Via ferraty v Česku — kompletní průvodce](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
+- [Cyklotrasy v Praze a okolí](/blog/cyklotrasy-praha-pruvodce)
+- [Kde běhat v Praze — 15 nejlepších tras](/blog/kde-behat-v-praze-pruvodce)
+- [Bouldering pro začátečníky](/blog/bouldering-pro-zacatecniky-kompletni-pruvodce)
+- [Padel pro začátečníky](/blog/padel-pro-zacatecniky-kompletni-pruvodce)
+- [Kam na sport v dubnu 2026](/blog/kam-na-sport-v-dubnu-2026)
