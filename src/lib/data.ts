@@ -1349,6 +1349,153 @@ export function getSportCountInCity(citySlug: string): number {
   return sportSlugs.size;
 }
 
+// --- Community Activity Feed ---
+
+export type ActivityItem = {
+  type: "review" | "checkin" | "tip" | "photo";
+  id: string;
+  date: string;
+  user: { name: string; id: string | null };
+  facility: { name: string; slug: string; sport: string | null; city: string };
+  data: Record<string, unknown>;
+};
+
+export async function getRecentActivity(opts: {
+  sport?: string;
+  limit?: number;
+} = {}): Promise<ActivityItem[]> {
+  const { sport, limit = 20 } = opts;
+  const take = Math.min(limit, 50);
+
+  const sportFilter = sport
+    ? { facility: { isActive: true, sports: { some: { sport: { slug: sport } } } } }
+    : { facility: { isActive: true, sports: { some: {} } } };
+
+  try {
+    const [reviews, visits, tips] = await withTimeout(
+      Promise.all([
+        prisma.review.findMany({
+          where: { isApproved: true, ...sportFilter },
+          orderBy: { createdAt: "desc" },
+          take,
+          select: {
+            id: true,
+            authorName: true,
+            userId: true,
+            rating: true,
+            title: true,
+            createdAt: true,
+            facility: {
+              select: {
+                name: true,
+                slug: true,
+                location: { select: { city: true } },
+                sports: { take: 1, select: { sport: { select: { slug: true } } } },
+              },
+            },
+          },
+        }),
+        prisma.visit.findMany({
+          where: sportFilter,
+          orderBy: { createdAt: "desc" },
+          take,
+          select: {
+            id: true,
+            userId: true,
+            note: true,
+            createdAt: true,
+            user: { select: { name: true } },
+            facility: {
+              select: {
+                name: true,
+                slug: true,
+                location: { select: { city: true } },
+                sports: { take: 1, select: { sport: { select: { slug: true } } } },
+              },
+            },
+          },
+        }),
+        prisma.facilityTip.findMany({
+          where: { isApproved: true, ...sportFilter },
+          orderBy: { createdAt: "desc" },
+          take,
+          select: {
+            id: true,
+            userId: true,
+            text: true,
+            createdAt: true,
+            user: { select: { name: true } },
+            facility: {
+              select: {
+                name: true,
+                slug: true,
+                location: { select: { city: true } },
+                sports: { take: 1, select: { sport: { select: { slug: true } } } },
+              },
+            },
+          },
+        }),
+      ]),
+      DB_QUERY_TIMEOUT_MS
+    );
+
+    const items: ActivityItem[] = [];
+
+    for (const r of reviews) {
+      items.push({
+        type: "review",
+        id: r.id,
+        date: r.createdAt.toISOString(),
+        user: { name: r.authorName, id: r.userId },
+        facility: {
+          name: r.facility.name,
+          slug: r.facility.slug,
+          sport: r.facility.sports[0]?.sport.slug ?? null,
+          city: r.facility.location.city,
+        },
+        data: { rating: r.rating, title: r.title },
+      });
+    }
+
+    for (const v of visits) {
+      items.push({
+        type: "checkin",
+        id: v.id,
+        date: v.createdAt.toISOString(),
+        user: { name: v.user.name || "Sportovec", id: v.userId },
+        facility: {
+          name: v.facility.name,
+          slug: v.facility.slug,
+          sport: v.facility.sports[0]?.sport.slug ?? null,
+          city: v.facility.location.city,
+        },
+        data: { note: v.note },
+      });
+    }
+
+    for (const t of tips) {
+      items.push({
+        type: "tip",
+        id: t.id,
+        date: t.createdAt.toISOString(),
+        user: { name: t.user.name || "Sportovec", id: t.userId },
+        facility: {
+          name: t.facility.name,
+          slug: t.facility.slug,
+          sport: t.facility.sports[0]?.sport.slug ?? null,
+          city: t.facility.location.city,
+        },
+        data: { text: t.text },
+      });
+    }
+
+    items.sort((a, b) => b.date.localeCompare(a.date));
+    return items.slice(0, take);
+  } catch {
+    return [];
+  }
+}
+
 export async function getCities(): Promise<string[]> {
   try {
     const locations = await withTimeout(

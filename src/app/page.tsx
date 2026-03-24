@@ -9,11 +9,13 @@ import {
   getRecentFacilities,
   getRecentReviews,
   getCommunityStats,
+  getRecentActivity,
 } from "@/lib/data";
 import { cityToSlug } from "@/lib/regions";
 import { FacilityCard } from "@/components/FacilityCard";
 import { HeroSearchForm } from "@/components/HeroSearchForm";
 import { AdSlot } from "@/components/AdSlot";
+import { ActivityFeed } from "@/components/ActivityFeed";
 import { WeekendEvents } from "@/components/WeekendEvents";
 import { getAllPosts, CATEGORIES } from "@/lib/blog";
 
@@ -23,13 +25,14 @@ export const revalidate = 21600;
 export default async function Home() {
   const totalFacilities = getTotalFacilityCount();
   const totalSports = getTotalSportCount();
-  const [featuredFacilities, topCities, recentFacilities, recentReviews, communityStats] =
+  const [featuredFacilities, topCities, recentFacilities, recentReviews, communityStats, activityItems] =
     await Promise.all([
       getFeaturedFacilities(6),
       getTopCitiesOverall(10),
       getRecentFacilities(4),
       getRecentReviews(6),
       getCommunityStats(),
+      getRecentActivity({ limit: 10 }),
     ]);
   const latestPosts = getAllPosts().slice(0, 3);
 
@@ -360,6 +363,25 @@ export default async function Home() {
                 <MessageSquare className="h-4 w-4" />
                 Všechny recenze
               </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Community Activity Feed */}
+      {activityItems.length > 0 && (
+        <section className="border-t border-zinc-100 bg-zinc-50/50">
+          <div className="mx-auto max-w-6xl px-6 py-16">
+            <div className="mb-8 text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
+                Právě se děje
+              </h2>
+              <p className="mt-2 text-zinc-500">
+                Nejnovější aktivita sportovců na hraju.cz
+              </p>
+            </div>
+            <div className="mx-auto max-w-2xl">
+              <ActivityFeed items={activityItems} />
             </div>
           </div>
         </section>

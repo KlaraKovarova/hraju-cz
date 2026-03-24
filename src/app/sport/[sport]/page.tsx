@@ -3,12 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { MapPin, ChevronRight, ChevronDown, Calendar, ArrowRight, PlusCircle, Star, Map } from "lucide-react";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
-import { getRegionsBySport, getTopFacilitiesBySport, getTopCitiesBySport, getTopReviewsBySport, getSportReviewStats, getFacilityMapMarkersBySport } from "@/lib/data";
+import { getRegionsBySport, getTopFacilitiesBySport, getTopCitiesBySport, getTopReviewsBySport, getSportReviewStats, getFacilityMapMarkersBySport, getRecentActivity } from "@/lib/data";
 import { getSportTitleSuffix, getSportFacilityTypePluralGenitive, getSportFacilityType } from "@/lib/seo";
 import { FacilityCard } from "@/components/FacilityCard";
 import { FacilityMap } from "@/components/FacilityMap";
 import { HeroSearchForm } from "@/components/HeroSearchForm";
 import { AdSlot } from "@/components/AdSlot";
+import { ActivityFeed } from "@/components/ActivityFeed";
 import { BannerSlot } from "@/components/BannerSlot";
 import { ChallengeCards } from "@/components/ChallengeCards";
 import { getSportFaqs } from "@/lib/sport-faq";
@@ -70,12 +71,13 @@ export default async function SportPage({ params }: SportPageProps) {
     notFound();
   }
 
-  const [regions, topFacilities, topCities, reviewStats, topReviews] = await Promise.all([
+  const [regions, topFacilities, topCities, reviewStats, topReviews, activityItems] = await Promise.all([
     getRegionsBySport(sport.slug),
     getTopFacilitiesBySport(sport.slug, 10),
     getTopCitiesBySport(sport.slug, 10),
     getSportReviewStats(sport.slug),
     getTopReviewsBySport(sport.slug, 3),
+    getRecentActivity({ sport: sport.slug, limit: 8 }),
   ]);
 
   const totalFacilities = regions.reduce((sum, r) => sum + r.facilityCount, 0);
@@ -419,6 +421,18 @@ export default async function SportPage({ params }: SportPageProps) {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+      )}
+
+      {/* Community Activity Feed */}
+      {activityItems.length > 0 && (
+        <section className="mx-auto max-w-6xl px-6 py-8 border-t border-zinc-100">
+          <h2 className="mb-6 text-xl font-bold text-zinc-900">
+            Právě se děje — {sport.nameCs.toLowerCase()}
+          </h2>
+          <div className="mx-auto max-w-2xl">
+            <ActivityFeed items={activityItems} />
           </div>
         </section>
       )}
