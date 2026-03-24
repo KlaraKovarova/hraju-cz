@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import exportData from "@/data/facilities-export.json";
 import { cityToSlug, REGIONS } from "@/lib/regions";
 import { getAllPosts, CATEGORIES } from "@/lib/blog";
+import { getGuideDefinitions } from "@/lib/guides";
 
 const BASE_URL = "https://www.hraju.cz";
 const VISIBLE_SPORT_SLUGS: Set<string> = new Set(SPORTS.map((s) => s.slug));
@@ -283,6 +284,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         url: `${BASE_URL}/blog/sport/${sport.slug}`,
         changeFrequency: "weekly",
         priority: 0.5,
+      });
+    }
+  }
+
+  // Guide pages: /pruvodce/[sport] index + /pruvodce/[sport]/[slug]
+  for (const sport of SPORTS) {
+    entries.push({
+      url: `${BASE_URL}/pruvodce/${sport.slug}`,
+      lastModified: sportLastmod.get(sport.slug),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    });
+    for (const guide of getGuideDefinitions(sport.slug)) {
+      entries.push({
+        url: `${BASE_URL}/pruvodce/${sport.slug}/${guide.slug}`,
+        lastModified: sportLastmod.get(sport.slug),
+        changeFrequency: "weekly",
+        priority: 0.7,
       });
     }
   }

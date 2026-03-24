@@ -579,6 +579,31 @@ export default async function SportPage({ params }: SportPageProps) {
         </section>
       )}
 
+      {/* Guides (Průvodce) */}
+      <section className="border-t border-zinc-100 bg-zinc-50">
+        <div className="mx-auto max-w-6xl px-6 py-10">
+          <h2 className="mb-2 text-xl font-bold text-zinc-900">Průvodce</h2>
+          <p className="mb-6 text-sm text-zinc-500">
+            Nejlepší {sport.nameCs.toLowerCase()} podle kraje a hodnocení — vyberte si průvodce
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href={`/pruvodce/${sport.slug}/nejlepe-hodnocene`}
+              className="inline-flex items-center gap-2 rounded-lg bg-amber-50 border border-amber-100 px-4 py-2.5 text-sm font-semibold text-amber-700 transition hover:shadow-sm"
+            >
+              <Star className="h-4 w-4" />
+              Nejlépe hodnocené v ČR
+            </Link>
+            <Link
+              href={`/pruvodce/${sport.slug}`}
+              className="inline-flex items-center gap-2 rounded-lg bg-white border border-zinc-200 px-4 py-2.5 text-sm font-semibold text-zinc-700 transition hover:shadow-sm"
+            >
+              Všechny průvodce <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Other Sports */}
       <section className="border-t border-zinc-100 bg-white">
         <div className="mx-auto max-w-6xl px-6 py-10">

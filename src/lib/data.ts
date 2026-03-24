@@ -1516,3 +1516,134 @@ export async function getCities(): Promise<string[]> {
     return staticCities();
   }
 }
+
+// --- Guide page queries ---
+
+/** Top-rated facilities for a sport in a specific region (for guide pages) */
+export async function getGuideFacilitiesByRegion(
+  sportSlug: string,
+  regionSlug: string,
+  limit: number = 20
+): Promise<FacilityWithDetails[]> {
+  try {
+    const region = getRegionBySlug(regionSlug);
+    if (!region) return [];
+    const facilities = await withTimeout(
+      prisma.facility.findMany({
+        where: {
+          isActive: true,
+          sports: { some: { sport: { slug: sportSlug } } },
+          location: { region: region.name },
+        },
+        include: {
+          location: { select: { city: true, region: true } },
+          sports: { include: { sport: { select: { slug: true, nameCs: true, icon: true } } } },
+          amenities: { include: { amenity: { select: { slug: true, nameCs: true, icon: true } } } },
+          contacts: { select: { id: true, type: true, value: true, label: true, isPrimary: true } },
+          images: { select: { url: true, alt: true, isPrimary: true }, orderBy: { order: "asc" } },
+        },
+        orderBy: [{ averageRating: { sort: "desc", nulls: "last" } }, { reviewCount: "desc" }, { name: "asc" }],
+        take: limit,
+      }),
+      DB_QUERY_TIMEOUT_MS
+    );
+    return facilities as unknown as FacilityWithDetails[];
+  } catch {
+    const facilities = staticFacilitiesByRegionAndSport(regionSlug, sportSlug);
+    facilities.sort(recommendedSort);
+    return facilities.slice(0, limit);
+  }
+}
+
+/** Best-rated facilities for a sport nationally (for guide pages) */
+export async function getGuideBestRatedFacilities(
+  sportSlug: string,
+  limit: number = 20
+): Promise<FacilityWithDetails[]> {
+  try {
+    const facilities = await withTimeout(
+      prisma.facility.findMany({
+        where: {
+          isActive: true,
+          reviewCount: { gte: 1 },
+          averageRating: { not: null },
+          sports: { some: { sport: { slug: sportSlug } } },
+        },
+        include: {
+          location: { select: { city: true, region: true } },
+          sports: { include: { sport: { select: { slug: true, nameCs: true, icon: true } } } },
+          amenities: { include: { amenity: { select: { slug: true, nameCs: true, icon: true } } } },
+          contacts: { select: { id: true, type: true, value: true, label: true, isPrimary: true } },
+          images: { select: { url: true, alt: true, isPrimary: true }, orderBy: { order: "asc" } },
+        },
+        orderBy: [{ averageRating: "desc" }, { reviewCount: "desc" }],
+        take: limit,
+      }),
+      DB_QUERY_TIMEOUT_MS
+    );
+    return facilities as unknown as FacilityWithDetails[];
+  } catch {
+    const all = staticFacilitiesBySport(sportSlug);
+    return all
+      .filter((f) => f.reviewCount > 0)
+      .sort((a, b) => (b.averageRating ?? 0) - (a.averageRating ?? 0) || b.reviewCount - a.reviewCount)
+      .slice(0, limit);
+  }
+}
+
+/** Beginner-friendly facilities — uses description keyword matching as proxy */
+export async function getGuideBeginnerFacilities(
+  sportSlug: string,
+  limit: number = 20
+): Promise<FacilityWithDetails[]> {
+  const beginnerKeywords = ["začátečník", "začátečníky", "snadná", "snadné", "easy", "lehká", "lehké", "rodina", "děti", "dětí", "family"];
+  try {
+    const facilities = await withTimeout(
+      prisma.facility.findMany({
+        where: {
+          isActive: true,
+          sports: { some: { sport: { slug: sportSlug } } },
+          OR: beginnerKeywords.map((kw) => ({
+            description: { contains: kw, mode: "insensitive" as const },
+          })),
+        },
+        include: {
+          location: { select: { city: true, region: true } },
+          sports: { include: { sport: { select: { slug: true, nameCs: true, icon: true } } } },
+          amenities: { include: { amenity: { select: { slug: true, nameCs: true, icon: true } } } },
+          contacts: { select: { id: true, type: true, value: true, label: true, isPrimary: true } },
+          images: { select: { url: true, alt: true, isPrimary: true }, orderBy: { order: "asc" } },
+        },
+        orderBy: [{ averageRating: { sort: "desc", nulls: "last" } }, { name: "asc" }],
+        take: limit,
+      }),
+      DB_QUERY_TIMEOUT_MS
+    );
+    return facilities as unknown as FacilityWithDetails[];
+  } catch {
+    const all = staticFacilitiesBySport(sportSlug);
+    return all
+      .filter((f) => {
+        const desc = (f.description ?? "").toLowerCase();
+        return beginnerKeywords.some((kw) => desc.includes(kw));
+      })
+      .sort(recommendedSort)
+      .slice(0, limit);
+  }
+}
+
+/** Map markers for guide facilities */
+export function getGuideMapMarkers(
+  facilities: FacilityWithDetails[],
+  sportSlug: string
+): { lat: number; lng: number; name: string; address: string; url: string }[] {
+  return facilities
+    .filter((f) => f.lat != null && f.lng != null)
+    .map((f) => ({
+      lat: f.lat!,
+      lng: f.lng!,
+      name: f.name,
+      address: `${f.address}, ${f.location.city}`,
+      url: `/sport/${sportSlug}/${f.slug}`,
+    }));
+}
