@@ -248,3 +248,11 @@ Jedna z největších boulderovek v Česku — 1 000 m² lezecké plochy.
 ## Najděte sportoviště v Liberci
 
 Kompletní přehled sportovišť v Liberci najdete na [hraju.cz](https://hraju.cz). Přečtěte si recenze od ostatních sportovců a sdílejte své zkušenosti — pomůžete dalším sportovcům v Liberci najít to pravé místo.
+
+## Průvodci dalšími městy
+
+- [Praha — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)
+- [Brno — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
+- [Ostrava — kompletní průvodce](/blog/kde-sportovat-v-ostrave-pruvodce)
+- [Plzeň — kompletní průvodce](/blog/kde-sportovat-v-plzni-pruvodce)
+- [Olomouc — kompletní průvodce](/blog/kde-sportovat-v-olomouci-pruvodce)

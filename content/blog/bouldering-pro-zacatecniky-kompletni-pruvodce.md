@@ -163,3 +163,11 @@ Než na stěnu polezete, projděte si problém očima. Kde jsou chyty? Kam posta
 ## Najděte boulderovku poblíž
 
 Kompletní seznam boulderovek a lezeckých stěn v Česku najdete na [hraju.cz/sport/lezeni](https://hraju.cz/sport/lezeni). Přečtěte si recenze od ostatních lezců — pomohou vám vybrat stěnu s nejlepší atmosférou a routesetterem.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [7 sportů za 7 dní](/blog/7-sportu-za-7-dni-vyzva)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+- [Ferrata vs lezecká stěna](/blog/ferrata-vs-lezecka-stena-srovnani) | [Via ferraty v Česku](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)

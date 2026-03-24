@@ -142,3 +142,11 @@ S permanentkou a vlastní raketou klesnou náklady na 1 200–2 500 Kč/měsíc.
 ## Najděte squashové centrum poblíž
 
 Najděte squashové kurty ve vašem městě na [hraju.cz/sport/squash](https://hraju.cz/sport/squash). Přečtěte si recenze a zjistěte, které centrum nabízí nejlepší poměr cena/kvalita — a po první návštěvě přidejte svou recenzi.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [7 sportů za 7 dní](/blog/7-sportu-za-7-dni-vyzva)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+- [Squash vs badminton — srovnání](/blog/squash-vs-badminton) | [Kam na squash v Brně](/blog/kam-na-squash-v-brne)

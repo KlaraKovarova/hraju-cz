@@ -268,3 +268,11 @@ Jediné hřiště v Česku navržené Gary Playerem.
 ## Najděte sportoviště v Karlových Varech
 
 Kompletní přehled sportovišť v Karlových Varech najdete na [hraju.cz](https://hraju.cz). Přečtěte si recenze od ostatních sportovců a sdílejte své zkušenosti — pomůžete dalším najít to pravé místo.
+
+## Průvodci dalšími městy
+
+- [Praha — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)
+- [Brno — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
+- [Ostrava — kompletní průvodce](/blog/kde-sportovat-v-ostrave-pruvodce)
+- [Plzeň — kompletní průvodce](/blog/kde-sportovat-v-plzni-pruvodce)
+- [Olomouc — kompletní průvodce](/blog/kde-sportovat-v-olomouci-pruvodce)

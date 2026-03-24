@@ -294,3 +294,11 @@ Multisportovní hala s 3 sály pro bojové sporty.
 ## Najděte sportoviště v Jihlavě
 
 Kompletní přehled sportovišť v Jihlavě najdete na [hraju.cz](https://hraju.cz). Přečtěte si recenze a pomožte dalším sportovcům najít to pravé místo na Vysočině.
+
+## Průvodci dalšími městy
+
+- [Praha — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)
+- [Brno — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
+- [Ostrava — kompletní průvodce](/blog/kde-sportovat-v-ostrave-pruvodce)
+- [Plzeň — kompletní průvodce](/blog/kde-sportovat-v-plzni-pruvodce)
+- [Olomouc — kompletní průvodce](/blog/kde-sportovat-v-olomouci-pruvodce)

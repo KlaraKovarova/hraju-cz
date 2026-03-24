@@ -385,3 +385,11 @@ Kompletní přehled najdete na:
 ---
 
 Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.
+
+## Průvodci dalšími městy
+
+- [Ostrava — kompletní průvodce](/blog/kde-sportovat-v-ostrave-pruvodce)
+- [Třinec — kompletní průvodce](/blog/kde-sportovat-v-trinci-pruvodce)
+- [Havířov — kompletní průvodce](/blog/kde-sportovat-v-havirove-pruvodce)
+- [Brno — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
+- [Praha — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)

@@ -211,3 +211,11 @@ Kompletní přehled najdete na:
 ---
 
 Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.
+
+## Průvodci dalšími městy
+
+- [Ostrava — kompletní průvodce](/blog/kde-sportovat-v-ostrave-pruvodce)
+- [Frýdek-Místek — kompletní průvodce](/blog/kde-sportovat-ve-frydku-mistku-pruvodce)
+- [Opava — kompletní průvodce](/blog/kde-sportovat-v-opave-pruvodce)
+- [Brno — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
+- [Praha — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)

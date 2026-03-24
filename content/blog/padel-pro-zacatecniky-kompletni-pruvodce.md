@@ -180,3 +180,11 @@ Kompletní přehled najdete na:
 ---
 
 Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [7 sportů za 7 dní](/blog/7-sportu-za-7-dni-vyzva)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+- [Padel vs tenis — co je lepší pro vás](/blog/padel-vs-tenis-co-je-lepsi-pro-vas) | [Padel boom 2026](/blog/padel-boom-cesko-2026-kam-hrat-mimo-prahu)

@@ -179,3 +179,11 @@ Na hraju.cz můžete vyhledávat badmintonové kurty podle města a porovnat cen
 3. **Nehrajte sami proti sobě.** Najděte partnera na podobné úrovni. Na hraju.cz můžete najít spoluhráče ve svém městě.
 4. **Zaměřte se na přesnost, ne na sílu.** Umístěný clear je lepší než divoký smash do sítě.
 5. **Pijte dost vody.** Badminton je aerobně náročný — mějte lahev na lavičce.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [7 sportů za 7 dní](/blog/7-sportu-za-7-dni-vyzva)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+- [Squash vs badminton — srovnání](/blog/squash-vs-badminton) | [Badmintonové haly v Praze a Brně](/blog/badmintonove-haly-v-praze-a-brne)

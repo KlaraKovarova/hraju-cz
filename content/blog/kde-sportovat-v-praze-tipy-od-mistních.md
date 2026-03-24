@@ -99,3 +99,11 @@ Máte vlastní tip na skvělé sportoviště v Praze? Sdílejte ho s komunitou! 
 
 [Přihlaste se](/prihlaseni) a napište svůj tip.
 
+## Průvodci dalšími městy
+
+- [Brno — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
+- [Ostrava — kompletní průvodce](/blog/kde-sportovat-v-ostrave-pruvodce)
+- [Plzeň — kompletní průvodce](/blog/kde-sportovat-v-plzni-pruvodce)
+- [Olomouc — kompletní průvodce](/blog/kde-sportovat-v-olomouci-pruvodce)
+- [Liberec — kompletní průvodce](/blog/kde-sportovat-v-liberci-pruvodce)
+

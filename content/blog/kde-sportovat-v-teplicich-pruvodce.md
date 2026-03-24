@@ -296,3 +296,11 @@ Kompletní přehled najdete na:
 ---
 
 Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.
+
+## Průvodci dalšími městy
+
+- [Ústí nad Labem — kompletní průvodce](/blog/kde-sportovat-v-usti-nad-labem-pruvodce)
+- [Most — kompletní průvodce](/blog/kde-sportovat-v-moste-pruvodce)
+- [Chomutov — kompletní průvodce](/blog/kde-sportovat-v-chomutove-pruvodce)
+- [Praha — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)
+- [Liberec — kompletní průvodce](/blog/kde-sportovat-v-liberci-pruvodce)

@@ -169,3 +169,11 @@ Nejtěžší úder v tenise — ale bez něj nemůžete hrát.
 ## Najděte tenisový areál poblíž
 
 Kompletní seznam tenisových areálů v Česku najdete na [hraju.cz/sport/tenis](https://hraju.cz/sport/tenis). Přečtěte si recenze od ostatních hráčů — zjistěte, které areály mají nejlepší stav kurtů, trenéry a atmosféru.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [7 sportů za 7 dní](/blog/7-sportu-za-7-dni-vyzva)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+- [Kde hrát tenis v Brně](/blog/kde-hrat-tenis-v-brne) | [Tenis v Praze](/blog/tenis-v-praze-pruvodce)

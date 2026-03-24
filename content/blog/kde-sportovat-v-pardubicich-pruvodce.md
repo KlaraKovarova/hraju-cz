@@ -243,3 +243,11 @@ I když nejde o typické sportoviště, návštěva dostihového dne je pardubic
 ## Najděte sportoviště v Pardubicích
 
 Kompletní přehled sportovišť v Pardubicích najdete na [hraju.cz](https://hraju.cz). Přečtěte si recenze od ostatních sportovců a pomáhejte budovat sportovní komunitu ve vašem městě.
+
+## Průvodci dalšími městy
+
+- [Praha — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)
+- [Brno — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
+- [Ostrava — kompletní průvodce](/blog/kde-sportovat-v-ostrave-pruvodce)
+- [Plzeň — kompletní průvodce](/blog/kde-sportovat-v-plzni-pruvodce)
+- [Olomouc — kompletní průvodce](/blog/kde-sportovat-v-olomouci-pruvodce)

@@ -231,3 +231,11 @@ Kompletní přehled najdete na:
 ---
 
 Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.
+
+## Průvodci dalšími městy
+
+- [Olomouc — kompletní průvodce](/blog/kde-sportovat-v-olomouci-pruvodce)
+- [Přerov — kompletní průvodce](/blog/kde-sportovat-v-prerove-pruvodce)
+- [Brno — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
+- [Zlín — kompletní průvodce](/blog/kde-sportovat-ve-zline-pruvodce)
+- [Praha — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)

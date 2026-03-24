@@ -229,3 +229,11 @@ Kompletní přehled najdete na:
 ---
 
 Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviště, které znáte, a pomozte ostatním sportovcům.
+
+## Průvodci dalšími městy
+
+- [Praha — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)
+- [Liberec — kompletní průvodce](/blog/kde-sportovat-v-liberci-pruvodce)
+- [Hradec Králové — kompletní průvodce](/blog/kde-sportovat-v-hradci-kralove)
+- [Brno — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
+- [Pardubice — kompletní průvodce](/blog/kde-sportovat-v-pardubicich-pruvodce)
