@@ -184,3 +184,12 @@ Regenerace = 50 % spánek + 30 % výživa + 20 % aktivní zotavení.
 - Při **chronické únavě** nebo zhoršujícím se výkonu — může jít o nedostatek železa, vitamínu D nebo přetrénování
 
 Najděte sportoviště ve vašem městě na hraju.cz — od posiloven přes bazény po atletické dráhy. A nezapomeňte: nejlepší tréninkový plán je k ničemu bez správné výživy!
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

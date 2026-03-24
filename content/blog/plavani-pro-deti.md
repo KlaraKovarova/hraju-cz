@@ -79,3 +79,12 @@ Chcete, aby dítě mělo z plavání radost? Dodržujte tato pravidla:
 5. **Trpělivost se strachem** — strach z vody je normální a překonatelný
 
 Plavání je investice do zdraví a bezpečnosti vašeho dítěte. Na [hraju.cz](/sport/plavani) najdete přehled 322 bazénů a plaveckých areálů v Česku, kde můžete začít.
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

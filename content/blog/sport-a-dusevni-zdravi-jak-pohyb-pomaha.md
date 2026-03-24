@@ -120,3 +120,12 @@ Sport pomáhá — ale u závažných stavů potřebujete profesionální podpor
 Nemusíte se přihlásit do posilovny ani koupit vybavení. Stačí 20minutová procházka. Zítra přidejte 5 minut. Za týden zkuste nový sport.
 
 Na hraju.cz najdete sportoviště ve svém městě — vyberte si aktivitu, která vás láká, a udělejte první krok pro své tělo i mysl.
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

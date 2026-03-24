@@ -91,3 +91,12 @@ Procházíme recenze na sportovních portálech, Google Maps a sociálních sít
 ## Víte o skvělém sportovišti?
 
 Tento přehled tvoříme i díky vám. Pokud znáte místo, které si zaslouží pozornost, [ohodnoťte ho na hraju.cz](/) a dejte nám vědět. Nejlépe hodnocená sportoviště se objeví v dubnovém přehledu.
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

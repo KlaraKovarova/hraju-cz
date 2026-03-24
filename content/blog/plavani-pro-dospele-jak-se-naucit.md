@@ -161,3 +161,12 @@ Většina městských bazénů v Česku nabízí kurzy plavání pro dospělé:
 ## Najděte bazén poblíž
 
 Najděte plavecké bazény ve vašem městě na [hraju.cz/sport/plavani](https://hraju.cz/sport/plavani). Přečtěte si recenze od ostatních plavců — zjistěte, které bazény mají nejlepší dráhy, nejčistší vodu a nejpříjemnější personál.
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
