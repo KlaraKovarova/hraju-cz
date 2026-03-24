@@ -51,3 +51,9 @@ Než se zapíšete do nového fitness centra, zvažte tyto faktory:
 
 Kompletní přehled fitness center najdete na [hraju.cz/sport/fitness](/sport/fitness).
 
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+

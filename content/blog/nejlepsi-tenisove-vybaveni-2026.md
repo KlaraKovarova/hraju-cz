@@ -95,3 +95,9 @@ Za méně než 5 000 Kč se dostanete na kurt se slušným vybavením. A nezapom
 ## Kde hrát tenis v Česku
 
 Na [hraju.cz](/sport/tenis) najdete přes **1 000 tenisových zařízení** po celé České republice. Filtrujte podle města, podívejte se na ceníky a najděte kurt nejblíž vašemu domovu. Sezóna 2026 začíná — je čas vzít raketu do ruky.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

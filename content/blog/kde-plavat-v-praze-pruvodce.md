@@ -205,3 +205,9 @@ Kompletní přehled všech 38 plaveckých zařízení v Praze najdete na [hraju.
 ## Máte oblíbený bazén v Praze?
 
 Pomozte ostatním plavcům — [napište recenzi](/prihlaseni) svého oblíbeného bazénu a ohodnoťte zázemí, čistotu a poměr ceny a kvality. Každá recenze pomáhá komunitě vybrat to nejlepší místo.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

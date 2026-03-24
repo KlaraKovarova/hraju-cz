@@ -46,3 +46,9 @@ Tip: Mnoho sportovišť nabízí zvýhodněné permanentky pro pravidelné hrá�
 ## Hrajete tenis v Praze?
 
 Chybí tu váš oblíbený kurt nebo chcete doporučit místo ostatním hráčům? [Ohodnoťte sportoviště](/prihlaseni), kde pravidelně hrajete.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

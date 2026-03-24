@@ -166,3 +166,9 @@ Mnoho hráčů dělá oba sporty — tenis v singlu pro kondici, padel s přáte
 ## Najděte kurt poblíž
 
 Najděte tenisové kurty i padel centra ve vašem městě na [hraju.cz](https://hraju.cz). Přečtěte si recenze od hráčů a vyberte kurt, který vám sedne.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

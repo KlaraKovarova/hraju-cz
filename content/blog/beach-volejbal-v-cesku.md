@@ -104,3 +104,9 @@ Ceny indoor kurtů bývají vyšší (700 — 1 200 Kč/hod), ale umožňují tr
 ## Najděte beach volejbalové hřiště
 
 Hledáte kurt ve svém okolí? Na [hraju.cz/sport/volejbal](/sport/volejbal) najdete přehled 101 volejbalových areálů po celém Česku. Sežeňte parťáka a vyražte na písek.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

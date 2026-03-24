@@ -143,3 +143,9 @@ Nejpopulárnější halový sport v Česku. Pravidelné amatérské ligy, krouž
 ## Najděte sportoviště poblíž
 
 Kompletní přehled halových sportovišť ve vašem městě najdete na [hraju.cz](https://hraju.cz). Přečtěte si recenze od ostatních sportovců — zjistíte, které sportoviště stojí za návštěvu, ještě než tam vyrazíte.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

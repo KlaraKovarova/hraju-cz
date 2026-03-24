@@ -195,3 +195,9 @@ Dnes patří mezi české špičky **Lubomír Jančařík** (světový žebří�
 ## Hrajete stolní tenis v Praze?
 
 Podělte se o svou zkušenost — [napište recenzi](/prihlaseni) svého oblíbeného místa na ping pong. Pomůžete ostatním hráčům najít ten správný stůl, ať už trénují na turnaj nebo si chtějí jen zahrát v parku.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

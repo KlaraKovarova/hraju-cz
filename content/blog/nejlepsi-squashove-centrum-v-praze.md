@@ -94,3 +94,9 @@ Více o tom, jak začít se squashem, najdete v našem článku [Squash pro zač
 Chcete squash vyzkoušet bez velkých investic? Většina center nabízí půjčení rakety za 50–100 Kč. Pozvěte kamaráda, zarezervujte kurt na hodinu a uvidíte, jestli vás to chytne. Squash je jeden z nejintenzivnějších sportů — za hodinu hry spálíte 500–800 kalorií.
 
 Najděte squashové centrum ve vašem okolí na [hraju.cz/sport/squash](/sport/squash) — máme přehled 215 center po celém Česku.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

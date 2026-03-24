@@ -108,3 +108,9 @@ V Liberci zatím chybí dedikované padelové centrum — ale zájem roste. Sled
 ## Padel kurty v ČR — kompletní přehled
 
 Na [hraju.cz/sport/padel](/sport/padel) najdete aktuální přehled všech padelových kurtů v České republice. Filtrujte podle města, porovnejte ceny a přečtěte si recenze od ostatních hráčů.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

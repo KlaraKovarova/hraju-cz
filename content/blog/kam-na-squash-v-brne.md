@@ -51,3 +51,9 @@ Hledáte squash v přírodě? [Tenis U Lomu](/squash/tenis-u-lomu) nabízí kurt
 
 Všechna squashová centra v Brně najdete na [hraju.cz/sport/squash](/sport/squash).
 
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+

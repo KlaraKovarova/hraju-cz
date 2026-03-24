@@ -127,3 +127,9 @@ Na [hraju.cz/sport/fitness](/sport/fitness) najdete přes **2 000 fitness center
 Cvičíte v posilovně nebo doma? **Sdílejte svou zkušenost** — vaše recenze pomůže ostatním rozhodnout se.
 
 [Napsat recenzi →](/prihlaseni)
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

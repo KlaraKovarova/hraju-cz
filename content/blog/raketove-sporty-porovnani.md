@@ -195,3 +195,9 @@ Kombinace sportů má výhody: squash zlepšuje reakce, které využijete v teni
 Ať už si vyberete jakýkoli sport, na [hraju.cz](https://hraju.cz) najdete sportoviště ve vašem městě. Podívejte se na recenze od ostatních hráčů a najděte místo, které vám sedne.
 
 A až vyzkoušíte první hodinu? Napište recenzi — pomůžete ostatním sportovním nadšencům vybrat si to správné místo.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

@@ -61,3 +61,9 @@ V naší databázi evidujeme 10 lezeckých center v Praze a celkem 12 po celé r
 ## Lezete pravidelně?
 
 Která stěna nebo boulderovka je vaše oblíbená? [Ohodnoťte ji](/prihlaseni) a pomozte dalším lezcům vybrat to správné centrum pro svůj level.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

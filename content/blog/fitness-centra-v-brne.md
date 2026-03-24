@@ -104,3 +104,9 @@ Brno nabízí fitness centrum pro každý styl tréninku i rozpočet. Od nonstop
 
 Hledáte fitness centrum v Brně? Na [hraju.cz](/sport/fitness) najdete kompletní přehled s cenami a kontakty.
 
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+

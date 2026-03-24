@@ -46,3 +46,9 @@ Kompletní přehled bazénů najdete na [hraju.cz/sport/plavani](/sport/plavani)
 ## Plavete v Brně pravidelně?
 
 Máte oblíbený bazén, který tu chybí? [Přidejte hodnocení](/prihlaseni) a pomozte ostatním plavcům vybrat to nejlepší místo pro trénink.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

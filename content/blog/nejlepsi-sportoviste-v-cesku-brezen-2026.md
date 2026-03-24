@@ -74,3 +74,9 @@ Každá recenze pomáhá — ať už je pozitivní nebo kritická. Vaše zkušen
 **[Napište recenzi svého oblíbeného sportoviště →](/prihlaseni)**
 
 Nejlépe hodnocená sportoviště z vašich recenzí budou v příštím měsíčním přehledu. Budeme rádi, když se zapojíte.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

@@ -127,3 +127,9 @@ Pokud odpovíte „ano" na většinu, máte svou posilovnu.
 ## Najděte fitness centrum poblíž
 
 Přehled posiloven a fitness center ve vašem městě najdete na [hraju.cz/sport/fitness](https://hraju.cz/sport/fitness). Přečtěte si recenze od ostatních sportovců — zjistíte, co vás čeká, ještě než tam vyrazíte.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

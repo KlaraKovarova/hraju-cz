@@ -70,3 +70,9 @@ Cena skupinové lekce se pohybuje od **150 Kč/osobu**, individuální trénink 
 Brno nabízí tenisové kurty pro každý rozpočet i úroveň. Ať už chcete rekreačně odpalit míčky o víkendu nebo se připravujete na turnaj, v moravské metropoli najdete ideální zázemí.
 
 Hledáte konkrétní tenisový areál v Brně? Na [hraju.cz/sport/tenis](/sport/tenis) najdete kompletní přehled všech 1 021 tenisových zařízení v Česku.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

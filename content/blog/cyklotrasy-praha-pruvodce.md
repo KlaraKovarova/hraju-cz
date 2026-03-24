@@ -179,3 +179,9 @@ Máte oblíbenou trasu, která tu chybí? [Napište recenzi](/prihlaseni) na spo
 Teprve s cyklistikou začínáte? Přečtěte si [kompletní průvodce cyklistikou pro začátečníky](/blog/cyklistika-pro-zacatecniky-kompletni-pruvodce) — výběr kola, základní údržba a tréninkový plán.
 
 Všechna sportoviště v Praze najdete na [hraju.cz](/sport). Další tipy od místních sportovců v [průvodci sportem v Praze](/blog/kde-sportovat-v-praze-tipy-od-mistních).
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

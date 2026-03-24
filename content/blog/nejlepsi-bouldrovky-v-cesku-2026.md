@@ -243,3 +243,9 @@ Podrobný průvodce pro začátečníky najdete v našem článku [Jak začít s
 Kompletní přehled lezeckých stěn a boulderovek po celém Česku najdete na [hraju.cz/sport/lezeni](https://hraju.cz/sport/lezeni). Podívejte se na recenze od ostatních lezců a najděte stěnu, která vám sedne.
 
 Už jste někde lezli? Napište recenzi a pomozte ostatním vybrat si to pravé centrum.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

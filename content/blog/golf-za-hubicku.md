@@ -106,3 +106,9 @@ To je srovnatelné s fitness centrem nebo squashem.
 
 Kompletní přehled golfových hřišť, driving range a kurzů najdete na [hraju.cz v sekci golf](/sport/golf).
 
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+

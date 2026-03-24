@@ -74,3 +74,9 @@ Najděte volejbalové sportoviště ve vašem okolí na [hraju.cz/sport/volejbal
 ---
 
 Znáte volejbalovou halu, která v našem přehledu chybí? Dejte nám vědět — pomůžete tak i ostatním hráčům najít nové místo na hru.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

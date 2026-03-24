@@ -81,3 +81,9 @@ Celkový přehled fitness center v celém Česku najdete na [hraju.cz/sport/fitn
 ---
 
 Hledáte konkrétní typ cvičení? Filtrujte fitness centra ve vašem okolí na [hraju.cz](/sport/fitness) a najděte to, co vám sedne.
+
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)

@@ -125,3 +125,9 @@ Cvičení je jen polovina úspěchu. Základní výživová doporučení:
 
 Hledáte fitness centrum poblíž? Na [hraju.cz](/sport/fitness) najdete přehled posiloven a fitness studií v celém Česku — s cenami a kontakty.
 
+## Zapojte se do komunity
+
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+
