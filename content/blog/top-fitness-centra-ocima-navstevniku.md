@@ -86,13 +86,25 @@ Naši uživatelé při hodnocení nejčastěji zmiňují:
 4. **Skupinové lekce** — rozvrh a kvalita lektorů
 5. **Poměr cena/kvalita** — drahé neznamená dobré
 
-**Začínáte s fitness?** Přečtěte si [průvodce posilovnou pro začátečníky](/blog/posilovna-pro-zacatecniky-kompletni-pruvodce) nebo [jak vybrat posilovnu](/blog/jak-vybrat-posilovnu-pruvodce).
+## Jak si vybrat fitness centrum
 
-Kompletní přehled fitness center najdete na [hraju.cz/sport/fitness](/sport/fitness).
+Nevíte, které centrum vyzkoušet? Tři kroky:
+
+1. **Filtrujte podle lokality** — na [hraju.cz/sport/fitness](/sport/fitness) najdete centra ve vašem okolí
+2. **Přečtěte si recenze** — konkrétní zkušenosti od návštěvníků prozradí víc než web centra
+3. **Využijte zkušební vstup** — většina center ho nabízí zdarma nebo za zvýhodněnou cenu
+
+Po návštěvě nezapomeňte kliknout [„Byl/a jsem tady"](/blog/check-iny-na-hraju-cz-pruvodce) a zanechat [recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem.
+
+**Začínáte s fitness?** Přečtěte si [průvodce posilovnou pro začátečníky](/blog/posilovna-pro-zacatecniky-kompletni-pruvodce) nebo [jak vybrat posilovnu](/blog/jak-vybrat-posilovnu-pruvodce).
 
 ## Zapojte se do komunity
 
-- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky
-- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+- [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+- [Fitness centra v Praze — průvodce výběrem](/blog/fitness-centra-v-praze-pruvodce)
 

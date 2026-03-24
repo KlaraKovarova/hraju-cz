@@ -47,14 +47,30 @@ Na hraju.cz si můžete ke každému sportovišti přidat vlastní hodnocení a 
 - Poměr cena/kvalita
 - Aktuální stav sportoviště
 
-## Tip na závěr
+## Kontrolní seznam před výběrem
 
-Než se rozhodnete pro dlouhodobé členství nebo permanentku, vyzkoušejte jednorázový vstup. Většina sportovních center ho nabízí a vy si ověříte, zda vám prostředí vyhovuje.
+Než se rozhodnete, projděte si tento rychlý checklist:
 
-V naší databázi najdete přes 8 900 sportovišť ve více než 2 000 městech po celé České republice. Vyberte si sport a město na [hraju.cz](/) a začněte hledat.
+| Kritérium | Na co se ptát |
+|---|---|
+| Vzdálenost | Do 20 minut od domova/práce? |
+| Zkušební vstup | Nabízí jednorázový vstup nebo trial? |
+| Smlouva | Vyžadují dlouhodobý závazek? |
+| Špička | Jak vytížené je v 17:00–19:00? |
+| Čistota | Jaký je stav šaten a sprch? |
+| Recenze | Co říkají [recenze na hraju.cz](/recenze)? |
 
----
+**Tip:** Než se rozhodnete pro dlouhodobé členství nebo permanentku, vyzkoušejte jednorázový vstup. Většina sportovních center ho nabízí a vy si ověříte, zda vám prostředí vyhovuje.
 
-## Pomozte nám zmapovat sportoviště
+## Jak vám pomůže komunita hraju.cz
 
-Znáte sportoviště, které v naší databázi chybí, nebo chcete ohodnotit místo, kde pravidelně sportujete? [Přidejte hodnocení](/prihlaseni) a pomozte vybudovat nejlepšího průvodce sportem v Česku.
+V naší databázi najdete přes **5 700 sportovišť** po celé České republice. U každého si můžete přečíst recenze od ostatních sportovců, prohlédnout [fotky od návštěvníků](/blog/fotky-k-recenzim-a-check-inum-pruvodce) a zkontrolovat [check-iny](/blog/check-iny-na-hraju-cz-pruvodce) — aktivní check-iny znamenají, že sportoviště žije.
+
+Vyberte si sport a město na [hraju.cz](/) a začněte hledat.
+
+## Zapojte se
+
+- [Jak napsat užitečnou recenzi sportoviště](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Nejlepší sportoviště v Česku — jak poznat kvalitu](/blog/nejlepsi-sportoviste-v-cesku-podle-hodnoceni)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

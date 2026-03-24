@@ -53,13 +53,17 @@ Každé hodnocení, které na hraju.cz zanecháte, pomáhá:
 - **Sportovištím** získat zpětnou vazbu a zlepšit se
 - **Celé komunitě** růst a vytvářet lepší sportovní prostředí
 
-[Přihlaste se](/prihlaseni) a napište svou první recenzi.
+[Přihlaste se](/prihlaseni) a napište svou první recenzi. Za 5 recenzí za sezónu získáte [odznak Recenzent sezóny](/blog/odznaky-na-hraju-cz-jak-je-sbirat) a postoupíte na [žebříčku recenzentů](/blog/zebricek-recenzentu-hraju-cz).
 
-## Průvodci po městech
+**Tip:** K recenzi můžete přidat až [3 fotky](/blog/fotky-k-recenzim-a-check-inum-pruvodce) — fotky od skutečných návštěvníků jsou nejcennějším zdrojem informací.
+
+## Průvodci a komunita
 
 - [Kde sportovat v Praze — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)
 - [Kde sportovat v Brně](/blog/kde-sportovat-v-brne-pruvodce)
 - [Kde sportovat v Ostravě](/blog/kde-sportovat-v-ostrave-pruvodce)
 - [Jak napsat užitečnou recenzi sportoviště](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Nejlepší sportoviště podle hodnocení](/blog/nejlepsi-sportoviste-v-cesku-podle-hodnoceni)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 

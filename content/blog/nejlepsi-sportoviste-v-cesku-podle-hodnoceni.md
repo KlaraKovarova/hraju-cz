@@ -7,7 +7,7 @@ sportTags: ["tenis", "squash", "badminton", "fitness", "plavani", "golf"]
 image: /images/blog/nejlepsi-sportoviste-v-cesku-podle-hodnoceni.jpg
 ---
 
-Na hraju.cz evidujeme přes **3 000 sportovních zařízení** po celém Česku. Ale ne všechna jsou stejně kvalitní. Jak poznat ta nejlepší, aniž byste je museli všechna osobně navštívit?
+Na hraju.cz evidujeme přes **5 700 sportovních zařízení** po celém Česku. Ale ne všechna jsou stejně kvalitní. Jak poznat ta nejlepší, aniž byste je museli všechna osobně navštívit? Sestavili jsme průvodce, který vám pomůže orientovat se v recenzích a hodnoceních — a vybrat sportoviště, kam se budete rádi vracet.
 
 ## 5 kritérií kvality sportoviště
 
@@ -63,9 +63,27 @@ Při čtení recenzí sportoviště se zaměřte na:
 
 4. **Rovnováhu.** Žádné sportoviště není dokonalé. Podezřelé jsou jak samé pětky, tak samé jedničky.
 
+## Jak poznat kvalitní sportoviště online
+
+Než se někam vydáte, zkuste tyto kroky:
+
+1. **Najděte sportoviště** na [hraju.cz](/) — filtrujte podle sportu a města
+2. **Přečtěte si recenze** — zaměřte se na konkrétní zkušenosti, ne jen hvězdičky
+3. **Podívejte se na fotky** — [fotky od návštěvníků](/blog/fotky-k-recenzim-a-check-inum-pruvodce) prozradí víc než oficiální galerie
+4. **Zkontrolujte check-iny** — místa s pravidelnými [check-iny](/blog/check-iny-na-hraju-cz-pruvodce) naznačují aktivní komunitu
+
 ## Jak můžete pomoci
 
 Každá vaše recenze pomáhá ostatním sportovním nadšencům. Stačí pár vět o tom, co vás zaujalo — pozitivně i negativně. Čím víc recenzí máme, tím lépe můžeme doporučovat kvalitní sportoviště.
 
+**Tip pro recenzenty:** Za 5 a více recenzí za sezónu získáte [odznak Recenzent sezóny](/blog/odznaky-na-hraju-cz-jak-je-sbirat) a postoupíte na [žebříčku recenzentů](/blog/zebricek-recenzentu-hraju-cz).
+
 Najděte sportoviště ve vašem okolí na [hraju.cz](/) a sdílejte své zkušenosti.
+
+## Zapojte se do komunity
+
+- [Jak napsat užitečnou recenzi sportoviště](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Check-iny — budujte si mapu zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 
