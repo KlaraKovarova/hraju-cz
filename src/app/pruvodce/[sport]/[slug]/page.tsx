@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MapPin, ChevronRight, Star, Trophy, ArrowLeft } from "lucide-react";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
 import { getRegionBySlug } from "@/lib/regions";
+import { getPostsBySport } from "@/lib/blog";
 import {
   getGuideFacilitiesByRegion,
   getGuideBestRatedFacilities,
@@ -12,6 +13,7 @@ import {
 } from "@/lib/data";
 import { getSportFacilityTypePluralGenitive } from "@/lib/seo";
 import { getGuideBySlug, getAllGuideSlugs } from "@/lib/guides";
+import Image from "next/image";
 import { FacilityCard } from "@/components/FacilityCard";
 import { FacilityMap } from "@/components/FacilityMap";
 import { AdSlot } from "@/components/AdSlot";
@@ -85,6 +87,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
   const facilities = await getGuideFacilities(sportSlug, guide.type, guide.regionSlug);
   const facilityType = getSportFacilityTypePluralGenitive(sportSlug);
   const mapMarkers = getGuideMapMarkers(facilities, sportSlug);
+  const guideBlogPosts = getPostsBySport(sportSlug).slice(0, 3);
 
   const heading = guide.heading(sport.nameCs);
   const intro = guide.intro(sport.nameCs, facilityType, facilities.length);
@@ -240,6 +243,56 @@ export default async function GuidePage({ params }: GuidePageProps) {
             </p>
           )}
         </section>
+
+        {/* Related Blog Posts */}
+        {guideBlogPosts.length > 0 && (
+          <section className="mt-12 border-t border-zinc-100 pt-8">
+            <h2 className="mb-4 text-lg font-bold text-zinc-900">
+              Články o {sport.nameCs.toLowerCase()}
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {guideBlogPosts.map((p) => (
+                <Link
+                  key={p.slug}
+                  href={`/blog/${p.slug}`}
+                  className="group overflow-hidden rounded-2xl border border-zinc-100 bg-white transition hover:border-zinc-200 hover:shadow-md"
+                >
+                  {p.image && (
+                    <div className="relative aspect-[16/9] w-full">
+                      <Image
+                        src={p.image}
+                        alt={p.title}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                        sizes="(max-width: 640px) 100vw, 33vw"
+                      />
+                    </div>
+                  )}
+                  <div className="p-4">
+                    <p className="font-bold text-zinc-900 group-hover:text-emerald-700">
+                      {p.title}
+                    </p>
+                    <p className="mt-1 text-xs text-zinc-400">
+                      {new Date(p.date).toLocaleDateString("cs-CZ", {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric",
+                      })}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <p className="mt-4 text-right">
+              <Link
+                href={`/blog/sport/${sportSlug}`}
+                className="text-sm font-medium text-emerald-600 hover:text-emerald-700"
+              >
+                Všechny články o {sport.nameCs.toLowerCase()} &rarr;
+              </Link>
+            </p>
+          </section>
+        )}
 
         {/* Cross-links to other guides */}
         <section className="mt-12 border-t border-zinc-100 pt-8">

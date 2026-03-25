@@ -17,7 +17,8 @@ import {
 import { getSportBySlug, isSportClaimable } from "@/lib/sports";
 import { getFacilityBySlug, getInactiveFacilityRedirectInfo, getFacilitiesByCityAndSport, getRelatedFacilities, type NearbyFacility } from "@/lib/data";
 import { getPostsBySport } from "@/lib/blog";
-import { getRegionByName, cityToSlug } from "@/lib/regions";
+import { getRegionByName, cityToSlug, getRegionSlug } from "@/lib/regions";
+import { getGuideBySlug } from "@/lib/guides";
 import { getSportFacilityType, getSportFacilityTypePluralGenitive } from "@/lib/seo";
 import { getCityInPhrase } from "@/lib/locative";
 import EditSuggestionForm from "@/components/EditSuggestionForm";
@@ -845,6 +846,17 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                     {sport.nameCs} v celé ČR
                   </Link>
                 </li>
+                {regionInfo && getGuideBySlug(sportSlug, `nejlepsi-v-${regionInfo.slug}`) && (
+                  <li>
+                    <Link
+                      href={`/pruvodce/${sportSlug}/nejlepsi-v-${regionInfo.slug}`}
+                      className="flex items-center gap-2 text-sm font-medium text-emerald-600 hover:text-emerald-700"
+                    >
+                      <ChevronRight className="h-4 w-4" />
+                      Průvodce: {sport.nameCs} v {regionInfo.name.replace(" kraj", "").replace("Kraj ", "")}
+                    </Link>
+                  </li>
+                )}
               </ul>
             </div>
 

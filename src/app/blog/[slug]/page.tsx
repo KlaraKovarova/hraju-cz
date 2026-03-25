@@ -7,6 +7,7 @@ import remarkGfm from "remark-gfm";
 import { getPostBySlug, getAllPosts, getPostsBySport, CATEGORIES } from "@/lib/blog";
 import { getTopFacilitiesBySport } from "@/lib/data";
 import { getSportBySlug } from "@/lib/sports";
+import { getGuideDefinitions } from "@/lib/guides";
 import { SocialShareBar } from "@/components/SocialShareBar";
 import { BlogReviewCTA } from "@/components/BlogReviewCTA";
 import { AdSlot } from "@/components/AdSlot";
@@ -232,17 +233,54 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         {/* Sport tags */}
         {post.sportTags.length > 0 && (
           <div className="mt-8 flex flex-wrap gap-2 border-t border-zinc-100 pt-6">
-            {post.sportTags.map((tag) => (
-              <Link
-                key={tag}
-                href={`/sport/${tag}`}
-                className="rounded-full bg-zinc-100 px-3 py-1 text-sm font-medium text-zinc-600 transition hover:bg-zinc-200"
-              >
-                {tag}
-              </Link>
-            ))}
+            {post.sportTags.map((tag) => {
+              const tagSport = getSportBySlug(tag);
+              return (
+                <Link
+                  key={tag}
+                  href={`/sport/${tag}`}
+                  className="flex items-center gap-1.5 rounded-full bg-zinc-100 px-3 py-1 text-sm font-medium text-zinc-600 transition hover:bg-zinc-200"
+                >
+                  {tagSport && <span>{tagSport.icon}</span>}
+                  {tagSport?.nameCs ?? tag}
+                </Link>
+              );
+            })}
           </div>
         )}
+
+        {/* Guide links */}
+        {post.sportTags.length > 0 && (() => {
+          const guideLinks = post.sportTags.flatMap((tag) => {
+            const tagSport = getSportBySlug(tag);
+            if (!tagSport) return [];
+            const guides = getGuideDefinitions(tag);
+            const bestRated = guides.find((g) => g.type === "nejlepe-hodnocene");
+            const beginner = guides.find((g) => g.type === "pro-zacatecniky");
+            const links = [];
+            if (bestRated) links.push({ href: `/pruvodce/${tag}/${bestRated.slug}`, label: bestRated.heading(tagSport.nameCs), icon: tagSport.icon });
+            if (beginner) links.push({ href: `/pruvodce/${tag}/${beginner.slug}`, label: beginner.heading(tagSport.nameCs), icon: tagSport.icon });
+            return links;
+          });
+          if (guideLinks.length === 0) return null;
+          return (
+            <div className="mt-6 rounded-xl border border-emerald-100 bg-emerald-50/50 p-4">
+              <p className="mb-2 text-xs font-semibold text-emerald-700">Průvodce</p>
+              <div className="flex flex-wrap gap-2">
+                {guideLinks.map((gl) => (
+                  <Link
+                    key={gl.href}
+                    href={gl.href}
+                    className="inline-flex items-center gap-1.5 rounded-lg bg-white border border-emerald-100 px-3 py-1.5 text-sm font-medium text-emerald-700 transition hover:bg-emerald-50 hover:border-emerald-200"
+                  >
+                    <span>{gl.icon}</span>
+                    {gl.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          );
+        })()}
 
         {/* Related Facilities */}
         {relatedFacilities.length > 0 && (
