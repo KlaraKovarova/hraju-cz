@@ -31,6 +31,30 @@ Zatím jde o první fázi obnovy, která se zaměřuje na zprovoznění vodní p
 
 Budeme sledovat, jak se projekt vyvíjí, a jakmile bude koupaliště v provozu, přidáme ho do naší databáze na [hraju.cz](/sport/plavani).
 
+## Přírodní vs. klasické koupaliště — jaký je rozdíl?
+
+Přírodní koupaliště fungují jinak než klasické bazény s chlórem:
+
+| | Přírodní koupaliště | Klasický bazén |
+|---|---|---|
+| **Čištění vody** | Biologické — rostliny a přírodní filtrace | Chemické — chlór, pH regulace |
+| **Teplota vody** | Závislá na počasí (17–25 °C) | Vyhřívaná (25–28 °C) |
+| **Provoz** | Léto (červen–září) | Celoročně (kryté bazény) |
+| **Cena vstupu** | Často nižší nebo zdarma | 80–200 Kč |
+| **Atmosféra** | Příroda, klid, tráva | Sportovní, regulované |
+
+Pro rodiny s dětmi jsou přírodní koupaliště skvělou alternativou — žádné štiplavé oči z chlóru, prostředí v přírodě a možnost kombinovat koupání s pikniky a procházkami.
+
+## Kam se koupat v okolí Benešova
+
+Než bystřické koupaliště otevře, tady jsou alternativy v regionu:
+
+- **Konopišťský rybník** — oblíbené přírodní koupání nedaleko zámku Konopiště
+- **Sázava** — řeka nabízí několik koupacích míst mezi Benešovem a Týncem
+- **Aquapark Čestlice** — nejbližší velký aquapark (30 min autem směr Praha)
+
+Kompletní přehled bazénů a koupališť najdete na [hraju.cz/sport/plavani](/sport/plavani).
+
 ---
 
 *Zdroj: Benešovský deník*
@@ -39,4 +63,10 @@ Budeme sledovat, jak se projekt vyvíjí, a jakmile bude koupaliště v provozu,
 
 ## Znáte koupaliště v okolí Benešova?
 
-Máte tip na přírodní koupaliště nebo bazén v regionu? [Podělte se o něj](/prihlaseni) a pomozte ostatním najít místo ke koupání na léto 2026.
+Máte tip na přírodní koupaliště nebo bazén v regionu? [Napište recenzi](/prihlaseni) a pomozte ostatním najít místo ke koupání na léto 2026. A pokud bystřické koupaliště navštívíte po otevření, nezapomeňte na [check-in „Byl/a jsem tady"](/komunita).
+
+### Další čtení
+
+- [Aquaparky v České republice — průvodce](/blog/aquaparky-v-ceske-republice)
+- [Bazény a aquaparky v Ostravě](/blog/bazeny-a-aquaparky-v-ostrave-pruvodce)
+- [Plavání pro děti — kdy začít a kam](/blog/plavani-pro-deti)
