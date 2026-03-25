@@ -19,7 +19,7 @@ interface Banner {
 }
 
 const PLACEMENTS = [
-  { value: "detail_sidebar", label: "Detail — sidebar (300x250)" },
+  { value: "detail_sidebar", label: "Detail — sidebar (300x600)" },
   { value: "listing_inline", label: "Listing — inline (728x90)" },
 ];
 

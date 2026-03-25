@@ -17,7 +17,7 @@ interface BannerSlotProps {
 }
 
 const SIZES = {
-  detail_sidebar: { width: 300, height: 250 },
+  detail_sidebar: { width: 300, height: 600 },
   listing_inline: { width: 728, height: 90 },
 };
 
