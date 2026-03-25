@@ -192,6 +192,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   });
   entries.push({
+    url: `${BASE_URL}/komunita`,
+    changeFrequency: "daily",
+    priority: 0.7,
+  });
+  entries.push({
     url: `${BASE_URL}/odkazy`,
     changeFrequency: "monthly",
     priority: 0.5,
