@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
   oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
   const oneWeekAgoStr = oneWeekAgo.toISOString().slice(0, 10);
 
-  // Find eligible users: non-seed, digest enabled, with 1+ check-in or review
+  // Find eligible users: non-seed, digest enabled, with 1+ check-in, review, or favorite
   const eligibleUsers = await prisma.user.findMany({
     where: {
       isSeed: false,
@@ -26,6 +26,7 @@ export async function POST(request: NextRequest) {
       OR: [
         { visits: { some: {} } },
         { reviews: { some: {} } },
+        { favorites: { some: {} } },
       ],
     },
     select: {
@@ -45,6 +46,16 @@ export async function POST(request: NextRequest) {
       reviews: {
         select: { facilityId: true },
         where: { isApproved: true },
+      },
+      favorites: {
+        select: {
+          facilityId: true,
+          facility: {
+            select: {
+              location: { select: { region: true } },
+            },
+          },
+        },
       },
     },
   });
@@ -124,11 +135,12 @@ export async function POST(request: NextRequest) {
 
   for (const user of eligibleUsers) {
     try {
-      // Collect facility IDs the user cares about
+      // Collect facility IDs the user cares about (visits, reviews, and favorites)
       const facilityIds = [
         ...new Set([
           ...user.visits.map((v) => v.facilityId),
           ...user.reviews.map((r) => r.facilityId),
+          ...user.favorites.map((f) => f.facilityId),
         ]),
       ];
 
@@ -160,9 +172,12 @@ export async function POST(request: NextRequest) {
           })
         : [];
 
-      // Get user's regions for event filtering
+      // Get user's regions for event filtering (from visits and favorites)
       const userRegions = [
-        ...new Set(user.visits.map((v) => v.facility.location.region).filter(Boolean)),
+        ...new Set([
+          ...user.visits.map((v) => v.facility.location.region),
+          ...user.favorites.map((f) => f.facility.location.region),
+        ].filter(Boolean)),
       ];
 
       // Filter events by user's regions (or show all if no region data)

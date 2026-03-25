@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Phone, ArrowRight, Clock } from "lucide-react";
+import { MapPin, Phone, ArrowRight, Clock, Lightbulb } from "lucide-react";
 import { StarRating } from "./StarRating";
 import type { FacilityWithDetails } from "@/lib/data";
 
@@ -69,6 +69,12 @@ export function FacilityCard({ facility, sportSlug, priority = false }: Facility
           )}
           {facility.averageRating != null && facility.reviewCount > 0 && (
             <StarRating rating={facility.averageRating} count={facility.reviewCount} />
+          )}
+          {facility.tipCount > 0 && (
+            <span className="flex items-center gap-1 text-xs text-amber-600">
+              <Lightbulb className="h-3 w-3" />
+              {facility.tipCount} {facility.tipCount === 1 ? "tip" : facility.tipCount >= 2 && facility.tipCount <= 4 ? "tipy" : "tipů"}
+            </span>
           )}
         </div>
       </div>

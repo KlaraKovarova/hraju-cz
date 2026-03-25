@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { getUserSession } from "@/lib/user-auth";
 import { prisma } from "@/lib/prisma";
+import { checkBadgesByCategory, getBadgeDefinition } from "@/lib/challenges";
+import { createFavoriteNotifications } from "@/lib/notifications";
 
 // POST — create check-in (idempotent)
 export async function POST(
@@ -70,7 +72,29 @@ export async function POST(
       },
     });
 
-    return NextResponse.json(visit, { status: 201 });
+    // Create in-app notifications for users who favorited this facility (fire-and-forget)
+    createFavoriteNotifications(
+      facilityId,
+      session.userId,
+      "checkin",
+      session.name || session.email.split("@")[0]
+    ).catch(() => {});
+
+    // Check for newly earned sport badges (fire-and-forget friendly)
+    let newBadges: { slug: string; name: string; emoji: string }[] = [];
+    try {
+      const earned = await checkBadgesByCategory(session.userId, "sport");
+      newBadges = earned
+        .map((slug) => {
+          const def = getBadgeDefinition(slug);
+          return def ? { slug: def.slug, name: def.name, emoji: def.emoji } : null;
+        })
+        .filter((b): b is { slug: string; name: string; emoji: string } => b !== null);
+    } catch {
+      // Badge check failure shouldn't block the check-in
+    }
+
+    return NextResponse.json({ ...visit, newBadges }, { status: 201 });
   } catch {
     return NextResponse.json({ error: "Database error" }, { status: 500 });
   }

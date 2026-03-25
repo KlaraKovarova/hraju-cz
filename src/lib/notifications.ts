@@ -36,7 +36,7 @@ export function buildUnsubscribeUrl(
 
 /**
  * Find users who should be notified about a new review on a facility.
- * Returns users who have checked in or reviewed the same facility,
+ * Returns users who have checked in, reviewed, or favorited the same facility,
  * excluding the review author and seed users.
  */
 export async function findUsersToNotifyAboutReview(
@@ -60,11 +60,18 @@ export async function findUsersToNotifyAboutReview(
     distinct: ["userId"],
   });
 
+  // Get users who favorited this facility
+  const favoriteUsers = await prisma.favorite.findMany({
+    where: { facilityId, userId: { not: excludeUserId } },
+    select: { userId: true },
+  });
+
   // Combine and deduplicate user IDs
   const userIds = [
     ...new Set([
       ...visitUsers.map((v) => v.userId),
       ...reviewUsers.filter((r) => r.userId !== null).map((r) => r.userId!),
+      ...favoriteUsers.map((f) => f.userId),
     ]),
   ].filter((id) => id !== excludeUserId);
 
@@ -78,5 +85,96 @@ export async function findUsersToNotifyAboutReview(
       isSeed: false,
     },
     select: { id: true, email: true, name: true },
+  });
+}
+
+/**
+ * Create in-app notifications for all users who favorited a facility.
+ * Excludes the actor (the user who performed the action) and seed users.
+ */
+export async function createFavoriteNotifications(
+  facilityId: string,
+  excludeUserId: string,
+  type: "review" | "checkin",
+  actorName: string | null
+): Promise<number> {
+  const favoriteUsers = await prisma.favorite.findMany({
+    where: {
+      facilityId,
+      userId: { not: excludeUserId },
+      user: { isSeed: false, emailNotifications: true },
+    },
+    select: { userId: true },
+  });
+
+  if (favoriteUsers.length === 0) return 0;
+
+  const result = await prisma.favoriteNotification.createMany({
+    data: favoriteUsers.map((f) => ({
+      userId: f.userId,
+      facilityId,
+      type,
+      actorName,
+    })),
+  });
+
+  return result.count;
+}
+
+/**
+ * Get unread notification count for a user.
+ */
+export async function getUnreadNotificationCount(
+  userId: string
+): Promise<number> {
+  return prisma.favoriteNotification.count({
+    where: { userId, isRead: false },
+  });
+}
+
+/**
+ * Get recent notifications for a user.
+ */
+export async function getUserNotifications(
+  userId: string,
+  limit = 20
+): Promise<
+  Array<{
+    id: string;
+    type: string;
+    actorName: string | null;
+    isRead: boolean;
+    createdAt: Date;
+    facility: { name: string; slug: string; sports: { sport: { slug: string } }[] };
+  }>
+> {
+  return prisma.favoriteNotification.findMany({
+    where: { userId },
+    orderBy: { createdAt: "desc" },
+    take: limit,
+    select: {
+      id: true,
+      type: true,
+      actorName: true,
+      isRead: true,
+      createdAt: true,
+      facility: {
+        select: {
+          name: true,
+          slug: true,
+          sports: { select: { sport: { select: { slug: true } } }, take: 1 },
+        },
+      },
+    },
+  });
+}
+
+/**
+ * Mark notifications as read for a user.
+ */
+export async function markNotificationsRead(userId: string): Promise<void> {
+  await prisma.favoriteNotification.updateMany({
+    where: { userId, isRead: false },
+    data: { isRead: true },
   });
 }

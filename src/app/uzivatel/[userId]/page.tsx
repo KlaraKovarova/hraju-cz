@@ -4,6 +4,7 @@ import { ChevronRight, Star, MessageSquare, Calendar, User, Award, MapPinCheck }
 import { prisma } from "@/lib/prisma";
 import { StarRating } from "@/components/StarRating";
 import { AdSlot } from "@/components/AdSlot";
+import { getUserBadges } from "@/lib/challenges";
 import type { Metadata } from "next";
 
 export const revalidate = 3600;
@@ -47,7 +48,7 @@ export default async function UserProfilePage({ params }: Props) {
 
   if (!user) notFound();
 
-  const [reviews, visitCount] = await Promise.all([
+  const [reviews, visitCount, earnedBadges] = await Promise.all([
     prisma.review.findMany({
       where: { userId: user.id, isApproved: true },
       orderBy: { createdAt: "desc" },
@@ -68,6 +69,7 @@ export default async function UserProfilePage({ params }: Props) {
       },
     }),
     prisma.visit.count({ where: { userId: user.id } }),
+    getUserBadges(user.id),
   ]);
 
   const displayName = user.name || "Sportovec";
@@ -81,14 +83,6 @@ export default async function UserProfilePage({ params }: Props) {
     month: "long",
     year: "numeric",
   });
-
-  const badges: { label: string; threshold: number; emoji: string }[] = [
-    { label: "Recenzent", threshold: 5, emoji: "🥉" },
-    { label: "Zkušený recenzent", threshold: 10, emoji: "🥈" },
-    { label: "Expert", threshold: 25, emoji: "🥇" },
-    { label: "Mistr recenzí", threshold: 50, emoji: "🏆" },
-  ];
-  const earnedBadges = badges.filter((b) => totalReviews >= b.threshold);
 
   const breadcrumbLd = {
     "@context": "https://schema.org",
@@ -155,11 +149,12 @@ export default async function UserProfilePage({ params }: Props) {
             <div className="mt-6 flex flex-wrap gap-2">
               {earnedBadges.map((badge) => (
                 <span
-                  key={badge.threshold}
+                  key={badge.slug}
                   className="flex items-center gap-1.5 rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-700 border border-amber-100"
+                  title={badge.description}
                 >
                   <Award className="h-3.5 w-3.5" />
-                  {badge.emoji} {badge.label}
+                  {badge.emoji} {badge.name}
                 </span>
               ))}
             </div>

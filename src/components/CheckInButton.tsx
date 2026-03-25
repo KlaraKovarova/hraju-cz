@@ -24,6 +24,7 @@ export function CheckInButton({ facilityId, currentPath, facilityName }: CheckIn
   const [showPhotoUpload, setShowPhotoUpload] = useState(false);
   const [photos, setPhotos] = useState<{ id: string; url: string }[]>([]);
   const [visitId, setVisitId] = useState<string | null>(null);
+  const [newBadges, setNewBadges] = useState<{ slug: string; name: string; emoji: string }[]>([]);
 
   useEffect(() => {
     async function load() {
@@ -75,6 +76,10 @@ export function CheckInButton({ facilityId, currentPath, facilityName }: CheckIn
           setHasVisited(true);
           setCount((c) => c + 1);
           setShowSharePrompt(true);
+          if (data.newBadges?.length > 0) {
+            setNewBadges(data.newBadges);
+            setTimeout(() => setNewBadges([]), 6000);
+          }
         }
       }
     } catch {
@@ -166,6 +171,17 @@ export function CheckInButton({ facilityId, currentPath, facilityName }: CheckIn
 
   return (
     <div className="space-y-2">
+      {/* Badge earned toast */}
+      {newBadges.length > 0 && (
+        <div className="animate-in fade-in slide-in-from-top-2 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3">
+          {newBadges.map((badge) => (
+            <div key={badge.slug} className="flex items-center gap-2 text-sm font-medium text-amber-800">
+              <span className="text-lg">{badge.emoji}</span>
+              <span>Nový odznak: <strong>{badge.name}</strong></span>
+            </div>
+          ))}
+        </div>
+      )}
       <div className="flex items-center gap-3 rounded-xl border border-zinc-100 bg-white px-4 py-3">
         <button
           onClick={handleToggle}

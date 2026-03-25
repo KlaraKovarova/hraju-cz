@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { StarRating } from "./StarRating";
 import { PhotoUpload } from "./PhotoUpload";
-import { User, Share2, Check, Link2 } from "lucide-react";
+import { User, Share2, Check, Link2, ExternalLink } from "lucide-react";
 
 interface ReviewFormProps {
   facilityId: string;
@@ -29,6 +29,7 @@ export function ReviewForm({ facilityId, currentPath, facilityName, facilityUrl 
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
+  const [newBadges, setNewBadges] = useState<{ slug: string; name: string; emoji: string }[]>([]);
 
   useEffect(() => {
     fetch("/api/auth/me")
@@ -62,7 +63,11 @@ export function ReviewForm({ facilityId, currentPath, facilityName, facilityUrl 
       });
 
       if (res.ok) {
+        const data = await res.json();
         setSuccess(true);
+        if (data.newBadges?.length > 0) {
+          setNewBadges(data.newBadges);
+        }
       } else {
         const data = await res.json();
         setError(data.error || "Nepodařilo se odeslat recenzi.");
@@ -75,44 +80,14 @@ export function ReviewForm({ facilityId, currentPath, facilityName, facilityUrl 
   }
 
   if (success) {
-    const shareUrl = facilityUrl ?? `https://www.hraju.cz${currentPath}`;
-    const shareText = facilityName
-      ? `Právě jsem ohodnotil/a ${facilityName} na hraju.cz`
-      : "Podívejte se na moji recenzi na hraju.cz";
-
     return (
-      <div className="rounded-xl bg-emerald-50 p-5 text-center">
-        <p className="text-sm font-semibold text-emerald-800">
-          Děkujeme za recenzi!
-        </p>
-        <p className="mt-1 text-xs text-emerald-600">
-          Bude zobrazena po schválení.
-        </p>
-        <div className="mt-4 border-t border-emerald-100 pt-4">
-          <p className="mb-2 text-xs font-medium text-emerald-700">Sdílejte svou recenzi</p>
-          <div className="flex items-center justify-center gap-2">
-            <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-9 w-9 items-center justify-center rounded-lg bg-white text-blue-600 transition hover:bg-blue-50"
-              title="Facebook"
-            >
-              <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            </a>
-            <a
-              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-9 w-9 items-center justify-center rounded-lg bg-white text-zinc-900 transition hover:bg-zinc-100"
-              title="X"
-            >
-              <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
-            <ShareCopyButton url={shareUrl} />
-          </div>
-        </div>
-      </div>
+      <ShareAfterReview
+        facilityId={facilityId}
+        facilityName={facilityName}
+        facilityUrl={facilityUrl}
+        currentPath={currentPath}
+        newBadges={newBadges}
+      />
     );
   }
 
@@ -222,13 +197,115 @@ export function ReviewForm({ facilityId, currentPath, facilityName, facilityUrl 
   );
 }
 
-function ShareCopyButton({ url }: { url: string }) {
+function trackShare(facilityId: string, platform: string) {
+  fetch("/api/shares/track", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ facilityId, platform, context: "review" }),
+  }).catch(() => {});
+}
+
+function ShareAfterReview({
+  facilityId,
+  facilityName,
+  facilityUrl,
+  currentPath,
+  newBadges,
+}: {
+  facilityId: string;
+  facilityName?: string;
+  facilityUrl?: string;
+  currentPath: string;
+  newBadges: { slug: string; name: string; emoji: string }[];
+}) {
+  const [hasNativeShare, setHasNativeShare] = useState(false);
+
+  useEffect(() => {
+    setHasNativeShare(typeof navigator !== "undefined" && !!navigator.share);
+  }, []);
+
+  const shareUrl = facilityUrl ?? `https://www.hraju.cz${currentPath}`;
+  const shareText = facilityName
+    ? `Právě jsem ohodnotil/a ${facilityName} na hraju.cz`
+    : "Podívejte se na moji recenzi na hraju.cz";
+
+  async function handleNativeShare() {
+    try {
+      await navigator.share({ title: shareText, text: shareText, url: shareUrl });
+      trackShare(facilityId, "native");
+    } catch {
+      // User cancelled
+    }
+  }
+
+  return (
+    <div className="rounded-xl bg-emerald-50 p-5 text-center">
+      <p className="text-sm font-semibold text-emerald-800">
+        Děkujeme za recenzi!
+      </p>
+      <p className="mt-1 text-xs text-emerald-600">
+        Bude zobrazena po schválení.
+      </p>
+      {newBadges.length > 0 && (
+        <div className="mt-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-2">
+          {newBadges.map((badge) => (
+            <p key={badge.slug} className="text-sm font-medium text-amber-800">
+              {badge.emoji} Nový odznak: <strong>{badge.name}</strong>
+            </p>
+          ))}
+        </div>
+      )}
+      <div className="mt-4 border-t border-emerald-100 pt-4">
+        <p className="mb-2 text-xs font-medium text-emerald-700">
+          <Share2 className="mr-1 inline h-3.5 w-3.5" />
+          Sdílejte svou recenzi
+        </p>
+        <div className="flex items-center justify-center gap-2">
+          {hasNativeShare && (
+            <button
+              type="button"
+              onClick={handleNativeShare}
+              className="flex h-9 items-center gap-1.5 rounded-lg bg-white px-3 text-sm font-medium text-emerald-700 transition hover:bg-emerald-100"
+            >
+              <ExternalLink className="h-4 w-4" />
+              Sdílet
+            </button>
+          )}
+          <a
+            href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackShare(facilityId, "facebook")}
+            className="flex h-9 w-9 items-center justify-center rounded-lg bg-white text-blue-600 transition hover:bg-blue-50"
+            title="Facebook"
+          >
+            <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a
+            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackShare(facilityId, "x")}
+            className="flex h-9 w-9 items-center justify-center rounded-lg bg-white text-zinc-900 transition hover:bg-zinc-100"
+            title="X"
+          >
+            <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <ShareCopyButton url={shareUrl} onCopy={() => trackShare(facilityId, "copy")} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ShareCopyButton({ url, onCopy }: { url: string; onCopy?: () => void }) {
   const [copied, setCopied] = useState(false);
 
   async function handleCopy() {
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
+      onCopy?.();
       setTimeout(() => setCopied(false), 2000);
     } catch {
       // Clipboard not available

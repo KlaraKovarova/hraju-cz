@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { ChevronRight, Star, MessageSquare, Users, Building2, Trophy, ThumbsUp } from "lucide-react";
 import { getReviewStats, getRecentReviews, getTopReviewers } from "@/lib/data";
 import { ReviewsHubClient } from "@/components/ReviewsHubClient";
+import { ChallengeCards } from "@/components/ChallengeCards";
 import { AdSlot } from "@/components/AdSlot";
 import type { Metadata } from "next";
 
@@ -132,6 +133,11 @@ export default async function RecenzePage() {
       <div className="mx-auto max-w-6xl px-6 py-4">
         <AdSlot slot="2345678901" format="horizontal" />
       </div>
+
+      {/* Active challenges */}
+      <section className="mx-auto max-w-6xl px-6 pt-4">
+        <ChallengeCards />
+      </section>
 
       {/* Reviews list with filters */}
       <section className="mx-auto max-w-6xl px-6 py-8">

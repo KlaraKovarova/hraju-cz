@@ -24,6 +24,7 @@ import {
   Lock,
   Compass,
   Heart,
+  Bell,
 } from "lucide-react";
 import { BADGE_META } from "@/lib/badge-meta";
 
@@ -124,6 +125,19 @@ interface DashboardData {
   }[];
 }
 
+interface FavoriteNotificationItem {
+  id: string;
+  type: "review" | "checkin";
+  actorName: string | null;
+  isRead: boolean;
+  createdAt: string;
+  facility: {
+    name: string;
+    slug: string;
+    sports: { sport: { slug: string } }[];
+  };
+}
+
 type Tab = "overview" | "reviews" | "visits" | "favorites" | "events";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────
@@ -156,6 +170,9 @@ export default function MujUcetPage() {
   const [activity, setActivity] = useState<ActivityItem[]>([]);
   const [badges, setBadges] = useState<BadgeProgress[]>([]);
   const [dashboard, setDashboard] = useState<DashboardData | null>(null);
+  const [notifications, setNotifications] = useState<FavoriteNotificationItem[]>([]);
+  const [unreadCount, setUnreadCount] = useState(0);
+  const [prefs, setPrefs] = useState({ emailNotifications: true, weeklyDigest: true });
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<Tab>("overview");
 
@@ -170,7 +187,7 @@ export default function MujUcetPage() {
         const userData = await meRes.json();
         setUser(userData);
 
-        const [revRes, visitRes, eventRes, actRes, badgeRes, dashRes, favRes] =
+        const [revRes, visitRes, eventRes, actRes, badgeRes, dashRes, favRes, notifRes, prefRes] =
           await Promise.all([
             fetch("/api/auth/my-reviews"),
             fetch("/api/auth/my-visits"),
@@ -179,6 +196,8 @@ export default function MujUcetPage() {
             fetch("/api/auth/my-badges/progress"),
             fetch("/api/auth/my-dashboard"),
             fetch("/api/auth/my-favorites"),
+            fetch("/api/auth/my-notifications"),
+            fetch("/api/auth/my-preferences"),
           ]);
 
         if (revRes.ok) setReviews(await revRes.json());
@@ -191,6 +210,12 @@ export default function MujUcetPage() {
         }
         if (dashRes.ok) setDashboard(await dashRes.json());
         if (favRes.ok) setFavorites(await favRes.json());
+        if (notifRes.ok) {
+          const notifData = await notifRes.json();
+          setNotifications(notifData.notifications);
+          setUnreadCount(notifData.unreadCount);
+        }
+        if (prefRes.ok) setPrefs(await prefRes.json());
       } catch {
         router.push("/prihlaseni?redirect=/muj-ucet");
       } finally {
@@ -497,6 +522,77 @@ export default function MujUcetPage() {
       {/* Overview tab */}
       {!isNewUser && activeTab === "overview" && (
         <div className="space-y-6">
+          {/* Favorite notifications */}
+          {unreadCount > 0 && (
+            <div className="rounded-xl border border-rose-100 bg-rose-50/60 p-5">
+              <div className="mb-3 flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <div className="relative">
+                    <Bell className="h-4.5 w-4.5 text-rose-600" />
+                    <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-rose-600 text-[9px] font-bold text-white">
+                      {unreadCount > 9 ? "9+" : unreadCount}
+                    </span>
+                  </div>
+                  <h3 className="text-sm font-bold text-zinc-900">
+                    Novinky u oblíbených sportovišť
+                  </h3>
+                </div>
+                <button
+                  onClick={async () => {
+                    await fetch("/api/auth/my-notifications", { method: "POST" });
+                    setUnreadCount(0);
+                    setNotifications((prev) =>
+                      prev.map((n) => ({ ...n, isRead: true }))
+                    );
+                  }}
+                  className="text-xs text-rose-600 hover:text-rose-700 font-medium"
+                >
+                  Označit jako přečtené
+                </button>
+              </div>
+              <div className="space-y-2">
+                {notifications
+                  .filter((n) => !n.isRead)
+                  .slice(0, 5)
+                  .map((n) => {
+                    const sportSlug = n.facility.sports[0]?.sport.slug;
+                    const url = sportSlug
+                      ? `/sport/${sportSlug}/${n.facility.slug}`
+                      : `/${n.facility.slug}`;
+                    return (
+                      <Link
+                        key={n.id}
+                        href={url}
+                        className="flex items-start gap-2.5 rounded-lg bg-white p-3 transition hover:shadow-sm"
+                      >
+                        <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-rose-100">
+                          {n.type === "review" ? (
+                            <Star className="h-3 w-3 text-amber-500" />
+                          ) : (
+                            <MapPinCheck className="h-3 w-3 text-emerald-600" />
+                          )}
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <p className="text-sm text-zinc-700">
+                            {n.type === "review" ? "Nová recenze" : "Nový check-in"} na{" "}
+                            <span className="font-medium text-emerald-600">
+                              {n.facility.name}
+                            </span>
+                            {n.actorName && (
+                              <span className="text-zinc-400"> od {n.actorName}</span>
+                            )}
+                          </p>
+                          <p className="text-xs text-zinc-400">
+                            {formatDate(n.createdAt)}
+                          </p>
+                        </div>
+                      </Link>
+                    );
+                  })}
+              </div>
+            </div>
+          )}
+
           {/* Challenge progress */}
           {badges.length > 0 && (
             <div className="rounded-xl border border-zinc-100 bg-white p-5">
@@ -619,6 +715,82 @@ export default function MujUcetPage() {
               </div>
             </div>
           )}
+
+          {/* Notification preferences */}
+          <div className="rounded-xl border border-zinc-100 bg-white p-5">
+            <div className="mb-4 flex items-center gap-2">
+              <Bell className="h-4.5 w-4.5 text-zinc-500" />
+              <h3 className="text-sm font-bold text-zinc-900">
+                Nastavení notifikací
+              </h3>
+            </div>
+            <div className="space-y-3">
+              <label className="flex items-center justify-between cursor-pointer">
+                <div>
+                  <div className="text-sm font-medium text-zinc-700">
+                    E-mailové notifikace
+                  </div>
+                  <div className="text-xs text-zinc-400">
+                    Nové recenze a aktivita u oblíbených sportovišť
+                  </div>
+                </div>
+                <button
+                  role="switch"
+                  aria-checked={prefs.emailNotifications}
+                  onClick={async () => {
+                    const val = !prefs.emailNotifications;
+                    setPrefs((p) => ({ ...p, emailNotifications: val }));
+                    await fetch("/api/auth/my-preferences", {
+                      method: "PATCH",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ emailNotifications: val }),
+                    });
+                  }}
+                  className={`relative inline-flex h-5 w-9 shrink-0 items-center rounded-full transition-colors ${
+                    prefs.emailNotifications ? "bg-emerald-500" : "bg-zinc-300"
+                  }`}
+                >
+                  <span
+                    className={`inline-block h-3.5 w-3.5 rounded-full bg-white transition-transform ${
+                      prefs.emailNotifications ? "translate-x-4.5" : "translate-x-0.5"
+                    }`}
+                  />
+                </button>
+              </label>
+              <label className="flex items-center justify-between cursor-pointer">
+                <div>
+                  <div className="text-sm font-medium text-zinc-700">
+                    Týdenní přehled
+                  </div>
+                  <div className="text-xs text-zinc-400">
+                    Souhrn novinek, recenzí a akcí jednou týdně
+                  </div>
+                </div>
+                <button
+                  role="switch"
+                  aria-checked={prefs.weeklyDigest}
+                  onClick={async () => {
+                    const val = !prefs.weeklyDigest;
+                    setPrefs((p) => ({ ...p, weeklyDigest: val }));
+                    await fetch("/api/auth/my-preferences", {
+                      method: "PATCH",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ weeklyDigest: val }),
+                    });
+                  }}
+                  className={`relative inline-flex h-5 w-9 shrink-0 items-center rounded-full transition-colors ${
+                    prefs.weeklyDigest ? "bg-emerald-500" : "bg-zinc-300"
+                  }`}
+                >
+                  <span
+                    className={`inline-block h-3.5 w-3.5 rounded-full bg-white transition-transform ${
+                      prefs.weeklyDigest ? "translate-x-4.5" : "translate-x-0.5"
+                    }`}
+                  />
+                </button>
+              </label>
+            </div>
+          </div>
         </div>
       )}
 
