@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-03-25T01:59:40.853Z",
+  "exportedAt": "2026-03-25T12:08:09.371Z",
   "sports": [
     {
       "id": "jk8Hpc3Zm68PmcBn",
@@ -158188,7 +158188,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://stenaholesovice.cz",
-      "isActive": false,
+      "isActive": true,
       "isClaimed": false,
       "isPremium": false
     },
@@ -187045,6 +187045,18 @@
     },
     {
       "facilityId": "cmn3pa48x0063w48ot20nsnmk",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn601psl00003q8ohcwgna5w",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn601pzr00043q8o00g24ri0",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn601q7n00093q8ohk4f47py",
       "sportId": "cmmyvhqzt0001rb8oa2mb424o"
     },
     {
