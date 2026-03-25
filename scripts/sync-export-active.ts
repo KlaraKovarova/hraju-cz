@@ -1,10 +1,13 @@
 /**
- * Sync isActive + facilitySports from Neon DB → facilities-export.json
+ * Sync isActive + lat/lng + facilitySports from Neon DB → facilities-export.json
  *
- * After deactivating facilities or re-categorizing sports in the database,
- * the static JSON export (used by most listing pages) becomes stale.
- * This script updates both isActive flags and the facilitySports array.
+ * After deactivating facilities, enriching GPS data, or re-categorizing sports
+ * in the database, the static JSON export (used by most listing pages) becomes stale.
+ * This script updates isActive flags, GPS coordinates, and the facilitySports array.
  */
+
+import * as dotenv from "dotenv";
+dotenv.config();
 
 import { join } from "path";
 import { readFileSync, writeFileSync } from "fs";
@@ -28,29 +31,37 @@ async function main() {
   console.log("Loading facilities-export.json...");
   const data = JSON.parse(readFileSync(EXPORT_PATH, "utf-8"));
 
-  // Get isActive state for ALL facilities from DB
+  // Get isActive + lat/lng for ALL facilities from DB
   const dbFacilities = await prisma.facility.findMany({
-    select: { id: true, isActive: true },
+    select: { id: true, isActive: true, lat: true, lng: true },
   });
 
-  const dbActiveMap = new Map(dbFacilities.map((f) => [f.id, f.isActive]));
+  const dbMap = new Map(dbFacilities.map((f) => [f.id, f]));
 
   let synced = 0;
   let activated = 0;
   let deactivated = 0;
+  let gpsUpdated = 0;
 
   for (const f of data.facilities) {
-    const dbActive = dbActiveMap.get(f.id);
-    if (dbActive === undefined) continue; // facility not in DB
+    const db = dbMap.get(f.id);
+    if (db === undefined) continue; // facility not in DB
 
-    if (f.isActive !== dbActive) {
+    if (f.isActive !== db.isActive) {
       synced++;
-      if (dbActive) {
+      if (db.isActive) {
         activated++;
       } else {
         deactivated++;
       }
-      f.isActive = dbActive;
+      f.isActive = db.isActive;
+    }
+
+    // Sync GPS coordinates if DB has them and export differs
+    if (db.lat !== null && db.lng !== null && (f.lat !== db.lat || f.lng !== db.lng)) {
+      f.lat = db.lat;
+      f.lng = db.lng;
+      gpsUpdated++;
     }
   }
 
@@ -60,6 +71,12 @@ async function main() {
     console.log(`  ${activated} activated (false → true)`);
   } else {
     console.log("isActive: no changes needed.");
+  }
+
+  if (gpsUpdated > 0) {
+    console.log(`\nSynced ${gpsUpdated} facilities (lat/lng)`);
+  } else {
+    console.log("\nlat/lng: no changes needed.");
   }
 
   // --- Sync facilitySports ---
@@ -74,7 +91,7 @@ async function main() {
   data.facilitySports = dbFacilitySports;
   console.log(`facilitySports: ${oldCount} → ${newCount} (delta: ${newCount - oldCount})`);
 
-  const changed = synced > 0 || oldCount !== newCount ||
+  const changed = synced > 0 || gpsUpdated > 0 || oldCount !== newCount ||
     JSON.stringify(data.facilitySports) !== JSON.stringify(dbFacilitySports);
 
   if (!changed) {
