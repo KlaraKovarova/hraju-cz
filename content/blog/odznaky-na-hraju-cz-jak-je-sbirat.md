@@ -63,25 +63,27 @@ Vaše odznaky se zobrazují na:
 
 ### ⛰️ Ferratový Průzkumník — nejrychlejší cesta
 
-Česko má desítky ferrat. Pro odznak stačí 3 různé:
+Česko má desítky ferrat. Pro odznak stačí 3 různé — a **jaro 2026 právě začíná**. Sezóna ferrat se rozjíždí v dubnu, takže teď je ideální čas naplánovat první výpravy.
 
-1. **Ferrata Pastýřská stěna** (Děčín) — nejznámější česká ferrata, ideální start
-2. **Ferrata Hněvín** (Most) — rozšířená v září 2025, skvělý výběr
-3. **Ferrata Slánská hora** nebo **Ferrata Bechyně** — menší, přístupnější
+Tři ferraty pro rychlé získání odznaku:
 
-Tip: V [kompletním průvodci ferratami](/blog/ferraty-v-cesku-kompletni-pruvodce-2026) najdete všechny ferraty podle regionů, obtížnosti i toho, které jsou vhodné pro rodiny.
+1. **[Pastýřská Stěna](/sport/ferraty/pastyrska-stena-decin)** (Děčín) — nejznámější česká ferrata, několik tras od K1 po K5
+2. **[Slánská Hora](/sport/ferraty/slanska-hora-slany)** — šest tras přímo ve městě, skvělý start pro začátečníky
+3. **[Via Ferraty Peklo](/sport/ferraty/via-ferraty-peklo-kolin)** (Kolín) — novinka 2025 s dvěma trasami nad rybníkem
 
-Na každé ferratě klikněte „Byl/a jsem tady" — a máte odznak.
+Na každé ferratě klikněte „Byl/a jsem tady" — po třetím check-inu se odznak udělí automaticky.
+
+Tip: V [kompletním průvodci ferratami](/blog/ferraty-v-cesku-kompletni-pruvodce-2026) najdete všechny ferraty podle regionů a obtížnosti. Plánujete víkendový výlet? Zkuste náš [ferratový roadtrip přes Čechy](/blog/vikendovy-ferratovy-roadtrip-cechy-itinerar) — za 3 dny navštívíte 5 ferrat a odznak máte v kapse.
 
 ### 🧗 Lezec — nejširší výběr
 
 Lezeckých stěn je v Česku přes 100. Tři návštěvy zvládnete za týden:
 
-1. **Hangar by Adam Ondra** (Brno) — největší stěna v ČR, 1 400 m²
-2. **SmíchOFF** nebo **BigWall** (Praha) — kvalitní pražské stěny
-3. **Jakýkoli bouldering** ve vašem městě — Basecamp, V16, Hudy
+1. **[Hangar Brno](/sport/lezeni/hangar-brno-climbing-playground)** — největší stěna v ČR, přestavba každý týden
+2. **[Lezecké centrum SmíchOFF](/sport/lezeni/lezecke-centrum-smichoff)** nebo **[Big Wall](/sport/lezeni/lezecka-stena-big-wall)** (Praha) — kvalitní pražské stěny
+3. **[Lokal Blok Praha](/sport/lezeni/lokal-blok-praha)** nebo jakýkoli bouldering ve vašem městě
 
-Tip: Průvodce [bouldering pro začátečníky](/blog/bouldering-pro-zacatecniky-kompletni-pruvodce) a přehled [lezeckých center v Praze](/blog/lezecka-centra-v-praze-pruvodce).
+Tip: Průvodce [bouldering pro začátečníky](/blog/bouldering-pro-zacatecniky-kompletni-pruvodce) a přehled [lezeckých center v Praze](/blog/lezecka-centra-v-praze-pruvodce). V [sezónním průvodci lezením](/blog/sezonni-pruvodce-lezenim-2026) najdete doporučení pro každý měsíc.
 
 ### 📝 Recenzent sezóny — nejhodnotnější odznak
 
@@ -123,6 +125,17 @@ Sezóna určuje, za jaké období se počítá odznak **Recenzent sezóny**:
 
 Každou sezónu máte šanci získat odznak znovu. Počítadlo se resetuje — motivace sportovat celý rok.
 
+## Jaro 2026 — nejlepší čas začít sbírat
+
+Jarní sezóna (březen–květen) je ideální pro start:
+
+- **Ferraty** se otevírají v dubnu — čerstvý [průvodce otevíráním ferratové sezóny](/blog/ferratova-sezona-duben-kveten-2026-pruvodce)
+- **Lezecké stěny** mají jarní akce a workshopy pro začátečníky
+- **Recenzent sezóny** se počítá od března — máte 3 měsíce na 5 recenzí
+- **Check-iny z jarních výletů** vám můžou zajistit hned 2 sportovní odznaky
+
+Začněte s [check-inem na nejbližším sportovišti](/sport/ferraty) a první odznak můžete mít ještě tento víkend.
+
 ## Časté otázky
 
 **Můžu odznak ztratit?**
@@ -148,3 +161,11 @@ Ano. Systém vyhodnocuje celou vaši historii — pokud jste už v minulosti nav
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 - [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
 - [7 sportů za 7 dní — intenzivní výzva](/blog/7-sportu-za-7-dni-vyzva)
+
+### Ferraty — jarní inspirace
+
+- [Top 5 ferrat blízko Prahy](/blog/ferraty-blizko-prahy-jednodenni-vylety)
+- [Co zabalit na ferratu — checklist](/blog/co-zabalit-na-ferratu-kompletni-checklist)
+- [Ferraty s dětmi od 10 let](/blog/ferraty-s-detmi-od-10-let-kam-vyrazit)
+- [Víkendový ferratový roadtrip](/blog/vikendovy-ferratovy-roadtrip-cechy-itinerar)
+- [Ferratová sezóna duben–květen 2026](/blog/ferratova-sezona-duben-kveten-2026-pruvodce)
