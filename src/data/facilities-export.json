@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-03-25T12:08:09.371Z",
+  "exportedAt": "2026-03-27T17:59:26.861Z",
   "sports": [
     {
       "id": "jk8Hpc3Zm68PmcBn",
@@ -16810,6 +16810,12 @@
       "country": "CZ",
       "lat": null,
       "lng": null
+    },
+    {
+      "id": "cmn601q6900083q8ote7we231",
+      "city": "Plzeň 3",
+      "region": "Plzeňský kraj",
+      "country": "CZ"
     }
   ],
   "amenities": [
@@ -127006,7 +127012,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.vinice-hnanice.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -127240,7 +127246,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://whitesagetherapy.cz/",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -127384,7 +127390,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.facebook.com/worldfitness.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -127456,7 +127462,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.facebook.com/profile.php?id=100045652497209",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -128464,7 +128470,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://zhtrener.reservio.com",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -128482,7 +128488,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.iqpohyb.cz/instruktori/profil/petr-zbynek/",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -128500,7 +128506,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.facebook.com/Zdeněk-Ledvina-chairman-of-education-committee-GAMMA-328414910525527",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -128518,7 +128524,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://pekygym.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -128536,7 +128542,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.zdravimebavi.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -128554,7 +128560,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://zdravypohyb4.webnode.cz/",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -128662,7 +128668,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.zoomcycle.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -128770,7 +128776,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://www.zumba-plzen.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -128806,7 +128812,7 @@
       "pricing": null,
       "openingHours": null,
       "website": "https://zuzana-kotasova.cz",
-      "isActive": true,
+      "isActive": false,
       "isClaimed": false,
       "isPremium": false
     },
@@ -159664,6 +159670,78 @@
       "isActive": true,
       "isClaimed": false,
       "isPremium": false
+    },
+    {
+      "id": "cmn97gbee0000zm8o4491gaqe",
+      "slug": "hangar-ostrava-climbing-playground",
+      "name": "Hangar Ostrava – Climbing Playground by Adam Ondra",
+      "description": "Největší boulderovka na Moravě a jedna z největších ve střední Evropě. 1 300 m² boulderové plochy, 200+ boulderů. Dětský pohybový park, fitness, jóga, fyzioterapie, kavárna a prodejna.",
+      "address": "Nad Porubkou 2405",
+      "postalCode": "708 00",
+      "locationId": "KbTVx9oWTuXVciZK",
+      "lat": 49.8284,
+      "lng": 18.1665,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://hangarostrava.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn601psl00003q8ohcwgna5w",
+      "slug": "basecamp-boulder-brno",
+      "name": "Basecamp Boulder",
+      "description": "Komunitní boulderovka v centru Brna s nepřetržitým 24/7 přístupem po registraci. 200 m² lezecké plochy, 1 200 chytů a ~20 boulderů s měsíčním přesazováním.",
+      "address": "Josefská 425/23",
+      "postalCode": "602 00",
+      "locationId": "QSkaD4ZV0MUuSQMO",
+      "lat": 49.1951,
+      "lng": 16.6068,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://basecampboulder.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn601pzr00043q8o00g24ri0",
+      "slug": "boulder-point-liberec",
+      "name": "Boulder Point Liberec",
+      "description": "Jedna z největších boulderovek v Česku — 1 000 m² lezecké plochy, MoonBoard, spray wall, campus boardy. Dětské boulderovací zóny, bistro a prodejna vybavení.",
+      "address": "Rychtářská 1183/8a",
+      "postalCode": "460 14",
+      "locationId": "9-vrx5y_dZlyEix0",
+      "lat": 50.7684,
+      "lng": 15.0627,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.boulderpoint.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
+    },
+    {
+      "id": "cmn601q7n00093q8ohk4f47py",
+      "slug": "v16-lezecke-centrum-plzen",
+      "name": "V16 Lezecké centrum",
+      "description": "Premier boulderovka v Plzni. 350 m² lezecké plochy, 110+ boulderů, hlavní stěna, traverse, campus board, 45° tréninková stěna a fitness. Otevřeno denně 8–22.",
+      "address": "Kollárova 1239/19",
+      "postalCode": "301 00",
+      "locationId": "cmn601q6900083q8ote7we231",
+      "lat": 49.7395,
+      "lng": 13.3715,
+      "courtsLanes": null,
+      "pricing": null,
+      "openingHours": null,
+      "website": "https://www.v16.cz/",
+      "isActive": true,
+      "isClaimed": false,
+      "isPremium": false
     }
   ],
   "facilitySports": [
@@ -187060,6 +187138,10 @@
       "sportId": "cmmyvhqzt0001rb8oa2mb424o"
     },
     {
+      "facilityId": "cmn97gbee0000zm8o4491gaqe",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
       "facilityId": "cmtGM22Ly3SsZOSj",
       "sportId": "Uh0ktCqcr3Dxee5g"
     },
@@ -196238,6 +196320,22 @@
     {
       "facilityId": "zzBfXJR8lZ3WPRYp",
       "sportId": "vnOjIE7Csm18mSLp"
+    },
+    {
+      "facilityId": "cmn97gbee0000zm8o4491gaqe",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn601psl00003q8ohcwgna5w",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn601pzr00043q8o00g24ri0",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
+    },
+    {
+      "facilityId": "cmn601q7n00093q8ohk4f47py",
+      "sportId": "cmmyvhqzt0001rb8oa2mb424o"
     }
   ],
   "contacts": [
@@ -307934,6 +308032,62 @@
       "facilityId": "cmn3pa48x0063w48ot20nsnmk",
       "type": "WEBSITE",
       "value": "https://www.facebook.com/HorolezeckaStenaZubri/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn97gbjn0002zm8orpsu3oy3",
+      "facilityId": "cmn97gbee0000zm8o4491gaqe",
+      "type": "WEBSITE",
+      "value": "https://hangarostrava.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn97gbjn0003zm8omc9wjk1f",
+      "facilityId": "cmn97gbee0000zm8o4491gaqe",
+      "type": "PHONE",
+      "value": "604 787 470",
+      "label": null,
+      "isPrimary": true
+    },
+    {
+      "id": "cmn601ptv00023q8obnqa85wy",
+      "facilityId": "cmn601psl00003q8ohcwgna5w",
+      "type": "WEBSITE",
+      "value": "https://basecampboulder.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn601ptv00033q8ojwt2tk63",
+      "facilityId": "cmn601psl00003q8ohcwgna5w",
+      "type": "EMAIL",
+      "value": "basecampbrno@gmail.com",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn601q0u00063q8oajwr3gzy",
+      "facilityId": "cmn601pzr00043q8o00g24ri0",
+      "type": "WEBSITE",
+      "value": "https://www.boulderpoint.cz/",
+      "label": null,
+      "isPrimary": false
+    },
+    {
+      "id": "cmn601q0u00073q8onf6c2jjc",
+      "facilityId": "cmn601pzr00043q8o00g24ri0",
+      "type": "PHONE",
+      "value": "608 708 860",
+      "label": null,
+      "isPrimary": true
+    },
+    {
+      "id": "cmn601q8q000b3q8o0cdxl5kx",
+      "facilityId": "cmn601q7n00093q8ohk4f47py",
+      "type": "WEBSITE",
+      "value": "https://www.v16.cz/",
       "label": null,
       "isPrimary": false
     }

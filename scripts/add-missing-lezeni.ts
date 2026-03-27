@@ -72,6 +72,20 @@ const newFacilities: NewFacility[] = [
     lng: 13.3715,
     website: "https://www.v16.cz/",
   },
+  {
+    name: "Hangar Ostrava – Climbing Playground by Adam Ondra",
+    slug: "hangar-ostrava-climbing-playground",
+    description:
+      "Největší boulderovka na Moravě a jedna z největších ve střední Evropě. 1 300 m² boulderové plochy, 200+ boulderů. Dětský pohybový park, fitness, jóga, fyzioterapie, kavárna a prodejna.",
+    address: "Nad Porubkou 2405",
+    postalCode: "708 00",
+    city: "Ostrava",
+    region: "Moravskoslezský kraj",
+    lat: 49.8284,
+    lng: 18.1665,
+    website: "https://hangarostrava.cz/",
+    phone: "604 787 470",
+  },
 ];
 
 async function main() {
