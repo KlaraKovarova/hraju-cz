@@ -151,3 +151,9 @@ Lezecké stěny najdete v sekci [lezení](/sport/lezeni) — přes 60 hal po cel
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [První ferrata: Co vás čeká na vaší první zajištěné cestě](/blog/prvni-ferrata-co-vas-ceka-na-prvni-trase)
+- [Jak začít s lezením na stěně — kompletní průvodce pro začátečníky](/blog/jak-zacit-s-lezenim-na-stene)
+- [Via ferraty v Česku — průvodce pro začátečníky](/blog/via-ferraty-v-cesku)

@@ -203,3 +203,9 @@ Pokud vám nevadí 2+ hodiny cesty, za další skvělé ferraty se podívejte:
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [Ferraty ve Středočeském kraji: kompletní průvodce 2026](/blog/ferraty-stredocesky-kraj-kompletni-pruvodce)
+- [Víkendový ferratový plán: 3 ferraty za 2 dny v Ústeckém kraji](/blog/ferraty-vikendovy-plan-3-ferraty-za-2-dny)
+- [Top 5 ferrat v České republice pro sezónu 2026](/blog/top-5-ferrat-v-cesku)

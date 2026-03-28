@@ -184,3 +184,9 @@ Byli jste na ferratě? [Napište recenzi](/prihlaseni) — pomůžete ostatním 
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [Via ferraty v Česku 2026: Kompletní průvodce pro začátečníky i pokročilé](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
+- [Nejlepší ferraty v Česku podle recenzí na hraju.cz](/blog/nejlepsi-ferraty-podle-recenzi-hraju-cz)
+- [5 méně známých ferrat v Česku, které stojí za návštěvu](/blog/5-mene-znamych-ferrat-cesko-skryte-poklady)

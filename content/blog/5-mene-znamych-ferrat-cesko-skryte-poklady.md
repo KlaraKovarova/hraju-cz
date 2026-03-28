@@ -157,3 +157,9 @@ Právě na méně známých ferratách jsou vaše recenze nejvíc potřeba. [Nap
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [Top 5 ferrat v České republice pro sezónu 2026](/blog/top-5-ferrat-v-cesku)
+- [Via ferraty v Česku 2026: Kompletní průvodce pro začátečníky i pokročilé](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
+- [Nejlepší ferraty pro začátečníky v ČR: Kde začít bez strachu](/blog/nejlepsi-ferraty-pro-zacatecniky-v-cr)

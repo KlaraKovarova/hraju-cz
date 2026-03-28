@@ -213,3 +213,9 @@ Pokud vás ferraty chytí a chcete vlastní vybavení, počítejte s investicí 
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [Nejlepší ferraty pro začátečníky v ČR: Kde začít bez strachu](/blog/nejlepsi-ferraty-pro-zacatecniky-v-cr)
+- [Co zabalit na ferratu: Kompletní checklist pro jednodenní výlet](/blog/co-zabalit-na-ferratu-kompletni-checklist)
+- [Via ferraty v Česku — průvodce pro začátečníky](/blog/via-ferraty-v-cesku)

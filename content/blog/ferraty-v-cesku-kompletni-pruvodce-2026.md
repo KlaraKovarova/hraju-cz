@@ -281,3 +281,10 @@ Na hraju.cz najdete outdoorová sportoviště a lezecké stěny ve vašem region
 ---
 
 Byli jste na ferratě? [Napište recenzi](/prihlaseni) — pomůžete ostatním vybrat tu správnou trasu! A nezapomeňte na [check-in „Byl/a jsem tady"](/blog/check-iny-na-hraju-cz-pruvodce) — po 3 ferratách získáte odznak **⛰️ Ferratový Průzkumník**. [Jak odznaky fungují →](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+
+## Související články
+
+- [Nejlepší ferraty pro začátečníky v ČR: Kde začít bez strachu](/blog/nejlepsi-ferraty-pro-zacatecniky-v-cr)
+- [Top 5 ferrat v České republice pro sezónu 2026](/blog/top-5-ferrat-v-cesku)
+- [Co zabalit na ferratu: Kompletní checklist pro jednodenní výlet](/blog/co-zabalit-na-ferratu-kompletni-checklist)
+- [Top 5 ferrat blízko Prahy: Kam vyrazit na jednodenní výlet](/blog/ferraty-blizko-prahy-jednodenni-vylety)

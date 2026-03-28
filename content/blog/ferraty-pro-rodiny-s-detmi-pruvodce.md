@@ -173,3 +173,9 @@ Ferraty s dětmi jsou nezapomenutelný rodinný zážitek — ale vyžadují př
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [Ferraty a děti: kompletní bezpečnostní pravidla pro rodinné výlety](/blog/ferraty-s-detmi-bezpecnostni-pravidla)
+- [Ferraty s dětmi od 10 let: Kam vyrazit a jak je motivovat](/blog/ferraty-s-detmi-od-10-let-kam-vyrazit)
+- [Ferraty a děti: bezpečnostní pravidla pro rodinné výlety](/blog/ferraty-a-deti-bezpecnostni-pravidla)

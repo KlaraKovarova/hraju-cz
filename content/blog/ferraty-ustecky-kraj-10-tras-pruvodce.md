@@ -192,3 +192,9 @@ Navštívili jste Pastýřskou stěnu, Hněvín nebo jinou ferratu v kraji? **Ud
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [Ferraty v Ústeckém kraji: Kde lézt a co vědět v 2026](/blog/ferraty-v-usteckem-kraji-pruvodce)
+- [Víkendový ferratový plán: 3 ferraty za 2 dny v Ústeckém kraji](/blog/ferraty-vikendovy-plan-3-ferraty-za-2-dny)
+- [Top 5 ferrat v České republice pro sezónu 2026](/blog/top-5-ferrat-v-cesku)

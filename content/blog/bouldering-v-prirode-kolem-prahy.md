@@ -183,3 +183,9 @@ Byli jste venku? Pomozte dalším pražským boulderistům:
 - [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+
+## Související články
+
+- [Český kras: Kompletní průvodce sportovním lezením](/blog/cesky-kras-pruvodce-sportovni-lezeni)
+- [Venkovní lezení v Česku 2026: Nejlepší lokality od Adršpachu po Moravský kras](/blog/venkovni-lezeni-v-cesku-pruvodce-2026)
+- [Z haly na skálu: 7 kroků pro první venkovní lezení](/blog/z-haly-na-skalu-7-kroku-venkovni-lezeni)

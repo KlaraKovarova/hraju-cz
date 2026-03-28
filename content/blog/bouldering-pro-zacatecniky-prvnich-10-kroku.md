@@ -168,3 +168,9 @@ Už jste zkusili bouldering? [Ohodnoťte svou boulder stěnu](/sport/lezeni) a p
 ---
 
 *Hledáte víc o lezení? Přečtěte si také [průvodce venkovním lezením na jaře](/blog/venkovni-lezeni-duben-kveten-2026-pruvodce) nebo [přehled lezeckých center v Praze](/blog/lezecka-centra-v-praze).*
+
+## Související články
+
+- [Bouldering pro začátečníky — kompletní průvodce od první návštěvy po první 6a](/blog/bouldering-pro-zacatecniky-kompletni-pruvodce)
+- [Jak začít s boulderingem: 7 tipů pro první návštěvu](/blog/jak-zacit-s-boulderingem)
+- [Lezení pro začátečníky — jak začít a co potřebujete](/blog/lezeni-pro-zacatecniky-jak-zacit-a-co-potrebujete)

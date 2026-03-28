@@ -204,3 +204,9 @@ Kompletní přehled všech ferrat v Česku s recenzemi, fotkami a check-iny najd
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [Nejlepší ferraty na jaro 2026: Kam vyrazit jako první](/blog/nejlepsi-ferraty-na-jaro-2026)
+- [Ferraty otevírací sezóna 2026: Které trasy jsou v dubnu připravené](/blog/ferraty-oteviraci-sezona-2026-duben)
+- [Jak se připravit na ferraty po zimě: Kondice, technika a vybavení](/blog/jak-se-pripravit-na-ferraty-po-zime)

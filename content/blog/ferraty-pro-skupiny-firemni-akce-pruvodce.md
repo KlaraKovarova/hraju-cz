@@ -162,3 +162,9 @@ Pro skupiny 8+ lidí kontaktujte provozovatele minimálně **2 týdny předem**:
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [Ferraty pro skupiny: jak zorganizovat firemní teambuilding na ferratách](/blog/ferraty-pro-skupiny-teambuilding)
+- [Ferraty pro skupiny: jak zorganizovat firemní teambuilding na ferratách](/blog/ferraty-pro-skupiny-firemni-teambuilding)
+- [Top 5 ferrat blízko Prahy: Kam vyrazit na jednodenní výlet](/blog/ferraty-blizko-prahy-jednodenni-vylety)

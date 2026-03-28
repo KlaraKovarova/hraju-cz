@@ -149,3 +149,9 @@ Jaro 2026 je skvělý čas začít s ferratami — nebo se vrátit po zimní pau
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [Ferraty otevírací sezóna 2026: Které trasy jsou v dubnu připravené](/blog/ferraty-oteviraci-sezona-2026-duben)
+- [Jak se připravit na ferraty po zimě: Kondice, technika a vybavení](/blog/jak-se-pripravit-na-ferraty-po-zime)
+- [Top 5 nejlehčích ferrat pro první jarní výlet](/blog/top-5-nejlehcich-ferrat-jarni-vylet)

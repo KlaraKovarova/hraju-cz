@@ -150,3 +150,9 @@ Na [hraju.cz](/sport/ferraty) najdete kompletní přehled všech ferrat v Česku
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [Ferraty v Ústeckém kraji: 10 tras od Děčína po Most](/blog/ferraty-ustecky-kraj-10-tras-pruvodce)
+- [Víkendový ferratový plán: 3 ferraty za 2 dny v Ústeckém kraji](/blog/ferraty-vikendovy-plan-3-ferraty-za-2-dny)
+- [Nejtěžší ferraty v Česku: 6 tras pro odvážné](/blog/nejtezssi-ferraty-v-cesku-vyzva-pro-odvazne)

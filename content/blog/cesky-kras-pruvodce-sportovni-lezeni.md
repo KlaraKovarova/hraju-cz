@@ -175,3 +175,9 @@ Oblast kolem Koněpruských jeskyní nabízí těžší cesty na kvalitním váp
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [Bouldering v přírodě kolem Prahy: Kam vyrazit na jarní víkend](/blog/bouldering-v-prirode-kolem-prahy)
+- [Venkovní lezení v Česku 2026: Nejlepší lokality od Adršpachu po Moravský kras](/blog/venkovni-lezeni-v-cesku-pruvodce-2026)
+- [Od stěny na skálu: Jak zvládnout první jarní lezení venku](/blog/od-steny-na-skalu-prvni-jarni-lezeni)

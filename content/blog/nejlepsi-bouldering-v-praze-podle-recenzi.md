@@ -134,3 +134,9 @@ Navštivte **3 různé stěny za měsíc** a získejte odznak 🧗 **Lezec** na 
 - [Indoor vs outdoor lezení — srovnání](/blog/indoor-vs-outdoor-lezeni-srovnani)
 - [Bezpečnost při lezení](/blog/bezpecnost-pri-lezeni-pruvodce)
 - [Odznaky na hraju.cz — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+
+## Související články
+
+- [Jak začít s boulderingem: 7 tipů pro první návštěvu](/blog/jak-zacit-s-boulderingem)
+- [Bouldering pro začátečníky — kompletní průvodce od první návštěvy po první 6a](/blog/bouldering-pro-zacatecniky-kompletni-pruvodce)
+- [Indoor vs. outdoor lezení: Kompletní srovnání cen, obtížností a vybavení](/blog/indoor-vs-outdoor-lezeni-kompletni-srovnani-2026)

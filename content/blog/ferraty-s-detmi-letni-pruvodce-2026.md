@@ -237,3 +237,9 @@ Jaká je vaše oblíbená ferrata pro rodiny? [Sdílejte recenzi](/sport/ferraty
 - [Ferraty s dětmi od 10 let — jak motivovat teenagery](/blog/ferraty-s-detmi-od-10-let-kam-vyrazit)
 - [Ferraty pro rodiny s dětmi — kompletní průvodce](/blog/ferraty-pro-rodiny-s-detmi-pruvodce)
 - [Via ferraty v Česku 2026 — kompletní průvodce](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
+
+## Související články
+
+- [Ferraty a děti: kompletní bezpečnostní pravidla pro rodinné výlety](/blog/ferraty-s-detmi-bezpecnostni-pravidla)
+- [Ferraty s dětmi na jaře 2026: Kam vyrazit a na co si dát pozor](/blog/ferraty-s-detmi-jarni-pruvodce-2026)
+- [Ferraty pro rodiny s dětmi: Bezpečný průvodce pro rodiče](/blog/ferraty-pro-rodiny-s-detmi-pruvodce)

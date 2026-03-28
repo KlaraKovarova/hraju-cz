@@ -194,3 +194,9 @@ Začněte pomalu, najděte zkušeného partnera a užijte si to. Až budete stá
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [Český kras: Kompletní průvodce sportovním lezením](/blog/cesky-kras-pruvodce-sportovni-lezeni)
+- [Venkovní lezení v Česku 2026: Nejlepší lokality od Adršpachu po Moravský kras](/blog/venkovni-lezeni-v-cesku-pruvodce-2026)
+- [Bezpečnost při lezení: 12 pravidel, která zachraňují životy](/blog/bezpecnost-pri-lezeni-pruvodce)

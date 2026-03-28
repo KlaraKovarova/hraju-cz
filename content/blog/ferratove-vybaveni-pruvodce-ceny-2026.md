@@ -225,3 +225,9 @@ Máte zkušenost s ferratami? [Napište recenzi](/prihlaseni) — pomůžete ost
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [Co zabalit na ferratu: Kompletní checklist pro jednodenní výlet](/blog/co-zabalit-na-ferratu-kompletni-checklist)
+- [První ferrata: Co vás čeká na vaší první zajištěné cestě](/blog/prvni-ferrata-co-vas-ceka-na-prvni-trase)
+- [Bezpečnost na ferratách v létě: bouřky, horko a první pomoc](/blog/bezpecnost-na-ferratach-letni-rizika)

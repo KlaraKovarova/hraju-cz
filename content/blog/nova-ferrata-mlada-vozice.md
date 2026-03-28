@@ -118,3 +118,9 @@ Pomožte ostatním sportovním nadšencům vybrat to nejlepší sportoviště. [
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [Ferraty novinky 2026: Nové trasy, rozšíření a opravy](/blog/ferraty-novinky-nove-trasy-a-opravy-2026)
+- [Ferraty v Jihočeském kraji: 7 lokalit od začátečníků po experty](/blog/ferraty-v-jihoceskem-kraji-pruvodce)
+- [Nejlepší ferraty pro začátečníky v ČR: Kde začít bez strachu](/blog/nejlepsi-ferraty-pro-zacatecniky-v-cr)

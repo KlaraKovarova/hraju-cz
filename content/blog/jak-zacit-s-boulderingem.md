@@ -155,3 +155,9 @@ Na [hraju.cz/sport/lezeni](/sport/lezeni) najdete přehled lezeckých a boulderi
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [Bouldering pro začátečníky — kompletní průvodce od první návštěvy po první 6a](/blog/bouldering-pro-zacatecniky-kompletni-pruvodce)
+- [Lezení pro začátečníky — jak začít a co potřebujete](/blog/lezeni-pro-zacatecniky-jak-zacit-a-co-potrebujete)
+- [Nejlepší bouldering v Praze podle recenzí na hraju.cz](/blog/nejlepsi-bouldering-v-praze-podle-recenzi)

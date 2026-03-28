@@ -270,3 +270,9 @@ Kompletní přehled všech ferrat v Česku s recenzemi, fotkami a check-iny: [hr
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [Ferratové vybavení: Co potřebujete a kolik to stojí v 2026](/blog/ferratove-vybaveni-pruvodce-ceny-2026)
+- [První ferrata: Co vás čeká na vaší první zajištěné cestě](/blog/prvni-ferrata-co-vas-ceka-na-prvni-trase)
+- [Via ferraty v Česku — průvodce pro začátečníky](/blog/via-ferraty-v-cesku)

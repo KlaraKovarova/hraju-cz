@@ -182,3 +182,9 @@ Byli jste na některé z těchto ferrat? [Přidejte recenzi](/sport/ferraty) a s
 - [Ferraty v Jihočeském kraji](/blog/ferraty-v-jihoceskem-kraji-pruvodce)
 - [Ferraty ve Středočeském kraji](/blog/ferraty-stredocesky-kraj-kompletni-pruvodce)
 - [Všechny ferraty na hraju.cz](/sport/ferraty)
+
+## Související články
+
+- [Nejtěžší ferraty v Česku: 6 tras pro odvážné](/blog/nejtezssi-ferraty-v-cesku-vyzva-pro-odvazne)
+- [Jak zlepšit techniku na ferratách: tréninkový plán pro sezónu 2026](/blog/ferratovy-trenink-zlepseni-techniky)
+- [Bezpečnost na ferratách v létě: bouřky, horko a první pomoc](/blog/bezpecnost-na-ferratach-letni-rizika)

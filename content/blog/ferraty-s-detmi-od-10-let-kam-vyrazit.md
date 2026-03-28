@@ -256,3 +256,9 @@ Najděte ferratu ve svém okolí na [hraju.cz/sport/ferraty](/sport/ferraty) —
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [Ferraty pro rodiny s dětmi: Bezpečný průvodce pro rodiče](/blog/ferraty-pro-rodiny-s-detmi-pruvodce)
+- [Ferraty a děti: kompletní bezpečnostní pravidla pro rodinné výlety](/blog/ferraty-s-detmi-bezpecnostni-pravidla)
+- [Nejlepší ferraty pro začátečníky v ČR: Kde začít bez strachu](/blog/nejlepsi-ferraty-pro-zacatecniky-v-cr)

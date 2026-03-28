@@ -197,3 +197,9 @@ Jihočeský kraj nabízí ferraty pro každého — od 15minutové začátečnic
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [Ferraty ve Středočeském kraji: kompletní průvodce 2026](/blog/ferraty-stredocesky-kraj-kompletni-pruvodce)
+- [Porovnání ferrat: Slaný vs Kolín vs Tábor — kam vyrazit z Prahy?](/blog/porovnani-ferrat-slany-vs-kolin-vs-tabor)
+- [Top 5 ferrat v České republice pro sezónu 2026](/blog/top-5-ferrat-v-cesku)

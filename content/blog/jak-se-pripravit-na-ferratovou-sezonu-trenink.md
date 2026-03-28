@@ -155,3 +155,9 @@ Naše doporučení:
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Související články
+
+- [Jak zlepšit techniku na ferratách: tréninkový plán pro sezónu 2026](/blog/ferratovy-trenink-zlepseni-techniky)
+- [Jak se připravit na ferraty po zimě: Kondice, technika a vybavení](/blog/jak-se-pripravit-na-ferraty-po-zime)
+- [Ferratové vybavení: Co potřebujete a kolik to stojí v 2026](/blog/ferratove-vybaveni-pruvodce-ceny-2026)
