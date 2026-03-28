@@ -197,6 +197,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   });
   entries.push({
+    url: `${BASE_URL}/vybaveni`,
+    changeFrequency: "weekly",
+    priority: 0.6,
+  });
+  entries.push({
     url: `${BASE_URL}/odkazy`,
     changeFrequency: "monthly",
     priority: 0.5,
@@ -309,6 +314,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.7,
       });
     }
+  }
+
+  // Product catalog pages
+  try {
+    const products = await prisma.product.findMany({
+      where: { isActive: true },
+      select: { slug: true, updatedAt: true },
+    });
+    for (const p of products) {
+      entries.push({
+        url: `${BASE_URL}/vybaveni/${p.slug}`,
+        lastModified: p.updatedAt,
+        changeFrequency: "monthly",
+        priority: 0.5,
+      });
+    }
+  } catch {
+    // DB unavailable
   }
 
   return entries;

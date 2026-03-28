@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, ChevronRight, ChevronDown, Calendar, ArrowRight, PlusCircle, Star, Map } from "lucide-react";
+import { MapPin, ChevronRight, ChevronDown, Calendar, ArrowRight, PlusCircle, Star, Map, ShoppingBag } from "lucide-react";
+import { prisma } from "@/lib/prisma";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
 import { getRegionsBySport, getTopFacilitiesBySport, getTopCitiesBySport, getTopReviewsBySport, getSportReviewStats, getFacilityMapMarkersBySport, getRecentActivity } from "@/lib/data";
 import { getSportTitleSuffix, getSportFacilityTypePluralGenitive, getSportFacilityType } from "@/lib/seo";
@@ -83,6 +84,19 @@ export default async function SportPage({ params }: SportPageProps) {
   const totalFacilities = regions.reduce((sum, r) => sum + r.facilityCount, 0);
   const sportPosts = getPostsBySport(sport.slug);
   const mapMarkers = getFacilityMapMarkersBySport(sport.slug);
+
+  // Fetch products for this sport (if any exist)
+  let sportProducts: { slug: string; name: string; brand: string; category: string; images: string[]; description: string }[] = [];
+  try {
+    sportProducts = await prisma.product.findMany({
+      where: { sport: sport.slug, isActive: true },
+      select: { slug: true, name: true, brand: true, category: true, images: true, description: true },
+      take: 6,
+      orderBy: { name: "asc" },
+    });
+  } catch {
+    // DB unavailable
+  }
 
   // JSON-LD ItemList for top facilities
   const itemListLd = {
@@ -603,6 +617,55 @@ export default async function SportPage({ params }: SportPageProps) {
           </div>
         </div>
       </section>
+
+      {/* Product Catalog */}
+      {sportProducts.length > 0 && (
+        <section className="border-t border-zinc-100 bg-white">
+          <div className="mx-auto max-w-6xl px-6 py-10">
+            <div className="mb-6 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <ShoppingBag className="h-5 w-5 text-emerald-600" />
+                <h2 className="text-xl font-bold text-zinc-900">Vybavení</h2>
+              </div>
+              <Link
+                href="/vybaveni"
+                className="text-sm font-medium text-emerald-600 hover:text-emerald-700"
+              >
+                Celý katalog <ArrowRight className="inline h-3.5 w-3.5" />
+              </Link>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {sportProducts.map((p) => (
+                <Link
+                  key={p.slug}
+                  href={`/vybaveni/${p.slug}`}
+                  className="group flex gap-4 rounded-xl border border-zinc-100 bg-white p-4 transition hover:border-emerald-200 hover:shadow-sm"
+                >
+                  {p.images[0] && (
+                    <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg bg-zinc-50">
+                      <Image
+                        src={p.images[0]}
+                        alt={p.name}
+                        fill
+                        className="object-contain p-1"
+                        sizes="80px"
+                        unoptimized
+                      />
+                    </div>
+                  )}
+                  <div className="min-w-0">
+                    <p className="text-[10px] font-semibold text-emerald-600 uppercase">{p.brand}</p>
+                    <h3 className="font-semibold text-sm text-zinc-900 group-hover:text-emerald-700 line-clamp-1">
+                      {p.name}
+                    </h3>
+                    <p className="mt-0.5 text-xs text-zinc-500 line-clamp-2">{p.description}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Other Sports */}
       <section className="border-t border-zinc-100 bg-white">

@@ -438,3 +438,23 @@ model Banner {
 
   @@index([isActive])
 }
+
+model Product {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  brand       String
+  sport       String   // sport slug e.g. "ferraty", "lezeni"
+  category    String   // product category e.g. "tlumic-padu", "set", "prilba", "rukavice"
+  description String
+  specs       Json?    // { weight, certifications, sizes, materials, etc. }
+  images      String[] // array of image URLs
+  sourceUrl   String   // link to manufacturer product page
+  price       Int?     // price in CZK haléře (cents), null if unknown
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([sport])
+  @@index([brand])
+}
