@@ -38,7 +38,7 @@ const products = [
       "https://www.ocun.com/assets/products/1_700x700/ocun-ozone-1.jpg",
     ],
     sourceUrl: "https://www.ocun.com/cs/product/ozone",
-    price: 2990,
+    price: 299000,
   },
   {
     slug: "ocun-striker-qc",
@@ -61,7 +61,7 @@ const products = [
       "https://www.ocun.com/assets/products/1_700x700/ocun-striker-qc-1.jpg",
     ],
     sourceUrl: "https://www.ocun.com/cs/product/striker-qc",
-    price: 3490,
+    price: 349000,
   },
   {
     slug: "la-sportiva-solution-comp",
@@ -82,7 +82,7 @@ const products = [
     },
     images: [],
     sourceUrl: "https://www.lasportiva.com/en/solution-comp",
-    price: 4490,
+    price: 449000,
   },
   {
     slug: "scarpa-instinct-vs",
@@ -103,7 +103,7 @@ const products = [
     },
     images: [],
     sourceUrl: "https://www.scarpa.com/instinct-vs",
-    price: 4190,
+    price: 419000,
   },
 
   // === HARNESS ===
@@ -125,7 +125,7 @@ const products = [
       "https://www.ocun.com/assets/products/1_700x700/ocun-twist-basic-1.jpg",
     ],
     sourceUrl: "https://www.ocun.com/cs/product/twist-basic",
-    price: 1490,
+    price: 149000,
   },
   {
     slug: "petzl-corax",
@@ -143,7 +143,7 @@ const products = [
     },
     images: [],
     sourceUrl: "https://www.petzl.com/corax",
-    price: 1790,
+    price: 179000,
   },
   {
     slug: "black-diamond-momentum",
@@ -161,7 +161,7 @@ const products = [
     },
     images: [],
     sourceUrl: "https://www.blackdiamondequipment.com/momentum-harness",
-    price: 1690,
+    price: 169000,
   },
 
   // === CHALK & CHALK BAGS ===
@@ -180,7 +180,7 @@ const products = [
     },
     images: [],
     sourceUrl: "https://www.singingrock.cz/magnesium-ball",
-    price: 89,
+    price: 8900,
   },
   {
     slug: "ocun-chalk-bag-push",
@@ -199,7 +199,7 @@ const products = [
       "https://www.ocun.com/assets/products/1_700x700/ocun-push-1.jpg",
     ],
     sourceUrl: "https://www.ocun.com/cs/product/push",
-    price: 590,
+    price: 59000,
   },
   {
     slug: "moon-liquid-chalk",
@@ -216,7 +216,7 @@ const products = [
     },
     images: [],
     sourceUrl: "https://moonclimbing.com/liquid-chalk",
-    price: 290,
+    price: 29000,
   },
 
   // === CRASHPAD ===
@@ -238,7 +238,7 @@ const products = [
       "https://www.ocun.com/assets/products/1_700x700/ocun-paddy-dominator-1.jpg",
     ],
     sourceUrl: "https://www.ocun.com/cs/product/paddy-dominator",
-    price: 4990,
+    price: 499000,
   },
   {
     slug: "singing-rock-shuttle",
@@ -256,7 +256,7 @@ const products = [
     },
     images: [],
     sourceUrl: "https://www.singingrock.cz/shuttle-crashpad",
-    price: 3990,
+    price: 399000,
   },
 ];
 

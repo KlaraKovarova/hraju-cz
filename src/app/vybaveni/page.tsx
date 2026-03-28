@@ -14,14 +14,26 @@ export const metadata: Metadata = {
 };
 
 const CATEGORY_LABELS: Record<string, string> = {
+  // Ferraty
   set: "Ferratové sety",
   "tlumic-padu": "Tlumiče pádu",
   prilba: "Přilby",
   rukavice: "Rukavice",
   prislusenstvi: "Příslušenství",
+  // Lezení
+  lezecky: "Lezečky",
+  uvazek: "Sedací úvazky",
+  magnesium: "Magnézium",
+  expresky: "Expresky",
+  lano: "Lana",
+  jistitko: "Jistítka",
+  crashpad: "Crashpady",
 };
 
-const CATEGORY_ORDER = ["set", "tlumic-padu", "prilba", "rukavice", "prislusenstvi"];
+const CATEGORY_ORDER = [
+  "set", "tlumic-padu", "prilba", "rukavice", "prislusenstvi",
+  "lezecky", "uvazek", "magnesium", "expresky", "lano", "jistitko", "crashpad",
+];
 
 async function getProducts() {
   try {
@@ -52,12 +64,12 @@ export default async function VybaveniPage() {
         <div className="flex items-center gap-3 mb-2">
           <ShoppingBag className="h-8 w-8 text-emerald-600" />
           <h1 className="text-3xl font-bold text-zinc-900">
-            Vybavení pro ferraty
+            Vybavení pro ferraty a lezení
           </h1>
         </div>
         <p className="text-lg text-zinc-600 max-w-2xl">
-          Katalog vybavení od českých výrobců. Tlumiče pádu, kompletní sety,
-          přilby a rukavice — vše co potřebujete na via ferratu.
+          Katalog vybavení od českých i světových výrobců. Ferratové sety, lezečky,
+          sedáky, magnézium a další — vše pro ferraty i lezení.
         </p>
         {brands.length > 0 && (
           <div className="mt-3 flex items-center gap-2 text-sm text-zinc-500">
@@ -120,19 +132,35 @@ export default async function VybaveniPage() {
       )}
 
       {/* CTA */}
-      <div className="mt-8 rounded-xl border border-emerald-200 bg-emerald-50 p-6 text-center">
-        <h2 className="text-lg font-bold text-zinc-900">
-          Hledáte ferratu poblíž?
-        </h2>
-        <p className="mt-1 text-sm text-zinc-600">
-          Prohlédněte si naši mapu ferrat po celé České republice.
-        </p>
-        <Link
-          href="/sport/ferraty"
-          className="mt-3 inline-block rounded-lg bg-emerald-600 px-5 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
-        >
-          Zobrazit ferraty
-        </Link>
+      <div className="mt-8 grid gap-4 sm:grid-cols-2">
+        <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-6 text-center">
+          <h2 className="text-lg font-bold text-zinc-900">
+            Hledáte ferratu poblíž?
+          </h2>
+          <p className="mt-1 text-sm text-zinc-600">
+            Prohlédněte si naši mapu ferrat po celé ČR.
+          </p>
+          <Link
+            href="/sport/ferraty"
+            className="mt-3 inline-block rounded-lg bg-emerald-600 px-5 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
+          >
+            Zobrazit ferraty
+          </Link>
+        </div>
+        <div className="rounded-xl border border-blue-200 bg-blue-50 p-6 text-center">
+          <h2 className="text-lg font-bold text-zinc-900">
+            Kde lézt v ČR?
+          </h2>
+          <p className="mt-1 text-sm text-zinc-600">
+            Najděte lezecké stěny a bouldrovky ve vašem okolí.
+          </p>
+          <Link
+            href="/sport/lezeni"
+            className="mt-3 inline-block rounded-lg bg-blue-600 px-5 py-2 text-sm font-semibold text-white hover:bg-blue-700"
+          >
+            Zobrazit stěny
+          </Link>
+        </div>
       </div>
     </div>
   );
