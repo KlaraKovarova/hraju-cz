@@ -55,6 +55,7 @@ export default function AdminReviewPage() {
   const [searchInput, setSearchInput] = useState("");
   const [page, setPage] = useState(1);
   const [deactivatedCount, setDeactivatedCount] = useState(0);
+  const [error, setError] = useState<string | null>(null);
 
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -85,26 +86,30 @@ export default function AdminReviewPage() {
     if (!confirm(`Opravdu deaktivovat "${name}"?`)) return;
 
     setDeactivating(id);
+    setError(null);
     try {
       const res = await fetch(`/api/facilities/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ isActive: false }),
       });
-      if (res.ok) {
-        setDeactivatedCount((c) => c + 1);
-        setData((prev) =>
-          prev
-            ? {
-                ...prev,
-                facilities: prev.facilities.filter((f) => f.id !== id),
-                total: prev.total - 1,
-              }
-            : prev
-        );
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        setError(body.error || `Chyba ${res.status} při deaktivaci`);
+        return;
       }
-    } catch {
-      // ignore
+      setDeactivatedCount((c) => c + 1);
+      setData((prev) =>
+        prev
+          ? {
+              ...prev,
+              facilities: prev.facilities.filter((f) => f.id !== id),
+              total: prev.total - 1,
+            }
+          : prev
+      );
+    } catch (e) {
+      setError(`Síťová chyba: ${e instanceof Error ? e.message : "neznámá chyba"}`);
     } finally {
       setDeactivating(null);
     }
@@ -112,29 +117,33 @@ export default function AdminReviewPage() {
 
   async function handleApproval(id: string, approve: boolean) {
     setApproving(id);
+    setError(null);
     try {
       const res = await fetch("/api/admin/facility-review", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ facilityId: id, isApproved: approve }),
       });
-      if (res.ok) {
-        setData((prev) =>
-          prev
-            ? {
-                ...prev,
-                unapprovedCount: prev.unapprovedCount + (approve ? -1 : 1),
-                facilities: prev.facilities.map((f) =>
-                  f.id === id
-                    ? { ...f, isApproved: approve, approvedAt: approve ? new Date().toISOString() : null }
-                    : f
-                ),
-              }
-            : prev
-        );
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        setError(body.error || `Chyba ${res.status} při ${approve ? "schvalování" : "odschvalování"}`);
+        return;
       }
-    } catch {
-      // ignore
+      setData((prev) =>
+        prev
+          ? {
+              ...prev,
+              unapprovedCount: prev.unapprovedCount + (approve ? -1 : 1),
+              facilities: prev.facilities.map((f) =>
+                f.id === id
+                  ? { ...f, isApproved: approve, approvedAt: approve ? new Date().toISOString() : null }
+                  : f
+              ),
+            }
+          : prev
+      );
+    } catch (e) {
+      setError(`Síťová chyba: ${e instanceof Error ? e.message : "neznámá chyba"}`);
     } finally {
       setApproving(null);
     }
@@ -168,6 +177,14 @@ export default function AdminReviewPage() {
           )}
         </div>
       </div>
+
+      {/* Error banner */}
+      {error && (
+        <div className="mb-4 flex items-center justify-between rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+          <span>{error}</span>
+          <button onClick={() => setError(null)} className="ml-4 text-red-400 hover:text-red-600">&times;</button>
+        </div>
+      )}
 
       {/* Search */}
       <form onSubmit={handleSearch} className="mb-4 flex gap-2">
