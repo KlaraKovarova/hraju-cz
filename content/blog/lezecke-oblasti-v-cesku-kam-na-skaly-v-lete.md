@@ -140,9 +140,10 @@ Vaše recenze pomůže ostatním lezcům vybrat tu pravou oblast. [Napište rece
 ## Související články
 
 - [Z haly na skálu: 7 kroků pro první venkovní lezení](/blog/z-haly-na-skalu-7-kroku-venkovni-lezeni)
-- [Venkovní lezení — jarní průvodce 2026](/blog/venkovni-lezeni-jarni-pruvodce-2026)
-- [Lezení pro začátečníky — jak začít](/blog/lezeni-pro-zacatecniky-jak-zacit-a-co-potrebujete)
-- [Všechny lezecké stěny na hraju.cz](/sport/lezeni)
+- [Lezení v horku: jak bezpečně lézt v letních vedrech](/blog/lezeni-v-horku-bezpecne-lezeni-v-lete)
+- [Nejlepší venkovní lezecké oblasti v ČR pro léto 2026](/blog/nejlepsi-venkovni-lezecke-oblasti-cr-leto-2026)
+- [Lezení na pískovci — pravidla, etika a jak začít](/blog/lezeni-na-piskovci-pravidla-etika-jak-zacit)
+- [Ferraty na Moravě: průvodce nejlepšími trasami pro letní víkend](/blog/ferraty-na-morave-letni-pruvodce)
 
 ## Zapojte se do komunity
 

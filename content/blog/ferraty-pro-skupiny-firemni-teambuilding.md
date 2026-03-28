@@ -161,7 +161,8 @@ Všechny ferraty v Česku najdete na [hraju.cz/sport/ferraty](/sport/ferraty). A
 
 ## Související články
 
-- [Ferraty pro páry: 5 romantických výletů s adrenalinem](/blog/ferraty-pro-pary-romanticke-vylety)
-- [Víkendový ferratový plán: 3 ferraty za 2 dny v Ústeckém kraji](/blog/ferraty-vikendovy-plan-3-ferraty-za-2-dny)
+- [Ferraty pro skupiny a firemní akce — organizace, ceny, lokality](/blog/ferraty-pro-skupiny-firemni-akce-pruvodce)
 - [Co zabalit na ferratu — kompletní checklist](/blog/co-zabalit-na-ferratu-kompletni-checklist)
+- [Nejlepší ferraty pro začátečníky v ČR: Kde začít bez strachu](/blog/nejlepsi-ferraty-pro-zacatecniky-v-cr)
 - [Bezpečnost na ferratách v létě: bouřky, horko a první pomoc](/blog/bezpecnost-na-ferratach-letni-rizika)
+- [Lezení s přáteli: jak zorganizovat skupinový lezecký výlet](/blog/lezeni-s-prateli-jak-zorganizovat-lezecky-vylet)

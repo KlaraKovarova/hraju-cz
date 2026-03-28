@@ -137,9 +137,10 @@ Sdílejte své tipy s komunitou. [Napište recenzi](/prihlaseni) vaší oblíben
 ## Související články
 
 - [Lezecké oblasti v Česku: kam na skály v létě 2026](/blog/lezecke-oblasti-v-cesku-kam-na-skaly-v-lete)
-- [Z haly na skálu: 7 kroků pro první venkovní lezení](/blog/z-haly-na-skalu-7-kroku-venkovni-lezeni)
-- [Lezení pro začátečníky — jak začít](/blog/lezeni-pro-zacatecniky-jak-zacit-a-co-potrebujete)
-- [Všechny lezecké stěny na hraju.cz](/sport/lezeni)
+- [Lezecká výživa a regenerace: co jíst před a po lezení](/blog/lezecka-vyziva-a-regenerace-pruvodce)
+- [Sezónní průvodce lezením 2026: Kdy a kde lézt v každém ročním období](/blog/sezonni-pruvodce-lezenim-2026)
+- [Letní lezení venku: jak bezpečně přejít z haly na skálu](/blog/letni-lezeni-venku-prechod-z-haly)
+- [Bezpečnost na ferratách v létě: bouřky, horko a první pomoc](/blog/bezpecnost-na-ferratach-letni-rizika)
 
 ## Zapojte se do komunity
 

@@ -181,10 +181,11 @@ Vaše recenze pomůže ostatním vybrat ten správný kurz. [Napište recenzi](/
 
 ## Související články
 
-- [Lezecké oblasti v Česku: kam na skály v létě](/blog/lezecke-oblasti-v-cesku-kam-na-skaly-v-lete)
-- [Lezení pro začátečníky — jak začít](/blog/lezeni-pro-zacatecniky-jak-zacit-a-co-potrebujete)
-- [Lezení v horku — jak bezpečně lézt](/blog/lezeni-v-horku-bezpecne-lezeni-v-lete)
-- [Z haly na skálu: 7 kroků](/blog/z-haly-na-skalu-7-kroku-venkovni-lezeni)
+- [Lezecké kempy a kurzy léto 2026: kde se zlepšit za týden](/blog/lezecke-kempy-kurzy-leto-2026)
+- [Lezecké závody a eventy léto 2026: kompletní přehled](/blog/lezecke-zavody-eventy-leto-2026-prehled)
+- [Lezecké oblasti v Česku: kam na skály v létě 2026](/blog/lezecke-oblasti-v-cesku-kam-na-skaly-v-lete)
+- [Lezecké vybavení pro začátečníky: co koupit jako první](/blog/lezecke-vybaveni-zacatecnici-co-koupit)
+- [Ferraty pro skupiny: jak zorganizovat firemní teambuilding na ferratách](/blog/ferraty-pro-skupiny-firemni-teambuilding)
 
 ## Zapojte se do komunity
 

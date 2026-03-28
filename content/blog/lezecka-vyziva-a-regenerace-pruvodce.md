@@ -182,10 +182,11 @@ Sdílejte své tipy s komunitou. [Napište recenzi](/prihlaseni) a dejte ostatn�
 
 ## Související články
 
-- [Lezení v horku — jak bezpečně lézt v letních vedrech](/blog/lezeni-v-horku-bezpecne-lezeni-v-lete)
-- [Lezecké oblasti v Česku: kam na skály v létě](/blog/lezecke-oblasti-v-cesku-kam-na-skaly-v-lete)
+- [Lezení v horku: jak bezpečně lézt v letních vedrech](/blog/lezeni-v-horku-bezpecne-lezeni-v-lete)
 - [Jak trénovat sílu prstů pro lezení doma](/blog/trenink-sily-prstu-lezeni-doma)
-- [Lezení pro začátečníky — jak začít](/blog/lezeni-pro-zacatecniky-jak-zacit-a-co-potrebujete)
+- [Lezecké oblasti v Česku: kam na skály v létě 2026](/blog/lezecke-oblasti-v-cesku-kam-na-skaly-v-lete)
+- [Top lezecké kempy a kurzy léto 2026](/blog/top-lezecke-kempy-a-kurzy-leto-2026)
+- [Jak se připravit na ferratovou sezónu — trénink, kondice, checklist](/blog/jak-se-pripravit-na-ferratovou-sezonu-trenink)
 
 ## Zapojte se do komunity
 

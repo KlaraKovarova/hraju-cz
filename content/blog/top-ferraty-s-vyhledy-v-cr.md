@@ -177,4 +177,5 @@ Hledáte méně známé ferraty s výhledy? Zkuste [5 skrytých pokladů](/blog/
 - [Ferraty s nejlepšími výhledy v ČR: 7 tras, které stojí za výstup](/blog/ferraty-s-nejlepsimi-vyhledy-v-cr)
 - [5 méně známých ferrat v Česku, které stojí za návštěvu](/blog/5-mene-znamych-ferrat-cesko-skryte-poklady)
 - [Ferraty pro páry: 5 romantických výletů s adrenalinem](/blog/ferraty-pro-pary-romanticke-vylety)
-- [Via ferraty v Česku 2026: Kompletní průvodce pro začátečníky i pokročilé](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
+- [Top 5 ferrat blízko Prahy: Kam vyrazit na jednodenní výlet](/blog/ferraty-blizko-prahy-jednodenni-vylety)
+- [Nejlepší venkovní lezecké oblasti v ČR pro léto 2026](/blog/nejlepsi-venkovni-lezecke-oblasti-cr-leto-2026)
