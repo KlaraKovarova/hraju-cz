@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Trophy, Clock, Users } from "lucide-react";
 import { type MonthlyChallenge, getActiveChallenges } from "@/lib/monthly-challenges";
+import { ChallengeLeaderboard } from "@/components/ChallengeLeaderboard";
 
 interface ChallengeProgress {
   slug: string;
@@ -109,6 +110,8 @@ export function MonthlyChallenges() {
                       Přihlaste se pro sledování pokroku
                     </p>
                   )}
+
+                  <ChallengeLeaderboard challengeSlug={challenge.slug} />
                 </div>
               </div>
             </div>

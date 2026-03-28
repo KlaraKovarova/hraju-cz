@@ -2,17 +2,7 @@ import { prisma } from "./prisma";
 import exportData from "@/data/facilities-export.json";
 import { getRegionByName, getRegionBySlug, cityToSlug, findCityBySlug, type Region } from "./regions";
 import { SPORTS } from "./sports";
-
-const DB_QUERY_TIMEOUT_MS = 3000;
-
-function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
-  return Promise.race([
-    promise,
-    new Promise<never>((_, reject) =>
-      setTimeout(() => reject(new Error(`DB query timed out after ${ms}ms`)), ms)
-    ),
-  ]);
-}
+import { DB_QUERY_TIMEOUT_MS, withTimeout } from "./db-timeout";
 
 export type FacilityWithDetails = {
   id: string;
@@ -902,6 +892,53 @@ export async function getTopReviewers(limit: number = 10, sport?: string): Promi
       name: r.name || "Sportovec",
       reviewCount: Number(r.reviewCount),
       helpfulVotes: Number(r.helpfulVotes),
+    }));
+  } catch {
+    return [];
+  }
+}
+
+/** Leaderboard for a monthly challenge: ranked participants by check-in count */
+export interface ChallengeLeaderboardEntry {
+  userId: string;
+  name: string;
+  progress: number;
+  completed: boolean;
+}
+
+export async function getChallengeLeaderboard(
+  sportSlug: string,
+  startDate: string,
+  endDate: string,
+  target: number,
+  limit: number = 20
+): Promise<ChallengeLeaderboardEntry[]> {
+  try {
+    const rows = await withTimeout(
+      prisma.$queryRaw<{ userId: string; name: string | null; progress: bigint }[]>`
+        SELECT v."userId", u."name",
+          COUNT(DISTINCT v."facilityId") AS "progress"
+        FROM "Visit" v
+        JOIN "User" u ON u."id" = v."userId"
+        JOIN "Facility" f ON f."id" = v."facilityId"
+        JOIN "FacilitySport" fs ON fs."facilityId" = f."id"
+        JOIN "Sport" s ON s."id" = fs."sportId"
+        WHERE s."slug" = ${sportSlug}
+          AND v."createdAt" >= ${new Date(startDate)}::timestamp
+          AND v."createdAt" < ${new Date(endDate + "T23:59:59.999Z")}::timestamp
+          AND u."isSeed" = false
+        GROUP BY v."userId", u."name"
+        HAVING COUNT(DISTINCT v."facilityId") > 0
+        ORDER BY "progress" DESC, MIN(v."createdAt") ASC
+        LIMIT ${limit}
+      `,
+      DB_QUERY_TIMEOUT_MS
+    );
+    return rows.map((r) => ({
+      userId: r.userId,
+      name: r.name || "Sportovec",
+      progress: Number(r.progress),
+      completed: Number(r.progress) >= target,
     }));
   } catch {
     return [];
