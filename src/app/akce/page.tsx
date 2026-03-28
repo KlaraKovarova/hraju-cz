@@ -7,7 +7,7 @@ import { REGIONS } from "@/lib/regions";
 import { AdSlot } from "@/components/AdSlot";
 import { EventsClient } from "./EventsClient";
 
-export const revalidate = 1800; // 30 minutes
+export const revalidate = 7200; // 2 hours (optimization: events update weekly)
 
 export const metadata: Metadata = {
   title: "Turistické akce v ČR — kalendář akcí | hraju.cz",

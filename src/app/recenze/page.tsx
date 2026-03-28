@@ -7,7 +7,8 @@ import { ChallengeCards } from "@/components/ChallengeCards";
 import { AdSlot } from "@/components/AdSlot";
 import type { Metadata } from "next";
 
-export const revalidate = 3600;
+// ISR: revalidate reviews hub every 6 hours (optimization)
+export const revalidate = 21600;
 
 export const metadata: Metadata = {
   title: "Recenze sportovišť — hraju.cz",

@@ -9,7 +9,8 @@ import { FacilityListWithFilters } from "@/components/FacilityListWithFilters";
 import { FacilityMap } from "@/components/FacilityMap";
 import type { Metadata } from "next";
 
-export const revalidate = 3600;
+// ISR: revalidate district pages every 24 hours (optimization)
+export const revalidate = 86400;
 
 interface DistrictPageProps {
   params: Promise<{ sport: string; slug: string; district: string }>;

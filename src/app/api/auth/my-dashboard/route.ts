@@ -19,8 +19,7 @@ export async function GET() {
       visitsThisMonth,
       visitsLastMonth,
       totalHelpful,
-      visitedFacilityIds,
-      userSportSlugs,
+      userVisits,
     ] = await Promise.all([
       prisma.review.count({
         where: { userId: session.userId, createdAt: { gte: thisMonthStart } },
@@ -44,14 +43,11 @@ export async function GET() {
         where: { userId: session.userId, isApproved: true },
         _sum: { helpful: true },
       }),
-      prisma.visit.findMany({
-        where: { userId: session.userId },
-        select: { facilityId: true },
-      }),
-      // Get sports the user is interested in (from visits + reviews)
+      // Single query for both facilityIds and sport slugs
       prisma.visit.findMany({
         where: { userId: session.userId },
         select: {
+          facilityId: true,
           facility: {
             select: {
               sports: {
@@ -61,15 +57,15 @@ export async function GET() {
             },
           },
         },
-        take: 50,
+        take: 500,
       }),
     ]);
 
     // Build recommended facilities: same sports, not yet visited
-    const visitedIds = new Set(visitedFacilityIds.map((v) => v.facilityId));
+    const visitedIds = new Set(userVisits.map((v) => v.facilityId));
     const sportSlugs = [
       ...new Set(
-        userSportSlugs
+        userVisits
           .map((v) => v.facility.sports[0]?.sport.slug)
           .filter(Boolean)
       ),

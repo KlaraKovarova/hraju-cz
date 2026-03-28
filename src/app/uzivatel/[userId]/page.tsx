@@ -8,7 +8,8 @@ import { getUserBadges } from "@/lib/challenges";
 import { SPORTS } from "@/lib/sports";
 import type { Metadata } from "next";
 
-export const revalidate = 3600;
+// ISR: revalidate user profiles every 6 hours (optimization)
+export const revalidate = 21600;
 
 type Props = { params: Promise<{ userId: string }> };
 

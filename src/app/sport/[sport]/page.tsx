@@ -19,8 +19,8 @@ import { getSportFaqs } from "@/lib/sport-faq";
 import { getPostsBySport, CATEGORIES } from "@/lib/blog";
 import type { Metadata } from "next";
 
-// ISR: revalidate sport pages every hour
-export const revalidate = 3600;
+// ISR: revalidate sport pages every 12 hours (optimization: reduce Vercel invocations)
+export const revalidate = 43200;
 
 export function generateStaticParams() {
   return SPORTS.map((s) => ({ sport: s.slug }));

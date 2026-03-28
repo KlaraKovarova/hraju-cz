@@ -4,7 +4,8 @@ import { ShoppingBag, ArrowRight, Shield } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import type { Metadata } from "next";
 
-export const revalidate = 3600;
+// ISR: revalidate equipment listing every 7 days (rarely changes)
+export const revalidate = 604800;
 
 export const metadata: Metadata = {
   title: "Vybavení pro ferraty a lezení",

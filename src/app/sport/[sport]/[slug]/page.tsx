@@ -44,8 +44,8 @@ import { OwnerEditButton, OwnerUpgradeCTA } from "@/components/OwnerControls";
 import { prisma } from "@/lib/prisma";
 import type { Metadata } from "next";
 
-// ISR: revalidate facility/city pages every hour
-export const revalidate = 3600;
+// ISR: revalidate facility/city pages every 24 hours (optimization: reduce Vercel invocations)
+export const revalidate = 86400;
 
 interface FacilityPageProps {
   params: Promise<{ sport: string; slug: string }>;

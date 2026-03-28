@@ -19,8 +19,8 @@ import { AdSlot } from "@/components/AdSlot";
 import { BannerSlot } from "@/components/BannerSlot";
 import type { Metadata } from "next";
 
-// ISR: revalidate region pages every hour
-export const revalidate = 3600;
+// ISR: revalidate region pages every 12 hours (optimization)
+export const revalidate = 43200;
 
 export function generateStaticParams() {
   return SPORTS.flatMap((s) =>

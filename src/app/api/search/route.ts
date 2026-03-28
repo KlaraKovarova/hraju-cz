@@ -21,7 +21,9 @@ export async function GET(request: NextRequest) {
       searchPosts(query, limit),
     ]);
 
-    return NextResponse.json({ facilities, events, posts });
+    return NextResponse.json({ facilities, events, posts }, {
+      headers: { "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600" },
+    });
   } catch {
     return NextResponse.json(
       { facilities: [], events: [], posts: [] },

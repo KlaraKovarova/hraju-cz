@@ -5,7 +5,7 @@ import { prisma } from "@/lib/prisma";
 
 const BASE = "https://www.hraju.cz";
 
-export const revalidate = 3600; // revalidate every hour
+export const revalidate = 86400; // revalidate every 24 hours (optimization)
 
 export async function GET() {
   const sections: string[] = [];

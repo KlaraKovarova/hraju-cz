@@ -862,38 +862,47 @@ export interface TopReviewer {
 
 export async function getTopReviewers(limit: number = 10, sport?: string): Promise<TopReviewer[]> {
   try {
-    const sportReviewFilter = sport
-      ? { facility: { sports: { some: { sport: { slug: sport } } } } }
-      : {};
-    const reviewers = await withTimeout(
-      prisma.user.findMany({
-        where: {
-          isSeed: false,
-          ...(sport
-            ? { reviews: { some: { isApproved: true, ...sportReviewFilter } } }
-            : {}),
-        },
-        select: {
-          id: true,
-          name: true,
-          reviews: {
-            where: { isApproved: true, ...sportReviewFilter },
-            select: { helpful: true },
-          },
-        },
-      }),
+    // Single SQL query with aggregation instead of loading all reviews into memory
+    const rows = await withTimeout(
+      sport
+        ? prisma.$queryRaw<{ id: string; name: string | null; reviewCount: bigint; helpfulVotes: bigint }[]>`
+            SELECT u."id", u."name",
+              COUNT(r."id") AS "reviewCount",
+              COALESCE(SUM(r."helpful"), 0) AS "helpfulVotes"
+            FROM "User" u
+            JOIN "Review" r ON r."userId" = u."id"
+            JOIN "Facility" f ON f."id" = r."facilityId"
+            JOIN "FacilitySport" fs ON fs."facilityId" = f."id"
+            JOIN "Sport" s ON s."id" = fs."sportId"
+            WHERE u."isSeed" = false
+              AND r."isApproved" = true
+              AND s."slug" = ${sport}
+            GROUP BY u."id", u."name"
+            HAVING COUNT(r."id") > 0
+            ORDER BY "helpfulVotes" DESC, "reviewCount" DESC
+            LIMIT ${limit}
+          `
+        : prisma.$queryRaw<{ id: string; name: string | null; reviewCount: bigint; helpfulVotes: bigint }[]>`
+            SELECT u."id", u."name",
+              COUNT(r."id") AS "reviewCount",
+              COALESCE(SUM(r."helpful"), 0) AS "helpfulVotes"
+            FROM "User" u
+            JOIN "Review" r ON r."userId" = u."id"
+            WHERE u."isSeed" = false
+              AND r."isApproved" = true
+            GROUP BY u."id", u."name"
+            HAVING COUNT(r."id") > 0
+            ORDER BY "helpfulVotes" DESC, "reviewCount" DESC
+            LIMIT ${limit}
+          `,
       DB_QUERY_TIMEOUT_MS
     );
-    return reviewers
-      .map((u) => ({
-        id: u.id,
-        name: u.name || "Sportovec",
-        reviewCount: u.reviews.length,
-        helpfulVotes: u.reviews.reduce((sum, r) => sum + r.helpful, 0),
-      }))
-      .filter((u) => u.reviewCount > 0)
-      .sort((a, b) => b.helpfulVotes - a.helpfulVotes || b.reviewCount - a.reviewCount)
-      .slice(0, limit);
+    return rows.map((r) => ({
+      id: r.id,
+      name: r.name || "Sportovec",
+      reviewCount: Number(r.reviewCount),
+      helpfulVotes: Number(r.helpfulVotes),
+    }));
   } catch {
     return [];
   }

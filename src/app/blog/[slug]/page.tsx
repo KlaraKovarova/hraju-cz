@@ -13,7 +13,8 @@ import { BlogReviewCTA } from "@/components/BlogReviewCTA";
 import { AdSlot } from "@/components/AdSlot";
 import type { Metadata } from "next";
 
-export const revalidate = 3600;
+// ISR: revalidate blog posts every 7 days (static content rarely changes)
+export const revalidate = 604800;
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;

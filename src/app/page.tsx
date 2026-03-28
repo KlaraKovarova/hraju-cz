@@ -22,8 +22,8 @@ import { MonthlyChallenges } from "@/components/MonthlyChallenges";
 import { getActiveChallenges } from "@/lib/monthly-challenges";
 import { getAllPosts, CATEGORIES } from "@/lib/blog";
 
-// ISR: revalidate homepage every 6 hours
-export const revalidate = 21600;
+// ISR: revalidate homepage every 24 hours (optimization: reduce Vercel invocations)
+export const revalidate = 86400;
 
 export default async function Home() {
   const totalFacilities = getTotalFacilityCount();

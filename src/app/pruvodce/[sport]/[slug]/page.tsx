@@ -19,7 +19,8 @@ import { FacilityMap } from "@/components/FacilityMap";
 import { AdSlot } from "@/components/AdSlot";
 import type { Metadata } from "next";
 
-export const revalidate = 3600;
+// ISR: revalidate guide pages every 7 days (static content)
+export const revalidate = 604800;
 
 export function generateStaticParams() {
   return getAllGuideSlugs().map(({ sport, slug }) => ({ sport, slug }));

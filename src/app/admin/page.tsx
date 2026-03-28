@@ -4,57 +4,62 @@ import { getTotalFacilityCount } from "@/lib/data";
 
 async function getAdminStats() {
   try {
-    const [
-      totalDbFacilities,
-      activeFacilities,
-      claimedFacilities,
-      premiumFacilities,
-      totalReviews,
-      pendingReviews,
-      approvedReviews,
-      totalUsers,
-      seedUsers,
-      pendingEditRequests,
-      totalContacts,
-      totalEvents,
-      activeEvents,
-      pendingEvents,
-      unapprovedFacilities,
-    ] = await Promise.all([
-      prisma.facility.count(),
-      prisma.facility.count({ where: { isActive: true } }),
-      prisma.facility.count({ where: { isClaimed: true } }),
-      prisma.facility.count({ where: { isPremium: true } }),
-      prisma.review.count(),
-      prisma.review.count({ where: { isApproved: false } }),
-      prisma.review.count({ where: { isApproved: true } }),
-      prisma.user.count(),
-      prisma.user.count({ where: { isSeed: true } }),
-      prisma.editRequest.count({ where: { status: "PENDING" } }),
-      prisma.contactMessage.count(),
-      prisma.touristEvent.count(),
-      prisma.touristEvent.count({ where: { isActive: true } }),
-      prisma.touristEvent.count({ where: { isActive: false, source: "user" } }),
-      prisma.facility.count({ where: { isActive: true, isApproved: false } }),
-    ]);
+    const result = await prisma.$queryRaw<[{
+      totalDbFacilities: bigint;
+      activeFacilities: bigint;
+      claimedFacilities: bigint;
+      premiumFacilities: bigint;
+      totalReviews: bigint;
+      pendingReviews: bigint;
+      approvedReviews: bigint;
+      totalUsers: bigint;
+      seedUsers: bigint;
+      pendingEditRequests: bigint;
+      totalContacts: bigint;
+      totalEvents: bigint;
+      activeEvents: bigint;
+      pendingEvents: bigint;
+      unapprovedFacilities: bigint;
+    }]>`
+      SELECT
+        (SELECT COUNT(*) FROM "Facility") AS "totalDbFacilities",
+        (SELECT COUNT(*) FROM "Facility" WHERE "isActive" = true) AS "activeFacilities",
+        (SELECT COUNT(*) FROM "Facility" WHERE "isClaimed" = true) AS "claimedFacilities",
+        (SELECT COUNT(*) FROM "Facility" WHERE "isPremium" = true) AS "premiumFacilities",
+        (SELECT COUNT(*) FROM "Review") AS "totalReviews",
+        (SELECT COUNT(*) FROM "Review" WHERE "isApproved" = false) AS "pendingReviews",
+        (SELECT COUNT(*) FROM "Review" WHERE "isApproved" = true) AS "approvedReviews",
+        (SELECT COUNT(*) FROM "User") AS "totalUsers",
+        (SELECT COUNT(*) FROM "User" WHERE "isSeed" = true) AS "seedUsers",
+        (SELECT COUNT(*) FROM "EditRequest" WHERE "status" = 'PENDING') AS "pendingEditRequests",
+        (SELECT COUNT(*) FROM "ContactMessage") AS "totalContacts",
+        (SELECT COUNT(*) FROM "TouristEvent") AS "totalEvents",
+        (SELECT COUNT(*) FROM "TouristEvent" WHERE "isActive" = true) AS "activeEvents",
+        (SELECT COUNT(*) FROM "TouristEvent" WHERE "isActive" = false AND "source" = 'user') AS "pendingEvents",
+        (SELECT COUNT(*) FROM "Facility" WHERE "isActive" = true AND "isApproved" = false) AS "unapprovedFacilities"
+    `;
+
+    const row = result[0];
+    const totalUsers = Number(row.totalUsers);
+    const seedUsers = Number(row.seedUsers);
 
     return {
-      totalDbFacilities,
-      activeFacilities,
-      claimedFacilities,
-      premiumFacilities,
-      totalReviews,
-      pendingReviews,
-      approvedReviews,
+      totalDbFacilities: Number(row.totalDbFacilities),
+      activeFacilities: Number(row.activeFacilities),
+      claimedFacilities: Number(row.claimedFacilities),
+      premiumFacilities: Number(row.premiumFacilities),
+      totalReviews: Number(row.totalReviews),
+      pendingReviews: Number(row.pendingReviews),
+      approvedReviews: Number(row.approvedReviews),
       totalUsers,
       realUsers: totalUsers - seedUsers,
       seedUsers,
-      pendingEditRequests,
-      totalContacts,
-      totalEvents,
-      activeEvents,
-      pendingEvents,
-      unapprovedFacilities,
+      pendingEditRequests: Number(row.pendingEditRequests),
+      totalContacts: Number(row.totalContacts),
+      totalEvents: Number(row.totalEvents),
+      activeEvents: Number(row.activeEvents),
+      pendingEvents: Number(row.pendingEvents),
+      unapprovedFacilities: Number(row.unapprovedFacilities),
     };
   } catch {
     return null;

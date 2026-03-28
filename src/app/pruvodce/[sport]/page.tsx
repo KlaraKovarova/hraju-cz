@@ -7,7 +7,8 @@ import { getGuideDefinitions } from "@/lib/guides";
 import { getSportFacilityTypePluralGenitive } from "@/lib/seo";
 import type { Metadata } from "next";
 
-export const revalidate = 3600;
+// ISR: revalidate guide index every 7 days (static content)
+export const revalidate = 604800;
 
 export function generateStaticParams() {
   return SPORTS.map((s) => ({ sport: s.slug }));

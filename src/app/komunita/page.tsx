@@ -20,7 +20,8 @@ import { SportFilterPills } from "@/components/SportFilterPills";
 import { AdSlot } from "@/components/AdSlot";
 import type { Metadata } from "next";
 
-export const revalidate = 3600;
+// ISR: revalidate community page every 6 hours (optimization: reduce Vercel invocations)
+export const revalidate = 21600;
 
 export const metadata: Metadata = {
   title: "Komunita — hraju.cz",

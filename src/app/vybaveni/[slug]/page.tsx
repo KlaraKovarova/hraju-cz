@@ -5,7 +5,8 @@ import { ArrowLeft, ExternalLink, Shield, Weight, Ruler } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import type { Metadata } from "next";
 
-export const revalidate = 3600;
+// ISR: revalidate product detail every 7 days (rarely changes)
+export const revalidate = 604800;
 
 interface Props {
   params: Promise<{ slug: string }>;
