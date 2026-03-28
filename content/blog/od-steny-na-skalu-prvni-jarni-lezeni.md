@@ -145,3 +145,12 @@ Váš zážitek pomůže dalším lezců, kteří váhají. [Napište recenzi](/
 - [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+
+---
+
+## Související články
+
+- [Z haly na skálu: 7 kroků pro první venkovní lezení](/blog/z-haly-na-skalu-7-kroku-venkovni-lezeni)
+- [Venkovní lezení v Česku: Startujeme jarní sezónu 2026](/blog/venkovni-lezeni-jarni-pruvodce-2026)
+- [Lezecké vybavení pro venkovní sezónu: Co potřebujete a co ne](/blog/lezecke-vybaveni-venkovni-sezona-checklist)
+- [Kde lézt venku v ČR — top outdoor lezecké oblasti pro sezónu 2026](/blog/kde-lezt-venku-v-cr-top-outdoor-lezecke-oblasti)

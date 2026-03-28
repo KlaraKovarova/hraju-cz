@@ -95,3 +95,12 @@ Po 3 check-inech na lezeckých stěnách získáte odznak **🧗 Lezec**. [Jak c
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 - [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
 - [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+
+---
+
+## Související články
+
+- [Nejlepší lezecké stěny v Praze — kompletní přehled 2026](/blog/nejlepsi-lezecke-steny-v-praze-kompletni-prehled)
+- [Jak začít s lezením na stěně — kompletní průvodce pro začátečníky](/blog/jak-zacit-s-lezenim-na-stene)
+- [Lezecké stěny a bouldery v Brně — kompletní přehled s cenami 2026](/blog/lezecke-steny-v-brne-pruvodce)
+- [Sezónní průvodce lezením 2026: Kdy a kde lézt v každém ročním období](/blog/sezonni-pruvodce-lezenim-2026)

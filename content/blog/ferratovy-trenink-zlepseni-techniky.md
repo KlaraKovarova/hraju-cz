@@ -89,3 +89,12 @@ Ferratový set má dvě karabiny. Při přejezdu kotvicích bodů musíte jednu 
 Trénink mimo skálu zlepšuje výkon na skále. Ale nic nenahradí čas na ferratě. Choďte pravidelně, lezete vědomě (ne jen „nahoru a dolů"), a po každé návštěvě si zapište, co jste se naučili.
 
 Sdílejte své tréninkové tipy s komunitou — [napište recenzi](/sport/ferraty) s tím, jak jste se na ferratu připravovali. Pomůže to dalším.
+
+---
+
+## Související články
+
+- [Jak se připravit na ferratovou sezónu — trénink, kondice, checklist](/blog/jak-se-pripravit-na-ferratovou-sezonu-trenink)
+- [Ferraty pro pokročilé: nejtěžší via ferraty v ČR](/blog/ferraty-pro-pokrocile-nejtezsi-via-ferraty-v-cr)
+- [Ferratové vybavení: Co potřebujete a kolik to stojí v 2026](/blog/ferratove-vybaveni-pruvodce-ceny-2026)
+- [Jak se připravit na ferraty po zimě: Kondice, technika a vybavení](/blog/jak-se-pripravit-na-ferraty-po-zime)

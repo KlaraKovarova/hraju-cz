@@ -141,3 +141,12 @@ Byli jste na závodě? [Sdílejte svůj zážitek](/sport/lezeni) s komunitou �
 A pokud hledáte, kde trénovat před závodem, [najděte lezecké stěny](/sport/lezeni) ve vašem městě — filtry vám pomohou najít centrum s nejlepším hodnocením nebo nejbližší k vám.
 
 Dobré leze!
+
+---
+
+## Související články
+
+- [Sezónní průvodce lezením 2026: Kdy a kde lézt v každém ročním období](/blog/sezonni-pruvodce-lezenim-2026)
+- [Nejlepší lezecké stěny v Praze — kompletní přehled 2026](/blog/nejlepsi-lezecke-steny-v-praze-kompletni-prehled)
+- [Lezení s přáteli: jak zorganizovat skupinový lezecký výlet](/blog/lezeni-s-prateli-jak-zorganizovat-lezecky-vylet)
+- [Venkovní lezení v dubnu a květnu 2026 — kam vyrazit a co vědět](/blog/venkovni-lezeni-duben-kveten-2026-pruvodce)

@@ -126,3 +126,12 @@ Tyhle tři jsou jen začátek. V Česku je přes 40 ferratových lokalit:
 - [Ferrata Mladá Vožice](/sport/ferraty/ferrata-mlada-vozice) — 3 trasy pod hradní zříceninou
 
 Kompletní přehled najdete na stránce [Ferraty v Česku →](/sport/ferraty).
+
+---
+
+## Související články
+
+- [Ferraty ve Středočeském kraji: kompletní průvodce 2026](/blog/ferraty-stredocesky-kraj-kompletni-pruvodce)
+- [Nejlepší ferraty pro začátečníky v ČR: Kde začít bez strachu](/blog/nejlepsi-ferraty-pro-zacatecniky-v-cr)
+- [Nejlepší ferraty v Česku podle recenzí na hraju.cz](/blog/nejlepsi-ferraty-podle-recenzi-hraju-cz)
+- [Top 5 ferrat blízko Prahy: Kam vyrazit na jednodenní výlet](/blog/ferraty-blizko-prahy-jednodenni-vylety)

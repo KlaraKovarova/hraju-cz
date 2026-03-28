@@ -153,3 +153,12 @@ Všechny ferraty: [/sport/ferraty](/sport/ferraty)
 - [Ferraty blízko Prahy](/blog/ferraty-blizko-prahy-jednodenni-vylety)
 - [Co zabalit na ferratu](/blog/co-zabalit-na-ferratu-kompletni-checklist)
 - [Odznaky na hraju.cz](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+
+---
+
+## Související články
+
+- [Top 5 ferrat v České republice pro sezónu 2026](/blog/top-5-ferrat-v-cesku)
+- [Nejlepší ferraty pro začátečníky v ČR: Kde začít bez strachu](/blog/nejlepsi-ferraty-pro-zacatecniky-v-cr)
+- [Ferraty s nejlepšími výhledy v ČR: 7 tras, které stojí za výstup](/blog/ferraty-s-nejlepsimi-vyhledy-v-cr)
+- [Porovnání ferrat: Slaný vs Kolín vs Tábor — kam vyrazit z Prahy?](/blog/porovnani-ferrat-slany-vs-kolin-vs-tabor)

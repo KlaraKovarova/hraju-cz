@@ -124,3 +124,12 @@ Organizujete lezecký výlet? Najděte **[nejlepší lezecké stěny](/sport/lez
 Po výletě nezapomeňte **[zaznamenat návštěvu](/sport/lezeni)** a ohodnotit stěnu — pomůžete tak dalším skupinám s výběrem. Vaše zkušenost je cenná: jestli místo zvládne smíšenou skupinu, jestli má dobrou půjčovnu, jestli obsluha poradí začátečníkům. Pár minut psaní se vyplatí.
 
 Lezení s přáteli je víc než sport — je to způsob, jak budovat důvěru, překonávat hranice a tvořit vzpomínky. Tak naplánujte ten výlet. Dneska.
+
+---
+
+## Související články
+
+- [Lezecká výzva: 3 stěny za měsíc — získejte odznak Lezec](/blog/lezecka-vyzva-3-steny-za-mesic)
+- [Venkovní lezení v Česku 2026: Nejlepší lokality od Adršpachu po Moravský kras](/blog/venkovni-lezeni-v-cesku-pruvodce-2026)
+- [Nejlepší lezecké stěny v Praze — kompletní přehled 2026](/blog/nejlepsi-lezecke-steny-v-praze-kompletni-prehled)
+- [Nejlepší lezecké víkendy na květen 2026 — kam a za kolik](/blog/lezecke-vikendy-kveten-2026-kam-za-kolik)

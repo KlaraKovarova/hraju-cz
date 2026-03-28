@@ -139,3 +139,12 @@ Procvičit techniku a vyzkoušet různé obtížnosti můžete v [lezeckém cent
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+---
+
+## Související články
+
+- [Jak začít s lezením na stěně — kompletní průvodce pro začátečníky](/blog/jak-zacit-s-lezenim-na-stene)
+- [Lezení pro začátečníky — jak začít a co potřebujete](/blog/lezeni-pro-zacatecniky-jak-zacit-a-co-potrebujete)
+- [Bezpečnost při lezení: 12 pravidel, která zachraňují životy](/blog/bezpecnost-pri-lezeni-pruvodce)
+- [Sezónní průvodce lezením 2026: Kdy a kde lézt v každém ročním období](/blog/sezonni-pruvodce-lezenim-2026)

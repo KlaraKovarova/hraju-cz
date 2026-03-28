@@ -207,3 +207,12 @@ Většina center nabízí zvýhodněné permanentky: měsíční (1 000–1 800 
 ---
 
 **Byli jste na některé pražské stěně?** Napište [recenzi](/sport/lezeni) a pomozte ostatním lezcom vybrat — vaše zkušenost je nejcennější průvodce.
+
+---
+
+## Související články
+
+- [Lezecká centra v Praze — kde lézt a boulderovat v roce 2026](/blog/lezecka-centra-v-praze)
+- [Lezecké stěny a bouldery v Brně — kompletní přehled s cenami 2026](/blog/lezecke-steny-v-brne-pruvodce)
+- [Jak začít s lezením na stěně — kompletní průvodce pro začátečníky](/blog/jak-zacit-s-lezenim-na-stene)
+- [Sezónní průvodce lezením 2026: Kdy a kde lézt v každém ročním období](/blog/sezonni-pruvodce-lezenim-2026)

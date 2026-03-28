@@ -139,3 +139,12 @@ Po třetím check-inu získáte odznak. Po pátém budete mít přehled, který 
 - [Ferraty v Jihočeském kraji](/blog/ferraty-v-jihoceskem-kraji-pruvodce)
 - [Ferraty v Ústeckém kraji](/blog/ferraty-v-usteckem-kraji-pruvodce)
 - [Ferrata vs lezecká stěna — srovnání](/blog/ferrata-vs-lezecka-stena-srovnani)
+
+---
+
+## Související články
+
+- [Lezecká výzva: 3 stěny za měsíc — získejte odznak Lezec](/blog/lezecka-vyzva-3-steny-za-mesic)
+- [Nejtěžší ferraty v Česku: 6 tras pro odvážné](/blog/nejtezssi-ferraty-v-cesku-vyzva-pro-odvazne)
+- [Víkendový ferratový roadtrip: 3denní itinerář přes Čechy](/blog/vikendovy-ferratovy-roadtrip-cechy-itinerar)
+- [Via ferraty v Česku 2026: Kompletní průvodce pro začátečníky i pokročilé](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)

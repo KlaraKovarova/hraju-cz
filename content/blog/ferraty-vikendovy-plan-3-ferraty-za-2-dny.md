@@ -134,3 +134,12 @@ Nemáte vlastní set? Podívejte se na [doporučené vybavení](/vybaveni) — n
 Tři ferraty za dva dny v Ústeckém kraji je plán, který zvládne fyzicky připravený nadšenec bez zkušeností s vysokohorskou turistikou — ale odměna je proporcionální. Výhledy na Labe, adrenalin na jistovacích článcích a pocit po zdolaném terénu, který jste před měsícem považovali za nepřekonatelný. To je přesně ten druh víkendu, kvůli kterému má smysl vstávat v sobotu v šest ráno.
 
 Absolvovali jste ferratový víkend? [Sdílejte svůj zážitek](/sport/ferraty) a inspirujte ostatní.
+
+---
+
+## Související články
+
+- [Víkendový ferratový roadtrip: 3denní itinerář přes Čechy](/blog/vikendovy-ferratovy-roadtrip-cechy-itinerar)
+- [Top 5 ferrat blízko Prahy: Kam vyrazit na jednodenní výlet](/blog/ferraty-blizko-prahy-jednodenni-vylety)
+- [Ferraty pro páry: 5 romantických výletů s adrenalinem](/blog/ferraty-pro-pary-romanticke-vylety)
+- [Top 5 ferrat v České republice pro sezónu 2026](/blog/top-5-ferrat-v-cesku)

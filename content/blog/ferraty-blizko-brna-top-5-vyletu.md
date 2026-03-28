@@ -173,3 +173,12 @@ Pokud chcete za jeden víkend projít maximum moravských ferrat:
 - **Porovnejte** — podívejte se, jak ostatní hodnotí moravské ferraty v [přehledu podle recenzí](/blog/nejlepsi-ferraty-podle-recenzi-hraju-cz)
 
 Hledáte víc? Zkuste [Ferratovou výzvu: 5 ferrat za jaro 2026](/blog/ferratova-vyzva-5-ferrat-jaro-2026) nebo se podívejte na [kompletní průvodce ferratami v ČR](/blog/ferraty-v-cesku-kompletni-pruvodce-2026).
+
+---
+
+## Související články
+
+- [Ferraty v Jihočeském kraji: 7 lokalit od začátečníků po experty](/blog/ferraty-v-jihoceskem-kraji-pruvodce)
+- [Top 5 ferrat v České republice pro sezónu 2026](/blog/top-5-ferrat-v-cesku)
+- [Ferraty pro rodiny s dětmi: Bezpečný průvodce pro rodiče](/blog/ferraty-pro-rodiny-s-detmi-pruvodce)
+- [Via ferraty v Česku 2026: Kompletní průvodce pro začátečníky i pokročilé](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)

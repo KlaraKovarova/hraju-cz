@@ -151,3 +151,12 @@ Po lezení se můžete zahřát na [lezeckých stěnách v Brně](/sport/lezeni)
 4. **Respektujte pravidla.** Mokré pískovce se nelezou. Ferraty mají svá pravidla. Každá oblast má specifická omezení.
 
 Trénujte pravidelně na [pražských stěnách](/sport/lezeni) a naplánujte první venkovní výjezd — nejlepší čas je právě teď.
+
+---
+
+## Související články
+
+- [Nejlepší venkovní lezecké oblasti v ČR pro léto 2026](/blog/nejlepsi-venkovni-lezecke-oblasti-cr-leto-2026)
+- [Venkovní lezení v Česku 2026: Nejlepší lokality od Adršpachu po Moravský kras](/blog/venkovni-lezeni-v-cesku-pruvodce-2026)
+- [Český kras: Kompletní průvodce sportovním lezením](/blog/cesky-kras-pruvodce-sportovni-lezeni)
+- [Lezení na pískovci — pravidla, etika a jak začít](/blog/lezeni-na-piskovci-pravidla-etika-jak-zacit)

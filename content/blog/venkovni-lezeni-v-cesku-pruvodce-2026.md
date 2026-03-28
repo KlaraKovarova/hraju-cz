@@ -138,3 +138,12 @@ Najděte [lezeckou stěnu ve svém městě →](/sport/lezeni)
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+---
+
+## Související články
+
+- [Kde lézt venku v ČR — top outdoor lezecké oblasti pro sezónu 2026](/blog/kde-lezt-venku-v-cr-top-outdoor-lezecke-oblasti)
+- [Nejlepší venkovní lezecké oblasti v ČR pro léto 2026](/blog/nejlepsi-venkovni-lezecke-oblasti-cr-leto-2026)
+- [Český kras: Kompletní průvodce sportovním lezením](/blog/cesky-kras-pruvodce-sportovni-lezeni)
+- [Lezení na pískovci — pravidla, etika a jak začít](/blog/lezeni-na-piskovci-pravidla-etika-jak-zacit)

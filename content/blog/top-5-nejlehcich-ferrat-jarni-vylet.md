@@ -147,3 +147,12 @@ Sdílejte svůj zážitek! [Napište recenzi](/prihlaseni) a pomozte ostatním r
 - [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+
+---
+
+## Související články
+
+- [Nejlepší ferraty pro začátečníky v ČR: Kde začít bez strachu](/blog/nejlepsi-ferraty-pro-zacatecniky-v-cr)
+- [První ferrata: Co vás čeká na vaší první zajištěné cestě](/blog/prvni-ferrata-co-vas-ceka-na-prvni-trase)
+- [Ferraty s dětmi na jaře 2026: Kam vyrazit a na co si dát pozor](/blog/ferraty-s-detmi-jarni-pruvodce-2026)
+- [Nejlepší ferraty na jaro 2026: Kam vyrazit jako první](/blog/nejlepsi-ferraty-na-jaro-2026)

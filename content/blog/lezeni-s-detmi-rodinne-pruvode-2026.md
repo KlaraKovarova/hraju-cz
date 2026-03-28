@@ -117,3 +117,12 @@ Najděte lezecké centrum pro rodiny ve vašem regionu na [hraju.cz →](/sport/
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+---
+
+## Související články
+
+- [Lezení pro začátečníky — jak začít a co potřebujete](/blog/lezeni-pro-zacatecniky-jak-zacit-a-co-potrebujete)
+- [Nejlepší lezecké stěny v Praze — kompletní přehled 2026](/blog/nejlepsi-lezecke-steny-v-praze-kompletni-prehled)
+- [Bezpečnost při lezení: 12 pravidel, která zachraňují životy](/blog/bezpecnost-pri-lezeni-pruvodce)
+- [Lezecká centra v Praze — kde lézt a boulderovat v roce 2026](/blog/lezecka-centra-v-praze)

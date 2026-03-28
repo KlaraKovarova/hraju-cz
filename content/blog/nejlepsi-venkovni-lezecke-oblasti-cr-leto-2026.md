@@ -168,3 +168,12 @@ Venkovní lezení po zimě stráveném na stěně vyžaduje adaptaci. Skála se 
 Léto 2026 nabízí skvělé podmínky pro venkovní lezení — jen je potřeba hrát to chytře. Vyrazte brzy ráno nebo podvečer, hledejte severní stěny a stinné kaňony, a nezapomeňte na Labe nebo Berounku jako ochlazovací zastávku.
 
 Máte svou oblíbenou venkovní lezeckou oblast? [Přidejte recenzi](/sport/lezeni) a pomozte dalším lezcům najít jejich místo na skále.
+
+---
+
+## Související články
+
+- [Kde lézt venku v ČR — top outdoor lezecké oblasti pro sezónu 2026](/blog/kde-lezt-venku-v-cr-top-outdoor-lezecke-oblasti)
+- [Venkovní lezení v Česku 2026: Nejlepší lokality od Adršpachu po Moravský kras](/blog/venkovni-lezeni-v-cesku-pruvodce-2026)
+- [Český kras: Kompletní průvodce sportovním lezením](/blog/cesky-kras-pruvodce-sportovni-lezeni)
+- [Lezení na pískovci — pravidla, etika a jak začít](/blog/lezeni-na-piskovci-pravidla-etika-jak-zacit)

@@ -127,3 +127,12 @@ Každá stěna má profil s adresou, mapou, recenzemi a check-iny od komunity. N
 - [Bezpečnost při lezení](/blog/bezpecnost-pri-lezeni-pruvodce)
 - [Odznaky na hraju.cz](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Ferratová výzva: 5 ferrat za jaro 2026](/blog/ferratova-vyzva-5-ferrat-jaro-2026)
+
+---
+
+## Související články
+
+- [Ferratová výzva: Navštivte 5 ferrat za jaro 2026](/blog/ferratova-vyzva-5-ferrat-jaro-2026)
+- [Nejlepší lezecké stěny v Praze — kompletní přehled 2026](/blog/nejlepsi-lezecke-steny-v-praze-kompletni-prehled)
+- [Lezecké stěny a bouldery v Brně — kompletní přehled s cenami 2026](/blog/lezecke-steny-v-brne-pruvodce)
+- [Lezení s přáteli: jak zorganizovat skupinový lezecký výlet](/blog/lezeni-s-prateli-jak-zorganizovat-lezecky-vylet)

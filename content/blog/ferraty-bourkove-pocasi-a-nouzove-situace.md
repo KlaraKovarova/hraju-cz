@@ -139,3 +139,12 @@ Před výběrem trasy si přečtěte [recenze od ostatních ferratistů](/sport/
 ---
 
 Zažili jste nepřízeň počasí na ferratě? [Sdílejte svůj příběh](/sport/ferraty) a pomozte ostatním se připravit. Vaše zkušenosti z terénu jsou pro komunitu cennější než jakákoliv příručka.
+
+---
+
+## Související články
+
+- [Bezpečnost na ferratách v létě: bouřky, horko a první pomoc](/blog/bezpecnost-na-ferratach-letni-rizika)
+- [Co zabalit na ferratu: Kompletní checklist pro jednodenní výlet](/blog/co-zabalit-na-ferratu-kompletni-checklist)
+- [Via ferraty v Česku 2026: Kompletní průvodce pro začátečníky i pokročilé](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
+- [První ferrata: Co vás čeká na vaší první zajištěné cestě](/blog/prvni-ferrata-co-vas-ceka-na-prvni-trase)

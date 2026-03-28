@@ -87,3 +87,12 @@ Středočeský kraj má mírnější klima než horské oblasti. Ferraty tu mů�
 Byli jste na ferratě ve Středočeském kraji? [Zaznamenejte návštěvu](/sport/ferraty) a podělte se o zkušenost s komunitou. Vaše recenze pomůže ostatním vybrat správnou trasu — a třeba získáte odznak Ferratový Průzkumník.
 
 Kompletní přehled všech českých ferrat najdete v [průvodci ferratami v ČR](/sport/ferraty).
+
+---
+
+## Související články
+
+- [Porovnání ferrat: Slaný vs Kolín vs Tábor — kam vyrazit z Prahy?](/blog/porovnani-ferrat-slany-vs-kolin-vs-tabor)
+- [Top 5 ferrat blízko Prahy: Kam vyrazit na jednodenní výlet](/blog/ferraty-blizko-prahy-jednodenni-vylety)
+- [Ferraty v Ústeckém kraji: Kde lézt a co vědět v 2026](/blog/ferraty-v-usteckem-kraji-pruvodce)
+- [Via ferraty v Česku 2026: Kompletní průvodce pro začátečníky i pokročilé](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)

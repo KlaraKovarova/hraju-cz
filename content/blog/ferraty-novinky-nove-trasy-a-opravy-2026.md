@@ -110,3 +110,12 @@ Kompletní přehled všech ferrat v Česku najdete na [hraju.cz/sport/ferraty](/
 - [Ferratová sezóna duben–květen 2026](/blog/ferratova-sezona-duben-kveten-2026-pruvodce)
 - [Nová ferrata Mladá Vožice — průvodce](/blog/nova-ferrata-mlada-vozice)
 - [Ferratové vybavení — průvodce cenami 2026](/blog/ferratove-vybaveni-pruvodce-ceny-2026)
+
+---
+
+## Související články
+
+- [Ferraty otevírací sezóna 2026: Které trasy jsou v dubnu připravené](/blog/ferraty-oteviraci-sezona-2026-duben)
+- [Nová ferrata v Mladé Vožici — kompletní průvodce pro rok 2026](/blog/nova-ferrata-mlada-vozice)
+- [Via ferraty v Česku 2026: Kompletní průvodce pro začátečníky i pokročilé](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
+- [Ferratová sezóna duben–květen 2026: Kompletní přehled otevření a podmínek](/blog/ferratova-sezona-duben-kveten-2026-pruvodce)

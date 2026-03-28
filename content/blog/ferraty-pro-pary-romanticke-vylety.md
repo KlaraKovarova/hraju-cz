@@ -95,3 +95,12 @@ Pokud nemáte vlastní, většina ferrat v okolí nabízí půjčovny nebo se po
 ## Sdílejte svůj ferratový příběh
 
 Byli jste na ferratě spolu? [Napište recenzi](/sport/ferraty) a inspirujte ostatní páry. Nejlepší recenze jsou ty, které popisují zážitek — ne jen obtížnost. Jak jste se cítili? Co vás překvapilo? Doporučili byste to dalším párům?
+
+---
+
+## Související články
+
+- [Ferraty s nejlepšími výhledy v ČR: 7 tras, které stojí za výstup](/blog/ferraty-s-nejlepsimi-vyhledy-v-cr)
+- [Top 5 ferrat blízko Prahy: Kam vyrazit na jednodenní výlet](/blog/ferraty-blizko-prahy-jednodenni-vylety)
+- [Víkendový ferratový plán: 3 ferraty za 2 dny v Ústeckém kraji](/blog/ferraty-vikendovy-plan-3-ferraty-za-2-dny)
+- [Via ferraty v Česku 2026: Kompletní průvodce pro začátečníky i pokročilé](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)

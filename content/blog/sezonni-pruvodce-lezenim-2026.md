@@ -138,3 +138,12 @@ Najděte lezeckou stěnu ve svém regionu na [hraju.cz →](/sport/lezeni)
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+---
+
+## Související články
+
+- [Venkovní lezení v Česku 2026: Nejlepší lokality od Adršpachu po Moravský kras](/blog/venkovni-lezeni-v-cesku-pruvodce-2026)
+- [Nejlepší lezecké stěny v Praze — kompletní přehled 2026](/blog/nejlepsi-lezecke-steny-v-praze-kompletni-prehled)
+- [Lezecké závody a eventy léto 2026: kompletní přehled](/blog/lezecke-zavody-eventy-leto-2026-prehled)
+- [Jak začít s lezením na stěně — kompletní průvodce pro začátečníky](/blog/jak-zacit-s-lezenim-na-stene)

@@ -165,3 +165,12 @@ Zaznamenávejte si návrat do formy na hraju.cz:
 - [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+
+---
+
+## Související články
+
+- [Ferratová sezóna duben–květen 2026: Kompletní přehled otevření a podmínek](/blog/ferratova-sezona-duben-kveten-2026-pruvodce)
+- [Jak se připravit na ferratovou sezónu — trénink, kondice, checklist](/blog/jak-se-pripravit-na-ferratovou-sezonu-trenink)
+- [Ferraty otevírací sezóna 2026: Které trasy jsou v dubnu připravené](/blog/ferraty-oteviraci-sezona-2026-duben)
+- [Co zabalit na ferratu: Kompletní checklist pro jednodenní výlet](/blog/co-zabalit-na-ferratu-kompletni-checklist)

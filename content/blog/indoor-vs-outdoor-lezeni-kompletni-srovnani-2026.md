@@ -147,3 +147,12 @@ Všechny lezecké stěny a boulderovny najdete na [hraju.cz/sport/lezeni](/sport
 - [Lezecké obtížnosti — stupnice UIAA a French](/blog/lezecke-obtiznosti-stupnice-uiaa-french)
 - [Bezpečnost při lezení — průvodce](/blog/bezpecnost-pri-lezeni-pruvodce)
 - [Lezecká výzva: 3 stěny za měsíc](/blog/lezecka-vyzva-3-steny-za-mesic)
+
+---
+
+## Související články
+
+- [Z haly na skálu: 7 kroků pro první venkovní lezení](/blog/z-haly-na-skalu-7-kroku-venkovni-lezeni)
+- [Od stěny na skálu: Jak zvládnout první jarní lezení venku](/blog/od-steny-na-skalu-prvni-jarni-lezeni)
+- [Nejlepší venkovní lezecké oblasti v ČR pro léto 2026](/blog/nejlepsi-venkovni-lezecke-oblasti-cr-leto-2026)
+- [Nejlepší lezecké stěny v Praze — kompletní přehled 2026](/blog/nejlepsi-lezecke-steny-v-praze-kompletni-prehled)

@@ -112,3 +112,12 @@ Lezení na stěně je sport, který vás vtáhne. Kombinuje fyzickou zdatnost s 
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+---
+
+## Související články
+
+- [Lezení pro začátečníky — jak začít a co potřebujete](/blog/lezeni-pro-zacatecniky-jak-zacit-a-co-potrebujete)
+- [Lezecké obtížnosti: Průvodce stupnicemi UIAA, French a Fontainebleau 2026](/blog/lezecke-obtiznosti-stupnice-uiaa-french)
+- [Bezpečnost při lezení: 12 pravidel, která zachraňují životy](/blog/bezpecnost-pri-lezeni-pruvodce)
+- [Nejlepší lezecké stěny v Praze — kompletní přehled 2026](/blog/nejlepsi-lezecke-steny-v-praze-kompletni-prehled)

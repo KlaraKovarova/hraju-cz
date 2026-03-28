@@ -166,3 +166,12 @@ Byli jste na ferratě s úžasným výhledem? Sdílejte ho s komunitou:
 Sbíráte ferraty? Podívejte se na [Ferratovou výzvu: 5 ferrat za jaro 2026](/blog/ferratova-vyzva-5-ferrat-jaro-2026) a prozkoumejte výhledy, které jste ještě neviděli.
 
 Další tipy: [Kompletní průvodce ferratami v ČR](/blog/ferraty-v-cesku-kompletni-pruvodce-2026) | [Co zabalit na ferratu](/blog/co-zabalit-na-ferratu-kompletni-checklist) | [Ferraty blízko Prahy](/blog/ferraty-blizko-prahy-jednodenni-vylety) | [Ferraty blízko Brna](/blog/ferraty-blizko-brna-top-5-vyletu)
+
+---
+
+## Související články
+
+- [Top 5 ferrat v České republice pro sezónu 2026](/blog/top-5-ferrat-v-cesku)
+- [Ferraty pro páry: 5 romantických výletů s adrenalinem](/blog/ferraty-pro-pary-romanticke-vylety)
+- [5 méně známých ferrat v Česku, které stojí za návštěvu](/blog/5-mene-znamych-ferrat-cesko-skryte-poklady)
+- [Via ferraty v Česku 2026: Kompletní průvodce pro začátečníky i pokročilé](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)

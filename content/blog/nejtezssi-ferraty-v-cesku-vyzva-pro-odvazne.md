@@ -167,3 +167,12 @@ Prošli jste všech 6? Dokažte to:
 - **Porovnejte s ostatními** — podívejte se na [žebříček komunity](/blog/zebricek-recenzentu-hraju-cz)
 
 Chcete nejdřív rozjet sezónu na lehčích trasách? Podívejte se na [ferraty pro začátečníky](/blog/nejlepsi-ferraty-pro-zacatecniky-v-cr) nebo [ferratovou jarní výzvu](/blog/ferratova-vyzva-5-ferrat-jaro-2026).
+
+---
+
+## Související články
+
+- [Ferraty pro pokročilé: nejtěžší via ferraty v ČR](/blog/ferraty-pro-pokrocile-nejtezsi-via-ferraty-v-cr)
+- [Jak zlepšit techniku na ferratách: tréninkový plán pro sezónu 2026](/blog/ferratovy-trenink-zlepseni-techniky)
+- [Ferratová výzva: Navštivte 5 ferrat za jaro 2026](/blog/ferratova-vyzva-5-ferrat-jaro-2026)
+- [Via ferraty v Česku 2026: Kompletní průvodce pro začátečníky i pokročilé](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)

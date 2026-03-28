@@ -103,3 +103,12 @@ V případě nehody na ferratě:
 Zažili jste na ferratě nebezpečnou situaci? [Napište recenzi](/sport/ferraty) a upozorněte ostatní. Recenze o bezpečnostních podmínkách (stav lan, kluzké příčle, pád kamení) jsou pro komunitu nejcennější.
 
 Přehled všech ferrat v ČR včetně hodnocení obtížnosti: [kompletní průvodce →](/sport/ferraty)
+
+---
+
+## Související články
+
+- [Bezpečnost na ferratách: co dělat při bouřce a nepřízni počasí](/blog/ferraty-bourkove-pocasi-a-nouzove-situace)
+- [Co zabalit na ferratu: Kompletní checklist pro jednodenní výlet](/blog/co-zabalit-na-ferratu-kompletni-checklist)
+- [Via ferraty v Česku 2026: Kompletní průvodce pro začátečníky i pokročilé](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
+- [Ferratové vybavení: Co potřebujete a kolik to stojí v 2026](/blog/ferratove-vybaveni-pruvodce-ceny-2026)

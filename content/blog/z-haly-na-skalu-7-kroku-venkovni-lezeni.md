@@ -195,3 +195,12 @@ Detailní přehled: [Venkovní lezení duben–květen 2026 →](/blog/venkovni-
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+---
+
+## Související články
+
+- [Od stěny na skálu: Jak zvládnout první jarní lezení venku](/blog/od-steny-na-skalu-prvni-jarni-lezeni)
+- [Indoor vs. outdoor lezení: Kompletní srovnání cen, obtížností a vybavení](/blog/indoor-vs-outdoor-lezeni-kompletni-srovnani-2026)
+- [Lezecké vybavení pro venkovní sezónu: Co potřebujete a co ne](/blog/lezecke-vybaveni-venkovni-sezona-checklist)
+- [Venkovní lezení v Česku 2026: Nejlepší lokality od Adršpachu po Moravský kras](/blog/venkovni-lezeni-v-cesku-pruvodce-2026)

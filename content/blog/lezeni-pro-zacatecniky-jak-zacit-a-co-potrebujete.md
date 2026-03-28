@@ -173,3 +173,12 @@ Kompletní přehled stěn v celé ČR najdete v [sekci lezení na hraju.cz](/spo
 ---
 
 Jste připraveni? Najděte si [lezecké centrum ve svém městě](/sport/lezeni), obujte lezečky a udělejte první tah. Zbytek přijde sám.
+
+---
+
+## Související články
+
+- [Jak začít s lezením na stěně — kompletní průvodce pro začátečníky](/blog/jak-zacit-s-lezenim-na-stene)
+- [Lezecké obtížnosti: Průvodce stupnicemi UIAA, French a Fontainebleau 2026](/blog/lezecke-obtiznosti-stupnice-uiaa-french)
+- [Bezpečnost při lezení: 12 pravidel, která zachraňují životy](/blog/bezpecnost-pri-lezeni-pruvodce)
+- [Nejlepší lezecké stěny v Praze — kompletní přehled 2026](/blog/nejlepsi-lezecke-steny-v-praze-kompletni-prehled)

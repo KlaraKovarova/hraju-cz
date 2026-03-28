@@ -156,3 +156,12 @@ Vaše děti si budou jarní ferraty pamatovat. A díky [check-inům a odznaků](
 - [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+
+---
+
+## Související články
+
+- [Ferraty pro rodiny s dětmi: Bezpečný průvodce pro rodiče](/blog/ferraty-pro-rodiny-s-detmi-pruvodce)
+- [Ferraty s dětmi v létě 2026: kam vyrazit a na co dát pozor](/blog/ferraty-s-detmi-letni-pruvodce-2026)
+- [Ferraty s dětmi od 10 let: Kam vyrazit a jak je motivovat](/blog/ferraty-s-detmi-od-10-let-kam-vyrazit)
+- [Nejlepší ferraty pro začátečníky v ČR: Kde začít bez strachu](/blog/nejlepsi-ferraty-pro-zacatecniky-v-cr)

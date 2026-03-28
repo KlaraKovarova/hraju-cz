@@ -160,3 +160,12 @@ Nejlepší zdroj aktuálních informací jsou lezci, kteří tam právě byli:
 - [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+
+---
+
+## Související články
+
+- [Venkovní lezení v dubnu a květnu 2026 — kam vyrazit a co vědět](/blog/venkovni-lezeni-duben-kveten-2026-pruvodce)
+- [Od stěny na skálu: Jak zvládnout první jarní lezení venku](/blog/od-steny-na-skalu-prvni-jarni-lezeni)
+- [Z haly na skálu: 7 kroků pro první venkovní lezení](/blog/z-haly-na-skalu-7-kroku-venkovni-lezeni)
+- [Lezecké vybavení pro venkovní sezónu: Co potřebujete a co ne](/blog/lezecke-vybaveni-venkovni-sezona-checklist)

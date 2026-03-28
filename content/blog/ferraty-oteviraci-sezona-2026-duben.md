@@ -127,3 +127,12 @@ Pomozte ostatním — [napište recenzi](/prihlaseni) své první jarní ferraty
 - [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+
+---
+
+## Související články
+
+- [Jak se připravit na ferraty po zimě: Kondice, technika a vybavení](/blog/jak-se-pripravit-na-ferraty-po-zime)
+- [Ferratová sezóna duben–květen 2026: Kompletní přehled otevření a podmínek](/blog/ferratova-sezona-duben-kveten-2026-pruvodce)
+- [Nejlepší ferraty na jaro 2026: Kam vyrazit jako první](/blog/nejlepsi-ferraty-na-jaro-2026)
+- [Ferraty novinky 2026: Nové trasy, rozšíření a opravy](/blog/ferraty-novinky-nove-trasy-a-opravy-2026)

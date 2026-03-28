@@ -160,3 +160,12 @@ Zvládli jste první ferratu? Gratulujeme! Teď to dejte vědět ostatním:
 Po 3 check-inech na ferratách získáte odznak **Ferratový Průzkumník** a objevíte se na [žebříčku komunity](/blog/zebricek-recenzentu-hraju-cz).
 
 Zkuste [Ferratovou výzvu: 5 ferrat za jaro 2026](/blog/ferratova-vyzva-5-ferrat-jaro-2026) a proměňte svou první ferratu v sezónní dobrodružství.
+
+---
+
+## Související články
+
+- [První ferrata: Co vás čeká na vaší první zajištěné cestě](/blog/prvni-ferrata-co-vas-ceka-na-prvni-trase)
+- [Top 5 nejlehčích ferrat pro první jarní výlet](/blog/top-5-nejlehcich-ferrat-jarni-vylet)
+- [Ferraty pro rodiny s dětmi: Bezpečný průvodce pro rodiče](/blog/ferraty-pro-rodiny-s-detmi-pruvodce)
+- [Via ferraty v Česku 2026: Kompletní průvodce pro začátečníky i pokročilé](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)

@@ -137,3 +137,12 @@ Najděte centrum s kurzy ve vašem regionu na [hraju.cz →](/sport/lezeni)
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+---
+
+## Související články
+
+- [Jak začít s lezením na stěně — kompletní průvodce pro začátečníky](/blog/jak-zacit-s-lezenim-na-stene)
+- [Lezecké obtížnosti: Průvodce stupnicemi UIAA, French a Fontainebleau 2026](/blog/lezecke-obtiznosti-stupnice-uiaa-french)
+- [Lezecké vybavení pro venkovní sezónu: Co potřebujete a co ne](/blog/lezecke-vybaveni-venkovni-sezona-checklist)
+- [Indoor vs. outdoor lezení: Kompletní srovnání cen, obtížností a vybavení](/blog/indoor-vs-outdoor-lezeni-kompletni-srovnani-2026)

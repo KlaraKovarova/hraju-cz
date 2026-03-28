@@ -177,3 +177,12 @@ Byli jste lézt venku? [Napište recenzi](/prihlaseni) na hraju.cz a pomožte os
 - [Lezecká centra v Praze](/blog/lezecka-centra-v-praze-pruvodce)
 - [Bouldering pro začátečníky](/blog/bouldering-pro-zacatecniky-kompletni-pruvodce)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+---
+
+## Související články
+
+- [Venkovní lezení v Česku: Startujeme jarní sezónu 2026](/blog/venkovni-lezeni-jarni-pruvodce-2026)
+- [Od stěny na skálu: Jak zvládnout první jarní lezení venku](/blog/od-steny-na-skalu-prvni-jarni-lezeni)
+- [Kde lézt venku v ČR — top outdoor lezecké oblasti pro sezónu 2026](/blog/kde-lezt-venku-v-cr-top-outdoor-lezecke-oblasti)
+- [Lezecké vybavení pro venkovní sezónu: Co potřebujete a co ne](/blog/lezecke-vybaveni-venkovni-sezona-checklist)
