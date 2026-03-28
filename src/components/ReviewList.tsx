@@ -20,6 +20,12 @@ interface ReviewPhoto {
   alt?: string | null;
 }
 
+interface ReviewBadge {
+  slug: string;
+  emoji: string;
+  name: string;
+}
+
 interface Review {
   id: string;
   userId?: string | null;
@@ -31,6 +37,7 @@ interface Review {
   replyCount: number;
   createdAt: string;
   photos?: ReviewPhoto[];
+  badges?: ReviewBadge[];
 }
 
 interface ReviewListProps {
@@ -136,6 +143,7 @@ export function ReviewList({ facilityId, facilityUrl, perPage = 10 }: ReviewList
             replyCount={review.replyCount}
             createdAt={review.createdAt}
             photos={review.photos}
+            badges={review.badges}
           />
         ))}
       </div>

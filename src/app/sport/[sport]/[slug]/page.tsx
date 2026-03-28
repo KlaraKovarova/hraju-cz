@@ -222,6 +222,14 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
   // Related blog posts for this sport
   const relatedBlogPosts = getPostsBySport(sportSlug).slice(0, 3);
 
+  // Top tips for inline display above review form
+  const topTips = await prisma.facilityTip.findMany({
+    where: { facilityId: facility.id, isApproved: true },
+    orderBy: { helpful: "desc" },
+    take: 4,
+    select: { id: true, text: true, helpful: true, user: { select: { name: true } } },
+  });
+
   // Track page view (fire-and-forget)
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -995,6 +1003,28 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
               <ReviewList facilityId={facility.id} facilityUrl={`https://www.hraju.cz/sport/${sportSlug}/${slug}`} />
             </div>
             <div>
+              {/* Inline top tips */}
+              {topTips.length > 0 && (
+                <div className="mb-6">
+                  <h3 className="mb-3 text-sm font-semibold text-zinc-700">
+                    Tipy od návštěvníků
+                  </h3>
+                  <div className="space-y-2">
+                    {topTips.map((tip) => (
+                      <div key={tip.id} className="flex items-start gap-2 rounded-lg bg-amber-50/60 px-3 py-2 text-xs text-zinc-600">
+                        <span className="mt-0.5 shrink-0">💡</span>
+                        <span>{tip.text}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <a
+                    href="#tipy"
+                    className="mt-2 inline-block text-xs font-medium text-emerald-600 hover:text-emerald-700"
+                  >
+                    Všechny tipy &darr;
+                  </a>
+                </div>
+              )}
               <h3 className="mb-3 text-sm font-semibold text-zinc-700">
                 Napsat recenzi
               </h3>

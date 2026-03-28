@@ -20,6 +20,12 @@ interface ReviewReply {
   createdAt: string;
 }
 
+interface ReviewBadge {
+  slug: string;
+  emoji: string;
+  name: string;
+}
+
 interface ReviewCardProps {
   id: string;
   facilityId: string;
@@ -33,6 +39,7 @@ interface ReviewCardProps {
   replyCount?: number;
   createdAt: string;
   photos?: ReviewPhoto[];
+  badges?: ReviewBadge[];
 }
 
 export function ReviewCard({
@@ -48,6 +55,7 @@ export function ReviewCard({
   replyCount: initialReplyCount = 0,
   createdAt,
   photos,
+  badges,
 }: ReviewCardProps) {
   const [helpful, setHelpful] = useState(initialHelpful);
   const [voted, setVoted] = useState(false);
@@ -161,18 +169,33 @@ export function ReviewCard({
             <User className="h-4 w-4" />
           </div>
           <div>
-            {userId ? (
-              <Link
-                href={`/uzivatel/${userId}`}
-                className="text-sm font-semibold text-zinc-900 hover:text-emerald-600 hover:underline"
-              >
-                {authorName}
-              </Link>
-            ) : (
-              <span className="text-sm font-semibold text-zinc-900">
-                {authorName}
-              </span>
-            )}
+            <div className="flex items-center gap-1.5">
+              {userId ? (
+                <Link
+                  href={`/uzivatel/${userId}`}
+                  className="text-sm font-semibold text-zinc-900 hover:text-emerald-600 hover:underline"
+                >
+                  {authorName}
+                </Link>
+              ) : (
+                <span className="text-sm font-semibold text-zinc-900">
+                  {authorName}
+                </span>
+              )}
+              {badges && badges.length > 0 && (
+                <span className="flex items-center gap-0.5">
+                  {badges.slice(0, 3).map((b) => (
+                    <span
+                      key={b.slug}
+                      title={b.name}
+                      className="text-xs leading-none"
+                    >
+                      {b.emoji}
+                    </span>
+                  ))}
+                </span>
+              )}
+            </div>
             <div className="mt-0.5 flex items-center gap-2">
               <StarRating rating={rating} size="sm" />
               <span className="text-xs text-zinc-400">

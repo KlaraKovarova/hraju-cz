@@ -4,6 +4,7 @@ import { sendReviewNotificationEmail, sendNewReviewOnFacilityEmail } from "@/lib
 import { getUserSession } from "@/lib/user-auth";
 import { findUsersToNotifyAboutReview, getUnsubscribeToken, buildUnsubscribeUrl, createFavoriteNotifications } from "@/lib/notifications";
 import { checkBadgesByCategory, getBadgeDefinition } from "@/lib/challenges";
+import { BADGE_META } from "@/lib/badge-meta";
 
 // GET /api/facilities/[id]/reviews — list approved reviews (paginated, newest first)
 export async function GET(
@@ -49,7 +50,28 @@ export async function GET(
     prisma.review.count({ where: { facilityId: id, isApproved: true } }),
   ]);
 
-  return NextResponse.json({ reviews, total, page, limit });
+  // Batch-fetch badges for all review authors
+  const userIds = [...new Set(reviews.map((r) => r.userId).filter(Boolean))] as string[];
+  const userBadges = userIds.length > 0
+    ? await prisma.userBadge.findMany({
+        where: { userId: { in: userIds } },
+        select: { userId: true, badgeSlug: true },
+      })
+    : [];
+  const badgesByUser = new Map<string, { slug: string; emoji: string; name: string }[]>();
+  for (const ub of userBadges) {
+    const meta = BADGE_META[ub.badgeSlug];
+    if (!meta) continue;
+    if (!badgesByUser.has(ub.userId)) badgesByUser.set(ub.userId, []);
+    badgesByUser.get(ub.userId)!.push({ slug: ub.badgeSlug, emoji: meta.emoji, name: meta.name });
+  }
+
+  const reviewsWithBadges = reviews.map((r) => ({
+    ...r,
+    badges: r.userId ? badgesByUser.get(r.userId) || [] : [],
+  }));
+
+  return NextResponse.json({ reviews: reviewsWithBadges, total, page, limit });
 }
 
 // POST /api/facilities/[id]/reviews — submit a review (requires user auth)
