@@ -443,6 +443,174 @@ export const BADGE_DEFINITIONS: BadgeDefinition[] = [
       return count >= 3;
     },
   },
+
+  // ─── Monthly challenge badges (July 2026) ─────────────────────────────
+  {
+    slug: "cervencovy-ferratista",
+    name: "\u010Cervencov\u00FD Ferratista",
+    description: "5 ferrat zdolan\u00FDch v \u010Dervenci 2026",
+    emoji: "\u26F0\uFE0F",
+    sportSlug: "ferraty",
+    category: "seasonal",
+    check: async (ctx) => {
+      const julyStart = new Date(2026, 6, 1);
+      const julyEnd = new Date(2026, 7, 1);
+      const count = await prisma.visit.count({
+        where: {
+          userId: ctx.userId,
+          createdAt: { gte: julyStart, lt: julyEnd },
+          facility: { sports: { some: { sport: { slug: "ferraty" } } } },
+        },
+      });
+      return count >= 5;
+    },
+  },
+  {
+    slug: "cervencovy-lezec",
+    name: "\u010Cervencov\u00FD Lezec",
+    description: "4 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v \u010Dervenci 2026",
+    emoji: "\uD83E\uDDD7",
+    sportSlug: "lezeni",
+    category: "seasonal",
+    check: async (ctx) => {
+      const julyStart = new Date(2026, 6, 1);
+      const julyEnd = new Date(2026, 7, 1);
+      const count = await prisma.visit.count({
+        where: {
+          userId: ctx.userId,
+          createdAt: { gte: julyStart, lt: julyEnd },
+          facility: { sports: { some: { sport: { slug: "lezeni" } } } },
+        },
+      });
+      return count >= 4;
+    },
+  },
+
+  // ─── Monthly challenge badges (August 2026) ───────────────────────────
+  {
+    slug: "srpnovy-ferratista",
+    name: "Srpnov\u00FD Ferratista",
+    description: "5 ferrat zdolan\u00FDch v srpnu 2026",
+    emoji: "\u26F0\uFE0F",
+    sportSlug: "ferraty",
+    category: "seasonal",
+    check: async (ctx) => {
+      const augStart = new Date(2026, 7, 1);
+      const augEnd = new Date(2026, 8, 1);
+      const count = await prisma.visit.count({
+        where: {
+          userId: ctx.userId,
+          createdAt: { gte: augStart, lt: augEnd },
+          facility: { sports: { some: { sport: { slug: "ferraty" } } } },
+        },
+      });
+      return count >= 5;
+    },
+  },
+  {
+    slug: "srpnovy-lezec",
+    name: "Srpnov\u00FD Lezec",
+    description: "4 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v srpnu 2026",
+    emoji: "\uD83E\uDDD7",
+    sportSlug: "lezeni",
+    category: "seasonal",
+    check: async (ctx) => {
+      const augStart = new Date(2026, 7, 1);
+      const augEnd = new Date(2026, 8, 1);
+      const count = await prisma.visit.count({
+        where: {
+          userId: ctx.userId,
+          createdAt: { gte: augStart, lt: augEnd },
+          facility: { sports: { some: { sport: { slug: "lezeni" } } } },
+        },
+      });
+      return count >= 4;
+    },
+  },
+
+  // ─── Monthly challenge badges (September 2026) ────────────────────────
+  {
+    slug: "zarijovy-ferratista",
+    name: "Z\u00E1\u0159ijov\u00FD Ferratista",
+    description: "4 ferraty nav\u0161t\u00EDven\u00E9 v z\u00E1\u0159\u00ED 2026",
+    emoji: "\u26F0\uFE0F",
+    sportSlug: "ferraty",
+    category: "seasonal",
+    check: async (ctx) => {
+      const septStart = new Date(2026, 8, 1);
+      const septEnd = new Date(2026, 9, 1);
+      const count = await prisma.visit.count({
+        where: {
+          userId: ctx.userId,
+          createdAt: { gte: septStart, lt: septEnd },
+          facility: { sports: { some: { sport: { slug: "ferraty" } } } },
+        },
+      });
+      return count >= 4;
+    },
+  },
+  {
+    slug: "zarijovy-lezec",
+    name: "Z\u00E1\u0159ijov\u00FD Lezec",
+    description: "4 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v z\u00E1\u0159\u00ED 2026",
+    emoji: "\uD83E\uDDD7",
+    sportSlug: "lezeni",
+    category: "seasonal",
+    check: async (ctx) => {
+      const septStart = new Date(2026, 8, 1);
+      const septEnd = new Date(2026, 9, 1);
+      const count = await prisma.visit.count({
+        where: {
+          userId: ctx.userId,
+          createdAt: { gte: septStart, lt: septEnd },
+          facility: { sports: { some: { sport: { slug: "lezeni" } } } },
+        },
+      });
+      return count >= 4;
+    },
+  },
+
+  // ─── Monthly challenge badges (October 2026) ──────────────────────────
+  {
+    slug: "rijnovy-ferratista",
+    name: "\u0158\u00EDjnov\u00FD Ferratista",
+    description: "3 ferraty nav\u0161t\u00EDven\u00E9 v \u0159\u00EDjnu 2026",
+    emoji: "\u26F0\uFE0F",
+    sportSlug: "ferraty",
+    category: "seasonal",
+    check: async (ctx) => {
+      const octStart = new Date(2026, 9, 1);
+      const octEnd = new Date(2026, 10, 1);
+      const count = await prisma.visit.count({
+        where: {
+          userId: ctx.userId,
+          createdAt: { gte: octStart, lt: octEnd },
+          facility: { sports: { some: { sport: { slug: "ferraty" } } } },
+        },
+      });
+      return count >= 3;
+    },
+  },
+  {
+    slug: "rijnovy-lezec",
+    name: "\u0158\u00EDjnov\u00FD Lezec",
+    description: "3 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v \u0159\u00EDjnu 2026",
+    emoji: "\uD83E\uDDD7",
+    sportSlug: "lezeni",
+    category: "seasonal",
+    check: async (ctx) => {
+      const octStart = new Date(2026, 9, 1);
+      const octEnd = new Date(2026, 10, 1);
+      const count = await prisma.visit.count({
+        where: {
+          userId: ctx.userId,
+          createdAt: { gte: octStart, lt: octEnd },
+          facility: { sports: { some: { sport: { slug: "lezeni" } } } },
+        },
+      });
+      return count >= 3;
+    },
+  },
 ];
 
 const BADGE_MAP = new Map(BADGE_DEFINITIONS.map((b) => [b.slug, b]));
@@ -561,6 +729,10 @@ export async function getUserBadgeProgress(userId: string): Promise<
     aprilFerratyVisits, aprilLezeniVisits,
     mayFerratyVisits, mayLezeniVisits,
     juneFerratyVisits, juneLezeniVisits,
+    julyFerratyVisits, julyLezeniVisits,
+    augFerratyVisits, augLezeniVisits,
+    septFerratyVisits, septLezeniVisits,
+    octFerratyVisits, octLezeniVisits,
   ] = await Promise.all([
     prisma.visit.count({
       where: { userId, facility: { sports: { some: { sport: { slug: "ferraty" } } } } },
@@ -658,6 +830,66 @@ export async function getUserBadgeProgress(userId: string): Promise<
       where: {
         userId,
         createdAt: { gte: new Date(2026, 5, 1), lt: new Date(2026, 6, 1) },
+        facility: { sports: { some: { sport: { slug: "lezeni" } } } },
+      },
+    }),
+    // Monthly challenges: July 2026
+    prisma.visit.count({
+      where: {
+        userId,
+        createdAt: { gte: new Date(2026, 6, 1), lt: new Date(2026, 7, 1) },
+        facility: { sports: { some: { sport: { slug: "ferraty" } } } },
+      },
+    }),
+    prisma.visit.count({
+      where: {
+        userId,
+        createdAt: { gte: new Date(2026, 6, 1), lt: new Date(2026, 7, 1) },
+        facility: { sports: { some: { sport: { slug: "lezeni" } } } },
+      },
+    }),
+    // Monthly challenges: August 2026
+    prisma.visit.count({
+      where: {
+        userId,
+        createdAt: { gte: new Date(2026, 7, 1), lt: new Date(2026, 8, 1) },
+        facility: { sports: { some: { sport: { slug: "ferraty" } } } },
+      },
+    }),
+    prisma.visit.count({
+      where: {
+        userId,
+        createdAt: { gte: new Date(2026, 7, 1), lt: new Date(2026, 8, 1) },
+        facility: { sports: { some: { sport: { slug: "lezeni" } } } },
+      },
+    }),
+    // Monthly challenges: September 2026
+    prisma.visit.count({
+      where: {
+        userId,
+        createdAt: { gte: new Date(2026, 8, 1), lt: new Date(2026, 9, 1) },
+        facility: { sports: { some: { sport: { slug: "ferraty" } } } },
+      },
+    }),
+    prisma.visit.count({
+      where: {
+        userId,
+        createdAt: { gte: new Date(2026, 8, 1), lt: new Date(2026, 9, 1) },
+        facility: { sports: { some: { sport: { slug: "lezeni" } } } },
+      },
+    }),
+    // Monthly challenges: October 2026
+    prisma.visit.count({
+      where: {
+        userId,
+        createdAt: { gte: new Date(2026, 9, 1), lt: new Date(2026, 10, 1) },
+        facility: { sports: { some: { sport: { slug: "ferraty" } } } },
+      },
+    }),
+    prisma.visit.count({
+      where: {
+        userId,
+        createdAt: { gte: new Date(2026, 9, 1), lt: new Date(2026, 10, 1) },
         facility: { sports: { some: { sport: { slug: "lezeni" } } } },
       },
     }),
@@ -897,6 +1129,90 @@ export async function getUserBadgeProgress(userId: string): Promise<
       category: "seasonal",
       earned: earnedSet.has("cervnovy-lezec"),
       progress: Math.min(juneLezeniVisits, 3),
+      target: 3,
+    },
+    // Monthly challenge badges (July 2026)
+    {
+      slug: "cervencovy-ferratista",
+      name: "\u010Cervencov\u00FD Ferratista",
+      description: "5 ferrat zdolan\u00FDch v \u010Dervenci 2026",
+      emoji: "\u26F0\uFE0F",
+      category: "seasonal",
+      earned: earnedSet.has("cervencovy-ferratista"),
+      progress: Math.min(julyFerratyVisits, 5),
+      target: 5,
+    },
+    {
+      slug: "cervencovy-lezec",
+      name: "\u010Cervencov\u00FD Lezec",
+      description: "4 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v \u010Dervenci 2026",
+      emoji: "\uD83E\uDDD7",
+      category: "seasonal",
+      earned: earnedSet.has("cervencovy-lezec"),
+      progress: Math.min(julyLezeniVisits, 4),
+      target: 4,
+    },
+    // Monthly challenge badges (August 2026)
+    {
+      slug: "srpnovy-ferratista",
+      name: "Srpnov\u00FD Ferratista",
+      description: "5 ferrat zdolan\u00FDch v srpnu 2026",
+      emoji: "\u26F0\uFE0F",
+      category: "seasonal",
+      earned: earnedSet.has("srpnovy-ferratista"),
+      progress: Math.min(augFerratyVisits, 5),
+      target: 5,
+    },
+    {
+      slug: "srpnovy-lezec",
+      name: "Srpnov\u00FD Lezec",
+      description: "4 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v srpnu 2026",
+      emoji: "\uD83E\uDDD7",
+      category: "seasonal",
+      earned: earnedSet.has("srpnovy-lezec"),
+      progress: Math.min(augLezeniVisits, 4),
+      target: 4,
+    },
+    // Monthly challenge badges (September 2026)
+    {
+      slug: "zarijovy-ferratista",
+      name: "Z\u00E1\u0159ijov\u00FD Ferratista",
+      description: "4 ferraty nav\u0161t\u00EDven\u00E9 v z\u00E1\u0159\u00ED 2026",
+      emoji: "\u26F0\uFE0F",
+      category: "seasonal",
+      earned: earnedSet.has("zarijovy-ferratista"),
+      progress: Math.min(septFerratyVisits, 4),
+      target: 4,
+    },
+    {
+      slug: "zarijovy-lezec",
+      name: "Z\u00E1\u0159ijov\u00FD Lezec",
+      description: "4 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v z\u00E1\u0159\u00ED 2026",
+      emoji: "\uD83E\uDDD7",
+      category: "seasonal",
+      earned: earnedSet.has("zarijovy-lezec"),
+      progress: Math.min(septLezeniVisits, 4),
+      target: 4,
+    },
+    // Monthly challenge badges (October 2026)
+    {
+      slug: "rijnovy-ferratista",
+      name: "\u0158\u00EDjnov\u00FD Ferratista",
+      description: "3 ferraty nav\u0161t\u00EDven\u00E9 v \u0159\u00EDjnu 2026",
+      emoji: "\u26F0\uFE0F",
+      category: "seasonal",
+      earned: earnedSet.has("rijnovy-ferratista"),
+      progress: Math.min(octFerratyVisits, 3),
+      target: 3,
+    },
+    {
+      slug: "rijnovy-lezec",
+      name: "\u0158\u00EDjnov\u00FD Lezec",
+      description: "3 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v \u0159\u00EDjnu 2026",
+      emoji: "\uD83E\uDDD7",
+      category: "seasonal",
+      earned: earnedSet.has("rijnovy-lezec"),
+      progress: Math.min(octLezeniVisits, 3),
       target: 3,
     },
   ];
