@@ -80,6 +80,7 @@ model Facility {
   tips          FacilityTip[]
   favorites     Favorite[]
   favoriteNotifications FavoriteNotification[]
+  premiumOrders PremiumOrder[]
   averageRating Float?
   reviewCount   Int              @default(0)
   tipCount      Int              @default(0)
@@ -437,6 +438,22 @@ model Banner {
   updatedAt   DateTime  @updatedAt
 
   @@index([isActive])
+}
+
+model PremiumOrder {
+  id              String    @id @default(cuid())
+  facilityId      String
+  facility        Facility  @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  variableSymbol  String    @unique // numeric string for bank transfer matching
+  amount          Int       // amount in CZK (e.g. 1209)
+  status          String    @default("pending") // pending, confirmed, cancelled
+  adminNote       String?
+  confirmedAt     DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@index([facilityId])
+  @@index([status])
 }
 
 model Product {

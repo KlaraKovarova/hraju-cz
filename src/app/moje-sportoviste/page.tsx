@@ -381,7 +381,7 @@ function MojeSportovisteContent() {
                     Podrobné statistiky jsou dostupné v Premium
                   </p>
                   <a
-                    href="/pro"
+                    href="/moje-sportoviste/platba"
                     className="mt-3 inline-block rounded-lg bg-amber-500 px-4 py-2 text-xs font-bold text-white transition hover:bg-amber-600"
                   >
                     Upgradovat na Premium

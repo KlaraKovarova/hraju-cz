@@ -75,6 +75,9 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           <Link href="/admin/messages" className="text-sm text-zinc-500 hover:text-zinc-900">
             Zprávy
           </Link>
+          <Link href="/admin/payments" className="text-sm text-zinc-500 hover:text-zinc-900">
+            Platby
+          </Link>
           <Link href="/admin/ads" className="text-sm text-zinc-500 hover:text-zinc-900">
             Reklamy
           </Link>
