@@ -4,7 +4,7 @@ date: '2026-03-11'
 category: pruvodce-mesta
 excerpt: >-
   Přehled sportovišť v Přerově — 50m bazén, hokejová MEO Aréna (HC ZUBR), 19
-  tenisových kurtů včetně padelu, Cyklostezka Bečva a legendární autokrosová
+  tenisových kurtů, Cyklostezka Bečva a legendární autokrosová
   trať s Mamutím skokem.
 sportTags:
   - plavani
@@ -68,13 +68,13 @@ Historicky se klub pohybuje na hranici druhé a první ligy, s občasným pokuse
 
 Adresa: Petřivalského 5. Web: hokejprerov.cz.
 
-## Tenis — 19 kurtů + padel (tradice od roku 1899!)
+## Tenis — 19 kurtů (tradice od roku 1899!)
 
 Přerov má jednu z **nejdelších tenisových tradic v Česku** — první tenisová společnost zde vznikla v roce 1899.
 
 ### Tenisový klub Přerov — největší tenisový areál v regionu
 
-**17 antukových kurtů + 2 betonové kurty + 1 padelový kurt** — jeden z největších tenisových areálů v celé ČR. Areál se nachází u břehu Bečvy.
+**17 antukových kurtů + 2 betonové kurty** — jeden z největších tenisových areálů v celé ČR. Areál se nachází u břehu Bečvy.
 
 **Pronájem kurtů (60 min):**
 
@@ -84,8 +84,6 @@ Přerov má jednu z **nejdelších tenisových tradic v Česku** — první teni
 | Všední dny / neděle po 16:00 | 320 Kč |
 | Sobota (celý den) | 140 Kč |
 | Betonový kurt (všední dny) | 150 Kč |
-| Padel (8–15h) | 440 Kč |
-| Padel (15–22h) | 480 Kč |
 
 **Roční členství:**
 
@@ -304,13 +302,13 @@ Adresa: Teličkova 491/6b (centrum LEON), Přerov-Předmostí. Web: bowlingbarko
 
 **Zóna A — Petřivalského (jihovýchod):** Hlavní sportovní komplex — MEO Aréna (hokej), městská sportovní hala (volejbal), atletický stadion, fotbalový stadion. Vše na jednom místě.
 
-**Zóna B — Kopaniny / U Tenisu (jihozápad):** Vodní a raketové sporty — 50m bazén, tenisové areály (20 kurtů + padel), sportovní hala SK Start. Podél břehu Bečvy.
+**Zóna B — Kopaniny / U Tenisu (jihozápad):** Vodní a raketové sporty — 50m bazén, tenisové areály (19 kurtů), sportovní hala SK Start. Podél břehu Bečvy.
 
 **Zóna C — Předmostí (sever):** Autokros v Přerovské rokli, bowling, bojové sporty.
 
 ### Co je v Přerově unikátní
 
-- **Tenis od roku 1899** — 127 let tenisové tradice, 20 kurtů včetně padelu
+- **Tenis od roku 1899** — 127 let tenisové tradice, 19 kurtů
 - **50m bazén** — jeden z ~20 padesátimetrových bazénů v celé ČR
 - **Mamutí skok** — největší převýšení na tratích ME v autokrosu
 - **Ženská volejbalová Extraliga** — jedno z nejmenších měst s top-flight týmem

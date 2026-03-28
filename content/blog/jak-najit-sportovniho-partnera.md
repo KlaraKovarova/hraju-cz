@@ -81,7 +81,7 @@ Napište příspěvek: vaše město, sport, úroveň, preferovaný čas. Větši
 ### Sportovní aplikace
 
 - **SportCentral** — česká platforma pro hledání spoluhráčů a rezervaci sportovišť
-- **Playtomic** — mezinárodní aplikace zaměřená na raketové sporty (tenis, padel)
+- **Playtomic** — mezinárodní aplikace zaměřená na raketové sporty (tenis, squash)
 - **Meetup** — ne přímo sportovní aplikace, ale v Praze a Brně fungují sportovní meetup skupiny
 
 ### Recenze na hraju.cz

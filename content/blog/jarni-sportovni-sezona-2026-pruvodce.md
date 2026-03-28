@@ -117,7 +117,7 @@ Březen a duben jsou přelomové měsíce — venkovní sportoviště otevíraj�
 | Zranění | Sport | Příčina | Prevence |
 |---------|-------|---------|----------|
 | Natažený sval | Běh, tenis | Nedostatečné zahřátí | Dynamický strečink |
-| Tenisový loket | Tenis, padel | Přetížení po pauze | Postupné zvyšování zátěže |
+| Tenisový loket | Tenis | Přetížení po pauze | Postupné zvyšování zátěže |
 | Výron kotníku | Volejbal, běh | Oslabené stabilizátory | Balanční cviky |
 | Shin splints | Běh | Příliš rychlý nárůst km | Pravidlo 10 % |
 | Bolest zad | Cyklistika, golf | Špatné nastavení/technika | Správné seřízení |

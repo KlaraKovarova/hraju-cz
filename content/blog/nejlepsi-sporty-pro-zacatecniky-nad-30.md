@@ -62,15 +62,6 @@ Ale ne každý sport je ideální pro dospělého začátečníka. Některé spo
 - **Cena:** 150–350 Kč/kurt + půjčovna rakety 30 Kč
 - **Sociální bonus:** Hraje se ve dvou nebo ve čtyřech — skvělé pro páry.
 
-### Padel
-
-**Proč:** Nejrychleji rostoucí sport v Česku. Servis je zespodu (žádné traumatické servísy jako v tenise), stěny dávají druhou šanci, hraje se ve 4 (sociální).
-
-- **Křivka učení:** 30 minut na základní výměny. Za měsíc hrajete „smysluplný" padel.
-- **Riziko zranění:** Nízké (menší kurt = kratší sprinty)
-- **Cena:** 400–800 Kč/kurt (100–200 Kč/osoba ve čtyřech)
-- **Limitace:** Padel kurty jsou zatím hlavně v Praze, Brně a krajských městech.
-
 ### Skupinové fitness (spinning, TRX, jóga)
 
 **Proč:** Trenér řídí tempo, vy jen následujete. Pevný rozvrh vytváří návyk. Skupinová dynamika motivuje.
@@ -88,7 +79,7 @@ Ale ne každý sport je ideální pro dospělého začátečníka. Některé spo
 - **Křivka učení:** 10–15 lekcí pro základní hru. 6–12 měsíců pro „normální" set.
 - **Riziko zranění:** Střední. Tenisový loket, rameno, kolena — technika je klíčová.
 - **Cena:** 200–600 Kč/kurt + lekce 400–700 Kč
-- **Realistická rada:** Pokud chcete raketový sport a jste úplný začátečník, padel nebo badminton vás odmění rychleji. Ale pokud chcete tenis, jděte do toho — jen buďte trpěliví.
+- **Realistická rada:** Pokud chcete raketový sport a jste úplný začátečník, badminton vás odmění rychleji. Ale pokud chcete tenis, jděte do toho — jen buďte trpěliví.
 
 ### Squash
 
@@ -116,10 +107,10 @@ Ale ne každý sport je ideální pro dospělého začátečníka. Některé spo
 | Priorita | Ideální sport |
 |---|---|
 | Minimální riziko zranění | Plavání, bouldering |
-| Nejrychlejší pokrok | Badminton, padel, bouldering |
+| Nejrychlejší pokrok | Badminton, bouldering |
 | Nejlepší kardio | Squash, spinning, plavání |
 | Budování svalů | Fitness, bouldering |
-| Sociální zážitek | Padel, skupinové fitness, bouldering |
+| Sociální zážitek | Skupinové fitness, bouldering |
 | Nejlevnější start | Plavání, fitness, badminton |
 
 ## Najděte sportoviště poblíž

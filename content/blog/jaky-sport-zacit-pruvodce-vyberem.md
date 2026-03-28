@@ -44,7 +44,6 @@ Než se rozhodnete, položte si 4 otázky:
 | Volejbal | Střední | 200–500 Kč | Tým (6–12) | Obojí | Celoroční |
 | Fotbal | Vysoká | 200–1 000 Kč | Tým (10–22) | Venku | Celoroční |
 | Golf | Nízká | 2 000–5 000 Kč | Sám/skupina | Venku | Jaro–podzim |
-| Padel | Střední | 1 000–2 500 Kč | Čtveřice | Uvnitř | Celoroční |
 | Jóga | Nízká | 500–2 000 Kč | Skupina | Uvnitř | Celoroční |
 | Bojové sporty | Vysoká | 800–2 000 Kč | Dvojice/skupina | Uvnitř | Celoroční |
 | Tanec | Střední | 500–2 000 Kč | Pár/skupina | Uvnitř | Celoroční |
@@ -70,7 +69,7 @@ Sport je pro vás hlavně setkání s lidmi a zábava.
 
 **Top 3:**
 1. **Volejbal** — parta, smích, společná večeře po zápase
-2. **Padel** — 4 hráči, tempo pro konverzaci, trendy sport
+2. **Badminton** — 2–4 hráči, rychlý a zábavný, nízká bariéra
 3. **Bowling** — nejnižší vstupní bariéra, pivo u dráhy
 
 ### „Chci výzvu" — sporty pro soutěživé

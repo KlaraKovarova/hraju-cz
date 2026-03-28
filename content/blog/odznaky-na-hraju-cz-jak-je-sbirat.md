@@ -94,7 +94,7 @@ Tip: Průvodce [bouldering pro začátečníky](/blog/bouldering-pro-zacatecniky
 - Dubnová ferrata → recenze
 - Květnový tenisový kurt → recenze
 - Květnový běžecký park → recenze
-- Májový padel → recenze
+- Květnový bazén → recenze
 
 5 různých míst za 3 měsíce = 1 recenze za necelé 3 týdny.
 
@@ -119,7 +119,7 @@ Sezóna určuje, za jaké období se počítá odznak **Recenzent sezóny**:
 | Sezóna | Měsíce | Typické sporty |
 |---|---|---|
 | **Jaro** | Březen–květen | Ferraty, běhání, tenis, cyklistika |
-| **Léto** | Červen–srpen | Koupaliště, beach volejbal, padel, golf |
+| **Léto** | Červen–srpen | Koupaliště, beach volejbal, golf |
 | **Podzim** | Září–listopad | Squash, badminton, fitness, lezecké stěny |
 | **Zima** | Prosinec–únor | Lyžování, indoor sporty, plavání, posilovny |
 

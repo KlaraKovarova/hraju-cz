@@ -15,7 +15,7 @@ image: /images/blog/jak-pridat-sportovni-akci-na-hraju-cz.jpg
 
 # Jak přidat sportovní akci na hraju.cz
 
-Organizujete výlet na ferratu? Hledáte parťáky na víkendový beach volejbal? Chcete uspořádat turnaj v padelu pro začátečníky? Na hraju.cz můžete přidat vlastní sportovní akci a oslovit komunitu sportovních nadšenců.
+Organizujete výlet na ferratu? Hledáte parťáky na víkendový beach volejbal? Chcete uspořádat turnaj v badmintonu pro začátečníky? Na hraju.cz můžete přidat vlastní sportovní akci a oslovit komunitu sportovních nadšenců.
 
 ## Jaké akce můžete přidat
 
@@ -28,7 +28,7 @@ Akce od Klubu českých turistů se na stránku [/akce](/akce) načítají autom
 Vy můžete přidat cokoli sportovního:
 
 - **Společný trénink** — „Běžecký trénink pro začátečníky, Stromovka, sobota 9:00"
-- **Neformální turnaj** — „Padel dvojice, 8 týmů, Padel Arena Praha"
+- **Neformální turnaj** — „Badminton čtyřhry, 8 týmů, SportCentrum Praha"
 - **Výlet** — „Ferrata Pastýřská stěna, sraz v Děčíně v 10:00"
 - **Workshop** — „Jak začít s boulderingem — vstup do lezecké stěny zdarma"
 - **Sraz komunity** — „Hraju.cz meetup — sportovci z Brna, kavárna XY"
@@ -99,8 +99,8 @@ Po schválení sdílejte odkaz na akci mezi přáteli. Čím víc lidí se dozv�
 - Začátečnický kurz „První ferrata"
 
 ### Pro raketové sporty (celoročně)
-- Turnaje v padelu/squashi/badmintonu pro amatéry
-- „Zkus padel" — ukázkový trénink pro nováčky
+- Turnaje ve squashi/badmintonu pro amatéry
+- „Zkus squash" — ukázkový trénink pro nováčky
 - Liga dvojic (pravidelné zápasy)
 
 ### Pro běh a cyklistiku (jaro/léto/podzim)

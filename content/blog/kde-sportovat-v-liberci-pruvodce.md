@@ -42,12 +42,10 @@ Upozornění: V roce 2026 prochází Liberec sportovní proměnou — městský 
 6 venkovních + 3 kryté kurty — celoroční provoz.
 
 - **Adresa:** Polní 894, 460 13 Liberec 12
-- **Kurty:** 6 venkovních + 3 kryté (zimní sezóna) + padel kurty
+- **Kurty:** 6 venkovních + 3 kryté (zimní sezóna)
 - **Nabídka:** Dětské programy od 3 let (Minitenis, Babytenis), Babolat prodejna
 - **Kontakt:** +420 720 958 777
 - **Web:** [tkrapid.cz](https://www.tkrapid.cz/)
-
-**Tip:** Padel kurty — v Liberci unikátní nabídka.
 
 ### Tenis Nisa
 

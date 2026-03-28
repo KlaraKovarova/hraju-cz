@@ -22,7 +22,6 @@
 |------|-------|----------|-------|--------|
 | Mar 28 | Nejlepší tenisové vybavení pro rok 2026 | vybaveni | tenis | DONE |
 | Mar 29 | Nová ferrata v Mladé Vožici — kompletní průvodce | novinky | ferraty | DONE |
-| Mar 30 | Padel v Česku — nový sport, který dobývá kurty | pruvodce-sporty | padel | DONE |
 | Mar 31 | CrossFit vs. klasická posilovna | tipy | fitness | TODO |
 | Apr 1 | Kde lézt v Brně — lezecká centra a bouldery | pruvodce-mesta | lezeni | TODO |
 | Apr 2 | Volejbalové kempy a turnaje 2026 | novinky | volejbal | TODO |

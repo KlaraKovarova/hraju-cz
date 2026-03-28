@@ -12,7 +12,6 @@ sportTags:
   - lezeni
   - squash
   - badminton
-  - padel
 image: /images/blog/jak-zacit-pravidelne-sportovat.jpg
 ---
 
@@ -24,21 +23,21 @@ Nemusíte být atlet. Nemusíte mít vybavení. Stačí odvaha zkusit něco nov�
 
 ## Proč to dělat
 
-1. **Objevíte sport, o kterém jste nevěděli.** Padel existuje v Česku teprve pár let — a lidé, kteří ho zkusí, se vracejí.
+1. **Objevíte sport, o kterém jste nevěděli.** Bouldering nebo ferraty — lidé, kteří je zkusí, se vracejí.
 2. **Zapojíte svaly, které nepoužíváte.** Každý sport zatěžuje tělo jinak. Týden různých sportů = kompletní workout.
 3. **Potkáte nové lidi.** Každé sportoviště má svou komunitu. Za týden potkáte desítky nových lidí.
 4. **Přestanete se nudit.** Rutina zabíjí motivaci. Pestrost ji vrací.
 
 ## Plán na 7 dní
 
-### Pondělí — Tenis (nebo padel)
+### Pondělí — Tenis
 
-Raketový sport na rozjezd. Pokud jste nikdy nehráli tenis, zkuste padel — jednodušší na začátek a hraje se ve čtyřech.
+Raketový sport na rozjezd. Na většině tenisových kurtů si raketu půjčíte přímo na místě — stačí přijít ve sportovním.
 
 - **Co potřebujete:** Sportovní oblečení, boty s neotěratelnou podrážkou. Rakety si půjčíte.
-- **Cena:** Tenis od 200 Kč/hod (antuka), padel od 440 Kč/hod (za 4 hráče = 110 Kč/osoba)
-- **Najít kurt:** [hraju.cz/sport/tenis](/sport/tenis) nebo [hraju.cz/sport/padel](/sport/padel)
-- **Průvodce:** [Tenis pro začátečníky](/blog/tenis-pro-zacatecniky-kompletni-pruvodce) | [Padel pro začátečníky](/blog/padel-pro-zacatecniky-kompletni-pruvodce)
+- **Cena:** Tenis od 200 Kč/hod (antuka)
+- **Najít kurt:** [hraju.cz/sport/tenis](/sport/tenis)
+- **Průvodce:** [Tenis pro začátečníky](/blog/tenis-pro-zacatecniky-kompletni-pruvodce)
 
 ### Úterý — Bouldering
 
@@ -111,14 +110,14 @@ Zakončete týden venku. Podle sezóny:
 
 | Den | Sport | Přibližná cena |
 |-----|-------|---------------|
-| Po | Tenis/Padel | 110–200 Kč |
+| Po | Tenis | 200–350 Kč |
 | Út | Bouldering | 130–275 Kč |
 | St | Plavání | 70–240 Kč |
 | Čt | Fitness | 100–250 Kč |
 | Pá | Squash | 100–370 Kč |
 | So | Badminton | 160–400 Kč |
 | Ne | Outdoor | 0–350 Kč |
-| **Celkem** | | **670–2 085 Kč** |
+| **Celkem** | | **760–2 235 Kč** |
 
 Za cenu jednoho víkendu v restauraci zažijete 7 různých sportů. A možná najdete novou vášeň.
 

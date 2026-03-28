@@ -204,7 +204,7 @@ async function main() {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
 
-  // Optional: filter by sport slugs via CLI args (e.g. npx tsx scrape-firmy.ts padel florbal)
+  // Optional: filter by sport slugs via CLI args (e.g. npx tsx scrape-firmy.ts squash fitness)
   const filterSlugs = process.argv.slice(2).filter(a => !a.startsWith('-'));
   const sportsToScrape = filterSlugs.length > 0
     ? SPORTS.filter(s => filterSlugs.includes(s.slug))

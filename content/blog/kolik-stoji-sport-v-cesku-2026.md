@@ -35,7 +35,6 @@ Zmapovali jsme reálné ceny z desítek sportovišť po celém Česku a sestavil
 | Squash | 200–550 Kč | 320 Kč | Za kurt na hodinu |
 | Tenis (venkovní) | 120–300 Kč | 200 Kč | Za kurt na hodinu |
 | Tenis (hala) | 290–580 Kč | 450 Kč | Za kurt na hodinu |
-| Padel | 400–800 Kč | 550 Kč | Za kurt na hodinu (hraje se ve 4) |
 | Stolní tenis | 100–200 Kč | 140 Kč | Za stůl na hodinu |
 | Bruslení (veřejné) | 50–120 Kč | 80 Kč | Za vstup (sezónní) |
 | Golf (green fee) | 1 150–2 000 Kč | 1 500 Kč | Za 18 jamek |
@@ -148,15 +147,6 @@ Zmapovali jsme reálné ceny z desítek sportovišť po celém Česku a sestavil
 - Driving range: často zdarma pro členy, jinak 50–100 Kč/koš
 
 **Lekce:** 800–1 500 Kč/50 minut s PRO trenérem
-
-### Padel — rostoucí, ale dražší
-
-**Kurt na hodinu:** 400–800 Kč (hraje se ve 4)
-
-- Na osobu: 100–200 Kč/hodina
-- Dopoledne: sleva 20–30 %
-
-**Vybavení:** Raketa (půjčovna většinou zdarma nebo 50–100 Kč, vlastní 2 000–5 000 Kč)
 
 ## Měsíční sportovní rozpočet — 3 scénáře
 

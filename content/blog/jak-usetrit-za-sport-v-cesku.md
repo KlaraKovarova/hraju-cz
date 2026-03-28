@@ -90,16 +90,15 @@ Pokud chodíte pravidelně na jedno místo, kreditní vklad se vyplatí.
 
 ## 7. Skupinový sport = dělení nákladů
 
-Padel, volejbal a tenis ve čtyřech dělí náklady kurtu:
+Volejbal a tenis ve čtyřech dělí náklady kurtu:
 
 | Sport | Kurt/hodina | Na osobu (ve 4) |
 |---|---|---|
-| Padel | 600 Kč | 150 Kč |
 | Beach volejbal | 400 Kč | 100 Kč |
 | Tenis (čtyřhra) | 400 Kč | 100 Kč |
 | Florbal (10 hráčů) | 1 000 Kč | 100 Kč |
 
-150 Kč za hodinu padelu ve čtyřech — levnější než fitness vstup.
+100 Kč za hodinu volejbalu ve čtyřech — levnější než fitness vstup.
 
 ## 8. Venkovní alternativy (sezónní, ale zdarma)
 

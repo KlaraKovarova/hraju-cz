@@ -2,11 +2,10 @@
 title: "Kam na sport v dubnu 2026: Co se otevírá a kde začít sezónu"
 date: '2026-03-23'
 category: tipy
-excerpt: "Duben je start venkovní sezóny — otevírají ferraty, antukové kurty, padel. Přehled co kde začíná, ceny prvních vstupů a tipy na první výlet."
+excerpt: "Duben je start venkovní sezóny — otevírají ferraty, antukové kurty, lezecké stěny. Přehled co kde začíná, ceny prvních vstupů a tipy na první výlet."
 sportTags:
   - ferraty
   - tenis
-  - padel
   - lezeni
   - cyklistika
   - behani
@@ -15,7 +14,7 @@ image: /images/blog/letni-sporty-2026.jpg
 
 # Kam na sport v dubnu 2026: Co se otevírá a kde začít sezónu
 
-Duben je v Česku měsíc velkých startů — ferraty se otevírají, antukové kurty se připravují po zimě, padelové areály spouštějí outdoor sezónu. Tady je přehled toho nejzajímavějšího, co vás v dubnu čeká.
+Duben je v Česku měsíc velkých startů — ferraty se otevírají, antukové kurty se připravují po zimě, lezecké stěny lákají na outdoor sezónu. Tady je přehled toho nejzajímavějšího, co vás v dubnu čeká.
 
 ## Co se otevírá v dubnu
 
@@ -48,16 +47,6 @@ Většina venkovních antukových areálů otevírá v druhé polovině dubna (z
 
 **Tip:** Velké areály jako [Club Classic Brno](https://www.clubclassic.cz/) (10 kurtů) nebo [Tenis Rochlice Liberec](https://www.tenis-liberec.cz/) (6 kurtů) otevírají venkovní kurty nejdříve — sledujte jejich weby.
 
-### Padel — nové kurty a outdoor start
-
-Padel je nejrychleji rostoucí raketový sport v Česku. V dubnu 2026:
-
-- **Padel Brno** otevírá outdoor kurty 1. dubna 2026 s novým MejorSet Panoramic povrchem
-- **Padel Powers** spouští nová indoor centra v Praze i Brně
-- Úvodní lekce od 150 Kč/osoba — ideální na vyzkoušení
-
-[Padel kurty v Česku na hraju.cz](/sport/padel)
-
 ### Outdoor lezení
 
 Skály v dubnu postupně vysychají po zimě. Podmínky závisí na expozici a regionu:
@@ -80,7 +69,7 @@ Jarní silnice jsou proschlé, dny delší. Duben je ideální na:
 
 ### 1. Zkuste něco nového
 
-Duben je ideální měsíc na první ferratu, první padel, první outdoor lezení. Většina sportovišť nabízí zvýhodněné první vstupy nebo úvodní lekce.
+Duben je ideální měsíc na první ferratu, první outdoor lezení, první běh v přírodě. Většina sportovišť nabízí zvýhodněné první vstupy nebo úvodní lekce.
 
 ### 2. Běhejte v parku
 
@@ -96,7 +85,7 @@ Duben je měsíc prvních amatérských turnajů — tenis, badminton, squash. R
 
 ### 4. Pozvěte přátele
 
-Sport s kamarádem = vyšší motivace. Padel je 2v2, tenis debly, bouldering je sociální sport. Duben je ideální měsíc na společný start.
+Sport s kamarádem = vyšší motivace. Tenis debly, bouldering je sociální sport, badminton zvládnete i ve dvou. Duben je ideální měsíc na společný start.
 
 ### 5. Napište recenzi
 

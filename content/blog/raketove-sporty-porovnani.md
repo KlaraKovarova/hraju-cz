@@ -1,35 +1,34 @@
 ---
-title: 'Tenis, padel, squash nebo badminton? Velké porovnání raketových sportů'
+title: 'Tenis, squash nebo badminton? Velké porovnání raketových sportů'
 date: '2026-03-18'
 category: pruvodce-sporty
 excerpt: >-
-  Nevíte, který raketový sport si vybrat? Porovnáváme tenis, padel, squash a
+  Nevíte, který raketový sport si vybrat? Porovnáváme tenis, squash a
   badminton — náročnost, cenu, dostupnost kurtů i to, jak rychle se naučíte
   hrát.
 sportTags:
   - tenis
   - squash
   - badminton
-  - padel
 image: /images/blog/raketove-sporty-porovnani.jpg
 ---
 
-# Tenis, padel, squash nebo badminton? Velké porovnání raketových sportů
+# Tenis, squash nebo badminton? Velké porovnání raketových sportů
 
-Stojíte před rozhodnutím: chcete začít s raketovým sportem, ale který si vybrat? Nebo hrajete tenis a zvažujete, jestli nezkusit padel, o kterém všichni mluví?
+Stojíte před rozhodnutím: chcete začít s raketovým sportem, ale který si vybrat? Tenis, squash, nebo badminton?
 
-Každý z těchto čtyř sportů má svůj charakter, svou komunitu a svá pravidla. Než investujete do vybavení a pronájmu kurtu, přečtěte si, co vás u kterého sportu čeká.
+Každý z těchto tří sportů má svůj charakter, svou komunitu a svá pravidla. Než investujete do vybavení a pronájmu kurtu, přečtěte si, co vás u kterého sportu čeká.
 
 ## Rychlý přehled
 
-| | Tenis | Padel | Squash | Badminton |
-|---|---|---|---|---|
-| **Obtížnost startu** | Střední–vysoká | Nízká | Střední | Nízká |
-| **Fyzická náročnost** | Vysoká | Střední | Velmi vysoká | Střední–vysoká |
-| **Cena hodiny** | 200–500 Kč/kurt | 400–800 Kč/kurt | 200–400 Kč/kurt | 150–300 Kč/kurt |
-| **Počet hráčů** | 2 nebo 4 | 4 (standardně) | 2 | 2 nebo 4 |
-| **Počasí** | Venku i hala | Venku i hala | Hala | Hala |
-| **Dostupnost v ČR** | Výborná | Rostoucí | Dobrá | Dobrá |
+| | Tenis | Squash | Badminton |
+|---|---|---|---|
+| **Obtížnost startu** | Střední–vysoká | Střední | Nízká |
+| **Fyzická náročnost** | Vysoká | Velmi vysoká | Střední–vysoká |
+| **Cena hodiny** | 200–500 Kč/kurt | 200–400 Kč/kurt | 150–300 Kč/kurt |
+| **Počet hráčů** | 2 nebo 4 | 2 | 2 nebo 4 |
+| **Počasí** | Venku i hala | Hala | Hala |
+| **Dostupnost v ČR** | Výborná | Dobrá | Dobrá |
 
 ## Tenis — klasika, která nikdy nezestárne
 
@@ -58,39 +57,6 @@ Tenis má relativně strmou křivku učení. Servis je technicky nejnáročněj�
 ### Kde hrát
 
 V Česku je přes 1 500 tenisových klubů. Najdete je v každém větším městě — stačí zadat váš sport na [hraju.cz/sport/tenis](https://hraju.cz/sport/tenis) a vyhledat kurty ve vašem okolí.
-
-## Padel — nováček, který dobývá Česko
-
-### Pro koho je padel
-
-Padel je nejrychleji rostoucí raketový sport v Evropě. Ve Španělsku ho hraje 6 milionů lidí. V Česku se za poslední dva roky otevřelo přes 50 kurtů — a přibývají další každý měsíc.
-
-Padel je ideální pro ty, kdo chtějí sociální sport. Hraje se ve čtyřech, takže potřebujete partu — ale díky tomu je atmosféra na kurtu mnohem uvolněnější než u tenisu.
-
-### Proč je padel snazší než tenis
-
-- **Menší kurt** — 20×10 metrů (tenis má 23,77×10,97 m pro dvouhrů). Méně běhání.
-- **Stěny se počítají** — míč se odráží od stěn jako u squashe. To dává hře nový rozměr a snižuje nároky na přesnost.
-- **Podání zespodu** — žádný servis přes hlavu. Začátečník servis zvládne za 5 minut.
-- **Kratší raketa** — bez strun, lehčí, snazší manipulace.
-
-### Kolik zaplatíte
-
-- **Kurt:** 400–800 Kč/hodina (dělí se čtyřmi = 100–200 Kč na osobu)
-- **Raketa:** 1 500–4 000 Kč
-- **Míče:** Podobné tenisovým, 150–250 Kč za tubu
-
-Na osobu vyjde padel levněji než tenis — protože kurt sdílíte ve čtyřech.
-
-### Jak rychle se naučíte
-
-Padel má nejnižší vstupní bariéru ze všech raketových sportů. Po jedné hodině s trenérem budete hrát srozumitelné výměny. Po třech lekcích zvládnete zápas.
-
-**Tip:** Většina padelových center nabízí trial hodiny za zvýhodněnou cenu (často 200–300 Kč za osobu včetně zapůjčení rakety). Zkuste to, než investujete do vlastního vybavení.
-
-### Kde hrát
-
-Padelová centra najdete v Praze (10+), Brně, Ostravě, Plzni a dalších městech. Podívejte se na [hraju.cz/sport/padel](https://hraju.cz/sport/padel).
 
 ## Squash — nejintenzivnější raketový sport
 
@@ -160,35 +126,35 @@ Badmintonové haly najdete v každém větším městě. V Praze a Brně je jich
 ### 1. Kolik času týdně chcete sportovat?
 
 - **Málo času (1–2 hodiny):** Squash — maximální efekt v minimálním čase.
-- **Více času (3+ hodiny):** Tenis nebo padel — pomalejší tempo, delší zápasy.
+- **Více času (3+ hodiny):** Tenis — pomalejší tempo, delší zápasy.
 
 ### 2. Kolik chcete investovat na začátku?
 
 - **Rozpočet do 2 000 Kč:** Badminton (raketa + košíčky + boty).
-- **Rozpočet do 5 000 Kč:** Squash nebo padel.
+- **Rozpočet do 5 000 Kč:** Squash.
 - **Rozpočet do 8 000 Kč:** Tenis (raketa + boty + míče).
 
 ### 3. Hrajete raději sami nebo ve skupině?
 
 - **Dvouhra (1 na 1):** Squash, tenis, badminton.
-- **Čtyřhra (2 na 2):** Padel (vždy), tenis a badminton (volitelně).
+- **Čtyřhra (2 na 2):** Tenis a badminton (volitelně).
 
 ### 4. Jaká je vaše aktuální kondice?
 
-- **Začínáte se sportem:** Padel nebo badminton — nejnižší fyzická bariéra.
+- **Začínáte se sportem:** Badminton — nejnižší fyzická bariéra.
 - **Průměrná kondice:** Tenis — postupné budování výdrže.
 - **Dobrá kondice:** Squash — připravte se na intenzitu.
 
 ### 5. Je pro vás důležitý sociální aspekt?
 
-- **Ano, chci pospolitost:** Padel — čtyři hráči, společná hra, často se hraje s pivem po zápase.
+- **Ano, chci pospolitost:** Badminton čtyřhra — společná hra ve čtyřech, nízká bariéra vstupu.
 - **Spíše soutěživost:** Tenis nebo squash — ligové systémy, žebříčky.
 
 ## Můžete kombinovat
 
-Nemusíte si vybrat jen jeden sport. Mnoho sportovišť v Česku nabízí více raketových sportů pod jednou střechou. V centru, kde hrajete squash, často najdete i badmintonové kurty. Tenisové kluby rozšiřují nabídku o padel.
+Nemusíte si vybrat jen jeden sport. Mnoho sportovišť v Česku nabízí více raketových sportů pod jednou střechou. V centru, kde hrajete squash, často najdete i badmintonové kurty a naopak.
 
-Kombinace sportů má výhody: squash zlepšuje reakce, které využijete v tenise. Padel učí hru se stěnou, která pomůže ve squashi. Badmintonová práce zápěstí se přenáší do všech ostatních.
+Kombinace sportů má výhody: squash zlepšuje reakce, které využijete v tenise. Badmintonová práce zápěstí se přenáší do všech ostatních raketových sportů. A tenisová výdrž pomáhá v delších badmintonových zápasech.
 
 ## Kam dál
 

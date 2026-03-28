@@ -12,7 +12,6 @@ sportTags:
   - squash
   - lezeni
   - golf
-  - padel
   - badminton
 image: /images/blog/kde-sportovat-v-plzni.jpg
 ---
@@ -149,25 +148,6 @@ Výška 9,5 m (nejdelší cesta 13 m), 40 cest obtížnost 3–9 UIAA. Boulderov
 
 - **Lokace:** Plaská ulice, Plzeň – Bolevce
 - **Najít stěnu:** [hraju.cz/sport/lezeni](/sport/lezeni)
-
-## Padel
-
-### Parkhotel Congress Center
-
-**Jediný existující padelový kurt** v Plzni. 1 padelový kurt + 2 tenisové kurty (Wimbledon povrch) + 3 kryté kurty (zimní vytápěná hala). Rakety a míčky zdarma na recepci hotelu.
-
-- **Rezervace:** rezervace.membex.cz/parkhotel nebo +420 378 772 977
-- **Hotelový host (2+ noci):** 50 % sleva na kurty
-- **Web:** parkhotel-czech.eu
-
-### Padel Powers Plzeň — Kasárny (Q3 2026)
-
-**9 prémiových indoor kurtů** v CTPark Kasárny. Bar, prodejna + půjčovna vybavení, šatny.
-
-- **Otevření:** Očekáváno Q3 2026
-- **Web:** padelpowers.com/plzen-kasarny
-- **Více o padelu v ČR:** [Padel boom 2026](/blog/padel-boom-cesko-2026-kam-hrat-mimo-prahu)
-- **Najít padel:** [hraju.cz/sport/padel](/sport/padel)
 
 ## Tenis
 
@@ -325,7 +305,6 @@ Kompletně bezplatný multisportovní areál — skatepark, 2 asfaltová hřišt
 | Fitness (měsíční) | 1 100–1 790 Kč | V&S Bory od 1 100 Kč |
 | Bouldering | 160–260 Kč | V16: off-peak od 220 Kč |
 | Lezení s lanem | 150–200 Kč | Koloseum vč. fitness |
-| Padel | — | Parkhotel (1 kurt), Padel Powers Q3 2026 |
 | Tenis (outdoor) | 170–300 Kč/hod | Slavia členové od 170 Kč |
 | Tenis (indoor) | 350–600 Kč/hod | Slavia nafukovací od 350 Kč |
 | Squash | 170–370 Kč/hod | TJ Loko studenti 110 Kč! |
@@ -342,7 +321,6 @@ Kompletně bezplatný multisportovní areál — skatepark, 2 asfaltová hřišt
 | Form Factory Kasárny — 1 410 m² | 2025 |
 | LOGSPEED CZ Aréna — bezhotovostní platby | Leden 2026 |
 | KWK FIT Doubravka — uzavření | 31. 5. 2026 |
-| Padel Powers — 9 indoor kurtů | Q3 2026 |
 
 ## Sportujete v Plzni?
 

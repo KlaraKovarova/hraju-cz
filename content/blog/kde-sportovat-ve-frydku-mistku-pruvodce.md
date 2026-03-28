@@ -94,7 +94,7 @@ Moderní multifunkční hala postavená v roce 2014. Domov **HC Frýdek-Místek*
 
 Po–Ne 7:00–21:00. Adresa: Na Příkopě 3726. Kontakt: 595 172 975, halapolarka.cz.
 
-## Tenis — 19+ kurtů včetně padelu
+## Tenis — 19+ kurtů
 
 ### Prestige Tennis Park — 9 kurtů + penzion
 
@@ -116,13 +116,13 @@ Prémiový tenisový areál s celoročním provozem.
 
 Adresa: 28. října 2236. Kontakt: 777 280 008, prestige-tenis.cz.
 
-### Padel & Tennis Point — padel v Česku!
+### Tennis Point
 
-**6 tenisových kurtů + 3 padelové kurty** — padel je stále relativně nový sport v ČR a málo měst velikosti F-M ho nabízí.
+**6 tenisových kurtů** s kompletním zázemím.
 
 Servis raket, tenisový shop, licencovaní trenéři, online rezervační systém.
 
-Adresa: Skautská 3763. Kontakt: 724 152 064, padelandtennispoint.cz.
+Adresa: Skautská 3763. Kontakt: 724 152 064.
 
 ### Teniscentrum U Hradu — rodinná atmosféra
 
@@ -369,7 +369,6 @@ Web: fbcfm.cz.
 - **České centrum BJJ** — sídlo Draculino pro celou ČR
 - **Aquapark Olešná** — celoroční komplex s 50m nerezovým bazénem (letní) a 98m tobogánem (zimní)
 - **Farma Ocelářů Třinec** — hokejový pipeline do extraligového mistra (20 km)
-- **Padel** — 3 padelové kurty, vzácné pro město této velikosti
 - **Sportplex** — městská společnost centrálně spravující všechna sportoviště
 
 Na hraju.cz najdete všechna sportoviště ve Frýdku-Místku s recenzemi od místních sportovců. Zanechte svůj názor!

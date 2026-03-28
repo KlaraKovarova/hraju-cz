@@ -13,7 +13,6 @@ sportTags:
   - lezeni
   - fitness
   - badminton
-  - padel
 image: /images/blog/kde-sportovat-v-ostrave-pruvodce.jpg
 ---
 
@@ -62,7 +61,7 @@ Největší letní koupaliště ve střední Evropě — vodní plocha přes 41 
 
 ### FIT PARK — centrum města
 
-Největší fitness centrum v Ostravě. Přes 220 posilovacích a kardio strojů. Součástí jsou i badmintonové kurty a **padelový kurt**.
+Největší fitness centrum v Ostravě. Přes 220 posilovacích a kardio strojů. Součástí jsou i badmintonové kurty.
 
 - **Vstup:** 300 Kč jednorázový
 - **Měsíční:** 1 690 Kč (studenti ISIC 1 300 Kč, senioři 700 Kč)
@@ -155,34 +154,6 @@ Menší, komunitnější alternativa. Spojená s lezeckým oddílem Tendon Blok 
 - **Hodiny:** Po–Pá 5:00–15:00 a 18:30–23:00, So–Ne 5:00–23:00
 - **Web:** blokcentrum.cz
 - **Najít stěnu:** [hraju.cz/sport/lezeni](/sport/lezeni)
-
-## Padel
-
-### Padel Club Ostrava — Varenská + Trojhalí Karolina
-
-Největší padelový klub v Ostravě. **4 outdoor kurty** v areálu Varenská + **2 indoor kurty** v Trojhalí Karolina (zimní sezóna — provizorní hala, každou sezónu se staví a bourá).
-
-- **Outdoor sezóna:** Od dubna
-- **Indoor sezóna:** Říjen – březen
-- **Rezervace:** Přes Reservanto (jdemenato.cz)
-- **Kontakt:** info@padelclubostrava.cz
-- **Web:** padelclubostrava.cz
-
-### FIT PARK — padel v centru města
-
-1 padelový kurt přímo ve fitness centru FIT PARK.
-
-- **Cena:** 740–800 Kč/hod (= 185–200 Kč/osoba ve čtyřech)
-- **Půjčení rakety:** 70 Kč
-
-### Padel Powers — CTPark Ostrava II (NOVÉ, Q2 2026)
-
-**3 000 m² indoor padelové centrum** — ve spolupráci s CTP. Stejný provozovatel jako největší centrum v Brně (10 kurtů). Přístup pro veřejnost i zaměstnance CTPark.
-
-- **Otevření:** Očekáváno Q2 2026
-- **Web:** padelpowers.com
-- **Více o padelu v ČR:** [Padel boom 2026](/blog/padel-boom-cesko-2026-kam-hrat-mimo-prahu)
-- **Najít padel:** [hraju.cz/sport/padel](/sport/padel)
 
 ## Tenis
 
@@ -294,7 +265,6 @@ Domov HC RT TORAX Poruba. Pravidelné veřejné bruslení s různými formáty �
 | Fitness (jednorázový) | 299–300 Kč | FitUp: první vstup zdarma |
 | Lezení (lead) | 100–264 Kč | Děti od 100 Kč (Tendon) |
 | Bouldering | 125–260 Kč | Hangar: ráno levnější |
-| Padel | 740–800 Kč/hod | = 185–200 Kč/osoba ve čtyřech |
 | Tenis (antuka) | 100–210 Kč/hod | TJ Baník od 100 Kč! |
 | Tenis (indoor) | 120–400 Kč/hod | SAREZA umělý povrch jen 120 Kč |
 | Squash | 170–380 Kč/hod | CDU Sport dopoledne od 170 Kč |
@@ -308,7 +278,6 @@ Domov HC RT TORAX Poruba. Pravidelné veřejné bruslení s různými formáty �
 | Vodní svět SAREZA — rekonstrukce za 82,5 mil. Kč | Červen 2025 |
 | Hangar Ostrava — největší bouldering ve střední Evropě | Září 2023 |
 | Form Factory Karolina (ex Clever fit) | Květen 2025 |
-| Padel Powers — 3 000 m² indoor centrum v CTPark | Q2 2026 |
 | Krytý bazén Poruba — modernizace venkovního areálu | Probíhá |
 | ITP Tenis Park — nově přijímá MultiSport | Zima 2025/2026 |
 

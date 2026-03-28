@@ -26,7 +26,7 @@ Opava (56 000 obyvatel) je **basketbalové hlavní město Česka**. BK Opava s p
 - **SFC Opava** — jeden z nejstarších fotbalových klubů v českých zemích (od 1907)
 - **Nový zimní stadion** — rekonstrukce za 370 milionů Kč s NHL-standard ledovou plochou
 - **910 km cyklotras** a top 3 v ČR v počtu sdílených kol na obyvatele
-- **19+ tenisových kurtů** + padel
+- **19+ tenisových kurtů**
 
 ## Basketbal — BK Opava
 
@@ -108,7 +108,7 @@ Sokol Opava je jedním z **nejstarších sportovních spolků ve Slezsku** — o
 
 Dva olympijští atleti z jednoho atletického klubu města o 56 000 obyvatelích — to je na české poměry výjimečné.
 
-## Tenis — 19+ kurtů + padel
+## Tenis — 19+ kurtů
 
 ### Tenis Centrum Opava (SK JC Sport)
 
@@ -117,7 +117,6 @@ Dva olympijští atleti z jednoho atletického klubu města o 56 000 obyvatelíc
 | Venkovní kurty | 9 (antuka) |
 | Kryté haly | 3 |
 | Badminton | 4 kurty |
-| Padel | 1 kurt |
 | Pronájem (indoor) | 440–600 Kč/h |
 | Pronájem (outdoor) | 200–220 Kč/h |
 | Extra | Tenisový shop, restaurace, ubytování, parkování |

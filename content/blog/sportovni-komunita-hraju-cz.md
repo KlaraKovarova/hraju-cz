@@ -74,7 +74,6 @@ Nevíte, kde začít? Připravili jsme průvodce pro začátečníky:
 - [Via ferraty v Česku — kompletní průvodce](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
 - [Tenis pro začátečníky](/blog/tenis-pro-zacatecniky-kompletni-pruvodce)
 - [Bouldering pro začátečníky](/blog/bouldering-pro-zacatecniky-kompletni-pruvodce)
-- [Padel pro začátečníky](/blog/padel-pro-zacatecniky-kompletni-pruvodce)
 - [Plavání pro začátečníky](/blog/plavani-pro-zacatecniky-kompletni-pruvodce)
 
 ## Kde sportovat — průvodci po městech

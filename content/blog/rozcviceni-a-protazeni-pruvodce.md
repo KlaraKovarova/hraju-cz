@@ -70,7 +70,7 @@ Každou pozici držte 20–30 sekund. Dýchejte klidně. NIKDY do bolesti — je
 - Kyčelní flexory (30 s)
 - Předklon k nohám v sedu (30 s)
 
-### Tenis / Squash / Badminton / Padel
+### Tenis / Squash / Badminton
 
 **Před:**
 - Lehký klus 2–3 min

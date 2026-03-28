@@ -65,13 +65,6 @@ Neformální badminton v parku stojí 0 Kč — stačí rakety a košíček.
 - **Vybavení:** Set 2 raket + košíčky od 300 Kč
 - **Tip:** V parku hraje se s plastovými košíčky (odolnější vůči větru)
 
-### Padel
-
-Venkovní padel kurty se v Česku rozšiřují — zatím hlavně Praha, Brno, České Budějovice.
-
-- **Cena:** 400–700 Kč/kurt (100–175 Kč/osoba ve 4)
-- **Tip:** Padel se hraje celoročně, ale léto = více volných kurtů
-
 ## Na vodě — české léto = vodní sporty
 
 ### Paddleboarding (SUP)

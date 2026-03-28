@@ -78,7 +78,6 @@ V tomto věku mají děti tendenci se specializovat. Ale nemusí — multisport 
 
 - **Squash** — intenzivní, kompetitivní, rychlé zlepšování. Amatérské ligy berou hráče od 12 let.
 - **Lezení (lead climbing)** — přechod z boulderingu na lezení s lanem. Rozvíjí odvahu a sebedůvěru.
-- **Padel** — sociální sport, hraje se ve čtyřech, skvělý pro party kamarádů
 - **Fitness** — od 15 let s trenérem. Ne dříve — klouby a kosti ještě rostou.
 
 ## Kolik stojí dětský sport? Realistický rozpočet
@@ -128,7 +127,6 @@ Děti se učí příkladem. Pokud vidí, že rodiče sportují, sport pro ně bu
 - **Bouldering** — skvělý rodinný výlet, děti i dospělí lezou vedle sebe
 - **Badminton** — rodič vs dítě, férový zápas (dítě je rychlejší, rodič má techniku)
 - **Cyklistika** — víkendové výlety, žádné sportoviště nepotřebujete
-- **Padel** — 2 rodiče + 2 teenageři = ideální čtyřhra
 
 ## Sportovní kroužky vs volný sport
 

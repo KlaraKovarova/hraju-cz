@@ -33,7 +33,7 @@ To je celé. Žádné registrace, žádné poplatky. Jen výzva pro vás a vaše
 
 ### Objevíte nový oblíbený sport
 
-Většina lidí, kteří zkusí bouldering poprvé, se do něj zamiluje. Totéž platí pro padel, badminton nebo aqua aerobic. Nikdy nevíte, co vás chytne, dokud to nezkusíte.
+Většina lidí, kteří zkusí bouldering poprvé, se do něj zamiluje. Totéž platí pro badminton, squash nebo aqua aerobic. Nikdy nevíte, co vás chytne, dokud to nezkusíte.
 
 ### Potkáte nové lidi
 
@@ -46,10 +46,10 @@ Různé sporty zatěžují tělo jinak. Plavání buduje vytrvalost, squash rych
 ## Návrh týdenního plánu
 
 ### Týden 1: Raketové sporty
-Zkuste sport, který jste nikdy nehráli — squash, badminton nebo padel. Většina center nabízí půjčení vybavení, takže nepotřebujete nic vlastního.
+Zkuste sport, který jste nikdy nehráli — squash nebo badminton. Většina center nabízí půjčení vybavení, takže nepotřebujete nic vlastního.
 
-- [Squash v Česku](/sport/squash) | [Badminton v Česku](/sport/badminton) | [Padel v Česku](/sport/padel)
-- Průvodce: [Padel pro začátečníky](/blog/padel-pro-zacatecniky-kompletni-pruvodce) | [Squash pro začátečníky](/blog/squash-pro-zacatecniky-kompletni-pruvodce)
+- [Squash v Česku](/sport/squash) | [Badminton v Česku](/sport/badminton)
+- Průvodce: [Squash pro začátečníky](/blog/squash-pro-zacatecniky-kompletni-pruvodce) | [Badminton pro začátečníky](/blog/badminton-pro-zacatecniky-kompletni-pruvodce)
 
 ### Týden 2: Vodní sporty
 Jděte plavat do bazénu, který jste ještě nenavštívili. Nebo zkuste aqua aerobic, pokud jste nikdy nebyli.
@@ -92,7 +92,7 @@ Každá recenze vás posouvá v [žebříčku nejaktivnějších recenzentů](/b
 Každý check-in se zaznamenává do vašeho profilu. Po 30 dnech máte vizuální mapu míst, kde jste sportovali — osobní sportovní deník.
 
 ### Nové kontakty
-Nový sport = nová komunita. Lezci, padelisté, plavci — každý sport má své lidi. A společný sport je nejlepší způsob, jak někoho poznat.
+Nový sport = nová komunita. Lezci, squashisté, plavci — každý sport má své lidi. A společný sport je nejlepší způsob, jak někoho poznat.
 
 ## Časté otázky
 
@@ -106,7 +106,7 @@ I 2 nové sporty za měsíc jsou víc, než většina lidí zkusí za rok. Každ
 Samozřejmě — ale výzva je o **nových** sportech. Zkuste alespoň 2 sporty, které jste nikdy nedělali.
 
 **Potřebuju speciální vybavení?**
-Ne. Většina center nabízí půjčení vybavení pro nováčky. Na bouldering stačí sportovní oblečení (lezečky si půjčíte). Na padel si půjčíte raketu. Na ferratu set.
+Ne. Většina center nabízí půjčení vybavení pro nováčky. Na bouldering stačí sportovní oblečení (lezečky si půjčíte). Na squash si půjčíte raketu. Na ferratu set.
 
 ## Sdílejte výzvu
 

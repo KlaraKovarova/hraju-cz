@@ -14,7 +14,7 @@ sportTags:
 image: /images/blog/letni-sporty-2026.jpg
 ---
 
-Léto 2026 je za dveřmi a Česko nabízí širokou paletu sportovních aktivit — od klasiky jako tenis a plavání po adrenalinové ferraty a nově populární padel. Připravili jsme přehled sportů, které stojí za vyzkoušení.
+Léto 2026 je za dveřmi a Česko nabízí širokou paletu sportovních aktivit — od klasiky jako tenis a plavání po adrenalinové ferraty a bouldering v přírodě. Připravili jsme přehled sportů, které stojí za vyzkoušení.
 
 ## Plážový volejbal — king léta
 

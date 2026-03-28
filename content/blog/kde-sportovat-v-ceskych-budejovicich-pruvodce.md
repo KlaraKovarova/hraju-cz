@@ -3,7 +3,7 @@ title: Kde sportovat v Českých Budějovicích — kompletní průvodce 2026
 date: '2026-03-08'
 category: pruvodce-mesta
 excerpt: >-
-  Přehled 14 ověřených sportovišť v Českých Budějovicích — tenis s padelem, 5
+  Přehled 14 ověřených sportovišť v Českých Budějovicích — tenis, 5
   fitness center, 50m bazén, 2 lezecké stěny, squash, badminton i veřejné
   bruslení v Budvar Aréně.
 sportTags:
@@ -22,26 +22,25 @@ image: /images/blog/kde-sportovat-v-ceskych-budejovicich-pruvodce.jpg
 
 Zmapovali jsme 14 sportovišť s ověřenými cenami z oficiálních webů.
 
-## Tenis a padel — 2 areály
+## Tenis — 2 areály
 
 ### LTC VITON České Budějovice
 
-Největší tenisový areál v Jižních Čechách — celoroční provoz na dvou typech povrchu + 3 padel kurty.
+Největší tenisový areál v Jižních Čechách — celoroční provoz na dvou typech povrchu.
 
 - **Adresa:** České Budějovice (hlavní sportovní zóna)
-- **Kurty:** Pevná hala (umělá tráva ITF) + nafukovací hala (antuka) + 3 padel kurty
+- **Kurty:** Pevná hala (umělá tráva ITF) + nafukovací hala (antuka)
 - **Ceny tenis:**
   - Pevná hala: 520–580 Kč/hodina (všední den), 510 Kč (víkend)
   - Nafukovací hala: 500–560 Kč/hodina (všední den), 490 Kč (víkend)
   - Last-minute: 450–520 Kč/hodina
   - Lekce: 500 Kč/hodina (dospělí), 300 Kč/osoba ve dvou
-- **Ceny padel:** 500 Kč/hodina za kurt
 - **Fitness:** Jednorázový vstup 120 Kč, měsíční 1 050 Kč (členové 720 Kč)
 - **Otevírací doba:** Po–Ne 8:00–22:00
 - **Kontakt:** +420 602 175 751
 - **Web:** [teniscb.cz](https://www.teniscb.cz)
 
-**Pro koho:** Padel kurty jsou v Českých Budějovicích unikátní — v regionu je nenajdete jinde. Fitness s Technogym vybavením je bonus.
+**Pro koho:** Fitness s Technogym vybavením je bonus k tenisovému areálu.
 
 ### TTC — Tenisový Talent Club
 

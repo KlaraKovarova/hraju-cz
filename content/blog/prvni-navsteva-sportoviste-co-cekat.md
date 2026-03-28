@@ -111,21 +111,6 @@ Dobrá zpráva — 99 % sportovišť v Česku je přátelských k nováčkům. T
 
 **Na co se zeptat:** „Kdy jsou plavecké dráhy nejprázdnější?" — obvykle ráno 6:00–8:00 a pozdě večer
 
-## Padel
-
-**Co čekat:** Rezervace kurtu předem (hraje se ve 4). Padel se hraje na menším kurtu se skleněnými stěnami a míč se odráží od stěn. Rakety jsou bez strun, s dírkami.
-
-**Co si vzít:**
-- Sportovní obuv (tenisová nebo běžecká)
-- Sportovní oblečení
-- Rakety si půjčíte na místě
-
-**Kolik zaplatíte:** 400–800 Kč za kurt na hodinu (100–200 Kč na osobu ve čtyřech)
-
-**Na co se zeptat:** „Nabízíte úvodní lekci pro začátečníky?" — mnoho padel center má 60minutový kurz za 300–500 Kč/osoba
-
-**Tip:** Padel je nejlepší sport pro začátečníky z raketových sportů. Servis je zespodu, kurt je menší, stěny dávají druhou šanci. Po 30 minutách budete hrát smysluplné výměny.
-
 ## Obecné tipy pro první návštěvu
 
 1. **Přijďte 15 minut předem** — vyřídíte recepci, převléknete se, rozkoukáte se

@@ -89,13 +89,13 @@ Squash patří mezi sporty s nejvyšším energetickým výdejem:
 
 ## Squash vs. ostatní raketové sporty
 
-| | Squash | Tenis | Badminton | Padel |
-|---|---|---|---|---|
-| **Kurt** | Indoor, malý (6×10 m) | Outdoor/indoor, velký | Indoor, střední | Outdoor/indoor, střední |
-| **Kondice** | Extrémní | Vysoká | Střední–vysoká | Střední |
-| **Začátečnická křivka** | Střední | Pomalá | Rychlá | Rychlá |
-| **Cena za hodinu** | 100–400 Kč | 200–500 Kč | 100–300 Kč | 250–600 Kč |
-| **Sezóna** | Celoročně | Léto outdoor | Celoročně | Celoročně |
+| | Squash | Tenis | Badminton |
+|---|---|---|---|
+| **Kurt** | Indoor, malý (6×10 m) | Outdoor/indoor, velký | Indoor, střední |
+| **Kondice** | Extrémní | Vysoká | Střední–vysoká |
+| **Začátečnická křivka** | Střední | Pomalá | Rychlá |
+| **Cena za hodinu** | 100–400 Kč | 200–500 Kč | 100–300 Kč |
+| **Sezóna** | Celoročně | Léto outdoor | Celoročně |
 
 ## Kde hrát squash
 

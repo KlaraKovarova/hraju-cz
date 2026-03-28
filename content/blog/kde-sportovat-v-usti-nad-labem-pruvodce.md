@@ -3,7 +3,7 @@ title: Kde sportovat v Ústí nad Labem — kompletní průvodce 2026
 date: '2026-03-12'
 category: pruvodce-mesta
 excerpt: >-
-  Přehled 16 ověřených sportovišť v Ústí nad Labem — tenis s padelem, fitness
+  Přehled 16 ověřených sportovišť v Ústí nad Labem — tenis, fitness
   centra od non-stop po premium, 50m bazén s termálním koupalištěm, 2 300 m²
   lezeckých stěn, squash, badminton, golf i bojové sporty.
 sportTags:
@@ -23,24 +23,23 @@ image: /images/blog/kde-sportovat-v-usti-nad-labem-pruvodce.jpg
 
 Zmapovali jsme 16 sportovišť s ověřenými informacemi z oficiálních webů.
 
-## Tenis a padel — 4 areály
+## Tenis — 4 areály
 
 ### Areál Větruše
 
-Tenisové kurty a padel kurt s výhledem na Střekov a České středohoří.
+Tenisové kurty s výhledem na Střekov a České středohoří.
 
 - **Adresa:** Areál Větruše, Ústí nad Labem (centrum)
-- **Kurty:** Antukové tenisové kurty s umělými lajnami + 1 padel kurt + víceúčelové hřiště
+- **Kurty:** Antukové tenisové kurty s umělými lajnami + víceúčelové hřiště
 - **Ceny:**
   - Tenis: 100–160 Kč/hodina
-  - Padel: 300 Kč/hodina
   - Víceúčelové hřiště: 150–200 Kč/hodina
 - **Dětský koutek:** Hřiště s věží, klouzačkou, houpačkami
 - **Kontakt:** +420 724 079 444
 - **Email:** info@vetruse.cz
 - **Web:** [vetruse.cz](https://www.vetruse.cz/)
 
-**Tip:** 100–160 Kč za hodinu tenisu — jedny z nejlevnějších kurtů v celém průvodci. Plus padel za 300 Kč — nejlevnější padel v regionu.
+**Tip:** 100–160 Kč za hodinu tenisu — jedny z nejlevnějších kurtů v celém průvodci.
 
 ### Tenis Terasa
 
@@ -68,7 +67,7 @@ Největší tenisový areál v Ústí — 10 kurtů (8 antuka + 2 hard court US 
 
 ### Sportovní areál Všebořice
 
-Tenisový areál s novým padel kurtem (ve výstavbě 2026).
+Tenisový areál s rozšiřující se nabídkou.
 
 - **Adresa:** Všebořice, Ústí nad Labem
 - **Otevírací doba (od 1. 2. 2026):** Po–Pá 9:00–21:00, So–Ne 9:00–20:00
@@ -76,7 +75,6 @@ Tenisový areál s novým padel kurtem (ve výstavbě 2026).
 - **Dárkové poukazy:** 500 Kč a 1 000 Kč
 - **Web:** [tenisvseborice.cz](http://www.tenisvseborice.cz/)
 
-**Novinka 2026:** Stavba nového padel kurtu zahájena.
 
 ## Fitness — od non-stop po premium
 
@@ -330,10 +328,10 @@ Domov hokejového HC Slovan Ústí nad Labem. Veřejné bruslení každou neděl
 1. **Centrum / Panská** — Městské lázně (25m bazén, 50 Kč!)
 2. **Klíše** — Plavecký areál (50m bazén), SLUNETA Fitness
 3. **Pražská** — HUDY lezecká stěna (2 300 m²)
-4. **Větruše** — Tenis + padel (od 100 Kč/h)
+4. **Větruše** — Tenis (od 100 Kč/h)
 5. **Severní Terasa** — Tenis Terasa, Fitness Factory, Papa Joe's
 6. **Drážďanská** — T-CLUB (squash, badminton, fitness)
-7. **Všebořice** — Golf Resort Terasy, Sportovní areál (tenis + nový padel)
+7. **Všebořice** — Golf Resort Terasy, Sportovní areál (tenis)
 8. **Brná** — Termální koupaliště (léto)
 
 ## Najděte sportoviště v Ústí nad Labem

@@ -76,7 +76,6 @@ Jaro a začátek léta je nejsilnější období pro sportovní akce. Tady je p�
 **Raketové sporty:**
 - Venkovní tenisové turnaje — sezóna na antuce v plném proudu
 - Badmintonové ligy přecházejí do outdoor verze
-- Padel — nejrychleji rostoucí sport v ČR, turnaje po celé republice
 
 ### Červen — plná sezóna
 

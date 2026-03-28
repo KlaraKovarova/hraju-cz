@@ -20,7 +20,7 @@ Badminton je nejrychlejší raketový sport na světě — košíček může let
 
 **Celotělový trénink.** Za hodinu badmintonu spálíte 400–600 kalorií. Zapojíte nohy (výpady, sprinterské starty), trup (rotace při úderech) a paže. Navíc trénujete reakci a koordinaci.
 
-**Dostupnost.** Hodinový pronájem kurtu stojí 200–400 Kč, raketu na úvod pořídíte od 500 Kč. Oproti tenisu nebo padelu je badminton výrazně levnější.
+**Dostupnost.** Hodinový pronájem kurtu stojí 200–400 Kč, raketu na úvod pořídíte od 500 Kč. Oproti tenisu je badminton výrazně levnější.
 
 **Sociální aspekt.** Čtyřhra (debly) je v badmintonu minimálně stejně populární jako dvouhra. Snadno si zahrajete ve čtyřech — ideální pro partu kamarádů.
 

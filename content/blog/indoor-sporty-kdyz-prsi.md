@@ -1,9 +1,9 @@
 ---
-title: '12 indoor sportů, když venku prší — kam utéct před počasím'
+title: '11 indoor sportů, když venku prší — kam utéct před počasím'
 date: '2026-03-04'
 category: tipy
 excerpt: >-
-  Déšť nemusí znamenat konec sportu. Přehled 12 halových sportů, které můžete
+  Déšť nemusí znamenat konec sportu. Přehled 11 halových sportů, které můžete
   dělat kdykoli — bez ohledu na počasí. S cenami, tipy pro začátečníky a kde je
   najdete.
 sportTags:
@@ -16,11 +16,11 @@ sportTags:
 image: /images/blog/indoor-sporty-kdyz-prsi.jpg
 ---
 
-# 12 indoor sportů, když venku prší — kam utéct před počasím
+# 11 indoor sportů, když venku prší — kam utéct před počasím
 
 Plánovali jste tenis, běh nebo kolo — a přišel déšť. Znáte to. V Česku prší průměrně 100–130 dní v roce. To je třetina roku, kdy venkovní sport padá.
 
-Ale sport nemusí padat s počasím. Tady je 12 halových sportů, které můžete dělat kdykoli — od těch, které zvládnete za hodinu, po ty, které se stanou vaším novým koníčkem.
+Ale sport nemusí padat s počasím. Tady je 11 halových sportů, které můžete dělat kdykoli — od těch, které zvládnete za hodinu, po ty, které se stanou vaším novým koníčkem.
 
 ## Raketové sporty pod střechou
 
@@ -50,17 +50,9 @@ Většina tenisových areálů v Česku má kryté haly — nafukovací nebo pev
 - **Tip:** Dopolední hodiny bývají levnější (170–300 Kč)
 - **Kde:** [hraju.cz/sport/tenis](https://hraju.cz/sport/tenis)
 
-### 4. Padel
-
-Hraje se ve čtyřech na menším kurtu se skleněnými stěnami. Míč se odráží od stěn, servis je zespodu. Začátečníci hrají smysluplné výměny po 30 minutách.
-
-- **Cena:** 400–800 Kč/hodina za kurt (100–200 Kč na osobu ve čtyřech)
-- **Pro koho:** Skupiny přátel, páry, sociální sportovci
-- **Kde:** [hraju.cz/sport/padel](https://hraju.cz/sport/padel)
-
 ## Pohyb na stěně i ve vodě
 
-### 5. Bouldering
+### 4. Bouldering
 
 Lezení na nízké stěně (3–4,5 m) bez lana, s tlustými matracemi pod sebou. Řešíte „bouldery" — krátké cesty s barevně označenými chyty. Je to jako puzzle pro celé tělo.
 
@@ -71,14 +63,14 @@ Lezení na nízké stěně (3–4,5 m) bez lana, s tlustými matracemi pod sebou
 
 **Tip:** Většina boulderovek má dětské sekce s nižšími stěnami — ideální rodinná aktivita na deštivý víkend.
 
-### 6. Lezení s lanem
+### 5. Lezení s lanem
 
 Vyšší stěny (10–15 m), jištění lanem. Intenzivnější zážitek než bouldering, ale potřebujete partnera na jištění (nebo autobelay systém).
 
 - **Cena:** 100–250 Kč za vstup + jistič 50 Kč
 - **Kde:** [hraju.cz/sport/lezeni](https://hraju.cz/sport/lezeni)
 
-### 7. Plavání
+### 6. Plavání
 
 Bazén je otevřený za každého počasí. 50m bazény najdete v každém krajském městě, aquacentra nabízejí i wellness, tobogány a dětské zóny.
 
@@ -88,14 +80,14 @@ Bazén je otevřený za každého počasí. 50m bazény najdete v každém krajs
 
 ## Posilování a skupinové lekce
 
-### 8. Fitness / posilovna
+### 7. Fitness / posilovna
 
 Klasika, která nikdy nezklame. Moderní fitness centra nabízejí kardio zóny, volné váhy, posilovací stroje i skupinové lekce.
 
 - **Cena:** 80–220 Kč jednorázový vstup, měsíční permanentky 790–1 500 Kč
 - **Kde:** [hraju.cz/sport/fitness](https://hraju.cz/sport/fitness)
 
-### 9. Skupinové lekce (spinning, TRX, jóga)
+### 8. Skupinové lekce (spinning, TRX, jóga)
 
 Trenér řídí, vy cvičíte. Pevný rozvrh vytváří návyk — „každé úterý v 18:30" se stane vaším rituálem.
 
@@ -105,7 +97,7 @@ Trenér řídí, vy cvičíte. Pevný rozvrh vytváří návyk — „každé ú
 
 ## Zábavné sporty pod střechou
 
-### 10. Bowling
+### 9. Bowling
 
 Sociální sport — ideální pro skupiny 4–6 lidí. Žádná příprava, žádné vybavení, prostě přijdete a hrajete.
 
@@ -113,14 +105,14 @@ Sociální sport — ideální pro skupiny 4–6 lidí. Žádná příprava, ž�
 - **Pro koho:** Skupiny přátel, firemní akce, narozeninové oslavy
 - **Kde:** [hraju.cz/sport/bowling](https://hraju.cz/sport/bowling)
 
-### 11. Stolní tenis
+### 10. Stolní tenis
 
 Nenáročný, levný a dostupný téměř všude. Hodně fitness center a sportovních hal má stoly na stolní tenis.
 
 - **Cena:** 80–150 Kč/hodina za stůl
 - **Kde:** [hraju.cz/sport/stolni-tenis](https://hraju.cz/sport/stolni-tenis)
 
-### 12. Florbal
+### 11. Florbal
 
 Nejpopulárnější halový sport v Česku. Pravidelné amatérské ligy, kroužky pro děti, rekreační turnaje.
 
@@ -133,11 +125,11 @@ Nejpopulárnější halový sport v Česku. Pravidelné amatérské ligy, krouž
 | Chci... | Vyzkoušejte |
 |---|---|
 | Maximální zátěž za minimum času | Squash, spinning |
-| Něco nového a zábavného | Bouldering, padel |
+| Něco nového a zábavného | Bouldering, badminton |
 | Sport pro dva | Badminton, squash, tenis |
 | Aktivitu pro celou rodinu | Plavání (aquacentrum), bowling, bouldering |
 | Relaxaci i sport | Plavání + wellness |
-| Sociální zážitek | Bowling, padel, skupinové fitness |
+| Sociální zážitek | Bowling, skupinové fitness |
 | Nejlevnější možnost | Stolní tenis, plavání |
 
 ## Najděte sportoviště poblíž

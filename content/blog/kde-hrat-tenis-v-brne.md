@@ -41,7 +41,7 @@ Jeden z nejúspěšnějších tenisových klubů v ČR. Dvě lokality, celoročn
 
 **Adresa:** Žabovřeská 3, Brno · [clubclassic.cz](https://www.clubclassic.cz/)
 
-Největší multisportovní areál v Brně — tenis, badminton, beach volejbal, padel, pickleball.
+Největší multisportovní areál v Brně — tenis, badminton, beach volejbal, pickleball.
 
 - **Kurty:** 10 tenisových (8 antuka + 2 syntetická antuka), přetlaková hala v zimě
 - **Ceny hala 2025/26:** Dopoledne (7–13h) 10 hodin za 3 990 Kč, odpoledne (13–22h) 10 hodin za 4 990 Kč

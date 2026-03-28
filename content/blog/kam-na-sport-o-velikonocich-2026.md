@@ -12,7 +12,6 @@ sportTags:
   - fitness
   - cyklistika
   - behani
-  - padel
 image: /images/blog/jarni-sportovni-sezona-2026-pruvodce.jpg
 ---
 
@@ -43,7 +42,7 @@ Velikonoce 2026 připadají na **3.–6. dubna** (čtvrtek–neděle). Čtyři d
 
 **Rada:** Vždy ověřte sváteční otevírací doby na webu sportoviště nebo zavolejte den předem.
 
-## 5 sportovních výletů na velikonoční víkend
+## 4 sportovní výlety na velikonoční víkend
 
 ### 1. Ferraty — zahájení sezóny
 
@@ -86,15 +85,6 @@ Odpočinková varianta pro ty, kdo chtějí aktivní regeneraci.
 - **Aquapark Kohoutovice** — 5 bazénů, 90m tobogán, fitness v ceně. Kondiční plavání od 140 Kč.
 - **Aquapark Čestlice** (u Prahy) — největší aquapark v ČR
 
-### 5. Padel — zkuste nový sport
-
-Prodloužený víkend je ideální na vyzkoušení nového sportu. Padel má nízký vstupní práh — za 15 minut hrajete rallye.
-
-**Kam o Velikonocích:**
-- **Padel Powers Brno-Slatina** — 10 indoor kurtů, nově otevřeno. Úvodní lekce 150 Kč.
-- **Padel Arena Praha** — indoor kurty, celoroční provoz
-- Pozvěte 3 kamarády — padel se hraje 2v2
-
 ## Počasí na Velikonoce 2026 — na co se připravit
 
 Začátek dubna v Česku znamená:
@@ -129,7 +119,6 @@ Byli jste na sportu přes Velikonoce? **Napište recenzi** a pomozte ostatním s
 - [Cyklotrasy v Praze a okolí](/blog/cyklotrasy-praha-pruvodce)
 - [Kde běhat v Praze — 15 nejlepších tras](/blog/kde-behat-v-praze-pruvodce)
 - [Bouldering pro začátečníky](/blog/bouldering-pro-zacatecniky-kompletni-pruvodce)
-- [Padel pro začátečníky](/blog/padel-pro-zacatecniky-kompletni-pruvodce)
 - [Kam na sport v dubnu 2026](/blog/kam-na-sport-v-dubnu-2026)
 
 ## Zapojte se do komunity
