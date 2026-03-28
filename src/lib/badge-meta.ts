@@ -68,6 +68,16 @@ export const BADGE_META: Record<string, { name: string; emoji: string; descripti
   "dubnovy-lezec": {
     name: "Dubnov\u00FD Lezec",
     emoji: "\uD83E\uDDD7",
-    description: "2 lezecké stěny navštívené v dubnu 2026",
+    description: "2 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v dubnu 2026",
+  },
+  "kvetnovy-ferratista": {
+    name: "Kv\u011Btnov\u00FD Ferratista",
+    emoji: "\u26F0\uFE0F",
+    description: "5 ferrat nav\u0161t\u00EDven\u00FDch v kv\u011Btnu 2026",
+  },
+  "kvetnovy-lezec": {
+    name: "Kv\u011Btnov\u00FD Lezec",
+    emoji: "\uD83E\uDDD7",
+    description: "3 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v kv\u011Btnu 2026",
   },
 };

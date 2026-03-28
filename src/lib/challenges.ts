@@ -319,7 +319,7 @@ export const BADGE_DEFINITIONS: BadgeDefinition[] = [
   {
     slug: "dubnovy-lezec",
     name: "Dubnov\u00FD Lezec",
-    description: "2 lezecké stěny navštívené v dubnu 2026",
+    description: "2 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v dubnu 2026",
     emoji: "\uD83E\uDDD7",
     sportSlug: "lezeni",
     category: "seasonal",
@@ -334,6 +334,48 @@ export const BADGE_DEFINITIONS: BadgeDefinition[] = [
         },
       });
       return count >= 2;
+    },
+  },
+
+  // ─── Monthly challenge badges (May 2026) ───────────────────────────────
+  {
+    slug: "kvetnovy-ferratista",
+    name: "Kv\u011Btnov\u00FD Ferratista",
+    description: "5 ferrat nav\u0161t\u00EDven\u00FDch v kv\u011Btnu 2026",
+    emoji: "\u26F0\uFE0F",
+    sportSlug: "ferraty",
+    category: "seasonal",
+    check: async (ctx) => {
+      const mayStart = new Date(2026, 4, 1);
+      const mayEnd = new Date(2026, 5, 1);
+      const count = await prisma.visit.count({
+        where: {
+          userId: ctx.userId,
+          createdAt: { gte: mayStart, lt: mayEnd },
+          facility: { sports: { some: { sport: { slug: "ferraty" } } } },
+        },
+      });
+      return count >= 5;
+    },
+  },
+  {
+    slug: "kvetnovy-lezec",
+    name: "Kv\u011Btnov\u00FD Lezec",
+    description: "3 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v kv\u011Btnu 2026",
+    emoji: "\uD83E\uDDD7",
+    sportSlug: "lezeni",
+    category: "seasonal",
+    check: async (ctx) => {
+      const mayStart = new Date(2026, 4, 1);
+      const mayEnd = new Date(2026, 5, 1);
+      const count = await prisma.visit.count({
+        where: {
+          userId: ctx.userId,
+          createdAt: { gte: mayStart, lt: mayEnd },
+          facility: { sports: { some: { sport: { slug: "lezeni" } } } },
+        },
+      });
+      return count >= 3;
     },
   },
 ];
@@ -448,6 +490,7 @@ export async function getUserBadgeProgress(userId: string): Promise<
     seasonReviews, totalReviews, maxHelpful, totalHelpful,
     allVisits, approvedReviews, springVisits,
     aprilFerratyVisits, aprilLezeniVisits,
+    mayFerratyVisits, mayLezeniVisits,
   ] = await Promise.all([
     prisma.visit.count({
       where: { userId, facility: { sports: { some: { sport: { slug: "ferraty" } } } } },
@@ -509,6 +552,21 @@ export async function getUserBadgeProgress(userId: string): Promise<
       where: {
         userId,
         createdAt: { gte: new Date(2026, 3, 1), lt: new Date(2026, 4, 1) },
+        facility: { sports: { some: { sport: { slug: "lezeni" } } } },
+      },
+    }),
+    // Monthly challenges: May 2026
+    prisma.visit.count({
+      where: {
+        userId,
+        createdAt: { gte: new Date(2026, 4, 1), lt: new Date(2026, 5, 1) },
+        facility: { sports: { some: { sport: { slug: "ferraty" } } } },
+      },
+    }),
+    prisma.visit.count({
+      where: {
+        userId,
+        createdAt: { gte: new Date(2026, 4, 1), lt: new Date(2026, 5, 1) },
         facility: { sports: { some: { sport: { slug: "lezeni" } } } },
       },
     }),
@@ -691,12 +749,33 @@ export async function getUserBadgeProgress(userId: string): Promise<
     {
       slug: "dubnovy-lezec",
       name: "Dubnov\u00FD Lezec",
-      description: "2 lezecké stěny navštívené v dubnu 2026",
+      description: "2 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v dubnu 2026",
       emoji: "\uD83E\uDDD7",
       category: "seasonal",
       earned: earnedSet.has("dubnovy-lezec"),
       progress: Math.min(aprilLezeniVisits, 2),
       target: 2,
+    },
+    // Monthly challenge badges (May 2026)
+    {
+      slug: "kvetnovy-ferratista",
+      name: "Kv\u011Btnov\u00FD Ferratista",
+      description: "5 ferrat nav\u0161t\u00EDven\u00FDch v kv\u011Btnu 2026",
+      emoji: "\u26F0\uFE0F",
+      category: "seasonal",
+      earned: earnedSet.has("kvetnovy-ferratista"),
+      progress: Math.min(mayFerratyVisits, 5),
+      target: 5,
+    },
+    {
+      slug: "kvetnovy-lezec",
+      name: "Kv\u011Btnov\u00FD Lezec",
+      description: "3 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v kv\u011Btnu 2026",
+      emoji: "\uD83E\uDDD7",
+      category: "seasonal",
+      earned: earnedSet.has("kvetnovy-lezec"),
+      progress: Math.min(mayLezeniVisits, 3),
+      target: 3,
     },
   ];
 }
