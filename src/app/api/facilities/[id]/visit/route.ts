@@ -80,11 +80,15 @@ export async function POST(
       session.name || session.email.split("@")[0]
     ).catch(() => {});
 
-    // Check for newly earned sport badges (fire-and-forget friendly)
+    // Check for newly earned badges: sport + streak + seasonal (fire-and-forget friendly)
     let newBadges: { slug: string; name: string; emoji: string }[] = [];
     try {
-      const earned = await checkBadgesByCategory(session.userId, "sport");
-      newBadges = earned
+      const [sportBadges, streakBadges, seasonalBadges] = await Promise.all([
+        checkBadgesByCategory(session.userId, "sport"),
+        checkBadgesByCategory(session.userId, "streak"),
+        checkBadgesByCategory(session.userId, "seasonal"),
+      ]);
+      newBadges = [...sportBadges, ...streakBadges, ...seasonalBadges]
         .map((slug) => {
           const def = getBadgeDefinition(slug);
           return def ? { slug: def.slug, name: def.name, emoji: def.emoji } : null;

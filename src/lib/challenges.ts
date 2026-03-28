@@ -9,7 +9,7 @@ export interface BadgeDefinition {
   /** Sport slug required (null = any sport) */
   sportSlug: string | null;
   /** Badge category for grouping */
-  category: "sport" | "review" | "community";
+  category: "sport" | "review" | "community" | "streak" | "seasonal";
   /** Check function returns true if user qualifies */
   check: (ctx: BadgeCheckContext) => Promise<boolean>;
 }
@@ -119,6 +119,181 @@ export const BADGE_DEFINITIONS: BadgeDefinition[] = [
       return !!review;
     },
   },
+
+  // ─── Sport badges (new) ─────────────────────────────────────────────────
+  {
+    slug: "plavec",
+    name: "Plavec",
+    description: "Check-in na 3+ bazénech",
+    emoji: "🏊",
+    sportSlug: "plavani",
+    category: "sport",
+    check: async (ctx) => {
+      const count = await prisma.visit.count({
+        where: {
+          userId: ctx.userId,
+          facility: { sports: { some: { sport: { slug: "plavani" } } } },
+        },
+      });
+      return count >= 3;
+    },
+  },
+  {
+    slug: "golfista",
+    name: "Golfista",
+    description: "Check-in na 3+ golfových hřištích",
+    emoji: "⛳",
+    sportSlug: "golf",
+    category: "sport",
+    check: async (ctx) => {
+      const count = await prisma.visit.count({
+        where: {
+          userId: ctx.userId,
+          facility: { sports: { some: { sport: { slug: "golf" } } } },
+        },
+      });
+      return count >= 3;
+    },
+  },
+  {
+    slug: "fitness-guru",
+    name: "Fitness Guru",
+    description: "Check-in v 5+ fitness centrech",
+    emoji: "💪",
+    sportSlug: "fitness",
+    category: "sport",
+    check: async (ctx) => {
+      const count = await prisma.visit.count({
+        where: {
+          userId: ctx.userId,
+          facility: { sports: { some: { sport: { slug: "fitness" } } } },
+        },
+      });
+      return count >= 5;
+    },
+  },
+
+  // ─── Community badges (new) ─────────────────────────────────────────────
+  {
+    slug: "hvezdny-recenzent",
+    name: "Hvězdný recenzent",
+    description: "10+ schválených recenzí",
+    emoji: "⭐",
+    sportSlug: null,
+    category: "review",
+    check: async (ctx) => {
+      const count = await prisma.review.count({
+        where: { userId: ctx.userId, isApproved: true },
+      });
+      return count >= 10;
+    },
+  },
+  {
+    slug: "pomocnik",
+    name: "Pomocník",
+    description: "Celkem 10+ hlas\u016F \u201Eu\u017Eite\u010Dn\u00E9\u201C na va\u0161ich recenz\u00EDch",
+    emoji: "🤝",
+    sportSlug: null,
+    category: "community",
+    check: async (ctx) => {
+      const result = await prisma.review.aggregate({
+        where: { userId: ctx.userId, isApproved: true },
+        _sum: { helpful: true },
+      });
+      return (result._sum.helpful ?? 0) >= 10;
+    },
+  },
+
+  // ─── Streak badges ─────────────────────────────────────────────────────
+  {
+    slug: "tydenni-serie",
+    name: "Týdenní série",
+    description: "Check-in ve 3 různé dny v jednom týdnu",
+    emoji: "🔥",
+    sportSlug: null,
+    category: "streak",
+    check: async (ctx) => {
+      // Check if user has visits on 3+ distinct dates within any Mon-Sun week
+      const visits = await prisma.visit.findMany({
+        where: { userId: ctx.userId },
+        select: { createdAt: true },
+        orderBy: { createdAt: "desc" },
+        take: 100,
+      });
+      if (visits.length < 3) return false;
+
+      // Group visits by ISO week (Mon-Sun)
+      const weekMap = new Map<string, Set<string>>();
+      for (const v of visits) {
+        const d = new Date(v.createdAt);
+        // Get Monday of this week
+        const day = d.getDay();
+        const diff = d.getDate() - day + (day === 0 ? -6 : 1);
+        const monday = new Date(d);
+        monday.setDate(diff);
+        const weekKey = monday.toISOString().slice(0, 10);
+        const dateKey = d.toISOString().slice(0, 10);
+        if (!weekMap.has(weekKey)) weekMap.set(weekKey, new Set());
+        weekMap.get(weekKey)!.add(dateKey);
+      }
+      return Array.from(weekMap.values()).some((dates) => dates.size >= 3);
+    },
+  },
+  {
+    slug: "aktivni-mesic",
+    name: "Aktivní měsíc",
+    description: "10+ check-inů nebo recenzí za jeden měsíc",
+    emoji: "📅",
+    sportSlug: null,
+    category: "streak",
+    check: async (ctx) => {
+      // Check if any calendar month has 10+ combined activities
+      const [visits, reviews] = await Promise.all([
+        prisma.visit.findMany({
+          where: { userId: ctx.userId },
+          select: { createdAt: true },
+        }),
+        prisma.review.findMany({
+          where: { userId: ctx.userId, isApproved: true },
+          select: { createdAt: true },
+        }),
+      ]);
+
+      const monthCounts = new Map<string, number>();
+      for (const v of visits) {
+        const key = v.createdAt.toISOString().slice(0, 7); // YYYY-MM
+        monthCounts.set(key, (monthCounts.get(key) ?? 0) + 1);
+      }
+      for (const r of reviews) {
+        const key = r.createdAt.toISOString().slice(0, 7);
+        monthCounts.set(key, (monthCounts.get(key) ?? 0) + 1);
+      }
+      return Array.from(monthCounts.values()).some((count) => count >= 10);
+    },
+  },
+
+  // ─── Seasonal badges ────────────────────────────────────────────────────
+  {
+    slug: "jarni-pruzkumnik",
+    name: "Jarní průzkumník",
+    description: "5+ různých sportovišť navštívených na jaře 2026",
+    emoji: "🌸",
+    sportSlug: null,
+    category: "seasonal",
+    check: async (ctx) => {
+      const springStart = new Date(2026, 2, 1); // March 1, 2026
+      const springEnd = new Date(2026, 5, 1); // June 1, 2026
+      const visits = await prisma.visit.findMany({
+        where: {
+          userId: ctx.userId,
+          createdAt: { gte: springStart, lt: springEnd },
+        },
+        select: { facilityId: true },
+        distinct: ["facilityId"],
+      });
+      return visits.length >= 5;
+    },
+  },
 ];
 
 const BADGE_MAP = new Map(BADGE_DEFINITIONS.map((b) => [b.slug, b]));
@@ -222,24 +397,104 @@ export async function getUserBadgeProgress(userId: string): Promise<
   else if (month >= 9 && month <= 11) seasonStart = new Date(now.getFullYear(), 9, 1);
   else seasonStart = new Date(now.getFullYear() - 1, 11, 1);
 
-  const [ferratyVisits, lezeniVisits, seasonReviews, maxHelpful] = await Promise.all([
+  // Spring 2026 dates for seasonal badge
+  const springStart = new Date(2026, 2, 1);
+  const springEnd = new Date(2026, 5, 1);
+
+  const [
+    ferratyVisits, lezeniVisits, plavaniVisits, golfVisits, fitnessVisits,
+    seasonReviews, totalReviews, maxHelpful, totalHelpful,
+    allVisits, approvedReviews, springVisits,
+  ] = await Promise.all([
     prisma.visit.count({
       where: { userId, facility: { sports: { some: { sport: { slug: "ferraty" } } } } },
     }),
     prisma.visit.count({
       where: { userId, facility: { sports: { some: { sport: { slug: "lezeni" } } } } },
     }),
+    prisma.visit.count({
+      where: { userId, facility: { sports: { some: { sport: { slug: "plavani" } } } } },
+    }),
+    prisma.visit.count({
+      where: { userId, facility: { sports: { some: { sport: { slug: "golf" } } } } },
+    }),
+    prisma.visit.count({
+      where: { userId, facility: { sports: { some: { sport: { slug: "fitness" } } } } },
+    }),
     prisma.review.count({
       where: { userId, isApproved: true, createdAt: { gte: seasonStart } },
+    }),
+    prisma.review.count({
+      where: { userId, isApproved: true },
     }),
     prisma.review.findFirst({
       where: { userId, isApproved: true },
       orderBy: { helpful: "desc" },
       select: { helpful: true },
     }),
+    prisma.review.aggregate({
+      where: { userId, isApproved: true },
+      _sum: { helpful: true },
+    }),
+    // For streak badges: recent visits with dates
+    prisma.visit.findMany({
+      where: { userId },
+      select: { createdAt: true },
+      orderBy: { createdAt: "desc" },
+      take: 100,
+    }),
+    // For streak: monthly review count
+    prisma.review.findMany({
+      where: { userId, isApproved: true },
+      select: { createdAt: true },
+    }),
+    // Seasonal: distinct spring facilities
+    prisma.visit.findMany({
+      where: { userId, createdAt: { gte: springStart, lt: springEnd } },
+      select: { facilityId: true },
+      distinct: ["facilityId"],
+    }),
   ]);
 
+  // Compute streak: max distinct days in any Mon-Sun week
+  let maxWeekDays = 0;
+  {
+    const weekMap = new Map<string, Set<string>>();
+    for (const v of allVisits) {
+      const d = new Date(v.createdAt);
+      const day = d.getDay();
+      const diff = d.getDate() - day + (day === 0 ? -6 : 1);
+      const monday = new Date(d);
+      monday.setDate(diff);
+      const weekKey = monday.toISOString().slice(0, 10);
+      const dateKey = d.toISOString().slice(0, 10);
+      if (!weekMap.has(weekKey)) weekMap.set(weekKey, new Set());
+      weekMap.get(weekKey)!.add(dateKey);
+    }
+    for (const dates of weekMap.values()) {
+      if (dates.size > maxWeekDays) maxWeekDays = dates.size;
+    }
+  }
+
+  // Compute best month activity count
+  let bestMonth = 0;
+  {
+    const monthCounts = new Map<string, number>();
+    for (const v of allVisits) {
+      const key = v.createdAt.toISOString().slice(0, 7);
+      monthCounts.set(key, (monthCounts.get(key) ?? 0) + 1);
+    }
+    for (const r of approvedReviews) {
+      const key = r.createdAt.toISOString().slice(0, 7);
+      monthCounts.set(key, (monthCounts.get(key) ?? 0) + 1);
+    }
+    for (const count of monthCounts.values()) {
+      if (count > bestMonth) bestMonth = count;
+    }
+  }
+
   return [
+    // Sport badges
     {
       slug: "ferratovy-pruzkumnik",
       name: "Ferratový Průzkumník",
@@ -261,6 +516,37 @@ export async function getUserBadgeProgress(userId: string): Promise<
       target: 3,
     },
     {
+      slug: "plavec",
+      name: "Plavec",
+      description: "Check-in na 3+ bazénech",
+      emoji: "🏊",
+      category: "sport",
+      earned: earnedSet.has("plavec"),
+      progress: Math.min(plavaniVisits, 3),
+      target: 3,
+    },
+    {
+      slug: "golfista",
+      name: "Golfista",
+      description: "Check-in na 3+ golfových hřištích",
+      emoji: "⛳",
+      category: "sport",
+      earned: earnedSet.has("golfista"),
+      progress: Math.min(golfVisits, 3),
+      target: 3,
+    },
+    {
+      slug: "fitness-guru",
+      name: "Fitness Guru",
+      description: "Check-in v 5+ fitness centrech",
+      emoji: "💪",
+      category: "sport",
+      earned: earnedSet.has("fitness-guru"),
+      progress: Math.min(fitnessVisits, 5),
+      target: 5,
+    },
+    // Review badges
+    {
       slug: "recenzent-sezony",
       name: "Recenzent sezóny",
       description: "5+ recenzí za aktuální sezónu",
@@ -271,6 +557,17 @@ export async function getUserBadgeProgress(userId: string): Promise<
       target: 5,
     },
     {
+      slug: "hvezdny-recenzent",
+      name: "Hvězdný recenzent",
+      description: "10+ schválených recenzí",
+      emoji: "⭐",
+      category: "review",
+      earned: earnedSet.has("hvezdny-recenzent"),
+      progress: Math.min(totalReviews, 10),
+      target: 10,
+    },
+    // Community badges
+    {
       slug: "pruvodce",
       name: "Průvodce",
       description: "Recenze s 5+ hlasy \u201Eu\u017Eite\u010Dn\u00E9\u201C",
@@ -278,6 +575,48 @@ export async function getUserBadgeProgress(userId: string): Promise<
       category: "community",
       earned: earnedSet.has("pruvodce"),
       progress: Math.min(maxHelpful?.helpful ?? 0, 5),
+      target: 5,
+    },
+    {
+      slug: "pomocnik",
+      name: "Pomocník",
+      description: "Celkem 10+ hlas\u016F \u201Eu\u017Eite\u010Dn\u00E9\u201C na va\u0161ich recenz\u00EDch",
+      emoji: "🤝",
+      category: "community",
+      earned: earnedSet.has("pomocnik"),
+      progress: Math.min(totalHelpful._sum.helpful ?? 0, 10),
+      target: 10,
+    },
+    // Streak badges
+    {
+      slug: "tydenni-serie",
+      name: "Týdenní série",
+      description: "Check-in ve 3 různé dny v jednom týdnu",
+      emoji: "🔥",
+      category: "streak",
+      earned: earnedSet.has("tydenni-serie"),
+      progress: Math.min(maxWeekDays, 3),
+      target: 3,
+    },
+    {
+      slug: "aktivni-mesic",
+      name: "Aktivní měsíc",
+      description: "10+ check-inů nebo recenzí za jeden měsíc",
+      emoji: "📅",
+      category: "streak",
+      earned: earnedSet.has("aktivni-mesic"),
+      progress: Math.min(bestMonth, 10),
+      target: 10,
+    },
+    // Seasonal badges
+    {
+      slug: "jarni-pruzkumnik",
+      name: "Jarní průzkumník",
+      description: "5+ různých sportovišť navštívených na jaře 2026",
+      emoji: "🌸",
+      category: "seasonal",
+      earned: earnedSet.has("jarni-pruzkumnik"),
+      progress: Math.min(springVisits.length, 5),
       target: 5,
     },
   ];

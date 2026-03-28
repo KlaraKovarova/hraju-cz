@@ -14,7 +14,7 @@ interface BadgeProgress {
   target: number;
 }
 
-export function ChallengeCards({ filter }: { filter?: "sport" | "review" | "community" }) {
+export function ChallengeCards({ filter }: { filter?: "sport" | "review" | "community" | "streak" | "seasonal" }) {
   const [badges, setBadges] = useState<BadgeProgress[]>([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loading, setLoading] = useState(true);

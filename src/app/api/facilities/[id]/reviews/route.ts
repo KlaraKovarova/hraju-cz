@@ -203,12 +203,15 @@ export async function POST(
   // Create in-app notifications for users who favorited this facility (fire-and-forget)
   createFavoriteNotifications(id, session.userId, "review", authorName.trim()).catch(() => {});
 
-  // Check for newly earned review/community badges
+  // Check for newly earned review/community/streak badges
   let newBadges: { slug: string; name: string; emoji: string }[] = [];
   try {
-    const reviewBadges = await checkBadgesByCategory(session.userId, "review");
-    const communityBadges = await checkBadgesByCategory(session.userId, "community");
-    newBadges = [...reviewBadges, ...communityBadges]
+    const [reviewBadges, communityBadges, streakBadges] = await Promise.all([
+      checkBadgesByCategory(session.userId, "review"),
+      checkBadgesByCategory(session.userId, "community"),
+      checkBadgesByCategory(session.userId, "streak"),
+    ]);
+    newBadges = [...reviewBadges, ...communityBadges, ...streakBadges]
       .map((slug) => {
         const def = getBadgeDefinition(slug);
         return def ? { slug: def.slug, name: def.name, emoji: def.emoji } : null;
