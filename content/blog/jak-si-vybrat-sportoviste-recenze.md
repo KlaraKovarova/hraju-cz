@@ -45,6 +45,19 @@ Dobrá recenze pomáhá nejen ostatním, ale i samotnému sportovišti zlepšit 
 3. **Srovnání** — pokud máte zkušenost z více míst, porovnejte
 4. **Aktuálnost** — uveďte, kdy jste sportoviště navštívili
 
+## Na co se dívat v recenzích — rychlý checklist
+
+| Co hledat | Proč je to důležité | Červená vlajka |
+|-----------|---------------------|----------------|
+| Čistota šaten/sprch | Denní komfort | „Špinavé sprchy", „plíseň" |
+| Stav vybavení | Bezpečnost a zážitek | „Rozbité stroje", „opotřebené" |
+| Přístup personálu | Celkový dojem | „Nepříjemná recepce", „ignorují" |
+| Cena vs. kvalita | Hodnota za peníze | „Předražené", „skryté poplatky" |
+| Vytíženost | Dostupnost | „V 18:00 nenajdete místo" |
+| Parkování | Pohodlí příjezdu | „Žádné parkování", „placené" |
+
+**Tip:** Čtěte recenze z posledních 3–6 měsíců. Starší recenze nemusejí odpovídat aktuálnímu stavu — sportoviště se mění.
+
 ## Komunita sportovců pomáhá všem
 
 Každé hodnocení, které na hraju.cz zanecháte, pomáhá:
@@ -55,7 +68,7 @@ Každé hodnocení, které na hraju.cz zanecháte, pomáhá:
 
 [Přihlaste se](/prihlaseni) a napište svou první recenzi. Za 5 recenzí za sezónu získáte [odznak Recenzent sezóny](/blog/odznaky-na-hraju-cz-jak-je-sbirat) a postoupíte na [žebříčku recenzentů](/blog/zebricek-recenzentu-hraju-cz).
 
-**Tip:** K recenzi můžete přidat až [3 fotky](/blog/fotky-k-recenzim-a-check-inum-pruvodce) — fotky od skutečných návštěvníků jsou nejcennějším zdrojem informací.
+**Tip:** K recenzi můžete přidat až [3 fotky](/blog/fotky-k-recenzim-a-check-inum-pruvodce) — fotky od skutečných návštěvníků jsou nejcennějším zdrojem informací. A nezapomeňte na [check-in „Byl/a jsem tady"](/komunita) — aktivní check-iny ukazují, že sportoviště žije.
 
 ## Průvodci a komunita
 
