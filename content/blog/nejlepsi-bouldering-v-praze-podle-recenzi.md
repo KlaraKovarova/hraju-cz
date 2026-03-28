@@ -129,7 +129,7 @@ Navštivte **3 různé stěny za měsíc** a získejte odznak 🧗 **Lezec** na 
 ## Další čtení
 
 - [Lezecká výzva: 3 stěny za měsíc](/blog/lezecka-vyzva-3-steny-za-mesic)
-- [Lezecká centra v Praze — kompletní průvodce](/blog/lezecka-centra-v-praze-pruvodce)
+- [Lezecká centra v Praze — kompletní průvodce](/blog/lezecka-centra-v-praze)
 - [Bouldering pro začátečníky](/blog/bouldering-pro-zacatecniky-kompletni-pruvodce)
 - [Indoor vs outdoor lezení — srovnání](/blog/indoor-vs-outdoor-lezeni-srovnani)
 - [Bezpečnost při lezení](/blog/bezpecnost-pri-lezeni-pruvodce)

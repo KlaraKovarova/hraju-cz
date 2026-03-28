@@ -83,7 +83,7 @@ Lezeckých stěn je v Česku přes 100. Tři návštěvy zvládnete za týden:
 2. **[Lezecké centrum SmíchOFF](/sport/lezeni/lezecke-centrum-smichoff)** nebo **[Big Wall](/sport/lezeni/lezecka-stena-big-wall)** (Praha) — kvalitní pražské stěny
 3. **[Lokal Blok Praha](/sport/lezeni/lokal-blok-praha)** nebo jakýkoli bouldering ve vašem městě
 
-Tip: Průvodce [bouldering pro začátečníky](/blog/bouldering-pro-zacatecniky-kompletni-pruvodce) a přehled [lezeckých center v Praze](/blog/lezecka-centra-v-praze-pruvodce). V [sezónním průvodci lezením](/blog/sezonni-pruvodce-lezenim-2026) najdete doporučení pro každý měsíc.
+Tip: Průvodce [bouldering pro začátečníky](/blog/bouldering-pro-zacatecniky-kompletni-pruvodce) a přehled [lezeckých center v Praze](/blog/lezecka-centra-v-praze). V [sezónním průvodci lezením](/blog/sezonni-pruvodce-lezenim-2026) najdete doporučení pro každý měsíc.
 
 ### 📝 Recenzent sezóny — nejhodnotnější odznak
 

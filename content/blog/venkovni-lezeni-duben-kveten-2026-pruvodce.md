@@ -174,7 +174,7 @@ Byli jste lézt venku? [Napište recenzi](/prihlaseni) na hraju.cz a pomožte os
 
 - [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
 - [Odznaky — odznak 🧗 Lezec za 3 lezecké stěny](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
-- [Lezecká centra v Praze](/blog/lezecka-centra-v-praze-pruvodce)
+- [Lezecká centra v Praze](/blog/lezecka-centra-v-praze)
 - [Bouldering pro začátečníky](/blog/bouldering-pro-zacatecniky-kompletni-pruvodce)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 

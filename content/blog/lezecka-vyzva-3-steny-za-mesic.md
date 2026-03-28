@@ -121,7 +121,7 @@ Každá stěna má profil s adresou, mapou, recenzemi a check-iny od komunity. N
 ## Další čtení
 
 - [Bouldering pro začátečníky — kompletní průvodce](/blog/bouldering-pro-zacatecniky-kompletni-pruvodce)
-- [Lezecká centra v Praze](/blog/lezecka-centra-v-praze-pruvodce)
+- [Lezecká centra v Praze](/blog/lezecka-centra-v-praze)
 - [Sezónní průvodce lezením 2026](/blog/sezonni-pruvodce-lezenim-2026)
 - [Indoor vs outdoor lezení — srovnání](/blog/indoor-vs-outdoor-lezeni-srovnani)
 - [Bezpečnost při lezení](/blog/bezpecnost-pri-lezeni-pruvodce)

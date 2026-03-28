@@ -277,6 +277,17 @@ export default async function ProductDetailPage({ params }: Props) {
             ...(specs.articleNumber
               ? { sku: String(specs.articleNumber) }
               : {}),
+            ...(product.price
+              ? {
+                  offers: {
+                    "@type": "Offer",
+                    url: `https://www.hraju.cz/vybaveni/${product.slug}`,
+                    priceCurrency: "CZK",
+                    price: (product.price / 100).toFixed(2),
+                    availability: "https://schema.org/InStock",
+                  },
+                }
+              : {}),
           }),
         }}
       />
