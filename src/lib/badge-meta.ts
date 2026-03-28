@@ -80,4 +80,14 @@ export const BADGE_META: Record<string, { name: string; emoji: string; descripti
     emoji: "\uD83E\uDDD7",
     description: "3 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v kv\u011Btnu 2026",
   },
+  "cervnovy-ferratista": {
+    name: "\u010Cervnov\u00FD Ferratista",
+    emoji: "\u26F0\uFE0F",
+    description: "5 ferrat zdolan\u00FDch v \u010Dervnu 2026",
+  },
+  "cervnovy-lezec": {
+    name: "\u010Cervnov\u00FD Lezec",
+    emoji: "\uD83E\uDDD7",
+    description: "3 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v \u010Dervnu 2026",
+  },
 };

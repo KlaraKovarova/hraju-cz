@@ -61,6 +61,28 @@ export const MONTHLY_CHALLENGES: MonthlyChallenge[] = [
     startDate: "2026-05-01",
     endDate: "2026-05-31",
   },
+  {
+    slug: "cerven-2026-ferraty",
+    title: "Ferratov\u00E1 v\u00FDzva: \u010Cerven",
+    description: "Zdolej 5 ferrat v \u010Dervnu 2026 \u2014 l\u00E9to na sk\u00E1le!",
+    emoji: "\u26F0\uFE0F",
+    sportSlug: "ferraty",
+    badgeSlug: "cervnovy-ferratista",
+    target: 5,
+    startDate: "2026-06-01",
+    endDate: "2026-06-30",
+  },
+  {
+    slug: "cerven-2026-lezeni",
+    title: "Lezeck\u00E1 v\u00FDzva: \u010Cerven",
+    description: "Vyzkou\u0161ej 3 lezeck\u00E9 st\u011Bny v \u010Dervnu \u2014 venku i uvnit\u0159!",
+    emoji: "\uD83E\uDDD7",
+    sportSlug: "lezeni",
+    badgeSlug: "cervnovy-lezec",
+    target: 3,
+    startDate: "2026-06-01",
+    endDate: "2026-06-30",
+  },
 ];
 
 /** Get challenges active for a given date (defaults to now). */
