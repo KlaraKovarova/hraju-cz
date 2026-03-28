@@ -129,6 +129,8 @@ export default async function AkcePage() {
         name: e.name,
         startDate: e.dateStart.toISOString(),
         ...(e.dateEnd ? { endDate: e.dateEnd.toISOString() } : {}),
+        eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+        eventStatus: "https://schema.org/EventScheduled",
         location: {
           "@type": "Place",
           name: e.city,
@@ -136,6 +138,11 @@ export default async function AkcePage() {
           ...(e.lat && e.lng
             ? { geo: { "@type": "GeoCoordinates", latitude: e.lat, longitude: e.lng } }
             : {}),
+        },
+        organizer: {
+          "@type": "Organization",
+          name: "Klub českých turistů",
+          url: "https://kct.cz",
         },
         ...(e.description ? { description: e.description.slice(0, 200) } : {}),
         ...(e.externalUrl || e.source === "kct"

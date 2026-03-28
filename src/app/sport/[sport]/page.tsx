@@ -14,6 +14,7 @@ import { ActivityFeed } from "@/components/ActivityFeed";
 import { BannerSlot } from "@/components/BannerSlot";
 import { ChallengeCards } from "@/components/ChallengeCards";
 import { MonthlyChallenges } from "@/components/MonthlyChallenges";
+import { getActiveChallenges } from "@/lib/monthly-challenges";
 import { getSportFaqs } from "@/lib/sport-faq";
 import { getPostsBySport, CATEGORIES } from "@/lib/blog";
 import type { Metadata } from "next";
@@ -156,6 +157,29 @@ export default async function SportPage({ params }: SportPageProps) {
     } : {}),
   };
 
+  // Event JSON-LD for active sport-specific monthly challenges
+  const sportChallenges = getActiveChallenges().filter((c) => c.sportSlug === sportSlug);
+  const challengeEventsLd = sportChallenges.map((c) => ({
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: c.title,
+    description: c.description,
+    startDate: c.startDate,
+    endDate: c.endDate,
+    eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
+    eventStatus: "https://schema.org/EventScheduled",
+    organizer: {
+      "@type": "Organization",
+      name: "hraju.cz",
+      url: "https://www.hraju.cz",
+    },
+    location: {
+      "@type": "VirtualLocation",
+      url: `https://www.hraju.cz/sport/${sportSlug}`,
+    },
+    url: `https://www.hraju.cz/sport/${sportSlug}`,
+  }));
+
   // Split blog posts: first 3 for the grid, rest for the list
   const featuredPosts = sportPosts.slice(0, 3);
   const morePosts = sportPosts.slice(3, 9);
@@ -174,6 +198,13 @@ export default async function SportPage({ params }: SportPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionLd) }}
       />
+      {challengeEventsLd.map((ld, i) => (
+        <script
+          key={`challenge-${i}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }}
+        />
+      ))}
       {faqLd && (
         <script
           type="application/ld+json"

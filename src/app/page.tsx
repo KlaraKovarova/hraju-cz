@@ -19,6 +19,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { ActivityFeed } from "@/components/ActivityFeed";
 import { WeekendEvents } from "@/components/WeekendEvents";
 import { MonthlyChallenges } from "@/components/MonthlyChallenges";
+import { getActiveChallenges } from "@/lib/monthly-challenges";
 import { getAllPosts, CATEGORIES } from "@/lib/blog";
 
 // ISR: revalidate homepage every 6 hours
@@ -96,6 +97,29 @@ export default async function Home() {
     },
   };
 
+  // Event JSON-LD for active monthly challenges
+  const activeChallenges = getActiveChallenges();
+  const challengeEventsLd = activeChallenges.length > 0 ? activeChallenges.map((c) => ({
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: c.title,
+    description: c.description,
+    startDate: c.startDate,
+    endDate: c.endDate,
+    eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
+    eventStatus: "https://schema.org/EventScheduled",
+    organizer: {
+      "@type": "Organization",
+      name: "hraju.cz",
+      url: "https://www.hraju.cz",
+    },
+    location: {
+      "@type": "VirtualLocation",
+      url: `https://www.hraju.cz/sport/${c.sportSlug}`,
+    },
+    url: `https://www.hraju.cz/sport/${c.sportSlug}`,
+  })) : [];
+
   return (
     <main className="min-h-screen bg-white">
       <script
@@ -110,6 +134,13 @@ export default async function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
       />
+      {challengeEventsLd.map((ld, i) => (
+        <script
+          key={`challenge-${i}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }}
+        />
+      ))}
 
       {/* Navigation */}
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">
