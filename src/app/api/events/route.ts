@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { withTimeout } from "@/lib/db-timeout";
 
 export const dynamic = "force-dynamic";
 
@@ -42,7 +43,7 @@ export async function GET(request: NextRequest) {
   };
 
   try {
-    const [events, total] = await Promise.all([
+    const [events, total] = await withTimeout(Promise.all([
       prisma.touristEvent.findMany({
         where,
         orderBy: { dateStart: "asc" },
@@ -63,7 +64,7 @@ export async function GET(request: NextRequest) {
         },
       }),
       prisma.touristEvent.count({ where }),
-    ]);
+    ]));
 
     return NextResponse.json({
       events,

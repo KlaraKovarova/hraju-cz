@@ -5,6 +5,7 @@ import { getUserSession } from "@/lib/user-auth";
 import { findUsersToNotifyAboutReview, getUnsubscribeToken, buildUnsubscribeUrl, createFavoriteNotifications } from "@/lib/notifications";
 import { checkBadgesByCategory, getBadgeDefinition } from "@/lib/challenges";
 import { BADGE_META } from "@/lib/badge-meta";
+import { withTimeout } from "@/lib/db-timeout";
 
 // GET /api/facilities/[id]/reviews — list approved reviews (paginated, newest first)
 export async function GET(
@@ -24,7 +25,7 @@ export async function GET(
     sort === "helpful" ? { helpful: "desc" } :
     { createdAt: "desc" };
 
-  const [reviews, total] = await Promise.all([
+  const [reviews, total] = await withTimeout(Promise.all([
     prisma.review.findMany({
       where: { facilityId: id, isApproved: true },
       orderBy,
@@ -48,7 +49,7 @@ export async function GET(
       },
     }),
     prisma.review.count({ where: { facilityId: id, isApproved: true } }),
-  ]);
+  ]));
 
   // Batch-fetch badges for all review authors
   const userIds = [...new Set(reviews.map((r) => r.userId).filter(Boolean))] as string[];

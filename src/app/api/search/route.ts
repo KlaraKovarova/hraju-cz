@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { searchFacilities } from "@/lib/data";
 import { getAllPosts } from "@/lib/blog";
+import { withTimeout } from "@/lib/db-timeout";
 
 export const dynamic = "force-dynamic";
 
@@ -57,7 +58,7 @@ async function searchEvents(query: string, limit: number) {
   if (tokens.length === 0) return [];
 
   const now = new Date();
-  const events = await prisma.touristEvent.findMany({
+  const events = await withTimeout(prisma.touristEvent.findMany({
     where: {
       isActive: true,
       dateStart: { gte: now },
@@ -80,7 +81,7 @@ async function searchEvents(query: string, limit: number) {
       region: true,
       externalUrl: true,
     },
-  });
+  }));
 
   return events;
 }

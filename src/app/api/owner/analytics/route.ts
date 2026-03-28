@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getOwnerSession } from "@/lib/owner-auth";
 import { prisma } from "@/lib/prisma";
+import { withTimeout } from "@/lib/db-timeout";
 
 export async function GET() {
   try {
@@ -24,13 +25,13 @@ export async function GET() {
     thirtyDaysAgo.setHours(0, 0, 0, 0);
 
     // Total views last 30 days
-    const totalResult = await prisma.facilityView.aggregate({
+    const totalResult = await withTimeout(prisma.facilityView.aggregate({
       where: {
         facilityId: session.facilityId,
         date: { gte: thirtyDaysAgo },
       },
       _sum: { views: true },
-    });
+    }));
     const totalViews = totalResult._sum.views || 0;
 
     // This week vs last week
@@ -41,7 +42,7 @@ export async function GET() {
     const startOfLastWeek = new Date(startOfThisWeek);
     startOfLastWeek.setDate(startOfLastWeek.getDate() - 7);
 
-    const [thisWeekResult, lastWeekResult] = await Promise.all([
+    const [thisWeekResult, lastWeekResult] = await withTimeout(Promise.all([
       prisma.facilityView.aggregate({
         where: {
           facilityId: session.facilityId,
@@ -56,7 +57,7 @@ export async function GET() {
         },
         _sum: { views: true },
       }),
-    ]);
+    ]));
 
     const thisWeekViews = thisWeekResult._sum.views || 0;
     const lastWeekViews = lastWeekResult._sum.views || 0;
@@ -68,14 +69,14 @@ export async function GET() {
       fourteenDaysAgo.setDate(fourteenDaysAgo.getDate() - 14);
       fourteenDaysAgo.setHours(0, 0, 0, 0);
 
-      const rows = await prisma.facilityView.findMany({
+      const rows = await withTimeout(prisma.facilityView.findMany({
         where: {
           facilityId: session.facilityId,
           date: { gte: fourteenDaysAgo },
         },
         orderBy: { date: "asc" },
         select: { date: true, views: true },
-      });
+      }));
 
       dailyViews = rows.map((r) => ({
         date: r.date.toISOString().split("T")[0],

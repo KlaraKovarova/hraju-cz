@@ -130,47 +130,75 @@ export async function POST(request: NextRequest) {
     },
   });
 
+  // Batch-fetch all recent reviews on facilities any user cares about (single query)
+  const allFacilityIds = new Set<string>();
+  const userFacilityMap = new Map<string, Set<string>>();
+  for (const user of eligibleUsers) {
+    const ids = new Set([
+      ...user.visits.map((v) => v.facilityId),
+      ...user.reviews.map((r) => r.facilityId),
+      ...user.favorites.map((f) => f.facilityId),
+    ]);
+    userFacilityMap.set(user.id, ids);
+    for (const id of ids) allFacilityIds.add(id);
+  }
+
+  const allRecentReviews = allFacilityIds.size > 0
+    ? await prisma.review.findMany({
+        where: {
+          facilityId: { in: [...allFacilityIds] },
+          isApproved: true,
+          createdAt: { gte: oneWeekAgo },
+        },
+        select: {
+          userId: true,
+          facilityId: true,
+          authorName: true,
+          rating: true,
+          createdAt: true,
+          facility: {
+            select: {
+              name: true,
+              slug: true,
+              sports: {
+                select: { sport: { select: { slug: true } } },
+                take: 1,
+              },
+            },
+          },
+        },
+        orderBy: { createdAt: "desc" },
+      })
+    : [];
+
+  // Index reviews by facilityId for fast lookup
+  const reviewsByFacility = new Map<string, typeof allRecentReviews>();
+  for (const review of allRecentReviews) {
+    if (!reviewsByFacility.has(review.facilityId)) {
+      reviewsByFacility.set(review.facilityId, []);
+    }
+    reviewsByFacility.get(review.facilityId)!.push(review);
+  }
+
   let sent = 0;
   let skipped = 0;
 
   for (const user of eligibleUsers) {
     try {
-      // Collect facility IDs the user cares about (visits, reviews, and favorites)
-      const facilityIds = [
-        ...new Set([
-          ...user.visits.map((v) => v.facilityId),
-          ...user.reviews.map((r) => r.facilityId),
-          ...user.favorites.map((f) => f.facilityId),
-        ]),
-      ];
+      const facilityIds = userFacilityMap.get(user.id) ?? new Set();
 
-      // Find new reviews on those facilities from the last week
-      const newReviews = facilityIds.length > 0
-        ? await prisma.review.findMany({
-            where: {
-              facilityId: { in: facilityIds },
-              isApproved: true,
-              createdAt: { gte: oneWeekAgo },
-              userId: { not: user.id },
-            },
-            select: {
-              authorName: true,
-              rating: true,
-              facility: {
-                select: {
-                  name: true,
-                  slug: true,
-                  sports: {
-                    select: { sport: { select: { slug: true } } },
-                    take: 1,
-                  },
-                },
-              },
-            },
-            take: 5,
-            orderBy: { createdAt: "desc" },
-          })
-        : [];
+      // Filter batch-fetched reviews: user's facilities, excluding own reviews
+      const newReviews: typeof allRecentReviews = [];
+      for (const fid of facilityIds) {
+        const facilityReviews = reviewsByFacility.get(fid);
+        if (!facilityReviews) continue;
+        for (const r of facilityReviews) {
+          if (r.userId !== user.id) newReviews.push(r);
+        }
+      }
+      // Sort by recency and cap at 5
+      newReviews.sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
+      const topReviews = newReviews.slice(0, 5);
 
       // Get user's regions for event filtering (from visits and favorites)
       const userRegions = [
@@ -188,7 +216,7 @@ export async function POST(request: NextRequest) {
 
       const digestData: WeeklyDigestData = {
         userName: user.name,
-        newReviews: newReviews.map((r) => {
+        newReviews: topReviews.map((r) => {
           const sportSlug = r.facility.sports[0]?.sport.slug || "tenis";
           return {
             facilityName: r.facility.name,

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getUserSession } from "@/lib/user-auth";
 import { prisma } from "@/lib/prisma";
+import { withTimeout } from "@/lib/db-timeout";
 
 export type ActivityItem = {
   type: "review" | "visit" | "event" | "badge";
@@ -16,7 +17,7 @@ export async function GET() {
   }
 
   try {
-    const [reviews, visits, events, badges] = await Promise.all([
+    const [reviews, visits, events, badges] = await withTimeout(Promise.all([
       prisma.review.findMany({
         where: { userId: session.userId },
         orderBy: { createdAt: "desc" },
@@ -82,7 +83,7 @@ export async function GET() {
           earnedAt: true,
         },
       }),
-    ]);
+    ]));
 
     const items: ActivityItem[] = [];
 

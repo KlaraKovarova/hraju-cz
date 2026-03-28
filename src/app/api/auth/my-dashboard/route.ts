@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getUserSession } from "@/lib/user-auth";
 import { prisma } from "@/lib/prisma";
+import { withTimeout } from "@/lib/db-timeout";
 
 export async function GET() {
   const session = await getUserSession();
@@ -20,7 +21,7 @@ export async function GET() {
       visitsLastMonth,
       totalHelpful,
       userVisits,
-    ] = await Promise.all([
+    ] = await withTimeout(Promise.all([
       prisma.review.count({
         where: { userId: session.userId, createdAt: { gte: thisMonthStart } },
       }),
@@ -59,7 +60,7 @@ export async function GET() {
         },
         take: 500,
       }),
-    ]);
+    ]));
 
     // Build recommended facilities: same sports, not yet visited
     const visitedIds = new Set(userVisits.map((v) => v.facilityId));
@@ -83,7 +84,7 @@ export async function GET() {
     }[] = [];
 
     if (sportSlugs.length > 0) {
-      const candidates = await prisma.facility.findMany({
+      const candidates = await withTimeout(prisma.facility.findMany({
         where: {
           isActive: true,
           id: { notIn: [...visitedIds] },
@@ -103,7 +104,7 @@ export async function GET() {
             select: { sport: { select: { slug: true, nameCs: true } } },
           },
         },
-      });
+      }));
 
       recommendations = candidates.map((f) => ({
         id: f.id,
@@ -119,7 +120,7 @@ export async function GET() {
 
     // If no sport-based recommendations, show top-rated ferraty (beachhead sport)
     if (recommendations.length === 0) {
-      const ferraty = await prisma.facility.findMany({
+      const ferraty = await withTimeout(prisma.facility.findMany({
         where: {
           isActive: true,
           sports: { some: { sport: { slug: "ferraty" } } },
@@ -139,7 +140,7 @@ export async function GET() {
             select: { sport: { select: { slug: true, nameCs: true } } },
           },
         },
-      });
+      }));
 
       recommendations = ferraty.map((f) => ({
         id: f.id,

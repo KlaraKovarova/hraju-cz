@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getUserSession } from "@/lib/user-auth";
+import { withTimeout } from "@/lib/db-timeout";
 
 // GET /api/facilities/[id]/tips — list approved tips (paginated, sorted by helpful)
 export async function GET(
@@ -18,7 +19,7 @@ export async function GET(
     sort === "oldest" ? { createdAt: "asc" } :
     { helpful: "desc" };
 
-  const [tips, total] = await Promise.all([
+  const [tips, total] = await withTimeout(Promise.all([
     prisma.facilityTip.findMany({
       where: { facilityId: id, isApproved: true },
       orderBy,
@@ -34,7 +35,7 @@ export async function GET(
       },
     }),
     prisma.facilityTip.count({ where: { facilityId: id, isApproved: true } }),
-  ]);
+  ]));
 
   return NextResponse.json({
     tips: tips.map((t) => ({
