@@ -945,6 +945,132 @@ export async function getChallengeLeaderboard(
   }
 }
 
+/** Most helpful reviews in the last N days */
+export interface TrendingReview {
+  id: string;
+  authorName: string;
+  rating: number;
+  title: string | null;
+  text: string | null;
+  helpful: number;
+  facilityName: string;
+  facilitySlug: string;
+  sportSlug: string | null;
+}
+
+export async function getTrendingReviews(days = 7, limit = 5): Promise<TrendingReview[]> {
+  try {
+    const since = new Date();
+    since.setDate(since.getDate() - days);
+    const rows = await withTimeout(
+      prisma.review.findMany({
+        where: {
+          isApproved: true,
+          helpful: { gt: 0 },
+          createdAt: { gte: since },
+        },
+        orderBy: [{ helpful: "desc" }, { createdAt: "desc" }],
+        take: limit,
+        select: {
+          id: true,
+          authorName: true,
+          rating: true,
+          title: true,
+          text: true,
+          helpful: true,
+          facility: {
+            select: {
+              name: true,
+              slug: true,
+              sports: { select: { sport: { select: { slug: true } } }, take: 1 },
+            },
+          },
+        },
+      }),
+      DB_QUERY_TIMEOUT_MS
+    );
+    return rows.map((r) => ({
+      id: r.id,
+      authorName: r.authorName,
+      rating: r.rating,
+      title: r.title,
+      text: r.text,
+      helpful: r.helpful,
+      facilityName: r.facility.name,
+      facilitySlug: r.facility.slug,
+      sportSlug: r.facility.sports[0]?.sport.slug ?? null,
+    }));
+  } catch {
+    return [];
+  }
+}
+
+/** Most active facilities (by check-ins + reviews) in the last N days */
+export interface TrendingFacility {
+  id: string;
+  name: string;
+  slug: string;
+  city: string;
+  sportSlug: string | null;
+  sportName: string | null;
+  activityCount: number;
+  averageRating: number | null;
+}
+
+export async function getMostActiveFacilities(days = 30, limit = 5): Promise<TrendingFacility[]> {
+  try {
+    const since = new Date();
+    since.setDate(since.getDate() - days);
+    const rows = await withTimeout(
+      prisma.$queryRaw<{
+        id: string;
+        name: string;
+        slug: string;
+        city: string;
+        sportSlug: string | null;
+        sportName: string | null;
+        activityCount: bigint;
+        averageRating: number | null;
+      }[]>`
+        SELECT f."id", f."name", f."slug",
+          l."city",
+          s."slug" AS "sportSlug",
+          s."nameCs" AS "sportName",
+          (
+            (SELECT COUNT(*) FROM "Visit" v WHERE v."facilityId" = f."id" AND v."createdAt" >= ${since}::timestamp) +
+            (SELECT COUNT(*) FROM "Review" r WHERE r."facilityId" = f."id" AND r."isApproved" = true AND r."createdAt" >= ${since}::timestamp)
+          ) AS "activityCount",
+          f."averageRating"
+        FROM "Facility" f
+        LEFT JOIN "Location" l ON l."id" = f."locationId"
+        LEFT JOIN "FacilitySport" fs ON fs."facilityId" = f."id"
+        LEFT JOIN "Sport" s ON s."id" = fs."sportId"
+        WHERE f."isActive" = true
+        GROUP BY f."id", f."name", f."slug", l."city", s."slug", s."nameCs", f."averageRating"
+        HAVING (
+          (SELECT COUNT(*) FROM "Visit" v WHERE v."facilityId" = f."id" AND v."createdAt" >= ${since}::timestamp) +
+          (SELECT COUNT(*) FROM "Review" r WHERE r."facilityId" = f."id" AND r."isApproved" = true AND r."createdAt" >= ${since}::timestamp)
+        ) > 0
+        ORDER BY "activityCount" DESC
+        LIMIT ${limit}
+      `,
+      DB_QUERY_TIMEOUT_MS
+    );
+    return rows.map((r) => ({
+      id: r.id,
+      name: r.name,
+      slug: r.slug,
+      city: r.city || "",
+      sportSlug: r.sportSlug,
+      sportName: r.sportName,
+      activityCount: Number(r.activityCount),
+      averageRating: r.averageRating,
+    }));
+  } catch {
+    return [];
+  }
+}
+
 /** Top reviews for a specific sport (for sport category pages) */
 export async function getTopReviewsBySport(
   sportSlug: string,

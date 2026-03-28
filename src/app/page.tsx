@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, ArrowRight, ChevronDown, Calendar, Star, MessageSquare, Users, PlusCircle, Trophy, ThumbsUp } from "lucide-react";
+import { MapPin, ArrowRight, ChevronDown, Calendar, Star, MessageSquare, Users, PlusCircle, Trophy, ThumbsUp, TrendingUp, Flame } from "lucide-react";
 import { SPORTS } from "@/lib/sports";
 import {
   getTotalFacilityCount,
@@ -11,6 +11,8 @@ import {
   getCommunityStats,
   getRecentActivity,
   getTopReviewers,
+  getTrendingReviews,
+  getMostActiveFacilities,
 } from "@/lib/data";
 import { cityToSlug } from "@/lib/regions";
 import { FacilityCard } from "@/components/FacilityCard";
@@ -28,7 +30,7 @@ export const revalidate = 86400;
 export default async function Home() {
   const totalFacilities = getTotalFacilityCount();
   const totalSports = getTotalSportCount();
-  const [featuredFacilities, topCities, recentFacilities, recentReviews, communityStats, activityItems, topReviewers] =
+  const [featuredFacilities, topCities, recentFacilities, recentReviews, communityStats, activityItems, topReviewers, trendingReviews, mostActiveFacilities] =
     await Promise.all([
       getFeaturedFacilities(6),
       getTopCitiesOverall(10),
@@ -37,6 +39,8 @@ export default async function Home() {
       getCommunityStats(),
       getRecentActivity({ limit: 10 }),
       getTopReviewers(6),
+      getTrendingReviews(7, 5),
+      getMostActiveFacilities(30, 5),
     ]);
   const latestPosts = getAllPosts().slice(0, 3);
 
@@ -397,6 +401,124 @@ export default async function Home() {
                 <MessageSquare className="h-4 w-4" />
                 Všechny recenze
               </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Trending Reviews */}
+      {trendingReviews.length > 0 && (
+        <section className="border-t border-zinc-100 bg-zinc-50/50">
+          <div className="mx-auto max-w-6xl px-6 py-16">
+            <div className="mb-8 text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
+                Nejužitečnější recenze tento týden
+              </h2>
+              <p className="mt-2 text-zinc-500">
+                Recenze, které sportovci považují za nejpřínosnější
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {trendingReviews.map((review) => (
+                <Link
+                  key={review.id}
+                  href={review.sportSlug ? `/sport/${review.sportSlug}/${review.facilitySlug}` : `/recenze`}
+                  className="group rounded-2xl border border-zinc-100 bg-white p-5 transition hover:border-emerald-200 hover:shadow-sm"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+                        <Users className="h-4 w-4" />
+                      </div>
+                      <span className="text-sm font-semibold text-zinc-900">
+                        {review.authorName}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-1 rounded-full bg-amber-50 px-2 py-0.5 text-xs font-medium text-amber-700">
+                      <ThumbsUp className="h-3 w-3" />
+                      {review.helpful}
+                    </div>
+                  </div>
+                  <div className="mt-2 flex items-center gap-1">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`h-3 w-3 ${
+                          i < review.rating ? "fill-amber-400 text-amber-400" : "text-zinc-200"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  {review.title && (
+                    <p className="mt-2 text-sm font-semibold text-zinc-800">{review.title}</p>
+                  )}
+                  {review.text && (
+                    <p className="mt-1 line-clamp-2 text-sm text-zinc-600">{review.text}</p>
+                  )}
+                  <p className="mt-3 text-xs font-medium text-emerald-600 group-hover:text-emerald-700">
+                    {review.facilityName}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Most Active Facilities */}
+      {mostActiveFacilities.length > 0 && (
+        <section className="border-t border-zinc-100 bg-white">
+          <div className="mx-auto max-w-6xl px-6 py-16">
+            <div className="mb-8 text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
+                Nejaktivnější sportoviště
+              </h2>
+              <p className="mt-2 text-zinc-500">
+                Sportoviště s nejvíce check-iny a recenzemi za posledních 30 dní
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+              {mostActiveFacilities.map((facility, index) => (
+                <Link
+                  key={facility.id}
+                  href={facility.sportSlug ? `/sport/${facility.sportSlug}/${facility.slug}` : `/${facility.slug}`}
+                  className="group rounded-2xl border border-zinc-100 bg-zinc-50/50 p-5 transition hover:border-emerald-200 hover:shadow-sm"
+                >
+                  <div className="flex items-center gap-2">
+                    <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
+                      index === 0 ? "bg-amber-100 text-amber-700"
+                      : index === 1 ? "bg-zinc-200 text-zinc-600"
+                      : index === 2 ? "bg-orange-100 text-orange-700"
+                      : "bg-zinc-100 text-zinc-500"
+                    }`}>
+                      {index + 1}
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate text-sm font-semibold text-zinc-900 group-hover:text-emerald-600">
+                        {facility.name}
+                      </p>
+                      <p className="text-xs text-zinc-400">{facility.city}</p>
+                    </div>
+                  </div>
+                  <div className="mt-3 flex items-center justify-between text-xs text-zinc-500">
+                    <span className="flex items-center gap-1">
+                      <Flame className="h-3 w-3 text-orange-500" />
+                      {facility.activityCount} aktivit
+                    </span>
+                    {facility.averageRating && (
+                      <span className="flex items-center gap-1">
+                        <Star className="h-3 w-3 fill-amber-400 text-amber-400" />
+                        {facility.averageRating.toFixed(1)}
+                      </span>
+                    )}
+                  </div>
+                  {facility.sportName && (
+                    <p className="mt-2 text-[11px] font-medium text-emerald-600">
+                      {facility.sportName}
+                    </p>
+                  )}
+                </Link>
+              ))}
             </div>
           </div>
         </section>

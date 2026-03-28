@@ -7,11 +7,14 @@ import {
   ThumbsUp,
   MapPin,
   Star,
+  Flame,
+  TrendingUp,
 } from "lucide-react";
 import {
   getCommunityStats,
   getRecentActivity,
   getTopReviewers,
+  getMostActiveFacilities,
 } from "@/lib/data";
 import { getSportBySlug } from "@/lib/sports";
 import { ActivityFeed } from "@/components/ActivityFeed";
@@ -59,10 +62,11 @@ export default async function KomunitaPage({
   const { sport: sportParam } = await searchParams;
   const activeSport = sportParam && getSportBySlug(sportParam) ? sportParam : undefined;
 
-  const [communityStats, activityItems, topReviewers] = await Promise.all([
+  const [communityStats, activityItems, topReviewers, trendingFacilities] = await Promise.all([
     getCommunityStats(),
     getRecentActivity({ sport: activeSport, limit: 30 }),
     getTopReviewers(10, activeSport),
+    getMostActiveFacilities(30, 6),
   ]);
 
   const leaderboardTitle = activeSport
@@ -181,6 +185,49 @@ export default async function KomunitaPage({
           </div>
           <div className="mx-auto max-w-2xl">
             <ActivityFeed items={activityItems} />
+          </div>
+        </section>
+      )}
+
+      {/* Trending facilities */}
+      {trendingFacilities.length > 0 && (
+        <section className="mx-auto max-w-6xl px-6 py-8 border-t border-zinc-100">
+          <div className="mb-6 flex items-center gap-2">
+            <TrendingUp className="h-5 w-5 text-orange-500" />
+            <h2 className="text-xl font-bold text-zinc-900">Trendy tento měsíc</h2>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {trendingFacilities.map((facility, index) => (
+              <Link
+                key={facility.id}
+                href={facility.sportSlug ? `/sport/${facility.sportSlug}/${facility.slug}` : `/${facility.slug}`}
+                className="flex items-center gap-3 rounded-xl border border-zinc-100 bg-white p-4 hover:border-emerald-200 hover:shadow-sm transition-all"
+              >
+                <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
+                  index === 0 ? "bg-amber-100 text-amber-700"
+                  : index === 1 ? "bg-zinc-200 text-zinc-600"
+                  : index === 2 ? "bg-orange-100 text-orange-700"
+                  : "bg-zinc-50 text-zinc-500"
+                }`}>
+                  {index + 1}
+                </div>
+                <div className="min-w-0 flex-1">
+                  <p className="truncate text-sm font-semibold text-zinc-900">{facility.name}</p>
+                  <div className="mt-0.5 flex items-center gap-3 text-xs text-zinc-400">
+                    <span className="flex items-center gap-1">
+                      <Flame className="h-3 w-3 text-orange-500" />
+                      {facility.activityCount} aktivit
+                    </span>
+                    {facility.averageRating && (
+                      <span className="flex items-center gap-1">
+                        <Star className="h-3 w-3 fill-amber-400 text-amber-400" />
+                        {facility.averageRating.toFixed(1)}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </section>
       )}
