@@ -5,7 +5,12 @@ import { prisma } from "@/lib/prisma";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, phone, message } = body;
+    const { name, email, phone, message, website } = body;
+
+    // Honeypot check — bots fill this hidden field, humans don't
+    if (website) {
+      return NextResponse.json({ success: true });
+    }
 
     // Server-side validation
     if (!name?.trim() || !email?.trim() || !message?.trim()) {

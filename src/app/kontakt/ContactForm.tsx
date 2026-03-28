@@ -12,6 +12,7 @@ export function ContactForm() {
     email: "",
     phone: "",
     message: "",
+    website: "",
   });
 
   function update(field: string, value: string) {
@@ -64,7 +65,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="relative space-y-4">
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-zinc-700">
           Jméno <span className="text-red-500">*</span>
@@ -121,6 +122,19 @@ export function ContactForm() {
           onChange={(e) => update("message", e.target.value)}
           className="mt-1 w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 focus:outline-none"
           placeholder="Vaše zpráva..."
+        />
+      </div>
+
+      {/* Honeypot — hidden from humans, bots fill it in */}
+      <div className="absolute -left-[9999px] opacity-0 h-0 overflow-hidden" aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input
+          id="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          value={form.website}
+          onChange={(e) => update("website", e.target.value)}
         />
       </div>
 
