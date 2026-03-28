@@ -1,12 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import { writeFile, mkdir } from "fs/promises";
-import path from "path";
+import { put } from "@vercel/blob";
 import { verifyAdminFromRequest } from "@/lib/admin-auth";
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/webp", "image/gif"];
 
-// POST /api/admin/banners/upload — upload a banner image
+// POST /api/admin/banners/upload — upload a banner image to Vercel Blob
 export async function POST(request: NextRequest) {
   if (!(await verifyAdminFromRequest(request))) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -41,16 +40,14 @@ export async function POST(request: NextRequest) {
       "image/gif": "gif",
     };
     const ext = extMap[file.type] || "jpg";
-    const filename = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${ext}`;
-    const uploadDir = path.join(process.cwd(), "public", "images", "ads");
-    await mkdir(uploadDir, { recursive: true });
+    const filename = `ads/${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${ext}`;
 
-    const buffer = Buffer.from(await file.arrayBuffer());
-    await writeFile(path.join(uploadDir, filename), buffer);
+    const blob = await put(filename, file, {
+      access: "public",
+      contentType: file.type,
+    });
 
-    const url = `/images/ads/${filename}`;
-
-    return NextResponse.json({ url }, { status: 201 });
+    return NextResponse.json({ url: blob.url }, { status: 201 });
   } catch (error) {
     console.error("Failed to upload banner image:", error);
     return NextResponse.json({ error: "Nahrávání selhalo." }, { status: 500 });
