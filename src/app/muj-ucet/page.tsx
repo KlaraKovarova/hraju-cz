@@ -27,6 +27,7 @@ import {
   Bell,
 } from "lucide-react";
 import { BADGE_META } from "@/lib/badge-meta";
+import { SPORTS } from "@/lib/sports";
 
 // ─── Types ────────────────────────────────────────────────────────────────
 
@@ -34,6 +35,9 @@ interface UserData {
   userId: string;
   email: string;
   name: string | null;
+  bio: string | null;
+  location: string | null;
+  favoriteSports: string[];
 }
 
 interface UserReview {
@@ -716,6 +720,9 @@ export default function MujUcetPage() {
             </div>
           )}
 
+          {/* Profile edit */}
+          <ProfileEditSection user={user} onUpdate={setUser} />
+
           {/* Notification preferences */}
           <div className="rounded-xl border border-zinc-100 bg-white p-5">
             <div className="mb-4 flex items-center gap-2">
@@ -1213,6 +1220,209 @@ function EmptyState({
       >
         {cta}
       </Link>
+    </div>
+  );
+}
+
+// ─── Profile Edit Section ─────────────────────────────────────────────────
+
+function ProfileEditSection({
+  user,
+  onUpdate,
+}: {
+  user: UserData;
+  onUpdate: (u: UserData) => void;
+}) {
+  const [editing, setEditing] = useState(false);
+  const [name, setName] = useState(user.name || "");
+  const [bio, setBio] = useState(user.bio || "");
+  const [location, setLocation] = useState(user.location || "");
+  const [favSports, setFavSports] = useState<Set<string>>(
+    new Set(user.favoriteSports)
+  );
+  const [saving, setSaving] = useState(false);
+
+  async function handleSave() {
+    setSaving(true);
+    try {
+      const res = await fetch("/api/auth/me", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name.trim(),
+          bio: bio.trim(),
+          location: location.trim(),
+          favoriteSports: Array.from(favSports),
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        onUpdate({
+          ...user,
+          name: data.name,
+          bio: data.bio,
+          location: data.location,
+          favoriteSports: data.favoriteSports,
+        });
+        setEditing(false);
+      }
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  function toggleSport(slug: string) {
+    setFavSports((prev) => {
+      const next = new Set(prev);
+      if (next.has(slug)) next.delete(slug);
+      else next.add(slug);
+      return next;
+    });
+  }
+
+  if (!editing) {
+    return (
+      <div className="rounded-xl border border-zinc-100 bg-white p-5">
+        <div className="mb-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <User className="h-4.5 w-4.5 text-zinc-500" />
+            <h3 className="text-sm font-bold text-zinc-900">Profil</h3>
+          </div>
+          <button
+            onClick={() => setEditing(true)}
+            className="text-xs text-emerald-600 hover:underline"
+          >
+            Upravit
+          </button>
+        </div>
+        <div className="space-y-2 text-sm">
+          {user.bio && (
+            <p className="text-zinc-600">{user.bio}</p>
+          )}
+          {user.location && (
+            <p className="flex items-center gap-1.5 text-zinc-500">
+              <MapPin className="h-3.5 w-3.5" />
+              {user.location}
+            </p>
+          )}
+          {user.favoriteSports.length > 0 && (
+            <div className="flex flex-wrap gap-1.5 pt-1">
+              {user.favoriteSports.map((slug) => {
+                const sport = SPORTS.find((s) => s.slug === slug);
+                if (!sport) return null;
+                return (
+                  <span
+                    key={slug}
+                    className="rounded-full bg-zinc-100 px-2.5 py-0.5 text-xs text-zinc-600"
+                  >
+                    {sport.icon} {sport.nameCs}
+                  </span>
+                );
+              })}
+            </div>
+          )}
+          {!user.bio && !user.location && user.favoriteSports.length === 0 && (
+            <p className="text-xs text-zinc-400">
+              Doplňte si bio, lokaci a oblíbené sporty.
+            </p>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="rounded-xl border border-emerald-200 bg-white p-5">
+      <div className="mb-4 flex items-center gap-2">
+        <User className="h-4.5 w-4.5 text-emerald-600" />
+        <h3 className="text-sm font-bold text-zinc-900">Upravit profil</h3>
+      </div>
+      <div className="space-y-4">
+        <div>
+          <label className="mb-1 block text-xs font-medium text-zinc-600">
+            Jméno
+          </label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            maxLength={100}
+            className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm focus:border-emerald-300 focus:outline-none focus:ring-1 focus:ring-emerald-300"
+            placeholder="Vaše jméno"
+          />
+        </div>
+        <div>
+          <label className="mb-1 block text-xs font-medium text-zinc-600">
+            Bio
+          </label>
+          <textarea
+            value={bio}
+            onChange={(e) => setBio(e.target.value)}
+            maxLength={200}
+            rows={2}
+            className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm focus:border-emerald-300 focus:outline-none focus:ring-1 focus:ring-emerald-300 resize-none"
+            placeholder="Něco o vás..."
+          />
+          <p className="mt-0.5 text-right text-xs text-zinc-400">
+            {bio.length}/200
+          </p>
+        </div>
+        <div>
+          <label className="mb-1 block text-xs font-medium text-zinc-600">
+            Město / region
+          </label>
+          <input
+            type="text"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+            maxLength={100}
+            className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm focus:border-emerald-300 focus:outline-none focus:ring-1 focus:ring-emerald-300"
+            placeholder="např. Praha, Brno..."
+          />
+        </div>
+        <div>
+          <label className="mb-1 block text-xs font-medium text-zinc-600">
+            Oblíbené sporty
+          </label>
+          <div className="flex flex-wrap gap-2">
+            {SPORTS.map((sport) => (
+              <button
+                key={sport.slug}
+                type="button"
+                onClick={() => toggleSport(sport.slug)}
+                className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
+                  favSports.has(sport.slug)
+                    ? "bg-emerald-100 text-emerald-700 border border-emerald-200"
+                    : "bg-zinc-100 text-zinc-500 border border-zinc-200 hover:bg-zinc-200"
+                }`}
+              >
+                {sport.icon} {sport.nameCs}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="flex items-center gap-2 pt-1">
+          <button
+            onClick={handleSave}
+            disabled={saving}
+            className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700 disabled:opacity-50 transition-colors"
+          >
+            {saving ? "Ukládám..." : "Uložit"}
+          </button>
+          <button
+            onClick={() => {
+              setEditing(false);
+              setName(user.name || "");
+              setBio(user.bio || "");
+              setLocation(user.location || "");
+              setFavSports(new Set(user.favoriteSports));
+            }}
+            className="rounded-lg px-4 py-2 text-sm font-medium text-zinc-500 hover:text-zinc-700 transition-colors"
+          >
+            Zrušit
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

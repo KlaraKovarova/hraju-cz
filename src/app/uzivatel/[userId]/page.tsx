@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronRight, Star, MessageSquare, Calendar, User, Award, MapPinCheck } from "lucide-react";
+import { ChevronRight, Star, MessageSquare, Calendar, User, Award, MapPinCheck, MapPin } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { StarRating } from "@/components/StarRating";
 import { AdSlot } from "@/components/AdSlot";
 import { getUserBadges } from "@/lib/challenges";
+import { SPORTS } from "@/lib/sports";
 import type { Metadata } from "next";
 
 export const revalidate = 3600;
@@ -42,6 +43,9 @@ export default async function UserProfilePage({ params }: Props) {
     select: {
       id: true,
       name: true,
+      bio: true,
+      location: true,
+      favoriteSports: true,
       createdAt: true,
     },
   });
@@ -99,11 +103,24 @@ export default async function UserProfilePage({ params }: Props) {
     ],
   };
 
+  const personLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: displayName,
+    url: `https://www.hraju.cz/uzivatel/${user.id}`,
+    ...(user.bio ? { description: user.bio } : {}),
+    ...(user.location ? { homeLocation: { "@type": "Place", name: user.location } } : {}),
+  };
+
   return (
     <main className="min-h-screen bg-zinc-50/50">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
       />
 
       {/* Nav */}
@@ -137,10 +154,37 @@ export default async function UserProfilePage({ params }: Props) {
               <h1 className="text-2xl font-extrabold tracking-tight text-zinc-900 sm:text-3xl">
                 {displayName}
               </h1>
-              <p className="mt-1 flex items-center gap-1.5 text-sm text-zinc-500">
-                <Calendar className="h-3.5 w-3.5" />
-                Členem od {joinDate}
-              </p>
+              <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-zinc-500">
+                <span className="flex items-center gap-1.5">
+                  <Calendar className="h-3.5 w-3.5" />
+                  Členem od {joinDate}
+                </span>
+                {user.location && (
+                  <span className="flex items-center gap-1.5">
+                    <MapPin className="h-3.5 w-3.5" />
+                    {user.location}
+                  </span>
+                )}
+              </div>
+              {user.bio && (
+                <p className="mt-2 max-w-xl text-sm text-zinc-600">{user.bio}</p>
+              )}
+              {user.favoriteSports.length > 0 && (
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  {user.favoriteSports.map((slug) => {
+                    const sport = SPORTS.find((s) => s.slug === slug);
+                    if (!sport) return null;
+                    return (
+                      <span
+                        key={slug}
+                        className="rounded-full bg-zinc-100 px-2.5 py-0.5 text-xs text-zinc-600"
+                      >
+                        {sport.icon} {sport.nameCs}
+                      </span>
+                    );
+                  })}
+                </div>
+              )}
             </div>
           </div>
 
