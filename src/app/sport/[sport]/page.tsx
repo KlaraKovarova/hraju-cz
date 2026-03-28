@@ -13,6 +13,7 @@ import { AdSlot } from "@/components/AdSlot";
 import { ActivityFeed } from "@/components/ActivityFeed";
 import { BannerSlot } from "@/components/BannerSlot";
 import { ChallengeCards } from "@/components/ChallengeCards";
+import { MonthlyChallenges } from "@/components/MonthlyChallenges";
 import { getSportFaqs } from "@/lib/sport-faq";
 import { getPostsBySport, CATEGORIES } from "@/lib/blog";
 import type { Metadata } from "next";
@@ -314,9 +315,12 @@ export default async function SportPage({ params }: SportPageProps) {
 
       {/* Sport-specific challenges (ferraty, lezeni) */}
       {(sportSlug === "ferraty" || sportSlug === "lezeni") && (
-        <section className="mx-auto max-w-6xl px-6 pt-4">
-          <ChallengeCards filter="sport" />
-        </section>
+        <>
+          <MonthlyChallenges />
+          <section className="mx-auto max-w-6xl px-6 pt-4">
+            <ChallengeCards filter="sport" />
+          </section>
+        </>
       )}
 
       {/* Top Cities */}

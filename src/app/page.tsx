@@ -17,6 +17,7 @@ import { HeroSearchForm } from "@/components/HeroSearchForm";
 import { AdSlot } from "@/components/AdSlot";
 import { ActivityFeed } from "@/components/ActivityFeed";
 import { WeekendEvents } from "@/components/WeekendEvents";
+import { MonthlyChallenges } from "@/components/MonthlyChallenges";
 import { getAllPosts, CATEGORIES } from "@/lib/blog";
 
 // ISR: revalidate homepage every 6 hours
@@ -446,6 +447,9 @@ export default async function Home() {
           </div>
         </section>
       )}
+
+      {/* Monthly Challenges */}
+      <MonthlyChallenges />
 
       {/* Weekend Tourist Events */}
       <WeekendEvents />
