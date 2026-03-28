@@ -37,10 +37,10 @@ export function AdSlot({ slot, format = "auto", className }: AdSlotProps) {
   const style = FORMAT_STYLES[format] ?? FORMAT_STYLES.auto;
 
   return (
-    <div className={className} style={{ minHeight: style.minHeight }}>
+    <div className={className} style={{ minHeight: style.minHeight, textAlign: "center" }}>
       <ins
         className="adsbygoogle"
-        style={{ display: "block", width: style.width, minHeight: style.minHeight }}
+        style={{ display: "block", width: style.width, minHeight: style.minHeight, margin: "0 auto" }}
         data-ad-client="ca-pub-0911654773181999"
         data-ad-slot={slot}
         data-ad-format={format === "auto" ? "auto" : undefined}

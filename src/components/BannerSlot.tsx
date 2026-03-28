@@ -73,7 +73,7 @@ export function BannerSlot({ placement, sport, className }: BannerSlotProps) {
     <div
       ref={containerRef}
       className={className}
-      style={{ width: "100%", maxWidth: size.width }}
+      style={{ width: "100%", maxWidth: size.width, margin: "0 auto" }}
     >
       <a
         href={banner.targetUrl}
