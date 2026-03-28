@@ -27,12 +27,13 @@ const CATEGORY_LABELS: Record<string, string> = {
   expresky: "Expresky",
   lano: "Lana",
   jistitko: "Jistítka",
+  karabina: "Karabiny",
   crashpad: "Crashpady",
 };
 
 const CATEGORY_ORDER = [
   "set", "tlumic-padu", "prilba", "rukavice", "prislusenstvi",
-  "lezecky", "uvazek", "magnesium", "expresky", "lano", "jistitko", "crashpad",
+  "lezecky", "uvazek", "magnesium", "expresky", "lano", "jistitko", "karabina", "crashpad",
 ];
 
 async function getProducts() {
