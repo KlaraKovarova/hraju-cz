@@ -121,60 +121,179 @@ export async function createFavoriteNotifications(
   return result.count;
 }
 
-/**
- * Get unread notification count for a user.
- */
-export async function getUnreadNotificationCount(
-  userId: string
-): Promise<number> {
-  return prisma.favoriteNotification.count({
-    where: { userId, isRead: false },
-  });
-}
+// ─── Generic notification creators ────────────────────────────────────────
 
-/**
- * Get recent notifications for a user.
- */
-export async function getUserNotifications(
+export async function createNotification(
   userId: string,
-  limit = 20
-): Promise<
-  Array<{
-    id: string;
-    type: string;
-    actorName: string | null;
-    isRead: boolean;
-    createdAt: Date;
-    facility: { name: string; slug: string; sports: { sport: { slug: string } }[] };
-  }>
-> {
-  return prisma.favoriteNotification.findMany({
-    where: { userId },
-    orderBy: { createdAt: "desc" },
-    take: limit,
-    select: {
-      id: true,
-      type: true,
-      actorName: true,
-      isRead: true,
-      createdAt: true,
-      facility: {
-        select: {
-          name: true,
-          slug: true,
-          sports: { select: { sport: { select: { slug: true } } }, take: 1 },
-        },
-      },
+  type: string,
+  title: string,
+  opts?: { body?: string; linkUrl?: string; icon?: string }
+): Promise<void> {
+  await prisma.notification.create({
+    data: {
+      userId,
+      type,
+      title,
+      body: opts?.body ?? null,
+      linkUrl: opts?.linkUrl ?? null,
+      icon: opts?.icon ?? null,
     },
   });
 }
 
+export async function createReviewReplyNotification(
+  reviewAuthorUserId: string,
+  replierName: string,
+  facilityName: string,
+  facilityUrl: string
+): Promise<void> {
+  await createNotification(reviewAuthorUserId, "review_reply", `${replierName} odpověděl/a na vaši recenzi`, {
+    body: facilityName,
+    linkUrl: facilityUrl + "#recenze",
+    icon: "💬",
+  });
+}
+
+export async function createBadgeNotification(
+  userId: string,
+  badgeName: string,
+  badgeEmoji: string
+): Promise<void> {
+  await createNotification(userId, "badge_earned", `Nový odznak: ${badgeEmoji} ${badgeName}`, {
+    linkUrl: "/muj-ucet",
+    icon: badgeEmoji,
+  });
+}
+
+export async function createChallengeNotification(
+  userId: string,
+  challengeTitle: string,
+  badgeEmoji: string
+): Promise<void> {
+  await createNotification(userId, "challenge_completed", `Výzva splněna: ${challengeTitle}`, {
+    body: "Gratulujeme! Získali jste odznak.",
+    linkUrl: "/muj-ucet",
+    icon: badgeEmoji,
+  });
+}
+
+// ─── Unified notification queries ─────────────────────────────────────────
+
+export interface UnifiedNotification {
+  id: string;
+  source: "favorite" | "generic";
+  type: string;
+  title: string;
+  body: string | null;
+  linkUrl: string | null;
+  icon: string | null;
+  isRead: boolean;
+  createdAt: Date;
+}
+
 /**
- * Mark notifications as read for a user.
+ * Get unread notification count for a user (both tables).
+ */
+export async function getUnreadNotificationCount(
+  userId: string
+): Promise<number> {
+  const [favCount, genCount] = await Promise.all([
+    prisma.favoriteNotification.count({ where: { userId, isRead: false } }),
+    prisma.notification.count({ where: { userId, isRead: false } }),
+  ]);
+  return favCount + genCount;
+}
+
+/**
+ * Get recent notifications for a user (merged from both tables).
+ */
+export async function getUserNotifications(
+  userId: string,
+  limit = 20
+): Promise<UnifiedNotification[]> {
+  const [favNotifs, genNotifs] = await Promise.all([
+    prisma.favoriteNotification.findMany({
+      where: { userId },
+      orderBy: { createdAt: "desc" },
+      take: limit,
+      select: {
+        id: true,
+        type: true,
+        actorName: true,
+        isRead: true,
+        createdAt: true,
+        facility: {
+          select: {
+            name: true,
+            slug: true,
+            sports: { select: { sport: { select: { slug: true } } }, take: 1 },
+          },
+        },
+      },
+    }),
+    prisma.notification.findMany({
+      where: { userId },
+      orderBy: { createdAt: "desc" },
+      take: limit,
+      select: {
+        id: true,
+        type: true,
+        title: true,
+        body: true,
+        linkUrl: true,
+        icon: true,
+        isRead: true,
+        createdAt: true,
+      },
+    }),
+  ]);
+
+  const unified: UnifiedNotification[] = favNotifs.map((n) => {
+    const sportSlug = n.facility.sports[0]?.sport.slug;
+    const url = sportSlug ? `/sport/${sportSlug}/${n.facility.slug}` : `/${n.facility.slug}`;
+    return {
+      id: n.id,
+      source: "favorite" as const,
+      type: n.type,
+      title: n.type === "review" ? "Nová recenze" : "Nový check-in",
+      body: `${n.facility.name}${n.actorName ? ` od ${n.actorName}` : ""}`,
+      linkUrl: url,
+      icon: n.type === "review" ? "⭐" : "📍",
+      isRead: n.isRead,
+      createdAt: n.createdAt,
+    };
+  });
+
+  for (const n of genNotifs) {
+    unified.push({
+      id: n.id,
+      source: "generic",
+      type: n.type,
+      title: n.title,
+      body: n.body,
+      linkUrl: n.linkUrl,
+      icon: n.icon,
+      isRead: n.isRead,
+      createdAt: n.createdAt,
+    });
+  }
+
+  unified.sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
+  return unified.slice(0, limit);
+}
+
+/**
+ * Mark all notifications as read for a user (both tables).
  */
 export async function markNotificationsRead(userId: string): Promise<void> {
-  await prisma.favoriteNotification.updateMany({
-    where: { userId, isRead: false },
-    data: { isRead: true },
-  });
+  await Promise.all([
+    prisma.favoriteNotification.updateMany({
+      where: { userId, isRead: false },
+      data: { isRead: true },
+    }),
+    prisma.notification.updateMany({
+      where: { userId, isRead: false },
+      data: { isRead: true },
+    }),
+  ]);
 }

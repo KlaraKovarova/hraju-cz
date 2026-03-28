@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getUserSession } from "@/lib/user-auth";
 import { sendReviewReplyNotificationEmail } from "@/lib/email";
-import { getUnsubscribeToken, buildUnsubscribeUrl } from "@/lib/notifications";
+import { getUnsubscribeToken, buildUnsubscribeUrl, createReviewReplyNotification } from "@/lib/notifications";
 
 // GET /api/facilities/[id]/reviews/[reviewId]/replies
 export async function GET(
@@ -137,6 +137,15 @@ export async function POST(
     const sportSlug = review.facility.sports[0]?.sport.slug || "tenis";
     const facilityUrl = `https://www.hraju.cz/sport/${sportSlug}/${review.facility.slug}`;
 
+    // In-app notification (fire-and-forget)
+    createReviewReplyNotification(
+      review.userId,
+      replierName,
+      review.facility.name,
+      facilityUrl
+    ).catch(() => {});
+
+    // Email notification (fire-and-forget)
     getUnsubscribeToken(review.userId)
       .then((token) => {
         const unsubUrl = buildUnsubscribeUrl(token, "all");

@@ -129,17 +129,16 @@ interface DashboardData {
   }[];
 }
 
-interface FavoriteNotificationItem {
+interface NotificationItem {
   id: string;
-  type: "review" | "checkin";
-  actorName: string | null;
+  source: "favorite" | "generic";
+  type: string;
+  title: string;
+  body: string | null;
+  linkUrl: string | null;
+  icon: string | null;
   isRead: boolean;
   createdAt: string;
-  facility: {
-    name: string;
-    slug: string;
-    sports: { sport: { slug: string } }[];
-  };
 }
 
 type Tab = "overview" | "reviews" | "visits" | "favorites" | "events";
@@ -174,7 +173,7 @@ export default function MujUcetPage() {
   const [activity, setActivity] = useState<ActivityItem[]>([]);
   const [badges, setBadges] = useState<BadgeProgress[]>([]);
   const [dashboard, setDashboard] = useState<DashboardData | null>(null);
-  const [notifications, setNotifications] = useState<FavoriteNotificationItem[]>([]);
+  const [notifications, setNotifications] = useState<NotificationItem[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
   const [prefs, setPrefs] = useState({ emailNotifications: true, weeklyDigest: true });
   const [loading, setLoading] = useState(true);
@@ -526,7 +525,7 @@ export default function MujUcetPage() {
       {/* Overview tab */}
       {!isNewUser && activeTab === "overview" && (
         <div className="space-y-6">
-          {/* Favorite notifications */}
+          {/* Notifications (all types) */}
           {unreadCount > 0 && (
             <div className="rounded-xl border border-rose-100 bg-rose-50/60 p-5">
               <div className="mb-3 flex items-center justify-between">
@@ -538,7 +537,7 @@ export default function MujUcetPage() {
                     </span>
                   </div>
                   <h3 className="text-sm font-bold text-zinc-900">
-                    Novinky u oblíbených sportovišť
+                    Oznámení
                   </h3>
                 </div>
                 <button
@@ -557,42 +556,41 @@ export default function MujUcetPage() {
               <div className="space-y-2">
                 {notifications
                   .filter((n) => !n.isRead)
-                  .slice(0, 5)
-                  .map((n) => {
-                    const sportSlug = n.facility.sports[0]?.sport.slug;
-                    const url = sportSlug
-                      ? `/sport/${sportSlug}/${n.facility.slug}`
-                      : `/${n.facility.slug}`;
-                    return (
-                      <Link
-                        key={n.id}
-                        href={url}
-                        className="flex items-start gap-2.5 rounded-lg bg-white p-3 transition hover:shadow-sm"
-                      >
-                        <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-rose-100">
-                          {n.type === "review" ? (
-                            <Star className="h-3 w-3 text-amber-500" />
-                          ) : (
-                            <MapPinCheck className="h-3 w-3 text-emerald-600" />
+                  .slice(0, 8)
+                  .map((n) => (
+                    <Link
+                      key={n.id}
+                      href={n.linkUrl || "/muj-ucet"}
+                      className="flex items-start gap-2.5 rounded-lg bg-white p-3 transition hover:shadow-sm"
+                    >
+                      <div className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${
+                        n.type === "badge_earned" || n.type === "challenge_completed"
+                          ? "bg-amber-100"
+                          : n.type === "review_reply"
+                            ? "bg-blue-100"
+                            : "bg-rose-100"
+                      }`}>
+                        {n.icon ? (
+                          <span className="text-xs">{n.icon}</span>
+                        ) : n.type === "review" ? (
+                          <Star className="h-3 w-3 text-amber-500" />
+                        ) : (
+                          <MapPinCheck className="h-3 w-3 text-emerald-600" />
+                        )}
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <p className="text-sm text-zinc-700">
+                          {n.title}
+                          {n.body && (
+                            <span className="text-zinc-400"> — {n.body}</span>
                           )}
-                        </div>
-                        <div className="min-w-0 flex-1">
-                          <p className="text-sm text-zinc-700">
-                            {n.type === "review" ? "Nová recenze" : "Nový check-in"} na{" "}
-                            <span className="font-medium text-emerald-600">
-                              {n.facility.name}
-                            </span>
-                            {n.actorName && (
-                              <span className="text-zinc-400"> od {n.actorName}</span>
-                            )}
-                          </p>
-                          <p className="text-xs text-zinc-400">
-                            {formatDate(n.createdAt)}
-                          </p>
-                        </div>
-                      </Link>
-                    );
-                  })}
+                        </p>
+                        <p className="text-xs text-zinc-400">
+                          {formatDate(n.createdAt)}
+                        </p>
+                      </div>
+                    </Link>
+                  ))}
               </div>
             </div>
           )}

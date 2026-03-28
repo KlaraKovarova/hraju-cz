@@ -1,4 +1,6 @@
 import { prisma } from "./prisma";
+import { createBadgeNotification, createChallengeNotification } from "./notifications";
+import { MONTHLY_CHALLENGES } from "./monthly-challenges";
 
 // ─── Badge definitions ───────────────────────────────────────────────────
 export interface BadgeDefinition {
@@ -639,6 +641,13 @@ export async function checkAndAwardBadges(userId: string): Promise<string[]> {
         data: { userId, badgeSlug: badge.slug },
       });
       newBadges.push(badge.slug);
+
+      const challenge = MONTHLY_CHALLENGES.find((c) => c.badgeSlug === badge.slug);
+      if (challenge) {
+        createChallengeNotification(userId, challenge.title, badge.emoji).catch(() => {});
+      } else {
+        createBadgeNotification(userId, badge.name, badge.emoji).catch(() => {});
+      }
     }
   }
 
@@ -666,6 +675,14 @@ export async function checkBadgesByCategory(
         data: { userId, badgeSlug: badge.slug },
       });
       newBadges.push(badge.slug);
+
+      // Fire-and-forget notifications
+      const challenge = MONTHLY_CHALLENGES.find((c) => c.badgeSlug === badge.slug);
+      if (challenge) {
+        createChallengeNotification(userId, challenge.title, badge.emoji).catch(() => {});
+      } else {
+        createBadgeNotification(userId, badge.name, badge.emoji).catch(() => {});
+      }
     }
   }
 
