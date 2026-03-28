@@ -13,8 +13,10 @@ import {
   getRecentActivity,
   getTopReviewers,
 } from "@/lib/data";
+import { getSportBySlug } from "@/lib/sports";
 import { ActivityFeed } from "@/components/ActivityFeed";
 import { ChallengeCards } from "@/components/ChallengeCards";
+import { SportFilterPills } from "@/components/SportFilterPills";
 import { AdSlot } from "@/components/AdSlot";
 import type { Metadata } from "next";
 
@@ -36,12 +38,35 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.hraju.cz/komunita" },
 };
 
-export default async function KomunitaPage() {
+const LEADERBOARD_LABELS: Record<string, string> = {
+  tenis: "Top tenisté",
+  squash: "Top squashisté",
+  badminton: "Top badmintonisté",
+  volejbal: "Top volejbalisté",
+  plavani: "Top plavci",
+  golf: "Top golfisté",
+  fitness: "Top fitness nadšenci",
+  lezeni: "Top lezci",
+  ferraty: "Top ferratisté",
+};
+
+export default async function KomunitaPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ sport?: string }>;
+}) {
+  const { sport: sportParam } = await searchParams;
+  const activeSport = sportParam && getSportBySlug(sportParam) ? sportParam : undefined;
+
   const [communityStats, activityItems, topReviewers] = await Promise.all([
     getCommunityStats(),
-    getRecentActivity({ limit: 30 }),
-    getTopReviewers(10),
+    getRecentActivity({ sport: activeSport, limit: 30 }),
+    getTopReviewers(10, activeSport),
   ]);
+
+  const leaderboardTitle = activeSport
+    ? LEADERBOARD_LABELS[activeSport] || "Top recenzenti"
+    : "Top recenzenti";
 
   const breadcrumbLd = {
     "@context": "https://schema.org",
@@ -128,6 +153,11 @@ export default async function KomunitaPage() {
               </div>
             )}
           </div>
+
+          {/* Sport filter */}
+          <div className="mt-8">
+            <SportFilterPills activeSport={activeSport} />
+          </div>
         </div>
       </section>
 
@@ -138,7 +168,7 @@ export default async function KomunitaPage() {
 
       {/* Challenges */}
       <section className="mx-auto max-w-6xl px-6 pt-4">
-        <ChallengeCards />
+        <ChallengeCards sportSlug={activeSport} />
       </section>
 
       {/* Activity Feed */}
@@ -159,7 +189,7 @@ export default async function KomunitaPage() {
         <section className="mx-auto max-w-6xl px-6 py-8 border-t border-zinc-100">
           <div className="mb-6 flex items-center gap-2">
             <Trophy className="h-5 w-5 text-amber-500" />
-            <h2 className="text-xl font-bold text-zinc-900">Top recenzenti</h2>
+            <h2 className="text-xl font-bold text-zinc-900">{leaderboardTitle}</h2>
           </div>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {topReviewers.map((reviewer, index) => (

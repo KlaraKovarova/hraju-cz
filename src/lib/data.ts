@@ -860,16 +860,24 @@ export interface TopReviewer {
   helpfulVotes: number;
 }
 
-export async function getTopReviewers(limit: number = 10): Promise<TopReviewer[]> {
+export async function getTopReviewers(limit: number = 10, sport?: string): Promise<TopReviewer[]> {
   try {
+    const sportReviewFilter = sport
+      ? { facility: { sports: { some: { sport: { slug: sport } } } } }
+      : {};
     const reviewers = await withTimeout(
       prisma.user.findMany({
-        where: { isSeed: false },
+        where: {
+          isSeed: false,
+          ...(sport
+            ? { reviews: { some: { isApproved: true, ...sportReviewFilter } } }
+            : {}),
+        },
         select: {
           id: true,
           name: true,
           reviews: {
-            where: { isApproved: true },
+            where: { isApproved: true, ...sportReviewFilter },
             select: { helpful: true },
           },
         },

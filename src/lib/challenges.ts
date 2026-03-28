@@ -697,7 +697,7 @@ export async function getUserBadges(userId: string): Promise<EarnedBadge[]> {
 
 /** Get badge progress for a user (for challenge display). */
 export async function getUserBadgeProgress(userId: string): Promise<
-  { slug: string; name: string; description: string; emoji: string; category: string; earned: boolean; progress: number; target: number }[]
+  { slug: string; name: string; description: string; emoji: string; category: string; sportSlug: string | null; earned: boolean; progress: number; target: number }[]
 > {
   const existing = await prisma.userBadge.findMany({
     where: { userId },
@@ -932,7 +932,8 @@ export async function getUserBadgeProgress(userId: string): Promise<
     }
   }
 
-  return [
+  const badgeSportMap = new Map(BADGE_DEFINITIONS.map(b => [b.slug, b.sportSlug]));
+  const progress = [
     // Sport badges
     {
       slug: "ferratovy-pruzkumnik",
@@ -1216,4 +1217,5 @@ export async function getUserBadgeProgress(userId: string): Promise<
       target: 3,
     },
   ];
+  return progress.map(p => ({ ...p, sportSlug: badgeSportMap.get(p.slug) ?? null }));
 }

@@ -9,12 +9,19 @@ interface BadgeProgress {
   description: string;
   emoji: string;
   category: string;
+  sportSlug: string | null;
   earned: boolean;
   progress: number;
   target: number;
 }
 
-export function ChallengeCards({ filter }: { filter?: "sport" | "review" | "community" | "streak" | "seasonal" }) {
+export function ChallengeCards({
+  filter,
+  sportSlug,
+}: {
+  filter?: "sport" | "review" | "community" | "streak" | "seasonal";
+  sportSlug?: string;
+}) {
   const [badges, setBadges] = useState<BadgeProgress[]>([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -39,7 +46,10 @@ export function ChallengeCards({ filter }: { filter?: "sport" | "review" | "comm
 
   if (loading || !isLoggedIn) return null;
 
-  const filtered = filter ? badges.filter((b) => b.category === filter) : badges;
+  let filtered = filter ? badges.filter((b) => b.category === filter) : badges;
+  if (sportSlug) {
+    filtered = filtered.filter((b) => !b.sportSlug || b.sportSlug === sportSlug);
+  }
   if (filtered.length === 0) return null;
 
   return (
