@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, ArrowRight, ChevronDown, Calendar, Star, MessageSquare, Users, PlusCircle } from "lucide-react";
+import { MapPin, ArrowRight, ChevronDown, Calendar, Star, MessageSquare, Users, PlusCircle, Trophy, ThumbsUp } from "lucide-react";
 import { SPORTS } from "@/lib/sports";
 import {
   getTotalFacilityCount,
@@ -10,6 +10,7 @@ import {
   getRecentReviews,
   getCommunityStats,
   getRecentActivity,
+  getTopReviewers,
 } from "@/lib/data";
 import { cityToSlug } from "@/lib/regions";
 import { FacilityCard } from "@/components/FacilityCard";
@@ -26,7 +27,7 @@ export const revalidate = 21600;
 export default async function Home() {
   const totalFacilities = getTotalFacilityCount();
   const totalSports = getTotalSportCount();
-  const [featuredFacilities, topCities, recentFacilities, recentReviews, communityStats, activityItems] =
+  const [featuredFacilities, topCities, recentFacilities, recentReviews, communityStats, activityItems, topReviewers] =
     await Promise.all([
       getFeaturedFacilities(6),
       getTopCitiesOverall(10),
@@ -34,6 +35,7 @@ export default async function Home() {
       getRecentReviews(6),
       getCommunityStats(),
       getRecentActivity({ limit: 10 }),
+      getTopReviewers(6),
     ]);
   const latestPosts = getAllPosts().slice(0, 3);
 
@@ -383,6 +385,80 @@ export default async function Home() {
             </div>
             <div className="mx-auto max-w-2xl">
               <ActivityFeed items={activityItems} />
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Top Reviewers */}
+      {topReviewers.length > 0 && (
+        <section className="border-t border-zinc-100 bg-white">
+          <div className="mx-auto max-w-6xl px-6 py-16">
+            <div className="mb-8 text-center">
+              <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
+                Top recenzenti
+              </h2>
+              <p className="mt-2 text-zinc-500">
+                Nejaktivnější členové naší sportovní komunity
+              </p>
+            </div>
+            <div className="mx-auto grid max-w-3xl gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {topReviewers.map((reviewer, index) => (
+                <Link
+                  key={reviewer.id}
+                  href={`/uzivatel/${reviewer.id}`}
+                  className="flex items-center gap-3 rounded-xl border border-zinc-100 bg-zinc-50/50 p-4 transition hover:border-emerald-200 hover:shadow-sm"
+                >
+                  <div
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
+                      index === 0
+                        ? "bg-amber-100 text-amber-700"
+                        : index === 1
+                          ? "bg-zinc-200 text-zinc-600"
+                          : index === 2
+                            ? "bg-orange-100 text-orange-700"
+                            : "bg-zinc-50 text-zinc-500"
+                    }`}
+                  >
+                    {index === 0 ? (
+                      <Trophy className="h-4 w-4" />
+                    ) : (
+                      index + 1
+                    )}
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="truncate text-sm font-semibold text-zinc-900">
+                      {reviewer.name}
+                    </p>
+                    <div className="mt-0.5 flex items-center gap-3 text-xs text-zinc-400">
+                      <span className="flex items-center gap-1">
+                        <MessageSquare className="h-3 w-3" />
+                        {reviewer.reviewCount}{" "}
+                        {reviewer.reviewCount === 1
+                          ? "recenze"
+                          : reviewer.reviewCount <= 4
+                            ? "recenze"
+                            : "recenzí"}
+                      </span>
+                      {reviewer.helpfulVotes > 0 && (
+                        <span className="flex items-center gap-1">
+                          <ThumbsUp className="h-3 w-3" />
+                          {reviewer.helpfulVotes}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-8 text-center">
+              <Link
+                href="/komunita"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 transition hover:text-emerald-700"
+              >
+                Zobrazit celou komunitu
+                <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
         </section>
