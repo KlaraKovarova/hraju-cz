@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import Link from "next/link";
 
 interface Banner {
@@ -39,6 +39,42 @@ export default function AdminAdsPage() {
     endDate: "",
   });
   const [saving, setSaving] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const [dragOver, setDragOver] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const uploadFile = async (file: File) => {
+    setUploading(true);
+    try {
+      const fd = new FormData();
+      fd.append("file", file);
+      const res = await fetch("/api/admin/banners/upload", { method: "POST", body: fd });
+      if (!res.ok) {
+        const err = await res.json();
+        alert(err.error || "Upload selhal");
+        return;
+      }
+      const { url } = await res.json();
+      setForm((f) => ({ ...f, imageUrl: url }));
+    } catch {
+      alert("Upload selhal");
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  const handleFilePick = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) uploadFile(file);
+    e.target.value = "";
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setDragOver(false);
+    const file = e.dataTransfer.files?.[0];
+    if (file && file.type.startsWith("image/")) uploadFile(file);
+  };
 
   const fetchBanners = useCallback(async () => {
     try {
@@ -211,16 +247,94 @@ export default function AdminAdsPage() {
 
             <div>
               <label className="mb-1 block text-sm font-medium text-zinc-700">
-                URL obrázku
+                Obrázek banneru
               </label>
-              <input
-                type="text"
-                value={form.imageUrl}
-                onChange={(e) => setForm((f) => ({ ...f, imageUrl: e.target.value }))}
-                required
-                placeholder="/images/banners/medfeet-300x250.png"
-                className="w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm"
-              />
+              <div
+                onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
+                onDragLeave={() => setDragOver(false)}
+                onDrop={handleDrop}
+                className={`relative rounded-lg border-2 border-dashed p-4 text-center transition-colors ${
+                  dragOver
+                    ? "border-emerald-400 bg-emerald-50"
+                    : form.imageUrl
+                    ? "border-zinc-200 bg-zinc-50"
+                    : "border-zinc-300 bg-white"
+                }`}
+              >
+                {form.imageUrl ? (
+                  <div className="flex items-center gap-4">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={form.imageUrl}
+                      alt="Náhled"
+                      className="h-20 max-w-[200px] rounded border border-zinc-200 object-contain"
+                    />
+                    <div className="min-w-0 flex-1 text-left">
+                      <p className="truncate text-sm text-zinc-700">{form.imageUrl}</p>
+                      <div className="mt-2 flex gap-2">
+                        <button
+                          type="button"
+                          onClick={() => fileInputRef.current?.click()}
+                          disabled={uploading}
+                          className="rounded border border-zinc-300 px-3 py-1 text-xs text-zinc-600 hover:bg-zinc-100"
+                        >
+                          Změnit
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setForm((f) => ({ ...f, imageUrl: "" }))}
+                          className="rounded border border-red-200 px-3 py-1 text-xs text-red-600 hover:bg-red-50"
+                        >
+                          Odebrat
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="py-4">
+                    {uploading ? (
+                      <p className="text-sm text-zinc-500">Nahrávám...</p>
+                    ) : (
+                      <>
+                        <p className="mb-2 text-sm text-zinc-600">
+                          Přetáhněte obrázek sem nebo{" "}
+                          <button
+                            type="button"
+                            onClick={() => fileInputRef.current?.click()}
+                            className="font-semibold text-emerald-600 hover:text-emerald-700"
+                          >
+                            vyberte soubor
+                          </button>
+                        </p>
+                        <p className="text-xs text-zinc-400">
+                          JPEG, PNG, WebP nebo GIF, max 5 MB
+                        </p>
+                      </>
+                    )}
+                  </div>
+                )}
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept="image/jpeg,image/png,image/webp,image/gif"
+                  onChange={handleFilePick}
+                  className="hidden"
+                />
+              </div>
+              <div className="mt-2">
+                <details className="text-xs text-zinc-400">
+                  <summary className="cursor-pointer hover:text-zinc-600">
+                    Nebo zadat URL ručně
+                  </summary>
+                  <input
+                    type="text"
+                    value={form.imageUrl}
+                    onChange={(e) => setForm((f) => ({ ...f, imageUrl: e.target.value }))}
+                    placeholder="/images/ads/banner-300x600.png"
+                    className="mt-1 w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm"
+                  />
+                </details>
+              </div>
             </div>
 
             <div>
@@ -292,7 +406,7 @@ export default function AdminAdsPage() {
             <div className="flex gap-3">
               <button
                 type="submit"
-                disabled={saving || form.placement.length === 0}
+                disabled={saving || uploading || form.placement.length === 0 || !form.imageUrl}
                 className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700 disabled:opacity-50"
               >
                 {saving ? "Ukládám…" : editingId ? "Uložit změny" : "Vytvořit banner"}
