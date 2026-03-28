@@ -80,8 +80,10 @@ const products = [
       weight: "200 g (vel. 40)",
       sizes: "33–46",
     },
-    images: [],
-    sourceUrl: "https://www.lasportiva.com/en/solution-comp",
+    images: [
+      "https://epictv.com/media/catalog/product/cache/85810dc6c0567782573a8adbe8432270/l/a/la-sportiva-solution-comp.png",
+    ],
+    sourceUrl: "https://www.lasportiva.com/en/shoes-climbing-solution-comp-man-zfcs018",
     price: 449000,
   },
   {
@@ -101,8 +103,10 @@ const products = [
       weight: "215 g (vel. 40)",
       sizes: "33.5–46",
     },
-    images: [],
-    sourceUrl: "https://www.scarpa.com/instinct-vs",
+    images: [
+      "https://scarpa.com/cdn/shop/files/70013-000-1_00_INS-VS_Blk.jpg?v=1770044442&width=1920",
+    ],
+    sourceUrl: "https://scarpa.com/products/instinct-vs-precision-and-aggressive-hooking-70013-000-1",
     price: 419000,
   },
 
@@ -141,8 +145,10 @@ const products = [
       gearLoops: 4,
       certifications: ["EN 12277", "UIAA 105", "CE"],
     },
-    images: [],
-    sourceUrl: "https://www.petzl.com/corax",
+    images: [
+      "https://www.petzl.com/sfc/servlet.shepherd/version/download/0686800000Y6DAFAA3",
+    ],
+    sourceUrl: "https://www.petzl.com/US/en/Sport/Harnesses/CORAX",
     price: 179000,
   },
   {
@@ -159,8 +165,10 @@ const products = [
       gearLoops: 4,
       certifications: ["EN 12277", "UIAA 105", "CE"],
     },
-    images: [],
-    sourceUrl: "https://www.blackdiamondequipment.com/momentum-harness",
+    images: [
+      "https://blackdiamondequipment.com/cdn/shop/files/650005_2018_M_MOMENTUM_HARNESS_Moonstone_01.jpg?v=1742402484",
+    ],
+    sourceUrl: "https://blackdiamondequipment.com/products/mens-momentum-harness",
     price: 169000,
   },
 
@@ -178,8 +186,10 @@ const products = [
       type: "kulička v obalu",
       material: "uhličitan hořečnatý (MgCO₃)",
     },
-    images: [],
-    sourceUrl: "https://www.singingrock.cz/magnesium-ball",
+    images: [
+      "https://www.singingrock.com/data/katalog/big/M30/M3001WO35.jpg",
+    ],
+    sourceUrl: "https://www.singingrock.com/magnum-ball",
     price: 8900,
   },
   {
@@ -214,8 +224,10 @@ const products = [
       type: "tekuté magnézium",
       application: "nanést na suché ruce, nechat zaschnout",
     },
-    images: [],
-    sourceUrl: "https://moonclimbing.com/liquid-chalk",
+    images: [
+      "https://moonclimbing.com/media/catalog/product/cache/2302b4c23065295852d1fc4cc0a1f873/m/o/moon-dust-loose-300g-1.jpg",
+    ],
+    sourceUrl: "https://moonclimbing.com/moon-dust-loose-chalk-300g.html",
     price: 29000,
   },
 
@@ -254,8 +266,10 @@ const products = [
       foam: "dvouvrstvá PE + PU pěna",
       closure: "skládací, zip + popruhy",
     },
-    images: [],
-    sourceUrl: "https://www.singingrock.cz/shuttle-crashpad",
+    images: [
+      "https://www.singingrock.com/data/katalog/big/C00/C0076BX00.jpg",
+    ],
+    sourceUrl: "https://www.singingrock.com/magic",
     price: 399000,
   },
 ];
