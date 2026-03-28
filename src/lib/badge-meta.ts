@@ -95,4 +95,24 @@ export const BADGE_META: Record<string, { name: string; emoji: string; descripti
     emoji: "\uD83E\uDDD7",
     description: "3 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v \u010Dervnu 2026",
   },
+  "cervencovy-ferratista": {
+    name: "\u010Cervencov\u00FD Ferratista",
+    emoji: "\u26F0\uFE0F",
+    description: "5 ferrat zdolan\u00FDch v \u010Dervenci 2026",
+  },
+  "cervencovy-lezec": {
+    name: "\u010Cervencov\u00FD Lezec",
+    emoji: "\uD83E\uDDD7",
+    description: "4 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v \u010Dervenci 2026",
+  },
+  "srpnovy-ferratista": {
+    name: "Srpnov\u00FD Ferratista",
+    emoji: "\u26F0\uFE0F",
+    description: "5 ferrat zdolan\u00FDch v srpnu 2026",
+  },
+  "srpnovy-lezec": {
+    name: "Srpnov\u00FD Lezec",
+    emoji: "\uD83E\uDDD7",
+    description: "4 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v srpnu 2026",
+  },
 };
