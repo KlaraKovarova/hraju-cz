@@ -60,6 +60,11 @@ export const BADGE_META: Record<string, { name: string; emoji: string; descripti
     emoji: "\uD83C\uDF38",
     description: "5+ různých sportovišť navštívených na jaře 2026",
   },
+  "letni-pruzkumnik": {
+    name: "Letní průzkumník",
+    emoji: "\u2600\uFE0F",
+    description: "5+ různých sportovišť navštívených v létě 2026",
+  },
   "dubnovy-ferratista": {
     name: "Dubnov\u00FD Ferratista",
     emoji: "\u26F0\uFE0F",

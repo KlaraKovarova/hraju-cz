@@ -295,6 +295,29 @@ export const BADGE_DEFINITIONS: BadgeDefinition[] = [
     },
   },
 
+  // ─── Summer seasonal badge ─────────────────────────────────────────────
+  {
+    slug: "letni-pruzkumnik",
+    name: "Letní průzkumník",
+    description: "5+ různých sportovišť navštívených v létě 2026",
+    emoji: "☀️",
+    sportSlug: null,
+    category: "seasonal",
+    check: async (ctx) => {
+      const summerStart = new Date(2026, 5, 1); // June 1, 2026
+      const summerEnd = new Date(2026, 8, 1); // September 1, 2026
+      const visits = await prisma.visit.findMany({
+        where: {
+          userId: ctx.userId,
+          createdAt: { gte: summerStart, lt: summerEnd },
+        },
+        select: { facilityId: true },
+        distinct: ["facilityId"],
+      });
+      return visits.length >= 5;
+    },
+  },
+
   // ─── Monthly challenge badges (April 2026) ──────────────────────────────
   {
     slug: "dubnovy-ferratista",
@@ -527,10 +550,14 @@ export async function getUserBadgeProgress(userId: string): Promise<
   const springStart = new Date(2026, 2, 1);
   const springEnd = new Date(2026, 5, 1);
 
+  // Summer 2026 dates for seasonal badge
+  const summerStart = new Date(2026, 5, 1);
+  const summerEnd = new Date(2026, 8, 1);
+
   const [
     ferratyVisits, lezeniVisits, plavaniVisits, golfVisits, fitnessVisits,
     seasonReviews, totalReviews, maxHelpful, totalHelpful,
-    allVisits, approvedReviews, springVisits,
+    allVisits, approvedReviews, springVisits, summerVisits,
     aprilFerratyVisits, aprilLezeniVisits,
     mayFerratyVisits, mayLezeniVisits,
     juneFerratyVisits, juneLezeniVisits,
@@ -580,6 +607,12 @@ export async function getUserBadgeProgress(userId: string): Promise<
     // Seasonal: distinct spring facilities
     prisma.visit.findMany({
       where: { userId, createdAt: { gte: springStart, lt: springEnd } },
+      select: { facilityId: true },
+      distinct: ["facilityId"],
+    }),
+    // Seasonal: distinct summer facilities
+    prisma.visit.findMany({
+      where: { userId, createdAt: { gte: summerStart, lt: summerEnd } },
       select: { facilityId: true },
       distinct: ["facilityId"],
     }),
@@ -791,6 +824,16 @@ export async function getUserBadgeProgress(userId: string): Promise<
       category: "seasonal",
       earned: earnedSet.has("jarni-pruzkumnik"),
       progress: Math.min(springVisits.length, 5),
+      target: 5,
+    },
+    {
+      slug: "letni-pruzkumnik",
+      name: "Letní průzkumník",
+      description: "5+ různých sportovišť navštívených v létě 2026",
+      emoji: "☀️",
+      category: "seasonal",
+      earned: earnedSet.has("letni-pruzkumnik"),
+      progress: Math.min(summerVisits.length, 5),
       target: 5,
     },
     // Monthly challenge badges (April 2026)
