@@ -1,6 +1,7 @@
 ---
 title: "Ferraty a děti: bezpečnostní pravidla pro rodinné výlety"
 date: "2026-07-07"
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 excerpt: "Chcete vzít děti na ferratu? Kompletní průvodce bezpečností — od jakého věku, jaké vybavení, které ferraty jsou vhodné a co dělat, když dítě uprostřed trasy zmrzne."
 sportTags:

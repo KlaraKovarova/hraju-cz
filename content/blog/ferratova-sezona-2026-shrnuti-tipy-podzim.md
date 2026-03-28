@@ -1,6 +1,7 @@
 ---
 title: "Ferratová sezóna 2026 — shrnutí a tipy na podzim"
 date: "2026-08-12"
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 sportTags:
   - ferraty

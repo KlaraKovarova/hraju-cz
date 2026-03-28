@@ -1,6 +1,7 @@
 ---
 title: "Ferraty v Jihočeském kraji: 7 lokalit od začátečníků po experty"
 date: "2026-03-23"
+author: "Klára Kovářová"
 category: pruvodce-sporty
 excerpt: "Kompletní průvodce ferratami v jižních Čechách — Hluboká nad Vltavou, Bechyně, Český Krumlov, Písek, Tábor a nová ferrata Mladá Vožice 2025."
 sportTags: ["ferraty"]

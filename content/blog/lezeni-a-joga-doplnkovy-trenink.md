@@ -1,6 +1,7 @@
 ---
 title: "Lezení a jóga — proč je jóga nejlepší doplňkový trénink pro lezce"
 date: "2026-09-26"
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 sportTags:
   - lezeni

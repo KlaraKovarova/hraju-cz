@@ -1,10 +1,9 @@
 ---
 title: Kde sportovat ve Zlíně — kompletní průvodce 2026
 date: '2026-03-13'
+author: "Klára Kovářová"
 category: pruvodce-mesta
-excerpt: >-
-  Přehled 13 ověřených sportovišť ve Zlíně — tenis, fitness, 50m bazén, lezecká
-  stěna, squash i badminton. S adresami, cenami a tipy od místních.
+excerpt: "Přehled 13 ověřených sportovišť ve Zlíně — tenis, fitness, 50m bazén, lezecká stěna, squash i badminton. S adresami, cenami a tipy od místních."
 sportTags:
   - tenis
   - fitness
@@ -231,3 +230,12 @@ Kompletní přehled sportovišť ve Zlíně najdete na [hraju.cz](https://hraju.
 - [Ostrava — kompletní průvodce](/blog/kde-sportovat-v-ostrave-pruvodce)
 - [Plzeň — kompletní průvodce](/blog/kde-sportovat-v-plzni-pruvodce)
 - [Olomouc — kompletní průvodce](/blog/kde-sportovat-v-olomouci-pruvodce)
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

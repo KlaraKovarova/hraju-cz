@@ -1,6 +1,7 @@
 ---
 title: "Kde hrát tenis v Praze — průvodce po městských částech"
 date: "2026-03-15"
+author: "Klára Kovářová"
 category: "pruvodce-mesta"
 excerpt: "Kompletní přehled tenisových kurtů v Praze podle městských částí. Zjistěte, kde najdete nejlepší kurty, jaké jsou ceny a jak rezervovat."
 sportTags: ["tenis"]

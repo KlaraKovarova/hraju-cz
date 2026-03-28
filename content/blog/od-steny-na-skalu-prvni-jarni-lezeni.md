@@ -1,6 +1,7 @@
 ---
 title: "Od stěny na skálu: Jak zvládnout první jarní lezení venku"
 date: "2026-04-08"
+author: "Klára Kovářová"
 category: pruvodce-sporty
 excerpt: "Celou zimu jste lezli v hale. Teď je duben a čas vyrazit ven. Ale první den na skále po měsících indooru má svá specifika — od vybavení přes psychiku po techniku."
 sportTags:

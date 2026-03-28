@@ -1,6 +1,7 @@
 ---
 title: "Jak se připravit na ferratový výlet — kompletní checklist"
 date: "2026-08-04"
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 sportTags:
   - ferraty

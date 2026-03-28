@@ -1,11 +1,9 @@
 ---
 title: 'CrossFit a funkční trénink: Kompletní průvodce pro začátečníky'
 date: '2026-03-02'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Co je CrossFit a funkční trénink, jak začít, základní cviky, WOD struktura,
-  vybavení, ceny a přehled českých boxů. Vše, co potřebujete vědět před prvním
-  tréninkem.
+excerpt: "Co je CrossFit a funkční trénink, jak začít, základní cviky, WOD struktura, vybavení, ceny a přehled českých boxů. Vše, co potřebujete vědět před prvním tréninkem."
 sportTags:
   - fitness
   - crossfit

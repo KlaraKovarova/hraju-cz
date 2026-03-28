@@ -1,6 +1,7 @@
 ---
 title: "Lezecká centra v Praze — kde lézt a boulderovat v roce 2026"
 date: "2026-03-21"
+author: "Klára Kovářová"
 category: "pruvodce-mesta"
 excerpt: "Kompletní přehled lezeckých center a boulderovek v Praze. Od SmíchOFFu po Big Wall — zjistěte, kde začít s lezením a kolik to stojí."
 sportTags: ["lezeni"]

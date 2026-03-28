@@ -1,10 +1,9 @@
 ---
 title: Kam na squash v Brně — průvodce podle hodnocení hráčů
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: pruvodce-mesta
-excerpt: >-
-  Hledáte squashový kurt v Brně? Přinášíme přehled nejlepších center podle
-  zkušeností místních hráčů a tipy, jak si vybrat.
+excerpt: "Hledáte squashový kurt v Brně? Přinášíme přehled nejlepších center podle zkušeností místních hráčů a tipy, jak si vybrat."
 sportTags:
   - squash
 image: /images/blog/kam-na-squash-v-brne.jpg

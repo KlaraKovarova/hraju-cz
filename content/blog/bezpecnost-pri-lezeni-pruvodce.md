@@ -1,10 +1,9 @@
 ---
 title: 'Bezpečnost při lezení: 12 pravidel, která zachraňují životy'
 date: '2026-03-27'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Bezpečnostní pravidla pro lezení na stěně i ve skalách. Kontrola vybavení,
-  správné jištění, komunikace s partnerem a nejčastější chyby začátečníků.
+excerpt: "Bezpečnostní pravidla pro lezení na stěně i ve skalách. Kontrola vybavení, správné jištění, komunikace s partnerem a nejčastější chyby začátečníků."
 sportTags:
   - lezeni
 image: /images/blog/bezpecnost-pri-lezeni-pruvodce.jpg

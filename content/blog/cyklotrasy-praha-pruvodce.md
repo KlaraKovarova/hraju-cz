@@ -1,10 +1,9 @@
 ---
 title: 'Cyklotrasy v Praze a okolí: Kam na kolo v roce 2026'
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: pruvodce-mesta
-excerpt: >-
-  Od rovné Vltavské stezky po trail v Prokopském údolí — přehled nejlepších
-  cyklotras v Praze s vzdálenostmi, povrchy a praktickými tipy pro sezónu 2026.
+excerpt: "Od rovné Vltavské stezky po trail v Prokopském údolí — přehled nejlepších cyklotras v Praze s vzdálenostmi, povrchy a praktickými tipy pro sezónu 2026."
 sportTags:
   - cyklistika
 image: /images/blog/cyklotrasy-praha-pruvodce.jpg

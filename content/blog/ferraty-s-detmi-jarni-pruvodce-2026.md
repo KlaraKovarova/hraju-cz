@@ -1,6 +1,7 @@
 ---
 title: "Ferraty s dětmi na jaře 2026: Kam vyrazit a na co si dát pozor"
 date: "2026-04-10"
+author: "Klára Kovářová"
 category: pruvodce-sporty
 excerpt: "Jarní ferrata s dětmi vyžaduje jiný přístup než letní. Specifické podmínky dubna a května, bezpečnostní pravidla pro jarní výjezdy a 5 nejlepších ferrat pro rodiny na jaře."
 sportTags:

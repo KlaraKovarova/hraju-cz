@@ -1,10 +1,9 @@
 ---
 title: 'Bojové sporty pro začátečníky: Jak vybrat a kde trénovat v Česku'
 date: '2026-03-01'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Kompletní průvodce bojovými sporty — porovnání 8 disciplín, co očekávat na
-  prvním tréninku, bezpečnost, ceny a jak najít klub v Česku.
+excerpt: "Kompletní průvodce bojovými sporty — porovnání 8 disciplín, co očekávat na prvním tréninku, bezpečnost, ceny a jak najít klub v Česku."
 sportTags:
   - bojove-sporty
 image: /images/blog/bojove-sporty-pruvodce-pro-zacatecniky.jpg

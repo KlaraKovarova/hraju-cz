@@ -1,10 +1,9 @@
 ---
 title: 'Volejbal pro začátečníky: Jak začít hrát a kde najít tým'
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Průvodce volejbalem pro začátečníky — základní technika (podání, přihrávka,
-  smeč), pravidla, jak najít amatérský tým a kolik to stojí.
+excerpt: "Průvodce volejbalem pro začátečníky — základní technika (podání, přihrávka, smeč), pravidla, jak najít amatérský tým a kolik to stojí."
 sportTags:
   - volejbal
 image: /images/blog/volejbal-pro-zacatecniky-jak-zacit.jpg

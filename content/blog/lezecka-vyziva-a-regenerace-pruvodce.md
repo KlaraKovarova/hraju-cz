@@ -1,6 +1,7 @@
 ---
 title: "Lezecká výživa a regenerace: co jíst před a po lezení"
 date: "2026-07-12"
+author: "Klára Kovářová"
 category: "tipy"
 excerpt: "Výživa ovlivňuje lezecký výkon víc, než si většina lezců připouští. Průvodce stravou před lezením, během a po — plus regenerační strategie pro rychlejší zotavení."
 sportTags:

@@ -1,10 +1,9 @@
 ---
 title: První návštěva sportoviště — co čekat a jak se připravit
 date: '2026-03-18'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Jdete poprvé na squash, bouldering nebo do nové posilovny? Praktický průvodce:
-  co si vzít, kolik zaplatíte, na co se zeptat a čeho se nebát.
+excerpt: "Jdete poprvé na squash, bouldering nebo do nové posilovny? Praktický průvodce: co si vzít, kolik zaplatíte, na co se zeptat a čeho se nebát."
 sportTags:
   - squash
   - badminton

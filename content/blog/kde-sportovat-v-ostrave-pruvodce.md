@@ -1,11 +1,9 @@
 ---
 title: Kde sportovat v Ostravě — průvodce od místních
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: pruvodce-mesta
-excerpt: >-
-  Třetí největší město Česka nabízí 30+ sportovišť — od lezení v industriální
-  hale bývalého dolu po největší boulderingovou stěnu ve střední Evropě. Přehled
-  s cenami pro rok 2026.
+excerpt: "Třetí největší město Česka nabízí 30+ sportovišť — od lezení v industriální hale bývalého dolu po největší boulderingovou stěnu ve střední Evropě. Přehled s cenami pro rok 2026."
 sportTags:
   - tenis
   - squash
@@ -303,3 +301,12 @@ Tenhle průvodce jsme sestavili z veřejně dostupných hodnocení a zkušenost�
 - [Kde sportovat v Olomouci — kompletní průvodce](/blog/kde-sportovat-v-olomouci-pruvodce)
 
 Všechna sportoviště v Ostravě najdete na [hraju.cz](/sport).
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

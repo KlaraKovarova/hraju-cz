@@ -1,10 +1,9 @@
 ---
 title: Sport pro rodiny s dětmi — kam vyrazit společně
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Hledáte sportovní aktivitu pro celou rodinu? Přinášíme přehled sportů a
-  sportovišť v Česku, kam můžete vyrazit s dětmi.
+excerpt: "Hledáte sportovní aktivitu pro celou rodinu? Přinášíme přehled sportů a sportovišť v Česku, kam můžete vyrazit s dětmi."
 sportTags:
   - plavani
   - lezeni

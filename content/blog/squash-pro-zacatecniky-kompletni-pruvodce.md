@@ -1,11 +1,9 @@
 ---
 title: Squash pro začátečníky — kompletní průvodce pro první měsíc
 date: '2026-03-21'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Chcete začít se squashem? Pravidla, vybavení, technika podání, výběr míčku a
-  4týdenní tréninkový plán pro úplné nováčky. S reálnými cenami z českých
-  center.
+excerpt: "Chcete začít se squashem? Pravidla, vybavení, technika podání, výběr míčku a 4týdenní tréninkový plán pro úplné nováčky. S reálnými cenami z českých center."
 sportTags:
   - squash
 image: /images/blog/squash-pro-zacatecniky-kompletni-pruvodce.jpg

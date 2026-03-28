@@ -1,6 +1,7 @@
 ---
 title: "Top fitness centra očima návštěvníků — co doporučuje komunita"
 date: '2026-03-22'
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 excerpt: "Která fitness centra v Česku si získala srdce návštěvníků? Přinášíme přehled oblíbených posiloven a studií podle hodnocení naší komunity."
 sportTags: ["fitness"]

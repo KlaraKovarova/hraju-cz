@@ -1,10 +1,9 @@
 ---
 title: "Kam na sport o Velikonocích 2026: sportoviště otevřená přes svátky"
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Velikonoce 2026 jsou 3.–6. dubna. Kam na sport přes svátky? Přehled sportovišť,
-  která mají otevřeno, a tipy na sportovní výlety přes prodloužený víkend.
+excerpt: "Velikonoce 2026 jsou 3.–6. dubna. Kam na sport přes svátky? Přehled sportovišť, která mají otevřeno, a tipy na sportovní výlety přes prodloužený víkend."
 sportTags:
   - ferraty
   - lezeni

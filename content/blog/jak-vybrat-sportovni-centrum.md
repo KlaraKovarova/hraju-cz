@@ -1,6 +1,7 @@
 ---
 title: "Jak vybrat sportovní centrum — na co se zaměřit"
 date: "2026-03-05"
+author: "Klára Kovářová"
 category: "tipy"
 excerpt: "Vybíráte sportovní centrum? Podívejte se, na jaké vybavení a služby se zaměřit, abyste našli to pravé místo pro váš sport."
 sportTags: ["tenis", "squash", "badminton", "fitness"]
@@ -73,4 +74,13 @@ Vyberte si sport a město na [hraju.cz](/) a začněte hledat.
 - [Jak napsat užitečnou recenzi sportoviště](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Nejlepší sportoviště v Česku — jak poznat kvalitu](/blog/nejlepsi-sportoviste-v-cesku-podle-hodnoceni)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

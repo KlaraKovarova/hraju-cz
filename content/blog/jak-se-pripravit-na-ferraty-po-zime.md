@@ -1,6 +1,7 @@
 ---
 title: "Jak se připravit na ferraty po zimě: Kondice, technika a vybavení"
 date: "2026-04-03"
+author: "Klára Kovářová"
 category: pruvodce-sporty
 excerpt: "Po zimní pauze nemůžete na ferratu vyrazit stejně jako v září. Jak obnovit kondici, osvěžit techniku a zkontrolovat vybavení před první jarní ferratou."
 sportTags:

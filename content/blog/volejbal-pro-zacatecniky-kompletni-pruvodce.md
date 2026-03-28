@@ -1,10 +1,9 @@
 ---
 title: 'Volejbal pro začátečníky: Pravidla, technika a kde hrát v Česku'
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Kompletní průvodce volejbalem — pravidla, základní údery a postavení, jak
-  začít hrát, beach volejbal a přehled českých lig a turnajů.
+excerpt: "Kompletní průvodce volejbalem — pravidla, základní údery a postavení, jak začít hrát, beach volejbal a přehled českých lig a turnajů."
 sportTags:
   - volejbal
 image: /images/blog/volejbal-pro-zacatecniky-kompletni-pruvodce.jpg

@@ -1,11 +1,9 @@
 ---
 title: "Bazény a aquaparky v Ostravě — kompletní přehled s cenami 2026"
 date: '2026-03-25'
+author: "Klára Kovářová"
 category: pruvodce-mesta
-excerpt: >-
-  Kde plavat v Ostravě? Přehled krytých bazénů, letních koupališť a aquaparků —
-  od 50m bazénu v Porubě po největší letní koupaliště ve střední Evropě. Ceny,
-  otevírací doby, SAREZA slevy.
+excerpt: "Kde plavat v Ostravě? Přehled krytých bazénů, letních koupališť a aquaparků — od 50m bazénu v Porubě po největší letní koupaliště ve střední Evropě. Ceny, otevírací doby, SAREZA slevy."
 sportTags:
   - plavani
 image: /images/blog/bazeny-a-aquaparky-v-ostrave-pruvodce.jpg
@@ -101,3 +99,12 @@ Venkovní bazén ve Vodním světě otevírá v červnu. Vodní areál Jih (poku
 - [Kde sportovat v Ostravě — kompletní průvodce](/blog/kde-sportovat-v-ostrave-pruvodce)
 - [Plavání pro začátečníky](/blog/plavani-pro-zacatecniky-kompletni-pruvodce)
 - [Oblíbené bazény v Česku — přehled hodnocení](/blog/oblibene-bazeny-prehled-hodnoceni)
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

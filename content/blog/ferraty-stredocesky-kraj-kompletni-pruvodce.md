@@ -1,6 +1,7 @@
 ---
 title: "Ferraty ve Středočeském kraji: kompletní průvodce 2026"
 date: '2026-05-01'
+author: "Klára Kovářová"
 category: pruvodce-sporty
 excerpt: "Středočeský kraj nabízí překvapivě pestré ferraty od skalních stěn po městské trasy. Kompletní přehled lokalit, obtížností a tipů pro váš další výlet."
 sportTags:
@@ -89,6 +90,16 @@ Byli jste na ferratě ve Středočeském kraji? [Zaznamenejte návštěvu](/spor
 Kompletní přehled všech českých ferrat najdete v [průvodci ferratami v ČR](/sport/ferraty).
 
 ---
+
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 
 ## Související články
 

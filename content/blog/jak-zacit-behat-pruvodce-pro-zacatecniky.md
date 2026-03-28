@@ -1,10 +1,9 @@
 ---
 title: 'Jak začít běhat: Průvodce pro úplné začátečníky 2026'
 date: '2099-01-01'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Kompletní průvodce běháním pro začátečníky — výběr bot, technika běhu,
-  8týdenní plán od chůze k 5 km a nejčastější chyby.
+excerpt: "Kompletní průvodce běháním pro začátečníky — výběr bot, technika běhu, 8týdenní plán od chůze k 5 km a nejčastější chyby."
 sportTags:
   - fitness
 image: /images/blog/jak-zacit-behat-pruvodce-pro-zacatecniky.jpg

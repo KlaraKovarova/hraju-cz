@@ -1,11 +1,9 @@
 ---
 title: 'Vodní sporty v Česku: Kde si zaplavat, zajet na kajaku nebo paddleboardu'
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Kompletní průvodce vodními sporty v České republice — plavání, kajak, kánoe,
-  paddleboard, windsurfing, wakeboard a potápění. Nejlepší lokality, vybavení a
-  ceny.
+excerpt: "Kompletní průvodce vodními sporty v České republice — plavání, kajak, kánoe, paddleboard, windsurfing, wakeboard a potápění. Nejlepší lokality, vybavení a ceny."
 sportTags:
   - plavani
   - vodni-sporty

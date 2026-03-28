@@ -1,6 +1,7 @@
 ---
 title: "Jak zlepšit techniku na ferratách: tréninkový plán pro sezónu 2026"
 date: '2026-05-10'
+author: "Klára Kovářová"
 category: tipy
 excerpt: "Chcete na ferratách lézt plynuleji, bezpečněji a s menší únavou? Tréninkový plán zaměřený na sílu, techniku a vytrvalost speciálně pro ferratisty."
 sportTags:
@@ -91,6 +92,16 @@ Trénink mimo skálu zlepšuje výkon na skále. Ale nic nenahradí čas na ferr
 Sdílejte své tréninkové tipy s komunitou — [napište recenzi](/sport/ferraty) s tím, jak jste se na ferratu připravovali. Pomůže to dalším.
 
 ---
+
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 
 ## Související články
 

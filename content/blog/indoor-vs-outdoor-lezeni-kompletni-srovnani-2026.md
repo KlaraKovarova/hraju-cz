@@ -1,6 +1,7 @@
 ---
 title: "Indoor vs. outdoor lezení: Kompletní srovnání cen, obtížností a vybavení"
 date: "2026-04-17"
+author: "Klára Kovářová"
 category: komunita
 excerpt: "Kolik stojí lezení na stěně vs. na skále? Jaké vybavení potřebujete? Srovnávací tabulky, reálné ceny z českých stěn a praktické rady od komunity."
 sportTags:
@@ -149,6 +150,16 @@ Všechny lezecké stěny a boulderovny najdete na [hraju.cz/sport/lezeni](/sport
 - [Lezecká výzva: 3 stěny za měsíc](/blog/lezecka-vyzva-3-steny-za-mesic)
 
 ---
+
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 
 ## Související články
 

@@ -1,6 +1,7 @@
 ---
 title: "Ferraty pro skupiny: jak zorganizovat firemní teambuilding na ferratách"
 date: '2026-06-01'
+author: "Klára Kovářová"
 category: tipy
 excerpt: "Firemní teambuilding na ferratě je levnější než rafting, přístupnější než horolezectví a účinnější než konferenční místnost. Kompletní návod na organizaci skupinové ferraty — od výběru lokality po rozpočet."
 sportTags:
@@ -158,6 +159,16 @@ Tým uvidí vlastní pokrok. A pokud chcete inspiraci na víkendový plán, pod�
 Všechny ferraty v Česku najdete na [hraju.cz/sport/ferraty](/sport/ferraty). A pokud máte zkušenost s firemním teambuildingem na ferratě, dejte o ní vědět — [vaše recenze](/sport/ferraty) pomůže dalším organizátorům.
 
 ---
+
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 
 ## Související články
 

@@ -1,6 +1,7 @@
 ---
 title: "Protahování a flexibilita: Kompletní průvodce pro sportovce i sedavé"
 date: "2026-03-22"
+author: "Klára Kovářová"
 category: "tipy"
 excerpt: "Proč a jak se protahovat — statický vs. dynamický strečink, mobilita kloubů, foam rolling, jóga pro sportovce. 20minutová rutina pro každý den + specifické protahovací plány podle sportu."
 sportTags: ["fitness", "joga", "behani"]

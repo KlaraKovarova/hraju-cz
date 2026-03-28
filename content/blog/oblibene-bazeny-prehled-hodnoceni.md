@@ -1,6 +1,7 @@
 ---
 title: "Oblíbené bazény v Česku — přehled hodnocení od plavců"
 date: '2026-03-15'
+author: "Klára Kovářová"
 category: "pruvodce-mesta"
 excerpt: "Které bazény a aquaparky v Česku doporučují plavci? Přinášíme přehled nejoblíbenějších plaveckých areálů podle hodnocení naší komunity."
 sportTags: ["plavani"]

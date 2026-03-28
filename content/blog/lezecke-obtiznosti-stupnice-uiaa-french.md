@@ -1,10 +1,9 @@
 ---
 title: 'Lezecké obtížnosti: Průvodce stupnicemi UIAA, French a Fontainebleau 2026'
 date: '2026-03-26'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Jak fungují lezecké stupnice UIAA, francouzská (French), V-scale a Fontainebleau?
-  Srovnávací tabulka, co odpovídá čemu a jak vybrat správnou obtížnost.
+excerpt: "Jak fungují lezecké stupnice UIAA, francouzská (French), V-scale a Fontainebleau? Srovnávací tabulka, co odpovídá čemu a jak vybrat správnou obtížnost."
 sportTags:
   - lezeni
 image: /images/blog/lezecke-obtiznosti-stupnice-uiaa-french.jpg

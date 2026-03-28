@@ -1,10 +1,9 @@
 ---
 title: 'Golf pro začátečníky: Jak začít hrát golf v Česku'
 date: '2026-03-03'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Kompletní průvodce golfem pro začátečníky — od výběru hole přes základní
-  techniku po získání handicapu a vstup na hřiště.
+excerpt: "Kompletní průvodce golfem pro začátečníky — od výběru hole přes základní techniku po získání handicapu a vstup na hřiště."
 sportTags:
   - golf
 image: /images/blog/golf-pro-zacatecniky-kompletni-pruvodce.jpg

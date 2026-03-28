@@ -1,10 +1,9 @@
 ---
 title: 'Via ferraty v Česku 2026: Kompletní průvodce pro začátečníky i pokročilé'
 date: '2026-03-22'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Kde najít via ferraty v ČR, jaké vybavení potřebujete, obtížnostní stupnice,
-  bezpečnostní pravidla a nejlepší ferraty podle regionu.
+excerpt: "Kde najít via ferraty v ČR, jaké vybavení potřebujete, obtížnostní stupnice, bezpečnostní pravidla a nejlepší ferraty podle regionu."
 sportTags:
   - ferraty
 image: /images/blog/ferraty-v-cesku-kompletni-pruvodce-2026.jpg
@@ -281,6 +280,16 @@ Na hraju.cz najdete outdoorová sportoviště a lezecké stěny ve vašem region
 ---
 
 Byli jste na ferratě? [Napište recenzi](/prihlaseni) — pomůžete ostatním vybrat tu správnou trasu! A nezapomeňte na [check-in „Byl/a jsem tady"](/blog/check-iny-na-hraju-cz-pruvodce) — po 3 ferratách získáte odznak **⛰️ Ferratový Průzkumník**. [Jak odznaky fungují →](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 
 ## Související články
 

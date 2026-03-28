@@ -1,6 +1,7 @@
 ---
 title: "Ferraty pro rodiny s dětmi: Bezpečný průvodce pro rodiče"
 date: "2026-03-23"
+author: "Klára Kovářová"
 category: pruvodce-sporty
 excerpt: "Kam s dětmi na ferratu v Česku? Minimální věk, dětské vybavení, nejbezpečnější trasy K1-K2 a pravidla, která musíte znát, než vyrazíte."
 sportTags: ["ferraty"]

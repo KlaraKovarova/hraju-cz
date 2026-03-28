@@ -1,11 +1,9 @@
 ---
 title: Kde sportovat s dětmi v Česku — průvodce pro rodiče
 date: '2026-03-07'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Hledáte sport pro celou rodinu? Přehled nejlepších sportů pro děti podle věku,
-  tipy na první kroky a jak vybrat sportoviště, kde se budou cítit dobře děti i
-  rodiče.
+excerpt: "Hledáte sport pro celou rodinu? Přehled nejlepších sportů pro děti podle věku, tipy na první kroky a jak vybrat sportoviště, kde se budou cítit dobře děti i rodiče."
 sportTags:
   - plavani
   - lezeni

@@ -1,10 +1,9 @@
 ---
 title: "Výzva: 7 sportů za 7 dní — zkuste něco nového"
 date: '2026-03-27'
+author: "Klára Kovářová"
 category: komunita
-excerpt: >-
-  Vyzkoušejte 7 různých sportů za týden. Tenisový kurt v pondělí, boulderovka
-  v úterý, bazén ve středu… Návod, jak na to, a proč to za to stojí.
+excerpt: "Vyzkoušejte 7 různých sportů za týden. Tenisový kurt v pondělí, boulderovka v úterý, bazén ve středu… Návod, jak na to, a proč to za to stojí."
 sportTags:
   - tenis
   - fitness
@@ -132,4 +131,13 @@ Zvládli jste výzvu? **Napište recenzi na každé sportoviště**, které jste
 - [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
 - [Jak najít sportovního partnera](/blog/jak-najit-sportovniho-partnera)
 - [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

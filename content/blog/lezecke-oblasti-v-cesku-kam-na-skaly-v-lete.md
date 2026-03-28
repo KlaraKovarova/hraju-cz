@@ -1,6 +1,7 @@
 ---
 title: "Lezecké oblasti v Česku: kam na skály v létě 2026"
 date: "2026-07-02"
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 excerpt: "Přehled nejlepších lezeckých oblastí v Česku pro letní sezónu. Pískovce, vápence, žula — kde lézt v červenci a srpnu, jak se vyhnout vedru a co čekat od jednotlivých oblastí."
 sportTags:

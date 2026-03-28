@@ -1,10 +1,9 @@
 ---
 title: 'Hokej pro začátečníky: Pravidla, technika bruslení a kde hrát v Česku'
 date: '2026-03-04'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Kompletní průvodce hokejem — pravidla, bruslení, střelba, přihrávání, pozice
-  na ledě, výstroj a přehled české hokejové scény od Extraligy po hobby ledy.
+excerpt: "Kompletní průvodce hokejem — pravidla, bruslení, střelba, přihrávání, pozice na ledě, výstroj a přehled české hokejové scény od Extraligy po hobby ledy."
 sportTags:
   - hokej
 image: /images/blog/hokej-pro-zacatecniky-kompletni-pruvodce.jpg

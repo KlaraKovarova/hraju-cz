@@ -1,10 +1,9 @@
 ---
 title: 'Stolní tenis pro začátečníky: Jak začít a kde hrát v Česku'
 date: '2026-03-21'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Kompletní průvodce stolním tenisem — výběr pálky, základní údery, pravidla,
-  kde hrát v Česku a proč je ping-pong víc než hra v garáži.
+excerpt: "Kompletní průvodce stolním tenisem — výběr pálky, základní údery, pravidla, kde hrát v Česku a proč je ping-pong víc než hra v garáži."
 sportTags:
   - stolni-tenis
 image: /images/blog/stolni-tenis-pro-zacatecniky-kompletni-pruvodce.jpg

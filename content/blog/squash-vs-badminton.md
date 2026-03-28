@@ -1,10 +1,9 @@
 ---
 title: Squash vs. badminton — jaký raketový sport je pro vás?
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Nevíte, jestli zkusit squash nebo badminton? Porovnáváme oba sporty — kondici,
-  náročnost, ceny a dostupnost v Česku.
+excerpt: "Nevíte, jestli zkusit squash nebo badminton? Porovnáváme oba sporty — kondici, náročnost, ceny a dostupnost v Česku."
 sportTags:
   - squash
   - badminton

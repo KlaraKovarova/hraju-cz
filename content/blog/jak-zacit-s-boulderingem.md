@@ -3,9 +3,7 @@ title: 'Jak začít s boulderingem: 7 tipů pro první návštěvu'
 date: '2026-03-23'
 author: Klára Kovářová
 category: tipy
-excerpt: >-
-  Praktický průvodce pro vaši první návštěvu boulderingové stěny. 7 tipů, které
-  vám pomohou překonat začátečnickou nervozitu a užít si lezení naplno.
+excerpt: "Praktický průvodce pro vaši první návštěvu boulderingové stěny. 7 tipů, které vám pomohou překonat začátečnickou nervozitu a užít si lezení naplno."
 sportTags:
   - lezeni
 image: /images/blog/jak-zacit-s-boulderingem.jpg

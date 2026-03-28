@@ -1,10 +1,9 @@
 ---
 title: Jaký sport začít? Průvodce výběrem sportu pro dospělé
 date: '2026-03-06'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Nevíte, jaký sport zkusit? Porovnání 20 sportů podle kondice, ceny, sociálních
-  aspektů a časové náročnosti — najděte sport, který vám sedne.
+excerpt: "Nevíte, jaký sport zkusit? Porovnání 20 sportů podle kondice, ceny, sociálních aspektů a časové náročnosti — najděte sport, který vám sedne."
 sportTags:
   - fitness
   - tenis

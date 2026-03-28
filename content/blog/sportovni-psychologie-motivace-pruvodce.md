@@ -1,11 +1,9 @@
 ---
 title: 'Sportovní psychologie: Jak překonat mentální bariéry a zůstat motivovaní'
 date: '2026-03-20'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Průvodce sportovní psychologií — jak překonat strach, lenost a výmluvy,
-  nastavit správné cíle, zvládnout závodní nervozitu a vybudovat sportovní
-  návyk, který vydrží.
+excerpt: "Průvodce sportovní psychologií — jak překonat strach, lenost a výmluvy, nastavit správné cíle, zvládnout závodní nervozitu a vybudovat sportovní návyk, který vydrží."
 sportTags:
   - fitness
 image: /images/blog/sportovni-psychologie-motivace-pruvodce.jpg

@@ -1,10 +1,9 @@
 ---
 title: Kde sportovat v Brně — kompletní průvodce 2026
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: pruvodce-mesta
-excerpt: >-
-  Přehled 40+ sportovišť v Brně — 6 tenisových areálů, Hangar by Adam Ondra (1 000 m²),
-  5 lezeckých stěn, Bazény Lužánky (50m), fitness od 399 Kč/měsíc. Ověřené ceny 2026.
+excerpt: "Přehled 40+ sportovišť v Brně — 6 tenisových areálů, Hangar by Adam Ondra (1 000 m²), 5 lezeckých stěn, Bazény Lužánky (50m), fitness od 399 Kč/měsíc. Ověřené ceny 2026."
 sportTags:
   - tenis
   - fitness
@@ -452,3 +451,12 @@ Kompletní přehled sportovišť v Brně najdete na [hraju.cz](https://hraju.cz)
 - [Kde sportovat v Ostravě — kompletní průvodce](/blog/kde-sportovat-v-ostrave-pruvodce)
 - [Kde sportovat v Plzni — kompletní průvodce](/blog/kde-sportovat-v-plzni-pruvodce)
 - [Kde sportovat v Olomouci — kompletní průvodce](/blog/kde-sportovat-v-olomouci-pruvodce)
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

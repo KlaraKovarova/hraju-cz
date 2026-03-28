@@ -1,6 +1,7 @@
 ---
 title: "Kde plavat v Praze: Kompletní průvodce bazény 2026"
 date: "2026-03-21"
+author: "Klára Kovářová"
 category: "pruvodce-mesta"
 excerpt: "Praha má 38 plaveckých zařízení — ale jen 2 vnitřní 50m bazény. Přinášíme přehled s cenami, otevírací dobou a tipy, kam vyrazit za 80 Kč i za 1 000 Kč."
 sportTags: ["plavani"]

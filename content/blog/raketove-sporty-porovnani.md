@@ -1,11 +1,9 @@
 ---
 title: 'Tenis, squash nebo badminton? Velké porovnání raketových sportů'
 date: '2026-03-18'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Nevíte, který raketový sport si vybrat? Porovnáváme tenis, squash a
-  badminton — náročnost, cenu, dostupnost kurtů i to, jak rychle se naučíte
-  hrát.
+excerpt: "Nevíte, který raketový sport si vybrat? Porovnáváme tenis, squash a badminton — náročnost, cenu, dostupnost kurtů i to, jak rychle se naučíte hrát."
 sportTags:
   - tenis
   - squash

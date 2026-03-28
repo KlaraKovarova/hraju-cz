@@ -1,6 +1,7 @@
 ---
 title: "Top hodnocená sportoviště v Česku — březen 2026"
 date: "2026-03-21"
+author: "Klára Kovářová"
 category: "komunita"
 excerpt: "Přehled nejlépe hodnocených sportovišť v Praze, Brně a Ostravě. Podívejte se, kam chodí sportovci nejraději — a kde se vyplatí zarezervovat kurt."
 sportTags: ["tenis", "squash", "plavani", "lezeni", "fitness"]

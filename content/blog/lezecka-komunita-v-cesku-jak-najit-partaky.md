@@ -1,6 +1,7 @@
 ---
 title: "Lezecká komunita v Česku — jak najít parťáky a kam se zapojit"
 date: "2026-09-19"
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 sportTags:
   - lezeni

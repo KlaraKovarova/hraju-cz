@@ -1,10 +1,9 @@
 ---
 title: Proč vaše recenze pomáhá ostatním sportovcům
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: komunita
-excerpt: >-
-  97 % lidí čte recenze, než si vybere sportoviště. Každý váš názor pomáhá
-  tisícům dalších sportovců. Přečtěte si, proč je vaše zkušenost tak cenná.
+excerpt: "97 % lidí čte recenze, než si vybere sportoviště. Každý váš názor pomáhá tisícům dalších sportovců. Přečtěte si, proč je vaše zkušenost tak cenná."
 sportTags:
   - tenis
   - squash
@@ -82,4 +81,13 @@ Každý, kdo pravidelně sportuje, je expert na místa, kde hraje. Nepotřebujet
 - [Jak si vybrat sportoviště — proč číst recenze](/blog/jak-si-vybrat-sportoviste-recenze)
 - [Check-iny na hraju.cz — budujte si mapu zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
 - [Odznaky — jak je sbírat a co znamenají](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

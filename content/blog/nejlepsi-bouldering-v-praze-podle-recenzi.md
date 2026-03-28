@@ -1,6 +1,7 @@
 ---
 title: "Nejlepší bouldering v Praze podle recenzí na hraju.cz"
 date: '2026-03-28'
+author: "Klára Kovářová"
 category: komunita
 excerpt: "Kam na bouldering v Praze? Sestavili jsme žebříček pražských boulderovek na základě recenzí a hodnocení od lezecké komunity hraju.cz."
 sportTags:
@@ -134,6 +135,16 @@ Navštivte **3 různé stěny za měsíc** a získejte odznak 🧗 **Lezec** na 
 - [Indoor vs outdoor lezení — srovnání](/blog/indoor-vs-outdoor-lezeni-srovnani)
 - [Bezpečnost při lezení](/blog/bezpecnost-pri-lezeni-pruvodce)
 - [Odznaky na hraju.cz — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 
 ## Související články
 

@@ -1,11 +1,9 @@
 ---
 title: 'Kde sportovat v Opavě: Kompletní průvodce sportovišti a kluby'
 date: '2026-03-10'
+author: "Klára Kovářová"
 category: pruvodce-mesta
-excerpt: >-
-  Opava — basketbalové hlavní město Česka. BK Opava s 5 tituly a FIBA Champions
-  League, SFC Opava (od 1907), olympijští atleti, NHL-standard zimák za 370M Kč
-  a 910 km cyklotras.
+excerpt: "Opava — basketbalové hlavní město Česka. BK Opava s 5 tituly a FIBA Champions League, SFC Opava (od 1907), olympijští atleti, NHL-standard zimák za 370M Kč a 910 km cyklotras."
 sportTags:
   - basketbal
   - fotbal
@@ -268,3 +266,12 @@ Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviš
 - [Ostrava — kompletní průvodce](/blog/kde-sportovat-v-ostrave-pruvodce)
 - [Plzeň — kompletní průvodce](/blog/kde-sportovat-v-plzni-pruvodce)
 - [Olomouc — kompletní průvodce](/blog/kde-sportovat-v-olomouci-pruvodce)
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

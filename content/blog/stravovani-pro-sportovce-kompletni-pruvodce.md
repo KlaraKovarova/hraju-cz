@@ -1,10 +1,9 @@
 ---
 title: 'Stravování pro sportovce: Co jíst před, během a po sportu'
 date: '2026-03-21'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Praktický průvodce sportovní výživou — co jíst před tréninkem, během výkonu a
-  po sportu. Hydratace, makroživiny, timing a nejčastější chyby.
+excerpt: "Praktický průvodce sportovní výživou — co jíst před tréninkem, během výkonu a po sportu. Hydratace, makroživiny, timing a nejčastější chyby."
 sportTags:
   - fitness
 image: /images/blog/stravovani-pro-sportovce-kompletni-pruvodce.jpg

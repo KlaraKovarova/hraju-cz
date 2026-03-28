@@ -1,6 +1,7 @@
 ---
 title: "Ferraty pro páry: 5 romantických výletů s adrenalinem"
 date: '2026-05-07'
+author: "Klára Kovářová"
 category: tipy
 excerpt: "Ferraty nejsou jen pro parťáky z lezeckého oddílu. Vybrali jsme 5 ferrat, které jsou ideální pro páry — společný zážitek, krásné výhledy a adrenalin v jednom."
 sportTags:
@@ -97,6 +98,16 @@ Pokud nemáte vlastní, většina ferrat v okolí nabízí půjčovny nebo se po
 Byli jste na ferratě spolu? [Napište recenzi](/sport/ferraty) a inspirujte ostatní páry. Nejlepší recenze jsou ty, které popisují zážitek — ne jen obtížnost. Jak jste se cítili? Co vás překvapilo? Doporučili byste to dalším párům?
 
 ---
+
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 
 ## Související články
 

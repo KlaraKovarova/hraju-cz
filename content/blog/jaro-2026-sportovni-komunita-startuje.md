@@ -1,11 +1,9 @@
 ---
 title: "Jaro 2026: sportovní komunita hraju.cz startuje — co je nového a proč se zapojit"
 date: '2026-03-25'
+author: "Klára Kovářová"
 category: komunita
-excerpt: >-
-  Jaro 2026 přináší nové funkce na hraju.cz — check-iny, odznaky, žebříček
-  recenzentů, sportovní akce a fotky. Přečtěte si, co je nového a jak se
-  zapojit do české sportovní komunity.
+excerpt: "Jaro 2026 přináší nové funkce na hraju.cz — check-iny, odznaky, žebříček recenzentů, sportovní akce a fotky. Přečtěte si, co je nového a jak se zapojit do české sportovní komunity."
 sportTags:
   - ferraty
   - lezeni

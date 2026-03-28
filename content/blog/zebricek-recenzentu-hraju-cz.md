@@ -1,6 +1,7 @@
 ---
 title: "Žebříček recenzentů — jak se stát nejaktivnějším členem komunity"
 date: '2026-03-24'
+author: "Klára Kovářová"
 category: komunita
 excerpt: "Na hraju.cz máme žebříček nejaktivnějších recenzentů. Přečtěte si, jak funguje, co se počítá a jak se dostat na vrchol."
 sportTags:

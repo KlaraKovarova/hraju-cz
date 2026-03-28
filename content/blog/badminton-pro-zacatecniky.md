@@ -1,6 +1,7 @@
 ---
 title: "Badminton pro začátečníky — jak začít a kde hrát"
 date: "2026-04-02"
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 excerpt: "Chcete začít s badmintonem? Kompletní průvodce vybavením, technikou, pravidly a kde v Česku najdete badmintonové haly. Plus tipy od zkušených hráčů."
 sportTags: ["badminton"]
@@ -149,3 +150,12 @@ Máte tip na skvělou badmintonovou halu nebo zkušenost z první lekce? [Napiš
 - [Tenis pro začátečníky — kompletní průvodce](/blog/tenis-pro-zacatecniky-kompletni-pruvodce)
 - [Beach volejbal v Česku](/blog/beach-volejbal-v-cesku)
 - [Jak vybrat sportovní centrum](/blog/jak-vybrat-sportovni-centrum)
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

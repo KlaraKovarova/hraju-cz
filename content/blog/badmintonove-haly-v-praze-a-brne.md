@@ -1,10 +1,9 @@
 ---
 title: Nejlepší badmintonové haly v Praze a Brně
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: pruvodce-mesta
-excerpt: >-
-  Přehled badmintonových hal v Praze a Brně — adresy, ceny pronájmu kurtu, počty
-  hřišť a zázemí. Kde si zahrát badminton ve dvou největších českých městech.
+excerpt: "Přehled badmintonových hal v Praze a Brně — adresy, ceny pronájmu kurtu, počty hřišť a zázemí. Kde si zahrát badminton ve dvou největších českých městech."
 sportTags:
   - badminton
 image: /images/blog/badmintonove-haly-v-praze-a-brne.jpg

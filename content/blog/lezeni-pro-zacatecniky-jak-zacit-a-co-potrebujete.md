@@ -1,11 +1,9 @@
 ---
 title: 'Lezení pro začátečníky — jak začít a co potřebujete'
 date: '2026-04-03'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Chcete začít lézt, ale nevíte kde a jak? Kompletní průvodce pro úplné
-  začátečníky — jaký typ lezení vybrat, co koupit, jak postupovat a kde najít
-  lezecké partnery.
+excerpt: "Chcete začít lézt, ale nevíte kde a jak? Kompletní průvodce pro úplné začátečníky — jaký typ lezení vybrat, co koupit, jak postupovat a kde najít lezecké partnery."
 sportTags:
   - lezeni
 image: /images/blog/lezeni-pro-zacatecniky-jak-zacit-a-co-potrebujete.jpg
@@ -175,6 +173,16 @@ Kompletní přehled stěn v celé ČR najdete v [sekci lezení na hraju.cz](/spo
 Jste připraveni? Najděte si [lezecké centrum ve svém městě](/sport/lezeni), obujte lezečky a udělejte první tah. Zbytek přijde sám.
 
 ---
+
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 
 ## Související články
 

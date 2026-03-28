@@ -1,6 +1,7 @@
 ---
 title: "Squash pro začátečníky — co potřebujete vědět"
 date: "2026-04-05"
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 excerpt: "Začínáte se squashem? Přečtěte si, co budete potřebovat, kolik to stojí, základní techniku a kde najít nejbližší squashový kurt v Česku."
 sportTags: ["squash"]
@@ -129,3 +130,12 @@ Máte tip na skvělý squashový kurt nebo zkušenost z první lekce? [Napište 
 - [Tenis pro začátečníky — kompletní průvodce](/blog/tenis-pro-zacatecniky-kompletni-pruvodce)
 - [Beach volejbal v Česku](/blog/beach-volejbal-v-cesku)
 - [Nejlepší sporty pro začátečníky nad 30](/blog/nejlepsi-sporty-pro-zacatecniky-nad-30)
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

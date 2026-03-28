@@ -1,6 +1,7 @@
 ---
 title: "Ferraty otevírací sezóna 2026: Které trasy jsou v dubnu připravené"
 date: "2026-04-01"
+author: "Klára Kovářová"
 category: pruvodce-sporty
 excerpt: "Duben 2026 znamená oficiální start ferratové sezóny v Česku. Které ferraty už mají zkontrolované jištění, kde se ještě čeká na revizi a jak ověřit aktuální stav před výjezdem."
 sportTags:

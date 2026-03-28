@@ -1,10 +1,9 @@
 ---
 title: "Lezecké stěny a bouldery v Brně — kompletní přehled s cenami 2026"
 date: '2026-03-25'
+author: "Klára Kovářová"
 category: pruvodce-mesta
-excerpt: >-
-  5 lezeckých center v Brně, přes 4 000 m² stěn — od Hangaru by Adam Ondra po
-  nejlevnější Klajdu. Porovnání cen, vybavení a otevírací doby pro rok 2026.
+excerpt: "5 lezeckých center v Brně, přes 4 000 m² stěn — od Hangaru by Adam Ondra po nejlevnější Klajdu. Porovnání cen, vybavení a otevírací doby pro rok 2026."
 sportTags:
   - lezeni
   - ferraty
@@ -133,3 +132,12 @@ Přečtěte si [průvodce venkovním lezením na jaře](/blog/venkovni-lezeni-du
 - [Jak začít s boulderingem](/blog/jak-zacit-s-boulderingem)
 - [Kde sportovat v Brně — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
 - [Ferraty v Česku — kompletní průvodce](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

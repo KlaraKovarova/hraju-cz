@@ -1,6 +1,7 @@
 ---
 title: "Ferratová výzva: Navštivte 5 ferrat za jaro 2026"
 date: '2026-03-28'
+author: "Klára Kovářová"
 category: komunita
 excerpt: "Jarní sezóna ferrat začíná v dubnu. Zvládnete navštívit 5 českých ferrat do konce května? Připravili jsme itinerář, tipy i odměny pro ty, kteří výzvu přijmou."
 sportTags:
@@ -141,6 +142,16 @@ Po třetím check-inu získáte odznak. Po pátém budete mít přehled, který 
 - [Ferrata vs lezecká stěna — srovnání](/blog/ferrata-vs-lezecka-stena-srovnani)
 
 ---
+
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 
 ## Související články
 

@@ -238,6 +238,16 @@ Jaká je vaše oblíbená ferrata pro rodiny? [Sdílejte recenzi](/sport/ferraty
 - [Ferraty pro rodiny s dětmi — kompletní průvodce](/blog/ferraty-pro-rodiny-s-detmi-pruvodce)
 - [Via ferraty v Česku 2026 — kompletní průvodce](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
 
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
 ## Související články
 
 - [Ferraty a děti: kompletní bezpečnostní pravidla pro rodinné výlety](/blog/ferraty-s-detmi-bezpecnostni-pravidla)

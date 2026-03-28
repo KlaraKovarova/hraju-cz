@@ -1,6 +1,7 @@
 ---
 title: "Ferraty s dětmi na podzim — kam vyrazit v září a říjnu"
 date: "2026-09-16"
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 sportTags:
   - ferraty

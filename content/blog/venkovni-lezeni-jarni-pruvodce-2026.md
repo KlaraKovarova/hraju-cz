@@ -1,6 +1,7 @@
 ---
 title: "Venkovní lezení v Česku: Startujeme jarní sezónu 2026"
 date: "2026-04-04"
+author: "Klára Kovářová"
 category: pruvodce-sporty
 excerpt: "Duben je tady a s ním venkovní lezecká sezóna. Které skalní oblasti jsou v dubnu suchéa přístupné, kde platí omezení kvůli hnízdění a jak naplánovat první jarní výjezd."
 sportTags:

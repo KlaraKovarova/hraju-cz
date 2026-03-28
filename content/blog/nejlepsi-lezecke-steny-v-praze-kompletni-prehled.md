@@ -1,11 +1,9 @@
 ---
 title: 'Nejlepší lezecké stěny v Praze — kompletní přehled 2026'
 date: '2026-04-01'
+author: "Klára Kovářová"
 category: pruvodce-mesta
-excerpt: >-
-  Praha má přes 19 lezeckých center — od obřích boulderovek po 20metrové lanové
-  stěny. Kompletní přehled pražských stěn s cenami, rozměry a tipy od lezecké
-  komunity.
+excerpt: "Praha má přes 19 lezeckých center — od obřích boulderovek po 20metrové lanové stěny. Kompletní přehled pražských stěn s cenami, rozměry a tipy od lezecké komunity."
 sportTags:
   - lezeni
 image: /images/blog/nejlepsi-lezecke-steny-v-praze-kompletni-prehled.jpg
@@ -209,6 +207,16 @@ Většina center nabízí zvýhodněné permanentky: měsíční (1 000–1 800 
 **Byli jste na některé pražské stěně?** Napište [recenzi](/sport/lezeni) a pomozte ostatním lezcom vybrat — vaše zkušenost je nejcennější průvodce.
 
 ---
+
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 
 ## Související články
 

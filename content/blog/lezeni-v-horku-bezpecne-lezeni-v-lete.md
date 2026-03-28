@@ -1,6 +1,7 @@
 ---
 title: "Lezení v horku: jak bezpečně lézt v letních vedrech"
 date: "2026-07-05"
+author: "Klára Kovářová"
 category: "tipy"
 excerpt: "35 °C a chcete lézt? Průvodce bezpečným lezením v horku — jak přizpůsobit trénink, kdy lézt, jak se chladit a kdy je lepší zůstat v hale."
 sportTags:

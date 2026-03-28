@@ -1,6 +1,7 @@
 ---
 title: "Kam za sportem v dubnu 2026: Sezóna startuje"
 date: '2026-04-01'
+author: "Klára Kovářová"
 category: komunita
 excerpt: "Duben otevírá venkovní sezónu. Ferraty schnou, lezecké stěny nabízí nové cesty a po celém Česku se rozjíždějí sportovní akce. Přehled toho nejlepšího na duben 2026."
 sportTags:
@@ -105,3 +106,12 @@ Hledáte konkrétní sportovní události v okolí? Přehled akcí — od závod
 | **Fitness** | Jarní akce pro nové členy | [Fitness →](/sport/fitness) |
 
 Ať už vyrazíte na ferratu, na stěnu nebo do bazénu — [zaznamenejte návštěvu](/komunita) a buďte součástí sportovní komunity, která si radí z vlastní zkušenosti.
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

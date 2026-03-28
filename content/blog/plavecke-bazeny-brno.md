@@ -1,6 +1,7 @@
 ---
 title: "Nejlepší plavecké bazény v Brně"
 date: "2026-03-10"
+author: "Klára Kovářová"
 category: "pruvodce-mesta"
 excerpt: "Přehled plaveckých bazénů a aquaparků v Brně. Kde zaplavat, kolik to stojí a na co se zaměřit při výběru."
 sportTags: ["plavani"]

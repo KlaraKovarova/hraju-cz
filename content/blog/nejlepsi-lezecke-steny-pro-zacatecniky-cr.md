@@ -1,6 +1,7 @@
 ---
 title: "Nejlepší lezecké stěny pro začátečníky v ČR"
 date: "2026-08-13"
+author: "Klára Kovářová"
 category: "Průvodce"
 sportTags: ["lezeni"]
 image: "/images/blog/nejlepsi-lezecke-steny-pro-zacatecniky-cr.jpg"

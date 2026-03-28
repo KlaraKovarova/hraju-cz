@@ -1,6 +1,7 @@
 ---
 title: "Jak přidat sportovní akci na hraju.cz"
 date: '2026-03-24'
+author: "Klára Kovářová"
 category: komunita
 excerpt: "Na hraju.cz můžete přidat vlastní sportovní akci — turnaj, společný trénink nebo výlet na ferratu. Přečtěte si, jak na to a jak přilákat účastníky."
 sportTags:

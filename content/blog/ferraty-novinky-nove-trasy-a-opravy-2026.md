@@ -1,6 +1,7 @@
 ---
 title: "Ferraty novinky 2026: Nové trasy, rozšíření a opravy"
 date: "2026-04-15"
+author: "Klára Kovářová"
 category: komunita
 excerpt: "Co je nového ve světě českých ferrat? Přehled nových tras, rozšíření stávajících areálů a plánovaných oprav pro sezónu 2026."
 sportTags:
@@ -112,6 +113,16 @@ Kompletní přehled všech ferrat v Česku najdete na [hraju.cz/sport/ferraty](/
 - [Ferratové vybavení — průvodce cenami 2026](/blog/ferratove-vybaveni-pruvodce-ceny-2026)
 
 ---
+
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 
 ## Související články
 

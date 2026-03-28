@@ -1,10 +1,9 @@
 ---
 title: 'Rozcvičení a protažení: Co dělat před a po sportu'
 date: '2026-03-18'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Dynamické rozcvičení před sportem, statické protažení po sportu — konkrétní
-  cviky pro 8 nejpopulárnějších sportů. Kolik minut stačí a co nikdy nedělat.
+excerpt: "Dynamické rozcvičení před sportem, statické protažení po sportu — konkrétní cviky pro 8 nejpopulárnějších sportů. Kolik minut stačí a co nikdy nedělat."
 sportTags:
   - fitness
 image: /images/blog/rozcviceni-a-protazeni-pruvodce.jpg

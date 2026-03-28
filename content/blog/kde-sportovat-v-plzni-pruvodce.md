@@ -1,10 +1,9 @@
 ---
 title: 'Kde sportovat v Plzni: Kompletní průvodce sportovišti 2026'
 date: '2026-03-11'
+author: "Klára Kovářová"
 category: pruvodce-mesta
-excerpt: >-
-  Plzeň má přes 500 sportovišť — od nejstaršího tenisového klubu v Česku (1893)
-  po bezplatný Škoda Sport Park. Přehled s ověřenými cenami 2026.
+excerpt: "Plzeň má přes 500 sportovišť — od nejstaršího tenisového klubu v Česku (1893) po bezplatný Škoda Sport Park. Přehled s ověřenými cenami 2026."
 sportTags:
   - fitness
   - plavani
@@ -342,3 +341,12 @@ Pomozte ostatním sportovcům vybrat to nejlepší — [napište recenzi](/prihl
 - [Kde sportovat v Olomouci — kompletní průvodce](/blog/kde-sportovat-v-olomouci-pruvodce)
 
 Všechna sportoviště v Plzni najdete na [hraju.cz](/sport).
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

@@ -1,10 +1,9 @@
 ---
 title: Jak napsat užitečnou recenzi sportoviště
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: komunita
-excerpt: >-
-  Ne každá recenze pomůže. Ukážeme vám, co přesně napsat, aby váš názor pomohl
-  ostatním sportovcům vybrat si to pravé místo.
+excerpt: "Ne každá recenze pomůže. Ukážeme vám, co přesně napsat, aby váš názor pomohl ostatním sportovcům vybrat si to pravé místo."
 sportTags:
   - tenis
   - squash
@@ -101,3 +100,12 @@ Na hraju.cz najdete tisíce sportovišť po celé republice. Vyberte to, které 
 - [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 - [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

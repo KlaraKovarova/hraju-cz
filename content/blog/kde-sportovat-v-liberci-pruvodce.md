@@ -1,10 +1,9 @@
 ---
 title: Kde sportovat v Liberci — kompletní průvodce 2026
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: pruvodce-mesta
-excerpt: >-
-  Přehled 20+ sportovišť v Liberci — 6 tenisových areálů, 5 posiloven (vč. NOVÉ
-  Gym Arena 2026), aquapark Babylon, Boulder Point 1000 m², badminton. Ověřené ceny a adresy.
+excerpt: "Přehled 20+ sportovišť v Liberci — 6 tenisových areálů, 5 posiloven (vč. NOVÉ Gym Arena 2026), aquapark Babylon, Boulder Point 1000 m², badminton. Ověřené ceny a adresy."
 sportTags:
   - tenis
   - fitness
@@ -262,3 +261,12 @@ Kompletní přehled sportovišť v Liberci najdete na [hraju.cz](https://hraju.c
 - [Ostrava — kompletní průvodce](/blog/kde-sportovat-v-ostrave-pruvodce)
 - [Plzeň — kompletní průvodce](/blog/kde-sportovat-v-plzni-pruvodce)
 - [Olomouc — kompletní průvodce](/blog/kde-sportovat-v-olomouci-pruvodce)
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

@@ -1,6 +1,7 @@
 ---
 title: "Jak najít sportovního parťáka — průvodce pro sólo sportovce"
 date: "2026-03-21"
+author: "Klára Kovářová"
 category: "komunita"
 excerpt: "Chcete hrát tenis, squash nebo badminton, ale nemáte s kým? Praktický průvodce, jak najít spoluhráče ve vašem městě — online i offline."
 sportTags: ["tenis", "squash", "badminton", "volejbal", "lezeni"]
@@ -125,4 +126,13 @@ A nezapomeňte: vaše zkušenosti se sportovišti pomohou ostatním. Když víte
 - [7 sportů za 7 dní — intenzivní výzva](/blog/7-sportu-za-7-dni-vyzva)
 - [Jak přidat sportovní akci — pozvěte komunitu](/blog/jak-pridat-sportovni-akci-na-hraju-cz)
 - [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

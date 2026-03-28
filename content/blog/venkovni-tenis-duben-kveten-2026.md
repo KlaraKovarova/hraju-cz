@@ -1,6 +1,7 @@
 ---
 title: "Venkovní tenis v dubnu a květnu 2026 — kdy otevírají kurty a kde hrát"
 date: '2026-03-25'
+author: "Klára Kovářová"
 category: pruvodce
 excerpt: "Antukové kurty se po zimě probouzejí v dubnu. Zjistěte, kdy otevírají venkovní tenisové areály, jaké jsou jarní ceny a kde najít volné kurty."
 sportTags:

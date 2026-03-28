@@ -1,10 +1,9 @@
 ---
 title: 'Kde sportovat v Mladé Boleslavi: Kompletní průvodce sportovišti 2026'
 date: '2026-03-10'
+author: "Klára Kovářová"
 category: pruvodce-mesta
-excerpt: >-
-  Přehled sportovišť v Mladé Boleslavi — tenis, 8 posiloven, aquapark Štěpánka,
-  BK Mladá Boleslav (Extraliga), golf s nejdelší jamkou v ČR.
+excerpt: "Přehled sportovišť v Mladé Boleslavi — tenis, 8 posiloven, aquapark Štěpánka, BK Mladá Boleslav (Extraliga), golf s nejdelší jamkou v ČR."
 sportTags:
   - tenis
   - fitness
@@ -245,3 +244,12 @@ Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviš
 - [Hradec Králové — kompletní průvodce](/blog/kde-sportovat-v-hradci-kralove)
 - [Brno — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
 - [Pardubice — kompletní průvodce](/blog/kde-sportovat-v-pardubicich-pruvodce)
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

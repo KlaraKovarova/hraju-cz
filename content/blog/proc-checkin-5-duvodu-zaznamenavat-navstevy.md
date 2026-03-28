@@ -1,6 +1,7 @@
 ---
 title: "Proč check-in? 5 důvodů, proč zaznamenávat návštěvy sportovišť"
 date: '2026-04-11'
+author: "Klára Kovářová"
 category: komunita
 excerpt: "Check-in na hraju.cz není jen fajfka na mapě. Je to sportovní deník, cesta k odznakům, pomoc ostatním a důkaz, že jste tam opravdu byli. Tady je 5 důvodů, proč začít."
 sportTags:
@@ -92,3 +93,12 @@ Vyberte si sportoviště, které jste naposledy navštívili, a zaznamenejte ná
 - [Fitness centra →](/sport/fitness) — posilovny po celém Česku
 
 Každý check-in pomáhá budovat sportovní komunitu, která si navzájem radí z vlastní zkušenosti. A to je hraju.cz.
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

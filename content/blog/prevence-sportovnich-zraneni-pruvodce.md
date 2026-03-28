@@ -1,11 +1,9 @@
 ---
 title: 'Prevence sportovních zranění: Jak sportovat bezpečně a bez bolesti'
 date: '2026-03-17'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Kompletní průvodce prevencí sportovních zranění — nejčastější zranění podle
-  sportů, jak správně rozcvičit, regenerace, výživa pro klouby a kdy jít k
-  lékaři.
+excerpt: "Kompletní průvodce prevencí sportovních zranění — nejčastější zranění podle sportů, jak správně rozcvičit, regenerace, výživa pro klouby a kdy jít k lékaři."
 sportTags:
   - fitness
 image: /images/blog/prevence-sportovnich-zraneni-pruvodce.jpg

@@ -1,10 +1,9 @@
 ---
 title: 'Sporty pro páry — 7 aktivit, které můžete dělat spolu'
 date: '2026-03-20'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Hledáte sportovní aktivitu pro dva? Přehled 7 sportů, které jsou ideální pro
-  páry — od tenisu přes bouldering až po via ferratu. S cenami a tipy, kde začít.
+excerpt: "Hledáte sportovní aktivitu pro dva? Přehled 7 sportů, které jsou ideální pro páry — od tenisu přes bouldering až po via ferratu. S cenami a tipy, kde začít."
 sportTags:
   - tenis
   - squash

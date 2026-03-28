@@ -1,6 +1,7 @@
 ---
 title: "Top lezecké kempy a kurzy léto 2026"
 date: "2026-07-08"
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 excerpt: "Přehled nejlepších lezeckých kempů a kurzů v Česku na léto 2026. Pro začátečníky, rodiny i pokročilé — víkendové workshopy, týdenní kempy a specializované kurzy."
 sportTags:

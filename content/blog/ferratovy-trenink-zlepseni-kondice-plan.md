@@ -1,6 +1,7 @@
 ---
 title: "Ferratový trénink — jak zlepšit kondici na těžší trasy"
 date: "2026-09-09"
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 sportTags:
   - ferraty

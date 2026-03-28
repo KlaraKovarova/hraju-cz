@@ -1,6 +1,7 @@
 ---
 title: "Ferraty na podzim — 7 nejlepších tras pro září 2026"
 date: "2026-09-02"
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 sportTags:
   - ferraty

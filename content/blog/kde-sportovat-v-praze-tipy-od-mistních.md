@@ -1,6 +1,7 @@
 ---
 title: "Kde sportovat v Praze — tipy od místních sportovců"
 date: '2026-03-11'
+author: "Klára Kovářová"
 category: "komunita"
 excerpt: "Zapomeňte na turistické průvodce. Přinášíme tipy na sportoviště v Praze přímo od lidí, kteří tam pravidelně sportují."
 sportTags: ["tenis", "squash", "fitness", "plavani", "lezeni", "behani", "cyklistika"]
@@ -109,3 +110,11 @@ Kompletní průvodce cyklotrasami v Praze najdete v [průvodci cyklistikou v Pra
 - [Olomouc — kompletní průvodce](/blog/kde-sportovat-v-olomouci-pruvodce)
 - [Liberec — kompletní průvodce](/blog/kde-sportovat-v-liberci-pruvodce)
 
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

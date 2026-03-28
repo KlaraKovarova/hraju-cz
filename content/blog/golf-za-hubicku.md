@@ -1,10 +1,9 @@
 ---
 title: 'Golf za hubičku: Dostupné golfové kurzy a driving range v Česku'
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: vybaveni
-excerpt: >-
-  Golf nemusí být drahý sport. Přehled dostupných golfových kurzů, driving range
-  a tipů, jak hrát golf levně — od prvního odpalu po zvýhodněné green fee.
+excerpt: "Golf nemusí být drahý sport. Přehled dostupných golfových kurzů, driving range a tipů, jak hrát golf levně — od prvního odpalu po zvýhodněné green fee."
 sportTags:
   - golf
 image: /images/blog/golf-za-hubicku.jpg

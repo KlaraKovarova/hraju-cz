@@ -1,6 +1,7 @@
 ---
 title: "Fotky k recenzím a check-inům — jak je přidat a proč to stojí za to"
 date: '2026-03-24'
+author: "Klára Kovářová"
 category: komunita
 excerpt: "Recenze s fotkami jsou mnohem užitečnější než text samotný. Přečtěte si, jak přidat fotky k recenzím a check-inům na hraju.cz."
 sportTags:

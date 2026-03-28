@@ -1,6 +1,7 @@
 ---
 title: "Ferraty pro skupiny: jak zorganizovat firemní teambuilding na ferratách"
 date: "2026-07-01"
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 excerpt: "Via ferrata je skvělý teambuilding — adrenalin, spolupráce, společný zážitek. Průvodce organizací firemního výletu na ferratu: výběr trasy, vybavení, bezpečnost a logistika pro skupiny 5–20 lidí."
 sportTags:

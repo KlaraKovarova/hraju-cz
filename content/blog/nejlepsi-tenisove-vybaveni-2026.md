@@ -1,10 +1,9 @@
 ---
 title: Nejlepší tenisové vybavení pro rok 2026 — co si pořídit
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: vybaveni
-excerpt: >-
-  Přehled nejlepších tenisových raket, bot a doplňků pro sezónu 2026. Poradíme,
-  co vybrat pro začátečníky i pokročilé hráče.
+excerpt: "Přehled nejlepších tenisových raket, bot a doplňků pro sezónu 2026. Poradíme, co vybrat pro začátečníky i pokročilé hráče."
 sportTags:
   - tenis
 image: /images/blog/nejlepsi-tenisove-vybaveni-2026.jpg

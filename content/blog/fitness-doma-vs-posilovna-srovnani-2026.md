@@ -1,10 +1,9 @@
 ---
 title: "Fitness doma vs. posilovna — co se vyplatí v roce 2026?"
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Cvičit doma nebo v posilovně? Porovnání nákladů, vybavení a výsledků.
-  Posilovna od 399 Kč/měsíc vs. domácí gym od 5 000 Kč jednorázově.
+excerpt: "Cvičit doma nebo v posilovně? Porovnání nákladů, vybavení a výsledků. Posilovna od 399 Kč/měsíc vs. domácí gym od 5 000 Kč jednorázově."
 sportTags:
   - fitness
 image: /images/blog/posilovna-pro-zacatecniky-kompletni-pruvodce.jpg

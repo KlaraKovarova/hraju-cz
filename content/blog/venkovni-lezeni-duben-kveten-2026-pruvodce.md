@@ -1,6 +1,7 @@
 ---
 title: "Venkovní lezení v dubnu a květnu 2026 — kam vyrazit a co vědět"
 date: '2026-03-25'
+author: "Klára Kovářová"
 category: pruvodce
 excerpt: "Jaro je čas přejít ze stěny na skálu. Zjistěte, které oblasti schnou nejdříve, kde platí zákaz lezení na mokrém pískovci a kam vyrazit jako první."
 sportTags:

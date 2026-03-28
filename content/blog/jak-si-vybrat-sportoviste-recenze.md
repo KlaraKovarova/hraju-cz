@@ -1,6 +1,7 @@
 ---
 title: "Jak si vybrat sportoviště — proč se vyplatí číst recenze"
 date: '2026-03-05'
+author: "Klára Kovářová"
 category: "tipy"
 excerpt: "Recenze ostatních sportovců vám ušetří čas i peníze. Přečtěte si, na co se zaměřit při výběru sportoviště a jak vám zkušenosti komunity pomohou."
 sportTags: ["tenis", "squash", "fitness", "plavani", "badminton"]
@@ -80,3 +81,11 @@ Každé hodnocení, které na hraju.cz zanecháte, pomáhá:
 - [Nejlepší sportoviště podle hodnocení](/blog/nejlepsi-sportoviste-v-cesku-podle-hodnoceni)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

@@ -1,6 +1,7 @@
 ---
 title: "Lezecké soutěže v ČR — kalendář a jak se přihlásit"
 date: "2026-08-02"
+author: "Klára Kovářová"
 category: "Průvodce"
 sportTags: ["lezeni"]
 image: "/images/blog/lezecke-souteze-v-cr-kalendar-prihlaseni.jpg"

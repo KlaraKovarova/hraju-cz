@@ -1,10 +1,9 @@
 ---
 title: Nejlepší sporty na léto 2026 — venku i na vodě
 date: '2026-03-14'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  15 sportů, které si můžete užít od dubna do října — od plážového volejbalu po
-  paddleboarding. S tipy, kde je vyzkoušet a kolik zaplatíte.
+excerpt: "15 sportů, které si můžete užít od dubna do října — od plážového volejbalu po paddleboarding. S tipy, kde je vyzkoušet a kolik zaplatíte."
 sportTags:
   - tenis
   - plavani

@@ -1,6 +1,7 @@
 ---
 title: "Sportovní výživa: Co jíst před tréninkem, během něj a po něm"
 date: "2026-03-22"
+author: "Klára Kovářová"
 category: "tipy"
 excerpt: "Kompletní průvodce sportovní výživou — makronutrienty, timing jídel, hydratace, suplementy. Co skutečně funguje podle vědy a co je marketing. Praktické jídelníčky pro různé sporty."
 sportTags: ["fitness", "behani", "cyklistika", "plavani"]

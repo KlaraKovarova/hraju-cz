@@ -1,6 +1,7 @@
 ---
 title: "Přechod na indoor lezení na podzim — jak nepřijít o formu"
 date: "2026-09-05"
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 sportTags:
   - lezeni

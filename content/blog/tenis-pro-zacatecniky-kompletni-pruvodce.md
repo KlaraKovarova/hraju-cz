@@ -1,11 +1,9 @@
 ---
 title: Tenis pro začátečníky — kompletní průvodce prvním rokem
 date: '2026-03-22'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Od výběru rakety po první turnaj: jak začít s tenisem v Česku, kolik vás to
-  bude stát, základy techniky a 12týdenní tréninkový plán pro dospělé
-  začátečníky.
+excerpt: "Od výběru rakety po první turnaj: jak začít s tenisem v Česku, kolik vás to bude stát, základy techniky a 12týdenní tréninkový plán pro dospělé začátečníky."
 sportTags:
   - tenis
 image: /images/blog/tenis-pro-zacatecniky-kompletni-pruvodce.jpg

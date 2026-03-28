@@ -1,6 +1,7 @@
 ---
 title: "Novinky na ferratách 2026: nové trasy, vylepšení a plány"
 date: "2026-07-10"
+author: "Klára Kovářová"
 category: "novinky"
 excerpt: "Co je nového na českých ferratách v roce 2026? Nové trasy, rozšíření stávajících, vylepšená infrastruktura a plány na druhou polovinu sezóny."
 sportTags:

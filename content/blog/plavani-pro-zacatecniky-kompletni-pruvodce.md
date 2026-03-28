@@ -1,10 +1,9 @@
 ---
 title: 'Plavání pro začátečníky: Jak se naučit plavat a zlepšit techniku'
 date: '2026-03-17'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Kompletní průvodce plaváním — 4 základní plavecké styly, jak se naučit plavat
-  v dospělosti, tréninkový plán, vybavení a přehled bazénů v Česku.
+excerpt: "Kompletní průvodce plaváním — 4 základní plavecké styly, jak se naučit plavat v dospělosti, tréninkový plán, vybavení a přehled bazénů v Česku."
 sportTags:
   - plavani
 image: /images/blog/plavani-pro-zacatecniky-kompletni-pruvodce.jpg

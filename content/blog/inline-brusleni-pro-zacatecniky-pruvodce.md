@@ -1,10 +1,9 @@
 ---
 title: 'Inline bruslení pro začátečníky: Jak začít a kde bruslit v Česku'
 date: '2026-03-04'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Kompletní průvodce inline bruslením — výběr bruslí, základní technika,
-  brzdění, nejlepší cyklostezky pro bruslaře a kolik to stojí.
+excerpt: "Kompletní průvodce inline bruslením — výběr bruslí, základní technika, brzdění, nejlepší cyklostezky pro bruslaře a kolik to stojí."
 sportTags:
   - brusleni
 image: /images/blog/inline-brusleni-pro-zacatecniky-pruvodce.jpg

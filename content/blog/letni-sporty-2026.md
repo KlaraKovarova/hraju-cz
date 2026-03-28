@@ -1,10 +1,9 @@
 ---
 title: Letní sporty 2026 — co zkusit nového letos v létě
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Léto se blíží a s ním příležitost vyzkoušet nové sporty. Přehled
-  nejzajímavějších sportovních aktivit pro léto 2026 v Česku.
+excerpt: "Léto se blíží a s ním příležitost vyzkoušet nové sporty. Přehled nejzajímavějších sportovních aktivit pro léto 2026 v Česku."
 sportTags:
   - tenis
   - volejbal

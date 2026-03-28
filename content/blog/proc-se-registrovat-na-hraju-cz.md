@@ -1,11 +1,9 @@
 ---
 title: "Proč se registrovat na hraju.cz — co všechno získáte zdarma"
 date: '2026-03-25'
+author: "Klára Kovářová"
 category: komunita
-excerpt: >-
-  Registrace na hraju.cz je zdarma a odemyká vám recenze, check-iny, odznaky,
-  oblíbená sportoviště a přístup do české sportovní komunity. Přečtěte si, co
-  všechno jako registrovaný uživatel získáte.
+excerpt: "Registrace na hraju.cz je zdarma a odemyká vám recenze, check-iny, odznaky, oblíbená sportoviště a přístup do české sportovní komunity. Přečtěte si, co všechno jako registrovaný uživatel získáte."
 sportTags:
   - fitness
   - tenis

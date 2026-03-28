@@ -1,11 +1,9 @@
 ---
 title: 'Nohejbal pro začátečníky: Pravidla, technika a kde hrát v Česku'
 date: '2026-03-15'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Kompletní průvodce nohejbalem — českým národním sportem. Pravidla, technika
-  kopu a hlavičky, pozice, vybavení a kde v Česku najít kurt. Sport, který
-  vznikl u nás a hraje ho celý svět.
+excerpt: "Kompletní průvodce nohejbalem — českým národním sportem. Pravidla, technika kopu a hlavičky, pozice, vybavení a kde v Česku najít kurt. Sport, který vznikl u nás a hraje ho celý svět."
 sportTags:
   - nohejbal
 image: /images/blog/nohejbal-pro-zacatecniky-kompletni-pruvodce.jpg

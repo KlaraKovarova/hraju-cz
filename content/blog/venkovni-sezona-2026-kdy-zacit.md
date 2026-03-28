@@ -1,6 +1,7 @@
 ---
 title: "Venkovní sezóna 2026: Kdy a kde začít s outdoorovým sportem"
 date: "2026-03-21"
+author: "Klára Kovářová"
 category: "tipy"
 excerpt: "Jaro klepe na dveře. Kdy se otevírají venkovní kurty, koupaliště a ferraty? Praktický přehled pro plánování vaší sportovní sezóny."
 sportTags: ["tenis", "volejbal", "ferraty", "plavani", "golf"]

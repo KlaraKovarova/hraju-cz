@@ -1,6 +1,7 @@
 ---
 title: "Ferraty v zahraničí dostupné z ČR — Rakousko a Itálie"
 date: "2026-08-08"
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 sportTags:
   - ferraty

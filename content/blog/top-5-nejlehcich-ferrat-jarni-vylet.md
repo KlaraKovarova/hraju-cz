@@ -1,6 +1,7 @@
 ---
 title: "Top 5 nejlehčích ferrat pro první jarní výlet"
 date: "2026-04-07"
+author: "Klára Kovářová"
 category: pruvodce-sporty
 excerpt: "Po zimní pauze nechcete začínat na K4. Vybrali jsme 5 nejlehčích ferrat v Česku, kde se bezpečně rozlezete a užijete si první jarní slunce na skále."
 sportTags:

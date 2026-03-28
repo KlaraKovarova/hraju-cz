@@ -1,6 +1,7 @@
 ---
 title: "Lezení s dětmi v létě — outdoor i indoor tipy"
 date: "2026-08-09"
+author: "Klára Kovářová"
 category: "Průvodce"
 sportTags: ["lezeni"]
 image: "/images/blog/lezeni-s-detmi-v-lete-outdoor-indoor.jpg"

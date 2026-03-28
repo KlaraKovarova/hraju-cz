@@ -1,10 +1,9 @@
 ---
 title: 'Cvičení doma bez vybavení: Kompletní průvodce domácím tréninkem'
 date: '2026-03-02'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Kompletní průvodce cvičením doma — 30+ cviků bez vybavení, 3 tréninkové plány
-  podle úrovně, jak zhubnout i nabrat svaly doma a chyby, kterým se vyhnout.
+excerpt: "Kompletní průvodce cvičením doma — 30+ cviků bez vybavení, 3 tréninkové plány podle úrovně, jak zhubnout i nabrat svaly doma a chyby, kterým se vyhnout."
 sportTags:
   - fitness
 image: /images/blog/cviceni-doma-bez-vybaveni-kompletni-pruvodce.jpg

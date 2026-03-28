@@ -1,6 +1,7 @@
 ---
 title: "Letní akce a události na hraju.cz: Jak najít a přidat sportovní akce"
 date: "2026-04-19"
+author: "Klára Kovářová"
 category: komunita
 excerpt: "Průvodce sportovními akcemi na hraju.cz — jak najít zajímavé akce ve vašem okolí, jak přidat vlastní a co vás čeká v květnu a červnu 2026."
 sportTags:
@@ -116,3 +117,12 @@ Přehled všech akcí: [hraju.cz/akce](/akce)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Kam za sportem v dubnu 2026](/blog/kam-za-sportem-duben-2026-pruvodce)
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

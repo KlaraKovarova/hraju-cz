@@ -1,11 +1,9 @@
 ---
 title: 'Kde sportovat v Teplicích: Kompletní průvodce sportovišti 2026'
 date: '2026-03-12'
+author: "Klára Kovářová"
 category: pruvodce-mesta
-excerpt: >-
-  Přehled sportovišť v Teplicích — termální bazény, 22+ tenisových kurtů, FK
-  Teplice (Chance Liga), 8 badmintonových kurtů, Thermalium s nejstarší léčivou
-  vodou v ČR.
+excerpt: "Přehled sportovišť v Teplicích — termální bazény, 22+ tenisových kurtů, FK Teplice (Chance Liga), 8 badmintonových kurtů, Thermalium s nejstarší léčivou vodou v ČR."
 sportTags:
   - tenis
   - fitness
@@ -312,3 +310,12 @@ Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviš
 - [Chomutov — kompletní průvodce](/blog/kde-sportovat-v-chomutove-pruvodce)
 - [Praha — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)
 - [Liberec — kompletní průvodce](/blog/kde-sportovat-v-liberci-pruvodce)
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

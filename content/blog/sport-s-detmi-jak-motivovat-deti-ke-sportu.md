@@ -1,10 +1,9 @@
 ---
 title: 'Sport s dětmi: Jak motivovat děti ke sportu a jaký sport vybrat'
 date: '2026-03-19'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Průvodce sportem pro děti — kdy začít, jaký sport podle věku, jak motivovat
-  bez tlaku, kolik to stojí a jak poznat dobrého trenéra.
+excerpt: "Průvodce sportem pro děti — kdy začít, jaký sport podle věku, jak motivovat bez tlaku, kolik to stojí a jak poznat dobrého trenéra."
 sportTags:
   - fitness
 image: /images/blog/sport-s-detmi-jak-motivovat-deti-ke-sportu.jpg

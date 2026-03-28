@@ -1,10 +1,9 @@
 ---
 title: 'Jak předejít zranění při sportu: Průvodce prevencí pro rekreační sportovce'
 date: '2026-03-05'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Nejčastější sportovní zranění a jak jim předejít — rozcvičení, správná
-  technika, vhodná obuv a kdy s bolestí přestat.
+excerpt: "Nejčastější sportovní zranění a jak jim předejít — rozcvičení, správná technika, vhodná obuv a kdy s bolestí přestat."
 sportTags:
   - fitness
   - tenis

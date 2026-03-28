@@ -1,6 +1,7 @@
 ---
 title: "Ferratové vybavení: Co potřebujete a kolik to stojí v 2026"
 date: "2026-03-23"
+author: "Klára Kovářová"
 category: vybaveni
 excerpt: "Kompletní přehled vybavení na via ferraty — ferratový set, sedák, helma, rukavice. České a světové značky, ceny 2026, kde koupit a kdy se vyplatí půjčit."
 sportTags: ["ferraty"]

@@ -1,10 +1,9 @@
 ---
 title: 'Jak začít s cyklistikou: Průvodce pro začátečníky 2026'
 date: '2026-03-02'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Kompletní průvodce cyklistikou pro začátečníky — výběr kola, základní údržba,
-  bezpečnost v provozu, tréninkový plán a nejlepší cyklotrasy v Česku.
+excerpt: "Kompletní průvodce cyklistikou pro začátečníky — výběr kola, základní údržba, bezpečnost v provozu, tréninkový plán a nejlepší cyklotrasy v Česku."
 sportTags:
   - cyklistika
 image: /images/blog/cyklistika-pro-zacatecniky-kompletni-pruvodce.jpg

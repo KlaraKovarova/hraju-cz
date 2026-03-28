@@ -1,6 +1,7 @@
 ---
 title: "Tréninkový plán pro lezce — 4 týdny k lepšímu výkonu"
 date: "2026-08-05"
+author: "Klára Kovářová"
 category: "Průvodce"
 sportTags: ["lezeni"]
 image: "/images/blog/treninkovy-plan-pro-lezce-4-tydny.jpg"

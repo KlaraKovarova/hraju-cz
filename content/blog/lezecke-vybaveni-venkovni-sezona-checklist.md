@@ -1,6 +1,7 @@
 ---
 title: "Lezecké vybavení pro venkovní sezónu: Co potřebujete a co ne"
 date: "2026-04-11"
+author: "Klára Kovářová"
 category: vybaveni
 excerpt: "Přecházíte z haly na skálu? Tady je přehled vybavení, které potřebujete pro venkovní lezení — od povinného minima přes nice-to-have po jarní specifika."
 sportTags:

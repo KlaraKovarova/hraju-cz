@@ -1,10 +1,9 @@
 ---
 title: Jak začít s lezením na stěně — kompletní průvodce pro začátečníky
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Chcete zkusit lezení nebo bouldering? Průvodce pro úplné začátečníky — co
-  potřebujete, kolik to stojí a jak vypadá první návštěva lezecké stěny.
+excerpt: "Chcete zkusit lezení nebo bouldering? Průvodce pro úplné začátečníky — co potřebujete, kolik to stojí a jak vypadá první návštěva lezecké stěny."
 sportTags:
   - lezeni
 image: /images/blog/jak-zacit-s-lezenim-na-stene.jpg

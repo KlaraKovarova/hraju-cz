@@ -1,10 +1,9 @@
 ---
 title: 'Indoor vs. outdoor lezení: Klady, zápory a jak přejít ze stěny na skálu'
 date: '2026-03-29'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Srovnání lezení na umělé stěně a ve skalách — co je lepší pro začátečníky,
-  jaké dovednosti se nepřenesou a jak správně přejít ze stěny do přírody.
+excerpt: "Srovnání lezení na umělé stěně a ve skalách — co je lepší pro začátečníky, jaké dovednosti se nepřenesou a jak správně přejít ze stěny do přírody."
 sportTags:
   - lezeni
 image: /images/blog/indoor-vs-outdoor-lezeni-srovnani.jpg

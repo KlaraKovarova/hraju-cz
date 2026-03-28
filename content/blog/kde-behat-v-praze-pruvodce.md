@@ -1,10 +1,9 @@
 ---
 title: 'Kde běhat v Praze: 15 nejlepších tras a parků pro běžce 2026'
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: pruvodce-mesta
-excerpt: >-
-  Od osvětlené Ladronky po divokou Šárku — přehled nejlepších běžeckých tras
-  v Praze s přesnými vzdálenostmi, povrchy a tipy pro každou úroveň.
+excerpt: "Od osvětlené Ladronky po divokou Šárku — přehled nejlepších běžeckých tras v Praze s přesnými vzdálenostmi, povrchy a tipy pro každou úroveň."
 sportTags:
   - behani
 image: /images/blog/kde-behat-v-praze-pruvodce.jpg

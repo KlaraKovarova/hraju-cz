@@ -1,11 +1,9 @@
 ---
 title: 'Týmové sporty pro dospělé: Kde a jak začít hrát v Česku'
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Chcete hrát ve skupině, ale nemáte tým? Přehled týmových sportů pro dospělé
-  začátečníky — fotbal, volejbal, basketbal, florbal, hokej, frisbee a další.
-  Jak najít skupinu a kde se hraje.
+excerpt: "Chcete hrát ve skupině, ale nemáte tým? Přehled týmových sportů pro dospělé začátečníky — fotbal, volejbal, basketbal, florbal, hokej, frisbee a další. Jak najít skupinu a kde se hraje."
 sportTags:
   - fotbal
   - volejbal

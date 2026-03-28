@@ -1,6 +1,7 @@
 ---
 title: "Bouldering venku na podzim — nejlepší lokality a tipy"
 date: "2026-09-12"
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 sportTags:
   - lezeni

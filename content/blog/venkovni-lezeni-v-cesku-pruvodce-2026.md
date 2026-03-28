@@ -1,10 +1,9 @@
 ---
 title: 'Venkovní lezení v Česku 2026: Nejlepší lokality od Adršpachu po Moravský kras'
 date: '2026-03-25'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Adršpach, Labské pískovce, Moravský kras, Český ráj — průvodce 7 nejlepšími
-  oblastmi pro venkovní lezení v České republice. Obtížnosti, přístup a co vzít sebou.
+excerpt: "Adršpach, Labské pískovce, Moravský kras, Český ráj — průvodce 7 nejlepšími oblastmi pro venkovní lezení v České republice. Obtížnosti, přístup a co vzít sebou."
 sportTags:
   - lezeni
 image: /images/blog/venkovni-lezeni-v-cesku-pruvodce-2026.jpg

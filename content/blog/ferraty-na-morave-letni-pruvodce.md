@@ -1,6 +1,7 @@
 ---
 title: "Ferraty na Moravě: průvodce nejlepšími trasami pro letní víkend"
 date: "2026-07-04"
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 excerpt: "Morava nabízí ferraty, které stojí za výlet z celé republiky. Od Jeseníků po Vysočinu — 6 moravských ferrat s konkrétními tipy na přístup, obtížnost a kde se najíst po výstupu."
 sportTags:

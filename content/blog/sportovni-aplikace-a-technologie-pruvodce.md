@@ -1,11 +1,9 @@
 ---
 title: 'Sportovní aplikace a technologie: Jak sledovat svůj pokrok'
 date: '2026-03-19'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Přehled nejlepších sportovních aplikací a technologií pro amatérské sportovce
-  — od sledování tréninků přes GPS hodinky po měření tepové frekvence. Co se
-  vyplatí a co ne.
+excerpt: "Přehled nejlepších sportovních aplikací a technologií pro amatérské sportovce — od sledování tréninků přes GPS hodinky po měření tepové frekvence. Co se vyplatí a co ne."
 sportTags:
   - fitness
 image: /images/blog/sportovni-aplikace-a-technologie-pruvodce.jpg

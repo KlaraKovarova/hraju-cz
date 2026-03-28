@@ -1,11 +1,9 @@
 ---
 title: 'Sport pro seniory: Jak začít bezpečně cvičit po 50, 60 i 70 letech'
 date: '2026-03-19'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Kompletní průvodce sportem pro seniory — jak bezpečně začít, jaké sporty jsou
-  ideální po 50+, jak předejít zraněním a kde v Česku najít skupiny pro starší
-  sportovce.
+excerpt: "Kompletní průvodce sportem pro seniory — jak bezpečně začít, jaké sporty jsou ideální po 50+, jak předejít zraněním a kde v Česku najít skupiny pro starší sportovce."
 sportTags:
   - fitness
 image: /images/blog/sport-pro-seniory-jak-zacit-bezpecne.jpg

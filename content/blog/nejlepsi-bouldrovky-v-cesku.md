@@ -1,10 +1,9 @@
 ---
 title: 'Nejlepší bouldrovky v Česku — přehled po městech 2026'
 date: '2026-04-04'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Kompletní průvodce boulderovkami v České republice — Praha, Brno, Ostrava,
-  Plzeň, Liberec a další města. Srovnání velikostí, cen a atmosféry.
+excerpt: "Kompletní průvodce boulderovkami v České republice — Praha, Brno, Ostrava, Plzeň, Liberec a další města. Srovnání velikostí, cen a atmosféry."
 sportTags:
   - lezeni
 image: /images/blog/nejlepsi-bouldrovky-v-cesku.jpg
@@ -192,3 +191,12 @@ Vysokoškolská stěna — dostupná a bez front.
 ---
 
 **Byli jste v některé z těchto boulderovek?** Napište [recenzi na hraju.cz](/sport/lezeni) — vaše hodnocení pomáhá ostatním lezcom najít tu správnou stěnu.
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

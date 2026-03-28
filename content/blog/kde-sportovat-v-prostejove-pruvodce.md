@@ -1,12 +1,9 @@
 ---
 title: 'Kde sportovat v Prostějově: Tenisová velmoc s volejbalovou dynastií'
 date: '2026-03-12'
+author: "Klára Kovářová"
 category: pruvodce-mesta
-excerpt: >-
-  Prostějov (43 000 obyvatel) je světový tenisový hub — odtud pochází Jakub
-  Menšík (ATP #12), trénovali tu Berdych, Kvitová i Šafářová. VK Prostějov má 12
-  extraligových titulů ve volejbalu. Kompletní průvodce sportem v hanáckém
-  městě.
+excerpt: "Prostějov (43 000 obyvatel) je světový tenisový hub — odtud pochází Jakub Menšík (ATP #12), trénovali tu Berdych, Kvitová i Šafářová. VK Prostějov má 12 extraligových titulů ve volejbalu. Kompletní průvodce sportem v hanáckém městě."
 sportTags:
   - tenis
   - volejbal
@@ -247,3 +244,12 @@ Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviš
 - [Brno — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
 - [Zlín — kompletní průvodce](/blog/kde-sportovat-ve-zline-pruvodce)
 - [Praha — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

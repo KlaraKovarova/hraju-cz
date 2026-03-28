@@ -1,6 +1,7 @@
 ---
 title: "Nová ferrata v Mladé Vožici — kompletní průvodce pro rok 2026"
 date: "2026-03-23"
+author: "Klára Kovářová"
 category: "novinky"
 excerpt: "V Mladé Vožici roste nová via ferrata. Přinášíme kompletní průvodce — obtížnost, přístup, vybavení a co vás na trase čeká."
 sportTags: ["ferraty"]

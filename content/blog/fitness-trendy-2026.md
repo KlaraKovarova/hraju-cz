@@ -3,10 +3,7 @@ title: 'Fitness trendy 2026: Co vás čeká v posilovnách'
 date: '2026-03-23'
 author: Klára Kovářová
 category: novinky
-excerpt: >-
-  Přehled největších fitness trendů roku 2026 v Česku — od hybridních tréninků
-  přes wearables až po nové koncepty posiloven. Co se mění a kam fitness
-  směřuje.
+excerpt: "Přehled největších fitness trendů roku 2026 v Česku — od hybridních tréninků přes wearables až po nové koncepty posiloven. Co se mění a kam fitness směřuje."
 sportTags:
   - fitness
 image: /images/blog/fitness-trendy-2026.jpg

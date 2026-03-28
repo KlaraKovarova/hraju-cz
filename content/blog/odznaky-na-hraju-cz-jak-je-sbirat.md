@@ -1,6 +1,7 @@
 ---
 title: "Odznaky na hraju.cz — jak je sbírat a co znamenají"
 date: '2026-03-24'
+author: "Klára Kovářová"
 category: komunita
 excerpt: "Na hraju.cz můžete sbírat odznaky za recenze, check-iny a aktivitu v komunitě. Přečtěte si, jaké odznaky existují, jak je získat a kde je zobrazit."
 sportTags:

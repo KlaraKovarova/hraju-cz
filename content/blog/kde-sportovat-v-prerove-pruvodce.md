@@ -1,11 +1,9 @@
 ---
 title: 'Kde sportovat v Přerově: Kompletní průvodce sportovišti 2026'
 date: '2026-03-11'
+author: "Klára Kovářová"
 category: pruvodce-mesta
-excerpt: >-
-  Přehled sportovišť v Přerově — 50m bazén, hokejová MEO Aréna (HC ZUBR), 19
-  tenisových kurtů, Cyklostezka Bečva a legendární autokrosová
-  trať s Mamutím skokem.
+excerpt: "Přehled sportovišť v Přerově — 50m bazén, hokejová MEO Aréna (HC ZUBR), 19 tenisových kurtů, Cyklostezka Bečva a legendární autokrosová trať s Mamutím skokem."
 sportTags:
   - plavani
   - fitness
@@ -345,3 +343,12 @@ Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviš
 - [Brno — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
 - [Zlín — kompletní průvodce](/blog/kde-sportovat-ve-zline-pruvodce)
 - [Praha — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

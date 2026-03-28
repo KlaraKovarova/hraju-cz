@@ -1,10 +1,9 @@
 ---
 title: 'Sportovní výzva: 30 dní pohybu — přidejte se ke komunitě'
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: komunita
-excerpt: >-
-  Výzva pro celou komunitu hraju.cz: 30 dní aktivního pohybu. Zkuste nový sport,
-  navštivte nové sportoviště a sdílejte své zkušenosti.
+excerpt: "Výzva pro celou komunitu hraju.cz: 30 dní aktivního pohybu. Zkuste nový sport, navštivte nové sportoviště a sdílejte své zkušenosti."
 sportTags:
   - tenis
   - squash
@@ -120,3 +119,11 @@ Znáte někoho, kdo by se měl hýbat víc? Pošlete mu tenhle článek. Sportov
 - [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

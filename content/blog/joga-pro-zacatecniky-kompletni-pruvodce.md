@@ -1,10 +1,9 @@
 ---
 title: 'Jóga pro začátečníky: Jak začít a jaký styl vybrat'
 date: '2026-03-06'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Kompletní průvodce jógou pro začátečníky — 7 hlavních stylů, 10 základních
-  pozic, co potřebujete na první lekci a jak najít správného lektora v Česku.
+excerpt: "Kompletní průvodce jógou pro začátečníky — 7 hlavních stylů, 10 základních pozic, co potřebujete na první lekci a jak najít správného lektora v Česku."
 sportTags:
   - joga
 image: /images/blog/joga-pro-zacatecniky-kompletni-pruvodce.jpg

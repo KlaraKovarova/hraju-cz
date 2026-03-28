@@ -1,10 +1,9 @@
 ---
 title: 'Fitness pro ženy: Kam chodit a co cvičit v roce 2026'
 date: '2026-03-23'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Průvodce fitness pro ženy — jak si vybrat posilovnu, které cvičení funguje a
-  co očekávat. Přehled ženských fitness center v Praze, Brně a dalších městech.
+excerpt: "Průvodce fitness pro ženy — jak si vybrat posilovnu, které cvičení funguje a co očekávat. Přehled ženských fitness center v Praze, Brně a dalších městech."
 sportTags:
   - fitness
 image: /images/blog/fitness-pro-zeny.jpg

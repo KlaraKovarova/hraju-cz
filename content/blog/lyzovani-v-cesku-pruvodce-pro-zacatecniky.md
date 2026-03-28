@@ -1,10 +1,9 @@
 ---
 title: 'Lyžování v Česku: Průvodce pro začátečníky i pokročilé 2026'
 date: '2026-03-13'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Kompletní průvodce lyžováním v Česku — kde lyžovat, jaké vybavení koupit vs.
-  půjčit, technika pro začátečníky, skipasy a nejlepší české skiareály.
+excerpt: "Kompletní průvodce lyžováním v Česku — kde lyžovat, jaké vybavení koupit vs. půjčit, technika pro začátečníky, skipasy a nejlepší české skiareály."
 sportTags:
   - lyzovani
 image: /images/blog/lyzovani-v-cesku-pruvodce-pro-zacatecniky.jpg

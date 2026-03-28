@@ -1,11 +1,9 @@
 ---
 title: 'Běhání pro začátečníky: Jak začít běhat a vydržet'
 date: '2026-03-01'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Kompletní průvodce běháním — jak začít od nuly, správná technika, tréninkový
-  plán na první 5 km, vybavení, prevence zranění a nejlepší běžecké trasy v
-  Česku.
+excerpt: "Kompletní průvodce běháním — jak začít od nuly, správná technika, tréninkový plán na první 5 km, vybavení, prevence zranění a nejlepší běžecké trasy v Česku."
 sportTags:
   - behani
 image: /images/blog/behani-pro-zacatecniky-kompletni-pruvodce.jpg

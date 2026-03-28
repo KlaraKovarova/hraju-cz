@@ -1,11 +1,9 @@
 ---
 title: Plavání pro dospělé — jak se naučit (nebo zlepšit) v jakémkoli věku
 date: '2026-03-17'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Nikdy není pozdě naučit se plavat. Průvodce pro dospělé začátečníky i samouky:
-  techniky dýchání, kraul krok za krokem, jak překonat strach z vody a kde najít
-  kurzy.
+excerpt: "Nikdy není pozdě naučit se plavat. Průvodce pro dospělé začátečníky i samouky: techniky dýchání, kraul krok za krokem, jak překonat strach z vody a kde najít kurzy."
 sportTags:
   - plavani
 image: /images/blog/plavani-pro-dospele-jak-se-naucit.jpg

@@ -1,10 +1,9 @@
 ---
 title: Via ferraty v Česku — průvodce pro začátečníky
 date: '2099-01-01'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Kompletní průvodce via ferratami v České republice. Kde najdete zajištěné
-  cesty, co potřebujete a jak se připravit na první ferratu.
+excerpt: "Kompletní průvodce via ferratami v České republice. Kde najdete zajištěné cesty, co potřebujete a jak se připravit na první ferratu."
 sportTags:
   - ferraty
 image: /images/blog/via-ferraty-v-cesku.jpg

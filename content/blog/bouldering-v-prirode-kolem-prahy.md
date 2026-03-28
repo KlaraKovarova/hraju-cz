@@ -1,6 +1,7 @@
 ---
 title: "Bouldering v přírodě kolem Prahy: Kam vyrazit na jarní víkend"
 date: "2026-04-12"
+author: "Klára Kovářová"
 category: pruvodce-sporty
 excerpt: "Kde najít venkovní bouldery do hodiny od Prahy? Přehled nejlepších oblastí pro outdoor bouldering — od Českého krasu přes Prokopské údolí po méně známé lokality."
 sportTags:

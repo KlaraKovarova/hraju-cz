@@ -1,10 +1,9 @@
 ---
 title: 'Lezení s dětmi 2026: Nejlepší rodinná lezecká centra v Česku'
 date: '2026-03-28'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Kdy začít s lezením s dětmi, jak vybrat správnou lezecku a 10 nejlepších
-  rodinných lezeckých center v Česku. Tipy pro děti od 4 let.
+excerpt: "Kdy začít s lezením s dětmi, jak vybrat správnou lezecku a 10 nejlepších rodinných lezeckých center v Česku. Tipy pro děti od 4 let."
 sportTags:
   - lezeni
 image: /images/blog/lezeni-s-detmi-rodinne-pruvodce-2026.jpg

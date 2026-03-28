@@ -1,6 +1,7 @@
 ---
 title: "Check-iny na hraju.cz — budujte si mapu svých sportovních zážitků"
 date: '2026-03-24'
+author: "Klára Kovářová"
 category: komunita
 excerpt: "Funkce „Byl/a jsem tady" vám umožní sledovat, kde všude jste sportovali. Přečtěte si, jak check-iny fungují, co vám přinesou a jak s nimi sbírat odznaky."
 sportTags:

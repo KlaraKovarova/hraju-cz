@@ -1,10 +1,9 @@
 ---
 title: 'Sport a duševní zdraví: Jak pravidelný pohyb pomáhá proti stresu a úzkosti'
 date: '2026-03-18'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Vědecky podložené benefity sportu pro duševní zdraví — jak cvičení snižuje
-  stres, zlepšuje spánek a pomáhá proti úzkosti a depresi.
+excerpt: "Vědecky podložené benefity sportu pro duševní zdraví — jak cvičení snižuje stres, zlepšuje spánek a pomáhá proti úzkosti a depresi."
 sportTags:
   - fitness
   - plavani

@@ -1,10 +1,9 @@
 ---
 title: 'Sezónní průvodce lezením 2026: Kdy a kde lézt v každém ročním období'
 date: '2026-03-30'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Kdy je ideální lézt venku a kdy je lépe přejít do haly? Sezónní průvodce
-  pro lezce — jaro, léto, podzim, zima — s doporučenými lokalitami pro každý měsíc.
+excerpt: "Kdy je ideální lézt venku a kdy je lépe přejít do haly? Sezónní průvodce pro lezce — jaro, léto, podzim, zima — s doporučenými lokalitami pro každý měsíc."
 sportTags:
   - lezeni
 image: /images/blog/sezonni-pruvodce-lezenim-2026.jpg

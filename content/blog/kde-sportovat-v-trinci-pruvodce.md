@@ -1,11 +1,9 @@
 ---
 title: 'Kde sportovat v Třinci: Kompletní průvodce sportovišti a kluby'
 date: '2026-03-12'
+author: "Klára Kovářová"
 category: pruvodce-mesta
-excerpt: >-
-  Třinec — město oceli a hokejové dynastie. HC Oceláři s 6 tituly Extraligy (5 v
-  řadě!), Werk Arena, lyžování na Javorovém vrchu, florbalová Extraliga žen a
-  sportovní komplex pro 300 000 návštěvníků ročně.
+excerpt: "Třinec — město oceli a hokejové dynastie. HC Oceláři s 6 tituly Extraligy (5 v řadě!), Werk Arena, lyžování na Javorovém vrchu, florbalová Extraliga žen a sportovní komplex pro 300 000 návštěvníků ročně."
 sportTags:
   - hokej
   - fotbal
@@ -233,3 +231,12 @@ Máte zkušenost s tímto sportem? [Napište recenzi](/prihlaseni) na sportoviš
 - [Havířov — kompletní průvodce](/blog/kde-sportovat-v-havirove-pruvodce)
 - [Brno — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
 - [Praha — tipy od místních](/blog/kde-sportovat-v-praze-tipy-od-mistních)
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)

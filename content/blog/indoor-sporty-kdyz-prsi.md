@@ -1,11 +1,9 @@
 ---
 title: '11 indoor sportů, když venku prší — kam utéct před počasím'
 date: '2026-03-04'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Déšť nemusí znamenat konec sportu. Přehled 11 halových sportů, které můžete
-  dělat kdykoli — bez ohledu na počasí. S cenami, tipy pro začátečníky a kde je
-  najdete.
+excerpt: "Déšť nemusí znamenat konec sportu. Přehled 11 halových sportů, které můžete dělat kdykoli — bez ohledu na počasí. S cenami, tipy pro začátečníky a kde je najdete."
 sportTags:
   - squash
   - badminton

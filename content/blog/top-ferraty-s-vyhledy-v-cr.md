@@ -1,6 +1,7 @@
 ---
 title: "Top 5 ferrat s nejlepšími výhledy v České republice"
 date: '2026-06-04'
+author: "Klára Kovářová"
 category: pruvodce-sporty
 excerpt: "Pět českých ferrat, kde výhled stojí za každý metr výstupu. Panoramatické záběry na řeky, údolí i historická města — a konkrétní tipy, kde se zastavit a fotit."
 sportTags:
@@ -171,6 +172,16 @@ Po 3 check-inech na ferratách získáte odznak Ferratový Průzkumník. [Jak od
 Hledáte méně známé ferraty s výhledy? Zkuste [5 skrytých pokladů](/blog/5-mene-znamych-ferrat-cesko-skryte-poklady). A kompletní přehled všech ferrat najdete v [průvodci ferratami v ČR 2026](/blog/ferraty-v-cesku-kompletni-pruvodce-2026).
 
 ---
+
+
+## Zapojte se do komunity
+
+- [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
+- [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem
+- [Fotky k recenzím a check-inům](/blog/fotky-k-recenzim-a-check-inum-pruvodce)
+- [Odznaky — jak je sbírat](/blog/odznaky-na-hraju-cz-jak-je-sbirat)
+- [Žebříček recenzentů](/blog/zebricek-recenzentu-hraju-cz)
+- [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz)
 
 ## Související články
 

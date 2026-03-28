@@ -1,6 +1,7 @@
 ---
 title: "Ferraty pro pokročilé — nejnáročnější trasy v ČR"
 date: "2026-08-01"
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 sportTags:
   - ferraty

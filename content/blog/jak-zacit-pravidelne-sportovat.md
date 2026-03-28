@@ -1,10 +1,9 @@
 ---
 title: 'Jak začít pravidelně sportovat — praktický návod, který funguje'
 date: '2026-03-06'
+author: "Klára Kovářová"
 category: tipy
-excerpt: >-
-  Chcete sportovat pravidelně, ale nedaří se vám? Realistický průvodce, jak si
-  vybudovat sportovní návyk — bez motivačních frází a nereálných plánů.
+excerpt: "Chcete sportovat pravidelně, ale nedaří se vám? Realistický průvodce, jak si vybudovat sportovní návyk — bez motivačních frází a nereálných plánů."
 sportTags:
   - fitness
   - tenis

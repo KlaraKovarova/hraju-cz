@@ -1,6 +1,7 @@
 ---
 title: "Nejlepší ferraty na jaro 2026: Kam vyrazit jako první"
 date: "2026-03-23"
+author: "Klára Kovářová"
 category: pruvodce-sporty
 excerpt: "Jaro je ideální čas na ferraty. Které české ferraty otevírají nejdříve, jak se připravit po zimní pauze a kam vyrazit v březnu, dubnu a květnu 2026."
 sportTags: ["ferraty"]

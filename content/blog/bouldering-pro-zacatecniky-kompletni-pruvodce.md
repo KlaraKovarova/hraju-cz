@@ -1,11 +1,9 @@
 ---
 title: Bouldering pro začátečníky — kompletní průvodce od první návštěvy po první 6a
 date: '2026-03-02'
+author: "Klára Kovářová"
 category: pruvodce-sporty
-excerpt: >-
-  Vše, co potřebujete vědět o boulderingu: jak funguje hodnocení obtížnosti, jak
-  si vybrat lezečky, technika pro začátečníky a 8týdenní progresní plán od 3 po
-  6a.
+excerpt: "Vše, co potřebujete vědět o boulderingu: jak funguje hodnocení obtížnosti, jak si vybrat lezečky, technika pro začátečníky a 8týdenní progresní plán od 3 po 6a."
 sportTags:
   - lezeni
 image: /images/blog/bouldering-pro-zacatecniky-kompletni-pruvodce.jpg

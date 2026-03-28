@@ -1,6 +1,7 @@
 ---
 title: "Zimní sporty v Česku kromě lyžování: 10 aktivit, které musíte vyzkoušet"
 date: "2026-03-22"
+author: "Klára Kovářová"
 category: "pruvodce-sporty"
 excerpt: "Přehled zimních sportů v ČR mimo sjezdovky — běžky, biatlon, curling, sněžnice, ledolezení, bruslení, skibob, fat bike, zimní plavání a mushing. Kde je provozovat a kolik to stojí."
 sportTags: ["bezky", "brusleni", "hokej", "plavani", "cyklistika"]
