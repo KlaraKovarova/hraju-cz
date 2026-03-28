@@ -162,6 +162,18 @@ Než na stěnu polezete, projděte si problém očima. Kde jsou chyty? Kam posta
 
 Kompletní seznam boulderovek a lezeckých stěn v Česku najdete na [hraju.cz/sport/lezeni](https://hraju.cz/sport/lezeni). Přečtěte si recenze od ostatních lezců — pomohou vám vybrat stěnu s nejlepší atmosférou a routesetterem.
 
+## Vybavení z katalogu
+
+Doporučené boulderingové vybavení v našem katalogu:
+
+- [Scarpa Instinct VS](/vybaveni/scarpa-instinct-vs) — bouldrovky pro pokročilé
+- [OCÚN Striker QC](/vybaveni/ocun-striker-qc) — začátečnické bouldrovky
+- [OCÚN Paddy Dominator](/vybaveni/ocun-paddy-dominator) — crash pad
+- [Moon Liquid Chalk](/vybaveni/moon-liquid-chalk) — tekuté magnézium
+- [Singing Rock Magnesium Ball](/vybaveni/singing-rock-magnesium-ball) — magnéziová koule
+
+[→ Všechno lezecké vybavení](/vybaveni?sport=lezeni)
+
 ## Zapojte se do komunity
 
 - [Sportovní komunita hraju.cz](/blog/sportovni-komunita-hraju-cz) — recenze, odznaky, žebříčky

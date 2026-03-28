@@ -136,6 +136,18 @@ Nejbezpečnější přechod je s někým, kdo venku leze pravidelně. Hledejte:
 - **Horolezecké oddíly ČHS** — často pořádají akce pro nové členy
 - **Komunitní výjezdy** — sledujte sociální sítě lezeckých center
 
+## Vybavení z katalogu
+
+Doporučené lezecké vybavení v našem katalogu:
+
+- [OCÚN Ozone](/vybaveni/ocun-ozone) — pohodlné lezečky pro začátečníky
+- [La Sportiva Solution Comp](/vybaveni/la-sportiva-solution-comp) — závodní lezečky
+- [Petzl Corax](/vybaveni/petzl-corax) — univerzální sedák
+- [Black Diamond Momentum](/vybaveni/black-diamond-momentum) — sedák pro začátečníky
+- [Singing Rock Shuttle](/vybaveni/singing-rock-shuttle) — jistítko
+
+[→ Všechno lezecké vybavení](/vybaveni?sport=lezeni)
+
 ## Zapojte se do komunity
 
 Byli jste poprvé na skále? Zaznamenejte to!

@@ -103,6 +103,18 @@ Kompletní přehled lezeckých center s cenami a kontakty najdete na [hraju.cz](
 
 Lezení na stěně je sport, který vás vtáhne. Kombinuje fyzickou zdatnost s řešením problémů a pokaždé nabízí novou výzvu. Nepotřebujete být fit, silní nebo odvážní — stačí přijít, obout lezečky a zkusit první boulder. Uvidíte, že se budete chtít vracet.
 
+## Vybavení z katalogu
+
+Doporučené lezecké vybavení v našem katalogu:
+
+- [OCÚN Ozone](/vybaveni/ocun-ozone) — pohodlné lezečky pro začátečníky
+- [La Sportiva Solution Comp](/vybaveni/la-sportiva-solution-comp) — závodní lezečky
+- [Petzl Corax](/vybaveni/petzl-corax) — univerzální sedák
+- [Black Diamond Momentum](/vybaveni/black-diamond-momentum) — sedák pro začátečníky
+- [Singing Rock Shuttle](/vybaveni/singing-rock-shuttle) — jistítko
+
+[→ Všechno lezecké vybavení](/vybaveni?sport=lezeni)
+
 ## Zapojte se do komunity
 
 - [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)

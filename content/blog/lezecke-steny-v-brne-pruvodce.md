@@ -133,6 +133,18 @@ Přečtěte si [průvodce venkovním lezením na jaře](/blog/venkovni-lezeni-du
 - [Kde sportovat v Brně — kompletní průvodce](/blog/kde-sportovat-v-brne-pruvodce)
 - [Ferraty v Česku — kompletní průvodce](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
 
+## Vybavení z katalogu
+
+Doporučené lezecké vybavení v našem katalogu:
+
+- [OCÚN Ozone](/vybaveni/ocun-ozone) — pohodlné lezečky pro začátečníky
+- [La Sportiva Solution Comp](/vybaveni/la-sportiva-solution-comp) — závodní lezečky
+- [Petzl Corax](/vybaveni/petzl-corax) — univerzální sedák
+- [Black Diamond Momentum](/vybaveni/black-diamond-momentum) — sedák pro začátečníky
+- [Singing Rock Shuttle](/vybaveni/singing-rock-shuttle) — jistítko
+
+[→ Všechno lezecké vybavení](/vybaveni?sport=lezeni)
+
 ## Zapojte se do komunity
 
 - [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)

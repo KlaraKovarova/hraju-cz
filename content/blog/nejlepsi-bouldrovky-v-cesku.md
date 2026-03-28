@@ -192,6 +192,18 @@ Vysokoškolská stěna — dostupná a bez front.
 
 **Byli jste v některé z těchto boulderovek?** Napište [recenzi na hraju.cz](/sport/lezeni) — vaše hodnocení pomáhá ostatním lezcom najít tu správnou stěnu.
 
+## Vybavení z katalogu
+
+Doporučené boulderingové vybavení v našem katalogu:
+
+- [Scarpa Instinct VS](/vybaveni/scarpa-instinct-vs) — bouldrovky pro pokročilé
+- [OCÚN Striker QC](/vybaveni/ocun-striker-qc) — začátečnické bouldrovky
+- [OCÚN Paddy Dominator](/vybaveni/ocun-paddy-dominator) — crash pad
+- [Moon Liquid Chalk](/vybaveni/moon-liquid-chalk) — tekuté magnézium
+- [Singing Rock Magnesium Ball](/vybaveni/singing-rock-magnesium-ball) — magnéziová koule
+
+[→ Všechno lezecké vybavení](/vybaveni?sport=lezeni)
+
 ## Zapojte se do komunity
 
 - [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)

@@ -218,6 +218,17 @@ Na ferratu se dá vyrazit s půjčeným vybavením za **350–500 Kč**. Vlastn�
 
 Máte zkušenost s ferratami? [Napište recenzi](/prihlaseni) — pomůžete ostatním s výběrem.
 
+## Vybavení z katalogu
+
+Ověřené ferratové vybavení v našem katalogu:
+
+- [OCÚN VF Twist Set](/vybaveni/ocun-vf-twist-set) — kompletní ferratový set
+- [OCÚN Captur Lite Swivel](/vybaveni/ocun-captur-lite-swivel) — tlumič pádu
+- [OCÚN Shard](/vybaveni/ocun-shard) — horolezecká helma
+- [OCÚN Cima Gloves](/vybaveni/ocun-cima-gloves) — ferratové rukavice
+
+[→ Všechno ferratové vybavení](/vybaveni?sport=ferraty)
+
 ## Zapojte se do komunity
 
 - [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)

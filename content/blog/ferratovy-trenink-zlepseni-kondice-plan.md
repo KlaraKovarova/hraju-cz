@@ -97,6 +97,17 @@ Sdílejte svůj pokrok a ptejte se zkušenějších:
 - [Check-in „Byl/a jsem tady"](/sport/ferraty) — budujte si mapu svých ferrat
 - Sledujte [měsíční výzvy](/muj-ucet) a sbírejte odznaky
 
+## Vybavení z katalogu
+
+Ověřené ferratové vybavení v našem katalogu:
+
+- [OCÚN VF Twist Set](/vybaveni/ocun-vf-twist-set) — kompletní ferratový set
+- [OCÚN Captur Lite Swivel](/vybaveni/ocun-captur-lite-swivel) — tlumič pádu
+- [OCÚN Shard](/vybaveni/ocun-shard) — horolezecká helma
+- [OCÚN Cima Gloves](/vybaveni/ocun-cima-gloves) — ferratové rukavice
+
+[→ Všechno ferratové vybavení](/vybaveni?sport=ferraty)
+
 ## Zapojte se do komunity
 
 - [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)

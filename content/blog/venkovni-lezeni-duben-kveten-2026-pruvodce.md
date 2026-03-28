@@ -169,6 +169,18 @@ Po ferratě nezapomeňte na [check-in „Byl/a jsem tady"](/blog/check-iny-na-hr
 
 ---
 
+## Vybavení z katalogu
+
+Doporučené lezecké vybavení v našem katalogu:
+
+- [OCÚN Ozone](/vybaveni/ocun-ozone) — pohodlné lezečky pro začátečníky
+- [La Sportiva Solution Comp](/vybaveni/la-sportiva-solution-comp) — závodní lezečky
+- [Petzl Corax](/vybaveni/petzl-corax) — univerzální sedák
+- [Black Diamond Momentum](/vybaveni/black-diamond-momentum) — sedák pro začátečníky
+- [Singing Rock Shuttle](/vybaveni/singing-rock-shuttle) — jistítko
+
+[→ Všechno lezecké vybavení](/vybaveni?sport=lezeni)
+
 ## Zapojte se do komunity
 
 Byli jste lézt venku? [Napište recenzi](/prihlaseni) na hraju.cz a pomožte ostatním lezcům najít tu správnou skálu.

@@ -151,7 +151,18 @@ Vaše děti si budou jarní ferraty pamatovat. A díky [check-inům a odznaků](
 - [Ferraty otevírací sezóna 2026](/blog/ferraty-oteviraci-sezona-2026-duben)
 - [Jak se připravit na ferraty po zimě](/blog/jak-se-pripravit-na-ferraty-po-zime)
 
-### Zapojte se do komunity
+### Vybavení z katalogu
+
+Ověřené ferratové vybavení v našem katalogu:
+
+- [OCÚN VF Twist Set](/vybaveni/ocun-vf-twist-set) — kompletní ferratový set
+- [OCÚN Captur Lite Swivel](/vybaveni/ocun-captur-lite-swivel) — tlumič pádu
+- [OCÚN Shard](/vybaveni/ocun-shard) — horolezecká helma
+- [OCÚN Cima Gloves](/vybaveni/ocun-cima-gloves) — ferratové rukavice
+
+[→ Všechno ferratové vybavení](/vybaveni?sport=ferraty)
+
+## Zapojte se do komunity
 
 - [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
 - [Napište recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste) — pomůžete ostatním s výběrem

@@ -120,6 +120,18 @@ Podzim je čas na projekty — problémy, které v létě nešly:
 
 Lezecké stěny i venkovní lokality najdete na [hraju.cz/sport/lezeni](/sport/lezeni).
 
+## Vybavení z katalogu
+
+Doporučené boulderingové vybavení v našem katalogu:
+
+- [Scarpa Instinct VS](/vybaveni/scarpa-instinct-vs) — bouldrovky pro pokročilé
+- [OCÚN Striker QC](/vybaveni/ocun-striker-qc) — začátečnické bouldrovky
+- [OCÚN Paddy Dominator](/vybaveni/ocun-paddy-dominator) — crash pad
+- [Moon Liquid Chalk](/vybaveni/moon-liquid-chalk) — tekuté magnézium
+- [Singing Rock Magnesium Ball](/vybaveni/singing-rock-magnesium-ball) — magnéziová koule
+
+[→ Všechno lezecké vybavení](/vybaveni?sport=lezeni)
+
 ## Zapojte se do komunity
 
 - [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)

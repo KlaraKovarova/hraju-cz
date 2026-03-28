@@ -145,6 +145,18 @@ Každý pád je učení. Každý pokus je pokrok. A ten moment, kdy konečně do
 
 Na [hraju.cz/sport/lezeni](/sport/lezeni) najdete přehled lezeckých a boulderingových hal v celém Česku. Najděte halu ve svém městě, podívejte se na otevírací dobu a ceník — a vyražte na svou první cestu. Stěna čeká.
 
+## Vybavení z katalogu
+
+Doporučené boulderingové vybavení v našem katalogu:
+
+- [Scarpa Instinct VS](/vybaveni/scarpa-instinct-vs) — bouldrovky pro pokročilé
+- [OCÚN Striker QC](/vybaveni/ocun-striker-qc) — začátečnické bouldrovky
+- [OCÚN Paddy Dominator](/vybaveni/ocun-paddy-dominator) — crash pad
+- [Moon Liquid Chalk](/vybaveni/moon-liquid-chalk) — tekuté magnézium
+- [Singing Rock Magnesium Ball](/vybaveni/singing-rock-magnesium-ball) — magnéziová koule
+
+[→ Všechno lezecké vybavení](/vybaveni?sport=lezeni)
+
 ## Zapojte se do komunity
 
 - [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)

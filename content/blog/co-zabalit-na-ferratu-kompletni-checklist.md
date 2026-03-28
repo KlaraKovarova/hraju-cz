@@ -262,6 +262,17 @@ Kompletní přehled všech ferrat v Česku s recenzemi, fotkami a check-iny: [hr
 - [Top 5 ferrat blízko Prahy](/blog/ferraty-blizko-prahy-jednodenni-vylety)
 - [Via ferraty v Česku 2026 — kompletní průvodce](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
 
+## Vybavení z katalogu
+
+Ověřené ferratové vybavení v našem katalogu:
+
+- [OCÚN VF Twist Set](/vybaveni/ocun-vf-twist-set) — kompletní ferratový set
+- [OCÚN Captur Lite Swivel](/vybaveni/ocun-captur-lite-swivel) — tlumič pádu
+- [OCÚN Shard](/vybaveni/ocun-shard) — horolezecká helma
+- [OCÚN Cima Gloves](/vybaveni/ocun-cima-gloves) — ferratové rukavice
+
+[→ Všechno ferratové vybavení](/vybaveni?sport=ferraty)
+
 ## Zapojte se do komunity
 
 - [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)

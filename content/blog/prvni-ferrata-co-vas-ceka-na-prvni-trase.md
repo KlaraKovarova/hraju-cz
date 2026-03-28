@@ -205,6 +205,17 @@ Pokud vás ferraty chytí a chcete vlastní vybavení, počítejte s investicí 
 - [Top 5 ferrat blízko Prahy](/blog/ferraty-blizko-prahy-jednodenni-vylety)
 - [Ferraty pro rodiny s dětmi](/blog/ferraty-pro-rodiny-s-detmi-pruvodce)
 
+## Vybavení z katalogu
+
+Ověřené ferratové vybavení v našem katalogu:
+
+- [OCÚN VF Twist Set](/vybaveni/ocun-vf-twist-set) — kompletní ferratový set
+- [OCÚN Captur Lite Swivel](/vybaveni/ocun-captur-lite-swivel) — tlumič pádu
+- [OCÚN Shard](/vybaveni/ocun-shard) — horolezecká helma
+- [OCÚN Cima Gloves](/vybaveni/ocun-cima-gloves) — ferratové rukavice
+
+[→ Všechno ferratové vybavení](/vybaveni?sport=ferraty)
+
 ## Zapojte se do komunity
 
 - [Check-iny — budujte si mapu sportovních zážitků](/blog/check-iny-na-hraju-cz-pruvodce)
