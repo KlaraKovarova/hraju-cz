@@ -121,7 +121,7 @@ export function SearchResults({
           <FacilityCard
             key={facility.id}
             facility={facility}
-            sportSlug={facility.sports[0]?.sport.slug || "tenis"}
+            sportSlug={facility.sports[0]?.sport.slug || "squash"}
             priority={safePage === 1 && i < 4}
           />
         ))}

@@ -47,8 +47,8 @@ Různé sporty zatěžují tělo jinak. Plavání buduje vytrvalost, squash rych
 ### Týden 1: Raketové sporty
 Zkuste sport, který jste nikdy nehráli — squash nebo badminton. Většina center nabízí půjčení vybavení, takže nepotřebujete nic vlastního.
 
-- [Squash v Česku](/sport/squash) | [Badminton v Česku](/sport/badminton)
-- Průvodce: [Squash pro začátečníky](/blog/squash-pro-zacatecniky-kompletni-pruvodce) | [Badminton pro začátečníky](/blog/badminton-pro-zacatecniky-kompletni-pruvodce)
+- [Squash v Česku](/sport/squash) | [Badminton v Česku](/)
+- Průvodce: [Squash pro začátečníky](/blog/squash-pro-zacatecniky-kompletni-pruvodce) | Badminton pro začátečníky
 
 ### Týden 2: Vodní sporty
 Jděte plavat do bazénu, který jste ještě nenavštívili. Nebo zkuste aqua aerobic, pokud jste nikdy nebyli.

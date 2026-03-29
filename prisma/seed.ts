@@ -11,18 +11,6 @@ async function main() {
   // Sports
   const sports = await Promise.all([
     prisma.sport.upsert({
-      where: { slug: "tenis" },
-      update: {},
-      create: {
-        slug: "tenis",
-        name: "Tennis",
-        nameCs: "Tenis",
-        subdomain: "tenis",
-        description: "Tenisové kurty v České republice",
-        icon: "🎾",
-      },
-    }),
-    prisma.sport.upsert({
       where: { slug: "squash" },
       update: {},
       create: {
@@ -31,18 +19,6 @@ async function main() {
         nameCs: "Squash",
         subdomain: "squash",
         description: "Squashové kurty v České republice",
-        icon: "🏸",
-      },
-    }),
-    prisma.sport.upsert({
-      where: { slug: "badminton" },
-      update: {},
-      create: {
-        slug: "badminton",
-        name: "Badminton",
-        nameCs: "Badminton",
-        subdomain: "badminton",
-        description: "Badmintonové kurty v České republice",
         icon: "🏸",
       },
     }),
@@ -199,9 +175,7 @@ async function main() {
   console.log(`✓ 5 locations`);
 
   // Facilities
-  const tenis = sports.find((s) => s.slug === "tenis")!;
   const squash = sports.find((s) => s.slug === "squash")!;
-  const badminton = sports.find((s) => s.slug === "badminton")!;
   const plavani = sports.find((s) => s.slug === "plavani")!;
 
   const parking = amenities.find((a) => a.slug === "parking")!;
@@ -210,44 +184,6 @@ async function main() {
   const proShop = amenities.find((a) => a.slug === "pro-shop")!;
 
   const facilitiesData = [
-    {
-      name: "Sportcentrum Strahov",
-      slug: "sportcentrum-strahov",
-      description: "Největší sportovní centrum v Praze s 12 tenisovými kurty.",
-      address: "Vaníčkova 2, Praha 6",
-      postalCode: "169 00",
-      locationId: praha6.id,
-      lat: 50.081,
-      lng: 14.385,
-      courtsLanes: 12,
-      pricing: "300–450 Kč/hod",
-      openingHours: { po: "07:00–22:00", út: "07:00–22:00", st: "07:00–22:00", čt: "07:00–22:00", pá: "07:00–22:00", so: "08:00–20:00", ne: "08:00–20:00" },
-      website: "https://strahov.cz",
-      isPremium: true,
-      isClaimed: true,
-      sportIds: [tenis.id],
-      amenityIds: [parking.id, showers.id, cafe.id],
-      phone: "+420 233 355 400",
-    },
-    {
-      name: "Tenisový klub Sparta Praha",
-      slug: "tenisovy-klub-sparta-praha",
-      description: "Historický tenisový klub s antukovou i tvrdou povrchovou variantou.",
-      address: "Milady Horákové 98, Praha 7",
-      postalCode: "170 00",
-      locationId: praha7.id,
-      lat: 50.099,
-      lng: 14.42,
-      courtsLanes: 20,
-      pricing: "400–600 Kč/hod",
-      openingHours: { po: "07:00–21:00", út: "07:00–21:00", st: "07:00–21:00", čt: "07:00–21:00", pá: "07:00–21:00", so: "08:00–19:00", ne: "08:00–19:00" },
-      website: "https://sparta-tenis.cz",
-      isPremium: true,
-      isClaimed: true,
-      sportIds: [tenis.id],
-      amenityIds: [parking.id, showers.id, cafe.id, proShop.id],
-      phone: "+420 233 371 480",
-    },
     {
       name: "Squash Arena Žižkov",
       slug: "squash-arena-zizkov",
@@ -266,25 +202,6 @@ async function main() {
       sportIds: [squash.id],
       amenityIds: [showers.id],
       phone: null,
-    },
-    {
-      name: "SK Badminton Brno",
-      slug: "sk-badminton-brno",
-      description: "Moderní badmintonová hala s 8 kurty v Brně.",
-      address: "Sportovní 4, Brno",
-      postalCode: "602 00",
-      locationId: brno.id,
-      lat: 49.195,
-      lng: 16.608,
-      courtsLanes: 8,
-      pricing: "180–240 Kč/hod",
-      openingHours: { po: "08:00–22:00", út: "08:00–22:00", st: "08:00–22:00", čt: "08:00–22:00", pá: "08:00–22:00", so: "09:00–20:00", ne: "10:00–18:00" },
-      website: "https://skbadminton-brno.cz",
-      isPremium: false,
-      isClaimed: true,
-      sportIds: [badminton.id],
-      amenityIds: [parking.id, showers.id],
-      phone: "+420 544 212 345",
     },
     {
       name: "Aquapark Olomouc",

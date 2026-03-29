@@ -63,7 +63,7 @@ Květen je srdce antukové sezóny. Venkovní kurty jsou v perfektním stavu, tu
 - **Rezervovat venkovní kurt** — květnové večery jsou ideální (světlo do 20:30)
 - **Začít s tenisem** — spousta areálů nabízí květnové kurzy pro začátečníky
 
-Na [hraju.cz/sport/tenis](/sport/tenis) najdete přehled tenisových areálů ve vašem okolí.
+Na [hraju.cz](/) najdete přehled tenisových areálů ve vašem okolí.
 
 ## Cyklistika: Nejlepší měsíc na kolo
 

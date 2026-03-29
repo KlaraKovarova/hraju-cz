@@ -4,7 +4,7 @@ date: '2026-03-05'
 author: "Klára Kovářová"
 category: "tipy"
 excerpt: "Recenze ostatních sportovců vám ušetří čas i peníze. Přečtěte si, na co se zaměřit při výběru sportoviště a jak vám zkušenosti komunity pomohou."
-sportTags: ["tenis", "squash", "fitness", "plavani", "badminton"]
+sportTags: ["squash", "fitness", "plavani"]
 image: /images/blog/jak-si-vybrat-sportoviste-recenze.jpg
 ---
 
@@ -23,7 +23,7 @@ Webové stránky sportovišť ukazují vždy to nejlepší. Realita bývá jiná
 
 ### Tenis
 
-U [tenisových kurtů](/sport/tenis) sledujte povrch (antuka vs. tvrdý vs. koberec), údržbu kurtů a dostupnost v oblíbených hodinách. Například [Sportcentrum Strahov](/tenis/sportcentrum-strahov) v Praze nabízí 12 kurtů, takže problém s obsazeností bývá menší.
+U [tenisových kurtů](/) sledujte povrch (antuka vs. tvrdý vs. koberec), údržbu kurtů a dostupnost v oblíbených hodinách. Například [Sportcentrum Strahov](/tenis/sportcentrum-strahov) v Praze nabízí 12 kurtů, takže problém s obsazeností bývá menší.
 
 ### Squash
 

@@ -126,8 +126,6 @@ Máte tip na skvělý squashový kurt nebo zkušenost z první lekce? [Napište 
 
 ### Další čtení
 
-- [Badminton pro začátečníky — kompletní průvodce](/blog/badminton-pro-zacatecniky-kompletni-pruvodce)
-- [Tenis pro začátečníky — kompletní průvodce](/blog/tenis-pro-zacatecniky-kompletni-pruvodce)
 - [Beach volejbal v Česku](/blog/beach-volejbal-v-cesku)
 - [Nejlepší sporty pro začátečníky nad 30](/blog/nejlepsi-sporty-pro-zacatecniky-nad-30)
 

@@ -35,8 +35,7 @@ Raketový sport na rozjezd. Na většině tenisových kurtů si raketu půjčít
 
 - **Co potřebujete:** Sportovní oblečení, boty s neotěratelnou podrážkou. Rakety si půjčíte.
 - **Cena:** Tenis od 200 Kč/hod (antuka)
-- **Najít kurt:** [hraju.cz/sport/tenis](/sport/tenis)
-- **Průvodce:** [Tenis pro začátečníky](/blog/tenis-pro-zacatecniky-kompletni-pruvodce)
+- **Najít kurt:** [hraju.cz](/)
 
 ### Úterý — Bouldering
 
@@ -84,7 +83,7 @@ Pomalejší než squash, ale technicky náročnější. Skvělý sport pro páry
 - **Co potřebujete:** Sportovní oblečení, halová obuv. Rakety si půjčíte (50 Kč).
 - **Cena:** Od 160 Kč/hod (Club Classic Brno) do 400 Kč/hod (Centrum Viktoria)
 - **Tip:** Hrajte deble (2v2) — je to zábavnější a méně náročné pro začátečníky.
-- **Najít halu:** [hraju.cz/sport/badminton](/sport/badminton)
+- **Najít halu:** [hraju.cz](/)
 
 ### Neděle — Outdoor (ferraty, cyklistika, běh)
 

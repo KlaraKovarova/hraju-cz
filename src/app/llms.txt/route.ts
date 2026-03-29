@@ -10,7 +10,7 @@ export function GET() {
   ).join("\n");
 
   const regionList = REGIONS.map(
-    (r) => `- [${r.name}](${BASE}/sport/tenis/kraj/${r.slug})`
+    (r) => `- [${r.name}](${BASE}/sport/squash/kraj/${r.slug})`
   ).join("\n");
 
   const categoryList = Object.entries(CATEGORIES)

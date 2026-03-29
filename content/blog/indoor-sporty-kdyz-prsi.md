@@ -38,7 +38,7 @@ Nejpřístupnější raketový sport. Lehká raketa, pomalý košíček (oproti 
 - **Cena:** 150–300 Kč/hodina za kurt
 - **Co potřebujete:** Sálovou obuv a raketu (půjčovna od 30 Kč)
 - **Pro koho:** Páry, rodiny, úplní začátečníci
-- **Kde:** [hraju.cz/sport/badminton](https://hraju.cz/sport/badminton)
+- **Kde:** [hraju.cz](https://hraju.cz/)
 
 ### 3. Tenis (krytá hala)
 
@@ -46,7 +46,7 @@ Většina tenisových areálů v Česku má kryté haly — nafukovací nebo pev
 
 - **Cena:** 350–600 Kč/hodina za krytý kurt (dražší než venkovní)
 - **Tip:** Dopolední hodiny bývají levnější (170–300 Kč)
-- **Kde:** [hraju.cz/sport/tenis](https://hraju.cz/sport/tenis)
+- **Kde:** [hraju.cz](https://hraju.cz/)
 
 ## Pohyb na stěně i ve vodě
 

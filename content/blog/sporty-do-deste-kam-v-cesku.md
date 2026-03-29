@@ -142,7 +142,7 @@ Na hraju.cz najdete všechna indoor sportoviště ve vašem městě — od bazé
 Kompletní přehled najdete na:
 - [squashové kurty v Česku na hraju.cz](/sport/squash)
 - [squash v Brně](/blog/kam-na-squash-v-brne)
-- [badmintonové haly na hraju.cz](/sport/badminton)
+- [badmintonové haly na hraju.cz](/)
 
 
 ---

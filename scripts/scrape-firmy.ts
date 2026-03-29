@@ -20,10 +20,7 @@ interface Facility {
 }
 
 const SPORTS = [
-  { slug: 'tenis', query: 'tenisov%C3%A9+kurty', label: 'tenisové kurty' },
   { slug: 'squash', query: 'squash', label: 'squash' },
-  { slug: 'badminton', query: 'badminton+kurty', label: 'badminton kurty' },
-  { slug: 'volejbal', query: 'volejbal+kurty', label: 'volejbal kurty' },
   { slug: 'plavani', query: 'plaveck%C3%A9+baz%C3%A9ny', label: 'plavecké bazény' },
   { slug: 'golf', query: 'golf+h%C5%99i%C5%A1t%C4%9B', label: 'golf hřiště' },
   { slug: 'fitness', query: 'fitness+centrum', label: 'fitness centrum' },

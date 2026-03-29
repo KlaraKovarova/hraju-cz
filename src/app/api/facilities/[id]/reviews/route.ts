@@ -181,7 +181,7 @@ export async function POST(
   // Notify facility owner by email (fire-and-forget)
   const ownerEmail = facility.contacts[0]?.value;
   if (ownerEmail) {
-    const sportSlug = facility.sports[0]?.sport.slug || "tenis";
+    const sportSlug = facility.sports[0]?.sport.slug || "squash";
     const facilityUrl = `https://www.hraju.cz/sport/${sportSlug}/${facility.slug}`;
     sendReviewNotificationEmail(
       ownerEmail,
@@ -201,7 +201,7 @@ export async function POST(
 
   // Notify users who checked in or reviewed this facility (fire-and-forget)
   findUsersToNotifyAboutReview(id, session.userId).then(async (users) => {
-    const sportSlug = facility.sports[0]?.sport.slug || "tenis";
+    const sportSlug = facility.sports[0]?.sport.slug || "squash";
     const facilityUrl = `https://www.hraju.cz/sport/${sportSlug}/${facility.slug}`;
     for (const user of users) {
       try {

@@ -217,7 +217,7 @@ export async function POST(request: NextRequest) {
       const digestData: WeeklyDigestData = {
         userName: user.name,
         newReviews: topReviews.map((r) => {
-          const sportSlug = r.facility.sports[0]?.sport.slug || "tenis";
+          const sportSlug = r.facility.sports[0]?.sport.slug || "squash";
           return {
             facilityName: r.facility.name,
             facilityUrl: `https://www.hraju.cz/sport/${sportSlug}/${r.facility.slug}`,

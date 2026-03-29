@@ -193,7 +193,7 @@ Menší, komunitnější alternativa. Spojená s lezeckým oddílem Tendon Blok 
 - **Parkování:** Zdarma
 - **Otevřeno:** Denně 8:00–22:00
 - **Web:** tenisvostrave.cz
-- **Najít kurt:** [hraju.cz/sport/tenis](/sport/tenis)
+- **Najít kurt:** [hraju.cz](/)
 
 ## Squash a badminton
 

@@ -4,7 +4,7 @@ date: "2026-03-23"
 author: "Klára Kovářová"
 category: tipy
 excerpt: "Jak se vrátit ke sportu po zimě? Postupný plán pro 8 sportů, jarní tipy na oblečení, výživu a prevenci zranění. Česká sportoviště připravená na sezónu."
-sportTags: ["ferraty", "tenis", "lezeni", "plavani", "behani", "cyklistika"]
+sportTags: ["ferraty", "lezeni", "plavani", "behani", "cyklistika"]
 image: /images/blog/letni-sporty-2026.jpg
 ---
 
@@ -59,7 +59,7 @@ Březen a duben jsou přelomové měsíce — venkovní sportoviště otevíraj�
 - **1. týden:** Míčkovník/zeď, výměny z half-courtu, fokus na pohyb nohou
 - **Klíč:** Po zimě slábne rotátorová manžeta — rameno potřebuje čas
 - **Tip:** Nižte napnutí výpletu o 1 kg (méně vibrací pro zimou ztuhlé předloktí)
-- [Tenisové kurty na hraju.cz →](/sport/tenis)
+- [Tenisové kurty na hraju.cz →](/)
 
 ### Ferraty
 

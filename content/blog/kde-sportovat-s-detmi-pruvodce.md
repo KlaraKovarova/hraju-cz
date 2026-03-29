@@ -56,11 +56,11 @@ Děti v tomto věku mají dostatečnou koordinaci na raketu a míč. A hlavně �
 1. **Tenis** — klasika. Většina tenisových klubů v Česku nabízí „minitenis" (menší kurt, lehčí míč, kratší raketa) pro děti 6–9 let. Od 10 let se přechází na standardní kurt.
    - **Cena:** Skupinová lekce 200–400 Kč/hodina, 2–4 děti. Individuální 400–700 Kč.
    - **Vybavení:** Dětská raketa 500–1 500 Kč (roste s dítětem — 19", 21", 23", 25")
-   - **Kde:** [hraju.cz/sport/tenis](https://hraju.cz/sport/tenis)
+   - **Kde:** [hraju.cz](https://hraju.cz/)
 
 2. **Badminton** — nižší vstupní bariéra než tenis, lehčí raketa, pomalejší košíček. Děti zvládnou základní výměny za 2–3 lekce.
    - **Cena:** Kurt 150–300 Kč/hodina, dětská raketa od 300 Kč
-   - **Kde:** [hraju.cz/sport/badminton](https://hraju.cz/sport/badminton)
+   - **Kde:** [hraju.cz](https://hraju.cz/)
 
 3. **Florbal** — nejpopulárnější halový sport u českých dětí. Nízká cena vybavení (hokejka od 500 Kč), organizované ligy od přípravek. Téměř každá škola má florbalový kroužek.
 

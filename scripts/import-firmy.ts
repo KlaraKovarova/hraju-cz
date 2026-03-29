@@ -163,7 +163,7 @@ async function importSport(
 
 async function main() {
   const DATA_DIR = path.join(__dirname, 'data');
-  const SPORTS = ['tenis', 'squash', 'badminton', 'volejbal', 'plavani', 'golf', 'fitness', 'bowling'];
+  const SPORTS = ['squash', 'plavani', 'fitness', 'bowling'];
 
   console.log('hraju.cz — importing firmy.cz data into DB');
   console.log('DB:', dbUrl.replace(/:([^:@]+)@/, ':***@'));

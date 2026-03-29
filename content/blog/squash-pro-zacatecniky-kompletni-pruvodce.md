@@ -147,4 +147,3 @@ Najděte squashové kurty ve vašem městě na [hraju.cz/sport/squash](https://h
 - [30 dní pohybu — sportovní výzva](/blog/sportovni-vyzva-30-dni)
 - [7 sportů za 7 dní](/blog/7-sportu-za-7-dni-vyzva)
 - [Jak napsat užitečnou recenzi](/blog/jak-napsat-uzitecnou-recenzi-sportoviste)
-- [Squash vs badminton — srovnání](/blog/squash-vs-badminton) | [Kam na squash v Brně](/blog/kam-na-squash-v-brne)

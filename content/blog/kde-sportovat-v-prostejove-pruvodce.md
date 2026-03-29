@@ -220,8 +220,7 @@ Na hraju.cz najdete sportoviště v Prostějově i dalších městech — od pos
 ## Najděte sportoviště v Česku
 
 Kompletní přehled najdete na:
-- [tenisové areály v Česku na hraju.cz](/sport/tenis)
-- [kde hrát tenis v Brně](/blog/kde-hrat-tenis-v-brne)
+- [tenisové areály v Česku na hraju.cz](/)
 - [volejbal na hraju.cz](/sport/volejbal)
 
 

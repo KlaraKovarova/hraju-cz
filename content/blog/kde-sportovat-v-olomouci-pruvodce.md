@@ -4,7 +4,7 @@ date: "2026-03-21"
 author: "Klára Kovářová"
 category: "pruvodce-mesta"
 excerpt: "Olomouc je město studentů a sportovců. Přehled nejlepších sportovišť — od tenisu přes lezení po plavání. Adresy, tipy, co čekat."
-sportTags: ["tenis", "squash", "plavani", "fitness", "lezeni", "badminton"]
+sportTags: ["squash", "plavani", "fitness", "lezeni"]
 image: /images/blog/kde-sportovat-v-olomouci-pruvodce.jpg
 ---
 

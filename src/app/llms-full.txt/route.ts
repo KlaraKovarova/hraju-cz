@@ -35,7 +35,7 @@ Všechna data se týkají výhradně České republiky. Jazyk stránek je češt
 
   // Regions
   const regionLines = REGIONS.map(
-    (r) => `- [${r.name}](${BASE}/sport/tenis/kraj/${r.slug}): URL vzor /sport/{sport}/kraj/${r.slug}`
+    (r) => `- [${r.name}](${BASE}/sport/squash/kraj/${r.slug}): URL vzor /sport/{sport}/kraj/${r.slug}`
   ).join("\n");
   sections.push(`## Kraje (14 krajů ČR)\n\n${regionLines}`);
 

@@ -40,7 +40,7 @@ async function searchFacilitiesApi(query: string, limit: number) {
     name: f.name,
     slug: f.slug,
     city: f.location.city,
-    sportSlug: f.sports[0]?.sport.slug ?? "tenis",
+    sportSlug: f.sports[0]?.sport.slug ?? "squash",
     sportName: f.sports[0]?.sport.nameCs ?? "",
     averageRating: f.averageRating,
     reviewCount: f.reviewCount,

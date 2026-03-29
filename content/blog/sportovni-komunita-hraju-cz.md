@@ -73,7 +73,6 @@ Nevíte, kde začít? Připravili jsme průvodce pro začátečníky:
 - [Běhání pro začátečníky](/blog/behani-pro-zacatecniky-kompletni-pruvodce) | [Kde běhat v Praze](/blog/kde-behat-v-praze-pruvodce)
 - [Cyklistika pro začátečníky](/blog/cyklistika-pro-zacatecniky-kompletni-pruvodce) | [Cyklotrasy v Praze](/blog/cyklotrasy-praha-pruvodce)
 - [Via ferraty v Česku — kompletní průvodce](/blog/ferraty-v-cesku-kompletni-pruvodce-2026)
-- [Tenis pro začátečníky](/blog/tenis-pro-zacatecniky-kompletni-pruvodce)
 - [Bouldering pro začátečníky](/blog/bouldering-pro-zacatecniky-kompletni-pruvodce)
 - [Plavání pro začátečníky](/blog/plavani-pro-zacatecniky-kompletni-pruvodce)
 

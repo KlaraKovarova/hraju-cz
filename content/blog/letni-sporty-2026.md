@@ -60,7 +60,7 @@ Tenis je nejlépe dostupný letní sport v Česku. S více než **1 000 venkovn�
 
 **Tip pro začátečníky:** Většina areálů nabízí skupinové lekce pro dospělé začátečníky. Investice do 3–5 lekcí s trenérem se vyplatí — naučíte se správnou techniku a hra vás bude bavit víc.
 
-Tenisové kurty v Česku na [hraju.cz](/sport/tenis).
+Tenisové kurty v Česku na [hraju.cz](/).
 
 ## Plavání v přírodě — koupaliště a přírodní biotopy
 

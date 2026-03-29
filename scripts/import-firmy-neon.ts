@@ -162,9 +162,7 @@ async function importSport(
 async function main() {
   const DATA_DIR = path.join(__dirname, "data");
   const ALL_SPORTS = [
-    "tenis",
     "squash",
-    "badminton",
     "plavani",
     "fitness",
     "bowling",

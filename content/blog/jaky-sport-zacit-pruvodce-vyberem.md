@@ -168,7 +168,7 @@ Na hraju.cz najdete všechna sportoviště ve vašem městě — od posiloven p�
 Kompletní přehled najdete na:
 - [fitness centra v Česku na hraju.cz](/sport/fitness)
 - [fitness centra v Brně](/blog/fitness-centra-v-brne)
-- [tenisové areály v Česku na hraju.cz](/sport/tenis)
+- [tenisové areály v Česku na hraju.cz](/)
 
 
 ---

@@ -4,7 +4,7 @@ date: "2026-03-05"
 author: "Klára Kovářová"
 category: "tipy"
 excerpt: "Vybíráte sportovní centrum? Podívejte se, na jaké vybavení a služby se zaměřit, abyste našli to pravé místo pro váš sport."
-sportTags: ["tenis", "squash", "badminton", "fitness"]
+sportTags: ["squash", "fitness"]
 image: /images/blog/jak-vybrat-sportovni-centrum.jpg
 ---
 
@@ -12,7 +12,7 @@ Výběr sportovního centra není jen o ceně. Správné zázemí vám zpříjem
 
 ## Vybavení a zázemí
 
-Při výběru sportoviště se podívejte na dostupné vybavení. Na [hraju.cz](/sport/tenis) u každého sportoviště najdete přehled vybavení — od parkování přes sprchy po kavárnu.
+Při výběru sportoviště se podívejte na dostupné vybavení. Na [hraju.cz](/) u každého sportoviště najdete přehled vybavení — od parkování přes sprchy po kavárnu.
 
 ### Klíčové vybavení
 

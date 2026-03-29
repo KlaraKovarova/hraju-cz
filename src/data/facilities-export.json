@@ -2,15 +2,6 @@
   "exportedAt": "2026-03-27T17:59:26.861Z",
   "sports": [
     {
-      "id": "jk8Hpc3Zm68PmcBn",
-      "slug": "badminton",
-      "name": "Badminton",
-      "nameCs": "Badminton",
-      "subdomain": "badminton",
-      "description": "Badmintonové kurty v České republice",
-      "icon": "🏸"
-    },
-    {
       "id": "gfKg-rNgESqqh8sX",
       "slug": "bowling",
       "name": "Bowling",
@@ -90,15 +81,6 @@
       "subdomain": "stolni-tenis",
       "description": "Stolní tenis — pingpong herny a kluby v ČR",
       "icon": "🏓"
-    },
-    {
-      "id": "a1DtDqL1SQUZe7RG",
-      "slug": "tenis",
-      "name": "Tennis",
-      "nameCs": "Tenis",
-      "subdomain": "tenis",
-      "description": "Tenisové kurty v České republice",
-      "icon": "🎾"
     },
     {
       "id": "_DPSnQb6CHLM9USv",

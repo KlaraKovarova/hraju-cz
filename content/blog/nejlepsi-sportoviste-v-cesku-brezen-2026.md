@@ -4,7 +4,7 @@ date: "2026-03-23"
 author: "Klára Kovářová"
 category: komunita
 excerpt: "Měsíční přehled nejlépe hodnocených sportovišť na hraju.cz. Které haly, kurty a bazény si vysloužily nejlepší recenze od českých sportovců?"
-sportTags: ["tenis", "fitness", "plavani", "lezeni", "squash"]
+sportTags: ["fitness", "plavani", "lezeni", "squash"]
 image: /images/blog/jak-vybrat-sportovni-centrum.jpg
 ---
 
@@ -16,7 +16,7 @@ Každý měsíc shrnujeme sportoviště, která si od komunity hraju.cz vyslouž
 
 ### Tenis
 **TK Sparta Praha** — tradice od roku 1893, 16 kurtů (6 indoor, 10 outdoor antuka). Lezci chválí kvalitu povrchu a profesionální přístup trenérů. V zimě nafukovací hala, v létě jedna z nejlepších antukových ploch v Praze.
-- [Najít na hraju.cz →](/sport/tenis)
+- [Najít na hraju.cz →](/)
 
 ### Fitness
 **JEDENÁCTKA Vodní svět & Fitness** — moderní komplex na Praze 11 s bazénem i posilovnou. Uživatelé oceňují čistotu, moderní vybavení a příznivou cenu díky městské dotaci.

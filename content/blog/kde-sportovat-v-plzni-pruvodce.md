@@ -198,7 +198,7 @@ Venkovní antuka + pevná hala + nafukovací haly. Celoroční provoz.
 3 kryté kurty (2 antuka, 1 hard). Zimní alternativa od poloviny října.
 
 - **Web:** rapidplzentenis.cz
-- **Najít kurt:** [hraju.cz/sport/tenis](/sport/tenis)
+- **Najít kurt:** [hraju.cz](/)
 
 ## Squash a badminton
 

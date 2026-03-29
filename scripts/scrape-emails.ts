@@ -143,7 +143,7 @@ async function main() {
 
   console.log(`Found ${facilitiesWithWebsite.length} facilities with website but no email`);
 
-  // Prioritize: Praha/Brno first, then tenis/squash
+  // Prioritize: Praha/Brno first, then squash/lezeni
   const prioritized = facilitiesWithWebsite.sort((a, b) => {
     const aScore = getPriorityScore(a);
     const bScore = getPriorityScore(b);
@@ -154,8 +154,8 @@ async function main() {
     let score = 0;
     if (f.location.city.startsWith("Praha")) score += 2;
     if (f.location.city === "Brno") score += 1;
-    if (f.sports.some((s) => s.sport.slug === "tenis")) score += 1;
     if (f.sports.some((s) => s.sport.slug === "squash")) score += 1;
+    if (f.sports.some((s) => s.sport.slug === "lezeni")) score += 1;
     return score;
   }
 

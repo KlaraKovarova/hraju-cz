@@ -4,7 +4,7 @@ date: '2026-03-11'
 author: "Klára Kovářová"
 category: "komunita"
 excerpt: "Zapomeňte na turistické průvodce. Přinášíme tipy na sportoviště v Praze přímo od lidí, kteří tam pravidelně sportují."
-sportTags: ["tenis", "squash", "fitness", "plavani", "lezeni", "behani", "cyklistika"]
+sportTags: ["squash", "fitness", "plavani", "lezeni", "behani", "cyklistika"]
 image: /images/blog/kde-sportovat-v-praze-tipy-od-mistních.jpg
 ---
 
@@ -32,7 +32,7 @@ Nejznámější pražské tenisové areály (Štvanice, Sparta) jsou skvělé, a
 
 **Tip od místních:** „Nejlepší poměr cena/kurt je na Praze 4. Areály jsou moderní, kurty udržované a ceny o 30 % nižší než v centru."
 
-Přehled tenisových kurtů v Praze na [hraju.cz](/sport/tenis).
+Přehled tenisových kurtů v Praze na [hraju.cz](/).
 
 ## Plavání: kde jsou nejméně přeplněné bazény
 

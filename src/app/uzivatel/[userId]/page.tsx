@@ -260,7 +260,7 @@ export default async function UserProfilePage({ params }: Props) {
         {totalReviews > 0 ? (
           <div className="mt-6 space-y-4">
             {reviews.map((r) => {
-              const sportSlug = r.facility.sports[0]?.sport.slug || "tenis";
+              const sportSlug = r.facility.sports[0]?.sport.slug || "squash";
               const sportName = r.facility.sports[0]?.sport.nameCs || "";
               const facilityUrl = `/sport/${sportSlug}/${r.facility.slug}`;
 

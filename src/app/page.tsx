@@ -79,7 +79,7 @@ export default async function Home() {
     name: "hraju.cz",
     url: "https://www.hraju.cz",
     logo: "https://www.hraju.cz/og-image.jpg",
-    description: "Sportoviště v České republice — tenisové kurty, squash, badminton, bazény, fitness a další.",
+    description: "Sportoviště v České republice — squash, bazény, fitness, lezecké stěny, ferraty a další.",
     areaServed: {
       "@type": "Country",
       name: "Czech Republic",
@@ -207,8 +207,8 @@ export default async function Home() {
               </span>
             </h1>
             <p className="mt-4 text-lg text-zinc-600 sm:text-xl">
-              Najdi sportoviště poblíž tebe. Tenisové kurty, squash, badminton,
-              bazény i fitness po celé České republice.
+              Najdi sportoviště poblíž tebe. Squash, bazény, fitness,
+              lezecké stěny i ferraty po celé České republice.
             </p>
 
             {/* Search Box */}
@@ -323,7 +323,7 @@ export default async function Home() {
                 <FacilityCard
                   key={facility.id}
                   facility={facility}
-                  sportSlug={facility.sports[0]?.sport.slug || "tenis"}
+                  sportSlug={facility.sports[0]?.sport.slug || "squash"}
                 />
               ))}
             </div>
@@ -669,7 +669,7 @@ export default async function Home() {
                 <FacilityCard
                   key={facility.id}
                   facility={facility}
-                  sportSlug={facility.sports[0]?.sport.slug || "tenis"}
+                  sportSlug={facility.sports[0]?.sport.slug || "squash"}
                 />
               ))}
             </div>

@@ -134,7 +134,7 @@ export async function POST(
   // Notify review author if someone else replied (fire-and-forget)
   if (review.userId && review.userId !== session.userId) {
     const replierName = session.name || session.email.split("@")[0];
-    const sportSlug = review.facility.sports[0]?.sport.slug || "tenis";
+    const sportSlug = review.facility.sports[0]?.sport.slug || "squash";
     const facilityUrl = `https://www.hraju.cz/sport/${sportSlug}/${review.facility.slug}`;
 
     // In-app notification (fire-and-forget)

@@ -65,7 +65,7 @@ S příchodem tepla se otevírají skalní oblasti a ferraty. Pozor na vlhké sk
 
 ### Tenis
 
-Antukové kurty se otevírají od dubna. Venkovní tenis je o 40–50 % levnější než halový. [Průvodce venkovním tenisem →](/blog/venkovni-tenis-duben-kveten-2026)
+Antukové kurty se otevírají od dubna. Venkovní tenis je o 40–50 % levnější než halový. Průvodce venkovním tenisem →
 
 ### Cyklistika a běh
 

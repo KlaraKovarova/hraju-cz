@@ -4,28 +4,6 @@ interface FaqItem {
 }
 
 const SPORT_FAQS: Record<string, FaqItem[]> = {
-  tenis: [
-    {
-      question: "Kolik stojí hodina tenisu?",
-      answer:
-        "Cena se liší podle města a sezóny. V Praze se pohybuje mezi 200–500 Kč/h, mimo Prahu obvykle 150–350 Kč/h. V letní sezóně na venkovních kurtech bývá levněji než v zimě v halách.",
-    },
-    {
-      question: "Potřebuji vlastní raketu?",
-      answer:
-        "Většina sportovišť nabízí půjčení raket přímo na místě. Pokud začínáte, můžete si nejprve půjčit a později investovat do vlastní rakety. Doporučujeme se předem informovat u konkrétního sportoviště.",
-    },
-    {
-      question: "Jak rezervovat tenisový kurt?",
-      answer:
-        "Najděte sportoviště na hraju.cz, zkontrolujte kontaktní údaje a rezervujte telefonicky nebo online. Mnohá sportoviště nabízejí i online rezervační systém přímo na svých stránkách.",
-    },
-    {
-      question: "Jaký je rozdíl mezi antukou a tvrdým povrchem?",
-      answer:
-        "Antuka (clay) je pomalejší povrch, šetrnější ke kloubům a vhodný pro začátečníky. Tvrdý povrch (hard court) je rychlejší a vyžaduje dynamičtější hru. V ČR převažují antukové kurty venku a tvrdé povrchy v halách.",
-    },
-  ],
   squash: [
     {
       question: "Kolik stojí hodina squashe?",
@@ -46,28 +24,6 @@ const SPORT_FAQS: Record<string, FaqItem[]> = {
       question: "Jak rezervovat squashový kurt?",
       answer:
         "Najděte squashové centrum na hraju.cz a kontaktujte ho telefonicky nebo přes webové stránky. Většina hal umožňuje rezervaci online nebo telefonicky s předstihem.",
-    },
-  ],
-  badminton: [
-    {
-      question: "Kolik stojí hodina badmintonu?",
-      answer:
-        "Hodina badmintonu stojí obvykle 150–300 Kč za kurt. V Praze a větších městech 200–350 Kč, v menších městech od 100 Kč. Některé haly nabízejí zvýhodněné ranní hodiny.",
-    },
-    {
-      question: "Potřebuji vlastní raketu na badminton?",
-      answer:
-        "Pro začátek si raketu můžete půjčit přímo ve sportovním centru. Pokud budete hrát pravidelně, vyplatí se vlastní raketa — základní modely začínají kolem 500 Kč.",
-    },
-    {
-      question: "Kolik hráčů potřebuji na badminton?",
-      answer:
-        "Badminton se hraje jako dvouhra (1 vs 1) nebo čtyřhra (2 vs 2). Na jeden kurt tedy potřebujete 2–4 hráče. Některá centra pořádají i otevřené turnaje, kde najdete spoluhráče.",
-    },
-    {
-      question: "Jak se liší badminton od crossmintonu?",
-      answer:
-        "Badminton se hraje v hale se sítí, crossminton (speed badminton) se hraje venku bez sítě. Badmintonový košíček je lehčí a pomalejší, crossmintonový je těžší a navržený pro venkovní hru.",
     },
   ],
   plavani: [

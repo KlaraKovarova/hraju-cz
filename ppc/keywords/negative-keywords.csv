@@ -1,0 +1,39 @@
+Negative Keyword,Match Type,Applies To,Reason
+výsledky,Broad,All campaigns,Match results / scores intent
+výsledky zápasů,Phrase,All campaigns,Match results intent
+pravidla,Broad,All campaigns,Rules of sport intent
+jak hrát,Phrase,All campaigns,Tutorial intent
+youtube,Broad,All campaigns,Video intent
+video,Broad,All campaigns,Video intent
+koupit,Broad,All campaigns,Purchase intent (equipment)
+boty,Broad,All campaigns,Equipment purchase
+raketa,Broad,Squash,Equipment purchase
+rakety,Broad,Squash,Equipment purchase
+kurz,Broad,All campaigns,Training course intent
+lekce,Broad,All campaigns,Lessons/coaching intent
+trenér,Broad,All campaigns,Trainer search
+trénink pro děti,Phrase,All campaigns,Youth coaching intent
+tábor,Broad,All campaigns,Sports camp intent
+škola,Broad,All campaigns,School/training intent
+akademie,Broad,All campaigns,Academy intent
+turnaj,Broad,All campaigns,Tournament results/schedule
+soutěž,Broad,All campaigns,Competition intent
+zdarma lekce,Phrase,All campaigns,Free lessons
+live stream,Phrase,All campaigns,Streaming intent
+tv přenos,Phrase,All campaigns,TV broadcast intent
+aplikace,Broad,All campaigns,App download intent
+Android,Broad,All campaigns,App intent
+iOS,Broad,All campaigns,App intent
+history,Broad,All campaigns,Historical intent
+wikipedia,Broad,All campaigns,Info intent
+kniha,Broad,All campaigns,Book purchase
+wikipedie,Broad,All campaigns,Info intent
+obrázky,Broad,All campaigns,Image search intent
+fotky,Broad,All campaigns,Photo search intent
+recept,Broad,All campaigns,Food recipe (fitness crossover)
+dieta,Broad,Fitness,Diet advice intent
+spalování kalorií,Phrase,Fitness,Nutrition intent
+plán cvičení,Phrase,Fitness,Training plan content
+bazén hotelu,Phrase,Plavání,Hotel pool intent
+aquapark,Broad,Plavání,Water park intent
+tobogán,Broad,Plavání,Water slide intent

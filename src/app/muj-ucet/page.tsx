@@ -958,7 +958,7 @@ export default function MujUcetPage() {
               icon={<Heart className="mx-auto mb-3 h-10 w-10 text-zinc-300" />}
               title="Zatím nemáte žádná oblíbená sportoviště."
               subtitle="Klikněte na srdíčko u sportoviště a uložte si ho sem."
-              href="/sport/tenis"
+              href="/sport/squash"
               cta="Prozkoumat sportoviště"
             />
           ) : (

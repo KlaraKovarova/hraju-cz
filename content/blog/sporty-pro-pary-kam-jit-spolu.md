@@ -40,7 +40,7 @@ Tenis je prototyp sportu pro dva. Dvouhra je intenzivní a kompetitivní, čtyř
 
 - **Cena:** 200–500 Kč/hodina za kurt + trenér 400–800 Kč
 - **Rozdíl úrovní:** Problematický — zvažte společné lekce od začátku
-- **Kde:** [hraju.cz/sport/tenis](https://hraju.cz/sport/tenis)
+- **Kde:** [hraju.cz](https://hraju.cz/)
 
 ## 3. Badminton — nenáročný a zábavný
 
@@ -50,7 +50,7 @@ Badminton má nejnižší bariéru ze všech raketových sportů. Raketa je lehk
 
 - **Cena:** 150–300 Kč/hodina za kurt (75–150 Kč na osobu)
 - **Rozdíl úrovní:** Snadno překonatelný
-- **Kde:** [hraju.cz/sport/badminton](https://hraju.cz/sport/badminton)
+- **Kde:** [hraju.cz](https://hraju.cz/)
 
 ## 4. Plavání — každý na své dráze
 

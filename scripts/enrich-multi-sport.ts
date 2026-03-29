@@ -11,9 +11,7 @@ const DRY_RUN = !process.argv.includes("--apply");
 
 // Sport detection config: keywords to match, patterns to exclude
 const ACTIVE_SPORTS: Record<string, { keywords: string[]; exclude?: string[] }> = {
-  tenis: { keywords: ["tenis", "tennis", "tenisov"], exclude: ["stolní tenis", "stolniho tenis", "stolního tenis", "table tennis"] },
   squash: { keywords: ["squash"] },
-  badminton: { keywords: ["badminton"] },
   plavani: { keywords: ["plavec", "plavání", "koupališ", "bazén"], exclude: ["splavu", "splavy"] },
   fitness: { keywords: ["fitness", "posilovna"] },
   lezeni: { keywords: ["lezení", "lezecká", "lezeck", "boulder"] },

@@ -4,7 +4,7 @@ date: "2026-03-21"
 author: "Klára Kovářová"
 category: "komunita"
 excerpt: "Přehled nejlépe hodnocených sportovišť v Praze, Brně a Ostravě. Podívejte se, kam chodí sportovci nejraději — a kde se vyplatí zarezervovat kurt."
-sportTags: ["tenis", "squash", "plavani", "lezeni", "fitness"]
+sportTags: ["squash", "plavani", "lezeni", "fitness"]
 image: /images/blog/top-hodnocena-sportoviste-brezen-2026.jpg
 ---
 

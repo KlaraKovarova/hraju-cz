@@ -42,7 +42,7 @@ interface Review {
 
 interface ReviewListProps {
   facilityId: string;
-  /** Full URL for sharing (e.g. https://www.hraju.cz/sport/tenis/slug) */
+  /** Full URL for sharing (e.g. https://www.hraju.cz/sport/squash/slug) */
   facilityUrl?: string;
   /** Number of reviews per page */
   perPage?: number;

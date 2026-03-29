@@ -24,29 +24,6 @@ export type LinkCategory = keyof typeof LINK_CATEGORIES;
 
 export const SPORT_LINKS: SportLinkGroup[] = [
   {
-    sportSlug: "tenis",
-    links: [
-      {
-        title: "Český tenisový svaz",
-        url: "https://www.cztenis.cz",
-        description: "Oficiální stránky Českého tenisového svazu.",
-        category: "associations",
-      },
-      {
-        title: "Pravidla tenisu",
-        url: "https://www.cztenis.cz/pravidla-tenisu",
-        description: "Kompletní pravidla tenisu v češtině.",
-        category: "rules",
-      },
-      {
-        title: "Tenisové turnaje ČTS",
-        url: "https://www.cztenis.cz/turnaje",
-        description: "Kalendář tenisových turnajů v ČR.",
-        category: "tournaments",
-      },
-    ],
-  },
-  {
     sportSlug: "squash",
     links: [
       {
@@ -72,23 +49,6 @@ export const SPORT_LINKS: SportLinkGroup[] = [
         url: "https://czechsquash.cz/kalendar-akci/",
         description: "Kalendář squashových akcí a turnajů v ČR.",
         category: "events",
-      },
-    ],
-  },
-  {
-    sportSlug: "badminton",
-    links: [
-      {
-        title: "Český badmintonový svaz",
-        url: "https://www.czechbadminton.cz",
-        description: "Oficiální stránky Českého badmintonového svazu.",
-        category: "associations",
-      },
-      {
-        title: "Kalendář turnajů",
-        url: "https://www.czechbadminton.cz/turnaje/kalendar",
-        description: "Termínový kalendář badmintonových turnajů v ČR.",
-        category: "tournaments",
       },
     ],
   },

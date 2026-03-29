@@ -8,25 +8,11 @@ const SPORT_FACILITY_TYPES: Record<
     titleSuffix: string;
   }
 > = {
-  tenis: {
-    singular: "tenisový kurt",
-    plural: "tenisové kurty",
-    pluralGenitive: "tenisových kurtů",
-    instrumental: "tenisovými kurty",
-    titleSuffix: "sportoviště a haly v celé ČR",
-  },
   squash: {
     singular: "squashový kurt",
     plural: "squashové kurty",
     pluralGenitive: "squashových kurtů",
     instrumental: "squashovými kurty",
-    titleSuffix: "sportoviště a haly v celé ČR",
-  },
-  badminton: {
-    singular: "badmintonový kurt",
-    plural: "badmintonové kurty",
-    pluralGenitive: "badmintonových kurtů",
-    instrumental: "badmintonovými kurty",
     titleSuffix: "sportoviště a haly v celé ČR",
   },
   plavani: {

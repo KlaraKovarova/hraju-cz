@@ -6,9 +6,7 @@ interface BlogReviewCTAProps {
 }
 
 const SPORT_LABELS: Record<string, string> = {
-  tenis: "tenisové kurty",
   squash: "squashová centra",
-  badminton: "badmintonové haly",
   plavani: "bazény a aquaparky",
   fitness: "fitness centra",
   lezeni: "lezecké stěny",

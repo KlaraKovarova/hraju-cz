@@ -54,7 +54,7 @@ Tenis má relativně strmou křivku učení. Servis je technicky nejnáročněj�
 
 ### Kde hrát
 
-V Česku je přes 1 500 tenisových klubů. Najdete je v každém větším městě — stačí zadat váš sport na [hraju.cz/sport/tenis](https://hraju.cz/sport/tenis) a vyhledat kurty ve vašem okolí.
+V Česku je přes 1 500 tenisových klubů. Najdete je v každém větším městě — stačí zadat váš sport na [hraju.cz](https://hraju.cz/) a vyhledat kurty ve vašem okolí.
 
 ## Squash — nejintenzivnější raketový sport
 
@@ -117,7 +117,7 @@ Základní údery (forehand clear, podání) zvládnete za dvě lekce. Na soutě
 
 ### Kde hrát
 
-Badmintonové haly najdete v každém větším městě. V Praze a Brně je jich přes 10. Podívejte se na [hraju.cz/sport/badminton](https://hraju.cz/sport/badminton).
+Badmintonové haly najdete v každém větším městě. V Praze a Brně je jich přes 10. Podívejte se na [hraju.cz](https://hraju.cz/).
 
 ## Jak si vybrat? Pět otázek, které vám pomohou
 

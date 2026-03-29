@@ -128,7 +128,7 @@ Napište upřímnou recenzi. Konstruktivní kritika pomáhá sportovištím zlep
 
 ## Začněte teď
 
-1. Vyberte sportoviště, kde jste nedávno byli: [/sport/ferraty](/sport/ferraty) | [/sport/lezeni](/sport/lezeni) | [/sport/tenis](/sport/tenis)
+1. Vyberte sportoviště, kde jste nedávno byli: [/sport/ferraty](/sport/ferraty) | [/sport/lezeni](/sport/lezeni) | [hraju.cz](/)
 2. Klikněte „Byl/a jsem tady" pro check-in
 3. Napište recenzi — 2 minuty, 2–3 věty, hvězdičky
 4. Hotovo. Děkujeme.

@@ -4,7 +4,7 @@ date: "2026-03-21"
 author: "Klára Kovářová"
 category: "komunita"
 excerpt: "Chcete hrát tenis, squash nebo badminton, ale nemáte s kým? Praktický průvodce, jak najít spoluhráče ve vašem městě — online i offline."
-sportTags: ["tenis", "squash", "badminton", "volejbal", "lezeni"]
+sportTags: ["squash", "volejbal", "lezeni"]
 image: /images/blog/jak-najit-sportovniho-partnera.jpg
 ---
 

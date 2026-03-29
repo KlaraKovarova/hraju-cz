@@ -4,7 +4,7 @@ date: '2026-03-14'
 author: "Klára Kovářová"
 category: "tipy"
 excerpt: "Jak poznat kvalitní sportoviště bez osobní návštěvy? Sdílíme kritéria, podle kterých hodnotíme sportoviště, a na co se dívat v recenzích ostatních."
-sportTags: ["tenis", "squash", "badminton", "fitness", "plavani", "golf"]
+sportTags: ["squash", "fitness", "plavani", "golf"]
 image: /images/blog/nejlepsi-sportoviste-v-cesku-podle-hodnoceni.jpg
 ---
 

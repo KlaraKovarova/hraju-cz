@@ -201,8 +201,7 @@ Na hraju.cz najdete kompletní přehled sportovišť v Havířově s recenzemi o
 ## Najděte sportoviště v Česku
 
 Kompletní přehled najdete na:
-- [tenisové areály v Česku na hraju.cz](/sport/tenis)
-- [kde hrát tenis v Brně](/blog/kde-hrat-tenis-v-brne)
+- [tenisové areály v Česku na hraju.cz](/)
 - [fitness centra v Česku na hraju.cz](/sport/fitness)
 
 

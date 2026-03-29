@@ -15,8 +15,8 @@ async function getFacilities() {
       isLive: true,
     };
   } catch {
-    // Fall back to static data — show all tenis facilities as a representative sample
-    const { facilities } = await getFacilitiesBySport("tenis");
+    // Fall back to static data — show a representative sample
+    const { facilities } = await getFacilitiesBySport("squash");
     return { facilities, isLive: false };
   }
 }

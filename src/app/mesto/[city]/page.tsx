@@ -59,7 +59,7 @@ export default async function CrossSportCityPage({ params }: Props) {
   const mapMarkers = facilities
     .filter((f) => f.lat && f.lng)
     .map((f) => {
-      const sportSlug = f.sports[0]?.sport.slug ?? "tenis";
+      const sportSlug = f.sports[0]?.sport.slug ?? "squash";
       return {
         lat: f.lat!,
         lng: f.lng!,
@@ -97,7 +97,7 @@ export default async function CrossSportCityPage({ params }: Props) {
       "@type": "ListItem",
       position: i + 1,
       name: f.name,
-      url: `https://www.hraju.cz/sport/${f.sports[0]?.sport.slug ?? "tenis"}/${f.slug}`,
+      url: `https://www.hraju.cz/sport/${f.sports[0]?.sport.slug ?? "squash"}/${f.slug}`,
     })),
   };
 

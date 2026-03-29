@@ -94,7 +94,7 @@ Venkovní antukové kurty jsou pro rodiny ideální od dubna do října. Měkký
 
 **Pro celou rodinu:** Rodinné debly — 2 dospělí + 2 děti na jednom kurtu. Veřejné antukové kurty v parcích od 100 Kč/h, půjčení raket přímo na místě.
 
-Tenisové kurty na [hraju.cz](/sport/tenis). Víc: [Venkovní tenis v dubnu a květnu →](/blog/venkovni-tenis-duben-kveten-2026)
+Tenisové kurty na [hraju.cz](/). Víc: Venkovní tenis v dubnu a květnu →
 
 ## Cyklistika — od odrážedla po rodinné výlety
 

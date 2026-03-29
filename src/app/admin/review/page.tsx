@@ -248,9 +248,7 @@ export default function AdminReviewPage() {
       <div className="mb-6 flex flex-wrap gap-1.5">
         {[
           { slug: "", label: "Všechny sporty" },
-          { slug: "tenis", label: "Tenis" },
           { slug: "squash", label: "Squash" },
-          { slug: "badminton", label: "Badminton" },
           { slug: "plavani", label: "Plavání" },
           { slug: "fitness", label: "Fitness" },
           { slug: "lezeni", label: "Lezení" },

@@ -23,9 +23,7 @@ const PHP_OUTPUT = join(DATA_DIR, "firmy-enrich-contacts.php");
 const REPORT_OUTPUT = join(DATA_DIR, "firmy-enrich-report.json");
 
 const SPORTS = [
-  "tenis",
   "squash",
-  "badminton",
   "plavani",
   "fitness",
   "bowling",
