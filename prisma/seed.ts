@@ -47,18 +47,6 @@ async function main() {
       },
     }),
     prisma.sport.upsert({
-      where: { slug: "volejbal" },
-      update: {},
-      create: {
-        slug: "volejbal",
-        name: "Volleyball",
-        nameCs: "Volejbal",
-        subdomain: "volejbal",
-        description: "Volejbalové kurty v České republice",
-        icon: "🏐",
-      },
-    }),
-    prisma.sport.upsert({
       where: { slug: "plavani" },
       update: {},
       create: {
@@ -68,18 +56,6 @@ async function main() {
         subdomain: "plavani",
         description: "Plavecké bazény v České republice",
         icon: "🏊",
-      },
-    }),
-    prisma.sport.upsert({
-      where: { slug: "golf" },
-      update: {},
-      create: {
-        slug: "golf",
-        name: "Golf",
-        nameCs: "Golf",
-        subdomain: "golf",
-        description: "Golfová hřiště, driving range, indoor golf",
-        icon: "⛳",
       },
     }),
     prisma.sport.upsert({

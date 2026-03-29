@@ -296,7 +296,6 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
   // Sport-specific schema.org types — use array with LocalBusiness for rich results
   const sportTypeMap: Record<string, string> = {
     tenis: "TennisComplex",
-    golf: "GolfCourse",
     fitness: "ExerciseGym",
   };
   const specificType = sportTypeMap[sportSlug] ?? "SportsActivityLocation";

@@ -29,26 +29,12 @@ const SPORT_FACILITY_TYPES: Record<
     instrumental: "badmintonovými kurty",
     titleSuffix: "sportoviště a haly v celé ČR",
   },
-  volejbal: {
-    singular: "volejbalové hřiště",
-    plural: "volejbalová hřiště",
-    pluralGenitive: "volejbalových hřišť",
-    instrumental: "volejbalovými hřišti",
-    titleSuffix: "sportoviště a haly v celé ČR",
-  },
   plavani: {
     singular: "bazén",
     plural: "bazény a plavecké areály",
     pluralGenitive: "bazénů",
     instrumental: "bazény",
     titleSuffix: "bazény a plavecké areály v celé ČR",
-  },
-  golf: {
-    singular: "golfové hřiště",
-    plural: "golfová hřiště",
-    pluralGenitive: "golfových hřišť",
-    instrumental: "golfovými hřišti",
-    titleSuffix: "hřiště a driving range v celé ČR",
   },
   fitness: {
     singular: "fitness centrum",

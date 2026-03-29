@@ -141,23 +141,6 @@ export const BADGE_DEFINITIONS: BadgeDefinition[] = [
     },
   },
   {
-    slug: "golfista",
-    name: "Golfista",
-    description: "Check-in na 3+ golfových hřištích",
-    emoji: "⛳",
-    sportSlug: "golf",
-    category: "sport",
-    check: async (ctx) => {
-      const count = await prisma.visit.count({
-        where: {
-          userId: ctx.userId,
-          facility: { sports: { some: { sport: { slug: "golf" } } } },
-        },
-      });
-      return count >= 3;
-    },
-  },
-  {
     slug: "fitness-guru",
     name: "Fitness Guru",
     description: "Check-in v 5+ fitness centrech",
@@ -740,7 +723,7 @@ export async function getUserBadgeProgress(userId: string): Promise<
   const summerEnd = new Date(2026, 8, 1);
 
   const [
-    ferratyVisits, lezeniVisits, plavaniVisits, golfVisits, fitnessVisits,
+    ferratyVisits, lezeniVisits, plavaniVisits, fitnessVisits,
     seasonReviews, totalReviews, maxHelpful, totalHelpful,
     allVisits, approvedReviews, springVisits, summerVisits,
     aprilFerratyVisits, aprilLezeniVisits,
@@ -759,9 +742,6 @@ export async function getUserBadgeProgress(userId: string): Promise<
     }),
     prisma.visit.count({
       where: { userId, facility: { sports: { some: { sport: { slug: "plavani" } } } } },
-    }),
-    prisma.visit.count({
-      where: { userId, facility: { sports: { some: { sport: { slug: "golf" } } } } },
     }),
     prisma.visit.count({
       where: { userId, facility: { sports: { some: { sport: { slug: "fitness" } } } } },
@@ -980,16 +960,6 @@ export async function getUserBadgeProgress(userId: string): Promise<
       category: "sport",
       earned: earnedSet.has("plavec"),
       progress: Math.min(plavaniVisits, 3),
-      target: 3,
-    },
-    {
-      slug: "golfista",
-      name: "Golfista",
-      description: "Check-in na 3+ golfových hřištích",
-      emoji: "⛳",
-      category: "sport",
-      earned: earnedSet.has("golfista"),
-      progress: Math.min(golfVisits, 3),
       target: 3,
     },
     {

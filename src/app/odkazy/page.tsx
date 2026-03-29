@@ -7,7 +7,7 @@ import { SPORT_LINKS, LINK_CATEGORIES, type LinkCategory } from "@/lib/links";
 export const metadata: Metadata = {
   title: "Užitečné odkazy ke sportům",
   description:
-    "Užitečné odkazy ke sportům v České republice — asociace, pravidla, turnaje a kalendáře akcí pro tenis, squash, badminton, volejbal, plavání, golf a fitness.",
+    "Užitečné odkazy ke sportům v České republice — asociace, pravidla, turnaje a kalendáře akcí pro tenis, squash, badminton, plavání, fitness a další.",
   openGraph: {
     title: "Užitečné odkazy ke sportům | hraju.cz",
     description:

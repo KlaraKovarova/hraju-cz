@@ -208,7 +208,7 @@ export default async function Home() {
             </h1>
             <p className="mt-4 text-lg text-zinc-600 sm:text-xl">
               Najdi sportoviště poblíž tebe. Tenisové kurty, squash, badminton,
-              volejbal i bazény po celé České republice.
+              bazény i fitness po celé České republice.
             </p>
 
             {/* Search Box */}

@@ -15,11 +15,6 @@ export const BADGE_META: Record<string, { name: string; emoji: string; descripti
     emoji: "\uD83C\uDFCA",
     description: "Check-in na 3+ bazénech",
   },
-  golfista: {
-    name: "Golfista",
-    emoji: "\u26F3",
-    description: "Check-in na 3+ golfových hřištích",
-  },
   "fitness-guru": {
     name: "Fitness Guru",
     emoji: "\uD83D\uDCAA",

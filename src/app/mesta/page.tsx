@@ -6,7 +6,7 @@ import { getTopCitiesOverallForMesto, getTotalFacilityCount } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Města se sportovišti",
   description:
-    "Přehled měst s nejvíce sportovišti v České republice. Najděte sportoviště ve svém městě — tenis, squash, badminton, volejbal a další.",
+    "Přehled měst s nejvíce sportovišti v České republice. Najděte sportoviště ve svém městě — tenis, squash, badminton, plavání a další.",
   openGraph: {
     title: "Města se sportovišti | hraju.cz",
     description:

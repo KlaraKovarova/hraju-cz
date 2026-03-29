@@ -57,8 +57,7 @@ export default function AboutPage() {
               hraju.cz je sportovní platforma, která pomáhá lidem najít
               sportoviště v jejich okolí. Shromažďujeme informace o tenisových
               kurtech, squashových halách, badmintonových centrech, bazénech,
-              fitness centrech, lezeckých stěnách, golfových hřištích,
-              volejbalových halách a via ferratách po celé České republice.
+              fitness centrech, lezeckých stěnách a via ferratách po celé České republice.
             </p>
             <p className="mt-3">
               Naším cílem je vytvořit nejucelenější databázi sportovišť v ČR

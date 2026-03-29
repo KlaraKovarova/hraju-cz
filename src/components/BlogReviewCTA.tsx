@@ -12,8 +12,6 @@ const SPORT_LABELS: Record<string, string> = {
   plavani: "bazény a aquaparky",
   fitness: "fitness centra",
   lezeni: "lezecké stěny",
-  volejbal: "volejbalová hřiště",
-  golf: "golfová hřiště",
   ferraty: "via ferraty",
 };
 

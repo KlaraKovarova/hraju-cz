@@ -93,29 +93,6 @@ export const SPORT_LINKS: SportLinkGroup[] = [
     ],
   },
   {
-    sportSlug: "volejbal",
-    links: [
-      {
-        title: "Český volejbalový svaz",
-        url: "https://www.cvf.cz",
-        description: "Oficiální stránky Českého volejbalového svazu.",
-        category: "associations",
-      },
-      {
-        title: "Dokumenty a pravidla",
-        url: "https://www.cvf.cz/dokumenty",
-        description: "Pravidla volejbalu, beachvolejbalu a soutěžní řády.",
-        category: "rules",
-      },
-      {
-        title: "Volejbalové soutěže",
-        url: "https://www.cvf.cz/souteze",
-        description: "Přehled volejbalových soutěží v ČR.",
-        category: "tournaments",
-      },
-    ],
-  },
-  {
     sportSlug: "plavani",
     links: [
       {
@@ -135,29 +112,6 @@ export const SPORT_LINKS: SportLinkGroup[] = [
         url: "https://vysledky.czechswimming.cz/prehled",
         description: "Výsledky a přehled plaveckých závodů v ČR.",
         category: "events",
-      },
-    ],
-  },
-  {
-    sportSlug: "golf",
-    links: [
-      {
-        title: "Česká golfová federace",
-        url: "https://www.cgf.cz",
-        description: "Oficiální stránky České golfové federace.",
-        category: "associations",
-      },
-      {
-        title: "Pravidla golfu (PDF)",
-        url: "https://fls.cgf.cz/DBFL/CGSRedaction/Documents/Pravidla%20golfu%202023%20-%20v230508.pdf",
-        description: "Kompletní pravidla golfu v češtině (PDF ke stažení).",
-        category: "rules",
-      },
-      {
-        title: "Golfové turnaje",
-        url: "https://www.cgf.cz/turnaje",
-        description: "Kalendář golfových turnajů v České republice.",
-        category: "tournaments",
       },
     ],
   },

@@ -70,28 +70,6 @@ const SPORT_FAQS: Record<string, FaqItem[]> = {
         "Badminton se hraje v hale se sítí, crossminton (speed badminton) se hraje venku bez sítě. Badmintonový košíček je lehčí a pomalejší, crossmintonový je těžší a navržený pro venkovní hru.",
     },
   ],
-  volejbal: [
-    {
-      question: "Kde hrát volejbal v Česku?",
-      answer:
-        "Na hraju.cz najdete přehled volejbalových hřišť a hal po celé ČR. Volejbal se hraje v tělocvičnách, sportovních halách i na venkovních beachvolejbalových kurtech.",
-    },
-    {
-      question: "Kolik hráčů potřebuji na volejbal?",
-      answer:
-        "Klasický volejbal se hraje 6 vs 6, ale populární je i beachvolejbal (2 vs 2). Pro rekreační hru stačí i menší počet hráčů. Mnoho sportovišť nabízí volné hodiny, kde se můžete přidat.",
-    },
-    {
-      question: "Kolik stojí pronájem volejbalového hřiště?",
-      answer:
-        "Pronájem tělocvičny nebo haly na volejbal stojí 300–800 Kč/h podle lokality. Beachvolejbalové kurty se pronajímají za 200–500 Kč/h. Venkovní veřejná hřiště jsou často zdarma.",
-    },
-    {
-      question: "Jaká obuv je vhodná na volejbal?",
-      answer:
-        "Na halový volejbal potřebujete sálovou obuv s nebarvicí podrážkou a dobrým tlumením. Na beachvolejbal se hraje naboso. Investice do kvalitní sálové obuvi se vyplatí kvůli prevenci zranění.",
-    },
-  ],
   plavani: [
     {
       question: "Kolik stojí vstup do bazénu?",
@@ -112,28 +90,6 @@ const SPORT_FAQS: Record<string, FaqItem[]> = {
       question: "Kdy jsou bazény nejméně plné?",
       answer:
         "Nejméně vytížené jsou bazény v dopoledních hodinách ve všední dny. Ráno před prací (6:00–8:00) a odpoledne (13:00–15:00) bývá také klid. Víkendy a večery jsou obvykle nejrušnější.",
-    },
-  ],
-  golf: [
-    {
-      question: "Kolik stojí hra golfu v Česku?",
-      answer:
-        "Green fee na 18 jamek stojí 500–2 500 Kč podle hřiště a sezóny. Cvičné driving range vyjdou na 50–150 Kč za košík míčků. Mnoho hřišť nabízí zvýhodněné odpolední nebo zimní tarify.",
-    },
-    {
-      question: "Potřebuji vlastní golfové vybavení?",
-      answer:
-        "Pro začátek ne — většina golfových hřišť a akademií nabízí půjčení holí. Základní set na začátek stačí poloviční (7 holí) a vyjde od 3 000 Kč za použité hole.",
-    },
-    {
-      question: "Jak začít s golfem?",
-      answer:
-        "Doporučujeme začít kurzem s trenérem na driving range nebo v golfové akademii. Po zvládnutí základů složíte zkoušku (green card) a můžete hrát na hřištích. Kurzy pro začátečníky nabízí většina areálů.",
-    },
-    {
-      question: "Co je to handicap a green card?",
-      answer:
-        "Green card je osvědčení o znalosti pravidel a základních dovedností — potřebujete ji k samostatné hře na hřišti. Handicap (HCP) vyjadřuje vaši herní úroveň — čím nižší, tím lepší hráč.",
     },
   ],
   fitness: [
