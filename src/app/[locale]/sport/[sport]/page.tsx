@@ -14,6 +14,7 @@ import { ActivityFeed } from "@/components/ActivityFeed";
 import { BannerSlot } from "@/components/BannerSlot";
 import { ChallengeCards } from "@/components/ChallengeCards";
 import { MonthlyChallenges } from "@/components/MonthlyChallenges";
+import { SeasonBanner } from "@/components/SeasonBanner";
 import { getActiveChallenges } from "@/lib/monthly-challenges";
 import { getSportFaqs } from "@/lib/sport-faq";
 import { getPostsBySport, CATEGORIES } from "@/lib/blog";
@@ -291,6 +292,11 @@ export default async function SportPage({ params }: SportPageProps) {
         </div>
       </section>
 
+      {/* Seasonal banner (ferraty/lezení, April–October) */}
+      {(sportSlug === "ferraty" || sportSlug === "lezeni") && (
+        <SeasonBanner sportSlug={sportSlug} />
+      )}
+
       {/* Map View — all facilities with coordinates */}
       {mapMarkers.length > 0 && (
         <section className="mx-auto max-w-6xl px-6 py-8">
@@ -309,7 +315,7 @@ export default async function SportPage({ params }: SportPageProps) {
       )}
 
       {/* Regions Grid */}
-      <section className="mx-auto max-w-6xl px-6 py-8 border-t border-zinc-100">
+      <section id="kraje" className="mx-auto max-w-6xl px-6 py-8 border-t border-zinc-100">
         <h2 className="mb-6 text-xl font-bold text-zinc-900">
           Vyberte kraj
         </h2>
@@ -346,12 +352,12 @@ export default async function SportPage({ params }: SportPageProps) {
 
       {/* Sport-specific challenges (ferraty, lezeni) */}
       {(sportSlug === "ferraty" || sportSlug === "lezeni") && (
-        <>
+        <div id="vyzvy">
           <MonthlyChallenges />
           <section className="mx-auto max-w-6xl px-6 pt-4">
             <ChallengeCards filter="sport" />
           </section>
-        </>
+        </div>
       )}
 
       {/* Top Cities */}
