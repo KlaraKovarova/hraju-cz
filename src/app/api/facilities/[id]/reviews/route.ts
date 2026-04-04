@@ -153,6 +153,17 @@ export async function POST(
     return NextResponse.json({ error: "Překročen denní limit recenzí. Zkuste to zítra." }, { status: 429 });
   }
 
+  // Trust tier: auto-approve if user has 1+ approved reviews and 0 flagged reviews
+  const [approvedCount, flaggedCount] = await Promise.all([
+    prisma.review.count({
+      where: { userId: session.userId, isApproved: true },
+    }),
+    prisma.review.count({
+      where: { userId: session.userId, flagged: true },
+    }),
+  ]);
+  const isTrusted = approvedCount >= 1 && flaggedCount === 0;
+
   const review = await prisma.review.create({
     data: {
       facilityId: id,
@@ -162,6 +173,7 @@ export async function POST(
       rating,
       title: title?.trim() || null,
       text: text?.trim() || null,
+      isApproved: isTrusted,
     },
   });
 
@@ -244,5 +256,9 @@ export async function POST(
     // Badge check failure shouldn't block the review
   }
 
-  return NextResponse.json({ id: review.id, message: "Děkujeme za recenzi! Bude zobrazena po schválení.", newBadges }, { status: 201 });
+  const message = isTrusted
+    ? "Děkujeme za recenzi! Vaše recenze byla automaticky zveřejněna."
+    : "Děkujeme za recenzi! Bude zobrazena po schválení.";
+
+  return NextResponse.json({ id: review.id, message, autoApproved: isTrusted, newBadges }, { status: 201 });
 }

@@ -9,9 +9,10 @@ export async function POST(
   const { reviewId } = await params;
 
   try {
+    // Flag the review and revoke approval (trusted user loses auto-publish)
     await prisma.review.update({
       where: { id: reviewId, isApproved: true },
-      data: { flagged: true },
+      data: { flagged: true, isApproved: false },
     });
     return NextResponse.json({ flagged: true });
   } catch {

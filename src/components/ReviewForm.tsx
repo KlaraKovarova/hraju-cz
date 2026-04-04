@@ -30,6 +30,7 @@ export function ReviewForm({ facilityId, currentPath, facilityName, facilityUrl 
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
   const [newBadges, setNewBadges] = useState<{ slug: string; name: string; emoji: string }[]>([]);
+  const [autoApproved, setAutoApproved] = useState(false);
 
   useEffect(() => {
     fetch("/api/auth/me")
@@ -65,6 +66,7 @@ export function ReviewForm({ facilityId, currentPath, facilityName, facilityUrl 
       if (res.ok) {
         const data = await res.json();
         setSuccess(true);
+        setAutoApproved(!!data.autoApproved);
         if (data.newBadges?.length > 0) {
           setNewBadges(data.newBadges);
         }
@@ -87,6 +89,7 @@ export function ReviewForm({ facilityId, currentPath, facilityName, facilityUrl 
         facilityUrl={facilityUrl}
         currentPath={currentPath}
         newBadges={newBadges}
+        autoApproved={autoApproved}
       />
     );
   }
@@ -211,12 +214,14 @@ function ShareAfterReview({
   facilityUrl,
   currentPath,
   newBadges,
+  autoApproved,
 }: {
   facilityId: string;
   facilityName?: string;
   facilityUrl?: string;
   currentPath: string;
   newBadges: { slug: string; name: string; emoji: string }[];
+  autoApproved: boolean;
 }) {
   const [hasNativeShare, setHasNativeShare] = useState(false);
 
@@ -244,7 +249,9 @@ function ShareAfterReview({
         Děkujeme za recenzi!
       </p>
       <p className="mt-1 text-xs text-emerald-600">
-        Bude zobrazena po schválení.
+        {autoApproved
+          ? "Vaše recenze byla automaticky zveřejněna."
+          : "Bude zobrazena po schválení."}
       </p>
       {newBadges.length > 0 && (
         <div className="mt-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-2">
