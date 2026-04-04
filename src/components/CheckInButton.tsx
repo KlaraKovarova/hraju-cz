@@ -1,10 +1,18 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { MapPinCheck, Loader2, LogIn, Share2, Check, Camera, Star } from "lucide-react";
+import { MapPinCheck, Loader2, LogIn, Share2, Check, Camera, Star, MapPin, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { trackEvent } from "@/lib/analytics";
 import { PhotoUpload } from "./PhotoUpload";
+
+type NearbySuggestion = {
+  name: string;
+  slug: string;
+  sportSlug: string;
+  city: string;
+  distanceKm: number | null;
+};
 
 interface CheckInButtonProps {
   facilityId: string;
@@ -25,6 +33,7 @@ export function CheckInButton({ facilityId, currentPath, facilityName }: CheckIn
   const [photos, setPhotos] = useState<{ id: string; url: string }[]>([]);
   const [visitId, setVisitId] = useState<string | null>(null);
   const [newBadges, setNewBadges] = useState<{ slug: string; name: string; emoji: string }[]>([]);
+  const [suggestions, setSuggestions] = useState<NearbySuggestion[]>([]);
 
   useEffect(() => {
     async function load() {
@@ -80,6 +89,11 @@ export function CheckInButton({ facilityId, currentPath, facilityName }: CheckIn
             setNewBadges(data.newBadges);
             setTimeout(() => setNewBadges([]), 6000);
           }
+          // Fetch nearby unvisited facilities (fire-and-forget)
+          fetch(`/api/facilities/${facilityId}/visit/nearby`)
+            .then((r) => r.ok ? r.json() : null)
+            .then((d) => { if (d?.suggestions?.length) setSuggestions(d.suggestions); })
+            .catch(() => {});
         }
       }
     } catch {
@@ -261,6 +275,33 @@ export function CheckInButton({ facilityId, currentPath, facilityName }: CheckIn
                 photos={photos}
                 onPhotosChange={handleVisitPhotos}
               />
+            </div>
+          )}
+          {/* Nearby unvisited facility suggestions */}
+          {suggestions.length > 0 && (
+            <div className="rounded-xl border border-blue-100 bg-blue-50/50 px-4 py-3">
+              <p className="mb-2 text-xs font-semibold text-blue-800 uppercase tracking-wide">Kam příště?</p>
+              <div className="space-y-1.5">
+                {suggestions.map((s) => (
+                  <Link
+                    key={s.slug}
+                    href={`/sport/${s.sportSlug}/${s.slug}`}
+                    onClick={() => trackEvent("checkin_nearby_click", { facilityId, targetSlug: s.slug })}
+                    className="flex items-center gap-2 rounded-lg bg-white px-3 py-2 text-sm transition hover:bg-blue-50"
+                  >
+                    <MapPin className="h-3.5 w-3.5 shrink-0 text-blue-500" />
+                    <span className="truncate font-medium text-zinc-800">{s.name}</span>
+                    <span className="ml-auto flex shrink-0 items-center gap-1 text-xs text-zinc-500">
+                      {s.distanceKm != null
+                        ? s.distanceKm < 1
+                          ? `${Math.round(s.distanceKm * 1000)} m`
+                          : `${s.distanceKm.toFixed(1)} km`
+                        : s.city}
+                      <ChevronRight className="h-3 w-3 text-zinc-400" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
             </div>
           )}
         </div>
