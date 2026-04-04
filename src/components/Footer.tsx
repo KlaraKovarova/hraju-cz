@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { SPORTS } from "@/lib/sports";
 
 export function Footer() {
   const pathname = usePathname();
+  const t = useTranslations("Footer");
   if (pathname.startsWith("/admin")) return null;
 
   return (
@@ -18,7 +20,7 @@ export function Footer() {
               <span className="text-emerald-600">.cz</span>
             </span>
             <p className="mt-1 text-sm text-zinc-500">
-              Sportoviště v České republice
+              {t("tagline")}
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-zinc-500">
@@ -37,7 +39,7 @@ export function Footer() {
         {/* Operator details */}
         <div className="mt-6 border-t border-zinc-200 pt-6 text-center text-xs text-zinc-500">
           <p>
-            Provozovatel: Silex, spol. s r.o. | IČ: 25058738
+            {t("operator")}
           </p>
         </div>
 
@@ -47,60 +49,59 @@ export function Footer() {
               href="/mesta"
               className="hover:text-zinc-600"
             >
-              Města
+              {t("cities")}
             </Link>
             <Link
               href="/blog"
               className="hover:text-zinc-600"
             >
-              Blog
+              {t("blog")}
             </Link>
             <Link
               href="/odkazy"
               className="hover:text-zinc-600"
             >
-              Odkazy
+              {t("links")}
             </Link>
             <Link
               href="/akce"
               className="hover:text-zinc-600"
             >
-              Akce
+              {t("events")}
             </Link>
             <Link
               href="/pridat-sportoviste"
               className="hover:text-zinc-600"
             >
-              Přidat sportoviště
+              {t("addFacility")}
             </Link>
             <Link
               href="/o-nas"
               className="hover:text-zinc-600"
             >
-              O nás
+              {t("about")}
             </Link>
             <Link
               href="/kontakt"
               className="hover:text-zinc-600"
             >
-              Kontakt
+              {t("contact")}
             </Link>
             <Link
               href="/podminky-pouziti"
               className="hover:text-zinc-600"
             >
-              Podmínky použití
+              {t("terms")}
             </Link>
             <Link
               href="/ochrana-osobnich-udaju"
               className="hover:text-zinc-600"
             >
-              Ochrana osobních údajů
+              {t("privacy")}
             </Link>
           </div>
           <span>
-            &copy; {new Date().getFullYear()} hraju.cz — Všechna práva
-            vyhrazena
+            {t("copyright", { year: new Date().getFullYear() })}
           </span>
         </div>
       </div>

@@ -1,5 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { jwtVerify } from "jose";
+import createIntlMiddleware from "next-intl/middleware";
+import { routing } from "./i18n/routing";
+import { locales, defaultLocale } from "./i18n/config";
+
+const intlMiddleware = createIntlMiddleware(routing);
 
 const ADMIN_COOKIE = "admin_session";
 const SECRET = new TextEncoder().encode(
@@ -18,55 +23,72 @@ async function isAdminAuthenticated(request: NextRequest): Promise<boolean> {
   }
 }
 
+/** Strip locale prefix from pathname for pattern matching */
+function stripLocalePrefix(pathname: string): string {
+  for (const locale of locales) {
+    if (locale === defaultLocale) continue;
+    const prefix = `/${locale}`;
+    if (pathname === prefix || pathname.startsWith(`${prefix}/`)) {
+      return pathname.slice(prefix.length) || "/";
+    }
+  }
+  return pathname;
+}
+
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Skip login page
-  if (pathname === "/admin/login") {
+  // API routes — admin auth only, no locale routing
+  if (pathname.startsWith("/api/")) {
+    // Skip login endpoint
+    if (pathname.startsWith("/api/admin/auth")) {
+      return NextResponse.next();
+    }
+
+    // Protect admin API routes
+    if (pathname.startsWith("/api/admin")) {
+      const authenticated = await isAdminAuthenticated(request);
+      if (!authenticated) {
+        return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+      }
+    }
+
+    // Protect admin-only API mutations
+    const method = request.method;
+    const isMutation = method === "POST" || method === "PATCH" || method === "DELETE";
+
+    if (isMutation) {
+      const communitySubpaths = ["/reviews", "/visit", "/favorite", "/tips", "/replies", "/helpful", "/flag"];
+      const isCommunityEndpoint = communitySubpaths.some(sub => pathname.includes(sub));
+      const needsAdmin =
+        (pathname.startsWith("/api/facilities") && !isCommunityEndpoint) ||
+        pathname.startsWith("/api/owner-tokens") ||
+        (pathname.startsWith("/api/edit-requests") && method !== "POST");
+
+      if (needsAdmin) {
+        const authenticated = await isAdminAuthenticated(request);
+        if (!authenticated) {
+          return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+        }
+      }
+    }
+
     return NextResponse.next();
   }
 
-  // Protect admin pages
-  if (pathname.startsWith("/admin")) {
+  // Page routes — check admin auth, then delegate to intl middleware
+  const normalizedPath = stripLocalePrefix(pathname);
+
+  // Admin pages (except login) — require auth
+  if (normalizedPath.startsWith("/admin") && normalizedPath !== "/admin/login") {
     const authenticated = await isAdminAuthenticated(request);
     if (!authenticated) {
       return NextResponse.redirect(new URL("/admin/login", request.url));
     }
   }
 
-  // Protect admin API routes (except auth endpoint)
-  if (pathname.startsWith("/api/admin") && !pathname.startsWith("/api/admin/auth")) {
-    const authenticated = await isAdminAuthenticated(request);
-    if (!authenticated) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
-  }
-
-  // Protect admin-only API mutations
-  const method = request.method;
-  const isMutation = method === "POST" || method === "PATCH" || method === "DELETE";
-
-  if (isMutation) {
-    // /api/facilities — all mutations are admin-only except community endpoints
-    // /api/owner-tokens — generating claim tokens is admin-only
-    // /api/edit-requests PATCH/DELETE — reviewing requests is admin-only
-    // /api/edit-requests POST — public (anyone can submit a suggestion)
-    const communitySubpaths = ["/reviews", "/visit", "/favorite", "/tips", "/replies", "/helpful", "/flag"];
-    const isCommunityEndpoint = communitySubpaths.some(sub => pathname.includes(sub));
-    const needsAdmin =
-      (pathname.startsWith("/api/facilities") && !isCommunityEndpoint) ||
-      pathname.startsWith("/api/owner-tokens") ||
-      (pathname.startsWith("/api/edit-requests") && method !== "POST");
-
-    if (needsAdmin) {
-      const authenticated = await isAdminAuthenticated(request);
-      if (!authenticated) {
-        return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-      }
-    }
-  }
-
-  return NextResponse.next();
+  // Delegate to next-intl middleware for locale detection and routing
+  return intlMiddleware(request);
 }
 
 export const config = {

@@ -1,0 +1,24 @@
+{
+  "Navigation": {
+    "notifications": "Oznámení",
+    "logout": "Odhlásit",
+    "login": "Přihlásit se"
+  },
+  "Footer": {
+    "tagline": "Sportoviště v České republice",
+    "operator": "Provozovatel: Silex, spol. s r.o. | IČ: 25058738",
+    "cities": "Města",
+    "blog": "Blog",
+    "links": "Odkazy",
+    "events": "Akce",
+    "addFacility": "Přidat sportoviště",
+    "about": "O nás",
+    "contact": "Kontakt",
+    "terms": "Podmínky použití",
+    "privacy": "Ochrana osobních údajů",
+    "copyright": "© {year} hraju.cz — Všechna práva vyhrazena"
+  },
+  "LanguageSwitcher": {
+    "label": "Jazyk"
+  }
+}

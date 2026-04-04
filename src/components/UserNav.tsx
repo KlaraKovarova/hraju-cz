@@ -4,7 +4,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { User, LogOut, Bell } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { SiteSearch } from "@/components/SiteSearch";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 interface UserData {
   userId: string;
@@ -14,6 +16,7 @@ interface UserData {
 
 export function UserNav() {
   const pathname = usePathname();
+  const t = useTranslations("Navigation");
   const [user, setUser] = useState<UserData | null>(null);
   const [checked, setChecked] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);
@@ -62,7 +65,7 @@ export function UserNav() {
             <Link
               href="/muj-ucet"
               className="relative hover:text-emerald-600 transition-colors"
-              aria-label="Oznámení"
+              aria-label={t("notifications")}
             >
               <Bell className="h-3.5 w-3.5" />
               {unreadCount > 0 && (
@@ -76,7 +79,7 @@ export function UserNav() {
               className="flex items-center gap-1 text-zinc-400 hover:text-zinc-700 transition-colors"
             >
               <LogOut className="h-3 w-3" />
-              Odhlásit
+              {t("logout")}
             </button>
           </>
         ) : (
@@ -85,9 +88,10 @@ export function UserNav() {
             className="flex items-center gap-1 text-zinc-400 hover:text-emerald-600 transition-colors"
           >
             <User className="h-3 w-3" />
-            Přihlásit se
+            {t("login")}
           </Link>
         )}
+        <LanguageSwitcher />
         </div>
       </div>
     </div>

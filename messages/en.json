@@ -1,0 +1,24 @@
+{
+  "Navigation": {
+    "notifications": "Notifications",
+    "logout": "Log out",
+    "login": "Sign in"
+  },
+  "Footer": {
+    "tagline": "Sports facilities in the Czech Republic",
+    "operator": "Operator: Silex, spol. s r.o. | IČ: 25058738",
+    "cities": "Cities",
+    "blog": "Blog",
+    "links": "Links",
+    "events": "Events",
+    "addFacility": "Add facility",
+    "about": "About us",
+    "contact": "Contact",
+    "terms": "Terms of use",
+    "privacy": "Privacy policy",
+    "copyright": "© {year} hraju.cz — All rights reserved"
+  },
+  "LanguageSwitcher": {
+    "label": "Language"
+  }
+}

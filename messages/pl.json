@@ -1,0 +1,24 @@
+{
+  "Navigation": {
+    "notifications": "Powiadomienia",
+    "logout": "Wyloguj",
+    "login": "Zaloguj się"
+  },
+  "Footer": {
+    "tagline": "Obiekty sportowe w Czechach",
+    "operator": "Operator: Silex, spol. s r.o. | IČ: 25058738",
+    "cities": "Miasta",
+    "blog": "Blog",
+    "links": "Linki",
+    "events": "Wydarzenia",
+    "addFacility": "Dodaj obiekt",
+    "about": "O nas",
+    "contact": "Kontakt",
+    "terms": "Warunki korzystania",
+    "privacy": "Polityka prywatności",
+    "copyright": "© {year} hraju.cz — Wszelkie prawa zastrzeżone"
+  },
+  "LanguageSwitcher": {
+    "label": "Język"
+  }
+}
