@@ -1,0 +1,18 @@
+name: Challenge Countdown Email
+
+on:
+  schedule:
+    # Daily at 8:00 UTC = 10:00 CEST (10 AM Czech time)
+    - cron: '0 8 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  send-countdown:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send challenge countdown emails
+        run: |
+          curl -s -X POST \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            -H "Content-Type: application/json" \
+            "${{ vars.PRODUCTION_URL || 'https://www.hraju.cz' }}/api/cron/challenge-countdown"

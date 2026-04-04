@@ -594,6 +594,109 @@ export async function sendReviewReplyNotificationEmail(
   }
 }
 
+export interface BadgeNudgeItem {
+  emoji: string;
+  name: string;
+  progress: number;
+  target: number;
+  remaining: number;
+}
+
+export async function sendBadgeProximityNudgeEmail(
+  to: string,
+  userName: string | null,
+  badges: BadgeNudgeItem[],
+  unsubscribeUrl: string
+): Promise<boolean> {
+  const transporter = createTransporter();
+  if (!transporter) {
+    console.warn("SMTP not configured, skipping badge nudge email");
+    return false;
+  }
+
+  if (badges.length === 0) return false;
+
+  const greeting = userName ? `Ahoj ${userName}` : "Dobrý den";
+  const profileUrl = "https://www.hraju.cz/muj-ucet";
+
+  const badgesText = badges
+    .map(
+      (b) =>
+        `${b.emoji} ${b.name} — ${b.progress}/${b.target} (zbývá ${b.remaining === 1 ? "už jen 1" : `ještě ${b.remaining}`})`
+    )
+    .join("\n");
+
+  const badgesHtml = badges
+    .map(
+      (b) => `
+        <div style="background: #f4f4f5; border-radius: 12px; padding: 16px; margin: 8px 0;">
+          <div style="font-size: 20px; margin-bottom: 4px;">${b.emoji} <strong>${b.name}</strong></div>
+          <div style="color: #3f3f46; font-size: 14px;">${b.progress}/${b.target} — ${b.remaining === 1 ? "už jen 1 akce!" : `ještě ${b.remaining} akce`}</div>
+          <div style="background: #e4e4e7; border-radius: 999px; height: 8px; margin-top: 8px; overflow: hidden;">
+            <div style="background: #059669; height: 100%; width: ${Math.round((b.progress / b.target) * 100)}%; border-radius: 999px;"></div>
+          </div>
+        </div>`
+    )
+    .join("");
+
+  const subject =
+    badges.length === 1 && badges[0].remaining === 1
+      ? `${badges[0].emoji} Zbývá ti jen 1 krok k odznaku ${badges[0].name}!`
+      : `Jsi blízko k získání odznaku na hraju.cz!`;
+
+  try {
+    await transporter.sendMail({
+      from: `"hraju.cz" <${process.env.SMTP_USER}>`,
+      to,
+      subject,
+      headers: {
+        "List-Unsubscribe": `<${unsubscribeUrl}>`,
+        "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+      },
+      text: [
+        `${greeting},`,
+        ``,
+        `máš blízko k získání odznaku na hraju.cz!`,
+        ``,
+        badgesText,
+        ``,
+        `Pokračuj v návštěvách a recenzích a odznak bude tvůj!`,
+        ``,
+        `Můj účet: ${profileUrl}`,
+        ``,
+        `S pozdravem,`,
+        `tým hraju.cz`,
+        ``,
+        `---`,
+        `Nechcete dostávat tyto e-maily? Odhlaste se: ${unsubscribeUrl}`,
+      ].join("\n"),
+      html: `
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #18181b;">Máš blízko k odznaku!</h2>
+          <p>${greeting},</p>
+          <p>chybí ti už jen málo k získání nového odznaku na hraju.cz:</p>
+          ${badgesHtml}
+          <p style="margin-top: 16px;">Pokračuj v návštěvách a recenzích — odznak bude tvůj!</p>
+          <p style="margin: 24px 0;">
+            <a href="${profileUrl}" style="background: #059669; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+              Můj účet
+            </a>
+          </p>
+          <hr style="border: none; border-top: 1px solid #e4e4e7; margin: 24px 0;" />
+          <p style="color: #a1a1aa; font-size: 12px;">
+            hraju.cz – sportoviště v Česku |
+            <a href="${unsubscribeUrl}" style="color: #a1a1aa;">Odhlásit se z notifikací</a>
+          </p>
+        </div>
+      `,
+    });
+    return true;
+  } catch (error) {
+    console.error("Failed to send badge nudge email:", error);
+    return false;
+  }
+}
+
 interface OutreachEmailParams {
   facilityName: string;
   facilityUrl: string;
@@ -624,6 +727,116 @@ function renderOutreachTemplate(params: OutreachEmailParams): string {
   html = html.replace(/\{city\}/g, params.city);
   html = html.replace(/\{facilitySlug\}/g, params.facilitySlug);
   return html;
+}
+
+export interface ChallengeCountdownData {
+  userName: string | null;
+  challenges: Array<{
+    emoji: string;
+    title: string;
+    daysLeft: number;
+    progress: number;
+    target: number;
+    completedCount: number;
+    categoryUrl: string;
+  }>;
+}
+
+export async function sendChallengeCountdownEmail(
+  to: string,
+  data: ChallengeCountdownData,
+  unsubscribeUrl: string
+): Promise<boolean> {
+  const transporter = createTransporter();
+  if (!transporter) {
+    console.warn("SMTP not configured, skipping challenge countdown email");
+    return false;
+  }
+
+  if (data.challenges.length === 0) return false;
+
+  const greeting = data.userName ? `Ahoj ${data.userName}` : "Ahoj";
+  const first = data.challenges[0];
+  const subject =
+    first.daysLeft === 1
+      ? `${first.emoji} Poslední den výzvy ${first.title}!`
+      : `${first.emoji} Zbývá ${first.daysLeft} dní do konce výzvy!`;
+
+  const challengesText = data.challenges
+    .map(
+      (c) =>
+        `${c.emoji} ${c.title}\n` +
+        `  Tvůj postup: ${c.progress}/${c.target}\n` +
+        `  Zbývá dní: ${c.daysLeft}\n` +
+        `  ${c.completedCount} lidí už splnilo výzvu\n` +
+        `  Najít sportoviště: ${c.categoryUrl}`
+    )
+    .join("\n\n");
+
+  const challengesHtml = data.challenges
+    .map(
+      (c) => `
+        <div style="background: #f0fdf4; border-radius: 12px; padding: 20px; margin: 12px 0;">
+          <div style="background: #dc2626; color: white; text-align: center; padding: 8px 16px; border-radius: 8px; font-weight: 700; font-size: 14px; margin-bottom: 12px;">
+            ${c.daysLeft === 1 ? "POSLEDNÍ DEN!" : `Zbývá ${c.daysLeft} dní`}
+          </div>
+          <div style="font-size: 18px; font-weight: 700; color: #18181b; margin-bottom: 8px;">${c.emoji} ${c.title}</div>
+          <div style="color: #3f3f46; margin-bottom: 12px;">Tvůj postup: <strong>${c.progress}/${c.target}</strong></div>
+          <div style="background: #e4e4e7; border-radius: 999px; height: 10px; margin-bottom: 12px; overflow: hidden;">
+            <div style="background: #059669; height: 100%; width: ${Math.round((c.progress / c.target) * 100)}%; border-radius: 999px;"></div>
+          </div>
+          <div style="color: #71717a; font-size: 13px; margin-bottom: 16px;">${c.completedCount} lidí už splnilo výzvu</div>
+          <a href="${c.categoryUrl}" style="background: #059669; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px;">
+            Najít sportoviště poblíž
+          </a>
+        </div>`
+    )
+    .join("");
+
+  try {
+    await transporter.sendMail({
+      from: `"hraju.cz" <${process.env.SMTP_USER}>`,
+      to,
+      subject,
+      headers: {
+        "List-Unsubscribe": `<${unsubscribeUrl}>`,
+        "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+      },
+      text: [
+        `${greeting},`,
+        ``,
+        `výzva končí — stihneš to?`,
+        ``,
+        challengesText,
+        ``,
+        `Pokračuj v návštěvách a získej odznak!`,
+        ``,
+        `S pozdravem,`,
+        `tým hraju.cz`,
+        ``,
+        `---`,
+        `Nechcete dostávat tyto e-maily? Odhlaste se: ${unsubscribeUrl}`,
+      ].join("\n"),
+      html: `
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #18181b;">Výzva končí — stihneš to?</h2>
+          <p>${greeting},</p>
+          <p>do konce výzvy zbývá už jen pár dní. Podívej se, jak jsi na tom:</p>
+          ${challengesHtml}
+          <p style="margin-top: 20px; color: #3f3f46;">Pokračuj v návštěvách a získej odznak!</p>
+          <hr style="border: none; border-top: 1px solid #e4e4e7; margin: 24px 0;" />
+          <p style="color: #a1a1aa; font-size: 12px;">
+            hraju.cz – sportoviště v Česku |
+            <a href="${unsubscribeUrl}" style="color: #a1a1aa;">Odhlásit se z notifikací</a>
+          </p>
+        </div>
+      `,
+    });
+    return true;
+  } catch (error) {
+    console.error("Failed to send challenge countdown email:", error);
+    return false;
+  }
 }
 
 export async function sendClaimOutreachEmail(
