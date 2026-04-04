@@ -2,6 +2,64 @@ import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { getTotalFacilityCount } from "@/lib/data";
 
+async function getViewStats() {
+  try {
+    const result = await prisma.$queryRaw<[{
+      viewsToday: bigint;
+      viewsYesterday: bigint;
+      viewsThisWeek: bigint;
+      viewsLastWeek: bigint;
+      viewsThisMonth: bigint;
+      viewsLastMonth: bigint;
+      totalViews: bigint;
+    }]>`
+      SELECT
+        COALESCE(SUM(CASE WHEN "date" = CURRENT_DATE THEN "views" END), 0) AS "viewsToday",
+        COALESCE(SUM(CASE WHEN "date" = CURRENT_DATE - 1 THEN "views" END), 0) AS "viewsYesterday",
+        COALESCE(SUM(CASE WHEN "date" >= date_trunc('week', CURRENT_DATE) THEN "views" END), 0) AS "viewsThisWeek",
+        COALESCE(SUM(CASE WHEN "date" >= date_trunc('week', CURRENT_DATE) - 7 AND "date" < date_trunc('week', CURRENT_DATE) THEN "views" END), 0) AS "viewsLastWeek",
+        COALESCE(SUM(CASE WHEN "date" >= date_trunc('month', CURRENT_DATE) THEN "views" END), 0) AS "viewsThisMonth",
+        COALESCE(SUM(CASE WHEN "date" >= date_trunc('month', CURRENT_DATE) - INTERVAL '1 month' AND "date" < date_trunc('month', CURRENT_DATE) THEN "views" END), 0) AS "viewsLastMonth",
+        COALESCE(SUM("views"), 0) AS "totalViews"
+      FROM "FacilityView"
+    `;
+
+    const topFacilities = await prisma.$queryRaw<Array<{
+      facilityId: string;
+      name: string;
+      sport: string;
+      views: bigint;
+    }>>`
+      SELECT fv."facilityId", f."name", f."sport", SUM(fv."views")::bigint AS "views"
+      FROM "FacilityView" fv
+      JOIN "Facility" f ON f."id" = fv."facilityId"
+      WHERE fv."date" >= CURRENT_DATE - 7
+      GROUP BY fv."facilityId", f."name", f."sport"
+      ORDER BY "views" DESC
+      LIMIT 10
+    `;
+
+    const row = result[0];
+    return {
+      viewsToday: Number(row.viewsToday),
+      viewsYesterday: Number(row.viewsYesterday),
+      viewsThisWeek: Number(row.viewsThisWeek),
+      viewsLastWeek: Number(row.viewsLastWeek),
+      viewsThisMonth: Number(row.viewsThisMonth),
+      viewsLastMonth: Number(row.viewsLastMonth),
+      totalViews: Number(row.totalViews),
+      topFacilities: topFacilities.map(f => ({
+        facilityId: f.facilityId,
+        name: f.name,
+        sport: f.sport,
+        views: Number(f.views),
+      })),
+    };
+  } catch {
+    return null;
+  }
+}
+
 async function getAdminStats() {
   try {
     const result = await prisma.$queryRaw<[{
@@ -67,7 +125,10 @@ async function getAdminStats() {
 }
 
 export default async function AdminPage() {
-  const stats = await getAdminStats();
+  const [stats, viewStats] = await Promise.all([
+    getAdminStats(),
+    getViewStats(),
+  ]);
   const visibleFacilityCount = getTotalFacilityCount();
 
   return (
@@ -88,6 +149,66 @@ export default async function AdminPage() {
           <StatCard label="Události" value={stats.totalEvents} sub={`${stats.activeEvents} aktivních`} />
           <StatCard label="Čeká na schválení (akce)" value={stats.pendingEvents} accent={stats.pendingEvents > 0 ? "amber" : undefined} />
           <StatCard label="Neschválená sportoviště" value={stats.unapprovedFacilities} accent={stats.unapprovedFacilities > 0 ? "amber" : undefined} />
+        </div>
+      )}
+
+      {/* Traffic Stats */}
+      {viewStats && (
+        <div className="mb-8">
+          <h2 className="mb-3 text-lg font-semibold text-zinc-700">Návštěvnost</h2>
+          <div className="grid gap-3 grid-cols-2 sm:grid-cols-4">
+            <ViewStatCard
+              label="Dnes"
+              value={viewStats.viewsToday}
+              prev={viewStats.viewsYesterday}
+              prevLabel="včera"
+            />
+            <ViewStatCard
+              label="Tento týden"
+              value={viewStats.viewsThisWeek}
+              prev={viewStats.viewsLastWeek}
+              prevLabel="minulý týden"
+            />
+            <ViewStatCard
+              label="Tento měsíc"
+              value={viewStats.viewsThisMonth}
+              prev={viewStats.viewsLastMonth}
+              prevLabel="minulý měsíc"
+            />
+            <StatCard label="Celkem zobrazení" value={viewStats.totalViews} />
+          </div>
+
+          {viewStats.topFacilities.length > 0 && (
+            <div className="mt-4 rounded-xl border border-zinc-200 bg-white overflow-hidden">
+              <div className="px-4 py-3 border-b border-zinc-100 bg-zinc-50">
+                <h3 className="text-sm font-semibold text-zinc-700">Top 10 — posledních 7 dní</h3>
+              </div>
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-zinc-100 text-left text-xs text-zinc-500">
+                    <th className="px-4 py-2">#</th>
+                    <th className="px-4 py-2">Sportoviště</th>
+                    <th className="px-4 py-2">Sport</th>
+                    <th className="px-4 py-2 text-right">Zobrazení</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {viewStats.topFacilities.map((f, i) => (
+                    <tr key={f.facilityId} className="border-b border-zinc-50 hover:bg-zinc-50">
+                      <td className="px-4 py-2 text-zinc-400">{i + 1}</td>
+                      <td className="px-4 py-2 font-medium text-zinc-900">
+                        <Link href={`/admin/facilities`} className="hover:underline">
+                          {f.name}
+                        </Link>
+                      </td>
+                      <td className="px-4 py-2 text-zinc-500">{f.sport}</td>
+                      <td className="px-4 py-2 text-right font-mono text-zinc-700">{f.views.toLocaleString("cs-CZ")}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
         </div>
       )}
 
@@ -188,6 +309,35 @@ function StatCard({
       <div className="text-2xl font-bold text-zinc-900">{value.toLocaleString("cs-CZ")}</div>
       <div className="text-sm font-medium text-zinc-600">{label}</div>
       {sub && <div className="mt-0.5 text-xs text-zinc-400">{sub}</div>}
+    </div>
+  );
+}
+
+function ViewStatCard({
+  label,
+  value,
+  prev,
+  prevLabel,
+}: {
+  label: string;
+  value: number;
+  prev: number;
+  prevLabel: string;
+}) {
+  const diff = prev > 0 ? Math.round(((value - prev) / prev) * 100) : value > 0 ? 100 : 0;
+  const isUp = diff > 0;
+  const isDown = diff < 0;
+
+  return (
+    <div className="rounded-xl border border-zinc-200 bg-white p-4">
+      <div className="text-2xl font-bold text-zinc-900">{value.toLocaleString("cs-CZ")}</div>
+      <div className="text-sm font-medium text-zinc-600">{label}</div>
+      <div className="mt-0.5 flex items-center gap-1 text-xs">
+        {isUp && <span className="text-emerald-600">+{diff}%</span>}
+        {isDown && <span className="text-red-500">{diff}%</span>}
+        {!isUp && !isDown && <span className="text-zinc-400">0%</span>}
+        <span className="text-zinc-400">vs {prevLabel} ({prev.toLocaleString("cs-CZ")})</span>
+      </div>
     </div>
   );
 }
