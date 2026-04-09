@@ -149,20 +149,32 @@ export async function GET(
     ]);
 
     let hasVisited = false;
+    let hasReviewed = false;
     if (session) {
-      const existing = await prisma.visit.findUnique({
-        where: {
-          userId_facilityId: {
+      const [existingVisit, existingReview] = await Promise.all([
+        prisma.visit.findUnique({
+          where: {
+            userId_facilityId: {
+              userId: session.userId,
+              facilityId,
+            },
+          },
+          select: { id: true },
+        }),
+        prisma.review.findFirst({
+          where: {
             userId: session.userId,
             facilityId,
+            isApproved: true,
           },
-        },
-        select: { id: true },
-      });
-      hasVisited = !!existing;
+          select: { id: true },
+        }),
+      ]);
+      hasVisited = !!existingVisit;
+      hasReviewed = !!existingReview;
     }
 
-    return NextResponse.json({ count, hasVisited });
+    return NextResponse.json({ count, hasVisited, hasReviewed });
   } catch {
     return NextResponse.json({ error: "Database error" }, { status: 500 });
   }

@@ -38,6 +38,7 @@ import { TrackClick } from "@/components/TrackClick";
 import { CheckInButton } from "@/components/CheckInButton";
 import { FavoriteButton } from "@/components/FavoriteButton";
 import { FacilityGallery } from "@/components/FacilityGallery";
+import { FacilityReviewCTA } from "@/components/FacilityReviewCTA";
 import { TipList } from "@/components/TipList";
 import { TipForm } from "@/components/TipForm";
 import { OwnerEditButton, OwnerUpgradeCTA } from "@/components/OwnerControls";
@@ -952,32 +953,15 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
         </div>
       </div>
 
-      {/* "Have you been here?" CTA */}
-      <section className="border-t border-zinc-100 bg-gradient-to-r from-emerald-50 to-teal-50">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-8 text-center sm:flex-row sm:text-left">
-          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-emerald-100 text-3xl">
-            {sport.icon}
-          </div>
-          <div className="flex-1">
-            <h2 className="text-lg font-bold text-zinc-900">
-              Byli jste tady?
-            </h2>
-            <p className="mt-1 text-sm text-zinc-600">
-              Podělte se o svůj zážitek — napište recenzi nebo se přihlaste jako návštěvník. Pomůžete ostatním při výběru sportoviště.
-            </p>
-          </div>
-          <div className="flex shrink-0 items-center gap-3">
-            <CheckInButton facilityId={facility.id} currentPath={`/sport/${sportSlug}/${slug}`} facilityName={facility.name} />
-            <a
-              href="#recenze"
-              className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700"
-            >
-              <CalendarCheck className="h-4 w-4" />
-              Napsat recenzi
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* State-aware review CTA */}
+      <FacilityReviewCTA
+        facilityId={facility.id}
+        facilityName={facility.name}
+        sportSlug={sportSlug}
+        slug={slug}
+        sportIcon={sport.icon}
+        reviewCount={facility.reviewCount}
+      />
 
       {/* Reviews Section */}
       <section id="recenze" className="border-t border-zinc-100 bg-white scroll-mt-4">
