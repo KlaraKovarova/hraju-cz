@@ -12,11 +12,18 @@ interface ChallengeProgress {
   target: number;
 }
 
+const MONTH_NAMES_CS: Record<number, string> = {
+  0: "Lednové", 1: "Únorové", 2: "Březnové", 3: "Dubnové",
+  4: "Květnové", 5: "Červnové", 6: "Červencové", 7: "Srpnové",
+  8: "Zářijové", 9: "Říjnové", 10: "Listopadové", 11: "Prosincové",
+};
+
 export function MonthlyChallenges() {
   const [challenges] = useState<MonthlyChallenge[]>(() => getActiveChallenges());
   const [progressMap, setProgressMap] = useState<Map<string, ChallengeProgress>>(new Map());
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [daysLeft, setDaysLeft] = useState(0);
+  const monthLabel = MONTH_NAMES_CS[new Date().getMonth()] ?? "Měsíční";
 
   useEffect(() => {
     if (challenges.length === 0) return;
@@ -54,7 +61,7 @@ export function MonthlyChallenges() {
       <div className="mb-6 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Trophy className="h-5 w-5 text-amber-500" />
-          <h2 className="text-lg font-bold text-zinc-900">Dubnové výzvy</h2>
+          <h2 className="text-lg font-bold text-zinc-900">{monthLabel} výzvy</h2>
         </div>
         <div className="flex items-center gap-1.5 text-xs text-zinc-500">
           <Clock className="h-3.5 w-3.5" />
