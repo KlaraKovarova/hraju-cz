@@ -141,12 +141,19 @@ export function ReviewForm({ facilityId, currentPath, facilityName, facilityUrl 
         <label className="mb-1 block text-xs font-medium text-zinc-600">
           Hodnocení *
         </label>
-        <StarRating
-          rating={rating}
-          size="md"
-          interactive
-          onChange={setRating}
-        />
+        <div className="flex items-center gap-2">
+          <StarRating
+            rating={rating}
+            size="md"
+            interactive
+            onChange={setRating}
+          />
+          {rating > 0 && (
+            <span className="text-xs font-medium text-zinc-500">
+              {["Špatné", "Podprůměrné", "Průměrné", "Dobré", "Vynikající"][rating - 1]}
+            </span>
+          )}
+        </div>
       </div>
 
       <div>
@@ -175,15 +182,34 @@ export function ReviewForm({ facilityId, currentPath, facilityName, facilityUrl 
           className="w-full rounded-lg border border-zinc-200 px-3 py-2 text-sm focus:border-emerald-400 focus:outline-none"
           placeholder="Popište svou zkušenost..."
         />
+        <div className="mt-1 flex items-center justify-between text-xs">
+          <span className={text.length >= 200 ? "text-emerald-600 font-medium" : text.length >= 100 ? "text-emerald-500" : text.length > 0 && text.length < 50 ? "text-zinc-400" : "text-zinc-400"}>
+            {text.length >= 200
+              ? "Skvělá podrobná recenze!"
+              : text.length >= 100
+                ? "Hezky podrobné, díky!"
+                : text.length > 0 && text.length < 50
+                  ? "Zkuste přidat víc detailů..."
+                  : "\u00A0"}
+          </span>
+          <span className="text-zinc-400">{text.length}/2000</span>
+        </div>
       </div>
 
-      <PhotoUpload
-        facilityId={facilityId}
-        context="review"
-        maxPhotos={3}
-        photos={photos}
-        onPhotosChange={setPhotos}
-      />
+      <div>
+        <PhotoUpload
+          facilityId={facilityId}
+          context="review"
+          maxPhotos={3}
+          photos={photos}
+          onPhotosChange={setPhotos}
+        />
+        {photos.length === 0 && (
+          <p className="mt-1 text-xs text-zinc-400">
+            📷 Fotky získávají 2× více hlasů
+          </p>
+        )}
+      </div>
 
       {error && (
         <p className="text-xs font-medium text-red-600">{error}</p>
