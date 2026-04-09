@@ -697,6 +697,73 @@ export async function sendBadgeProximityNudgeEmail(
   }
 }
 
+export async function sendReviewReminderEmail(
+  to: string,
+  userName: string | null,
+  facilityName: string,
+  facilityUrl: string,
+  unsubscribeUrl: string
+): Promise<boolean> {
+  const transporter = createTransporter();
+  if (!transporter) {
+    console.warn("SMTP not configured, skipping review reminder email");
+    return false;
+  }
+
+  const greeting = userName ? `Ahoj ${userName}` : "Ahoj";
+  const reviewUrl = `${facilityUrl}#recenze`;
+  const subject = `Jak to bylo na ${facilityName}? Napiš recenzi`;
+
+  try {
+    await transporter.sendMail({
+      from: `"hraju.cz" <${process.env.SMTP_USER}>`,
+      to,
+      subject,
+      headers: {
+        "List-Unsubscribe": `<${unsubscribeUrl}>`,
+        "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+      },
+      text: [
+        `${greeting},`,
+        ``,
+        `byl/a jsi na ${facilityName} — jak to bylo? Napiš recenzi a pomoz dalším.`,
+        ``,
+        `Napsat recenzi: ${reviewUrl}`,
+        ``,
+        `Tvoje zkušenost pomůže ostatním vybrat si, kam jít. Stačí pár vět!`,
+        ``,
+        `S pozdravem,`,
+        `tým hraju.cz`,
+        ``,
+        `---`,
+        `Nechcete dostávat tyto e-maily? Odhlaste se: ${unsubscribeUrl}`,
+      ].join("\n"),
+      html: `
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #18181b;">Jak to bylo na ${facilityName}?</h2>
+          <p>${greeting},</p>
+          <p>nedávno jsi navštívil/a <strong>${facilityName}</strong>. Jaký byl tvůj zážitek? Napiš krátkou recenzi a pomoz ostatním vybrat si správné sportoviště.</p>
+          <p style="margin: 24px 0;">
+            <a href="${reviewUrl}" style="background: #059669; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+              Napsat recenzi
+            </a>
+          </p>
+          <p style="color: #71717a; font-size: 14px;">Stačí pár vět — každá recenze pomáhá.</p>
+          <hr style="border: none; border-top: 1px solid #e4e4e7; margin: 24px 0;" />
+          <p style="color: #a1a1aa; font-size: 12px;">
+            hraju.cz – sportoviště v Česku |
+            <a href="${unsubscribeUrl}" style="color: #a1a1aa;">Odhlásit se z notifikací</a>
+          </p>
+        </div>
+      `,
+    });
+    return true;
+  } catch (error) {
+    console.error("Failed to send review reminder email:", error);
+    return false;
+  }
+}
+
 interface OutreachEmailParams {
   facilityName: string;
   facilityUrl: string;

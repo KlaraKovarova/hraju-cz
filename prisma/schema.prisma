@@ -266,6 +266,7 @@ model User {
   emailNotifications Boolean  @default(true)
   weeklyDigest       Boolean  @default(true)
   unsubscribeToken   String?  @unique
+  lastBadgeNudgeAt   DateTime?
   createdAt          DateTime @default(now())
   updatedAt          DateTime @updatedAt
   reviews            Review[]
@@ -282,14 +283,15 @@ model User {
 }
 
 model Visit {
-  id         String   @id @default(cuid())
-  userId     String
-  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  facilityId String
-  facility   Facility @relation(fields: [facilityId], references: [id], onDelete: Cascade)
-  note       String?  @db.VarChar(280)
-  createdAt  DateTime @default(now())
-  photos     UserPhoto[]
+  id                    String    @id @default(cuid())
+  userId                String
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  facilityId            String
+  facility              Facility  @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  note                  String?   @db.VarChar(280)
+  createdAt             DateTime  @default(now())
+  reviewReminderSentAt  DateTime?
+  photos                UserPhoto[]
 
   @@unique([userId, facilityId])
   @@index([facilityId])
