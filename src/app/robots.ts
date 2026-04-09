@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/hledat", "/admin", "/api/", "/muj-ucet", "/moje-sportoviste"],
+        disallow: ["/hledat", "/admin", "/api/", "/muj-ucet", "/moje-sportoviste", "/en/", "/de/", "/pl/"],
       },
       {
         userAgent: [
@@ -19,7 +19,7 @@ export default function robots(): MetadataRoute.Robots {
           "cohere-ai",
         ],
         allow: ["/", "/llms.txt", "/llms-full.txt"],
-        disallow: ["/admin", "/api/", "/muj-ucet", "/moje-sportoviste"],
+        disallow: ["/admin", "/api/", "/muj-ucet", "/moje-sportoviste", "/en/", "/de/", "/pl/"],
       },
     ],
     sitemap: "https://www.hraju.cz/sitemap.xml",
