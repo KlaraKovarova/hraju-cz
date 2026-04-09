@@ -1,6 +1,7 @@
 import { prisma } from "./prisma";
-import { createBadgeNotification, createChallengeNotification } from "./notifications";
+import { createBadgeNotification, createChallengeNotification, getUnsubscribeToken, buildUnsubscribeUrl } from "./notifications";
 import { MONTHLY_CHALLENGES } from "./monthly-challenges";
+import { sendBadgeProximityNudgeEmail } from "./email";
 
 // ─── Badge definitions ───────────────────────────────────────────────────
 export interface BadgeDefinition {
@@ -1205,4 +1206,86 @@ export async function getUserBadgeProgress(userId: string): Promise<
     },
   ];
   return progress.map(p => ({ ...p, sportSlug: badgeSportMap.get(p.slug) ?? null }));
+}
+
+export interface BadgeProximityNudge {
+  slug: string;
+  name: string;
+  emoji: string;
+  description: string;
+  progress: number;
+  target: number;
+  remaining: number;
+}
+
+/**
+ * Get badges the user is close to earning (within 1-2 actions, with some progress).
+ * Returns the most actionable badges (max 3).
+ */
+export async function getCloseToEarningBadges(userId: string): Promise<BadgeProximityNudge[]> {
+  const all = await getUserBadgeProgress(userId);
+  return all
+    .filter((b) => !b.earned && b.progress > 0 && b.target - b.progress <= 2)
+    .map((b) => ({
+      slug: b.slug,
+      name: b.name,
+      emoji: b.emoji,
+      description: b.description,
+      progress: b.progress,
+      target: b.target,
+      remaining: b.target - b.progress,
+    }))
+    .sort((a, b) => a.remaining - b.remaining)
+    .slice(0, 3);
+}
+
+/**
+ * After a review or check-in, check if the user is close to earning a badge.
+ * If so, send a nudge email (max 1 per user per week).
+ * Fire-and-forget — never throws.
+ */
+export async function triggerBadgeProximityNudge(userId: string): Promise<void> {
+  try {
+    // Check rate limit: max 1 nudge per user per 7 days
+    const user = await prisma.user.findUnique({
+      where: { id: userId },
+      select: {
+        email: true,
+        name: true,
+        emailNotifications: true,
+        isSeed: true,
+        lastBadgeNudgeAt: true,
+      },
+    });
+    if (!user || !user.emailNotifications || user.isSeed) return;
+
+    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+    if (user.lastBadgeNudgeAt && user.lastBadgeNudgeAt > sevenDaysAgo) return;
+
+    // Get close-to-earning badges
+    const nudges = await getCloseToEarningBadges(userId);
+    if (nudges.length === 0) return;
+
+    // Build unsubscribe URL
+    const token = await getUnsubscribeToken(userId);
+    const unsubscribeUrl = buildUnsubscribeUrl(token, "all");
+
+    // Send email
+    const sent = await sendBadgeProximityNudgeEmail(
+      user.email,
+      user.name,
+      nudges,
+      unsubscribeUrl
+    );
+
+    // Update rate limit timestamp
+    if (sent) {
+      await prisma.user.update({
+        where: { id: userId },
+        data: { lastBadgeNudgeAt: new Date() },
+      });
+    }
+  } catch {
+    // Fire-and-forget — don't propagate errors
+  }
 }

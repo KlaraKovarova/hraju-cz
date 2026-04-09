@@ -3,8 +3,9 @@ import { prisma } from "@/lib/prisma";
 import { sendReviewNotificationEmail, sendNewReviewOnFacilityEmail } from "@/lib/email";
 import { getUserSession } from "@/lib/user-auth";
 import { findUsersToNotifyAboutReview, getUnsubscribeToken, buildUnsubscribeUrl, createFavoriteNotifications } from "@/lib/notifications";
-import { checkBadgesByCategory, getBadgeDefinition } from "@/lib/challenges";
+import { checkBadgesByCategory, getBadgeDefinition, triggerBadgeProximityNudge } from "@/lib/challenges";
 import { BADGE_META } from "@/lib/badge-meta";
+import { batchExpertiseForSport, type ExpertiseLabel } from "@/lib/expertise";
 import { withTimeout } from "@/lib/db-timeout";
 
 // GET /api/facilities/[id]/reviews — list approved reviews (paginated, newest first)
@@ -67,9 +68,23 @@ export async function GET(
     badgesByUser.get(ub.userId)!.push({ slug: ub.badgeSlug, emoji: meta.emoji, name: meta.name });
   }
 
+  // Batch-compute expertise labels for this facility's sport
+  let expertiseByUser = new Map<string, ExpertiseLabel>();
+  if (userIds.length > 0) {
+    const facility = await prisma.facility.findUnique({
+      where: { id },
+      select: { sports: { select: { sport: { select: { slug: true } } }, take: 1 } },
+    });
+    const sportSlug = facility?.sports[0]?.sport.slug;
+    if (sportSlug) {
+      expertiseByUser = await batchExpertiseForSport(userIds, sportSlug);
+    }
+  }
+
   const reviewsWithBadges = reviews.map((r) => ({
     ...r,
     badges: r.userId ? badgesByUser.get(r.userId) || [] : [],
+    expertiseLabel: r.userId ? expertiseByUser.get(r.userId) ?? null : null,
   }));
 
   return NextResponse.json({ reviews: reviewsWithBadges, total, page, limit });
@@ -255,6 +270,9 @@ export async function POST(
   } catch {
     // Badge check failure shouldn't block the review
   }
+
+  // Badge proximity nudge email (fire-and-forget)
+  triggerBadgeProximityNudge(session.userId).catch(() => {});
 
   const message = isTrusted
     ? "Děkujeme za recenzi! Vaše recenze byla automaticky zveřejněna."

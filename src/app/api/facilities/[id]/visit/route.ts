@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getUserSession } from "@/lib/user-auth";
 import { prisma } from "@/lib/prisma";
-import { checkBadgesByCategory, getBadgeDefinition } from "@/lib/challenges";
+import { checkBadgesByCategory, getBadgeDefinition, triggerBadgeProximityNudge } from "@/lib/challenges";
 import { createFavoriteNotifications } from "@/lib/notifications";
 
 // POST — create check-in (idempotent)
@@ -97,6 +97,9 @@ export async function POST(
     } catch {
       // Badge check failure shouldn't block the check-in
     }
+
+    // Badge proximity nudge email (fire-and-forget)
+    triggerBadgeProximityNudge(session.userId).catch(() => {});
 
     return NextResponse.json({ ...visit, newBadges }, { status: 201 });
   } catch {

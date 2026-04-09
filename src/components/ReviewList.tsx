@@ -26,6 +26,11 @@ interface ReviewBadge {
   name: string;
 }
 
+interface ExpertiseLabel {
+  name: string;
+  level: "znalec" | "expert";
+}
+
 interface Review {
   id: string;
   userId?: string | null;
@@ -38,6 +43,7 @@ interface Review {
   createdAt: string;
   photos?: ReviewPhoto[];
   badges?: ReviewBadge[];
+  expertiseLabel?: ExpertiseLabel | null;
 }
 
 interface ReviewListProps {
@@ -144,6 +150,7 @@ export function ReviewList({ facilityId, facilityUrl, perPage = 10 }: ReviewList
             createdAt={review.createdAt}
             photos={review.photos}
             badges={review.badges}
+            expertiseLabel={review.expertiseLabel}
           />
         ))}
       </div>

@@ -26,6 +26,11 @@ interface ReviewBadge {
   name: string;
 }
 
+interface ExpertiseLabel {
+  name: string;
+  level: "znalec" | "expert";
+}
+
 interface ReviewCardProps {
   id: string;
   facilityId: string;
@@ -40,6 +45,7 @@ interface ReviewCardProps {
   createdAt: string;
   photos?: ReviewPhoto[];
   badges?: ReviewBadge[];
+  expertiseLabel?: ExpertiseLabel | null;
 }
 
 export function ReviewCard({
@@ -56,6 +62,7 @@ export function ReviewCard({
   createdAt,
   photos,
   badges,
+  expertiseLabel,
 }: ReviewCardProps) {
   const [helpful, setHelpful] = useState(initialHelpful);
   const [voted, setVoted] = useState(false);
@@ -193,6 +200,17 @@ export function ReviewCard({
                       {b.emoji}
                     </span>
                   ))}
+                </span>
+              )}
+              {expertiseLabel && (
+                <span
+                  className={`rounded-full px-2 py-0.5 text-[10px] font-semibold leading-tight ${
+                    expertiseLabel.level === "expert"
+                      ? "bg-amber-100 text-amber-800"
+                      : "bg-emerald-50 text-emerald-700"
+                  }`}
+                >
+                  {expertiseLabel.name}
                 </span>
               )}
             </div>
