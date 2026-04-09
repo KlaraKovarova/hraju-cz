@@ -28,6 +28,7 @@ export function CheckInButton({ facilityId, currentPath, facilityName }: CheckIn
   const [submitting, setSubmitting] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState<boolean | null>(null);
   const [showSharePrompt, setShowSharePrompt] = useState(false);
+  const [showReviewModal, setShowReviewModal] = useState(false);
   const [shareCopied, setShareCopied] = useState(false);
   const [showPhotoUpload, setShowPhotoUpload] = useState(false);
   const [photos, setPhotos] = useState<{ id: string; url: string }[]>([]);
@@ -85,6 +86,7 @@ export function CheckInButton({ facilityId, currentPath, facilityName }: CheckIn
           setHasVisited(true);
           setCount((c) => c + 1);
           setShowSharePrompt(true);
+          setShowReviewModal(true);
           if (data.newBadges?.length > 0) {
             setNewBadges(data.newBadges);
             setTimeout(() => setNewBadges([]), 6000);
@@ -226,18 +228,6 @@ export function CheckInButton({ facilityId, currentPath, facilityName }: CheckIn
       {/* Share prompt + photo upload after check-in */}
       {showSharePrompt && (
         <div className="space-y-2 animate-in fade-in slide-in-from-top-1">
-          {/* Review CTA — prompt user to write a review after check-in */}
-          <a
-            href="#recenze"
-            onClick={() => trackEvent("checkin_review_cta_click", { facilityId })}
-            className="flex items-center gap-3 rounded-xl border border-amber-100 bg-amber-50/50 px-4 py-3 transition hover:bg-amber-50"
-          >
-            <Star className="h-5 w-5 text-amber-500 shrink-0" />
-            <span className="text-sm font-medium text-amber-800">
-              Jak se vám tu líbilo? Napište recenzi
-            </span>
-            <span className="ml-auto text-xs font-medium text-amber-600">&darr;</span>
-          </a>
           <div className="flex items-center gap-3 rounded-xl border border-emerald-100 bg-emerald-50/50 px-4 py-3">
             <span className="text-sm text-emerald-700">Sdílejte svou návštěvu!</span>
             <button
@@ -304,6 +294,47 @@ export function CheckInButton({ facilityId, currentPath, facilityName }: CheckIn
               </div>
             </div>
           )}
+        </div>
+      )}
+
+      {/* Post-check-in review modal */}
+      {showReviewModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4" onClick={() => setShowReviewModal(false)}>
+          <div
+            className="w-full max-w-sm rounded-2xl bg-white p-6 shadow-xl animate-in fade-in zoom-in-95"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="mb-1 text-center text-3xl">🎉</div>
+            <h3 className="mb-1 text-center text-lg font-semibold text-zinc-900">
+              Díky za check-in!
+            </h3>
+            <p className="mb-5 text-center text-sm text-zinc-500">
+              Jak to bylo? Napiš recenzi.
+            </p>
+            <div className="flex flex-col gap-2">
+              <a
+                href="#recenze"
+                onClick={() => {
+                  setShowReviewModal(false);
+                  trackEvent("checkin_review_modal_write", { facilityId });
+                }}
+                className="flex items-center justify-center gap-2 rounded-xl bg-amber-500 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-amber-600"
+              >
+                <Star className="h-4 w-4" />
+                Napsat recenzi
+              </a>
+              <button
+                type="button"
+                onClick={() => {
+                  setShowReviewModal(false);
+                  trackEvent("checkin_review_modal_dismiss", { facilityId });
+                }}
+                className="rounded-xl px-4 py-2.5 text-sm font-medium text-zinc-500 transition hover:bg-zinc-50"
+              >
+                Možná později
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>
