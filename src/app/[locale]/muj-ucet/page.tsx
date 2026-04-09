@@ -25,6 +25,8 @@ import {
   Compass,
   Heart,
   Bell,
+  Award,
+  BarChart3,
 } from "lucide-react";
 import { BADGE_META } from "@/lib/badge-meta";
 import { SPORTS } from "@/lib/sports";
@@ -141,6 +143,28 @@ interface NotificationItem {
   createdAt: string;
 }
 
+interface UserStats {
+  totalReviews: number;
+  totalApproved: number;
+  totalHelpfulVotes: number;
+  totalCheckIns: number;
+  reviewsBySport: {
+    slug: string;
+    nameCs: string;
+    total: number;
+    approved: number;
+  }[];
+  expertiseProgress: {
+    sportSlug: string;
+    sportNameCs: string;
+    approvedCount: number;
+    currentLevel: string | null;
+    nextLevel: string | null;
+    nextThreshold: number | null;
+    remaining: number | null;
+  }[];
+}
+
 type Tab = "overview" | "reviews" | "visits" | "favorites" | "events";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────
@@ -175,6 +199,7 @@ export default function MujUcetPage() {
   const [dashboard, setDashboard] = useState<DashboardData | null>(null);
   const [notifications, setNotifications] = useState<NotificationItem[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
+  const [userStats, setUserStats] = useState<UserStats | null>(null);
   const [prefs, setPrefs] = useState({ emailNotifications: true, weeklyDigest: true });
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<Tab>("overview");
@@ -190,7 +215,7 @@ export default function MujUcetPage() {
         const userData = await meRes.json();
         setUser(userData);
 
-        const [revRes, visitRes, eventRes, actRes, badgeRes, dashRes, favRes, notifRes, prefRes] =
+        const [revRes, visitRes, eventRes, actRes, badgeRes, dashRes, favRes, notifRes, prefRes, statsRes] =
           await Promise.all([
             fetch("/api/auth/my-reviews"),
             fetch("/api/auth/my-visits"),
@@ -201,6 +226,7 @@ export default function MujUcetPage() {
             fetch("/api/auth/my-favorites"),
             fetch("/api/auth/my-notifications"),
             fetch("/api/auth/my-preferences"),
+            fetch("/api/user/stats"),
           ]);
 
         if (revRes.ok) setReviews(await revRes.json());
@@ -219,6 +245,7 @@ export default function MujUcetPage() {
           setUnreadCount(notifData.unreadCount);
         }
         if (prefRes.ok) setPrefs(await prefRes.json());
+        if (statsRes.ok) setUserStats(await statsRes.json());
       } catch {
         router.push("/prihlaseni?redirect=/muj-ucet");
       } finally {
@@ -592,6 +619,131 @@ export default function MujUcetPage() {
                     </Link>
                   ))}
               </div>
+            </div>
+          )}
+
+          {/* Impact stats */}
+          {userStats && !isNewUser && (
+            <div className="rounded-xl border border-zinc-100 bg-white p-5">
+              <div className="mb-4 flex items-center gap-2">
+                <BarChart3 className="h-4.5 w-4.5 text-emerald-600" />
+                <h3 className="text-sm font-bold text-zinc-900">
+                  Váš dopad
+                </h3>
+              </div>
+
+              {/* Motivational text */}
+              {userStats.totalHelpfulVotes > 0 && (
+                <div className="mb-4 rounded-lg bg-gradient-to-r from-emerald-50 to-teal-50 p-3">
+                  <p className="text-sm font-medium text-emerald-800">
+                    Vaše recenze pomohly {userStats.totalHelpfulVotes}{" "}
+                    {userStats.totalHelpfulVotes === 1
+                      ? "člověku"
+                      : userStats.totalHelpfulVotes >= 2 && userStats.totalHelpfulVotes <= 4
+                        ? "lidem"
+                        : "lidem"}{" "}
+                    s výběrem sportoviště
+                  </p>
+                </div>
+              )}
+
+              {/* Reviews by sport */}
+              {userStats.reviewsBySport.length > 0 && (
+                <div className="mb-4">
+                  <div className="mb-2 text-xs font-medium text-zinc-500 uppercase tracking-wide">
+                    Recenze podle sportu
+                  </div>
+                  <div className="space-y-2">
+                    {userStats.reviewsBySport.map((sport) => (
+                      <div key={sport.slug} className="flex items-center gap-3">
+                        <div className="min-w-0 flex-1">
+                          <div className="flex items-center justify-between text-sm">
+                            <span className="font-medium text-zinc-700">
+                              {sport.nameCs}
+                            </span>
+                            <span className="text-zinc-500">
+                              {sport.total}{" "}
+                              {sport.total === 1
+                                ? "recenze"
+                                : sport.total >= 2 && sport.total <= 4
+                                  ? "recenze"
+                                  : "recenzí"}
+                            </span>
+                          </div>
+                          <div className="mt-1 h-1.5 w-full rounded-full bg-zinc-100">
+                            <div
+                              className="h-1.5 rounded-full bg-emerald-500 transition-all"
+                              style={{
+                                width: `${Math.min(100, (sport.total / Math.max(...userStats.reviewsBySport.map((s) => s.total))) * 100)}%`,
+                              }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Expertise progress */}
+              {userStats.expertiseProgress.length > 0 && (
+                <div>
+                  <div className="mb-2 text-xs font-medium text-zinc-500 uppercase tracking-wide">
+                    Cesta k expertíze
+                  </div>
+                  <div className="space-y-2">
+                    {userStats.expertiseProgress.map((ep) => (
+                      <div
+                        key={ep.sportSlug}
+                        className="rounded-lg border border-zinc-100 p-3"
+                      >
+                        <div className="flex items-center gap-2">
+                          <Award className="h-4 w-4 text-amber-500" />
+                          <span className="text-sm font-medium text-zinc-700">
+                            {ep.sportNameCs}
+                          </span>
+                          {ep.currentLevel && (
+                            <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-700">
+                              {ep.currentLevel}
+                            </span>
+                          )}
+                        </div>
+                        <div className="mt-2">
+                          <div className="mb-1 flex items-center justify-between text-xs text-zinc-500">
+                            <span>
+                              {ep.approvedCount}/{ep.nextThreshold} schválených recenzí
+                            </span>
+                            <span className="font-medium text-amber-600">
+                              Ještě {ep.remaining}{" "}
+                              {ep.remaining === 1
+                                ? "recenze"
+                                : ep.remaining! >= 2 && ep.remaining! <= 4
+                                  ? "recenze"
+                                  : "recenzí"}{" "}
+                              do titulu {ep.nextLevel}
+                            </span>
+                          </div>
+                          <div className="h-1.5 w-full rounded-full bg-zinc-200">
+                            <div
+                              className="h-1.5 rounded-full bg-amber-400 transition-all"
+                              style={{
+                                width: `${(ep.approvedCount / (ep.nextThreshold ?? 1)) * 100}%`,
+                              }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Summary for users with no reviews yet in any sport */}
+              {userStats.reviewsBySport.length === 0 && (
+                <p className="text-sm text-zinc-500">
+                  Napište svou první recenzi a začněte budovat svůj odborný profil.
+                </p>
+              )}
             </div>
           )}
 
