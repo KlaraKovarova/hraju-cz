@@ -4,7 +4,8 @@ import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { locales, type Locale } from "@/i18n/config";
 
-const localeLabels: Record<Locale, string> = {
+// Re-add labels when locales are re-enabled in config.ts
+const localeLabels: Record<string, string> = {
   cs: "CZ",
   en: "EN",
   de: "DE",

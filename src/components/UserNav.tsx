@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { User, LogOut, Bell } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { SiteSearch } from "@/components/SiteSearch";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 interface UserData {
   userId: string;
@@ -91,7 +90,6 @@ export function UserNav() {
             {t("login")}
           </Link>
         )}
-        <LanguageSwitcher />
         </div>
       </div>
     </div>
