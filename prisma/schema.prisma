@@ -80,6 +80,7 @@ model Facility {
   tips          FacilityTip[]
   favorites     Favorite[]
   favoriteNotifications FavoriteNotification[]
+  conditionReports ConditionReport[]
   premiumOrders PremiumOrder[]
   averageRating Float?
   reviewCount   Int              @default(0)
@@ -280,6 +281,7 @@ model User {
   favorites          Favorite[]
   favoriteNotifications FavoriteNotification[]
   notifications         Notification[]
+  conditionReports      ConditionReport[]
 }
 
 model Visit {
@@ -370,6 +372,8 @@ model UserPhoto {
   review     Review?  @relation(fields: [reviewId], references: [id], onDelete: SetNull)
   visitId    String?
   visit      Visit?   @relation(fields: [visitId], references: [id], onDelete: SetNull)
+  conditionReportId String?
+  conditionReport   ConditionReport? @relation(fields: [conditionReportId], references: [id], onDelete: SetNull)
   url        String
   alt        String?
   isHidden   Boolean  @default(false)
@@ -378,6 +382,25 @@ model UserPhoto {
   @@index([facilityId])
   @@index([reviewId])
   @@index([visitId])
+  @@index([conditionReportId])
+  @@index([userId])
+}
+
+model ConditionReport {
+  id         String   @id @default(cuid())
+  facilityId String
+  facility   Facility @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  rating     String   // 'excellent' | 'good' | 'poor' | 'closed'
+  comment    String?  @db.Text
+  helpful    Int      @default(0)
+  visitedAt  DateTime @default(now())
+  createdAt  DateTime @default(now())
+  isHidden   Boolean  @default(false)
+  photos     UserPhoto[]
+
+  @@index([facilityId, createdAt])
   @@index([userId])
 }
 

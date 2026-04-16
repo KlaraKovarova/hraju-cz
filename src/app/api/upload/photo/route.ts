@@ -66,19 +66,21 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // If context is review, check max photos for this facility/user combo
-    if (context === "review") {
+    // For "review" and "condition" contexts, limit the number of unlinked photos
+    // the user has pending attachment to a new record for this facility.
+    if (context === "review" || context === "condition") {
       const existingPhotos = await prisma.userPhoto.count({
         where: {
           userId: session.userId,
           facilityId,
-          reviewId: null, // unlinked = pending attachment to new review
+          reviewId: null,
           visitId: null,
+          conditionReportId: null,
         },
       });
       if (existingPhotos >= MAX_PHOTOS_PER_REVIEW) {
         return NextResponse.json(
-          { error: `Maximum je ${MAX_PHOTOS_PER_REVIEW} fotky na recenzi.` },
+          { error: `Maximum je ${MAX_PHOTOS_PER_REVIEW} fotky.` },
           { status: 400 }
         );
       }

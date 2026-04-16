@@ -39,6 +39,14 @@ import { CheckInButton } from "@/components/CheckInButton";
 import { FavoriteButton } from "@/components/FavoriteButton";
 import { FacilityGallery } from "@/components/FacilityGallery";
 import { FacilityReviewCTA } from "@/components/FacilityReviewCTA";
+import { ConditionReportsSection } from "@/components/ConditionReportsSection";
+import {
+  CONDITION_AGGREGATE_MIN,
+  CONDITION_FRESH_DAYS,
+  CONDITION_RATING_META,
+  type ConditionRating,
+  daysAgo as conditionDaysAgo,
+} from "@/lib/conditions";
 import { TipList } from "@/components/TipList";
 import { TipForm } from "@/components/TipForm";
 import { OwnerEditButton, OwnerUpgradeCTA } from "@/components/OwnerControls";
@@ -241,7 +249,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
   }).catch(() => {});
 
   // Query star distribution for AggregateRating component + Schema.org
-  const [starDistribution, recentApprovedReviews, userPhotos] = await Promise.all([
+  const [starDistribution, recentApprovedReviews, userPhotos, recentConditionReports] = await Promise.all([
     prisma.review.groupBy({
       by: ["rating"],
       where: { facilityId: facility.id, isApproved: true },
@@ -275,7 +283,43 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
       take: 5,
       select: { url: true },
     }),
+    prisma.conditionReport.findMany({
+      where: {
+        facilityId: facility.id,
+        isHidden: false,
+        createdAt: { gte: conditionDaysAgo(CONDITION_FRESH_DAYS) },
+      },
+      orderBy: { createdAt: "desc" },
+      take: 5,
+      select: {
+        id: true,
+        rating: true,
+        comment: true,
+        helpful: true,
+        visitedAt: true,
+        createdAt: true,
+        user: { select: { id: true, name: true } },
+        photos: {
+          where: { isHidden: false },
+          select: { id: true, url: true, alt: true },
+          orderBy: { createdAt: "asc" },
+          take: 3,
+        },
+      },
+    }),
   ]);
+
+  // Serialize condition reports for the client component (Dates -> ISO strings)
+  const initialConditionReports = recentConditionReports.map((r) => ({
+    id: r.id,
+    rating: r.rating,
+    comment: r.comment,
+    helpful: r.helpful,
+    visitedAt: r.visitedAt.toISOString(),
+    createdAt: r.createdAt.toISOString(),
+    user: r.user,
+    photos: r.photos,
+  }));
 
   // Build distribution array [1star, 2star, 3star, 4star, 5star]
   const distribution = [0, 0, 0, 0, 0];
@@ -380,9 +424,9 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
         reviewCount: facility.reviewCount,
       },
     }),
-    // Schema.org Review markup for individual reviews
-    ...(recentApprovedReviews.length > 0 && {
-      review: recentApprovedReviews.map((r) => ({
+    // Schema.org Review markup for individual reviews (+ fresh condition reports when eligible)
+    ...((() => {
+      const reviewEntries: Record<string, unknown>[] = recentApprovedReviews.map((r) => ({
         "@type": "Review",
         author: {
           "@type": "Person",
@@ -408,8 +452,34 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
             text: reply.body,
           })),
         }),
-      })),
-    }),
+      }));
+
+      // Only surface condition reports as Review entries when Google-worthy threshold met.
+      if (recentConditionReports.length >= CONDITION_AGGREGATE_MIN) {
+        for (const r of recentConditionReports) {
+          const meta = CONDITION_RATING_META[r.rating as ConditionRating];
+          if (!meta) continue;
+          reviewEntries.push({
+            "@type": "Review",
+            author: {
+              "@type": "Person",
+              name: r.user.name || "Uživatel",
+            },
+            datePublished: r.createdAt.toISOString().split("T")[0],
+            reviewRating: {
+              "@type": "Rating",
+              ratingValue: meta.schemaValue,
+              bestRating: 5,
+              worstRating: 1,
+            },
+            name: `Aktuální podmínky: ${meta.labelCs}`,
+            ...(r.comment && { reviewBody: r.comment }),
+          });
+        }
+      }
+
+      return reviewEntries.length > 0 ? { review: reviewEntries } : {};
+    })()),
   };
 
   // BreadcrumbList structured data for SEO
@@ -956,6 +1026,19 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
           </div>
         </div>
       </div>
+
+      {/* Conditions report — fresh user-submitted state of the facility */}
+      <section className="border-t border-zinc-100 bg-zinc-50/30">
+        <div className="mx-auto max-w-6xl px-6 py-6">
+          <ConditionReportsSection
+            facilityId={facility.id}
+            currentPath={`/sport/${sportSlug}/${slug}`}
+            sportSlug={sportSlug}
+            slug={slug}
+            initialReports={initialConditionReports}
+          />
+        </div>
+      </section>
 
       {/* State-aware review CTA */}
       <FacilityReviewCTA

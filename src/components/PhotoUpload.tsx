@@ -10,7 +10,7 @@ interface UploadedPhoto {
 
 interface PhotoUploadProps {
   facilityId: string;
-  context: "review" | "visit";
+  context: "review" | "visit" | "condition";
   maxPhotos?: number;
   photos: UploadedPhoto[];
   onPhotosChange: (photos: UploadedPhoto[]) => void;
