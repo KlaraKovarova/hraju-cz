@@ -28,7 +28,7 @@ export async function getUnsubscribeToken(userId: string): Promise<string> {
  */
 export function buildUnsubscribeUrl(
   token: string,
-  type: "all" | "digest"
+  type: "all" | "digest" | "conditions"
 ): string {
   const base = process.env.NEXT_PUBLIC_BASE_URL || "https://www.hraju.cz";
   return `${base}/api/unsubscribe?token=${token}&type=${type}`;

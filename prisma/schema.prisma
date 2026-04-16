@@ -266,6 +266,7 @@ model User {
   isSeed             Boolean  @default(false)
   emailNotifications Boolean  @default(true)
   weeklyDigest       Boolean  @default(true)
+  conditionsDigest   Boolean  @default(true)
   unsubscribeToken   String?  @unique
   lastBadgeNudgeAt   DateTime?
   createdAt          DateTime @default(now())

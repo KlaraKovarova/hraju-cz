@@ -1,0 +1,19 @@
+name: Weekly Conditions Digest
+
+on:
+  schedule:
+    # Friday 16:00 UTC = 18:00 CEST (pre-weekend timing for ferraty/lezení).
+    # In CET (winter) this fires at 17:00 local — still acceptable for off-season.
+    - cron: '0 16 * * 5'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  send-conditions-digest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send weekly conditions digest emails
+        run: |
+          curl -s -X POST \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            -H "Content-Type: application/json" \
+            "${{ vars.PRODUCTION_URL || 'https://www.hraju.cz' }}/api/cron/conditions-digest"

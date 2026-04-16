@@ -30,9 +30,12 @@ export async function GET(request: NextRequest) {
   const updateData: Record<string, boolean> = {};
   if (type === "digest") {
     updateData.weeklyDigest = false;
+  } else if (type === "conditions") {
+    updateData.conditionsDigest = false;
   } else {
     updateData.emailNotifications = false;
     updateData.weeklyDigest = false;
+    updateData.conditionsDigest = false;
   }
 
   await prisma.user.update({
@@ -43,7 +46,9 @@ export async function GET(request: NextRequest) {
   const message =
     type === "digest"
       ? "Byli jste odhlášeni z týdenního přehledu."
-      : "Byli jste odhlášeni ze všech e-mailových notifikací.";
+      : type === "conditions"
+        ? "Byli jste odhlášeni z přehledu aktuálních podmínek."
+        : "Byli jste odhlášeni ze všech e-mailových notifikací.";
 
   return new NextResponse(
     htmlPage("Odhlášení úspěšné", `${message} Nastavení můžete kdykoliv změnit ve svém profilu na hraju.cz.`),
