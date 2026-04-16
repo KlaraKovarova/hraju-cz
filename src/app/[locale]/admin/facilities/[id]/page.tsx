@@ -1,14 +1,19 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { FacilityForm } from "@/components/FacilityForm";
 import OwnerTokenGenerator from "@/components/OwnerTokenGenerator";
 import OutreachEmailSender from "@/components/OutreachEmailSender";
+import { getAdminSession } from "@/lib/admin-auth";
 
 interface EditFacilityPageProps {
   params: Promise<{ id: string }>;
 }
 
 export default async function EditFacilityPage({ params }: EditFacilityPageProps) {
+  // SIL-627: page-level auth check (defence-in-depth; proxy.ts is primary gate).
+  const isAdmin = await getAdminSession();
+  if (!isAdmin) redirect("/admin/login");
+
   const { id } = await params;
 
   let facility = null;

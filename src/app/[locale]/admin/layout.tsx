@@ -10,6 +10,13 @@ export const metadata: Metadata = {
 };
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
+  // Primary auth gate is src/proxy.ts (runs at the edge and redirects
+  // unauthenticated requests to /admin/login for all admin pages except the
+  // login page itself). Each admin page also runs its own getAdminSession()
+  // check (SIL-627) so sensitive Prisma queries never execute for unauth
+  // users even if the proxy is bypassed. If we reach this branch without
+  // auth, we must be on /admin/login — render just the raw child (no admin
+  // chrome, no KPI counts).
   const isAuthenticated = await getAdminSession();
 
   if (!isAuthenticated) {

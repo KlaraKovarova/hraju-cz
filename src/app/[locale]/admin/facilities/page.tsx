@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { getFacilitiesBySport } from "@/lib/data";
+import { getAdminSession } from "@/lib/admin-auth";
 
 async function getFacilities() {
   try {
@@ -22,6 +24,10 @@ async function getFacilities() {
 }
 
 export default async function AdminFacilitiesPage() {
+  // SIL-627: page-level auth check (defence-in-depth; proxy.ts is primary gate).
+  const isAdmin = await getAdminSession();
+  if (!isAdmin) redirect("/admin/login");
+
   const { facilities, isLive } = await getFacilities();
 
   return (
