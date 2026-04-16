@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
-import { X, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, ExternalLink, Download } from "lucide-react";
 import { contextLabel, photoSourceHref, type PhotoContext } from "@/lib/photos";
 import { PhotoVoteButton } from "@/components/PhotoVoteButton";
 
@@ -172,9 +172,22 @@ export function UserPhotoGallery({
               src={active.url}
               alt={active.alt || `Fotka z ${active.facility.name}`}
               className="max-h-[78vh] max-w-[92vw] rounded-lg object-contain"
+              onContextMenu={(e) => {
+                // SIL-667: right-click save → swap to watermarked URL.
+                (e.currentTarget as HTMLImageElement).src = `/api/photos/${active.id}/download`;
+              }}
             />
 
             <div className="mt-3 flex max-w-full flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs text-white/90">
+              <a
+                href={`/api/photos/${active.id}/download`}
+                className="inline-flex items-center gap-1 rounded-full bg-white/15 px-2.5 py-0.5 text-white hover:bg-white/25"
+                aria-label="Stáhnout fotku"
+                download
+              >
+                <Download className="h-3.5 w-3.5" />
+                Stáhnout
+              </a>
               <Link
                 href={active.facility.href}
                 className="font-medium text-white underline-offset-2 hover:underline"
