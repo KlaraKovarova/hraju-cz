@@ -5,6 +5,7 @@ import { useState, useEffect, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight, ExternalLink, Download } from "lucide-react";
 import { contextLabel, photoSourceHref, type PhotoContext } from "@/lib/photos";
 import { PhotoVoteButton } from "@/components/PhotoVoteButton";
+import { PinterestShareButton } from "@/components/PinterestShareButton";
 
 export interface GalleryPhotoDTO {
   id: string;
@@ -23,6 +24,10 @@ interface FacilityPhotoGalleryProps {
   facilityHref: string;
   /** Tailwind class for grid columns. Defaults to gallery (4-col) layout. */
   gridClassName?: string;
+  /** Facility name for Pinterest share description (SIL-670). */
+  facilityName?: string;
+  /** Czech sport label for Pinterest share description (SIL-670). */
+  sportLabel?: string | null;
 }
 
 function timeAgo(iso: string): string {
@@ -45,6 +50,8 @@ export function FacilityPhotoGallery({
   photos,
   facilityHref,
   gridClassName = "grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4",
+  facilityName,
+  sportLabel,
 }: FacilityPhotoGalleryProps) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
@@ -165,6 +172,15 @@ export function FacilityPhotoGallery({
                 <Download className="h-3.5 w-3.5" />
                 Stáhnout
               </a>
+              {facilityName && (
+                <PinterestShareButton
+                  photoId={active.id}
+                  pageUrl={`${facilityHref}/fotky`}
+                  facilityName={facilityName}
+                  sportLabel={sportLabel}
+                  authorName={active.user.name}
+                />
+              )}
               {active.user.name && (
                 <Link
                   href={`/uzivatel/${active.user.id}`}

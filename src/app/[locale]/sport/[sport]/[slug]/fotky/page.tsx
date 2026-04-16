@@ -42,18 +42,38 @@ export async function generateMetadata({
   const description = `Fotografie od návštěvníků: ${facility.name}, ${sport.nameCs} v ${facility.location.city}. Snímky z recenzí, check-inů a reportů na hraju.cz.`;
   const url = `https://www.hraju.cz/sport/${sportSlug}/${slug}/fotky`;
 
+  // SIL-670 — Pinterest rich pin support. Prefer the watermarked download URL
+  // for the lead photo so any pin crawled off this page carries the hraju.cz
+  // brand. Falls back to a neutral OG when the facility has no photos yet.
+  const { photos } = await getFacilityPhotos(facility.id, { take: 1 });
+  const leadPhoto = photos[0] ?? null;
+  const ogImage = leadPhoto
+    ? `https://www.hraju.cz/api/photos/${leadPhoto.id}/download`
+    : null;
+  const pinterestDescription = `${facility.name} — ${sport.nameCs} • hraju.cz`;
+
+  const openGraph: Metadata["openGraph"] = {
+    title,
+    description,
+    url,
+    type: "website",
+    siteName: "hraju.cz",
+    locale: "cs_CZ",
+    ...(ogImage ? { images: [{ url: ogImage, alt: `${facility.name} — ${sport.nameCs}` }] } : {}),
+  };
+
+  const other: Record<string, string> = {
+    "pinterest-rich-pin": "true",
+    "pinterest:description": pinterestDescription,
+  };
+  if (ogImage) other["pinterest:media"] = ogImage;
+
   return {
     title,
     description,
     alternates: { canonical: url },
-    openGraph: {
-      title,
-      description,
-      url,
-      type: "website",
-      siteName: "hraju.cz",
-      locale: "cs_CZ",
-    },
+    openGraph,
+    other,
   };
 }
 
@@ -167,7 +187,12 @@ export default async function FotkyPage({ params, searchParams }: FotkyPageProps
           <EmptyState facilityHref={facilityHref} />
         ) : (
           <>
-            <FacilityPhotoGallery photos={dtos} facilityHref={facilityHref} />
+            <FacilityPhotoGallery
+              photos={dtos}
+              facilityHref={facilityHref}
+              facilityName={facility.name}
+              sportLabel={sport.nameCs}
+            />
 
             {totalPages > 1 && (
               <Pagination

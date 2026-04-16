@@ -5,6 +5,7 @@ import { useState, useEffect, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight, ExternalLink, Download } from "lucide-react";
 import { contextLabel, photoSourceHref, type PhotoContext } from "@/lib/photos";
 import { PhotoVoteButton } from "@/components/PhotoVoteButton";
+import { PinterestShareButton } from "@/components/PinterestShareButton";
 
 export interface UserGalleryPhotoDTO {
   id: string;
@@ -188,6 +189,12 @@ export function UserPhotoGallery({
                 <Download className="h-3.5 w-3.5" />
                 Stáhnout
               </a>
+              <PinterestShareButton
+                photoId={active.id}
+                pageUrl={`${active.facility.href}/fotky`}
+                facilityName={active.facility.name}
+                sportLabel={active.facility.sportName}
+              />
               <Link
                 href={active.facility.href}
                 className="font-medium text-white underline-offset-2 hover:underline"

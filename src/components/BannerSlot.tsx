@@ -89,6 +89,9 @@ export function BannerSlot({ placement, sport, className }: BannerSlotProps) {
           height={size.height}
           className="h-auto w-full"
           unoptimized={banner.imageUrl.startsWith("http")}
+          // SIL-670 — hide from Pinterest scraping; this is paid ad chrome,
+          // not pinnable user content.
+          {...({ nopin: "nopin" } as Record<string, string>)}
         />
       </a>
       <p className="mt-1 text-[10px] text-zinc-400 text-center">Reklama</p>

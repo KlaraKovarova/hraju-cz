@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Trophy } from "lucide-react";
 import type { PhotoOfTheWeekWinner } from "@/lib/photos";
 import { formatWeekKeyCs } from "@/lib/photo-week";
+import { PinterestShareButton } from "@/components/PinterestShareButton";
 
 interface HomePhotoOfTheWeekProps {
   winner: PhotoOfTheWeekWinner | null;
@@ -102,12 +103,22 @@ export function HomePhotoOfTheWeek({ winner }: HomePhotoOfTheWeekProps) {
             </div>
           </dl>
 
-          <Link
-            href={facilityHref}
-            className="inline-flex w-fit items-center gap-2 rounded-full bg-emerald-600 px-5 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700"
-          >
-            Zobrazit sportoviště
-          </Link>
+          <div className="flex flex-wrap items-center gap-3">
+            <Link
+              href={facilityHref}
+              className="inline-flex w-fit items-center gap-2 rounded-full bg-emerald-600 px-5 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700"
+            >
+              Zobrazit sportoviště
+            </Link>
+            <PinterestShareButton
+              photoId={winner.photo.id}
+              pageUrl={`${facilityHref}/fotky`}
+              facilityName={winner.facility.name}
+              sportLabel={winner.facility.sportName}
+              authorName={winner.user.name}
+              className="inline-flex items-center gap-1.5 rounded-full border border-amber-200 bg-white px-4 py-2 text-sm font-medium text-amber-700 transition hover:border-amber-300 hover:bg-amber-50"
+            />
+          </div>
         </div>
       </article>
     </section>

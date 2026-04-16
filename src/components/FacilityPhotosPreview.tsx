@@ -73,6 +73,8 @@ export async function FacilityPhotosPreview({
           photos={dtos}
           facilityHref={facilityHref}
           gridClassName="grid grid-cols-3 gap-2 sm:gap-3"
+          facilityName={facilityName}
+          sportLabel={sportName}
         />
       </div>
     </section>

@@ -5,6 +5,7 @@ import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, Download, ExternalLink, X } from "lucide-react";
 import { contextLabel, photoSourceHref, type PhotoContext } from "@/lib/photos";
 import { PhotoVoteButton } from "@/components/PhotoVoteButton";
+import { PinterestShareButton } from "@/components/PinterestShareButton";
 
 export interface HomePhotoDTO {
   id: string;
@@ -212,6 +213,13 @@ export function HomeRecentPhotosGallery({ photos }: HomeRecentPhotosGalleryProps
                 <Download className="h-3.5 w-3.5" />
                 Stáhnout
               </a>
+              <PinterestShareButton
+                photoId={active.id}
+                pageUrl={`${active.facility.href}/fotky`}
+                facilityName={active.facility.name}
+                sportLabel={active.facility.sportName}
+                authorName={active.user.name}
+              />
               <Link
                 href={active.facility.href}
                 className="font-medium underline-offset-2 hover:underline"
