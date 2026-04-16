@@ -19,6 +19,7 @@ export async function GET(request: NextRequest) {
     : DEFAULT_LIMIT;
 
   try {
+    // Explicit allowlist — never leak Stripe/admin fields on the public endpoint (SIL-643)
     const facilities = await prisma.facility.findMany({
       where: {
         isActive: true,
@@ -27,11 +28,37 @@ export async function GET(request: NextRequest) {
         ...(city ? { location: { city: { contains: city } } } : {}),
         ...(search ? { name: { contains: search, mode: "insensitive" as const } } : {}),
       },
-      include: {
+      select: {
+        id: true,
+        name: true,
+        slug: true,
+        description: true,
+        address: true,
+        postalCode: true,
+        lat: true,
+        lng: true,
+        courtsLanes: true,
+        pricing: true,
+        openingHours: true,
+        website: true,
+        bookingUrl: true,
+        isClaimed: true,
+        isPremium: true,
+        isPromo: true,
+        averageRating: true,
+        reviewCount: true,
+        tipCount: true,
+        favoriteCount: true,
+        createdAt: true,
+        updatedAt: true,
         location: { select: { city: true, region: true } },
-        sports: { include: { sport: { select: { slug: true, nameCs: true } } } },
-        contacts: true,
-        images: { where: { isPrimary: true }, take: 1 },
+        sports: { select: { sport: { select: { slug: true, nameCs: true } } } },
+        contacts: { select: { id: true, type: true, value: true, label: true, isPrimary: true } },
+        images: {
+          where: { isPrimary: true },
+          take: 1,
+          select: { id: true, url: true, alt: true, isPrimary: true, order: true },
+        },
       },
       orderBy: [{ isPremium: "desc" }, { name: "asc" }],
       take,
