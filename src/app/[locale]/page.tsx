@@ -20,6 +20,8 @@ import { cityToSlug } from "@/lib/regions";
 import { FacilityCard } from "@/components/FacilityCard";
 import { HeroSearchForm } from "@/components/HeroSearchForm";
 import { HomeRecentConditions } from "@/components/HomeRecentConditions";
+import { HomeRecentPhotos } from "@/components/HomeRecentPhotos";
+import { getRecentPhotos } from "@/lib/photos";
 import { AdSlot } from "@/components/AdSlot";
 import { ActivityFeed } from "@/components/ActivityFeed";
 import { WeekendEvents } from "@/components/WeekendEvents";
@@ -33,7 +35,7 @@ export const revalidate = 86400;
 export default async function Home() {
   const totalFacilities = getTotalFacilityCount();
   const totalSports = getTotalSportCount();
-  const [featuredFacilities, topCities, recentFacilities, recentReviews, communityStats, activityItems, topReviewers, trendingReviews, mostActiveFacilities, recentConditions] =
+  const [featuredFacilities, topCities, recentFacilities, recentReviews, communityStats, activityItems, topReviewers, trendingReviews, mostActiveFacilities, recentConditions, recentPhotos] =
     await Promise.all([
       getFeaturedFacilities(6),
       getTopCitiesOverall(10),
@@ -45,8 +47,10 @@ export default async function Home() {
       getTrendingReviews(7, 5),
       getMostActiveFacilities(30, 5),
       getRecentConditionReports(6, 7),
+      getRecentPhotos(6, 14),
     ]);
   const conditionsLcpThumb = recentConditions.find((r) => r.thumbnailUrl)?.thumbnailUrl ?? null;
+  const photosLcpThumb = recentPhotos[0]?.url ?? null;
   const latestPosts = getAllPosts().slice(0, 3);
 
   // FAQ data for structured markup
@@ -153,6 +157,10 @@ export default async function Home() {
       {/* LCP preload for first conditions rail thumbnail */}
       {conditionsLcpThumb && (
         <link rel="preload" as="image" href={conditionsLcpThumb} fetchPriority="high" />
+      )}
+      {/* LCP preload for first photos rail thumbnail (SIL-665) */}
+      {photosLcpThumb && (
+        <link rel="preload" as="image" href={photosLcpThumb} fetchPriority="high" />
       )}
 
       {/* Navigation */}
@@ -278,6 +286,9 @@ export default async function Home() {
 
       {/* Recent Conditions Rail (SIL-655) */}
       <HomeRecentConditions reports={recentConditions} />
+
+      {/* Recent Photos Rail (SIL-665) */}
+      <HomeRecentPhotos photos={recentPhotos} />
 
       {/* Sports Grid */}
       <section id="sports" className="mx-auto max-w-6xl px-6 py-16">

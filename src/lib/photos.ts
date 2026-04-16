@@ -24,6 +24,53 @@ export interface GetFacilityPhotosOpts {
   take?: number;
 }
 
+export interface UserPhoto {
+  id: string;
+  url: string;
+  alt: string | null;
+  createdAt: Date;
+  context: PhotoContext | null;
+  reviewId: string | null;
+  visitId: string | null;
+  conditionReportId: string | null;
+  facility: {
+    id: string;
+    name: string;
+    slug: string;
+    sportSlug: string;
+    sportName: string;
+    city: string | null;
+  };
+}
+
+export interface GetUserPhotosOpts {
+  /** 0-based page index (page 0 = first page). */
+  page?: number;
+  /** Page size; default 48. */
+  pageSize?: number;
+  /** Convenience: take N photos from the start, ignoring pagination. */
+  take?: number;
+}
+
+export interface RecentHomePhoto {
+  id: string;
+  url: string;
+  alt: string | null;
+  createdAt: Date;
+  context: PhotoContext | null;
+  reviewId: string | null;
+  visitId: string | null;
+  conditionReportId: string | null;
+  user: { id: string; name: string | null };
+  facility: {
+    id: string;
+    name: string;
+    slug: string;
+    sportSlug: string | null;
+    sportName: string | null;
+  };
+}
+
 const DEFAULT_PAGE_SIZE = 48;
 
 function inferContext(p: {
@@ -95,6 +142,141 @@ export async function getFacilityPhotos(
   }));
 
   return { photos, total };
+}
+
+/**
+ * getUserPhotos — return a user's uploaded photos across all facilities, joined
+ * with facility name / slug / sport for per-tile context.
+ *
+ * Always filters out hidden photos. Sorted by createdAt DESC.
+ */
+export async function getUserPhotos(
+  userId: string,
+  opts: GetUserPhotosOpts = {}
+): Promise<{ photos: UserPhoto[]; total: number }> {
+  const where = { userId, isHidden: false };
+
+  const pageSize = opts.take ?? opts.pageSize ?? DEFAULT_PAGE_SIZE;
+  const skip = opts.take ? 0 : (opts.page ?? 0) * pageSize;
+
+  const [rows, total] = await Promise.all([
+    prisma.userPhoto.findMany({
+      where,
+      orderBy: { createdAt: "desc" },
+      skip,
+      take: pageSize,
+      select: {
+        id: true,
+        url: true,
+        alt: true,
+        createdAt: true,
+        reviewId: true,
+        visitId: true,
+        conditionReportId: true,
+        facility: {
+          select: {
+            id: true,
+            name: true,
+            slug: true,
+            location: { select: { city: true } },
+            sports: {
+              take: 1,
+              select: { sport: { select: { slug: true, nameCs: true } } },
+            },
+          },
+        },
+      },
+    }),
+    prisma.userPhoto.count({ where }),
+  ]);
+
+  const photos: UserPhoto[] = rows.map((r) => ({
+    id: r.id,
+    url: r.url,
+    alt: r.alt,
+    createdAt: r.createdAt,
+    context: inferContext(r),
+    reviewId: r.reviewId,
+    visitId: r.visitId,
+    conditionReportId: r.conditionReportId,
+    facility: {
+      id: r.facility.id,
+      name: r.facility.name,
+      slug: r.facility.slug,
+      sportSlug: r.facility.sports[0]?.sport.slug ?? "",
+      sportName: r.facility.sports[0]?.sport.nameCs ?? "",
+      city: r.facility.location?.city ?? null,
+    },
+  }));
+
+  return { photos, total };
+}
+
+/**
+ * getRecentPhotos — return the most recent user-uploaded photos across ALL
+ * active facilities, for homepage / site-wide rails.
+ *
+ * Always filters out hidden photos and facilities without sports.
+ * Sorted by createdAt DESC, limited to the given days window.
+ */
+export async function getRecentPhotos(
+  limit: number = 6,
+  days: number = 14
+): Promise<RecentHomePhoto[]> {
+  try {
+    const since = new Date(Date.now() - days * 24 * 60 * 60 * 1000);
+    const rows = await prisma.userPhoto.findMany({
+      where: {
+        isHidden: false,
+        createdAt: { gte: since },
+        facility: { isActive: true, sports: { some: {} } },
+      },
+      orderBy: { createdAt: "desc" },
+      take: limit,
+      select: {
+        id: true,
+        url: true,
+        alt: true,
+        createdAt: true,
+        reviewId: true,
+        visitId: true,
+        conditionReportId: true,
+        user: { select: { id: true, name: true } },
+        facility: {
+          select: {
+            id: true,
+            name: true,
+            slug: true,
+            sports: {
+              take: 1,
+              select: { sport: { select: { slug: true, nameCs: true } } },
+            },
+          },
+        },
+      },
+    });
+
+    return rows.map((r) => ({
+      id: r.id,
+      url: r.url,
+      alt: r.alt,
+      createdAt: r.createdAt,
+      context: inferContext(r),
+      reviewId: r.reviewId,
+      visitId: r.visitId,
+      conditionReportId: r.conditionReportId,
+      user: r.user,
+      facility: {
+        id: r.facility.id,
+        name: r.facility.name,
+        slug: r.facility.slug,
+        sportSlug: r.facility.sports[0]?.sport.slug ?? null,
+        sportName: r.facility.sports[0]?.sport.nameCs ?? null,
+      },
+    }));
+  } catch {
+    return [];
+  }
 }
 
 const CONTEXT_LABEL_CS: Record<PhotoContext, string> = {
