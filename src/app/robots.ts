@@ -22,6 +22,9 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/admin", "/api/", "/muj-ucet", "/moje-sportoviste", "/en/", "/de/", "/pl/"],
       },
     ],
-    sitemap: "https://www.hraju.cz/sitemap.xml",
+    sitemap: [
+      "https://www.hraju.cz/sitemap.xml",
+      "https://www.hraju.cz/sitemap-images.xml",
+    ],
   };
 }

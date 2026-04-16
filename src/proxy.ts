@@ -103,6 +103,9 @@ export async function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+    // Exclude static/image assets and data routes (sitemap.xml, sitemap-images.xml,
+    // robots.txt, llms.txt, llms-full.txt) so next-intl never rewrites them into the
+    // [locale] tree — SIL-663.
+    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:xml|txt|svg|png|jpg|jpeg|gif|webp)$).*)",
   ],
 };
