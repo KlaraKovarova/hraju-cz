@@ -8,7 +8,15 @@ export async function GET(request: NextRequest) {
   const city = searchParams.get("city");
   const slug = searchParams.get("slug");
   const search = searchParams.get("search");
-  const limit = searchParams.get("limit");
+  const limitParam = searchParams.get("limit");
+
+  // Cap maximum results to prevent bandwidth abuse / data dumps (SIL-646)
+  const MAX_LIMIT = 100;
+  const DEFAULT_LIMIT = 50;
+  const parsedLimit = limitParam ? parseInt(limitParam, 10) : DEFAULT_LIMIT;
+  const take = Number.isFinite(parsedLimit) && parsedLimit > 0
+    ? Math.min(MAX_LIMIT, parsedLimit)
+    : DEFAULT_LIMIT;
 
   try {
     const facilities = await prisma.facility.findMany({
@@ -26,7 +34,7 @@ export async function GET(request: NextRequest) {
         images: { where: { isPrimary: true }, take: 1 },
       },
       orderBy: [{ isPremium: "desc" }, { name: "asc" }],
-      ...(limit ? { take: Number(limit) } : {}),
+      take,
     });
     return NextResponse.json(facilities);
   } catch (error) {
