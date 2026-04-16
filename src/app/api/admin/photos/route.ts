@@ -1,12 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { cookies } from "next/headers";
+import { verifyAdminFromRequest } from "@/lib/admin-auth";
 
 // GET /api/admin/photos — list user photos for moderation
 export async function GET(request: NextRequest) {
-  const cookieStore = await cookies();
-  const adminSession = cookieStore.get("admin_session");
-  if (!adminSession) {
+  if (!(await verifyAdminFromRequest(request))) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
