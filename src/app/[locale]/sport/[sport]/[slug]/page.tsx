@@ -39,6 +39,7 @@ import { CheckInButton } from "@/components/CheckInButton";
 import { FavoriteButton } from "@/components/FavoriteButton";
 import { FacilityGallery } from "@/components/FacilityGallery";
 import { FacilityReviewCTA } from "@/components/FacilityReviewCTA";
+import { FacilityPhotosPreview } from "@/components/FacilityPhotosPreview";
 import { ConditionReportsSection } from "@/components/ConditionReportsSection";
 import {
   CONDITION_AGGREGATE_MIN,
@@ -77,6 +78,15 @@ export async function generateMetadata({
     const url = `https://www.hraju.cz/sport/${sportSlug}/${slug}`;
 
     const primaryImage = facility.images?.find((img: { isPrimary: boolean }) => img.isPrimary) ?? facility.images?.[0];
+    // Prefer the most recent non-hidden user photo for OG (SIL-661); falls back
+    // to the facility's primary image, then to a dynamically generated OG card.
+    const recentUserPhoto = await prisma.userPhoto
+      .findFirst({
+        where: { facilityId: facility.id, isHidden: false },
+        orderBy: { createdAt: "desc" },
+        select: { url: true, alt: true },
+      })
+      .catch(() => null);
     const dynamicOgUrl = `/api/og?${new URLSearchParams({
       title: facility.name,
       subtitle: `${sport.nameCs} · ${facility.location.city}`,
@@ -84,7 +94,9 @@ export async function generateMetadata({
       type: "facility",
       ...(facility.averageRating ? { rating: facility.averageRating.toFixed(1) } : {}),
     }).toString()}`;
-    const ogImage = primaryImage?.url
+    const ogImage = recentUserPhoto?.url
+      ? { url: recentUserPhoto.url, alt: recentUserPhoto.alt ?? `${facility.name} — ${sport.nameCs}` }
+      : primaryImage?.url
       ? { url: primaryImage.url, alt: primaryImage.alt ?? facility.name }
       : { url: dynamicOgUrl, width: 1200, height: 630, alt: `${facility.name} — hraju.cz` };
 
@@ -1034,6 +1046,14 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
           />
         </div>
       </section>
+
+      {/* User-uploaded photos preview (top 6) — links to full /fotky gallery */}
+      <FacilityPhotosPreview
+        facilityId={facility.id}
+        facilityName={facility.name}
+        sportName={sport.nameCs}
+        facilityHref={`/sport/${sportSlug}/${slug}`}
+      />
 
       {/* State-aware review CTA */}
       <FacilityReviewCTA

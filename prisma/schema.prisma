@@ -12,8 +12,8 @@ datasource db {
 model Sport {
   id          String          @id @default(cuid())
   slug        String          @unique // e.g. "tenis", "squash"
-  name        String          // display name
-  nameCs      String          // Czech name
+  name        String // display name
+  nameCs      String // Czech name
   subdomain   String          @unique // legacy field, same as slug
   description String?
   icon        String?
@@ -39,53 +39,53 @@ model Location {
 }
 
 model Facility {
-  id            String            @id @default(cuid())
-  name          String
-  slug          String            @unique
-  description   String?
-  address       String
-  postalCode    String?
-  locationId    String
-  location      Location          @relation(fields: [locationId], references: [id])
-  lat           Float?
-  lng           Float?
-  googlePlaceId String?
-  courtsLanes   Int? // number of courts/lanes/pools
-  pricing       String? // markdown or plain text pricing info
-  openingHours  Json? // structured opening hours per day
-  website       String?
-  isActive      Boolean           @default(true)
-  isClaimed     Boolean           @default(false)
-  isPremium              Boolean           @default(false)
-  isPromo                Boolean           @default(false) // true = promotional premium, auto-replaceable by paid
-  bookingUrl             String?
-  stripeCustomerId       String?
-  stripeSubscriptionId   String?
-  subscriptionStatus     String?           // active, canceled, past_due, etc.
-  premiumExpiresAt       DateTime?
-  isApproved             Boolean           @default(false) // admin has reviewed this listing
-  approvedAt             DateTime?
-  createdAt              DateTime          @default(now())
-  updatedAt              DateTime          @updatedAt
-  sports        FacilitySport[]
-  amenities     FacilityAmenity[]
-  contacts      Contact[]
-  images        FacilityImage[]
-  editRequests  EditRequest[]
-  ownerTokens   OwnerToken[]
-  views         FacilityView[]
-  reviews       Review[]
-  visits        Visit[]
-  userPhotos    UserPhoto[]
-  tips          FacilityTip[]
-  favorites     Favorite[]
+  id                    String                 @id @default(cuid())
+  name                  String
+  slug                  String                 @unique
+  description           String?
+  address               String
+  postalCode            String?
+  locationId            String
+  location              Location               @relation(fields: [locationId], references: [id])
+  lat                   Float?
+  lng                   Float?
+  googlePlaceId         String?
+  courtsLanes           Int? // number of courts/lanes/pools
+  pricing               String? // markdown or plain text pricing info
+  openingHours          Json? // structured opening hours per day
+  website               String?
+  isActive              Boolean                @default(true)
+  isClaimed             Boolean                @default(false)
+  isPremium             Boolean                @default(false)
+  isPromo               Boolean                @default(false) // true = promotional premium, auto-replaceable by paid
+  bookingUrl            String?
+  stripeCustomerId      String?
+  stripeSubscriptionId  String?
+  subscriptionStatus    String? // active, canceled, past_due, etc.
+  premiumExpiresAt      DateTime?
+  isApproved            Boolean                @default(false) // admin has reviewed this listing
+  approvedAt            DateTime?
+  createdAt             DateTime               @default(now())
+  updatedAt             DateTime               @updatedAt
+  sports                FacilitySport[]
+  amenities             FacilityAmenity[]
+  contacts              Contact[]
+  images                FacilityImage[]
+  editRequests          EditRequest[]
+  ownerTokens           OwnerToken[]
+  views                 FacilityView[]
+  reviews               Review[]
+  visits                Visit[]
+  userPhotos            UserPhoto[]
+  tips                  FacilityTip[]
+  favorites             Favorite[]
   favoriteNotifications FavoriteNotification[]
-  conditionReports ConditionReport[]
-  premiumOrders PremiumOrder[]
-  averageRating Float?
-  reviewCount   Int              @default(0)
-  tipCount      Int              @default(0)
-  favoriteCount Int              @default(0)
+  conditionReports      ConditionReport[]
+  premiumOrders         PremiumOrder[]
+  averageRating         Float?
+  reviewCount           Int                    @default(0)
+  tipCount              Int                    @default(0)
+  favoriteCount         Int                    @default(0)
 
   @@index([locationId])
   @@index([slug])
@@ -216,25 +216,25 @@ model FacilityView {
 }
 
 model Review {
-  id                String    @id @default(cuid())
-  facilityId        String
-  facility          Facility  @relation(fields: [facilityId], references: [id], onDelete: Cascade)
-  userId            String?
-  user              User?     @relation(fields: [userId], references: [id], onDelete: SetNull)
-  authorName        String
-  authorEmail       String
-  rating            Int       // 1-5
-  title             String?
-  text              String?   @db.Text
-  helpful           Int       @default(0)
-  flagged           Boolean   @default(false)
-  isApproved        Boolean   @default(false)
-  ownerNotifiedAt   DateTime? // when facility owner was emailed about this review
-  replyCount        Int       @default(0)
-  createdAt         DateTime  @default(now())
-  updatedAt         DateTime  @updatedAt
-  photos            UserPhoto[]
-  replies           ReviewReply[]
+  id              String        @id @default(cuid())
+  facilityId      String
+  facility        Facility      @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  userId          String?
+  user            User?         @relation(fields: [userId], references: [id], onDelete: SetNull)
+  authorName      String
+  authorEmail     String
+  rating          Int // 1-5
+  title           String?
+  text            String?       @db.Text
+  helpful         Int           @default(0)
+  flagged         Boolean       @default(false)
+  isApproved      Boolean       @default(false)
+  ownerNotifiedAt DateTime? // when facility owner was emailed about this review
+  replyCount      Int           @default(0)
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  photos          UserPhoto[]
+  replies         ReviewReply[]
 
   @@index([facilityId])
   @@index([isApproved])
@@ -256,30 +256,30 @@ model ReviewReply {
 }
 
 model User {
-  id                 String   @id @default(cuid())
-  email              String   @unique
-  name               String?
-  passwordHash       String?
-  bio                String?  @db.VarChar(200)
-  location           String?  @db.VarChar(100)
-  favoriteSports     String[] @default([])
-  isSeed             Boolean  @default(false)
-  emailNotifications Boolean  @default(true)
-  weeklyDigest       Boolean  @default(true)
-  conditionsDigest   Boolean  @default(true)
-  unsubscribeToken   String?  @unique
-  lastBadgeNudgeAt   DateTime?
-  createdAt          DateTime @default(now())
-  updatedAt          DateTime @updatedAt
-  reviews            Review[]
-  reviewReplies      ReviewReply[]
-  visits             Visit[]
-  userPhotos         UserPhoto[]
-  loginTokens        LoginToken[]
-  events             TouristEvent[]
-  badges             UserBadge[]
-  tips               FacilityTip[]
-  favorites          Favorite[]
+  id                    String                 @id @default(cuid())
+  email                 String                 @unique
+  name                  String?
+  passwordHash          String?
+  bio                   String?                @db.VarChar(200)
+  location              String?                @db.VarChar(100)
+  favoriteSports        String[]               @default([])
+  isSeed                Boolean                @default(false)
+  emailNotifications    Boolean                @default(true)
+  weeklyDigest          Boolean                @default(true)
+  conditionsDigest      Boolean                @default(true)
+  unsubscribeToken      String?                @unique
+  lastBadgeNudgeAt      DateTime?
+  createdAt             DateTime               @default(now())
+  updatedAt             DateTime               @updatedAt
+  reviews               Review[]
+  reviewReplies         ReviewReply[]
+  visits                Visit[]
+  userPhotos            UserPhoto[]
+  loginTokens           LoginToken[]
+  events                TouristEvent[]
+  badges                UserBadge[]
+  tips                  FacilityTip[]
+  favorites             Favorite[]
   favoriteNotifications FavoriteNotification[]
   notifications         Notification[]
   conditionReports      ConditionReport[]
@@ -287,15 +287,15 @@ model User {
 }
 
 model Visit {
-  id                    String    @id @default(cuid())
-  userId                String
-  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  facilityId            String
-  facility              Facility  @relation(fields: [facilityId], references: [id], onDelete: Cascade)
-  note                  String?   @db.VarChar(280)
-  createdAt             DateTime  @default(now())
-  reviewReminderSentAt  DateTime?
-  photos                UserPhoto[]
+  id                   String      @id @default(cuid())
+  userId               String
+  user                 User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  facilityId           String
+  facility             Facility    @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  note                 String?     @db.VarChar(280)
+  createdAt            DateTime    @default(now())
+  reviewReminderSentAt DateTime?
+  photos               UserPhoto[]
 
   @@unique([userId, facilityId])
   @@index([facilityId])
@@ -328,23 +328,23 @@ model ContactMessage {
 }
 
 model TouristEvent {
-  id          String   @id @default(cuid())
-  sourceId    String   @unique
+  id          String    @id @default(cuid())
+  sourceId    String    @unique
   name        String
   dateStart   DateTime
   dateEnd     DateTime?
   city        String
   region      String?
-  description String?  @db.Text
+  description String?   @db.Text
   externalUrl String?
   lat         Float?
   lng         Float?
-  source      String   @default("kct")
-  isActive    Boolean  @default(true)
+  source      String    @default("kct")
+  isActive    Boolean   @default(true)
   userId      String?
-  user        User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  user        User?     @relation(fields: [userId], references: [id], onDelete: SetNull)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
 
   @@index([city])
   @@index([region])
@@ -357,7 +357,7 @@ model UserBadge {
   id        String   @id @default(cuid())
   userId    String
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  badgeSlug String   // references badge definition in config
+  badgeSlug String // references badge definition in config
   earnedAt  DateTime @default(now())
 
   @@unique([userId, badgeSlug])
@@ -365,23 +365,24 @@ model UserBadge {
 }
 
 model UserPhoto {
-  id         String   @id @default(cuid())
-  userId     String
-  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  facilityId String
-  facility   Facility @relation(fields: [facilityId], references: [id], onDelete: Cascade)
-  reviewId   String?
-  review     Review?  @relation(fields: [reviewId], references: [id], onDelete: SetNull)
-  visitId    String?
-  visit      Visit?   @relation(fields: [visitId], references: [id], onDelete: SetNull)
+  id                String           @id @default(cuid())
+  userId            String
+  user              User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  facilityId        String
+  facility          Facility         @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  reviewId          String?
+  review            Review?          @relation(fields: [reviewId], references: [id], onDelete: SetNull)
+  visitId           String?
+  visit             Visit?           @relation(fields: [visitId], references: [id], onDelete: SetNull)
   conditionReportId String?
   conditionReport   ConditionReport? @relation(fields: [conditionReportId], references: [id], onDelete: SetNull)
-  url        String
-  alt        String?
-  isHidden   Boolean  @default(false)
-  createdAt  DateTime @default(now())
+  url               String
+  alt               String?
+  isHidden          Boolean          @default(false)
+  createdAt         DateTime         @default(now())
 
   @@index([facilityId])
+  @@index([facilityId, createdAt])
   @@index([reviewId])
   @@index([visitId])
   @@index([conditionReportId])
@@ -389,18 +390,18 @@ model UserPhoto {
 }
 
 model ConditionReport {
-  id         String   @id @default(cuid())
+  id         String                @id @default(cuid())
   facilityId String
-  facility   Facility @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  facility   Facility              @relation(fields: [facilityId], references: [id], onDelete: Cascade)
   userId     String
-  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  rating     String   // 'excellent' | 'good' | 'poor' | 'closed'
-  comment    String?  @db.Text
-  helpful    Int      @default(0)
-  flagCount  Int      @default(0)
-  visitedAt  DateTime @default(now())
-  createdAt  DateTime @default(now())
-  isHidden   Boolean  @default(false)
+  user       User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  rating     String // 'excellent' | 'good' | 'poor' | 'closed'
+  comment    String?               @db.Text
+  helpful    Int                   @default(0)
+  flagCount  Int                   @default(0)
+  visitedAt  DateTime              @default(now())
+  createdAt  DateTime              @default(now())
+  isHidden   Boolean               @default(false)
   photos     UserPhoto[]
   flags      ConditionReportFlag[]
 
@@ -410,13 +411,13 @@ model ConditionReport {
 }
 
 model ConditionReportFlag {
-  id       String          @id @default(cuid())
-  reportId String
-  report   ConditionReport @relation(fields: [reportId], references: [id], onDelete: Cascade)
-  userId   String
-  user     User            @relation(fields: [userId], references: [id], onDelete: Cascade)
-  reason   String?         @db.VarChar(280)
-  createdAt DateTime       @default(now())
+  id        String          @id @default(cuid())
+  reportId  String
+  report    ConditionReport @relation(fields: [reportId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  reason    String?         @db.VarChar(280)
+  createdAt DateTime        @default(now())
 
   @@unique([reportId, userId])
   @@index([reportId])
@@ -460,7 +461,7 @@ model FavoriteNotification {
   user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   facilityId String
   facility   Facility @relation(fields: [facilityId], references: [id], onDelete: Cascade)
-  type       String   // "review" | "checkin"
+  type       String // "review" | "checkin"
   actorName  String?
   isRead     Boolean  @default(false)
   createdAt  DateTime @default(now())
@@ -474,11 +475,11 @@ model Notification {
   id        String   @id @default(cuid())
   userId    String
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  type      String   // "review_reply" | "badge_earned" | "challenge_completed" | "helpful_vote"
+  type      String // "review_reply" | "badge_earned" | "challenge_completed" | "helpful_vote"
   title     String
   body      String?
   linkUrl   String?
-  icon      String?  // emoji
+  icon      String? // emoji
   isRead    Boolean  @default(false)
   createdAt DateTime @default(now())
 
@@ -505,16 +506,16 @@ model Banner {
 }
 
 model PremiumOrder {
-  id              String    @id @default(cuid())
-  facilityId      String
-  facility        Facility  @relation(fields: [facilityId], references: [id], onDelete: Cascade)
-  variableSymbol  String    @unique // numeric string for bank transfer matching
-  amount          Int       // amount in CZK (e.g. 1209)
-  status          String    @default("pending") // pending, confirmed, cancelled
-  adminNote       String?
-  confirmedAt     DateTime?
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
+  id             String    @id @default(cuid())
+  facilityId     String
+  facility       Facility  @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  variableSymbol String    @unique // numeric string for bank transfer matching
+  amount         Int // amount in CZK (e.g. 1209)
+  status         String    @default("pending") // pending, confirmed, cancelled
+  adminNote      String?
+  confirmedAt    DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
 
   @@index([facilityId])
   @@index([status])
@@ -525,13 +526,13 @@ model Product {
   slug        String   @unique
   name        String
   brand       String
-  sport       String   // sport slug e.g. "ferraty", "lezeni"
-  category    String   // product category e.g. "tlumic-padu", "set", "prilba", "rukavice"
+  sport       String // sport slug e.g. "ferraty", "lezeni"
+  category    String // product category e.g. "tlumic-padu", "set", "prilba", "rukavice"
   description String
-  specs       Json?    // { weight, certifications, sizes, materials, etc. }
+  specs       Json? // { weight, certifications, sizes, materials, etc. }
   images      String[] // array of image URLs
-  sourceUrl   String   // link to manufacturer product page
-  price       Int?     // price in CZK haléře (cents), null if unknown
+  sourceUrl   String // link to manufacturer product page
+  price       Int? // price in CZK haléře (cents), null if unknown
   isActive    Boolean  @default(true)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
