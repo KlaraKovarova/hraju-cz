@@ -14,10 +14,12 @@ import {
   getTopReviewers,
   getTrendingReviews,
   getMostActiveFacilities,
+  getRecentConditionReports,
 } from "@/lib/data";
 import { cityToSlug } from "@/lib/regions";
 import { FacilityCard } from "@/components/FacilityCard";
 import { HeroSearchForm } from "@/components/HeroSearchForm";
+import { HomeRecentConditions } from "@/components/HomeRecentConditions";
 import { AdSlot } from "@/components/AdSlot";
 import { ActivityFeed } from "@/components/ActivityFeed";
 import { WeekendEvents } from "@/components/WeekendEvents";
@@ -31,7 +33,7 @@ export const revalidate = 86400;
 export default async function Home() {
   const totalFacilities = getTotalFacilityCount();
   const totalSports = getTotalSportCount();
-  const [featuredFacilities, topCities, recentFacilities, recentReviews, communityStats, activityItems, topReviewers, trendingReviews, mostActiveFacilities] =
+  const [featuredFacilities, topCities, recentFacilities, recentReviews, communityStats, activityItems, topReviewers, trendingReviews, mostActiveFacilities, recentConditions] =
     await Promise.all([
       getFeaturedFacilities(6),
       getTopCitiesOverall(10),
@@ -42,7 +44,9 @@ export default async function Home() {
       getTopReviewers(6),
       getTrendingReviews(7, 5),
       getMostActiveFacilities(30, 5),
+      getRecentConditionReports(6, 7),
     ]);
+  const conditionsLcpThumb = recentConditions.find((r) => r.thumbnailUrl)?.thumbnailUrl ?? null;
   const latestPosts = getAllPosts().slice(0, 3);
 
   // FAQ data for structured markup
@@ -146,6 +150,10 @@ export default async function Home() {
           dangerouslySetInnerHTML={{ __html: safeJsonLd(ld) }}
         />
       ))}
+      {/* LCP preload for first conditions rail thumbnail */}
+      {conditionsLcpThumb && (
+        <link rel="preload" as="image" href={conditionsLcpThumb} fetchPriority="high" />
+      )}
 
       {/* Navigation */}
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">
@@ -267,6 +275,9 @@ export default async function Home() {
           )}
         </div>
       </section>
+
+      {/* Recent Conditions Rail (SIL-655) */}
+      <HomeRecentConditions reports={recentConditions} />
 
       {/* Sports Grid */}
       <section id="sports" className="mx-auto max-w-6xl px-6 py-16">
