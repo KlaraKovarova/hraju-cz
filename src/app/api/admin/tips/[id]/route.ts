@@ -1,11 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { verifyAdminFromRequest } from "@/lib/admin-auth";
 
 // PATCH /api/admin/tips/[id] — approve, reject, or revoke a tip
 export async function PATCH(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
+  if (!(await verifyAdminFromRequest(request))) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   const { id } = await params;
 
   let body: { action?: string };

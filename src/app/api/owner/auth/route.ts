@@ -27,6 +27,10 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Token vypršel" }, { status: 401 });
     }
 
+    if (ownerToken.usedAt) {
+      return NextResponse.json({ error: "Token již byl použit" }, { status: 401 });
+    }
+
     // Mark token as used and claim the facility
     await prisma.$transaction([
       prisma.ownerToken.update({

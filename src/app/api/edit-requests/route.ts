@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { randomBytes } from "crypto";
 import { sendMagicLinkEmail } from "@/lib/email";
+import { verifyAdminFromRequest } from "@/lib/admin-auth";
 
 export async function POST(request: NextRequest) {
   try {
@@ -107,6 +108,10 @@ export async function POST(request: NextRequest) {
 }
 
 export async function GET(request: NextRequest) {
+  if (!(await verifyAdminFromRequest(request))) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   const { searchParams } = new URL(request.url);
   const status = searchParams.get("status");
 

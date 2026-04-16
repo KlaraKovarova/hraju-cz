@@ -1,11 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { verifyAdminFromRequest } from "@/lib/admin-auth";
 
 interface RouteParams {
   params: Promise<{ id: string }>;
 }
 
 export async function PATCH(request: NextRequest, { params }: RouteParams) {
+  if (!(await verifyAdminFromRequest(request))) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   const { id } = await params;
   try {
     const body = await request.json();

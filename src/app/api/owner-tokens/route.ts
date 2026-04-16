@@ -1,10 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { randomBytes } from "crypto";
+import { verifyAdminFromRequest } from "@/lib/admin-auth";
 
 // Admin endpoint: generate a claim token for a facility
 export async function POST(request: NextRequest) {
   try {
+    const isAdmin = await verifyAdminFromRequest(request);
+    if (!isAdmin) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
     const body = await request.json();
     const { facilityId, ownerEmail, ownerName, expiresInDays } = body;
 
