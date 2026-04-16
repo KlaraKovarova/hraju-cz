@@ -8,6 +8,8 @@ import {
   CONDITION_RATE_LIMIT_HOURS,
   daysAgo,
 } from "@/lib/conditions";
+import { checkBadgesByCategory } from "@/lib/challenges";
+import { batchLocalGuideTiers } from "@/lib/badges/local-guide";
 
 // GET /api/facilities/[id]/conditions — recent reports (last FRESH_DAYS by default)
 export async function GET(
@@ -44,7 +46,18 @@ export async function GET(
     },
   });
 
-  return NextResponse.json({ reports });
+  // Decorate authors with their highest "Místní průvodce" tier (if any) so
+  // the UI can render the badge next to their name without N+1 queries.
+  const tierMap = await batchLocalGuideTiers(reports.map((r) => r.user.id));
+  const decorated = reports.map((r) => ({
+    ...r,
+    user: {
+      ...r.user,
+      localGuideTier: tierMap.get(r.user.id) ?? null,
+    },
+  }));
+
+  return NextResponse.json({ reports: decorated });
 }
 
 // POST /api/facilities/[id]/conditions — submit a new condition report (auth required)
@@ -135,6 +148,11 @@ export async function POST(
       data: { conditionReportId: report.id },
     });
   }
+
+  // Award any newly earned "Místní průvodce" tiers — fire-and-forget so the
+  // user still gets a 201 even if the badge pipeline hiccups. The badge
+  // helpers themselves are idempotent (UserBadge has unique [userId, slug]).
+  checkBadgesByCategory(session.userId, "local_guide").catch(() => {});
 
   return NextResponse.json(
     { id: report.id, message: "Děkujeme za report! Pomáháte ostatním plánovat." },

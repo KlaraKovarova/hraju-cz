@@ -163,6 +163,19 @@ interface UserStats {
     nextThreshold: number | null;
     remaining: number | null;
   }[];
+  localGuide?: {
+    currentTier: "bronze" | "silver" | "gold" | null;
+    currentTierLabel: string | null;
+    nextTier: "bronze" | "silver" | "gold" | null;
+    nextTierLabel: string | null;
+    nextTierHint: string | null;
+    stats: {
+      reportsLast90Days: number;
+      reportsTotal: number;
+      helpfulTotal: number;
+      distinctFacilities: number;
+    };
+  };
 }
 
 type Tab = "overview" | "reviews" | "visits" | "favorites" | "events";
@@ -734,6 +747,45 @@ export default function MujUcetPage() {
                         </div>
                       </div>
                     ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Místní průvodce — local guide tier */}
+              {userStats.localGuide && (userStats.localGuide.stats.reportsTotal > 0 || userStats.localGuide.currentTier) && (
+                <div className="mt-4">
+                  <div className="mb-2 text-xs font-medium text-zinc-500 uppercase tracking-wide">
+                    Místní průvodce
+                  </div>
+                  <div className="rounded-lg border border-zinc-100 p-3">
+                    <div className="flex items-center gap-2">
+                      <span aria-hidden className="text-base">🗺️</span>
+                      <span className="text-sm font-medium text-zinc-700">
+                        {userStats.localGuide.currentTierLabel ?? "Zatím bez úrovně"}
+                      </span>
+                      {userStats.localGuide.currentTier && (
+                        <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-700">
+                          {userStats.localGuide.currentTier === "bronze" && "Bronz"}
+                          {userStats.localGuide.currentTier === "silver" && "Stříbro"}
+                          {userStats.localGuide.currentTier === "gold" && "Zlato"}
+                        </span>
+                      )}
+                    </div>
+                    <p className="mt-1 text-xs text-zinc-500">
+                      {userStats.localGuide.stats.reportsTotal}{" "}
+                      {userStats.localGuide.stats.reportsTotal === 1
+                        ? "report"
+                        : userStats.localGuide.stats.reportsTotal >= 2 && userStats.localGuide.stats.reportsTotal <= 4
+                          ? "reporty"
+                          : "reportů"}{" "}
+                      • {userStats.localGuide.stats.helpfulTotal} hlasů „užitečné“ • {userStats.localGuide.stats.distinctFacilities}{" "}
+                      {userStats.localGuide.stats.distinctFacilities === 1 ? "sportoviště" : "sportovišť"}
+                    </p>
+                    {userStats.localGuide.nextTierHint && (
+                      <p className="mt-2 text-xs font-medium text-amber-600">
+                        {userStats.localGuide.nextTierHint}
+                      </p>
+                    )}
                   </div>
                 </div>
               )}

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getUserSession } from "@/lib/user-auth";
 import { prisma } from "@/lib/prisma";
 import { withTimeout } from "@/lib/db-timeout";
+import { getLocalGuideProgress } from "@/lib/badges/local-guide";
 
 const EXPERTISE_THRESHOLDS = [
   { level: "znalec" as const, count: 3, labelCs: "Znalec" },
@@ -25,7 +26,7 @@ export async function GET() {
   }
 
   try {
-    const [reviews, totalHelpful, totalCheckIns] = await withTimeout(
+    const [reviews, totalHelpful, totalCheckIns, localGuide] = await withTimeout(
       Promise.all([
         // Reviews with sport info for per-sport breakdown
         prisma.review.findMany({
@@ -48,6 +49,7 @@ export async function GET() {
           _sum: { helpful: true },
         }),
         prisma.visit.count({ where: { userId: session.userId } }),
+        getLocalGuideProgress(session.userId),
       ])
     );
 
@@ -119,6 +121,7 @@ export async function GET() {
       totalCheckIns,
       reviewsBySport,
       expertiseProgress,
+      localGuide,
     });
   } catch {
     return NextResponse.json({ error: "Database error" }, { status: 500 });

@@ -7,6 +7,8 @@ import { ThumbsUp, Activity, Flag } from "lucide-react";
 import { CONDITION_RATING_META, type ConditionRating } from "@/lib/conditions";
 import { ConditionReportForm } from "./ConditionReportForm";
 
+type LocalGuideTier = "bronze" | "silver" | "gold";
+
 interface ConditionReport {
   id: string;
   rating: ConditionRating | string;
@@ -14,9 +16,24 @@ interface ConditionReport {
   helpful: number;
   visitedAt: string;
   createdAt: string;
-  user: { id: string; name: string | null };
+  user: { id: string; name: string | null; localGuideTier?: LocalGuideTier | null };
   photos: { id: string; url: string; alt: string | null }[];
 }
+
+const LOCAL_GUIDE_TIER_META: Record<LocalGuideTier, { label: string; classes: string }> = {
+  bronze: {
+    label: "Průvodce",
+    classes: "bg-amber-50 text-amber-700 border-amber-100",
+  },
+  silver: {
+    label: "Zkušený průvodce",
+    classes: "bg-zinc-100 text-zinc-700 border-zinc-200",
+  },
+  gold: {
+    label: "Expert průvodce",
+    classes: "bg-yellow-50 text-yellow-800 border-yellow-200",
+  },
+};
 
 interface ConditionReportsSectionProps {
   facilityId: string;
@@ -298,11 +315,13 @@ function ConditionReportCard({
     currentUserId !== report.user.id;
 
   const authorLabel = report.user.name || "Uživatel";
+  const guideTier = report.user.localGuideTier ?? null;
+  const guideMeta = guideTier ? LOCAL_GUIDE_TIER_META[guideTier] : null;
 
   return (
     <li className="rounded-xl border border-zinc-100 bg-white p-4">
       <div className="flex items-start justify-between gap-3">
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <span
             className="inline-flex items-center gap-1 rounded-full bg-zinc-50 px-2.5 py-1 text-xs font-medium text-zinc-700"
             aria-label={`Hodnocení: ${meta.labelCs}`}
@@ -316,6 +335,15 @@ function ConditionReportCard({
           >
             {authorLabel}
           </Link>
+          {guideMeta && (
+            <span
+              className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-semibold ${guideMeta.classes}`}
+              title={`Místní průvodce: ${guideMeta.label}`}
+            >
+              <span aria-hidden>🗺️</span>
+              {guideMeta.label}
+            </span>
+          )}
         </div>
         <time
           dateTime={report.createdAt}

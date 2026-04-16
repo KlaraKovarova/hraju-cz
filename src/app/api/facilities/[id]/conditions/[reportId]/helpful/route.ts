@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { checkBadgesByCategory } from "@/lib/challenges";
 
 // POST /api/facilities/[id]/conditions/[reportId]/helpful — increment helpful count
 // Matches the simple unauthenticated pattern used for review/tip helpful votes;
@@ -14,8 +15,11 @@ export async function POST(
     const report = await prisma.conditionReport.update({
       where: { id: reportId, isHidden: false },
       data: { helpful: { increment: 1 } },
-      select: { helpful: true },
+      select: { helpful: true, userId: true },
     });
+    // Silver/gold "Místní průvodce" tiers depend on helpful-vote totals on the
+    // author's reports — recompute (idempotent, fire-and-forget).
+    checkBadgesByCategory(report.userId, "local_guide").catch(() => {});
     return NextResponse.json({ helpful: report.helpful });
   } catch {
     return NextResponse.json({ error: "Report nenalezen." }, { status: 404 });

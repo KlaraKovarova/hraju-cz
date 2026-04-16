@@ -2,6 +2,13 @@ import { prisma } from "./prisma";
 import { createBadgeNotification, createChallengeNotification, getUnsubscribeToken, buildUnsubscribeUrl } from "./notifications";
 import { MONTHLY_CHALLENGES } from "./monthly-challenges";
 import { sendBadgeProximityNudgeEmail } from "./email";
+import {
+  LOCAL_GUIDE_BADGE_SLUGS,
+  LOCAL_GUIDE_THRESHOLDS,
+  LOCAL_GUIDE_TIER_EMOJI,
+  getLocalGuideStats,
+  tierQualifiesFromStats,
+} from "./badges/local-guide";
 
 // ─── Badge definitions ───────────────────────────────────────────────────
 export interface BadgeDefinition {
@@ -12,7 +19,7 @@ export interface BadgeDefinition {
   /** Sport slug required (null = any sport) */
   sportSlug: string | null;
   /** Badge category for grouping */
-  category: "sport" | "review" | "community" | "streak" | "seasonal";
+  category: "sport" | "review" | "community" | "streak" | "seasonal" | "local_guide";
   /** Check function returns true if user qualifies */
   check: (ctx: BadgeCheckContext) => Promise<boolean>;
 }
@@ -556,6 +563,44 @@ export const BADGE_DEFINITIONS: BadgeDefinition[] = [
     },
   },
 
+  // ─── Local Guide badges (Místní průvodce) — see lib/badges/local-guide.ts ──
+  {
+    slug: LOCAL_GUIDE_BADGE_SLUGS.bronze,
+    name: "Průvodce",
+    description: `${LOCAL_GUIDE_THRESHOLDS.bronze.reports}+ reportů aktuálních podmínek za posledních 90 dní`,
+    emoji: LOCAL_GUIDE_TIER_EMOJI,
+    sportSlug: null,
+    category: "local_guide",
+    check: async (ctx) => {
+      const stats = await getLocalGuideStats(ctx.userId);
+      return tierQualifiesFromStats("bronze", stats);
+    },
+  },
+  {
+    slug: LOCAL_GUIDE_BADGE_SLUGS.silver,
+    name: "Zkušený průvodce",
+    description: `${LOCAL_GUIDE_THRESHOLDS.silver.reports}+ reportů a ${LOCAL_GUIDE_THRESHOLDS.silver.helpful}+ hlasů „užitečné“`,
+    emoji: LOCAL_GUIDE_TIER_EMOJI,
+    sportSlug: null,
+    category: "local_guide",
+    check: async (ctx) => {
+      const stats = await getLocalGuideStats(ctx.userId);
+      return tierQualifiesFromStats("silver", stats);
+    },
+  },
+  {
+    slug: LOCAL_GUIDE_BADGE_SLUGS.gold,
+    name: "Expert průvodce",
+    description: `${LOCAL_GUIDE_THRESHOLDS.gold.reports}+ reportů, ${LOCAL_GUIDE_THRESHOLDS.gold.helpful}+ hlasů a alespoň ${LOCAL_GUIDE_THRESHOLDS.gold.facilities} různá sportoviště`,
+    emoji: LOCAL_GUIDE_TIER_EMOJI,
+    sportSlug: null,
+    category: "local_guide",
+    check: async (ctx) => {
+      const stats = await getLocalGuideStats(ctx.userId);
+      return tierQualifiesFromStats("gold", stats);
+    },
+  },
+
   // ─── Monthly challenge badges (October 2026) ──────────────────────────
   {
     slug: "rijnovy-ferratista",
@@ -734,6 +779,7 @@ export async function getUserBadgeProgress(userId: string): Promise<
     augFerratyVisits, augLezeniVisits,
     septFerratyVisits, septLezeniVisits,
     octFerratyVisits, octLezeniVisits,
+    localGuideStats,
   ] = await Promise.all([
     prisma.visit.count({
       where: { userId, facility: { sports: { some: { sport: { slug: "ferraty" } } } } },
@@ -891,6 +937,8 @@ export async function getUserBadgeProgress(userId: string): Promise<
         facility: { sports: { some: { sport: { slug: "lezeni" } } } },
       },
     }),
+    // Local Guide stats (Místní průvodce)
+    getLocalGuideStats(userId),
   ]);
 
   // Compute streak: max distinct days in any Mon-Sun week
@@ -1203,6 +1251,39 @@ export async function getUserBadgeProgress(userId: string): Promise<
       earned: earnedSet.has("rijnovy-lezec"),
       progress: Math.min(octLezeniVisits, 3),
       target: 3,
+    },
+    // Local Guide tiers (Místní průvodce)
+    {
+      slug: LOCAL_GUIDE_BADGE_SLUGS.bronze,
+      name: "Průvodce",
+      description: `${LOCAL_GUIDE_THRESHOLDS.bronze.reports}+ reportů aktuálních podmínek za posledních 90 dní`,
+      emoji: LOCAL_GUIDE_TIER_EMOJI,
+      category: "local_guide",
+      earned: earnedSet.has(LOCAL_GUIDE_BADGE_SLUGS.bronze),
+      progress: Math.min(localGuideStats.reportsLast90Days, LOCAL_GUIDE_THRESHOLDS.bronze.reports),
+      target: LOCAL_GUIDE_THRESHOLDS.bronze.reports,
+    },
+    {
+      slug: LOCAL_GUIDE_BADGE_SLUGS.silver,
+      name: "Zkušený průvodce",
+      description: `${LOCAL_GUIDE_THRESHOLDS.silver.reports}+ reportů a ${LOCAL_GUIDE_THRESHOLDS.silver.helpful}+ hlasů „užitečné“`,
+      emoji: LOCAL_GUIDE_TIER_EMOJI,
+      category: "local_guide",
+      earned: earnedSet.has(LOCAL_GUIDE_BADGE_SLUGS.silver),
+      // Render progress against the report threshold; the helpful-vote
+      // requirement is surfaced in the muj-ucet "Místní průvodce" row.
+      progress: Math.min(localGuideStats.reportsTotal, LOCAL_GUIDE_THRESHOLDS.silver.reports),
+      target: LOCAL_GUIDE_THRESHOLDS.silver.reports,
+    },
+    {
+      slug: LOCAL_GUIDE_BADGE_SLUGS.gold,
+      name: "Expert průvodce",
+      description: `${LOCAL_GUIDE_THRESHOLDS.gold.reports}+ reportů, ${LOCAL_GUIDE_THRESHOLDS.gold.helpful}+ hlasů a ${LOCAL_GUIDE_THRESHOLDS.gold.facilities}+ různá sportoviště`,
+      emoji: LOCAL_GUIDE_TIER_EMOJI,
+      category: "local_guide",
+      earned: earnedSet.has(LOCAL_GUIDE_BADGE_SLUGS.gold),
+      progress: Math.min(localGuideStats.reportsTotal, LOCAL_GUIDE_THRESHOLDS.gold.reports),
+      target: LOCAL_GUIDE_THRESHOLDS.gold.reports,
     },
   ];
   return progress.map(p => ({ ...p, sportSlug: badgeSportMap.get(p.slug) ?? null }));
