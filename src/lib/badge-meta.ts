@@ -110,4 +110,9 @@ export const BADGE_META: Record<string, { name: string; emoji: string; descripti
     emoji: "\uD83E\uDDD7",
     description: "4 lezeck\u00E9 st\u011Bny nav\u0161t\u00EDven\u00E9 v srpnu 2026",
   },
+  "foto-tydne": {
+    name: "Foto t\u00FDdne",
+    emoji: "\uD83C\uDF86",
+    description: "Va\u0161e foto bylo zvoleno komunitou jako foto t\u00FDdne",
+  },
 };

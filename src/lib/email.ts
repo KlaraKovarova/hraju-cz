@@ -955,3 +955,77 @@ export async function sendClaimOutreachEmail(
     return false;
   }
 }
+
+// SIL-666 — notify the winner of "Foto týdne"
+export async function sendPhotoOfTheWeekEmail(
+  to: string,
+  userName: string | null,
+  facilityName: string,
+  photoUrl: string,
+  archiveUrl: string,
+  voteCount: number,
+  unsubscribeUrl: string
+): Promise<boolean> {
+  const transporter = createTransporter();
+  if (!transporter) {
+    console.warn("SMTP not configured, skipping photo-of-the-week email");
+    return false;
+  }
+
+  const greeting = userName ? `Ahoj ${userName}` : "Ahoj";
+  const subject = `\uD83C\uDF86 Va\u0161e foto z ${facilityName} bylo zvoleno fotem t\u00FDdne!`;
+
+  try {
+    await transporter.sendMail({
+      from: `"hraju.cz" <${process.env.SMTP_USER}>`,
+      to,
+      subject,
+      headers: {
+        "List-Unsubscribe": `<${unsubscribeUrl}>`,
+        "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+      },
+      text: [
+        `${greeting},`,
+        ``,
+        `gratulujeme! Vaše foto z ${facilityName} bylo zvoleno komunitou hraju.cz jako foto týdne (${voteCount} hlasů).`,
+        ``,
+        `Získali jste nový odznak „Foto týdne" a vaše foto je vystaveno na hlavní stránce i v archivu:`,
+        archiveUrl,
+        ``,
+        `Děkujeme, že sdílíte své zážitky s ostatními sportovci.`,
+        ``,
+        `S pozdravem,`,
+        `tým hraju.cz`,
+        ``,
+        `---`,
+        `Nechcete dostávat tyto e-maily? Odhlaste se: ${unsubscribeUrl}`,
+      ].join("\n"),
+      html: `
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #18181b;">🎆 Vaše foto bylo zvoleno fotem týdne!</h2>
+          <p>${greeting},</p>
+          <p>gratulujeme! Vaše foto ze sportoviště <strong>${facilityName}</strong> bylo komunitou hraju.cz zvoleno jako <strong>foto týdne</strong> — získalo ${voteCount} ${voteCount === 1 ? "hlas" : voteCount < 5 ? "hlasy" : "hlasů"}.</p>
+          <p style="margin: 20px 0;">
+            <img src="${photoUrl}" alt="Foto týdne — ${facilityName}" style="max-width: 100%; border-radius: 12px;" />
+          </p>
+          <p>Získali jste nový odznak <strong>„Foto týdne"</strong> a vaše foto je vystaveno na hlavní stránce i v archivu vítězů.</p>
+          <p style="margin: 24px 0;">
+            <a href="${archiveUrl}" style="background: #059669; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+              Zobrazit v archivu
+            </a>
+          </p>
+          <p style="color: #71717a; font-size: 14px;">Děkujeme, že sdílíte své zážitky s ostatními sportovci.</p>
+          <hr style="border: none; border-top: 1px solid #e4e4e7; margin: 24px 0;" />
+          <p style="color: #a1a1aa; font-size: 12px;">
+            hraju.cz – sportoviště v Česku |
+            <a href="${unsubscribeUrl}" style="color: #a1a1aa;">Odhlásit se z notifikací</a>
+          </p>
+        </div>
+      `,
+    });
+    return true;
+  } catch (error) {
+    console.error("Failed to send photo-of-the-week email:", error);
+    return false;
+  }
+}

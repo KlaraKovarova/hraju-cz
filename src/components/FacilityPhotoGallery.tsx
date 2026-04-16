@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { contextLabel, photoSourceHref, type PhotoContext } from "@/lib/photos";
+import { PhotoVoteButton } from "@/components/PhotoVoteButton";
 
 export interface GalleryPhotoDTO {
   id: string;
@@ -173,6 +174,14 @@ export function FacilityPhotoGallery({
                 Zobrazit zdroj
                 <ExternalLink className="h-3 w-3" />
               </Link>
+            </div>
+
+            <div className="mt-3">
+              <PhotoVoteButton
+                photoId={active.id}
+                createdAtIso={active.createdAtIso}
+                authorUserId={active.user.id}
+              />
             </div>
           </div>
 

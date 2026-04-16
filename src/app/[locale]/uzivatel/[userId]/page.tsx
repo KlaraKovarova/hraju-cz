@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronRight, Star, MessageSquare, Calendar, User, Award, MapPinCheck, MapPin } from "lucide-react";
+import { ChevronRight, Star, MessageSquare, Calendar, User, Award, MapPinCheck, MapPin, Camera } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { StarRating } from "@/components/StarRating";
 import { AdSlot } from "@/components/AdSlot";
@@ -22,16 +22,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
   if (!user) return { title: "Uživatel nenalezen — hraju.cz" };
 
+  // Use the user's most recent public photo as the OG image override when available.
+  const latestPhoto = await prisma.userPhoto.findFirst({
+    where: { userId, isHidden: false },
+    orderBy: { createdAt: "desc" },
+    select: { url: true },
+  });
+
   const displayName = user.name || "Sportovec";
+  const title = `${displayName} — profil a recenze — hraju.cz`;
+  const description = `Přečtěte si recenze od uživatele ${displayName} na hraju.cz. Hodnocení sportovišť z celé České republiky.`;
+  const ogImage = latestPhoto?.url;
+
   return {
-    title: `${displayName} — profil a recenze — hraju.cz`,
-    description: `Přečtěte si recenze od uživatele ${displayName} na hraju.cz. Hodnocení sportovišť z celé České republiky.`,
+    title,
+    description,
     openGraph: {
-      title: `${displayName} — profil a recenze — hraju.cz`,
+      title,
       description: `Recenze sportovišť od ${displayName} na hraju.cz.`,
       type: "profile",
       siteName: "hraju.cz",
       locale: "cs_CZ",
+      ...(ogImage ? { images: [{ url: ogImage }] } : {}),
+    },
+    twitter: {
+      card: ogImage ? "summary_large_image" : "summary",
+      title,
+      description,
+      ...(ogImage ? { images: [ogImage] } : {}),
     },
     robots: { index: true, follow: true },
   };
@@ -54,7 +72,7 @@ export default async function UserProfilePage({ params }: Props) {
 
   if (!user) notFound();
 
-  const [reviews, visitCount, earnedBadges] = await Promise.all([
+  const [reviews, visitCount, earnedBadges, photoCount] = await Promise.all([
     prisma.review.findMany({
       where: { userId: user.id, isApproved: true },
       orderBy: { createdAt: "desc" },
@@ -76,6 +94,7 @@ export default async function UserProfilePage({ params }: Props) {
     }),
     prisma.visit.count({ where: { userId: user.id } }),
     getUserBadges(user.id),
+    prisma.userPhoto.count({ where: { userId: user.id, isHidden: false } }),
   ]);
 
   const displayName = user.name || "Sportovec";
@@ -242,6 +261,23 @@ export default async function UserProfilePage({ params }: Props) {
                   </p>
                 </div>
               </div>
+            )}
+            {photoCount > 0 && (
+              <Link
+                href={`/uzivatel/${user.id}/fotky`}
+                className="flex items-center gap-2 rounded-lg transition hover:bg-zinc-50"
+                aria-label={`Zobrazit všechny fotky uživatele ${displayName}`}
+              >
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-violet-50">
+                  <Camera className="h-4 w-4 text-violet-500" />
+                </div>
+                <div>
+                  <span className="text-lg font-bold text-zinc-900">{photoCount}</span>
+                  <p className="text-xs text-zinc-500">
+                    {photoCount === 1 ? "fotka" : photoCount >= 2 && photoCount <= 4 ? "fotky" : "fotek"}
+                  </p>
+                </div>
+              </Link>
             )}
           </div>
         </div>

@@ -284,6 +284,7 @@ model User {
   notifications         Notification[]
   conditionReports      ConditionReport[]
   conditionReportFlags  ConditionReportFlag[]
+  photoVotes            PhotoVote[]
 }
 
 model Visit {
@@ -379,7 +380,10 @@ model UserPhoto {
   url               String
   alt               String?
   isHidden          Boolean          @default(false)
+  voteCount         Int              @default(0) // denormalized total weekly votes (SIL-666)
   createdAt         DateTime         @default(now())
+  votes             PhotoVote[]
+  potwEntries       PhotoOfTheWeek[]
 
   @@index([facilityId])
   @@index([facilityId, createdAt])
@@ -539,4 +543,32 @@ model Product {
 
   @@index([sport])
   @@index([brand])
+}
+
+// SIL-666 — "Foto týdne" voting + weekly winner highlight
+model PhotoVote {
+  id        String    @id @default(cuid())
+  photoId   String
+  photo     UserPhoto @relation(fields: [photoId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  weekKey   String // ISO year-week, e.g. "2026-W16"
+  createdAt DateTime  @default(now())
+
+  @@unique([photoId, userId, weekKey])
+  @@index([userId, weekKey])
+  @@index([photoId, weekKey])
+  @@index([weekKey])
+}
+
+model PhotoOfTheWeek {
+  id        String    @id @default(cuid())
+  weekKey   String    @unique // ISO year-week, e.g. "2026-W16"
+  photoId   String
+  photo     UserPhoto @relation(fields: [photoId], references: [id], onDelete: Cascade)
+  voteCount Int
+  awardedAt DateTime  @default(now())
+
+  @@index([photoId])
+  @@index([awardedAt])
 }

@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight, ExternalLink, X } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
+import { X, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { contextLabel, photoSourceHref, type PhotoContext } from "@/lib/photos";
 import { PhotoVoteButton } from "@/components/PhotoVoteButton";
 
-export interface HomePhotoDTO {
+export interface UserGalleryPhotoDTO {
   id: string;
   url: string;
   alt: string | null;
@@ -15,37 +15,44 @@ export interface HomePhotoDTO {
   reviewId: string | null;
   visitId: string | null;
   conditionReportId: string | null;
-  user: { id: string; name: string | null };
   facility: {
     id: string;
     name: string;
-    slug: string;
-    sportSlug: string | null;
-    sportName: string | null;
     href: string;
+    sportName: string;
+    city: string | null;
   };
 }
 
-interface HomeRecentPhotosGalleryProps {
-  photos: HomePhotoDTO[];
+interface UserPhotoGalleryProps {
+  photos: UserGalleryPhotoDTO[];
+  /** Author id of all photos in this gallery (profile-scoped) — used by the vote button. */
+  ownerUserId: string;
+  /** Tailwind class for grid columns. Defaults to 4-col masonry-style grid. */
+  gridClassName?: string;
 }
 
-function timeAgoCs(iso: string): string {
-  const diffMs = Date.now() - new Date(iso).getTime();
-  const minutes = Math.round(diffMs / 60000);
-  if (minutes < 1) return "právě teď";
-  if (minutes < 60) return `před ${minutes} min`;
-  const hours = Math.round(minutes / 60);
-  if (hours < 24) return `před ${hours} h`;
-  const days = Math.round(hours / 24);
-  if (days === 1) return "včera";
+function timeAgo(iso: string): string {
+  const then = new Date(iso).getTime();
+  const diff = Date.now() - then;
+  const day = 86_400_000;
+  if (diff < day) return "dnes";
+  if (diff < 2 * day) return "včera";
+  const days = Math.floor(diff / day);
   if (days < 7) return `před ${days} dny`;
-  const weeks = Math.round(days / 7);
-  if (weeks === 1) return "před týdnem";
-  return `před ${weeks} týdny`;
+  const weeks = Math.floor(days / 7);
+  if (weeks < 5) return `před ${weeks} týdny`;
+  const months = Math.floor(days / 30);
+  if (months < 12) return `před ${months} měsíci`;
+  const years = Math.floor(days / 365);
+  return `před ${years} lety`;
 }
 
-export function HomeRecentPhotosGallery({ photos }: HomeRecentPhotosGalleryProps) {
+export function UserPhotoGallery({
+  photos,
+  ownerUserId,
+  gridClassName = "grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4",
+}: UserPhotoGalleryProps) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const close = useCallback(() => setLightboxIndex(null), []);
@@ -77,75 +84,45 @@ export function HomeRecentPhotosGallery({ photos }: HomeRecentPhotosGalleryProps
 
   return (
     <>
-      <ul
-        className="
-          -mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-2
-          sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0
-          lg:grid-cols-3
-        "
-        aria-label="Nejnovější fotky od komunity"
-      >
-        {photos.map((photo, i) => {
-          const authorName = photo.user.name || "Uživatel";
-          const authorHref = `/uzivatel/${photo.user.id}`;
-
-          return (
-            <li
-              key={photo.id}
-              className="
-                flex min-w-[85%] snap-start flex-col rounded-2xl border border-zinc-100 bg-zinc-50/50 p-3
-                transition hover:border-emerald-200 hover:shadow-sm
-                sm:min-w-0
-              "
+      <div className={gridClassName}>
+        {photos.map((photo, i) => (
+          <figure
+            key={photo.id}
+            className="group relative overflow-hidden rounded-lg border border-zinc-100 bg-white"
+          >
+            <button
+              type="button"
+              onClick={() => setLightboxIndex(i)}
+              aria-label={`Otevřít fotku z ${photo.facility.name}`}
+              className="relative block aspect-square w-full focus:outline-none focus:ring-2 focus:ring-emerald-500"
             >
-              <button
-                type="button"
-                onClick={() => setLightboxIndex(i)}
-                className="group relative mb-3 aspect-[4/3] w-full overflow-hidden rounded-xl bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                aria-label={`Zobrazit fotku z ${photo.facility.name}`}
+              <img
+                src={photo.url}
+                alt={photo.alt || `Fotka z ${photo.facility.name}`}
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {photo.context && (
+                <span className="pointer-events-none absolute bottom-1 left-1 rounded-full bg-black/60 px-2 py-0.5 text-[10px] font-medium text-white">
+                  {contextLabel(photo.context)}
+                </span>
+              )}
+            </button>
+            <figcaption className="flex items-baseline justify-between gap-2 px-2.5 py-1.5 text-xs">
+              <Link
+                href={photo.facility.href}
+                className="truncate font-medium text-zinc-800 hover:text-emerald-600 hover:underline"
+                title={photo.facility.name}
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={photo.url}
-                  alt={photo.alt || `Foto z ${photo.facility.name}`}
-                  loading={i === 0 ? "eager" : "lazy"}
-                  fetchPriority={i === 0 ? "high" : "auto"}
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                {photo.context && (
-                  <span className="pointer-events-none absolute bottom-1 left-1 rounded-full bg-black/60 px-2 py-0.5 text-[10px] font-medium text-white">
-                    {contextLabel(photo.context)}
-                  </span>
-                )}
-              </button>
-
-              <div className="flex items-center gap-2">
-                <Link
-                  href={photo.facility.href}
-                  className="line-clamp-1 text-sm font-semibold text-zinc-900 hover:text-emerald-700"
-                >
-                  {photo.facility.name}
-                </Link>
-                {photo.facility.sportName && (
-                  <span className="shrink-0 rounded-full bg-emerald-50 px-2 py-0.5 text-[11px] font-medium text-emerald-700">
-                    {photo.facility.sportName}
-                  </span>
-                )}
-              </div>
-
-              <div className="mt-auto flex items-center justify-between pt-2 text-xs text-zinc-500">
-                <Link
-                  href={authorHref}
-                  className="font-medium text-zinc-700 hover:text-emerald-600"
-                >
-                  {authorName}
-                </Link>
-                <time dateTime={photo.createdAtIso}>{timeAgoCs(photo.createdAtIso)}</time>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+                {photo.facility.name}
+              </Link>
+              <span className="shrink-0 text-zinc-400">
+                {timeAgo(photo.createdAtIso)}
+              </span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
 
       {active && (
         <div
@@ -191,36 +168,29 @@ export function HomeRecentPhotosGallery({ photos }: HomeRecentPhotosGalleryProps
             className="flex max-h-[92vh] max-w-[92vw] flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={active.url}
-              alt={active.alt || `Foto z ${active.facility.name}`}
+              alt={active.alt || `Fotka z ${active.facility.name}`}
               className="max-h-[78vh] max-w-[92vw] rounded-lg object-contain"
             />
 
             <div className="mt-3 flex max-w-full flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs text-white/90">
               <Link
                 href={active.facility.href}
-                className="font-medium underline-offset-2 hover:underline"
+                className="font-medium text-white underline-offset-2 hover:underline"
                 onClick={close}
               >
                 {active.facility.name}
               </Link>
-              {active.user.name && (
-                <Link
-                  href={`/uzivatel/${active.user.id}`}
-                  className="underline-offset-2 hover:underline"
-                  onClick={close}
-                >
-                  {active.user.name}
-                </Link>
+              {active.facility.city && (
+                <span className="text-white/60">{active.facility.city}</span>
               )}
               {active.context && (
                 <span className="rounded-full bg-white/15 px-2 py-0.5">
                   {contextLabel(active.context)}
                 </span>
               )}
-              <span className="text-white/60">{timeAgoCs(active.createdAtIso)}</span>
+              <span className="text-white/60">{timeAgo(active.createdAtIso)}</span>
               <Link
                 href={photoSourceHref(active, active.facility.href)}
                 className="inline-flex items-center gap-1 text-emerald-300 underline-offset-2 hover:underline"
@@ -235,7 +205,7 @@ export function HomeRecentPhotosGallery({ photos }: HomeRecentPhotosGalleryProps
               <PhotoVoteButton
                 photoId={active.id}
                 createdAtIso={active.createdAtIso}
-                authorUserId={active.user.id}
+                authorUserId={ownerUserId}
               />
             </div>
           </div>

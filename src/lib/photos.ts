@@ -310,6 +310,151 @@ export function photoSourceHref(
   return facilityHref;
 }
 
+export interface PhotoOfTheWeekWinner {
+  weekKey: string;
+  voteCount: number;
+  awardedAt: Date;
+  photo: {
+    id: string;
+    url: string;
+    alt: string | null;
+    createdAt: Date;
+  };
+  user: {
+    id: string;
+    name: string | null;
+  };
+  facility: {
+    id: string;
+    name: string;
+    slug: string;
+    sportSlug: string | null;
+    sportName: string | null;
+  };
+}
+
+/**
+ * getLatestPhotoOfTheWeek — fetch the most recently awarded winner.
+ * Returns null if no winners exist yet (first weeks after launch).
+ */
+export async function getLatestPhotoOfTheWeek(): Promise<PhotoOfTheWeekWinner | null> {
+  try {
+    const row = await prisma.photoOfTheWeek.findFirst({
+      orderBy: { awardedAt: "desc" },
+      select: {
+        weekKey: true,
+        voteCount: true,
+        awardedAt: true,
+        photo: {
+          select: {
+            id: true,
+            url: true,
+            alt: true,
+            createdAt: true,
+            isHidden: true,
+            user: { select: { id: true, name: true } },
+            facility: {
+              select: {
+                id: true,
+                name: true,
+                slug: true,
+                sports: {
+                  take: 1,
+                  select: { sport: { select: { slug: true, nameCs: true } } },
+                },
+              },
+            },
+          },
+        },
+      },
+    });
+    if (!row || !row.photo || row.photo.isHidden) return null;
+    return {
+      weekKey: row.weekKey,
+      voteCount: row.voteCount,
+      awardedAt: row.awardedAt,
+      photo: {
+        id: row.photo.id,
+        url: row.photo.url,
+        alt: row.photo.alt,
+        createdAt: row.photo.createdAt,
+      },
+      user: row.photo.user,
+      facility: {
+        id: row.photo.facility.id,
+        name: row.photo.facility.name,
+        slug: row.photo.facility.slug,
+        sportSlug: row.photo.facility.sports[0]?.sport.slug ?? null,
+        sportName: row.photo.facility.sports[0]?.sport.nameCs ?? null,
+      },
+    };
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * getPhotoOfTheWeekArchive — list all awarded winners, newest first.
+ * Used by /foto-tydne archive page. ISR-safe: deterministic order, no auth.
+ */
+export async function getPhotoOfTheWeekArchive(limit = 100): Promise<PhotoOfTheWeekWinner[]> {
+  try {
+    const rows = await prisma.photoOfTheWeek.findMany({
+      orderBy: { awardedAt: "desc" },
+      take: limit,
+      select: {
+        weekKey: true,
+        voteCount: true,
+        awardedAt: true,
+        photo: {
+          select: {
+            id: true,
+            url: true,
+            alt: true,
+            createdAt: true,
+            isHidden: true,
+            user: { select: { id: true, name: true } },
+            facility: {
+              select: {
+                id: true,
+                name: true,
+                slug: true,
+                sports: {
+                  take: 1,
+                  select: { sport: { select: { slug: true, nameCs: true } } },
+                },
+              },
+            },
+          },
+        },
+      },
+    });
+    return rows
+      .filter((r) => r.photo && !r.photo.isHidden)
+      .map((row) => ({
+        weekKey: row.weekKey,
+        voteCount: row.voteCount,
+        awardedAt: row.awardedAt,
+        photo: {
+          id: row.photo.id,
+          url: row.photo.url,
+          alt: row.photo.alt,
+          createdAt: row.photo.createdAt,
+        },
+        user: row.photo.user,
+        facility: {
+          id: row.photo.facility.id,
+          name: row.photo.facility.name,
+          slug: row.photo.facility.slug,
+          sportSlug: row.photo.facility.sports[0]?.sport.slug ?? null,
+          sportName: row.photo.facility.sports[0]?.sport.nameCs ?? null,
+        },
+      }));
+  } catch {
+    return [];
+  }
+}
+
 /** Build deterministic alt text for a facility photo. */
 export function buildPhotoAlt(args: {
   facilityName: string;

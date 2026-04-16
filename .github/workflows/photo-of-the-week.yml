@@ -1,0 +1,18 @@
+name: Photo of the Week
+
+on:
+  schedule:
+    # Monday 09:00 UTC — 11:00 CEST / 10:00 CET (start-of-week celebration)
+    - cron: '0 9 * * 1'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  award-photo-of-the-week:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Tally weekly votes and award winner
+        run: |
+          curl -s -X POST \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            -H "Content-Type: application/json" \
+            "${{ vars.PRODUCTION_URL || 'https://www.hraju.cz' }}/api/cron/photo-of-the-week"
