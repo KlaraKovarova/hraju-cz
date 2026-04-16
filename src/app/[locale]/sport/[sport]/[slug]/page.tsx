@@ -239,14 +239,8 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
     select: { id: true, text: true, helpful: true, user: { select: { name: true } } },
   });
 
-  // Track page view (fire-and-forget)
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  prisma.facilityView.upsert({
-    where: { facilityId_date: { facilityId: facility.id, date: today } },
-    update: { views: { increment: 1 } },
-    create: { facilityId: facility.id, date: today, views: 1 },
-  }).catch(() => {});
+  // View tracking moved to TrackPageView client component (POST /api/facilities/[id]/view)
+  // to keep this server component free of DB writes so ISR caching works (SIL-641).
 
   // Query star distribution for AggregateRating component + Schema.org
   const [starDistribution, recentApprovedReviews, userPhotos, recentConditionReports] = await Promise.all([
@@ -510,6 +504,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
       <TrackPageView
         eventName="facility_view"
         params={{ sport: sport.slug, city: facility.location.city, facilitySlug: facility.slug }}
+        facilityId={facility.id}
       />
       <script
         type="application/ld+json"
