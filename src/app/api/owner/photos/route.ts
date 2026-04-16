@@ -50,8 +50,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Generate unique filename
-    const ext = file.name.split(".").pop()?.toLowerCase() || "jpg";
+    // Generate unique filename — derive extension from validated MIME type (not user-provided filename)
+    const extMap: Record<string, string> = {
+      "image/jpeg": "jpg",
+      "image/png": "png",
+      "image/webp": "webp",
+    };
+    const ext = extMap[file.type] || "jpg";
     const filename = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${ext}`;
     const uploadDir = path.join(process.cwd(), "public", "uploads", "facilities", session.facilityId);
     await mkdir(uploadDir, { recursive: true });
