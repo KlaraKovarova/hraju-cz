@@ -3,6 +3,7 @@ import { Trophy } from "lucide-react";
 import type { PhotoOfTheWeekWinner } from "@/lib/photos";
 import { formatWeekKeyCs } from "@/lib/photo-week";
 import { PinterestShareButton } from "@/components/PinterestShareButton";
+import { PhotoAttribution } from "@/components/PhotoAttribution";
 
 interface HomePhotoOfTheWeekProps {
   winner: PhotoOfTheWeekWinner | null;
@@ -17,7 +18,6 @@ export function HomePhotoOfTheWeek({ winner }: HomePhotoOfTheWeekProps) {
   const facilityHref = winner.facility.sportSlug
     ? `/sport/${winner.facility.sportSlug}/${winner.facility.slug}`
     : `/${winner.facility.slug}`;
-  const authorHref = `/uzivatel/${winner.user.id}`;
   const weekLabel = formatWeekKeyCs(winner.weekKey);
 
   return (
@@ -88,10 +88,12 @@ export function HomePhotoOfTheWeek({ winner }: HomePhotoOfTheWeekProps) {
           <dl className="grid grid-cols-2 gap-4 text-sm">
             <div>
               <dt className="text-zinc-500">Autor</dt>
-              <dd className="mt-0.5 font-medium text-zinc-900">
-                <Link href={authorHref} className="hover:text-emerald-700 hover:underline">
-                  {winner.user.name || "Uživatel hraju.cz"}
-                </Link>
+              <dd className="mt-0.5">
+                <PhotoAttribution
+                  userId={winner.user.id}
+                  displayName={winner.user.name}
+                  variant="card"
+                />
               </dd>
             </div>
             <div>

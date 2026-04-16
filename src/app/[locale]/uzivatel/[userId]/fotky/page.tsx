@@ -192,7 +192,11 @@ export default async function UserFotkyPage({
           <EmptyState displayName={displayName} />
         ) : (
           <>
-            <UserPhotoGallery photos={dtos} ownerUserId={userId} />
+            <UserPhotoGallery
+              photos={dtos}
+              ownerUserId={userId}
+              ownerDisplayName={displayName}
+            />
 
             {totalPages > 1 && (
               <Pagination

@@ -1029,3 +1029,77 @@ export async function sendPhotoOfTheWeekEmail(
     return false;
   }
 }
+
+// SIL-671 — notify a contributor that their photo has become the lead/first
+// photo displayed on a facility page. Fires at most once per photo (dedup via
+// UserPhoto.featuredNotifiedAt). Reciprocity loop: visibility → more contribution.
+export async function sendPhotoFeaturedEmail(
+  to: string,
+  userName: string | null,
+  facilityName: string,
+  photoUrl: string,
+  facilityUrl: string,
+  unsubscribeUrl: string
+): Promise<boolean> {
+  const transporter = createTransporter();
+  if (!transporter) {
+    console.warn("SMTP not configured, skipping photo-featured email");
+    return false;
+  }
+
+  const greeting = userName ? `Ahoj ${userName}` : "Ahoj";
+  const subject = `\uD83D\uDCF8 Tvoje foto je na \u00FAvodu ${facilityName}`;
+
+  try {
+    await transporter.sendMail({
+      from: `"hraju.cz" <${process.env.SMTP_USER}>`,
+      to,
+      subject,
+      headers: {
+        "List-Unsubscribe": `<${unsubscribeUrl}>`,
+        "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+      },
+      text: [
+        `${greeting},`,
+        ``,
+        `dobrá zpráva — tvoje fotka ze sportoviště ${facilityName} je teď úvodní fotkou na jeho stránce na hraju.cz.`,
+        ``,
+        `Díky ní vidí návštěvníci, jak to tam skutečně vypadá. Každá taková fotka pomáhá ostatním sportovcům při výběru.`,
+        ``,
+        facilityUrl,
+        ``,
+        `Díky za tvůj příspěvek!`,
+        `tým hraju.cz`,
+        ``,
+        `---`,
+        `Nechceš dostávat tyto e-maily? Odhlas se: ${unsubscribeUrl}`,
+      ].join("\n"),
+      html: `
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #18181b;">📸 Tvoje foto je na úvodu ${facilityName}</h2>
+          <p>${greeting},</p>
+          <p>dobrá zpráva — tvoje fotka ze sportoviště <strong>${facilityName}</strong> je teď úvodní fotkou na jeho stránce na hraju.cz.</p>
+          <p style="margin: 20px 0;">
+            <img src="${photoUrl}" alt="${facilityName}" style="max-width: 100%; border-radius: 12px;" />
+          </p>
+          <p>Díky ní vidí návštěvníci, jak to tam skutečně vypadá. Každá taková fotka pomáhá ostatním sportovcům při výběru.</p>
+          <p style="margin: 24px 0;">
+            <a href="${facilityUrl}" style="background: #059669; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+              Zobrazit sportoviště
+            </a>
+          </p>
+          <p style="color: #71717a; font-size: 14px;">Díky, že sdílíš svoje snímky.</p>
+          <hr style="border: none; border-top: 1px solid #e4e4e7; margin: 24px 0;" />
+          <p style="color: #a1a1aa; font-size: 12px;">
+            hraju.cz – sportoviště v Česku |
+            <a href="${unsubscribeUrl}" style="color: #a1a1aa;">Odhlásit se z notifikací</a>
+          </p>
+        </div>
+      `,
+    });
+    return true;
+  } catch (error) {
+    console.error("Failed to send photo-featured email:", error);
+    return false;
+  }
+}

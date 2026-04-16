@@ -379,11 +379,12 @@ model UserPhoto {
   conditionReport   ConditionReport? @relation(fields: [conditionReportId], references: [id], onDelete: SetNull)
   url               String
   alt               String?
-  isHidden          Boolean          @default(false)
-  voteCount         Int              @default(0) // denormalized total weekly votes (SIL-666)
-  createdAt         DateTime         @default(now())
-  votes             PhotoVote[]
-  potwEntries       PhotoOfTheWeek[]
+  isHidden           Boolean          @default(false)
+  voteCount          Int              @default(0) // denormalized total weekly votes (SIL-666)
+  featuredNotifiedAt DateTime? // SIL-671: set when author was notified this photo became a facility lead photo (dedup one notification per photo)
+  createdAt          DateTime         @default(now())
+  votes              PhotoVote[]
+  potwEntries        PhotoOfTheWeek[]
 
   @@index([facilityId])
   @@index([facilityId, createdAt])

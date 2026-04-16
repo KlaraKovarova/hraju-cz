@@ -6,6 +6,7 @@ import { X, ChevronLeft, ChevronRight, ExternalLink, Download } from "lucide-rea
 import { contextLabel, photoSourceHref, type PhotoContext } from "@/lib/photos";
 import { PhotoVoteButton } from "@/components/PhotoVoteButton";
 import { PinterestShareButton } from "@/components/PinterestShareButton";
+import { PhotoAttribution } from "@/components/PhotoAttribution";
 
 export interface UserGalleryPhotoDTO {
   id: string;
@@ -29,6 +30,8 @@ interface UserPhotoGalleryProps {
   photos: UserGalleryPhotoDTO[];
   /** Author id of all photos in this gallery (profile-scoped) — used by the vote button. */
   ownerUserId: string;
+  /** Display name of the profile owner (used for lightbox attribution overlay). */
+  ownerDisplayName?: string | null;
   /** Tailwind class for grid columns. Defaults to 4-col masonry-style grid. */
   gridClassName?: string;
 }
@@ -52,6 +55,7 @@ function timeAgo(iso: string): string {
 export function UserPhotoGallery({
   photos,
   ownerUserId,
+  ownerDisplayName = null,
   gridClassName = "grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4",
 }: UserPhotoGalleryProps) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
@@ -169,15 +173,25 @@ export function UserPhotoGallery({
             className="flex max-h-[92vh] max-w-[92vw] flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={active.url}
-              alt={active.alt || `Fotka z ${active.facility.name}`}
-              className="max-h-[78vh] max-w-[92vw] rounded-lg object-contain"
-              onContextMenu={(e) => {
-                // SIL-667: right-click save → swap to watermarked URL.
-                (e.currentTarget as HTMLImageElement).src = `/api/photos/${active.id}/download`;
-              }}
-            />
+            <div className="relative">
+              <img
+                src={active.url}
+                alt={active.alt || `Fotka z ${active.facility.name}`}
+                className="max-h-[78vh] max-w-[92vw] rounded-lg object-contain"
+                onContextMenu={(e) => {
+                  // SIL-667: right-click save → swap to watermarked URL.
+                  (e.currentTarget as HTMLImageElement).src = `/api/photos/${active.id}/download`;
+                }}
+              />
+              <div className="pointer-events-auto absolute bottom-2 left-2">
+                <PhotoAttribution
+                  userId={ownerUserId}
+                  displayName={ownerDisplayName}
+                  variant="overlay"
+                  onNavigate={close}
+                />
+              </div>
+            </div>
 
             <div className="mt-3 flex max-w-full flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs text-white/90">
               <a

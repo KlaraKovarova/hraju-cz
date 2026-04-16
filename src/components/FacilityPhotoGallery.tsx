@@ -6,6 +6,7 @@ import { X, ChevronLeft, ChevronRight, ExternalLink, Download } from "lucide-rea
 import { contextLabel, photoSourceHref, type PhotoContext } from "@/lib/photos";
 import { PhotoVoteButton } from "@/components/PhotoVoteButton";
 import { PinterestShareButton } from "@/components/PinterestShareButton";
+import { PhotoAttribution } from "@/components/PhotoAttribution";
 
 export interface GalleryPhotoDTO {
   id: string;
@@ -86,24 +87,30 @@ export function FacilityPhotoGallery({
     <>
       <div className={gridClassName}>
         {photos.map((photo, i) => (
-          <button
-            key={photo.id}
-            type="button"
-            onClick={() => setLightboxIndex(i)}
-            className="group relative aspect-square overflow-hidden rounded-lg border border-zinc-100 bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-          >
-            <img
-              src={photo.url}
-              alt={photo.alt || "Fotka od návštěvníka"}
-              loading="lazy"
-              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          <figure key={photo.id} className="flex flex-col gap-1">
+            <button
+              type="button"
+              onClick={() => setLightboxIndex(i)}
+              className="group relative aspect-square overflow-hidden rounded-lg border border-zinc-100 bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            >
+              <img
+                src={photo.url}
+                alt={photo.alt || "Fotka od návštěvníka"}
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              {photo.context && (
+                <span className="pointer-events-none absolute bottom-1 left-1 rounded-full bg-black/60 px-2 py-0.5 text-[10px] font-medium text-white">
+                  {contextLabel(photo.context)}
+                </span>
+              )}
+            </button>
+            <PhotoAttribution
+              userId={photo.user.id}
+              displayName={photo.user.name}
+              variant="inline"
             />
-            {photo.context && (
-              <span className="pointer-events-none absolute bottom-1 left-1 rounded-full bg-black/60 px-2 py-0.5 text-[10px] font-medium text-white">
-                {contextLabel(photo.context)}
-              </span>
-            )}
-          </button>
+          </figure>
         ))}
       </div>
 
@@ -151,16 +158,26 @@ export function FacilityPhotoGallery({
             className="flex max-h-[92vh] max-w-[92vw] flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={active.url}
-              alt={active.alt || "Fotka od návštěvníka"}
-              className="max-h-[78vh] max-w-[92vw] rounded-lg object-contain"
-              onContextMenu={(e) => {
-                // SIL-667: right-click save → swap to watermarked URL so the
-                // browser's "Save image as…" picks up the branded file.
-                (e.currentTarget as HTMLImageElement).src = `/api/photos/${active.id}/download`;
-              }}
-            />
+            <div className="relative">
+              <img
+                src={active.url}
+                alt={active.alt || "Fotka od návštěvníka"}
+                className="max-h-[78vh] max-w-[92vw] rounded-lg object-contain"
+                onContextMenu={(e) => {
+                  // SIL-667: right-click save → swap to watermarked URL so the
+                  // browser's "Save image as…" picks up the branded file.
+                  (e.currentTarget as HTMLImageElement).src = `/api/photos/${active.id}/download`;
+                }}
+              />
+              <div className="pointer-events-auto absolute bottom-2 left-2">
+                <PhotoAttribution
+                  userId={active.user.id}
+                  displayName={active.user.name}
+                  variant="overlay"
+                  onNavigate={close}
+                />
+              </div>
+            </div>
 
             <div className="mt-3 flex max-w-full flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs text-white/90">
               <a
@@ -180,15 +197,6 @@ export function FacilityPhotoGallery({
                   sportLabel={sportLabel}
                   authorName={active.user.name}
                 />
-              )}
-              {active.user.name && (
-                <Link
-                  href={`/uzivatel/${active.user.id}`}
-                  className="font-medium underline-offset-2 hover:underline"
-                  onClick={close}
-                >
-                  {active.user.name}
-                </Link>
               )}
               {active.context && (
                 <span className="rounded-full bg-white/15 px-2 py-0.5">

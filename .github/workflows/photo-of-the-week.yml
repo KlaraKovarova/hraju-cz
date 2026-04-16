@@ -16,3 +16,13 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
             -H "Content-Type: application/json" \
             "${{ vars.PRODUCTION_URL || 'https://www.hraju.cz' }}/api/cron/photo-of-the-week"
+
+      # SIL-671 — Notify contributors whose photo became a facility lead photo.
+      # Piggybacks on the same Monday slot; runs after the Foto týdne award so
+      # the week's winner email lands first.
+      - name: Notify authors of facility lead photos
+        run: |
+          curl -s -X POST \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            -H "Content-Type: application/json" \
+            "${{ vars.PRODUCTION_URL || 'https://www.hraju.cz' }}/api/cron/notify-photo-features"

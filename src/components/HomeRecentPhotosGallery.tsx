@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight, Download, ExternalLink, X } from "lucide-rea
 import { contextLabel, photoSourceHref, type PhotoContext } from "@/lib/photos";
 import { PhotoVoteButton } from "@/components/PhotoVoteButton";
 import { PinterestShareButton } from "@/components/PinterestShareButton";
+import { PhotoAttribution } from "@/components/PhotoAttribution";
 
 export interface HomePhotoDTO {
   id: string;
@@ -87,9 +88,6 @@ export function HomeRecentPhotosGallery({ photos }: HomeRecentPhotosGalleryProps
         aria-label="Nejnovější fotky od komunity"
       >
         {photos.map((photo, i) => {
-          const authorName = photo.user.name || "Uživatel";
-          const authorHref = `/uzivatel/${photo.user.id}`;
-
           return (
             <li
               key={photo.id}
@@ -135,12 +133,11 @@ export function HomeRecentPhotosGallery({ photos }: HomeRecentPhotosGalleryProps
               </div>
 
               <div className="mt-auto flex items-center justify-between pt-2 text-xs text-zinc-500">
-                <Link
-                  href={authorHref}
-                  className="font-medium text-zinc-700 hover:text-emerald-600"
-                >
-                  {authorName}
-                </Link>
+                <PhotoAttribution
+                  userId={photo.user.id}
+                  displayName={photo.user.name}
+                  variant="card"
+                />
                 <time dateTime={photo.createdAtIso}>{timeAgoCs(photo.createdAtIso)}</time>
               </div>
             </li>
@@ -192,16 +189,26 @@ export function HomeRecentPhotosGallery({ photos }: HomeRecentPhotosGalleryProps
             className="flex max-h-[92vh] max-w-[92vw] flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={active.url}
-              alt={active.alt || `Foto z ${active.facility.name}`}
-              className="max-h-[78vh] max-w-[92vw] rounded-lg object-contain"
-              onContextMenu={(e) => {
-                // SIL-667: right-click save → swap to watermarked URL.
-                (e.currentTarget as HTMLImageElement).src = `/api/photos/${active.id}/download`;
-              }}
-            />
+            <div className="relative">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={active.url}
+                alt={active.alt || `Foto z ${active.facility.name}`}
+                className="max-h-[78vh] max-w-[92vw] rounded-lg object-contain"
+                onContextMenu={(e) => {
+                  // SIL-667: right-click save → swap to watermarked URL.
+                  (e.currentTarget as HTMLImageElement).src = `/api/photos/${active.id}/download`;
+                }}
+              />
+              <div className="pointer-events-auto absolute bottom-2 left-2">
+                <PhotoAttribution
+                  userId={active.user.id}
+                  displayName={active.user.name}
+                  variant="overlay"
+                  onNavigate={close}
+                />
+              </div>
+            </div>
 
             <div className="mt-3 flex max-w-full flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs text-white/90">
               <a
@@ -227,15 +234,6 @@ export function HomeRecentPhotosGallery({ photos }: HomeRecentPhotosGalleryProps
               >
                 {active.facility.name}
               </Link>
-              {active.user.name && (
-                <Link
-                  href={`/uzivatel/${active.user.id}`}
-                  className="underline-offset-2 hover:underline"
-                  onClick={close}
-                >
-                  {active.user.name}
-                </Link>
-              )}
               {active.context && (
                 <span className="rounded-full bg-white/15 px-2 py-0.5">
                   {contextLabel(active.context)}
