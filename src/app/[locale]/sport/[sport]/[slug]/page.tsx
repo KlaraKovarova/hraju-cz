@@ -294,13 +294,16 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
     : undefined;
   const primaryImage = facility.images?.find((img) => img.isPrimary) ?? facility.images?.[0];
 
-  // Sport-specific schema.org types — use array with LocalBusiness for rich results
+  // Google Rich Results requires a SINGLE @type on the parent node for Review/AggregateRating
+  // snippets. An array like ["LocalBusiness", "SportsActivityLocation"] causes GSC to reject
+  // the entire structured data block ("Invalid object type for field <parent_node>").
+  // Sport-specific context is preserved via additionalType (schema.org URL).
   const sportTypeMap: Record<string, string> = {
     tenis: "TennisComplex",
     fitness: "ExerciseGym",
   };
   const specificType = sportTypeMap[sportSlug] ?? "SportsActivityLocation";
-  const schemaType = ["LocalBusiness", specificType];
+  const additionalType = `https://schema.org/${specificType}`;
 
   // Parse opening hours into schema.org OpeningHoursSpecification
   const czDayToSchemaDay: Record<string, string> = {
@@ -331,7 +334,8 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
 
   const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
-    "@type": schemaType,
+    "@type": "LocalBusiness",
+    additionalType,
     name: facility.name,
     url: `https://www.hraju.cz/sport/${sportSlug}/${slug}`,
     address: {
