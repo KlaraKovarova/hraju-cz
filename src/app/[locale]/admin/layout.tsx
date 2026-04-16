@@ -26,11 +26,13 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   let pendingReviewCount = 0;
   let pendingEventCount = 0;
   let pendingTipCount = 0;
+  let pendingConditionFlagCount = 0;
   try {
-    [pendingReviewCount, pendingEventCount, pendingTipCount] = await Promise.all([
+    [pendingReviewCount, pendingEventCount, pendingTipCount, pendingConditionFlagCount] = await Promise.all([
       prisma.review.count({ where: { isApproved: false } }),
       prisma.touristEvent.count({ where: { isActive: false, source: "user" } }),
       prisma.facilityTip.count({ where: { isApproved: false } }),
+      prisma.conditionReport.count({ where: { flagCount: { gt: 0 }, isHidden: false } }),
     ]);
   } catch {
     // DB may be unavailable
@@ -65,6 +67,14 @@ export default async function AdminLayout({ children }: { children: React.ReactN
             {pendingTipCount > 0 && (
               <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 px-1.5 text-[10px] font-bold text-white">
                 {pendingTipCount}
+              </span>
+            )}
+          </Link>
+          <Link href="/admin/podminky" className="flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-900">
+            Podmínky
+            {pendingConditionFlagCount > 0 && (
+              <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 px-1.5 text-[10px] font-bold text-white">
+                {pendingConditionFlagCount}
               </span>
             )}
           </Link>

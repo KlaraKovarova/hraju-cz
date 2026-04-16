@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ThumbsUp, Activity } from "lucide-react";
+import { ThumbsUp, Activity, Flag } from "lucide-react";
 import { CONDITION_RATING_META, type ConditionRating } from "@/lib/conditions";
 import { ConditionReportForm } from "./ConditionReportForm";
 
@@ -43,6 +43,7 @@ function timeAgoCs(iso: string): string {
 }
 
 const HELPFUL_STORAGE_PREFIX = "condition-helpful-v1:";
+const FLAGGED_STORAGE_PREFIX = "condition-flagged-v1:";
 
 function hasVoted(reportId: string): boolean {
   if (typeof window === "undefined") return false;
@@ -62,6 +63,24 @@ function markVoted(reportId: string): void {
   }
 }
 
+function hasFlagged(reportId: string): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    return localStorage.getItem(FLAGGED_STORAGE_PREFIX + reportId) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function markFlagged(reportId: string): void {
+  if (typeof window === "undefined") return;
+  try {
+    localStorage.setItem(FLAGGED_STORAGE_PREFIX + reportId, "1");
+  } catch {
+    /* ignore quota / privacy errors */
+  }
+}
+
 export function ConditionReportsSection({
   facilityId,
   currentPath,
@@ -72,6 +91,22 @@ export function ConditionReportsSection({
   const [reports, setReports] = useState<ConditionReport[]>(initialReports ?? []);
   const [loading, setLoading] = useState(!initialReports);
   const [showForm, setShowForm] = useState(false);
+  const [currentUserId, setCurrentUserId] = useState<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/auth/me")
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (!cancelled && data?.userId) setCurrentUserId(data.userId);
+      })
+      .catch(() => {
+        /* anonymous visitor — flag UI stays hidden */
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const fetchReports = useCallback(async () => {
     setLoading(true);
@@ -155,6 +190,7 @@ export function ConditionReportsSection({
               key={report.id}
               facilityId={facilityId}
               report={report}
+              currentUserId={currentUserId}
               onVoted={(helpful) =>
                 setReports((prev) =>
                   prev.map((r) => (r.id === report.id ? { ...r, helpful } : r))
@@ -190,10 +226,12 @@ export function ConditionReportsSection({
 function ConditionReportCard({
   facilityId,
   report,
+  currentUserId,
   onVoted,
 }: {
   facilityId: string;
   report: ConditionReport;
+  currentUserId: string | null;
   onVoted: (helpful: number) => void;
 }) {
   const meta =
@@ -201,9 +239,12 @@ function ConditionReportCard({
     CONDITION_RATING_META.good;
   const [voted, setVoted] = useState(false);
   const [pending, setPending] = useState(false);
+  const [flagged, setFlagged] = useState(false);
+  const [flagPending, setFlagPending] = useState(false);
 
   useEffect(() => {
     setVoted(hasVoted(report.id));
+    setFlagged(hasFlagged(report.id));
   }, [report.id]);
 
   async function handleHelpful() {
@@ -226,6 +267,35 @@ function ConditionReportCard({
       setPending(false);
     }
   }
+
+  async function handleFlag() {
+    if (flagged || flagPending) return;
+    if (!window.confirm("Opravdu nahlásit tento report jako spam nebo nevhodný?")) {
+      return;
+    }
+    setFlagPending(true);
+    try {
+      const res = await fetch(
+        `/api/facilities/${facilityId}/conditions/${report.id}/flag`,
+        { method: "POST" }
+      );
+      if (res.ok) {
+        markFlagged(report.id);
+        setFlagged(true);
+      } else if (res.status === 401) {
+        window.location.href = "/prihlaseni";
+      }
+    } catch {
+      /* swallow */
+    } finally {
+      setFlagPending(false);
+    }
+  }
+
+  const canFlag =
+    !!currentUserId &&
+    !!report.user?.id &&
+    currentUserId !== report.user.id;
 
   const authorLabel = report.user.name || "Uživatel";
 
@@ -285,7 +355,26 @@ function ConditionReportCard({
         </div>
       )}
 
-      <div className="mt-3 flex items-center justify-end">
+      <div className="mt-3 flex items-center justify-between gap-2">
+        {canFlag ? (
+          <button
+            type="button"
+            onClick={handleFlag}
+            disabled={flagged || flagPending}
+            className={`inline-flex items-center gap-1 rounded-md px-2 py-1 text-[11px] transition ${
+              flagged
+                ? "bg-red-50 text-red-700"
+                : "text-zinc-400 hover:bg-zinc-50 hover:text-zinc-600"
+            } disabled:cursor-not-allowed`}
+            aria-pressed={flagged}
+            title={flagged ? "Nahlášeno" : "Nahlásit spam nebo nevhodný obsah"}
+          >
+            <Flag className="h-3 w-3" />
+            {flagged ? "Nahlášeno" : "Nahlásit"}
+          </button>
+        ) : (
+          <span />
+        )}
         <button
           type="button"
           onClick={handleHelpful}

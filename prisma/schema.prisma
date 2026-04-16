@@ -283,6 +283,7 @@ model User {
   favoriteNotifications FavoriteNotification[]
   notifications         Notification[]
   conditionReports      ConditionReport[]
+  conditionReportFlags  ConditionReportFlag[]
 }
 
 model Visit {
@@ -396,12 +397,29 @@ model ConditionReport {
   rating     String   // 'excellent' | 'good' | 'poor' | 'closed'
   comment    String?  @db.Text
   helpful    Int      @default(0)
+  flagCount  Int      @default(0)
   visitedAt  DateTime @default(now())
   createdAt  DateTime @default(now())
   isHidden   Boolean  @default(false)
   photos     UserPhoto[]
+  flags      ConditionReportFlag[]
 
   @@index([facilityId, createdAt])
+  @@index([userId])
+  @@index([flagCount])
+}
+
+model ConditionReportFlag {
+  id       String          @id @default(cuid())
+  reportId String
+  report   ConditionReport @relation(fields: [reportId], references: [id], onDelete: Cascade)
+  userId   String
+  user     User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  reason   String?         @db.VarChar(280)
+  createdAt DateTime       @default(now())
+
+  @@unique([reportId, userId])
+  @@index([reportId])
   @@index([userId])
 }
 
