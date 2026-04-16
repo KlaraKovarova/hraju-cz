@@ -12,6 +12,7 @@ import {
 import {
   getSportFacilityTypePluralGenitive,
   getSportFacilityTypeInstrumental,
+  safeJsonLd,
 } from "@/lib/seo";
 import { FacilityCard } from "@/components/FacilityCard";
 import { FacilityMap } from "@/components/FacilityMap";
@@ -162,16 +163,16 @@ export default async function RegionPage({ params }: RegionPageProps) {
     <main className="min-h-screen bg-zinc-50/50">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(collectionLd) }}
       />
       {itemListLd && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListLd) }}
         />
       )}
 

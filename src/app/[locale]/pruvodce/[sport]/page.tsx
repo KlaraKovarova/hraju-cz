@@ -4,7 +4,7 @@ import { ChevronRight, BookOpen, MapPin, Star, Users } from "lucide-react";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
 import { getRegionBySlug } from "@/lib/regions";
 import { getGuideDefinitions } from "@/lib/guides";
-import { getSportFacilityTypePluralGenitive } from "@/lib/seo";
+import { getSportFacilityTypePluralGenitive, safeJsonLd } from "@/lib/seo";
 import type { Metadata } from "next";
 
 // ISR: revalidate guide index every 7 days (static content)
@@ -83,7 +83,7 @@ export default async function GuideIndexPage({ params }: GuideIndexProps) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbLd) }}
       />
 
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">

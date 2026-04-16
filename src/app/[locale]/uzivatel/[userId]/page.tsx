@@ -6,6 +6,7 @@ import { StarRating } from "@/components/StarRating";
 import { AdSlot } from "@/components/AdSlot";
 import { getUserBadges } from "@/lib/challenges";
 import { SPORTS } from "@/lib/sports";
+import { safeJsonLd } from "@/lib/seo";
 import type { Metadata } from "next";
 
 // ISR: revalidate user profiles every 6 hours (optimization)
@@ -117,11 +118,11 @@ export default async function UserProfilePage({ params }: Props) {
     <main className="min-h-screen bg-zinc-50/50">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(personLd) }}
       />
 
       {/* Nav */}

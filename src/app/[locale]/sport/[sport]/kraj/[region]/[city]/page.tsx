@@ -5,7 +5,7 @@ import { MapPin, ChevronRight } from "lucide-react";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
 import { getRegionBySlug } from "@/lib/regions";
 import { getFacilitiesByRegionCityAndSport } from "@/lib/data";
-import { getSportFacilityTypePlural, getSportFacilityTypePluralGenitive } from "@/lib/seo";
+import { getSportFacilityTypePlural, getSportFacilityTypePluralGenitive, safeJsonLd } from "@/lib/seo";
 import { FacilityListWithFilters } from "@/components/FacilityListWithFilters";
 import { FacilityMap } from "@/components/FacilityMap";
 import { AdSlot } from "@/components/AdSlot";
@@ -79,7 +79,7 @@ export default async function CityPage({ params }: CityPageProps) {
     <main className="min-h-screen bg-zinc-50/50">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbLd) }}
       />
       {/* Header */}
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">

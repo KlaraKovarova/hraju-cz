@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MapPin, ArrowRight, ChevronDown, Calendar, Star, MessageSquare, Users, PlusCircle, Trophy, ThumbsUp, TrendingUp, Flame } from "lucide-react";
 import { SPORTS } from "@/lib/sports";
+import { safeJsonLd } from "@/lib/seo";
 import {
   getTotalFacilityCount,
   getTotalSportCount,
@@ -128,21 +129,21 @@ export default async function Home() {
     <main className="min-h-screen bg-white">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(faqLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(organizationLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(websiteLd) }}
       />
       {challengeEventsLd.map((ld, i) => (
         <script
           key={`challenge-${i}`}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }}
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(ld) }}
         />
       ))}
 

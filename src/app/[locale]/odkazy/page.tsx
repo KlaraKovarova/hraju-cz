@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ChevronRight, ExternalLink, LinkIcon } from "lucide-react";
 import { SPORTS, getSportBySlug } from "@/lib/sports";
 import { SPORT_LINKS, LINK_CATEGORIES, type LinkCategory } from "@/lib/links";
+import { safeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Užitečné odkazy ke sportům",
@@ -53,7 +54,7 @@ export default function OdkazyPage() {
     <main className="min-h-screen bg-zinc-50/50">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbLd) }}
       />
 
       {/* Breadcrumb Header */}

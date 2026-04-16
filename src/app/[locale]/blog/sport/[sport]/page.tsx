@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ChevronRight, Calendar, Tag } from "lucide-react";
 import { getPostsBySport, CATEGORIES } from "@/lib/blog";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
+import { safeJsonLd } from "@/lib/seo";
 import type { Metadata } from "next";
 
 interface SportBlogPageProps {
@@ -52,7 +53,7 @@ export default async function SportBlogPage({ params }: SportBlogPageProps) {
     <main className="min-h-screen bg-zinc-50/50">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbLd) }}
       />
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center px-6 py-4">

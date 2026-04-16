@@ -10,6 +10,7 @@ import { FacilityCard } from "@/components/FacilityCard";
 import { FacilityMap } from "@/components/FacilityMap";
 import { TrackPageView } from "@/components/TrackPageView";
 import { getCityInPhrase } from "@/lib/locative";
+import { safeJsonLd } from "@/lib/seo";
 
 // ISR: revalidate city pages every 12 hours (optimization)
 export const revalidate = 43200;
@@ -120,11 +121,11 @@ export default async function CrossSportCityPage({ params }: Props) {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbLd) }}
       />
 
       {/* Breadcrumb Header */}

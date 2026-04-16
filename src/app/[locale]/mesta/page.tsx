@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { MapPin, ChevronRight, Building2 } from "lucide-react";
 import { getTopCitiesOverallForMesto, getTotalFacilityCount } from "@/lib/data";
+import { safeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Města se sportovišti",
@@ -38,7 +39,7 @@ export default async function MestaIndexPage() {
     <main className="min-h-screen bg-zinc-50/50">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbLd) }}
       />
 
       {/* Breadcrumb Header */}

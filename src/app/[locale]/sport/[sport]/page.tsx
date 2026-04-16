@@ -5,7 +5,7 @@ import { MapPin, ChevronRight, ChevronDown, Calendar, ArrowRight, PlusCircle, St
 import { prisma } from "@/lib/prisma";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
 import { getRegionsBySport, getTopFacilitiesBySport, getTopCitiesBySport, getTopReviewsBySport, getSportReviewStats, getFacilityMapMarkersBySport, getRecentActivity } from "@/lib/data";
-import { getSportTitleSuffix, getSportFacilityTypePluralGenitive, getSportFacilityType } from "@/lib/seo";
+import { getSportTitleSuffix, getSportFacilityTypePluralGenitive, getSportFacilityType, safeJsonLd } from "@/lib/seo";
 import { FacilityCard } from "@/components/FacilityCard";
 import { FacilityMap } from "@/components/FacilityMap";
 import { HeroSearchForm } from "@/components/HeroSearchForm";
@@ -189,27 +189,27 @@ export default async function SportPage({ params }: SportPageProps) {
     <main className="min-h-screen bg-zinc-50/50">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(collectionLd) }}
       />
       {challengeEventsLd.map((ld, i) => (
         <script
           key={`challenge-${i}`}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }}
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(ld) }}
         />
       ))}
       {faqLd && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(faqLd) }}
         />
       )}
       {/* Header */}

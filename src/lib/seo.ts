@@ -85,3 +85,15 @@ export function getSportFacilityTypeInstrumental(slug: string): string {
 export function getSportTitleSuffix(slug: string): string {
   return SPORT_FACILITY_TYPES[slug]?.titleSuffix ?? "sportoviště a haly v celé ČR";
 }
+
+/**
+ * Safely serialize JSON-LD for inline <script type="application/ld+json">.
+ *
+ * JSON.stringify does not escape `<`, so untrusted strings containing
+ * `</script>` (or `<!--`) can terminate the script tag and lead to XSS.
+ * This helper escapes every `<` as `\u003c` so the resulting payload is
+ * still valid JSON but can never break out of a <script> element.
+ */
+export function safeJsonLd(data: unknown): string {
+  return JSON.stringify(data).replace(/</g, "\\u003c");
+}

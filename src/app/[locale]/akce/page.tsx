@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Calendar, MapPin, PlusCircle } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { REGIONS } from "@/lib/regions";
+import { safeJsonLd } from "@/lib/seo";
 import { AdSlot } from "@/components/AdSlot";
 import { EventsClient } from "./EventsClient";
 
@@ -165,11 +166,11 @@ export default async function AkcePage() {
     <main className="min-h-screen bg-zinc-50/50">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventsLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(eventsLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbLd) }}
       />
 
       {/* Header */}

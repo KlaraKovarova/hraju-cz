@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Calendar, Tag } from "lucide-react";
 import { getAllPosts, CATEGORIES } from "@/lib/blog";
+import { safeJsonLd } from "@/lib/seo";
 import { AdSlot } from "@/components/AdSlot";
 import type { Metadata } from "next";
 
@@ -38,7 +39,7 @@ export default function BlogIndex() {
     <main className="min-h-screen bg-zinc-50/50">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbLd) }}
       />
       {/* Header */}
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">

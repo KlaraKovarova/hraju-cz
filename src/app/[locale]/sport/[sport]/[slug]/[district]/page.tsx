@@ -4,7 +4,7 @@ import Link from "next/link";
 import { MapPin, ChevronRight } from "lucide-react";
 import { getSportBySlug } from "@/lib/sports";
 import { getFacilitiesByCityAndSport } from "@/lib/data";
-import { getSportFacilityTypePluralGenitive } from "@/lib/seo";
+import { getSportFacilityTypePluralGenitive, safeJsonLd } from "@/lib/seo";
 import { FacilityListWithFilters } from "@/components/FacilityListWithFilters";
 import { FacilityMap } from "@/components/FacilityMap";
 import type { Metadata } from "next";
@@ -161,11 +161,11 @@ export default async function DistrictPage({ params }: DistrictPageProps) {
     <main className="min-h-screen bg-zinc-50/50">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListLd) }}
       />
 
       {/* Breadcrumb Header */}

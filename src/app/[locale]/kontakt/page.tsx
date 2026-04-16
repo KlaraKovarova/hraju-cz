@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { ContactForm } from "./ContactForm";
+import { safeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Kontakt — hraju.cz",
@@ -23,7 +24,7 @@ export default function KontaktPage() {
     <main className="min-h-screen bg-white">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbLd) }}
       />
       {/* Header */}
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">

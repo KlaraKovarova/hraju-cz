@@ -7,6 +7,7 @@ import remarkGfm from "remark-gfm";
 import { getPostBySlug, getAllPosts, getPostsBySport, CATEGORIES } from "@/lib/blog";
 import { getTopFacilitiesBySport } from "@/lib/data";
 import { getSportBySlug } from "@/lib/sports";
+import { safeJsonLd } from "@/lib/seo";
 import { getGuideDefinitions } from "@/lib/guides";
 import { SocialShareBar } from "@/components/SocialShareBar";
 import { BlogReviewCTA } from "@/components/BlogReviewCTA";
@@ -132,11 +133,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     <main className="min-h-screen bg-zinc-50/50">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(articleLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbLd) }}
       />
 
       {/* Header */}

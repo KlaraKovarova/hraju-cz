@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import Link from "next/link";
 import { MapPin, ChevronRight } from "lucide-react";
 import { SPORTS } from "@/lib/sports";
-import { getSportFacilityTypePlural } from "@/lib/seo";
+import { getSportFacilityTypePlural, safeJsonLd } from "@/lib/seo";
 import { getCityInPhrase } from "@/lib/locative";
 import { FacilityCard } from "@/components/FacilityCard";
 import { FacilityListWithFilters } from "@/components/FacilityListWithFilters";
@@ -74,11 +74,11 @@ export function CityLandingContent({
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbLd) }}
       />
 
       {/* Breadcrumb Header */}

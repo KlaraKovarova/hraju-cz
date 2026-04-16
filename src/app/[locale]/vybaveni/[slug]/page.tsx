@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, ExternalLink, Shield, Weight, Ruler } from "lucide-react";
 import { prisma } from "@/lib/prisma";
+import { safeJsonLd } from "@/lib/seo";
 import type { Metadata } from "next";
 
 // ISR: revalidate product detail every 7 days (rarely changes)
@@ -267,7 +268,7 @@ export default async function ProductDetailPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+          __html: safeJsonLd({
             "@context": "https://schema.org",
             "@type": "Product",
             name: product.name,

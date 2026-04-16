@@ -11,7 +11,7 @@ import {
   getGuideMapMarkers,
   type FacilityWithDetails,
 } from "@/lib/data";
-import { getSportFacilityTypePluralGenitive } from "@/lib/seo";
+import { getSportFacilityTypePluralGenitive, safeJsonLd } from "@/lib/seo";
 import { getGuideBySlug, getAllGuideSlugs } from "@/lib/guides";
 import Image from "next/image";
 import { FacilityCard } from "@/components/FacilityCard";
@@ -138,11 +138,11 @@ export default async function GuidePage({ params }: GuidePageProps) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListLd) }}
       />
 
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">

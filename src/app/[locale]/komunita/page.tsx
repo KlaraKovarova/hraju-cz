@@ -17,6 +17,7 @@ import {
   getMostActiveFacilities,
 } from "@/lib/data";
 import { getSportBySlug } from "@/lib/sports";
+import { safeJsonLd } from "@/lib/seo";
 import { ActivityFeed } from "@/components/ActivityFeed";
 import { ChallengeCards } from "@/components/ChallengeCards";
 import { SportFilterPills } from "@/components/SportFilterPills";
@@ -94,7 +95,7 @@ export default async function KomunitaPage({
     <main className="min-h-screen bg-zinc-50/50">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbLd) }}
       />
 
       {/* Nav */}

@@ -19,7 +19,7 @@ import { getFacilityBySlug, getInactiveFacilityRedirectInfo, getFacilitiesByCity
 import { getPostsBySport } from "@/lib/blog";
 import { getRegionByName, cityToSlug, getRegionSlug } from "@/lib/regions";
 import { getGuideBySlug } from "@/lib/guides";
-import { getSportFacilityType, getSportFacilityTypePluralGenitive } from "@/lib/seo";
+import { getSportFacilityType, getSportFacilityTypePluralGenitive, safeJsonLd } from "@/lib/seo";
 import { getCityInPhrase } from "@/lib/locative";
 import EditSuggestionForm from "@/components/EditSuggestionForm";
 import { StarRating } from "@/components/StarRating";
@@ -443,11 +443,11 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbLd) }}
       />
       {/* Header */}
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">
