@@ -196,6 +196,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: "daily",
     priority: 0.7,
   });
+  // SIL-656 — weekly-curated "best conditions" list (ferraty + lezení).
+  entries.push({
+    url: `${BASE_URL}/nejlepsi-podminky`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.8,
+  });
   entries.push({
     url: `${BASE_URL}/vybaveni`,
     changeFrequency: "weekly",

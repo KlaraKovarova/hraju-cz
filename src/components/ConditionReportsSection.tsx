@@ -166,7 +166,15 @@ export function ConditionReportsSection({
       )}
 
       {hasReports && (
-        <div className="mt-4 text-right">
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-2">
+          {(sportSlug === "ferraty" || sportSlug === "lezeni") ? (
+            <Link
+              href="/nejlepsi-podminky"
+              className="text-xs font-medium text-emerald-700 hover:text-emerald-800"
+            >
+              Nejlepší podmínky tento víkend →
+            </Link>
+          ) : <span />}
           <Link
             href={fullHistoryHref}
             className="text-xs font-medium text-emerald-600 hover:text-emerald-700"

@@ -44,6 +44,12 @@ export function HomeRecentConditions({ reports }: HomeRecentConditionsProps) {
           <p className="mt-2 text-zinc-500">
             Aktuální stav sportovišť od komunity (poslední týden)
           </p>
+          <Link
+            href="/nejlepsi-podminky"
+            className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-emerald-700 hover:text-emerald-800"
+          >
+            Nejlepší podmínky tento víkend →
+          </Link>
         </div>
 
         {/* Mobile: horizontal snap scroll. Desktop: 3-col grid */}
