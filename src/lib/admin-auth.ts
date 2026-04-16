@@ -2,16 +2,26 @@ import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
 
 const COOKIE_NAME = "admin_session";
-const SECRET = new TextEncoder().encode(
-  process.env.ADMIN_JWT_SECRET || "hraju-cz-admin-secret-change-in-production"
-);
+
+let cachedSecret: Uint8Array | null = null;
+function getSecret(): Uint8Array {
+  if (cachedSecret) return cachedSecret;
+  const secret = process.env.ADMIN_JWT_SECRET;
+  if (!secret) {
+    throw new Error(
+      "ADMIN_JWT_SECRET environment variable is required. Set a strong random value in your environment."
+    );
+  }
+  cachedSecret = new TextEncoder().encode(secret);
+  return cachedSecret;
+}
 
 export async function createAdminSession(): Promise<string> {
   const jwt = await new SignJWT({ role: "admin" })
     .setProtectedHeader({ alg: "HS256" })
     .setIssuedAt()
     .setExpirationTime("24h")
-    .sign(SECRET);
+    .sign(getSecret());
   return jwt;
 }
 
@@ -32,7 +42,7 @@ export async function getAdminSession(): Promise<boolean> {
   if (!token) return false;
 
   try {
-    const { payload } = await jwtVerify(token, SECRET);
+    const { payload } = await jwtVerify(token, getSecret());
     return payload.role === "admin";
   } catch {
     return false;
@@ -55,7 +65,7 @@ export async function verifyAdminFromRequest(request: Request): Promise<boolean>
   if (!token) return false;
 
   try {
-    const { payload } = await jwtVerify(token, SECRET);
+    const { payload } = await jwtVerify(token, getSecret());
     return payload.role === "admin";
   } catch {
     return false;

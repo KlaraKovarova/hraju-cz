@@ -2,9 +2,19 @@ import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
 
 const COOKIE_NAME = "user_session";
-const SECRET = new TextEncoder().encode(
-  process.env.USER_JWT_SECRET || "hraju-cz-user-secret-change-in-production"
-);
+
+let cachedSecret: Uint8Array | null = null;
+function getSecret(): Uint8Array {
+  if (cachedSecret) return cachedSecret;
+  const secret = process.env.USER_JWT_SECRET;
+  if (!secret) {
+    throw new Error(
+      "USER_JWT_SECRET environment variable is required. Set a strong random value in your environment."
+    );
+  }
+  cachedSecret = new TextEncoder().encode(secret);
+  return cachedSecret;
+}
 
 export interface UserSession {
   userId: string;
@@ -21,7 +31,7 @@ export async function createUserSession(
     .setProtectedHeader({ alg: "HS256" })
     .setIssuedAt()
     .setExpirationTime("30d")
-    .sign(SECRET);
+    .sign(getSecret());
   return jwt;
 }
 
@@ -31,7 +41,7 @@ export async function getUserSession(): Promise<UserSession | null> {
   if (!token) return null;
 
   try {
-    const { payload } = await jwtVerify(token, SECRET);
+    const { payload } = await jwtVerify(token, getSecret());
     return {
       userId: payload.userId as string,
       email: payload.email as string,

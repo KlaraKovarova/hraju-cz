@@ -7,16 +7,26 @@ import { locales, defaultLocale } from "./i18n/config";
 const intlMiddleware = createIntlMiddleware(routing);
 
 const ADMIN_COOKIE = "admin_session";
-const SECRET = new TextEncoder().encode(
-  process.env.ADMIN_JWT_SECRET || "hraju-cz-admin-secret-change-in-production"
-);
+
+let cachedSecret: Uint8Array | null = null;
+function getSecret(): Uint8Array {
+  if (cachedSecret) return cachedSecret;
+  const secret = process.env.ADMIN_JWT_SECRET;
+  if (!secret) {
+    throw new Error(
+      "ADMIN_JWT_SECRET environment variable is required. Set a strong random value in your environment."
+    );
+  }
+  cachedSecret = new TextEncoder().encode(secret);
+  return cachedSecret;
+}
 
 async function isAdminAuthenticated(request: NextRequest): Promise<boolean> {
   const token = request.cookies.get(ADMIN_COOKIE)?.value;
   if (!token) return false;
 
   try {
-    const { payload } = await jwtVerify(token, SECRET);
+    const { payload } = await jwtVerify(token, getSecret());
     return payload.role === "admin";
   } catch {
     return false;
