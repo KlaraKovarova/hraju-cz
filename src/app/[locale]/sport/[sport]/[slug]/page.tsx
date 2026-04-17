@@ -1120,7 +1120,7 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                   </a>
                 </div>
               )}
-              <h3 className="mb-3 text-sm font-semibold text-zinc-700">
+              <h3 id="napsat-recenzi" className="mb-3 text-sm font-semibold text-zinc-700 scroll-mt-4">
                 Napsat recenzi
               </h3>
               <ReviewForm facilityId={facility.id} currentPath={`/sport/${sportSlug}/${slug}`} facilityName={facility.name} facilityUrl={`https://www.hraju.cz/sport/${sportSlug}/${slug}`} />

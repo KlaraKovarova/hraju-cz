@@ -203,11 +203,11 @@ export default async function UserVystupyPage({
         {reports.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-zinc-200 bg-white px-6 py-10 text-center">
             <Mountain className="mx-auto h-10 w-10 text-zinc-300" />
-            <p className="mt-3 text-base font-medium text-zinc-700">
-              {displayName} zatím nesdílel(a) žádné záznamy.
+            <p className="mt-3 text-base font-semibold text-zinc-800">
+              {displayName} zatím nesdílel(a) žádné záznamy
             </p>
             <p className="mt-1 text-sm text-zinc-500">
-              Záznamy vznikají po výstupu přímo na stránce sportoviště.
+              Záznamy výstupů vznikají přímo na stránce sportoviště — sdílej beta, obtížnost a fotky, ať pomůžeš dalším lezcům.
             </p>
             <Link
               href="/hledat"

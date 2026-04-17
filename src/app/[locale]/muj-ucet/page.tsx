@@ -1009,8 +1009,8 @@ export default function MujUcetPage() {
           {reviews.length === 0 ? (
             <EmptyState
               icon={<MessageSquare className="mx-auto mb-3 h-10 w-10 text-zinc-300" />}
-              title="Zatím jste nenapsal/a žádnou recenzi."
-              subtitle="Navštivte sportoviště a podělte se o svůj zážitek."
+              title="Zatím jste nenapsal/a žádnou recenzi"
+              subtitle="Podělte se o svůj zážitek a pomozte ostatním vybrat sportoviště — za první schválenou recenzi získáte odznak Místní průvodce."
               href="/"
               cta="Procházet sportoviště"
             />
@@ -1101,8 +1101,8 @@ export default function MujUcetPage() {
           {visits.length === 0 ? (
             <EmptyState
               icon={<MapPinCheck className="mx-auto mb-3 h-10 w-10 text-zinc-300" />}
-              title="Zatím jste neoznačil/a žádné sportoviště."
-              subtitle='Označte sportoviště, která jste navštívil/a, tlačítkem "Byl/a jsem tady".'
+              title="Zatím jste neoznačil/a žádné sportoviště"
+              subtitle='Ukaž ostatním, kde sportuješ. Na stránce sportoviště klikni na "Byl/a jsem tady" — sbíráš tak check-iny k odznakům a vidíš svou cestu v profilu.'
               href="/"
               cta="Procházet sportoviště"
             />

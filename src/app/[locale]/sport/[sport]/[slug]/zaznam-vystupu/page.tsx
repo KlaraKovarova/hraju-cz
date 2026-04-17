@@ -197,13 +197,19 @@ export default async function ZaznamVystupuPage({
         {reports.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-zinc-200 bg-white px-6 py-10 text-center">
             <Mountain className="mx-auto h-10 w-10 text-zinc-300" />
-            <p className="mt-3 text-base font-medium text-zinc-700">
-              Buď první, kdo přidá záznam!
+            <p className="mt-3 text-base font-semibold text-zinc-800">
+              Buď první, kdo přidá záznam výstupu
             </p>
             <p className="mt-1 text-sm text-zinc-500">
-              Sdílej datum výstupu, obtížnost, beta a fotky — pomůže to dalším
-              sportovcům.
+              Tady je prostor sdílet beta, obtížnost, čas a fotky z výstupu — tvůj záznam pomůže dalším lezcům naplánovat si cestu.
             </p>
+            <a
+              href="#pridat"
+              className="mt-5 inline-flex items-center gap-1 rounded-full bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700"
+            >
+              <Mountain className="h-4 w-4" />
+              Přidat první záznam
+            </a>
           </div>
         ) : (
           <ul className="space-y-4">

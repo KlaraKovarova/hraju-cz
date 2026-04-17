@@ -97,6 +97,7 @@ function toDto(
     reviewId: p.reviewId,
     visitId: p.visitId,
     conditionReportId: p.conditionReportId,
+    tripReportId: p.tripReportId,
   };
 }
 
@@ -218,18 +219,22 @@ function EmptyState({ facilityHref }: { facilityHref: string }) {
   return (
     <div className="rounded-2xl border border-dashed border-zinc-200 bg-white px-6 py-12 text-center">
       <Camera className="mx-auto h-10 w-10 text-zinc-300" />
-      <p className="mt-3 text-base font-medium text-zinc-700">
-        Zatím žádné fotky.
+      <p className="mt-3 text-base font-semibold text-zinc-800">
+        Zatím žádné fotky
       </p>
       <p className="mt-1 text-sm text-zinc-500">
-        Pošlete první snímek z vaší návštěvy!
+        Pošli první snímek z návštěvy — nejlepší fotky týdne vybíráme do rubriky{" "}
+        <Link href="/foto-tydne" className="font-medium text-emerald-700 hover:underline">
+          Foto týdne
+        </Link>
+        .
       </p>
       <div className="mt-5 flex flex-wrap justify-center gap-2">
         <Link
           href={`${facilityHref}#recenze`}
           className="rounded-full bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700"
         >
-          Napsat recenzi
+          Napsat recenzi s fotkou
         </Link>
         <Link
           href={`${facilityHref}#podminky`}
@@ -241,7 +246,7 @@ function EmptyState({ facilityHref }: { facilityHref: string }) {
           href={facilityHref}
           className="rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-medium text-zinc-700 hover:border-zinc-300"
         >
-          Check-in
+          Byl/a jsem tady
         </Link>
       </div>
     </div>

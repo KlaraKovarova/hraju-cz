@@ -49,6 +49,7 @@ function toDto(p: UserPhoto): UserGalleryPhotoDTO {
     reviewId: p.reviewId,
     visitId: p.visitId,
     conditionReportId: p.conditionReportId,
+    tripReportId: p.tripReportId,
     facility: {
       id: p.facility.id,
       name: p.facility.name,
@@ -222,11 +223,15 @@ function EmptyState({ displayName }: { displayName: string }) {
   return (
     <div className="rounded-2xl border border-dashed border-zinc-200 bg-white px-6 py-12 text-center">
       <Camera className="mx-auto h-10 w-10 text-zinc-300" />
-      <p className="mt-3 text-base font-medium text-zinc-700">
-        {displayName} zatím nesdílel(a) žádné fotky.
+      <p className="mt-3 text-base font-semibold text-zinc-800">
+        {displayName} zatím nesdílel(a) žádné fotky
       </p>
       <p className="mt-1 text-sm text-zinc-500">
-        Fotky vznikají při psaní recenzí, check-inech a reportech podmínek.
+        Fotky vznikají při psaní recenzí, check-inech a reportech podmínek — nejlepší snímky týdne se dostanou do rubriky{" "}
+        <Link href="/foto-tydne" className="font-medium text-emerald-700 hover:underline">
+          Foto týdne
+        </Link>
+        .
       </p>
       <div className="mt-5 flex flex-wrap justify-center gap-2">
         <Link

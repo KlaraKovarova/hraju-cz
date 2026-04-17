@@ -89,13 +89,21 @@ export async function FacilityTripReportsRail({
         </div>
 
         {total === 0 ? (
-          <div className="rounded-2xl border border-dashed border-zinc-200 bg-zinc-50/50 px-6 py-6 text-center">
-            <p className="text-sm font-medium text-zinc-700">
-              Buď první, kdo přidá záznam!
+          <div className="rounded-2xl border border-dashed border-zinc-200 bg-zinc-50/50 px-6 py-8 text-center">
+            <Mountain className="mx-auto h-8 w-8 text-zinc-300" />
+            <p className="mt-2 text-sm font-semibold text-zinc-800">
+              Buď první, kdo přidá záznam výstupu
             </p>
             <p className="mt-1 text-xs text-zinc-500">
-              Sdílej datum, obtížnost, beta a fotky z výstupu — pomůže to dalším.
+              Sdílej datum, obtížnost, beta a fotky — pomůžeš dalším lezcům naplánovat výstup a vybrat správnou cestu.
             </p>
+            <Link
+              href={fullHref}
+              className="mt-4 inline-flex items-center gap-1 rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white hover:bg-emerald-700"
+            >
+              Přidat první záznam
+              <ArrowRight className="h-3 w-3" />
+            </Link>
           </div>
         ) : (
           <ul className="grid gap-3 sm:grid-cols-3">

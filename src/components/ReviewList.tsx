@@ -97,12 +97,18 @@ export function ReviewList({ facilityId, facilityUrl, perPage = 10 }: ReviewList
     return (
       <div className="rounded-xl border border-dashed border-zinc-200 bg-zinc-50/50 p-6 text-center">
         <MessageSquare className="mx-auto h-8 w-8 text-zinc-300" />
-        <p className="mt-2 text-sm font-medium text-zinc-500">
+        <p className="mt-2 text-sm font-medium text-zinc-700">
           Zatím žádné recenze
         </p>
-        <p className="mt-1 text-xs text-zinc-400">
-          Buďte první, kdo ohodnotí toto sportoviště
+        <p className="mt-1 text-xs text-zinc-500">
+          Buďte první, kdo ohodnotí toto sportoviště — vaše zkušenost pomůže ostatním a získáte odznak Místní průvodce.
         </p>
+        <a
+          href="#napsat-recenzi"
+          className="mt-4 inline-block rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white hover:bg-emerald-700"
+        >
+          Napsat první recenzi
+        </a>
       </div>
     );
   }

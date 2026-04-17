@@ -191,12 +191,21 @@ export function ConditionReportsSection({
 
       {!loading && !hasReports && (
         <div className="rounded-xl border border-dashed border-zinc-200 bg-zinc-50/50 p-5 text-center">
-          <p className="text-sm text-zinc-600">
-            Zatím žádné reporty.{" "}
-            <span className="font-semibold text-zinc-800">
-              Buďte první, kdo se podělí o aktuální stav!
-            </span>
+          <p className="text-sm font-semibold text-zinc-800">
+            Zatím žádné reporty z posledních 7 dní
           </p>
+          <p className="mt-1 text-xs text-zinc-500">
+            Jaké jsou aktuální podmínky? Pomoz dalším sportovcům naplánovat výlet — stačí pár vět o stavu a obtížnosti.
+          </p>
+          {!showForm && (
+            <button
+              type="button"
+              onClick={() => setShowForm(true)}
+              className="mt-4 inline-flex items-center gap-1 rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white hover:bg-emerald-700"
+            >
+              Nahlásit aktuální stav
+            </button>
+          )}
         </div>
       )}
 
