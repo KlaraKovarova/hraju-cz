@@ -45,3 +45,8 @@ next-env.d.ts
 
 # scraped data files (large, not needed in repo)
 /scripts/data/
+
+# SIL-681 static snapshot output
+/out-static/
+/out-static-build.log
+/.netlify/

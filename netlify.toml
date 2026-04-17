@@ -1,0 +1,58 @@
+# SIL-681 — Plan B free-tier deploy (Netlify).
+#
+# When Vercel is unavailable, run `npm run snapshot` locally (requires a
+# working DATABASE_URL) and deploy the result with:
+#   npx netlify-cli deploy --prod --dir=out-static --site=<site-id>
+#
+# This config tells Netlify how to serve the static snapshot. No build
+# step runs on Netlify itself — the snapshot is pre-generated locally so
+# we don't need to give Netlify DATABASE_URL or any secrets.
+
+[build]
+  publish = "out-static"
+  command = "echo 'Static snapshot deployed from local build — no Netlify build step.'"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/cs/*"
+  to = "/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/en/*"
+  to = "/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/de/*"
+  to = "/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/pl/*"
+  to = "/:splat"
+  status = 301
+
+# Map pretty URLs to their index.html companions.
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Rescue-Mode = "snapshot"
+    Cache-Control = "public, max-age=300, s-maxage=600"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
