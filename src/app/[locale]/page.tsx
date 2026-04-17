@@ -15,6 +15,7 @@ import {
   getTrendingReviews,
   getMostActiveFacilities,
   getRecentConditionReports,
+  getRecentTripReports,
 } from "@/lib/data";
 import { cityToSlug } from "@/lib/regions";
 import { FacilityCard } from "@/components/FacilityCard";
@@ -22,6 +23,7 @@ import { HeroSearchForm } from "@/components/HeroSearchForm";
 import { HomeRecentConditions } from "@/components/HomeRecentConditions";
 import { HomeRecentPhotos } from "@/components/HomeRecentPhotos";
 import { HomePhotoOfTheWeek } from "@/components/HomePhotoOfTheWeek";
+import { HomeRecentTripReports } from "@/components/HomeRecentTripReports";
 import { getRecentPhotos, getLatestPhotoOfTheWeek } from "@/lib/photos";
 import { AdSlot } from "@/components/AdSlot";
 import { ActivityFeed } from "@/components/ActivityFeed";
@@ -36,7 +38,7 @@ export const revalidate = 86400;
 export default async function Home() {
   const totalFacilities = getTotalFacilityCount();
   const totalSports = getTotalSportCount();
-  const [featuredFacilities, topCities, recentFacilities, recentReviews, communityStats, activityItems, topReviewers, trendingReviews, mostActiveFacilities, recentConditions, recentPhotos, photoOfTheWeek] =
+  const [featuredFacilities, topCities, recentFacilities, recentReviews, communityStats, activityItems, topReviewers, trendingReviews, mostActiveFacilities, recentConditions, recentPhotos, photoOfTheWeek, recentTripReports] =
     await Promise.all([
       getFeaturedFacilities(6),
       getTopCitiesOverall(10),
@@ -50,6 +52,7 @@ export default async function Home() {
       getRecentConditionReports(6, 7),
       getRecentPhotos(6, 14),
       getLatestPhotoOfTheWeek(),
+      getRecentTripReports(6),
     ]);
   const conditionsLcpThumb = recentConditions.find((r) => r.thumbnailUrl)?.thumbnailUrl ?? null;
   const photosLcpThumb = recentPhotos[0]?.url ?? null;
@@ -294,6 +297,9 @@ export default async function Home() {
 
       {/* Recent Photos Rail (SIL-665) */}
       <HomeRecentPhotos photos={recentPhotos} />
+
+      {/* Recent Trip Reports Rail (SIL-678) — ferraty + lezení only */}
+      <HomeRecentTripReports reports={recentTripReports} />
 
       {/* Sports Grid */}
       <section id="sports" className="mx-auto max-w-6xl px-6 py-16">

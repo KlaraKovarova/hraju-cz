@@ -203,6 +203,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: "weekly",
     priority: 0.8,
   });
+  // SIL-678 — global trip reports index (deep-link pages live in image sitemap).
+  entries.push({
+    url: `${BASE_URL}/vystupy`,
+    changeFrequency: "daily",
+    priority: 0.7,
+  });
   entries.push({
     url: `${BASE_URL}/vybaveni`,
     changeFrequency: "weekly",

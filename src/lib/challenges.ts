@@ -9,6 +9,14 @@ import {
   getLocalGuideStats,
   tierQualifiesFromStats,
 } from "./badges/local-guide";
+import {
+  TRIP_REPORTER_BADGE_SLUGS,
+  TRIP_REPORTER_THRESHOLDS,
+  TRIP_REPORTER_TIER_EMOJI,
+  TRIP_REPORTER_TIER_LABELS,
+  countUserTripReports,
+  tripReporterTierQualifies,
+} from "./badges/trip-reporter";
 
 // ─── Badge definitions ───────────────────────────────────────────────────
 export interface BadgeDefinition {
@@ -19,7 +27,7 @@ export interface BadgeDefinition {
   /** Sport slug required (null = any sport) */
   sportSlug: string | null;
   /** Badge category for grouping */
-  category: "sport" | "review" | "community" | "streak" | "seasonal" | "local_guide";
+  category: "sport" | "review" | "community" | "streak" | "seasonal" | "local_guide" | "trip_reporter";
   /** Check function returns true if user qualifies */
   check: (ctx: BadgeCheckContext) => Promise<boolean>;
 }
@@ -598,6 +606,44 @@ export const BADGE_DEFINITIONS: BadgeDefinition[] = [
     check: async (ctx) => {
       const stats = await getLocalGuideStats(ctx.userId);
       return tierQualifiesFromStats("gold", stats);
+    },
+  },
+
+  // ─── Trip Reporter badges (SIL-678) ────────────────────────────────────
+  {
+    slug: TRIP_REPORTER_BADGE_SLUGS.bronze,
+    name: TRIP_REPORTER_TIER_LABELS.bronze,
+    description: `${TRIP_REPORTER_THRESHOLDS.bronze.reports}+ záznamů výstupů`,
+    emoji: TRIP_REPORTER_TIER_EMOJI,
+    sportSlug: null,
+    category: "trip_reporter",
+    check: async (ctx) => {
+      const total = await countUserTripReports(ctx.userId);
+      return tripReporterTierQualifies("bronze", total);
+    },
+  },
+  {
+    slug: TRIP_REPORTER_BADGE_SLUGS.silver,
+    name: TRIP_REPORTER_TIER_LABELS.silver,
+    description: `${TRIP_REPORTER_THRESHOLDS.silver.reports}+ záznamů výstupů`,
+    emoji: TRIP_REPORTER_TIER_EMOJI,
+    sportSlug: null,
+    category: "trip_reporter",
+    check: async (ctx) => {
+      const total = await countUserTripReports(ctx.userId);
+      return tripReporterTierQualifies("silver", total);
+    },
+  },
+  {
+    slug: TRIP_REPORTER_BADGE_SLUGS.gold,
+    name: TRIP_REPORTER_TIER_LABELS.gold,
+    description: `${TRIP_REPORTER_THRESHOLDS.gold.reports}+ záznamů výstupů`,
+    emoji: TRIP_REPORTER_TIER_EMOJI,
+    sportSlug: null,
+    category: "trip_reporter",
+    check: async (ctx) => {
+      const total = await countUserTripReports(ctx.userId);
+      return tripReporterTierQualifies("gold", total);
     },
   },
 

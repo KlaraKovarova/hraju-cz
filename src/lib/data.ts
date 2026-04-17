@@ -691,6 +691,85 @@ export type RecentConditionReport = {
   thumbnailUrl: string | null;
 };
 
+export type RecentTripReport = {
+  id: string;
+  dateClimbed: Date;
+  gradeText: string | null;
+  beta: string | null;
+  createdAt: Date;
+  user: { id: string; name: string | null };
+  facility: { id: string; name: string; slug: string; sport: string | null; sportIcon: string | null; sportNameCs: string | null };
+  thumbnailUrl: string | null;
+};
+
+export async function getRecentTripReports(
+  limit: number = 6,
+  sportSlugs: string[] = ["ferraty", "lezeni"]
+): Promise<RecentTripReport[]> {
+  try {
+    const reports = await withTimeout(
+      prisma.tripReport.findMany({
+        where: {
+          isHidden: false,
+          facility: {
+            isActive: true,
+            sports: { some: { sport: { slug: { in: sportSlugs } } } },
+          },
+        },
+        orderBy: { createdAt: "desc" },
+        take: limit,
+        select: {
+          id: true,
+          dateClimbed: true,
+          gradeText: true,
+          beta: true,
+          createdAt: true,
+          user: { select: { id: true, name: true } },
+          facility: {
+            select: {
+              id: true,
+              name: true,
+              slug: true,
+              sports: {
+                take: 1,
+                select: {
+                  sport: { select: { slug: true, nameCs: true, icon: true } },
+                },
+              },
+            },
+          },
+          photos: {
+            where: { isHidden: false },
+            select: { url: true },
+            orderBy: { createdAt: "asc" },
+            take: 1,
+          },
+        },
+      }),
+      DB_QUERY_TIMEOUT_MS
+    );
+    return reports.map((r) => ({
+      id: r.id,
+      dateClimbed: r.dateClimbed,
+      gradeText: r.gradeText,
+      beta: r.beta,
+      createdAt: r.createdAt,
+      user: r.user,
+      facility: {
+        id: r.facility.id,
+        name: r.facility.name,
+        slug: r.facility.slug,
+        sport: r.facility.sports[0]?.sport.slug ?? null,
+        sportIcon: r.facility.sports[0]?.sport.icon ?? null,
+        sportNameCs: r.facility.sports[0]?.sport.nameCs ?? null,
+      },
+      thumbnailUrl: r.photos[0]?.url ?? null,
+    }));
+  } catch {
+    return [];
+  }
+}
+
 export async function getRecentConditionReports(limit: number = 6, days: number = 7): Promise<RecentConditionReport[]> {
   try {
     const since = new Date(Date.now() - days * 24 * 60 * 60 * 1000);
