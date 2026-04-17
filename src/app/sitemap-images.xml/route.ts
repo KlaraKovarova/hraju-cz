@@ -11,6 +11,10 @@ import { buildPhotoAlt } from "@/lib/photos";
  * URL, a deterministic <image:title> (alt text), and an optional
  * <image:caption> drawn from the review/check-in/condition-report source.
  *
+ * SIL-677: also emits one <url> per trip report with photos, parented at the
+ * per-trip-report deep-link page (`/sport/{sport}/{slug}/vystup/{id}`) so
+ * trip-report photos surface in Google Images alongside the facility gallery.
+ *
  * Capped at the Google-spec 50,000 <url> per sitemap. Pagination would go in
  * sitemap-images-1.xml, sitemap-images-2.xml — not needed at current scale.
  */
@@ -133,6 +137,76 @@ export async function GET() {
       .join("\n");
 
     urls.push(block);
+  }
+
+  // SIL-677 — per-trip-report <url> entries. Each trip report with at least
+  // one visible photo becomes its own sitemap URL, with nested <image:image>
+  // children for every photo on that report.
+  if (urls.length < MAX_URLS) {
+    const remaining = MAX_URLS - urls.length;
+    const tripReports = await prisma.tripReport.findMany({
+      where: {
+        isHidden: false,
+        photos: { some: { isHidden: false } },
+      },
+      orderBy: { createdAt: "desc" },
+      take: remaining,
+      select: {
+        id: true,
+        dateClimbed: true,
+        updatedAt: true,
+        facility: {
+          select: {
+            slug: true,
+            name: true,
+            sports: { select: { sport: { select: { slug: true } } } },
+          },
+        },
+        photos: {
+          where: { isHidden: false },
+          orderBy: { createdAt: "asc" },
+          take: MAX_IMAGES_PER_URL,
+          select: { id: true, url: true, alt: true },
+        },
+      },
+    });
+
+    for (const report of tripReports) {
+      const sportSlugs = report.facility.sports.map((fs) => fs.sport.slug);
+      const canonicalSlug = pickCanonicalSportSlug(sportSlugs);
+      if (!canonicalSlug) continue;
+
+      const dateIso = report.dateClimbed.toISOString().slice(0, 10);
+      const imageTitle = escapeXml(`${report.facility.name} — ${dateIso}`);
+
+      const imageNodes: string[] = [];
+      for (const photo of report.photos) {
+        if (!photo.url) continue;
+        const parts = [
+          `    <image:image>`,
+          `      <image:loc>${escapeXml(photo.url)}</image:loc>`,
+          `      <image:title>${imageTitle}</image:title>`,
+          `    </image:image>`,
+        ];
+        imageNodes.push(parts.join("\n"));
+      }
+      if (imageNodes.length === 0) continue;
+
+      const pageUrl = `${BASE_URL}/sport/${canonicalSlug}/${report.facility.slug}/vystup/${report.id}`;
+      const lastmod = report.updatedAt?.toISOString();
+
+      const block = [
+        `  <url>`,
+        `    <loc>${escapeXml(pageUrl)}</loc>`,
+        lastmod ? `    <lastmod>${lastmod}</lastmod>` : null,
+        ...imageNodes,
+        `  </url>`,
+      ]
+        .filter(Boolean)
+        .join("\n");
+
+      urls.push(block);
+    }
   }
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
