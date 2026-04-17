@@ -40,6 +40,7 @@ import { FavoriteButton } from "@/components/FavoriteButton";
 import { FacilityGallery } from "@/components/FacilityGallery";
 import { FacilityReviewCTA } from "@/components/FacilityReviewCTA";
 import { FacilityPhotosPreview } from "@/components/FacilityPhotosPreview";
+import { FacilityTripReportsPreview } from "@/components/FacilityTripReportsPreview";
 import { ConditionReportsSection } from "@/components/ConditionReportsSection";
 import {
   CONDITION_AGGREGATE_MIN,
@@ -1053,6 +1054,13 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
         facilityName={facility.name}
         sportName={sport.nameCs}
         facilityHref={`/sport/${sportSlug}/${slug}`}
+      />
+
+      {/* Trip reports preview — ferraty/lezení always show (invite first record), others only when reports exist */}
+      <FacilityTripReportsPreview
+        facilityId={facility.id}
+        facilityHref={`/sport/${sportSlug}/${slug}`}
+        alwaysShow={sportSlug === "ferraty" || sportSlug === "lezeni"}
       />
 
       {/* State-aware review CTA */}
