@@ -10,7 +10,62 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Vercel Production Deploy
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (standalone)
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ secrets.NEXT_PUBLIC_GA_MEASUREMENT_ID }}
+          NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
+        run: npm run build
+
+      - name: Package standalone output
         run: |
-          curl -s -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}"
-          echo "Deploy triggered at $(date -u)"
+          cp -r public .next/standalone/public
+          cp -r .next/static .next/standalone/.next/static
+          tar -czf deploy.tar.gz -C .next/standalone .
+
+      - name: Deploy to Hostinger via SSH
+        env:
+          SSH_KEY: ${{ secrets.HOSTINGER_SSH_KEY }}
+          SSH_HOST: ${{ secrets.HOSTINGER_SSH_HOST }}
+          SSH_USER: ${{ secrets.HOSTINGER_SSH_USER }}
+          SSH_PORT: ${{ secrets.HOSTINGER_SSH_PORT || '22' }}
+        run: |
+          echo "$SSH_KEY" > /tmp/deploy_key
+          chmod 600 /tmp/deploy_key
+          scp -i /tmp/deploy_key -P "$SSH_PORT" -o StrictHostKeyChecking=no \
+            deploy.tar.gz "$SSH_USER@$SSH_HOST:/tmp/hraju-deploy.tar.gz"
+          ssh -i /tmp/deploy_key -p "$SSH_PORT" -o StrictHostKeyChecking=no \
+            "$SSH_USER@$SSH_HOST" '
+              set -e
+              DEPLOY_DIR="$HOME/hraju.cz"
+              BACKUP_DIR="$HOME/hraju.cz.backup"
+
+              # Backup current deployment
+              [ -d "$DEPLOY_DIR" ] && rm -rf "$BACKUP_DIR" && cp -r "$DEPLOY_DIR" "$BACKUP_DIR"
+
+              # Extract new deployment
+              mkdir -p "$DEPLOY_DIR"
+              tar -xzf /tmp/hraju-deploy.tar.gz -C "$DEPLOY_DIR"
+              rm /tmp/hraju-deploy.tar.gz
+
+              # Preserve uploads directory across deploys
+              mkdir -p "$DEPLOY_DIR/public/uploads"
+              [ -d "$BACKUP_DIR/public/uploads" ] && cp -rn "$BACKUP_DIR/public/uploads/." "$DEPLOY_DIR/public/uploads/"
+
+              # Restart the app
+              pm2 restart hraju-cz || pm2 start "$DEPLOY_DIR/server.js" --name hraju-cz
+              echo "Deploy complete at $(date -u)"
+            '
+          rm /tmp/deploy_key

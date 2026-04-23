@@ -1,4 +1,3 @@
-import { PrismaNeon } from "@prisma/adapter-neon";
 import { PrismaClient } from "@prisma/client";
 
 const globalForPrisma = globalThis as unknown as {
@@ -15,9 +14,7 @@ function createPrismaClient(): PrismaClient {
       },
     });
   }
-  const adapter = new PrismaNeon({ connectionString: process.env.DATABASE_URL });
   return new PrismaClient({
-    adapter,
     log:
       process.env.NODE_ENV === "development"
         ? ["query", "error", "warn"]
