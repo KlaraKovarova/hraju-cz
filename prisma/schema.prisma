@@ -81,6 +81,7 @@ model Facility {
   favorites             Favorite[]
   favoriteNotifications FavoriteNotification[]
   conditionReports      ConditionReport[]
+  tripReports           TripReport[]
   premiumOrders         PremiumOrder[]
   averageRating         Float?
   reviewCount           Int                    @default(0)
@@ -285,6 +286,7 @@ model User {
   conditionReports      ConditionReport[]
   conditionReportFlags  ConditionReportFlag[]
   photoVotes            PhotoVote[]
+  tripReports           TripReport[]
 }
 
 model Visit {
@@ -377,6 +379,8 @@ model UserPhoto {
   visit             Visit?           @relation(fields: [visitId], references: [id], onDelete: SetNull)
   conditionReportId String?
   conditionReport   ConditionReport? @relation(fields: [conditionReportId], references: [id], onDelete: SetNull)
+  tripReportId      String?
+  tripReport        TripReport?      @relation(fields: [tripReportId], references: [id], onDelete: SetNull)
   url               String
   alt               String?
   isHidden           Boolean          @default(false)
@@ -391,6 +395,7 @@ model UserPhoto {
   @@index([reviewId])
   @@index([visitId])
   @@index([conditionReportId])
+  @@index([tripReportId])
   @@index([userId])
 }
 
@@ -413,6 +418,31 @@ model ConditionReport {
   @@index([facilityId, createdAt])
   @@index([userId])
   @@index([flagCount])
+}
+
+// SIL-674: user-submitted trip report / route log attached to a facility.
+// One ascent per submission, free-text grade, optional partners/beta/weather,
+// optional photos (via UserPhoto.tripReportId).
+model TripReport {
+  id              String      @id @default(cuid())
+  facilityId      String
+  facility        Facility    @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+  userId          String
+  user            User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  dateClimbed     DateTime
+  durationMinutes Int?
+  gradeText       String? // free-text grade (UIAA "6+", French "5c", ferrata "B/C")
+  partnersText    String? // "S Honzou a Pepou"
+  beta            String?     @db.Text // markdown allowed
+  weatherNote     String?
+  isHidden        Boolean     @default(false)
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+  photos          UserPhoto[]
+
+  @@index([facilityId, dateClimbed])
+  @@index([userId, dateClimbed])
+  @@index([facilityId, createdAt])
 }
 
 model ConditionReportFlag {
