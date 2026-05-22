@@ -5,7 +5,7 @@ import { safeJsonLd } from "@/lib/seo";
 import {
   getTotalFacilityCount,
   getTotalSportCount,
-  getFeaturedFacilities,
+  // getFeaturedFacilities, // TEMP: re-add when restoring "Doporučená sportoviště" section
   getTopCitiesOverall,
   getRecentFacilities,
   getRecentReviews,
@@ -38,9 +38,12 @@ export const revalidate = 86400;
 export default async function Home() {
   const totalFacilities = getTotalFacilityCount();
   const totalSports = getTotalSportCount();
-  const [featuredFacilities, topCities, recentFacilities, recentReviews, communityStats, activityItems, topReviewers, trendingReviews, mostActiveFacilities, recentConditions, recentPhotos, photoOfTheWeek, recentTripReports] =
+  // TEMP: "Doporučená sportoviště" section hidden — re-enable by uncommenting
+  // the section block below AND the getFeaturedFacilities(6) call here, and
+  // restoring `featuredFacilities` to the destructuring on the left.
+  const [/* featuredFacilities, */ topCities, recentFacilities, recentReviews, communityStats, activityItems, topReviewers, trendingReviews, mostActiveFacilities, recentConditions, recentPhotos, photoOfTheWeek, recentTripReports] =
     await Promise.all([
-      getFeaturedFacilities(6),
+      // getFeaturedFacilities(6),
       getTopCitiesOverall(10),
       getRecentFacilities(4),
       getRecentReviews(6),
@@ -340,7 +343,9 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Featured Facilities */}
+      {/* TEMP: "Doporučená sportoviště" section hidden. To restore, remove
+          this comment wrapper and re-enable the data fetch above. */}
+      {/*
       {featuredFacilities.length > 0 && (
         <section className="border-t border-zinc-100 bg-zinc-50/50">
           <div className="mx-auto max-w-6xl px-6 py-16">
@@ -364,6 +369,7 @@ export default async function Home() {
           </div>
         </section>
       )}
+      */}
 
       {/* Ad: between Featured and Top Cities */}
       <div className="mx-auto max-w-6xl px-6 py-4">
