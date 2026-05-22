@@ -24,6 +24,11 @@ const MAX_IMAGES_PER_URL = 10;
 const MAX_URLS = 50000;
 const CAPTION_MAX_LEN = 200;
 
+// Force dynamic rendering so `next build` doesn't try to pre-fetch the DB.
+// On Hostinger the build environment may not see DATABASE_URL, which would
+// previously fail the entire build with a Postgres auth error. Rendered on
+// every request at runtime; sitemaps aren't hit frequently enough to matter.
+export const dynamic = "force-dynamic";
 export const revalidate = 86400;
 
 type SportMeta = { slug: string; nameCs: string };
@@ -56,7 +61,9 @@ function pickCanonicalSportSlug(sportSlugs: string[]): string | null {
 }
 
 export async function GET() {
-  const facilities = await prisma.facility.findMany({
+  // Wrap the facility query so a DB outage (or missing DATABASE_URL during
+  // build) produces an empty-but-valid sitemap instead of a hard 500.
+  const facilitiesQuery = prisma.facility.findMany({
     where: {
       isActive: true,
       userPhotos: { some: { isHidden: false } },
@@ -84,6 +91,10 @@ export async function GET() {
       },
     },
     take: MAX_URLS,
+  });
+  const facilities: Awaited<typeof facilitiesQuery> = await facilitiesQuery.catch((err) => {
+    console.error("[sitemap-images] facility.findMany failed:", err);
+    return [];
   });
 
   const urls: string[] = [];
@@ -144,7 +155,7 @@ export async function GET() {
   // children for every photo on that report.
   if (urls.length < MAX_URLS) {
     const remaining = MAX_URLS - urls.length;
-    const tripReports = await prisma.tripReport.findMany({
+    const tripReportsQuery = prisma.tripReport.findMany({
       where: {
         isHidden: false,
         photos: { some: { isHidden: false } },
@@ -169,6 +180,10 @@ export async function GET() {
           select: { id: true, url: true, alt: true },
         },
       },
+    });
+    const tripReports: Awaited<typeof tripReportsQuery> = await tripReportsQuery.catch((err) => {
+      console.error("[sitemap-images] tripReport.findMany failed:", err);
+      return [];
     });
 
     for (const report of tripReports) {
