@@ -12,7 +12,7 @@ dotenv.config();
 
 import * as cheerio from "cheerio";
 import { PrismaClient } from "@prisma/client";
-import { PrismaNeon } from "@prisma/adapter-neon";
+import { PrismaPg } from "@prisma/adapter-pg";
 
 const BASE_URL = "https://kalendar.kct-db.cz/texty";
 const LIST_URL = `${BASE_URL}/kalendarakci.php`;
@@ -20,8 +20,8 @@ const DETAIL_URL = `${BASE_URL}/kalendarakci-detail.php`;
 const USER_AGENT = "hraju.cz-crawler/1.0 (+https://www.hraju.cz)";
 const DELAY_MS = 500;
 
-const adapter = new PrismaNeon({
-  connectionString: process.env.DATABASE_URL!,
+const adapter = new PrismaPg({
+  connectionString: process.env.DIRECT_URL ?? process.env.DATABASE_URL!,
 });
 const prisma = new PrismaClient({ adapter });
 
