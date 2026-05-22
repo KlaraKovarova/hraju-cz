@@ -26,8 +26,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Nebyl vybrán žádný soubor." }, { status: 400 });
     }
 
-    if (!facilityId) {
-      return NextResponse.json({ error: "Chybí facilityId." }, { status: 400 });
+    if (!facilityId || !/^[a-z0-9]+$/i.test(facilityId)) {
+      return NextResponse.json({ error: "Chybí nebo neplatný facilityId." }, { status: 400 });
     }
 
     if (!ALLOWED_TYPES.includes(file.type)) {
@@ -66,9 +66,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // For "review" and "condition" contexts, limit the number of unlinked photos
-    // the user has pending attachment to a new record for this facility.
-    if (context === "review" || context === "condition") {
+    // For "review", "condition", and "trip-report" contexts, limit the number of
+    // unlinked photos the user has pending attachment to a new record for this facility.
+    if (context === "review" || context === "condition" || context === "trip-report") {
       const existingPhotos = await prisma.userPhoto.count({
         where: {
           userId: session.userId,
@@ -76,6 +76,7 @@ export async function POST(request: NextRequest) {
           reviewId: null,
           visitId: null,
           conditionReportId: null,
+          tripReportId: null,
         },
       });
       if (existingPhotos >= MAX_PHOTOS_PER_REVIEW) {
