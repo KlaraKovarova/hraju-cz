@@ -1,6 +1,16 @@
 import { prisma } from "@/lib/prisma";
+import {
+  contextLabel as sharedContextLabel,
+  photoSourceHref as sharedPhotoSourceHref,
+  type PhotoContext as SharedPhotoContext,
+} from "@/lib/photos-shared";
 
-export type PhotoContext = "review" | "checkin" | "condition" | "trip-report";
+// Re-export shared pieces so existing server-side callers keep working
+// (client components must import them from "@/lib/photos-shared" directly
+// to avoid pulling Prisma/pg into the browser bundle).
+export type PhotoContext = SharedPhotoContext;
+export const contextLabel = sharedContextLabel;
+export const photoSourceHref = sharedPhotoSourceHref;
 
 export interface FacilityPhoto {
   id: string;
@@ -309,41 +319,6 @@ export async function getRecentPhotos(
   } catch {
     return [];
   }
-}
-
-const CONTEXT_LABEL_CS: Record<PhotoContext, string> = {
-  review: "z recenze",
-  checkin: "z check-inu",
-  condition: "z reportu",
-  "trip-report": "ze záznamu výstupu",
-};
-
-export function contextLabel(ctx: PhotoContext | null): string {
-  if (!ctx) return "od návštěvníka";
-  return CONTEXT_LABEL_CS[ctx];
-}
-
-/**
- * Build a source-page link for a photo. Returns the facility URL if no
- * specific source can be determined (defensive default).
- */
-export function photoSourceHref(
-  photo: Pick<FacilityPhoto, "context" | "reviewId" | "visitId" | "conditionReportId" | "tripReportId">,
-  facilityHref: string
-): string {
-  if (photo.context === "review" && photo.reviewId) {
-    return `${facilityHref}#recenze`;
-  }
-  if (photo.context === "condition" && photo.conditionReportId) {
-    return `${facilityHref}#podminky`;
-  }
-  if (photo.context === "checkin" && photo.visitId) {
-    return `${facilityHref}#recenze`;
-  }
-  if (photo.context === "trip-report" && photo.tripReportId) {
-    return `${facilityHref}/zaznam-vystupu`;
-  }
-  return facilityHref;
 }
 
 export interface PhotoOfTheWeekWinner {

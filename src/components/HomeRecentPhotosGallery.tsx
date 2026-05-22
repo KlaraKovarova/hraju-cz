@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, Download, ExternalLink, X } from "lucide-react";
-import { contextLabel, photoSourceHref, type PhotoContext } from "@/lib/photos";
+import { contextLabel, photoSourceHref, type PhotoContext } from "@/lib/photos-shared";
 import { PhotoVoteButton } from "@/components/PhotoVoteButton";
 import { PinterestShareButton } from "@/components/PinterestShareButton";
 import { PhotoAttribution } from "@/components/PhotoAttribution";
@@ -17,6 +17,7 @@ export interface HomePhotoDTO {
   reviewId: string | null;
   visitId: string | null;
   conditionReportId: string | null;
+  tripReportId: string | null;
   user: { id: string; name: string | null };
   facility: {
     id: string;

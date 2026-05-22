@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight, ExternalLink, Download } from "lucide-react";
-import { contextLabel, photoSourceHref, type PhotoContext } from "@/lib/photos";
+import { contextLabel, photoSourceHref, type PhotoContext } from "@/lib/photos-shared";
 import { PhotoVoteButton } from "@/components/PhotoVoteButton";
 import { PinterestShareButton } from "@/components/PinterestShareButton";
 import { PhotoAttribution } from "@/components/PhotoAttribution";
@@ -18,6 +18,7 @@ export interface GalleryPhotoDTO {
   reviewId: string | null;
   visitId: string | null;
   conditionReportId: string | null;
+  tripReportId: string | null;
 }
 
 interface FacilityPhotoGalleryProps {
