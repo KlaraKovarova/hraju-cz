@@ -30,6 +30,7 @@ function toDto(p: FacilityPhoto, facilityName: string, sportName: string): Galle
     reviewId: p.reviewId,
     visitId: p.visitId,
     conditionReportId: p.conditionReportId,
+    tripReportId: p.tripReportId,
   };
 }
 

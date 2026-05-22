@@ -19,6 +19,7 @@ function toDto(photo: RecentHomePhoto): HomePhotoDTO {
     reviewId: photo.reviewId,
     visitId: photo.visitId,
     conditionReportId: photo.conditionReportId,
+    tripReportId: photo.tripReportId,
     user: photo.user,
     facility: {
       id: photo.facility.id,
