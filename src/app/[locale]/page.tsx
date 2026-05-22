@@ -5,7 +5,6 @@ import { safeJsonLd } from "@/lib/seo";
 import {
   getTotalFacilityCount,
   getTotalSportCount,
-  // getFeaturedFacilities, // TEMP: re-add when restoring "Doporučená sportoviště" section
   getTopCitiesOverall,
   getRecentFacilities,
   getRecentReviews,
@@ -38,12 +37,8 @@ export const revalidate = 86400;
 export default async function Home() {
   const totalFacilities = getTotalFacilityCount();
   const totalSports = getTotalSportCount();
-  // TEMP: "Doporučená sportoviště" section hidden — re-enable by uncommenting
-  // the section block below AND the getFeaturedFacilities(6) call here, and
-  // restoring `featuredFacilities` to the destructuring on the left.
-  const [/* featuredFacilities, */ topCities, recentFacilities, recentReviews, communityStats, activityItems, topReviewers, trendingReviews, mostActiveFacilities, recentConditions, recentPhotos, photoOfTheWeek, recentTripReports] =
+  const [topCities, recentFacilities, recentReviews, communityStats, activityItems, topReviewers, trendingReviews, mostActiveFacilities, recentConditions, recentPhotos, photoOfTheWeek, recentTripReports] =
     await Promise.all([
-      // getFeaturedFacilities(6),
       getTopCitiesOverall(10),
       getRecentFacilities(4),
       getRecentReviews(6),
@@ -342,34 +337,6 @@ export default async function Home() {
           ))}
         </div>
       </section>
-
-      {/* TEMP: "Doporučená sportoviště" section hidden. To restore, remove
-          this comment wrapper and re-enable the data fetch above. */}
-      {/*
-      {featuredFacilities.length > 0 && (
-        <section className="border-t border-zinc-100 bg-zinc-50/50">
-          <div className="mx-auto max-w-6xl px-6 py-16">
-            <div className="mb-8 text-center">
-              <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
-                Doporučená sportoviště
-              </h2>
-              <p className="mt-2 text-zinc-500">
-                Ověřená a oblíbená sportoviště po celé ČR
-              </p>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {featuredFacilities.map((facility) => (
-                <FacilityCard
-                  key={facility.id}
-                  facility={facility}
-                  sportSlug={facility.sports[0]?.sport.slug || "squash"}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-      */}
 
       {/* Ad: between Featured and Top Cities */}
       <div className="mx-auto max-w-6xl px-6 py-4">

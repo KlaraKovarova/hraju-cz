@@ -578,24 +578,6 @@ export function getTotalSportCount(): number {
   return SPORTS.length;
 }
 
-/** Featured facilities: claimed or any active, deterministic daily rotation */
-export async function getFeaturedFacilities(limit: number = 6): Promise<FacilityWithDetails[]> {
-  const candidates = exportData.facilities.filter(
-    (f) => f.isActive && f.isClaimed
-  );
-  if (candidates.length === 0) {
-    // Fallback to any active facilities
-    const all = exportData.facilities.filter((f) => f.isActive);
-    all.sort((a, b) => a.name.localeCompare(b.name, "cs"));
-    return all.slice(0, limit).map(toFacilityWithDetails);
-  }
-  // Deterministic daily rotation based on day-of-year
-  const dayOfYear = Math.floor(Date.now() / 86400000);
-  const offset = dayOfYear % Math.max(1, candidates.length - limit + 1);
-  const rotated = [...candidates.slice(offset), ...candidates.slice(0, offset)];
-  return rotated.slice(0, limit).map(toFacilityWithDetails);
-}
-
 /** Top cities across all sports (Praha districts aggregated into one "Praha" entry) */
 export async function getTopCitiesOverall(limit: number = 10): Promise<CityForSport[]> {
   const cityCounts = new Map<string, number>();
