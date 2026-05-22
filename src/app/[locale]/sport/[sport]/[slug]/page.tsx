@@ -244,76 +244,101 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
   // Related blog posts for this sport
   const relatedBlogPosts = getPostsBySport(sportSlug).slice(0, 3);
 
-  // Top tips for inline display above review form
-  const topTips = await prisma.facilityTip.findMany({
+  // Top tips for inline display above review form.
+  // Falls back to empty array if DB is unreachable so the page still renders
+  // when Neon is down or DATABASE_URL is missing on the host.
+  const topTipsQuery = prisma.facilityTip.findMany({
     where: { facilityId: facility.id, isApproved: true },
     orderBy: { helpful: "desc" },
     take: 4,
     select: { id: true, text: true, helpful: true, user: { select: { name: true } } },
   });
+  const topTips: Awaited<typeof topTipsQuery> = await topTipsQuery.catch((err) => {
+    console.error("[facility page] facilityTip query failed:", err);
+    return [];
+  });
 
   // View tracking moved to TrackPageView client component (POST /api/facilities/[id]/view)
   // to keep this server component free of DB writes so ISR caching works (SIL-641).
 
-  // Query star distribution for AggregateRating component + Schema.org
+  // Query star distribution for AggregateRating component + Schema.org.
+  // Each query degrades to [] so a DB outage doesn't crash the whole page.
+  const starDistributionQuery = prisma.review.groupBy({
+    by: ["rating"],
+    where: { facilityId: facility.id, isApproved: true },
+    _count: { rating: true },
+  });
+  const recentApprovedReviewsQuery = prisma.review.findMany({
+    where: { facilityId: facility.id, isApproved: true },
+    orderBy: { createdAt: "desc" },
+    take: 10,
+    select: {
+      id: true,
+      authorName: true,
+      rating: true,
+      title: true,
+      text: true,
+      createdAt: true,
+      replies: {
+        select: {
+          body: true,
+          createdAt: true,
+          user: { select: { name: true } },
+        },
+        orderBy: { createdAt: "asc" },
+        take: 5,
+      },
+    },
+  });
+  const userPhotosQuery = prisma.userPhoto.findMany({
+    where: { facilityId: facility.id, isHidden: false },
+    orderBy: { createdAt: "desc" },
+    take: 5,
+    select: { url: true },
+  });
+  const recentConditionReportsQuery = prisma.conditionReport.findMany({
+    where: {
+      facilityId: facility.id,
+      isHidden: false,
+      createdAt: { gte: conditionDaysAgo(CONDITION_FRESH_DAYS) },
+    },
+    orderBy: { createdAt: "desc" },
+    take: 5,
+    select: {
+      id: true,
+      rating: true,
+      comment: true,
+      helpful: true,
+      visitedAt: true,
+      createdAt: true,
+      user: { select: { id: true, name: true } },
+      photos: {
+        where: { isHidden: false },
+        select: { id: true, url: true, alt: true },
+        orderBy: { createdAt: "asc" },
+        take: 3,
+      },
+    },
+  });
+  const logDbFail =
+    <T,>(label: string, empty: T) =>
+    (err: unknown): T => {
+      console.error(`[facility page] ${label} query failed:`, err);
+      return empty;
+    };
   const [starDistribution, recentApprovedReviews, userPhotos, recentConditionReports] = await Promise.all([
-    prisma.review.groupBy({
-      by: ["rating"],
-      where: { facilityId: facility.id, isApproved: true },
-      _count: { rating: true },
-    }),
-    prisma.review.findMany({
-      where: { facilityId: facility.id, isApproved: true },
-      orderBy: { createdAt: "desc" },
-      take: 10,
-      select: {
-        id: true,
-        authorName: true,
-        rating: true,
-        title: true,
-        text: true,
-        createdAt: true,
-        replies: {
-          select: {
-            body: true,
-            createdAt: true,
-            user: { select: { name: true } },
-          },
-          orderBy: { createdAt: "asc" },
-          take: 5,
-        },
-      },
-    }),
-    prisma.userPhoto.findMany({
-      where: { facilityId: facility.id, isHidden: false },
-      orderBy: { createdAt: "desc" },
-      take: 5,
-      select: { url: true },
-    }),
-    prisma.conditionReport.findMany({
-      where: {
-        facilityId: facility.id,
-        isHidden: false,
-        createdAt: { gte: conditionDaysAgo(CONDITION_FRESH_DAYS) },
-      },
-      orderBy: { createdAt: "desc" },
-      take: 5,
-      select: {
-        id: true,
-        rating: true,
-        comment: true,
-        helpful: true,
-        visitedAt: true,
-        createdAt: true,
-        user: { select: { id: true, name: true } },
-        photos: {
-          where: { isHidden: false },
-          select: { id: true, url: true, alt: true },
-          orderBy: { createdAt: "asc" },
-          take: 3,
-        },
-      },
-    }),
+    starDistributionQuery.catch(
+      logDbFail<Awaited<typeof starDistributionQuery>>("review.groupBy", []),
+    ),
+    recentApprovedReviewsQuery.catch(
+      logDbFail<Awaited<typeof recentApprovedReviewsQuery>>("review.findMany", []),
+    ),
+    userPhotosQuery.catch(
+      logDbFail<Awaited<typeof userPhotosQuery>>("userPhoto.findMany", []),
+    ),
+    recentConditionReportsQuery.catch(
+      logDbFail<Awaited<typeof recentConditionReportsQuery>>("conditionReport.findMany", []),
+    ),
   ]);
 
   // Serialize condition reports for the client component (Dates -> ISO strings)

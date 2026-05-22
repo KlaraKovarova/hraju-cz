@@ -1,6 +1,6 @@
 import { prisma } from "@/lib/prisma";
 
-export type PhotoContext = "review" | "checkin" | "condition";
+export type PhotoContext = "review" | "checkin" | "condition" | "trip-report";
 
 export interface FacilityPhoto {
   id: string;
@@ -12,6 +12,7 @@ export interface FacilityPhoto {
   reviewId: string | null;
   visitId: string | null;
   conditionReportId: string | null;
+  tripReportId: string | null;
 }
 
 export interface GetFacilityPhotosOpts {
@@ -33,6 +34,7 @@ export interface UserPhoto {
   reviewId: string | null;
   visitId: string | null;
   conditionReportId: string | null;
+  tripReportId: string | null;
   facility: {
     id: string;
     name: string;
@@ -61,6 +63,7 @@ export interface RecentHomePhoto {
   reviewId: string | null;
   visitId: string | null;
   conditionReportId: string | null;
+  tripReportId: string | null;
   user: { id: string; name: string | null };
   facility: {
     id: string;
@@ -77,10 +80,12 @@ function inferContext(p: {
   reviewId: string | null;
   visitId: string | null;
   conditionReportId: string | null;
+  tripReportId: string | null;
 }): PhotoContext | null {
   if (p.reviewId) return "review";
   if (p.visitId) return "checkin";
   if (p.conditionReportId) return "condition";
+  if (p.tripReportId) return "trip-report";
   return null;
 }
 
@@ -100,34 +105,56 @@ export async function getFacilityPhotos(
     reviewId?: { not: null };
     visitId?: { not: null };
     conditionReportId?: { not: null };
+    tripReportId?: { not: null };
   } = { facilityId, isHidden: false };
 
   if (opts.context === "review") where.reviewId = { not: null };
   else if (opts.context === "checkin") where.visitId = { not: null };
   else if (opts.context === "condition") where.conditionReportId = { not: null };
+  else if (opts.context === "trip-report") where.tripReportId = { not: null };
 
   const pageSize = opts.take ?? opts.pageSize ?? DEFAULT_PAGE_SIZE;
   const skip = opts.take ? 0 : (opts.page ?? 0) * pageSize;
 
-  const [rows, total] = await Promise.all([
-    prisma.userPhoto.findMany({
-      where,
-      orderBy: { createdAt: "desc" },
-      skip,
-      take: pageSize,
-      select: {
-        id: true,
-        url: true,
-        alt: true,
-        createdAt: true,
-        reviewId: true,
-        visitId: true,
-        conditionReportId: true,
-        user: { select: { id: true, name: true } },
-      },
-    }),
-    prisma.userPhoto.count({ where }),
-  ]);
+  // Degrade gracefully to an empty result when DB is unavailable so server
+  // components that call this don't crash the whole page.
+  let rows: Array<{
+    id: string;
+    url: string;
+    alt: string | null;
+    createdAt: Date;
+    reviewId: string | null;
+    visitId: string | null;
+    conditionReportId: string | null;
+    tripReportId: string | null;
+    user: { id: string; name: string | null };
+  }> = [];
+  let total = 0;
+  try {
+    [rows, total] = await Promise.all([
+      prisma.userPhoto.findMany({
+        where,
+        orderBy: { createdAt: "desc" },
+        skip,
+        take: pageSize,
+        select: {
+          id: true,
+          url: true,
+          alt: true,
+          createdAt: true,
+          reviewId: true,
+          visitId: true,
+          conditionReportId: true,
+          tripReportId: true,
+          user: { select: { id: true, name: true } },
+        },
+      }),
+      prisma.userPhoto.count({ where }),
+    ]);
+  } catch (err) {
+    console.error("[getFacilityPhotos] DB query failed:", err);
+    return { photos: [], total: 0 };
+  }
 
   const photos: FacilityPhoto[] = rows.map((r) => ({
     id: r.id,
@@ -139,6 +166,7 @@ export async function getFacilityPhotos(
     reviewId: r.reviewId,
     visitId: r.visitId,
     conditionReportId: r.conditionReportId,
+    tripReportId: r.tripReportId,
   }));
 
   return { photos, total };
@@ -173,6 +201,7 @@ export async function getUserPhotos(
         reviewId: true,
         visitId: true,
         conditionReportId: true,
+        tripReportId: true,
         facility: {
           select: {
             id: true,
@@ -199,6 +228,7 @@ export async function getUserPhotos(
     reviewId: r.reviewId,
     visitId: r.visitId,
     conditionReportId: r.conditionReportId,
+    tripReportId: r.tripReportId,
     facility: {
       id: r.facility.id,
       name: r.facility.name,
@@ -241,6 +271,7 @@ export async function getRecentPhotos(
         reviewId: true,
         visitId: true,
         conditionReportId: true,
+        tripReportId: true,
         user: { select: { id: true, name: true } },
         facility: {
           select: {
@@ -265,6 +296,7 @@ export async function getRecentPhotos(
       reviewId: r.reviewId,
       visitId: r.visitId,
       conditionReportId: r.conditionReportId,
+      tripReportId: r.tripReportId,
       user: r.user,
       facility: {
         id: r.facility.id,
@@ -283,6 +315,7 @@ const CONTEXT_LABEL_CS: Record<PhotoContext, string> = {
   review: "z recenze",
   checkin: "z check-inu",
   condition: "z reportu",
+  "trip-report": "ze záznamu výstupu",
 };
 
 export function contextLabel(ctx: PhotoContext | null): string {
@@ -295,7 +328,7 @@ export function contextLabel(ctx: PhotoContext | null): string {
  * specific source can be determined (defensive default).
  */
 export function photoSourceHref(
-  photo: Pick<FacilityPhoto, "context" | "reviewId" | "visitId" | "conditionReportId">,
+  photo: Pick<FacilityPhoto, "context" | "reviewId" | "visitId" | "conditionReportId" | "tripReportId">,
   facilityHref: string
 ): string {
   if (photo.context === "review" && photo.reviewId) {
@@ -306,6 +339,9 @@ export function photoSourceHref(
   }
   if (photo.context === "checkin" && photo.visitId) {
     return `${facilityHref}#recenze`;
+  }
+  if (photo.context === "trip-report" && photo.tripReportId) {
+    return `${facilityHref}/zaznam-vystupu`;
   }
   return facilityHref;
 }

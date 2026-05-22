@@ -7,12 +7,20 @@ const globalForPrisma = globalThis as unknown as {
 
 function createPrismaClient(): PrismaClient {
   if (!process.env.DATABASE_URL) {
-    // Return a no-op proxy so builds succeed without DATABASE_URL.
-    // Any query will throw, caught by try/catch in data.ts → falls back to mock data.
-    return new Proxy({} as PrismaClient, {
-      get() {
-        throw new Error("DATABASE_URL is not configured");
+    // No-op proxy so builds and server-rendering survive without DATABASE_URL.
+    // Methods return rejected Promises (instead of throwing synchronously) so
+    // callers using .catch() — including data.ts fallbacks and the per-query
+    // .catch() blocks on facility pages — actually run.
+    const rejectErr = () =>
+      Promise.reject(new Error("DATABASE_URL is not configured"));
+    const modelProxy: unknown = new Proxy(
+      {},
+      {
+        get: () => rejectErr,
       },
+    );
+    return new Proxy({} as PrismaClient, {
+      get: () => modelProxy,
     });
   }
   const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL });

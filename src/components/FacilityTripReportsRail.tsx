@@ -42,26 +42,35 @@ export async function FacilityTripReportsRail({
   const facilityHref = `/sport/${sportSlug}/${slug}`;
   const fullHref = `${facilityHref}/zaznam-vystupu`;
 
-  const [reports, total] = await Promise.all([
-    prisma.tripReport.findMany({
-      where: { facilityId, isHidden: false },
-      orderBy: { createdAt: "desc" },
-      take: 3,
-      select: {
-        id: true,
-        dateClimbed: true,
-        gradeText: true,
-        beta: true,
-        user: { select: { id: true, name: true } },
-        photos: {
-          where: { isHidden: false },
-          orderBy: { createdAt: "asc" },
-          take: 1,
-          select: { id: true, url: true, alt: true },
-        },
+  // Degrade gracefully if Neon is unreachable / DATABASE_URL missing.
+  const reportsQuery = prisma.tripReport.findMany({
+    where: { facilityId, isHidden: false },
+    orderBy: { createdAt: "desc" },
+    take: 3,
+    select: {
+      id: true,
+      dateClimbed: true,
+      gradeText: true,
+      beta: true,
+      user: { select: { id: true, name: true } },
+      photos: {
+        where: { isHidden: false },
+        orderBy: { createdAt: "asc" },
+        take: 1,
+        select: { id: true, url: true, alt: true },
       },
+    },
+  });
+  const totalQuery = prisma.tripReport.count({ where: { facilityId, isHidden: false } });
+  const [reports, total] = await Promise.all([
+    reportsQuery.catch((err): Awaited<typeof reportsQuery> => {
+      console.error("[FacilityTripReportsRail] findMany failed:", err);
+      return [];
     }),
-    prisma.tripReport.count({ where: { facilityId, isHidden: false } }),
+    totalQuery.catch((err) => {
+      console.error("[FacilityTripReportsRail] count failed:", err);
+      return 0;
+    }),
   ]);
 
   if (total === 0 && !alwaysShow) return null;
