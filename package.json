@@ -13,7 +13,8 @@
     "db:import": "bash scripts/db-import.sh",
     "snapshot": "bash scripts/build-static-snapshot.sh",
     "snapshot:crawl": "tsx scripts/build-static-snapshot.ts",
-    "smoke": "tsx scripts/smoke-test.ts"
+    "smoke": "tsx scripts/smoke-test.ts",
+    "crawl:kct": "tsx scripts/crawl-kct-events.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",
