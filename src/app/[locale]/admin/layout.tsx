@@ -98,6 +98,9 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           <Link href="/admin/ads" className="text-sm text-zinc-500 hover:text-zinc-900">
             Reklamy
           </Link>
+          <Link href="/admin/prcice" className="text-sm text-zinc-500 hover:text-zinc-900">
+            Prčice
+          </Link>
           <div className="ml-auto flex items-center gap-4">
             <Link href="/" className="text-sm text-zinc-400 hover:text-zinc-600">
               ← Zpět na web

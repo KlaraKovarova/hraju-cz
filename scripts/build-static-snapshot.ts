@@ -30,7 +30,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-import { Pool } from "pg";
+import { Client } from "pg";
 import * as cheerio from "cheerio";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -232,10 +232,29 @@ async function copyDir(src: string, dest: string) {
   }
 }
 
-function makePool() {
+async function queryFacilities(): Promise<Array<{ slug: string; sport_slug: string; visits: number }>> {
   const url = process.env.DIRECT_URL || process.env.DATABASE_URL;
   if (!url) throw new Error("DATABASE_URL or DIRECT_URL must be set in .env");
-  return new Pool({ connectionString: url });
+  const client = new Client({ connectionString: url });
+  await client.connect();
+  try {
+    const res = await client.query(`
+      SELECT f.slug AS slug,
+             s.slug AS sport_slug,
+             COUNT(v.id)::int AS visits
+      FROM "Facility" f
+      JOIN "FacilitySport" fs ON fs."facilityId" = f.id
+      JOIN "Sport" s ON s.id = fs."sportId"
+      LEFT JOIN "Visit" v ON v."facilityId" = f.id
+      WHERE f."isActive" = true AND f."isApproved" = true
+      GROUP BY f.id, f.slug, s.slug
+      ORDER BY visits DESC, f."reviewCount" DESC NULLS LAST, f.name ASC
+      LIMIT $1
+    `, [FACILITY_LIMIT]);
+    return res.rows;
+  } finally {
+    await client.end();
+  }
 }
 
 async function collectUrls(): Promise<Array<{ url: string; rewrite?: boolean }>> {
@@ -252,22 +271,7 @@ async function collectUrls(): Promise<Array<{ url: string; rewrite?: boolean }>>
   }
 
   console.log(`[2/3] Loading top ${FACILITY_LIMIT} facilities by check-ins...`);
-  const pool = makePool();
-  const { rows } = await pool.query<{ slug: string; sport_slug: string; visits: number }>(
-    `SELECT f.slug AS slug,
-            s.slug AS sport_slug,
-            COUNT(v.id)::int AS visits
-     FROM "Facility" f
-     JOIN "FacilitySport" fs ON fs."facilityId" = f.id
-     JOIN "Sport" s ON s.id = fs."sportId"
-     LEFT JOIN "Visit" v ON v."facilityId" = f.id
-     WHERE f."isActive" = true AND f."isApproved" = true
-     GROUP BY f.id, f.slug, s.slug
-     ORDER BY visits DESC, f."reviewCount" DESC NULLS LAST, f.name ASC
-     LIMIT $1`,
-    [FACILITY_LIMIT],
-  );
-  await pool.end();
+  const rows = await queryFacilities();
 
   const visibleSportSlugs = new Set<string>(SPORTS.map((s) => s.slug));
   let facilityCount = 0;
