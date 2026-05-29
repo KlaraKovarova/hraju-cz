@@ -46,14 +46,16 @@ jobs:
         run: |
           echo "$SSH_KEY" > /tmp/deploy_key
           chmod 600 /tmp/deploy_key
+          # ssh uses -p (lowercase), scp uses -P (uppercase) for port
           SSH_OPTS="-i /tmp/deploy_key -p $SSH_PORT -o StrictHostKeyChecking=no"
+          SCP_OPTS="-i /tmp/deploy_key -P $SSH_PORT -o StrictHostKeyChecking=no"
 
           # Write runtime env file (DATABASE_URL needed by Prisma at runtime)
           printf 'DATABASE_URL=%s\nDIRECT_URL=%s\n' "$DATABASE_URL" "$DIRECT_URL" > /tmp/hraju.env
 
           # Transfer files
-          scp $SSH_OPTS deploy.tar.gz "$SSH_USER@$SSH_HOST:/tmp/hraju-deploy.tar.gz"
-          scp $SSH_OPTS /tmp/hraju.env "$SSH_USER@$SSH_HOST:/tmp/hraju.env"
+          scp $SCP_OPTS deploy.tar.gz "$SSH_USER@$SSH_HOST:/tmp/hraju-deploy.tar.gz"
+          scp $SCP_OPTS /tmp/hraju.env "$SSH_USER@$SSH_HOST:/tmp/hraju.env"
 
           ssh $SSH_OPTS "$SSH_USER@$SSH_HOST" '
             set -e
