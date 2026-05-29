@@ -13,10 +13,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node.js 22
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
       - name: Install dependencies
@@ -30,53 +30,42 @@ jobs:
           NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
         run: npm run build
 
-      - name: Generate static snapshot
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          DIRECT_URL: ${{ secrets.DIRECT_URL }}
-          SNAPSHOT_BASE_URL: http://localhost:3000
+      - name: Prepare standalone bundle
         run: |
-          # Start Next.js standalone server in background
-          DATABASE_URL="${DATABASE_URL}" DIRECT_URL="${DIRECT_URL}" node .next/standalone/server.js &
-          SERVER_PID=$!
+          # Copy public assets into standalone so server can serve them
+          cp -r public .next/standalone/public
+          cp -r .next/static .next/standalone/.next/static
 
-          # Wait for server to be ready (up to 60s)
-          for i in $(seq 1 60); do
-            if curl -sf -o /dev/null http://localhost:3000/robots.txt; then
-              echo "Server ready after ${i}s"
-              break
-            fi
-            if ! kill -0 "$SERVER_PID" 2>/dev/null; then
-              echo "Server exited unexpectedly"
-              exit 1
-            fi
-            sleep 1
-          done
-
-          # Run static snapshot crawler (skip direct DB facility query — Next.js handles DB)
-          SNAPSHOT_SKIP_FACILITIES=1 npx tsx scripts/build-static-snapshot.ts
-
-          # Stop server
-          kill "$SERVER_PID" 2>/dev/null || true
-
-      - name: Deploy static snapshot to Hostinger
+      - name: Deploy to Hostinger (Passenger Node.js)
         env:
           SSH_KEY: ${{ secrets.HOSTINGER_SSH_KEY }}
           SSH_HOST: ${{ secrets.HOSTINGER_SSH_HOST }}
           SSH_USER: ${{ secrets.HOSTINGER_SSH_USER }}
           SSH_PORT: ${{ secrets.HOSTINGER_SSH_PORT }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DIRECT_URL: ${{ secrets.DIRECT_URL }}
+          NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ secrets.NEXT_PUBLIC_GA_MEASUREMENT_ID }}
         run: |
           echo "$SSH_KEY" > /tmp/deploy_key
           chmod 600 /tmp/deploy_key
           SSH_OPTS="-i /tmp/deploy_key -p $SSH_PORT -o StrictHostKeyChecking=no"
+          REMOTE="$SSH_USER@$SSH_HOST"
+          APP_DIR="domains/hraju.cz/nodejs"
 
-          # rsync: delta sync — only changed files are transferred (fast for daily deploys)
-          # Exclude adminer.php from deletion so it persists across deploys
+          # Write runtime env file (Passenger picks up .env via dotenv)
+          printf 'DATABASE_URL=%s\nDIRECT_URL=%s\nNEXT_PUBLIC_GA_MEASUREMENT_ID=%s\nNODE_ENV=production\n' \
+            "$DATABASE_URL" "$DIRECT_URL" "$NEXT_PUBLIC_GA_MEASUREMENT_ID" > /tmp/hraju.env
+
+          # rsync standalone output → server app dir (delta, only changed files)
           rsync -az --delete \
-            --exclude='adminer*.php' \
             -e "ssh $SSH_OPTS" \
-            out-static/ \
-            "$SSH_USER@$SSH_HOST:/hraju.cz/"
+            .next/standalone/ \
+            "$REMOTE:~/$APP_DIR/"
 
-          ssh $SSH_OPTS "$SSH_USER@$SSH_HOST" 'echo "Deploy complete at $(date -u)"'
-          rm /tmp/deploy_key
+          # Upload env file
+          scp $SSH_OPTS /tmp/hraju.env "$REMOTE:~/$APP_DIR/.env"
+
+          # Trigger Passenger restart
+          ssh $SSH_OPTS "$REMOTE" "touch ~/domains/hraju.cz/nodejs/tmp/restart.txt && echo 'Deploy complete at $(date -u)'"
+
+          rm /tmp/deploy_key /tmp/hraju.env
