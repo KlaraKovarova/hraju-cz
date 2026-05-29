@@ -45,6 +45,21 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           DIRECT_URL: ${{ secrets.DIRECT_URL }}
           NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ secrets.NEXT_PUBLIC_GA_MEASUREMENT_ID }}
+          NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          ADMIN_JWT_SECRET: ${{ secrets.ADMIN_JWT_SECRET }}
+          USER_JWT_SECRET: ${{ secrets.USER_JWT_SECRET }}
+          OWNER_JWT_SECRET: ${{ secrets.OWNER_JWT_SECRET }}
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+          STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+          STRIPE_PRICE_MONTHLY: ${{ secrets.STRIPE_PRICE_MONTHLY }}
+          STRIPE_PRICE_YEARLY: ${{ secrets.STRIPE_PRICE_YEARLY }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          EMAIL_HOST: ${{ secrets.EMAIL_HOST }}
+          EMAIL_PORT: ${{ secrets.EMAIL_PORT }}
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
         run: |
           echo "$SSH_KEY" > /tmp/deploy_key
           chmod 600 /tmp/deploy_key
@@ -53,8 +68,27 @@ jobs:
           APP_DIR="domains/hraju.cz/nodejs"
 
           # Write runtime env file (Passenger picks up .env via dotenv)
-          printf 'DATABASE_URL=%s\nDIRECT_URL=%s\nNEXT_PUBLIC_GA_MEASUREMENT_ID=%s\nNODE_ENV=production\n' \
-            "$DATABASE_URL" "$DIRECT_URL" "$NEXT_PUBLIC_GA_MEASUREMENT_ID" > /tmp/hraju.env
+          cat > /tmp/hraju.env <<ENVEOF
+DATABASE_URL=$DATABASE_URL
+DIRECT_URL=$DIRECT_URL
+NEXT_PUBLIC_GA_MEASUREMENT_ID=$NEXT_PUBLIC_GA_MEASUREMENT_ID
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=$NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+NODE_ENV=production
+ADMIN_PASSWORD=$ADMIN_PASSWORD
+ADMIN_JWT_SECRET=$ADMIN_JWT_SECRET
+USER_JWT_SECRET=$USER_JWT_SECRET
+OWNER_JWT_SECRET=$OWNER_JWT_SECRET
+STRIPE_SECRET_KEY=$STRIPE_SECRET_KEY
+STRIPE_WEBHOOK_SECRET=$STRIPE_WEBHOOK_SECRET
+STRIPE_PRICE_MONTHLY=$STRIPE_PRICE_MONTHLY
+STRIPE_PRICE_YEARLY=$STRIPE_PRICE_YEARLY
+CRON_SECRET=$CRON_SECRET
+EMAIL_HOST=$EMAIL_HOST
+EMAIL_PORT=$EMAIL_PORT
+EMAIL_USER=$EMAIL_USER
+EMAIL_PASS=$EMAIL_PASS
+EMAIL_FROM=$EMAIL_FROM
+ENVEOF
 
           # rsync standalone output → server app dir (delta, only changed files)
           rsync -az --delete \
