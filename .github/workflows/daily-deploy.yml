@@ -25,24 +25,46 @@ jobs:
       - name: Build (standalone)
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DIRECT_URL: ${{ secrets.DIRECT_URL }}
           NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ secrets.NEXT_PUBLIC_GA_MEASUREMENT_ID }}
           NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
         run: npm run build
 
-      - name: Package standalone output
+      - name: Generate static snapshot
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DIRECT_URL: ${{ secrets.DIRECT_URL }}
+          SNAPSHOT_BASE_URL: http://localhost:3000
         run: |
-          cp -r public .next/standalone/public
-          cp -r .next/static .next/standalone/.next/static
-          tar -czf deploy.tar.gz -C .next/standalone .
+          # Start Next.js server in background
+          DATABASE_URL="${DATABASE_URL}" DIRECT_URL="${DIRECT_URL}" npm start &
+          SERVER_PID=$!
 
-      - name: Deploy to Hostinger via SSH
+          # Wait for server to be ready (up to 60s)
+          for i in $(seq 1 60); do
+            if curl -sf -o /dev/null http://localhost:3000/robots.txt; then
+              echo "Server ready after ${i}s"
+              break
+            fi
+            if ! kill -0 "$SERVER_PID" 2>/dev/null; then
+              echo "Server exited unexpectedly"
+              exit 1
+            fi
+            sleep 1
+          done
+
+          # Run static snapshot crawler
+          npx tsx scripts/build-static-snapshot.ts
+
+          # Stop server
+          kill "$SERVER_PID" 2>/dev/null || true
+
+      - name: Deploy static snapshot to Hostinger
         env:
           SSH_KEY: ${{ secrets.HOSTINGER_SSH_KEY }}
           SSH_HOST: ${{ secrets.HOSTINGER_SSH_HOST }}
           SSH_USER: ${{ secrets.HOSTINGER_SSH_USER }}
-          SSH_PORT: ${{ secrets.HOSTINGER_SSH_PORT || '22' }}
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          DIRECT_URL: ${{ secrets.DIRECT_URL }}
+          SSH_PORT: ${{ secrets.HOSTINGER_SSH_PORT }}
         run: |
           echo "$SSH_KEY" > /tmp/deploy_key
           chmod 600 /tmp/deploy_key
@@ -50,35 +72,23 @@ jobs:
           SSH_OPTS="-i /tmp/deploy_key -p $SSH_PORT -o StrictHostKeyChecking=no"
           SCP_OPTS="-i /tmp/deploy_key -P $SSH_PORT -o StrictHostKeyChecking=no"
 
-          # Write runtime env file (DATABASE_URL needed by Prisma at runtime)
-          printf 'DATABASE_URL=%s\nDIRECT_URL=%s\n' "$DATABASE_URL" "$DIRECT_URL" > /tmp/hraju.env
+          # Package the static snapshot
+          tar -czf out-static.tar.gz -C out-static .
 
-          # Transfer files
-          scp $SCP_OPTS deploy.tar.gz "$SSH_USER@$SSH_HOST:/tmp/hraju-deploy.tar.gz"
-          scp $SCP_OPTS /tmp/hraju.env "$SSH_USER@$SSH_HOST:/tmp/hraju.env"
+          # Upload archive to server
+          scp $SCP_OPTS out-static.tar.gz "$SSH_USER@$SSH_HOST:/hraju.cz/out-static.tar.gz"
 
+          # Extract on server, keeping adminer intact
           ssh $SSH_OPTS "$SSH_USER@$SSH_HOST" '
             set -e
-            DEPLOY_DIR="$HOME/hraju.cz"
-            BACKUP_DIR="$HOME/hraju.cz.backup"
+            cd /hraju.cz
 
-            # Backup current deployment
-            [ -d "$DEPLOY_DIR" ] && rm -rf "$BACKUP_DIR" && cp -r "$DEPLOY_DIR" "$BACKUP_DIR"
+            # Remove old static files (keep adminer)
+            find . -maxdepth 1 -not -name "." -not -name "adminer*" -not -name "out-static.tar.gz" -exec rm -rf {} + 2>/dev/null || true
 
-            # Extract new deployment
-            mkdir -p "$DEPLOY_DIR"
-            tar -xzf /tmp/hraju-deploy.tar.gz -C "$DEPLOY_DIR"
-            rm /tmp/hraju-deploy.tar.gz
-
-            # Install runtime env vars
-            mv /tmp/hraju.env "$DEPLOY_DIR/.env"
-
-            # Preserve uploads directory across deploys
-            mkdir -p "$DEPLOY_DIR/public/uploads"
-            [ -d "$BACKUP_DIR/public/uploads" ] && cp -rn "$BACKUP_DIR/public/uploads/." "$DEPLOY_DIR/public/uploads/"
-
-            # Restart the app
-            pm2 restart hraju-cz || pm2 start "$DEPLOY_DIR/server.js" --name hraju-cz
+            # Extract new snapshot
+            tar -xzf out-static.tar.gz
+            rm out-static.tar.gz
             echo "Deploy complete at $(date -u)"
           '
-          rm /tmp/deploy_key /tmp/hraju.env
+          rm /tmp/deploy_key
