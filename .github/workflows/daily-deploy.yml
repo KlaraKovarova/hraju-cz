@@ -41,31 +41,42 @@ jobs:
           SSH_HOST: ${{ secrets.HOSTINGER_SSH_HOST }}
           SSH_USER: ${{ secrets.HOSTINGER_SSH_USER }}
           SSH_PORT: ${{ secrets.HOSTINGER_SSH_PORT || '22' }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DIRECT_URL: ${{ secrets.DIRECT_URL }}
         run: |
           echo "$SSH_KEY" > /tmp/deploy_key
           chmod 600 /tmp/deploy_key
-          scp -i /tmp/deploy_key -P "$SSH_PORT" -o StrictHostKeyChecking=no \
-            deploy.tar.gz "$SSH_USER@$SSH_HOST:/tmp/hraju-deploy.tar.gz"
-          ssh -i /tmp/deploy_key -p "$SSH_PORT" -o StrictHostKeyChecking=no \
-            "$SSH_USER@$SSH_HOST" '
-              set -e
-              DEPLOY_DIR="$HOME/hraju.cz"
-              BACKUP_DIR="$HOME/hraju.cz.backup"
+          SSH_OPTS="-i /tmp/deploy_key -p $SSH_PORT -o StrictHostKeyChecking=no"
 
-              # Backup current deployment
-              [ -d "$DEPLOY_DIR" ] && rm -rf "$BACKUP_DIR" && cp -r "$DEPLOY_DIR" "$BACKUP_DIR"
+          # Write runtime env file (DATABASE_URL needed by Prisma at runtime)
+          printf 'DATABASE_URL=%s\nDIRECT_URL=%s\n' "$DATABASE_URL" "$DIRECT_URL" > /tmp/hraju.env
 
-              # Extract new deployment
-              mkdir -p "$DEPLOY_DIR"
-              tar -xzf /tmp/hraju-deploy.tar.gz -C "$DEPLOY_DIR"
-              rm /tmp/hraju-deploy.tar.gz
+          # Transfer files
+          scp $SSH_OPTS deploy.tar.gz "$SSH_USER@$SSH_HOST:/tmp/hraju-deploy.tar.gz"
+          scp $SSH_OPTS /tmp/hraju.env "$SSH_USER@$SSH_HOST:/tmp/hraju.env"
 
-              # Preserve uploads directory across deploys
-              mkdir -p "$DEPLOY_DIR/public/uploads"
-              [ -d "$BACKUP_DIR/public/uploads" ] && cp -rn "$BACKUP_DIR/public/uploads/." "$DEPLOY_DIR/public/uploads/"
+          ssh $SSH_OPTS "$SSH_USER@$SSH_HOST" '
+            set -e
+            DEPLOY_DIR="$HOME/hraju.cz"
+            BACKUP_DIR="$HOME/hraju.cz.backup"
 
-              # Restart the app
-              pm2 restart hraju-cz || pm2 start "$DEPLOY_DIR/server.js" --name hraju-cz
-              echo "Deploy complete at $(date -u)"
-            '
-          rm /tmp/deploy_key
+            # Backup current deployment
+            [ -d "$DEPLOY_DIR" ] && rm -rf "$BACKUP_DIR" && cp -r "$DEPLOY_DIR" "$BACKUP_DIR"
+
+            # Extract new deployment
+            mkdir -p "$DEPLOY_DIR"
+            tar -xzf /tmp/hraju-deploy.tar.gz -C "$DEPLOY_DIR"
+            rm /tmp/hraju-deploy.tar.gz
+
+            # Install runtime env vars
+            mv /tmp/hraju.env "$DEPLOY_DIR/.env"
+
+            # Preserve uploads directory across deploys
+            mkdir -p "$DEPLOY_DIR/public/uploads"
+            [ -d "$BACKUP_DIR/public/uploads" ] && cp -rn "$BACKUP_DIR/public/uploads/." "$DEPLOY_DIR/public/uploads/"
+
+            # Restart the app
+            pm2 restart hraju-cz || pm2 start "$DEPLOY_DIR/server.js" --name hraju-cz
+            echo "Deploy complete at $(date -u)"
+          '
+          rm /tmp/deploy_key /tmp/hraju.env
