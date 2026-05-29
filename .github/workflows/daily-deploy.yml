@@ -53,8 +53,8 @@ jobs:
             sleep 1
           done
 
-          # Run static snapshot crawler
-          npx tsx scripts/build-static-snapshot.ts
+          # Run static snapshot crawler (skip direct DB facility query — Next.js handles DB)
+          SNAPSHOT_SKIP_FACILITIES=1 npx tsx scripts/build-static-snapshot.ts
 
           # Stop server
           kill "$SERVER_PID" 2>/dev/null || true
