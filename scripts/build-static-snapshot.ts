@@ -30,7 +30,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-import { neon } from "@neondatabase/serverless";
+import { Pool } from "pg";
 import * as cheerio from "cheerio";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -232,10 +232,10 @@ async function copyDir(src: string, dest: string) {
   }
 }
 
-function sql() {
+function makePool() {
   const url = process.env.DIRECT_URL || process.env.DATABASE_URL;
   if (!url) throw new Error("DATABASE_URL or DIRECT_URL must be set in .env");
-  return neon(url);
+  return new Pool({ connectionString: url });
 }
 
 async function collectUrls(): Promise<Array<{ url: string; rewrite?: boolean }>> {
@@ -252,20 +252,22 @@ async function collectUrls(): Promise<Array<{ url: string; rewrite?: boolean }>>
   }
 
   console.log(`[2/3] Loading top ${FACILITY_LIMIT} facilities by check-ins...`);
-  const q = sql();
-  const rows = (await q`
-    SELECT f.slug AS slug,
-           s.slug AS sport_slug,
-           COUNT(v.id)::int AS visits
-    FROM "Facility" f
-    JOIN "FacilitySport" fs ON fs."facilityId" = f.id
-    JOIN "Sport" s ON s.id = fs."sportId"
-    LEFT JOIN "Visit" v ON v."facilityId" = f.id
-    WHERE f."isActive" = true AND f."isApproved" = true
-    GROUP BY f.id, f.slug, s.slug
-    ORDER BY visits DESC, f."reviewCount" DESC NULLS LAST, f.name ASC
-    LIMIT ${FACILITY_LIMIT}
-  `) as Array<{ slug: string; sport_slug: string; visits: number }>;
+  const pool = makePool();
+  const { rows } = await pool.query<{ slug: string; sport_slug: string; visits: number }>(
+    `SELECT f.slug AS slug,
+            s.slug AS sport_slug,
+            COUNT(v.id)::int AS visits
+     FROM "Facility" f
+     JOIN "FacilitySport" fs ON fs."facilityId" = f.id
+     JOIN "Sport" s ON s.id = fs."sportId"
+     LEFT JOIN "Visit" v ON v."facilityId" = f.id
+     WHERE f."isActive" = true AND f."isApproved" = true
+     GROUP BY f.id, f.slug, s.slug
+     ORDER BY visits DESC, f."reviewCount" DESC NULLS LAST, f.name ASC
+     LIMIT $1`,
+    [FACILITY_LIMIT],
+  );
+  await pool.end();
 
   const visibleSportSlugs = new Set<string>(SPORTS.map((s) => s.slug));
   let facilityCount = 0;

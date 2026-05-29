@@ -36,8 +36,8 @@ jobs:
           DIRECT_URL: ${{ secrets.DIRECT_URL }}
           SNAPSHOT_BASE_URL: http://localhost:3000
         run: |
-          # Start Next.js server in background
-          DATABASE_URL="${DATABASE_URL}" DIRECT_URL="${DIRECT_URL}" npm start &
+          # Start Next.js standalone server in background
+          DATABASE_URL="${DATABASE_URL}" DIRECT_URL="${DIRECT_URL}" node .next/standalone/server.js &
           SERVER_PID=$!
 
           # Wait for server to be ready (up to 60s)
