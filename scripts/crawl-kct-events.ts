@@ -209,35 +209,55 @@ async function fetchEventDetail(xid: string): Promise<EventDetail> {
   return { description, lat, lng, externalUrl };
 }
 
-async function crawlAllPages(): Promise<EventRow[]> {
-  const allEvents: EventRow[] = [];
+// KCT regions 101–114 cover all of Czech Republic.
+// There is no "all regions" option — each region must be queried separately.
+const KCT_REGIONS = [101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114];
 
-  // First page - POST with all-regions filter
+async function crawlRegion(oblast: number, fromDate: string): Promise<EventRow[]> {
+  const regionEvents: EventRow[] = [];
   const formData = new URLSearchParams({
-    xfrom: new Date().toLocaleDateString("cs-CZ"),
+    xfrom: fromDate,
     xto: "31. 12. 2027",
-    xoblast: "", // all regions
-    xlimit: "100", // get more per page
+    xoblast: String(oblast),
+    xlimit: "100",
     xpage: "1",
     xkalendar_stat: "1",
     xkalendar_oblast: "1",
   });
 
-  console.log("Fetching page 1...");
+  console.log(`  Oblast ${oblast} — page 1...`);
   const firstPageHtml = await fetchPage(LIST_URL, formData);
   const { events: firstPageEvents, totalPages } = parseListPage(firstPageHtml);
-  allEvents.push(...firstPageEvents);
-  console.log(`  Found ${firstPageEvents.length} events (${totalPages} pages total)`);
+  regionEvents.push(...firstPageEvents);
+  console.log(`    ${firstPageEvents.length} events (${totalPages} pages)`);
 
-  // Fetch remaining pages
   for (let page = 2; page <= totalPages; page++) {
     await sleep(DELAY_MS);
-    console.log(`Fetching page ${page}...`);
+    console.log(`  Oblast ${oblast} — page ${page}...`);
     formData.set("xpage", String(page));
     const html = await fetchPage(LIST_URL, formData);
     const { events } = parseListPage(html);
-    allEvents.push(...events);
-    console.log(`  Found ${events.length} events`);
+    regionEvents.push(...events);
+    console.log(`    ${events.length} events`);
+  }
+
+  return regionEvents;
+}
+
+async function crawlAllPages(): Promise<EventRow[]> {
+  const fromDate = new Date().toLocaleDateString("cs-CZ");
+  const seenXids = new Set<string>();
+  const allEvents: EventRow[] = [];
+
+  for (const oblast of KCT_REGIONS) {
+    await sleep(DELAY_MS);
+    const regionEvents = await crawlRegion(oblast, fromDate);
+    for (const e of regionEvents) {
+      if (!seenXids.has(e.xid)) {
+        seenXids.add(e.xid);
+        allEvents.push(e);
+      }
+    }
   }
 
   return allEvents;
