@@ -68,27 +68,15 @@ jobs:
         run: |
           echo "$SSH_KEY" > /tmp/deploy_key
           chmod 600 /tmp/deploy_key
-          # ssh uses -p (lowercase), scp uses -P (uppercase) for port
           SSH_OPTS="-i /tmp/deploy_key -p $SSH_PORT -o StrictHostKeyChecking=no"
-          SCP_OPTS="-i /tmp/deploy_key -P $SSH_PORT -o StrictHostKeyChecking=no"
 
-          # Package the static snapshot
-          tar -czf out-static.tar.gz -C out-static .
+          # rsync: delta sync — only changed files are transferred (fast for daily deploys)
+          # Exclude adminer.php from deletion so it persists across deploys
+          rsync -az --delete \
+            --exclude='adminer*.php' \
+            -e "ssh $SSH_OPTS" \
+            out-static/ \
+            "$SSH_USER@$SSH_HOST:/hraju.cz/"
 
-          # Upload archive to server
-          scp $SCP_OPTS out-static.tar.gz "$SSH_USER@$SSH_HOST:/hraju.cz/out-static.tar.gz"
-
-          # Extract on server, keeping adminer intact
-          ssh $SSH_OPTS "$SSH_USER@$SSH_HOST" '
-            set -e
-            cd /hraju.cz
-
-            # Remove old static files (keep adminer)
-            find . -maxdepth 1 -not -name "." -not -name "adminer*" -not -name "out-static.tar.gz" -exec rm -rf {} + 2>/dev/null || true
-
-            # Extract new snapshot
-            tar -xzf out-static.tar.gz
-            rm out-static.tar.gz
-            echo "Deploy complete at $(date -u)"
-          '
+          ssh $SSH_OPTS "$SSH_USER@$SSH_HOST" 'echo "Deploy complete at $(date -u)"'
           rm /tmp/deploy_key
