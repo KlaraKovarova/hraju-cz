@@ -52,12 +52,6 @@ export function Footer() {
               {t("cities")}
             </Link>
             <Link
-              href="/blog"
-              className="hover:text-zinc-600"
-            >
-              {t("blog")}
-            </Link>
-            <Link
               href="/odkazy"
               className="hover:text-zinc-600"
             >

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, ArrowRight, ChevronDown, Calendar, Star, MessageSquare, Users, PlusCircle, Trophy, ThumbsUp, TrendingUp, Flame } from "lucide-react";
+import { MapPin, ArrowRight, ChevronDown, Calendar, PlusCircle, Flame, Star, TrendingUp } from "lucide-react";
 import { SPORTS } from "@/lib/sports";
 import { safeJsonLd } from "@/lib/seo";
 import {
@@ -7,11 +7,7 @@ import {
   getTotalSportCount,
   getTopCitiesOverall,
   getRecentFacilities,
-  getRecentReviews,
   getCommunityStats,
-  getRecentActivity,
-  getTopReviewers,
-  getTrendingReviews,
   getMostActiveFacilities,
   getRecentConditionReports,
   getRecentTripReports,
@@ -25,11 +21,9 @@ import { HomePhotoOfTheWeek } from "@/components/HomePhotoOfTheWeek";
 import { HomeRecentTripReports } from "@/components/HomeRecentTripReports";
 import { getRecentPhotos, getLatestPhotoOfTheWeek } from "@/lib/photos";
 import { AdSlot } from "@/components/AdSlot";
-import { ActivityFeed } from "@/components/ActivityFeed";
 import { WeekendEvents } from "@/components/WeekendEvents";
 import { MonthlyChallenges } from "@/components/MonthlyChallenges";
 import { getActiveChallenges } from "@/lib/monthly-challenges";
-import { getAllPosts, CATEGORIES } from "@/lib/blog";
 
 // ISR: revalidate homepage every 24 hours (optimization: reduce Vercel invocations)
 export const revalidate = 86400;
@@ -37,15 +31,11 @@ export const revalidate = 86400;
 export default async function Home() {
   const totalFacilities = getTotalFacilityCount();
   const totalSports = getTotalSportCount();
-  const [topCities, recentFacilities, recentReviews, communityStats, activityItems, topReviewers, trendingReviews, mostActiveFacilities, recentConditions, recentPhotos, photoOfTheWeek, recentTripReports] =
+  const [topCities, recentFacilities, communityStats, mostActiveFacilities, recentConditions, recentPhotos, photoOfTheWeek, recentTripReports] =
     await Promise.all([
       getTopCitiesOverall(10),
       getRecentFacilities(4),
-      getRecentReviews(6),
       getCommunityStats(),
-      getRecentActivity({ limit: 10 }),
-      getTopReviewers(6),
-      getTrendingReviews(7, 5),
       getMostActiveFacilities(30, 5),
       getRecentConditionReports(6, 7),
       getRecentPhotos(6, 14),
@@ -54,7 +44,6 @@ export default async function Home() {
     ]);
   const conditionsLcpThumb = recentConditions.find((r) => r.thumbnailUrl)?.thumbnailUrl ?? null;
   const photosLcpThumb = recentPhotos[0]?.url ?? null;
-  const latestPosts = getAllPosts().slice(0, 3);
 
   // FAQ data for structured markup
   const faqItems = [
@@ -188,18 +177,6 @@ export default async function Home() {
               </Link>
             ))}
             <Link
-              href="/recenze"
-              className="transition hover:text-zinc-900"
-            >
-              Recenze
-            </Link>
-            <Link
-              href="/blog"
-              className="transition hover:text-zinc-900"
-            >
-              Blog
-            </Link>
-            <Link
               href="/akce"
               className="transition hover:text-zinc-900"
             >
@@ -278,12 +255,6 @@ export default async function Home() {
               <p className="text-xs text-zinc-500">recenzí</p>
             </div>
           )}
-          {communityStats.totalUsers > 0 && (
-            <div>
-              <span className="text-2xl font-extrabold text-zinc-900">{communityStats.totalUsers}</span>
-              <p className="text-xs text-zinc-500">uživatelů</p>
-            </div>
-          )}
         </div>
       </section>
 
@@ -343,135 +314,6 @@ export default async function Home() {
         <AdSlot slot="1234567890" format="horizontal" />
       </div>
 
-      {/* Community Reviews */}
-      {recentReviews.length > 0 && (
-        <section className="border-t border-zinc-100 bg-white">
-          <div className="mx-auto max-w-6xl px-6 py-16">
-            <div className="mb-8 text-center">
-              <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
-                Co říká komunita
-              </h2>
-              <p className="mt-2 text-zinc-500">
-                Skutečné recenze od sportovců z celé ČR
-              </p>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {recentReviews.map((review) => (
-                <Link
-                  key={review.id}
-                  href={review.facility.sport ? `/sport/${review.facility.sport}/${review.facility.slug}` : `/recenze`}
-                  className="group rounded-2xl border border-zinc-100 bg-zinc-50/50 p-5 transition hover:border-emerald-200 hover:shadow-sm"
-                >
-                  <div className="flex items-center gap-2">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
-                      <Users className="h-4 w-4" />
-                    </div>
-                    <div>
-                      <span className="text-sm font-semibold text-zinc-900">
-                        {review.authorName}
-                      </span>
-                      <div className="flex items-center gap-1">
-                        {Array.from({ length: 5 }).map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`h-3 w-3 ${
-                              i < review.rating
-                                ? "fill-amber-400 text-amber-400"
-                                : "text-zinc-200"
-                            }`}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  {review.title && (
-                    <p className="mt-3 text-sm font-semibold text-zinc-800">
-                      {review.title}
-                    </p>
-                  )}
-                  {review.text && (
-                    <p className="mt-1 line-clamp-2 text-sm text-zinc-600">
-                      {review.text}
-                    </p>
-                  )}
-                  <p className="mt-3 text-xs font-medium text-emerald-600 group-hover:text-emerald-700">
-                    {review.facility.name}
-                  </p>
-                </Link>
-              ))}
-            </div>
-            <div className="mt-8 text-center">
-              <Link
-                href="/recenze"
-                className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 text-sm font-bold text-white transition hover:bg-emerald-700"
-              >
-                <MessageSquare className="h-4 w-4" />
-                Všechny recenze
-              </Link>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Trending Reviews */}
-      {trendingReviews.length > 0 && (
-        <section className="border-t border-zinc-100 bg-zinc-50/50">
-          <div className="mx-auto max-w-6xl px-6 py-16">
-            <div className="mb-8 text-center">
-              <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
-                Nejužitečnější recenze tento týden
-              </h2>
-              <p className="mt-2 text-zinc-500">
-                Recenze, které sportovci považují za nejpřínosnější
-              </p>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {trendingReviews.map((review) => (
-                <Link
-                  key={review.id}
-                  href={review.sportSlug ? `/sport/${review.sportSlug}/${review.facilitySlug}` : `/recenze`}
-                  className="group rounded-2xl border border-zinc-100 bg-white p-5 transition hover:border-emerald-200 hover:shadow-sm"
-                >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
-                        <Users className="h-4 w-4" />
-                      </div>
-                      <span className="text-sm font-semibold text-zinc-900">
-                        {review.authorName}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-1 rounded-full bg-amber-50 px-2 py-0.5 text-xs font-medium text-amber-700">
-                      <ThumbsUp className="h-3 w-3" />
-                      {review.helpful}
-                    </div>
-                  </div>
-                  <div className="mt-2 flex items-center gap-1">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`h-3 w-3 ${
-                          i < review.rating ? "fill-amber-400 text-amber-400" : "text-zinc-200"
-                        }`}
-                      />
-                    ))}
-                  </div>
-                  {review.title && (
-                    <p className="mt-2 text-sm font-semibold text-zinc-800">{review.title}</p>
-                  )}
-                  {review.text && (
-                    <p className="mt-1 line-clamp-2 text-sm text-zinc-600">{review.text}</p>
-                  )}
-                  <p className="mt-3 text-xs font-medium text-emerald-600 group-hover:text-emerald-700">
-                    {review.facilityName}
-                  </p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* Most Active Facilities */}
       {mostActiveFacilities.length > 0 && (
         <section className="border-t border-zinc-100 bg-white">
@@ -526,99 +368,6 @@ export default async function Home() {
                   )}
                 </Link>
               ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Community Activity Feed */}
-      {activityItems.length > 0 && (
-        <section className="border-t border-zinc-100 bg-zinc-50/50">
-          <div className="mx-auto max-w-6xl px-6 py-16">
-            <div className="mb-8 text-center">
-              <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
-                Právě se děje
-              </h2>
-              <p className="mt-2 text-zinc-500">
-                Nejnovější aktivita sportovců na hraju.cz
-              </p>
-            </div>
-            <div className="mx-auto max-w-2xl">
-              <ActivityFeed items={activityItems} />
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Top Reviewers */}
-      {topReviewers.length > 0 && (
-        <section className="border-t border-zinc-100 bg-white">
-          <div className="mx-auto max-w-6xl px-6 py-16">
-            <div className="mb-8 text-center">
-              <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
-                Top recenzenti
-              </h2>
-              <p className="mt-2 text-zinc-500">
-                Nejaktivnější členové naší sportovní komunity
-              </p>
-            </div>
-            <div className="mx-auto grid max-w-3xl gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {topReviewers.map((reviewer, index) => (
-                <Link
-                  key={reviewer.id}
-                  href={`/uzivatel/${reviewer.id}`}
-                  className="flex items-center gap-3 rounded-xl border border-zinc-100 bg-zinc-50/50 p-4 transition hover:border-emerald-200 hover:shadow-sm"
-                >
-                  <div
-                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
-                      index === 0
-                        ? "bg-amber-100 text-amber-700"
-                        : index === 1
-                          ? "bg-zinc-200 text-zinc-600"
-                          : index === 2
-                            ? "bg-orange-100 text-orange-700"
-                            : "bg-zinc-50 text-zinc-500"
-                    }`}
-                  >
-                    {index === 0 ? (
-                      <Trophy className="h-4 w-4" />
-                    ) : (
-                      index + 1
-                    )}
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="truncate text-sm font-semibold text-zinc-900">
-                      {reviewer.name}
-                    </p>
-                    <div className="mt-0.5 flex items-center gap-3 text-xs text-zinc-400">
-                      <span className="flex items-center gap-1">
-                        <MessageSquare className="h-3 w-3" />
-                        {reviewer.reviewCount}{" "}
-                        {reviewer.reviewCount === 1
-                          ? "recenze"
-                          : reviewer.reviewCount <= 4
-                            ? "recenze"
-                            : "recenzí"}
-                      </span>
-                      {reviewer.helpfulVotes > 0 && (
-                        <span className="flex items-center gap-1">
-                          <ThumbsUp className="h-3 w-3" />
-                          {reviewer.helpfulVotes}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-            <div className="mt-8 text-center">
-              <Link
-                href="/komunita"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 transition hover:text-emerald-700"
-              >
-                Zobrazit celou komunitu
-                <ArrowRight className="h-4 w-4" />
-              </Link>
             </div>
           </div>
         </section>
@@ -689,53 +438,6 @@ export default async function Home() {
 
       {/* Weekend Tourist Events */}
       <WeekendEvents />
-
-      {/* Latest Blog Posts */}
-      {latestPosts.length > 0 && (
-        <section className="border-t border-zinc-100 bg-white">
-          <div className="mx-auto max-w-6xl px-6 py-16">
-            <div className="mb-8 text-center">
-              <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
-                Z našeho blogu
-              </h2>
-              <p className="mt-2 text-zinc-500">
-                Tipy, průvodce a novinky ze světa sportu
-              </p>
-            </div>
-            <div className="grid gap-6 sm:grid-cols-3">
-              {latestPosts.map((post) => (
-                <Link
-                  key={post.slug}
-                  href={`/blog/${post.slug}`}
-                  className="group rounded-2xl border border-zinc-100 bg-zinc-50/50 p-6 transition hover:border-emerald-200 hover:shadow-sm"
-                >
-                  <span className="text-xs font-medium text-emerald-600">
-                    {CATEGORIES[post.category] || post.category}
-                  </span>
-                  <h3 className="mt-2 font-bold text-zinc-900 group-hover:text-emerald-700">
-                    {post.title}
-                  </h3>
-                  <p className="mt-2 line-clamp-2 text-sm text-zinc-500">
-                    {post.excerpt}
-                  </p>
-                  <div className="mt-3 flex items-center gap-1 text-xs text-zinc-400">
-                    <Calendar className="h-3 w-3" />
-                    {new Date(post.date).toLocaleDateString("cs-CZ")}
-                  </div>
-                </Link>
-              ))}
-            </div>
-            <div className="mt-8 text-center">
-              <Link
-                href="/blog"
-                className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-600 transition hover:text-emerald-700"
-              >
-                Všechny články <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* CTA / Info Section */}
       <section className="mx-auto max-w-6xl px-6 py-16">
