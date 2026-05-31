@@ -101,8 +101,8 @@ jobs:
             .next/standalone/ \
             "$REMOTE:~/$APP_DIR/"
 
-          # Upload env file
-          scp $SSH_OPTS /tmp/hraju.env "$REMOTE:~/$APP_DIR/.env"
+          # Upload env file (scp uses -P uppercase for port, unlike ssh -p)
+          scp -i /tmp/deploy_key -P "$SSH_PORT" -o StrictHostKeyChecking=no /tmp/hraju.env "$REMOTE:~/$APP_DIR/.env"
 
           # Trigger Passenger restart
           ssh $SSH_OPTS "$REMOTE" "touch ~/domains/hraju.cz/nodejs/tmp/restart.txt && echo 'Deploy complete at $(date -u)'"
