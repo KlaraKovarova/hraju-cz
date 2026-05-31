@@ -95,14 +95,15 @@ jobs:
             echo "EMAIL_FROM=$EMAIL_FROM"
           } > /tmp/hraju.env
 
+          # Upload env file first so it survives even if rsync partially fails
+          scp -i /tmp/deploy_key -P "$SSH_PORT" -o StrictHostKeyChecking=no /tmp/hraju.env "$REMOTE:~/$APP_DIR/.env"
+
           # rsync standalone output → server app dir (delta, only changed files)
-          rsync -az --delete \
+          # --exclude='.env' prevents rsync --delete from removing the .env we just uploaded
+          rsync -az --delete --exclude='.env' \
             -e "ssh $SSH_OPTS" \
             .next/standalone/ \
             "$REMOTE:~/$APP_DIR/"
-
-          # Upload env file (scp uses -P uppercase for port, unlike ssh -p)
-          scp -i /tmp/deploy_key -P "$SSH_PORT" -o StrictHostKeyChecking=no /tmp/hraju.env "$REMOTE:~/$APP_DIR/.env"
 
           # Trigger Passenger restart (mkdir -p ensures tmp/ exists)
           ssh $SSH_OPTS "$REMOTE" "mkdir -p ~/domains/hraju.cz/nodejs/tmp && touch ~/domains/hraju.cz/nodejs/tmp/restart.txt && echo 'Deploy complete at $(date -u)'"
