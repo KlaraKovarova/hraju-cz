@@ -31,44 +31,39 @@ async function getEventsData() {
   const twoMonthsLater = new Date(now);
   twoMonthsLater.setMonth(twoMonthsLater.getMonth() + 2);
 
-  const [events, regionCounts, totalCount] = await Promise.all([
-    prisma.touristEvent.findMany({
-      where: {
-        isActive: true,
-        dateStart: { gte: now, lte: twoMonthsLater },
-      },
-      orderBy: { dateStart: "asc" },
-      select: {
-        id: true,
-        sourceId: true,
-        name: true,
-        dateStart: true,
-        dateEnd: true,
-        city: true,
-        region: true,
-        description: true,
-        externalUrl: true,
-        lat: true,
-        lng: true,
-        source: true,
-      },
-    }),
-    prisma.touristEvent.groupBy({
-      by: ["region"],
-      where: {
-        isActive: true,
-        dateStart: { gte: now, lte: twoMonthsLater },
-        region: { not: null },
-      },
-      _count: true,
-    }),
-    prisma.touristEvent.count({
-      where: {
-        isActive: true,
-        dateStart: { gte: now, lte: twoMonthsLater },
-      },
-    }),
-  ]);
+  const where = {
+    isActive: true,
+    dateStart: { gte: now, lte: twoMonthsLater },
+  };
+
+  // Run sequentially to stay within CloudLinux thread limits
+  const events = await prisma.touristEvent.findMany({
+    where,
+    orderBy: { dateStart: "asc" },
+    take: 200,
+    select: {
+      id: true,
+      sourceId: true,
+      name: true,
+      dateStart: true,
+      dateEnd: true,
+      city: true,
+      region: true,
+      description: true,
+      externalUrl: true,
+      lat: true,
+      lng: true,
+      source: true,
+    },
+  });
+
+  const regionCounts = await prisma.touristEvent.groupBy({
+    by: ["region"],
+    where: { ...where, region: { not: null } },
+    _count: true,
+  });
+
+  const totalCount = await prisma.touristEvent.count({ where });
 
   return { events, regionCounts, totalCount };
 }
