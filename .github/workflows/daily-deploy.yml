@@ -61,11 +61,16 @@ jobs:
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
         run: |
-          echo "$SSH_KEY" > /tmp/deploy_key
+          printf '%s\n' "$SSH_KEY" | tr -d '\r' > /tmp/deploy_key
           chmod 600 /tmp/deploy_key
-          SSH_OPTS="-i /tmp/deploy_key -p $SSH_PORT -o StrictHostKeyChecking=no"
+          SSH_OPTS="-i /tmp/deploy_key -p $SSH_PORT -o StrictHostKeyChecking=no -o BatchMode=yes"
           REMOTE="$SSH_USER@$SSH_HOST"
           APP_DIR="domains/hraju.cz/nodejs"
+
+          # Quick SSH connectivity test with verbose output for diagnosis
+          echo "=== SSH test ==="
+          ssh -v -i /tmp/deploy_key -p "$SSH_PORT" -o StrictHostKeyChecking=no -o BatchMode=yes "$REMOTE" echo "ssh-ok" 2>&1 | grep -E "Offering|Trying|Authentications|debug1: (Authenticating|Server|send|key)" || true
+          echo "=== end SSH test ==="
 
           # Write runtime env file (Passenger picks up .env via dotenv)
           {
