@@ -1,111 +1,26 @@
-name: Daily Production Deploy
+# DISABLED — Hostinger CI auto-deploys from GitHub on every push.
+# Manually rsyncing a Next.js standalone bundle over Hostinger's own build
+# causes 503s because the two directory structures are incompatible.
+#
+# Deployment flow:
+#   Code change → git push → Hostinger CI builds → auto-deploys to nodejs/
+#
+# Environment variables (DATABASE_URL etc.) are managed in:
+#   hPanel → Websites → hraju.cz → Node.js → Environment Variables
+#
+# If you need to force a redeploy, push any commit to main.
+
+name: Daily Production Deploy (disabled)
 
 on:
-  schedule:
-    # Run every day at 6:00 AM UTC (7:00 or 8:00 CET/CEST)
-    - cron: '0 6 * * *'
-  workflow_dispatch: # Allow manual trigger
+  workflow_dispatch: # Keep manual trigger for emergencies only
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js 22
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build (standalone)
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          DIRECT_URL: ${{ secrets.DIRECT_URL }}
-          NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ secrets.NEXT_PUBLIC_GA_MEASUREMENT_ID }}
-          NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
-        run: npm run build
-
-      - name: Prepare standalone bundle
+      - name: Notice
         run: |
-          # Copy public assets into standalone so server can serve them
-          cp -r public .next/standalone/public
-          cp -r .next/static .next/standalone/.next/static
-
-      - name: Deploy to Hostinger (Passenger Node.js)
-        env:
-          SSH_KEY: ${{ secrets.HOSTINGER_SSH_KEY }}
-          SSH_HOST: ${{ secrets.HOSTINGER_SSH_HOST }}
-          SSH_USER: ${{ secrets.HOSTINGER_SSH_USER }}
-          SSH_PORT: ${{ secrets.HOSTINGER_SSH_PORT }}
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          DIRECT_URL: ${{ secrets.DIRECT_URL }}
-          NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ secrets.NEXT_PUBLIC_GA_MEASUREMENT_ID }}
-          NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY }}
-          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
-          ADMIN_JWT_SECRET: ${{ secrets.ADMIN_JWT_SECRET }}
-          USER_JWT_SECRET: ${{ secrets.USER_JWT_SECRET }}
-          OWNER_JWT_SECRET: ${{ secrets.OWNER_JWT_SECRET }}
-          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
-          STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
-          STRIPE_PRICE_MONTHLY: ${{ secrets.STRIPE_PRICE_MONTHLY }}
-          STRIPE_PRICE_YEARLY: ${{ secrets.STRIPE_PRICE_YEARLY }}
-          CRON_SECRET: ${{ secrets.CRON_SECRET }}
-          EMAIL_HOST: ${{ secrets.EMAIL_HOST }}
-          EMAIL_PORT: ${{ secrets.EMAIL_PORT }}
-          EMAIL_USER: ${{ secrets.EMAIL_USER }}
-          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
-          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
-        run: |
-          printf '%s\n' "$SSH_KEY" | tr -d '\r' > /tmp/deploy_key
-          chmod 600 /tmp/deploy_key
-          SSH_OPTS="-i /tmp/deploy_key -p $SSH_PORT -o StrictHostKeyChecking=no -o BatchMode=yes"
-          REMOTE="$SSH_USER@$SSH_HOST"
-          APP_DIR="domains/hraju.cz/nodejs"
-
-          # Quick SSH connectivity test with verbose output for diagnosis
-          echo "=== SSH test ==="
-          ssh -v -i /tmp/deploy_key -p "$SSH_PORT" -o StrictHostKeyChecking=no -o BatchMode=yes "$REMOTE" echo "ssh-ok" 2>&1 | grep -E "Offering|Trying|Authentications|debug1: (Authenticating|Server|send|key)" || true
-          echo "=== end SSH test ==="
-
-          # Write runtime env file (Passenger picks up .env via dotenv)
-          {
-            echo "DATABASE_URL=$DATABASE_URL"
-            echo "DIRECT_URL=$DIRECT_URL"
-            echo "NEXT_PUBLIC_GA_MEASUREMENT_ID=$NEXT_PUBLIC_GA_MEASUREMENT_ID"
-            echo "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=$NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY"
-            echo "NODE_ENV=production"
-            echo "ADMIN_PASSWORD=$ADMIN_PASSWORD"
-            echo "ADMIN_JWT_SECRET=$ADMIN_JWT_SECRET"
-            echo "USER_JWT_SECRET=$USER_JWT_SECRET"
-            echo "OWNER_JWT_SECRET=$OWNER_JWT_SECRET"
-            echo "STRIPE_SECRET_KEY=$STRIPE_SECRET_KEY"
-            echo "STRIPE_WEBHOOK_SECRET=$STRIPE_WEBHOOK_SECRET"
-            echo "STRIPE_PRICE_MONTHLY=$STRIPE_PRICE_MONTHLY"
-            echo "STRIPE_PRICE_YEARLY=$STRIPE_PRICE_YEARLY"
-            echo "CRON_SECRET=$CRON_SECRET"
-            echo "EMAIL_HOST=$EMAIL_HOST"
-            echo "EMAIL_PORT=$EMAIL_PORT"
-            echo "EMAIL_USER=$EMAIL_USER"
-            echo "EMAIL_PASS=$EMAIL_PASS"
-            echo "EMAIL_FROM=$EMAIL_FROM"
-          } > /tmp/hraju.env
-
-          # Upload env file first so it survives even if rsync partially fails
-          scp -i /tmp/deploy_key -P "$SSH_PORT" -o StrictHostKeyChecking=no /tmp/hraju.env "$REMOTE:~/$APP_DIR/.env"
-
-          # rsync standalone output → server app dir (delta, only changed files)
-          # --exclude='.env' prevents rsync --delete from removing the .env we just uploaded
-          rsync -az --delete --exclude='.env' \
-            -e "ssh $SSH_OPTS" \
-            .next/standalone/ \
-            "$REMOTE:~/$APP_DIR/"
-
-          # Trigger Passenger restart (mkdir -p ensures tmp/ exists)
-          ssh $SSH_OPTS "$REMOTE" "mkdir -p ~/domains/hraju.cz/nodejs/tmp && touch ~/domains/hraju.cz/nodejs/tmp/restart.txt && echo 'Deploy complete at $(date -u)'"
-
-          rm /tmp/deploy_key /tmp/hraju.env
+          echo "This workflow is disabled."
+          echo "Hostinger CI handles all deployments automatically on git push."
+          echo "Manage env vars in hPanel → Node.js → Environment Variables."
