@@ -147931,8 +147931,16 @@
       "lat": null,
       "lng": null,
       "courtsLanes": null,
-      "pricing": null,
-      "openingHours": null,
+      "pricing": "Celodenní vstupné:\nDospělí a mládež od 15 let: 100 Kč\nDěti 6–15 let: 60 Kč\nDěti do 6 let: 30 Kč\n\nČerven a září (v závislosti na počasí): Po–Pá 13:00–20:00, So–Ne 10:00–20:00\nČervenec a srpen: Po–Ne 10:00–20:00",
+      "openingHours": {
+        "po": "13:00–20:00",
+        "út": "13:00–20:00",
+        "st": "13:00–20:00",
+        "čt": "13:00–20:00",
+        "pá": "13:00–20:00",
+        "so": "10:00–20:00",
+        "ne": "10:00–20:00"
+      },
       "website": "https://www.majetin.cz/koupaliste",
       "isActive": true,
       "isClaimed": false,
