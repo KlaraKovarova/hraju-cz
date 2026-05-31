@@ -104,7 +104,7 @@ jobs:
           # Upload env file (scp uses -P uppercase for port, unlike ssh -p)
           scp -i /tmp/deploy_key -P "$SSH_PORT" -o StrictHostKeyChecking=no /tmp/hraju.env "$REMOTE:~/$APP_DIR/.env"
 
-          # Trigger Passenger restart
-          ssh $SSH_OPTS "$REMOTE" "touch ~/domains/hraju.cz/nodejs/tmp/restart.txt && echo 'Deploy complete at $(date -u)'"
+          # Trigger Passenger restart (mkdir -p ensures tmp/ exists)
+          ssh $SSH_OPTS "$REMOTE" "mkdir -p ~/domains/hraju.cz/nodejs/tmp && touch ~/domains/hraju.cz/nodejs/tmp/restart.txt && echo 'Deploy complete at $(date -u)'"
 
           rm /tmp/deploy_key /tmp/hraju.env
