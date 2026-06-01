@@ -1,19 +1,15 @@
 import Link from "next/link";
-import { MapPin, ArrowRight, ChevronDown, Calendar, PlusCircle, Flame, Star, TrendingUp } from "lucide-react";
+import { MapPin, ArrowRight, ChevronDown, Calendar, PlusCircle, Flame, Star } from "lucide-react";
 import { SPORTS } from "@/lib/sports";
 import { safeJsonLd } from "@/lib/seo";
 import {
   getTotalFacilityCount,
   getTotalSportCount,
   getTopCitiesOverall,
-  getRecentFacilities,
-  getCommunityStats,
   getMostActiveFacilities,
   getRecentConditionReports,
   getRecentTripReports,
 } from "@/lib/data";
-import { cityToSlug } from "@/lib/regions";
-import { FacilityCard } from "@/components/FacilityCard";
 import { HeroSearchForm } from "@/components/HeroSearchForm";
 import { HomeRecentConditions } from "@/components/HomeRecentConditions";
 import { HomeRecentPhotos } from "@/components/HomeRecentPhotos";
@@ -31,11 +27,9 @@ export const revalidate = 86400;
 export default async function Home() {
   const totalFacilities = getTotalFacilityCount();
   const totalSports = getTotalSportCount();
-  const [topCities, recentFacilities, communityStats, mostActiveFacilities, recentConditions, recentPhotos, photoOfTheWeek, recentTripReports] =
+  const [topCities, mostActiveFacilities, recentConditions, recentPhotos, photoOfTheWeek, recentTripReports] =
     await Promise.all([
       getTopCitiesOverall(10),
-      getRecentFacilities(4),
-      getCommunityStats(),
       getMostActiveFacilities(30, 5),
       getRecentConditionReports(6, 7),
       getRecentPhotos(6, 14),
@@ -167,7 +161,7 @@ export default async function Home() {
             </span>
           </Link>
           <div className="hidden items-center gap-6 text-sm font-medium text-zinc-500 sm:flex">
-            {SPORTS.slice(0, 3).map((sport) => (
+            {SPORTS.slice(0, 5).map((sport) => (
               <Link
                 key={sport.slug}
                 href={`/sport/${sport.slug}`}
@@ -182,12 +176,6 @@ export default async function Home() {
             >
               <Calendar className="inline h-3.5 w-3.5" /> Akce
             </Link>
-            <Link
-              href="#sports"
-              className="transition hover:text-zinc-900"
-            >
-              Více sportů
-            </Link>
           </div>
         </div>
       </nav>
@@ -195,16 +183,16 @@ export default async function Home() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMxMGI5ODEiIGZpbGwtb3BhY2l0eT0iMC4wNCI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIvPjwvZz48L2c+PC9zdmc+')] opacity-60" />
-        <div className="relative mx-auto max-w-6xl px-6 py-20 sm:py-28">
+        <div className="relative mx-auto max-w-6xl px-6 py-12 sm:py-16">
           <div className="max-w-2xl">
             <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl">
               Kam dnes{" "}
               <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">
-                půjdeš hrát?
+                půjdete hrát?
               </span>
             </h1>
             <p className="mt-4 text-lg text-zinc-600 sm:text-xl">
-              Najdi sportoviště poblíž tebe. Squash, bazény, fitness,
+              Najděte sportoviště poblíž vás. Squash, bazény, fitness,
               lezecké stěny i ferraty po celé České republice.
             </p>
 
@@ -231,7 +219,7 @@ export default async function Home() {
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-emerald-700 transition hover:text-emerald-800"
               >
                 <PlusCircle className="h-4 w-4" />
-                Chybí ti sportoviště? Přidej ho
+                Chybí vám sportoviště? Přidejte ho
               </Link>
             </div>
           </div>
@@ -249,12 +237,6 @@ export default async function Home() {
             <span className="text-2xl font-extrabold text-zinc-900">{totalSports}</span>
             <p className="text-xs text-zinc-500">sportů</p>
           </div>
-          {communityStats.totalReviews > 0 && (
-            <div>
-              <span className="text-2xl font-extrabold text-zinc-900">{communityStats.totalReviews}</span>
-              <p className="text-xs text-zinc-500">recenzí</p>
-            </div>
-          )}
         </div>
       </section>
 
@@ -271,7 +253,7 @@ export default async function Home() {
       <HomeRecentTripReports reports={recentTripReports} />
 
       {/* Sports Grid */}
-      <section id="sports" className="mx-auto max-w-6xl px-6 py-16">
+      <section id="sports" className="mx-auto max-w-6xl px-6 py-12">
         <div className="mb-8 text-center">
           <h2 className="text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl">
             Vyber si svůj sport
@@ -411,30 +393,8 @@ export default async function Home() {
         </section>
       )}
 
-      {/* Recently Added */}
-      {recentFacilities.length > 0 && (
-        <section className="border-t border-zinc-100 bg-zinc-50/50">
-          <div className="mx-auto max-w-6xl px-6 py-16">
-            <div className="mb-8 text-center">
-              <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
-                Nově přidaná sportoviště
-              </h2>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {recentFacilities.map((facility) => (
-                <FacilityCard
-                  key={facility.id}
-                  facility={facility}
-                  sportSlug={facility.sports[0]?.sport.slug || "squash"}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Monthly Challenges */}
-      <MonthlyChallenges />
+      {/* Monthly Challenges hidden for now */}
+      {/* <MonthlyChallenges /> */}
 
       {/* Weekend Tourist Events */}
       <WeekendEvents />
