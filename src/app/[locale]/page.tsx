@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, ArrowRight, ChevronDown, Calendar, PlusCircle, Flame, Star } from "lucide-react";
+import { MapPin, ArrowRight, ChevronDown, Calendar, PlusCircle, Flame } from "lucide-react";
 import { SPORTS } from "@/lib/sports";
 import { safeJsonLd } from "@/lib/seo";
 import {
@@ -305,7 +305,7 @@ export default async function Home() {
                 Nejaktivnější sportoviště
               </h2>
               <p className="mt-2 text-zinc-500">
-                Sportoviště s nejvíce check-iny a recenzemi za posledních 30 dní
+                Sportoviště s nejvíce check-iny za posledních 30 dní
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
@@ -331,17 +331,11 @@ export default async function Home() {
                       <p className="text-xs text-zinc-400">{facility.city}</p>
                     </div>
                   </div>
-                  <div className="mt-3 flex items-center justify-between text-xs text-zinc-500">
+                  <div className="mt-3 flex items-center text-xs text-zinc-500">
                     <span className="flex items-center gap-1">
                       <Flame className="h-3 w-3 text-orange-500" />
                       {facility.activityCount} aktivit
                     </span>
-                    {facility.averageRating && (
-                      <span className="flex items-center gap-1">
-                        <Star className="h-3 w-3 fill-amber-400 text-amber-400" />
-                        {facility.averageRating.toFixed(1)}
-                      </span>
-                    )}
                   </div>
                   {facility.sportName && (
                     <p className="mt-2 text-[11px] font-medium text-emerald-600">
