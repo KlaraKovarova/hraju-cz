@@ -603,3 +603,17 @@ model PhotoOfTheWeek {
   @@index([photoId])
   @@index([awardedAt])
 }
+
+model PrciceRoute {
+  id           String   @id @default(cuid())
+  year         Int
+  routeName    String
+  distanceKm   Float
+  participants Int
+  mapEmbed     String?  @db.Text
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@unique([year, routeName])
+  @@index([year])
+}
