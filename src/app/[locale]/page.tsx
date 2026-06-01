@@ -195,7 +195,7 @@ export default async function Home() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMxMGI5ODEiIGZpbGwtb3BhY2l0eT0iMC4wNCI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIvPjwvZz48L2c+PC9zdmc+')] opacity-60" />
-        <div className="relative mx-auto max-w-6xl px-6 py-20 sm:py-28">
+        <div className="relative mx-auto max-w-6xl px-6 py-12">
           <div className="max-w-2xl">
             <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl">
               Kam dnes{" "}
@@ -271,7 +271,7 @@ export default async function Home() {
       <HomeRecentTripReports reports={recentTripReports} />
 
       {/* Sports Grid */}
-      <section id="sports" className="mx-auto max-w-6xl px-6 py-16">
+      <section id="sports" className="mx-auto max-w-6xl px-6 py-12">
         <div className="mb-8 text-center">
           <h2 className="text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl">
             Vyber si svůj sport
@@ -317,7 +317,7 @@ export default async function Home() {
       {/* Most Active Facilities */}
       {mostActiveFacilities.length > 0 && (
         <section className="border-t border-zinc-100 bg-white">
-          <div className="mx-auto max-w-6xl px-6 py-16">
+          <div className="mx-auto max-w-6xl px-6 py-12">
             <div className="mb-8 text-center">
               <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
                 Nejaktivnější sportoviště
@@ -376,7 +376,7 @@ export default async function Home() {
       {/* Top Cities */}
       {topCities.length > 0 && (
         <section className="border-t border-zinc-100 bg-white">
-          <div className="mx-auto max-w-6xl px-6 py-16">
+          <div className="mx-auto max-w-6xl px-6 py-12">
             <div className="mb-8 text-center">
               <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
                 Sportoviště ve městech
@@ -414,7 +414,7 @@ export default async function Home() {
       {/* Recently Added */}
       {recentFacilities.length > 0 && (
         <section className="border-t border-zinc-100 bg-zinc-50/50">
-          <div className="mx-auto max-w-6xl px-6 py-16">
+          <div className="mx-auto max-w-6xl px-6 py-12">
             <div className="mb-8 text-center">
               <h2 className="text-2xl font-bold tracking-tight text-zinc-900">
                 Nově přidaná sportoviště
@@ -440,7 +440,7 @@ export default async function Home() {
       <WeekendEvents />
 
       {/* CTA / Info Section */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-6 py-12">
         <div className="rounded-3xl bg-gradient-to-r from-emerald-600 to-teal-600 p-10 text-center text-white sm:p-14">
           <h2 className="text-2xl font-bold sm:text-3xl">
             Provozujete sportoviště?
@@ -460,7 +460,7 @@ export default async function Home() {
 
       {/* FAQ Section */}
       <section className="border-t border-zinc-100 bg-zinc-50/50">
-        <div className="mx-auto max-w-3xl px-6 py-16">
+        <div className="mx-auto max-w-3xl px-6 py-12">
           <h2 className="mb-8 text-center text-2xl font-bold tracking-tight text-zinc-900">
             Časté dotazy
           </h2>

@@ -75,7 +75,7 @@ export async function WeekendEvents() {
 
   return (
     <section className="border-t border-zinc-100 bg-white">
-      <div className="mx-auto max-w-6xl px-6 py-16">
+      <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="mb-8 text-center">
           <h2 className="flex items-center justify-center gap-2 text-2xl font-bold tracking-tight text-zinc-900">
             <Calendar className="h-6 w-6 text-emerald-600" />
