@@ -211,10 +211,33 @@ async function fetchEventDetail(xid: string): Promise<EventDetail> {
 
 // KCT regions 101–114 cover all of Czech Republic.
 // There is no "all regions" option — each region must be queried separately.
-const KCT_REGIONS = [101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114];
+// Mapping from KCT oblast code to Czech administrative region (kraj) name.
+const KCT_OBLAST_TO_REGION: Record<number, string> = {
+  101: "Hlavní město Praha",
+  102: "Středočeský kraj",
+  103: "Jihočeský kraj",
+  104: "Plzeňský kraj",
+  105: "Karlovarský kraj",
+  106: "Ústecký kraj",
+  107: "Liberecký kraj",
+  108: "Královéhradecký kraj",
+  109: "Pardubický kraj",
+  110: "Jihomoravský kraj",
+  111: "Olomoucký kraj",
+  112: "Zlínský kraj",
+  113: "Moravskoslezský kraj",
+  114: "Kraj Vysočina",
+};
 
-async function crawlRegion(oblast: number, fromDate: string): Promise<EventRow[]> {
-  const regionEvents: EventRow[] = [];
+const KCT_REGIONS = Object.keys(KCT_OBLAST_TO_REGION).map(Number);
+
+interface EventRowWithRegion extends EventRow {
+  kctRegion: string;
+}
+
+async function crawlRegion(oblast: number, fromDate: string): Promise<EventRowWithRegion[]> {
+  const kctRegion = KCT_OBLAST_TO_REGION[oblast];
+  const regionEvents: EventRowWithRegion[] = [];
   const formData = new URLSearchParams({
     xfrom: fromDate,
     xto: "31. 12. 2027",
@@ -225,10 +248,10 @@ async function crawlRegion(oblast: number, fromDate: string): Promise<EventRow[]
     xkalendar_oblast: "1",
   });
 
-  console.log(`  Oblast ${oblast} — page 1...`);
+  console.log(`  Oblast ${oblast} (${kctRegion}) — page 1...`);
   const firstPageHtml = await fetchPage(LIST_URL, formData);
   const { events: firstPageEvents, totalPages } = parseListPage(firstPageHtml);
-  regionEvents.push(...firstPageEvents);
+  regionEvents.push(...firstPageEvents.map((e) => ({ ...e, kctRegion })));
   console.log(`    ${firstPageEvents.length} events (${totalPages} pages)`);
 
   for (let page = 2; page <= totalPages; page++) {
@@ -237,17 +260,17 @@ async function crawlRegion(oblast: number, fromDate: string): Promise<EventRow[]
     formData.set("xpage", String(page));
     const html = await fetchPage(LIST_URL, formData);
     const { events } = parseListPage(html);
-    regionEvents.push(...events);
+    regionEvents.push(...events.map((e) => ({ ...e, kctRegion })));
     console.log(`    ${events.length} events`);
   }
 
   return regionEvents;
 }
 
-async function crawlAllPages(): Promise<EventRow[]> {
+async function crawlAllPages(): Promise<EventRowWithRegion[]> {
   const fromDate = new Date().toLocaleDateString("cs-CZ");
   const seenXids = new Set<string>();
-  const allEvents: EventRow[] = [];
+  const allEvents: EventRowWithRegion[] = [];
 
   for (const oblast of KCT_REGIONS) {
     await sleep(DELAY_MS);
@@ -301,7 +324,7 @@ async function main() {
           dateStart: event.dateStart,
           dateEnd: event.dateEnd,
           city: event.city,
-          region: event.region,
+          region: event.kctRegion,
           description: detail.description,
           externalUrl: detail.externalUrl,
           lat: detail.lat,
@@ -313,7 +336,7 @@ async function main() {
           dateStart: event.dateStart,
           dateEnd: event.dateEnd,
           city: event.city,
-          region: event.region,
+          region: event.kctRegion,
           description: detail.description,
           externalUrl: detail.externalUrl,
           lat: detail.lat,

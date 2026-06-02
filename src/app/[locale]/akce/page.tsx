@@ -100,16 +100,26 @@ export default async function AkcePage() {
     lng: e.lng,
   }));
 
-  // Region filter options
-  const regionCountMap = new Map(
-    regionCounts.map((rc) => [rc.region, rc._count])
-  );
-  const activeRegions = REGIONS.filter((r) => regionCountMap.has(r.name)).map(
-    (r) => ({
-      name: r.name,
-      count: regionCountMap.get(r.name) || 0,
-    })
-  );
+  // Region filter options — match DB region values against canonical REGIONS list.
+  // Newly scraped events store the Czech kraj name; old records had district (okr)
+  // names that don't match, so fall back to raw distinct values when needed.
+  const getCount = (c: { _count: { _all: number } | number }) =>
+    typeof c._count === "object" ? (c._count as { _all: number })._all : (c._count as number);
+
+  const regionCountMap = new Map(regionCounts.map((rc) => [rc.region as string, getCount(rc)]));
+
+  let activeRegions = REGIONS.filter((r) => regionCountMap.has(r.name)).map((r) => ({
+    name: r.name,
+    count: regionCountMap.get(r.name) ?? 0,
+  }));
+
+  // Fallback: if no canonical REGIONS matched (legacy district data), use raw distinct values
+  if (activeRegions.length === 0 && regionCounts.length > 0) {
+    activeRegions = regionCounts
+      .filter((rc) => rc.region != null)
+      .map((rc) => ({ name: rc.region as string, count: getCount(rc) }))
+      .sort((a, b) => b.count - a.count);
+  }
 
   // JSON-LD Event markup for the first 20 events
   const eventsLd = {
