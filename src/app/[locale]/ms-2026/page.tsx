@@ -6,7 +6,7 @@ import { safeJsonLd } from "@/lib/seo";
 import { WC2026_GROUPS, WC2026_MATCHES, WC2026_TEAMS } from "@/lib/wc2026-data";
 import { GroupsClient } from "./GroupsClient";
 
-export const revalidate = 300; // 5 min — cron updates standings every 30 min
+export const revalidate = 1800; // 30 min — aligns with cron; longer interval reduces ISR background pg-thread pressure (CloudLinux limit)
 
 export const metadata: Metadata = {
   title: "MS ve fotbale 2026 — rozpis zápasů, skupiny, výsledky | hraju.cz",
@@ -46,7 +46,9 @@ async function getMatchResults() {
 }
 
 export default async function Ms2026Page() {
-  const [standings, results] = await Promise.all([getStandings(), getMatchResults()]);
+  // Sequential — CloudLinux caps pg threads; concurrent pg connections crash the worker
+  const standings = await getStandings();
+  const results = await getMatchResults();
 
   // Merge DB results into static match data
   const resultMap = new Map(results.map((r) => [r.matchId, r]));
