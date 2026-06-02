@@ -1,0 +1,33 @@
+name: WC 2026 DB Setup (run once)
+
+# One-time workflow to apply the WC 2026 DB migration and seed 72 group-stage matches.
+# Run manually via GitHub Actions UI → "Run workflow".
+# Safe to run multiple times — upserts are idempotent.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Apply Prisma migration
+        env:
+          DIRECT_URL: ${{ secrets.DIRECT_URL }}
+          DATABASE_URL: ${{ secrets.DIRECT_URL }}
+        run: npx prisma migrate deploy
+
+      - name: Seed WC 2026 matches and standings
+        env:
+          DIRECT_URL: ${{ secrets.DIRECT_URL }}
+          DATABASE_URL: ${{ secrets.DIRECT_URL }}
+        run: npx tsx scripts/seed-wc2026.ts
