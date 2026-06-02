@@ -446,7 +446,7 @@ export type CityForSport = {
 
 /** Check if a city name is a Praha district (e.g. "Praha 1", "Praha 10") */
 function isPrahaDistrict(city: string): boolean {
-  return /^Praha \d+$/.test(city);
+  return city === "Praha" || /^Praha \d+$/.test(city);
 }
 
 export type DistrictGroup = {
