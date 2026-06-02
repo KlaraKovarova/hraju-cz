@@ -10,7 +10,7 @@ export const revalidate = 86400; // 24 hours
 export const metadata: Metadata = {
   title: "Pochod Praha–Prčice — statistiky tras a účastníků | hraju.cz",
   description:
-    "Statistiky tras a počty účastníků pochodu Praha–Prčice pro roky 2019–2024. Jeden z největších turistických pochodů v České republice.",
+    "Statistiky tras a počty účastníků pochodu Praha–Prčice. Jeden z největších turistických pochodů v České republice.",
   openGraph: {
     title: "Pochod Praha–Prčice — statistiky tras a účastníků",
     description:
@@ -39,14 +39,6 @@ async function getRoutes() {
 
 export default async function PochodyPrcicePage() {
   const routes = await getRoutes().catch(() => []);
-
-  const years = [...new Set(routes.map((r) => r.year))].sort((a, b) => b - a);
-  const totalParticipants = routes.reduce((s, r) => s + r.participants, 0);
-  const latestYear = years[0] ?? null;
-  const latestCount =
-    latestYear != null
-      ? routes.filter((r) => r.year === latestYear).reduce((s, r) => s + r.participants, 0)
-      : 0;
 
   const breadcrumbLd = {
     "@context": "https://schema.org",
@@ -146,37 +138,6 @@ export default async function PochodyPrcicePage() {
             </a>
           </div>
 
-          {/* KPI chips */}
-          {routes.length > 0 && (
-            <div className="mt-6 flex flex-wrap gap-4">
-              {latestYear && (
-                <div className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm">
-                  <div className="text-zinc-400">Poslední ročník</div>
-                  <div className="font-bold text-zinc-900 text-xl">{latestYear}</div>
-                  <div className="text-emerald-600 font-medium">
-                    {latestCount.toLocaleString("cs-CZ")} účastníků
-                  </div>
-                </div>
-              )}
-              <div className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm">
-                <div className="text-zinc-400">Celkem ročníků</div>
-                <div className="font-bold text-zinc-900 text-xl">{years.length}</div>
-                <div className="text-zinc-500">({years[years.length - 1]}–{years[0]})</div>
-              </div>
-              <div className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm">
-                <div className="text-zinc-400">Celkem účastníků</div>
-                <div className="font-bold text-zinc-900 text-xl">
-                  {totalParticipants.toLocaleString("cs-CZ")}
-                </div>
-                <div className="text-zinc-500">přes všechny ročníky</div>
-              </div>
-              <div className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm">
-                <div className="text-zinc-400">Trasy</div>
-                <div className="font-bold text-zinc-900 text-xl">21</div>
-                <div className="text-zinc-500">každý ročník</div>
-              </div>
-            </div>
-          )}
         </div>
       </section>
 
