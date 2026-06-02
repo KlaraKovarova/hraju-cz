@@ -20,11 +20,11 @@ jobs:
 
       - run: npm ci
 
-      - name: Apply Prisma migration
+      - name: Apply WC 2026 schema (idempotent)
         env:
           DIRECT_URL: ${{ secrets.DIRECT_URL }}
           DATABASE_URL: ${{ secrets.DIRECT_URL }}
-        run: npx prisma migrate deploy
+        run: npx prisma db execute --file prisma/migrations/20260602_add_wc2026/migration.sql --schema prisma/schema.prisma
 
       - name: Seed WC 2026 matches and standings
         env:
