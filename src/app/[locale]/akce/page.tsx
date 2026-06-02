@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Calendar, MapPin, PlusCircle } from "lucide-react";
+import { Calendar, Footprints, MapPin, PlusCircle } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { REGIONS } from "@/lib/regions";
 import { safeJsonLd } from "@/lib/seo";
@@ -237,6 +237,35 @@ export default async function AkcePage() {
           >
             <PlusCircle className="h-4 w-4" />
             Přidat akci
+          </Link>
+        </div>
+      </section>
+
+      {/* Featured: Pochod Praha–Prčice */}
+      <section className="border-b border-zinc-100 bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-6">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-zinc-400">
+            Vydatná akce
+          </p>
+          <Link
+            href="/akce/pochod-praha-prcice"
+            className="group flex items-start gap-4 rounded-2xl border border-emerald-100 bg-gradient-to-br from-emerald-50 to-teal-50 p-5 transition hover:border-emerald-200 hover:shadow-sm sm:items-center"
+          >
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white">
+              <Footprints className="h-6 w-6" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <p className="font-bold text-zinc-900 group-hover:text-emerald-700">
+                Pochod Praha–Prčice
+              </p>
+              <p className="mt-0.5 text-sm text-zinc-500">
+                Jeden z největších turistických pochodů v ČR — 21 tras, stovky kilometrů,
+                tisíce účastníků ročně. Statistiky všech ročníků.
+              </p>
+            </div>
+            <span className="hidden shrink-0 text-sm font-semibold text-emerald-600 group-hover:underline sm:block">
+              Zobrazit →
+            </span>
           </Link>
         </div>
       </section>
