@@ -1,0 +1,22 @@
+name: WC 2026 Results Sync
+
+# Runs every 30 min from tournament start (Jun 11) to final (Jul 19).
+# Outside tournament dates: workflow is harmless (cron runs, endpoint returns
+# early with 0 updates because no "live/finished" matches exist yet or anymore).
+
+on:
+  schedule:
+    # Every 30 minutes
+    - cron: '*/30 * * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  sync-results:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch WC 2026 results and update standings
+        run: |
+          curl -s -X POST \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            -H "Content-Type: application/json" \
+            "${{ vars.PRODUCTION_URL || 'https://www.hraju.cz' }}/api/cron/wc2026-results"
