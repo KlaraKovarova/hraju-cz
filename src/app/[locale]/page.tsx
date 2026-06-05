@@ -176,6 +176,12 @@ export default async function Home() {
             >
               <Calendar className="inline h-3.5 w-3.5" /> Akce
             </Link>
+            <Link
+              href="/ms-2026"
+              className="font-semibold text-emerald-600 transition hover:text-emerald-700"
+            >
+              ⚽ MS 2026
+            </Link>
           </div>
         </div>
       </nav>
