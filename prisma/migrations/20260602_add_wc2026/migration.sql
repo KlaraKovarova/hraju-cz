@@ -1,6 +1,6 @@
 -- HRAA-33: MS ve fotbale 2026 — match schedule and group standings tables
 
-CREATE TABLE IF NOT EXISTS "Wc2026Match" (
+CREATE TABLE "Wc2026Match" (
     "id" TEXT NOT NULL,
     "matchId" TEXT NOT NULL,
     "group" TEXT NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS "Wc2026Match" (
     CONSTRAINT "Wc2026Match_pkey" PRIMARY KEY ("id")
 );
 
-CREATE TABLE IF NOT EXISTS "Wc2026Standing" (
+CREATE TABLE "Wc2026Standing" (
     "id" TEXT NOT NULL,
     "group" TEXT NOT NULL,
     "team" TEXT NOT NULL,
@@ -35,11 +35,11 @@ CREATE TABLE IF NOT EXISTS "Wc2026Standing" (
     CONSTRAINT "Wc2026Standing_pkey" PRIMARY KEY ("id")
 );
 
-CREATE UNIQUE INDEX IF NOT EXISTS "Wc2026Match_matchId_key" ON "Wc2026Match"("matchId");
-CREATE INDEX IF NOT EXISTS "Wc2026Match_group_idx" ON "Wc2026Match"("group");
-CREATE INDEX IF NOT EXISTS "Wc2026Match_kickoffUtc_idx" ON "Wc2026Match"("kickoffUtc");
-CREATE INDEX IF NOT EXISTS "Wc2026Match_status_idx" ON "Wc2026Match"("status");
+CREATE UNIQUE INDEX "Wc2026Match_matchId_key" ON "Wc2026Match"("matchId");
+CREATE INDEX "Wc2026Match_group_idx" ON "Wc2026Match"("group");
+CREATE INDEX "Wc2026Match_kickoffUtc_idx" ON "Wc2026Match"("kickoffUtc");
+CREATE INDEX "Wc2026Match_status_idx" ON "Wc2026Match"("status");
 
-CREATE UNIQUE INDEX IF NOT EXISTS "Wc2026Standing_group_team_key" ON "Wc2026Standing"("group", "team");
-CREATE INDEX IF NOT EXISTS "Wc2026Standing_group_idx" ON "Wc2026Standing"("group");
-CREATE INDEX IF NOT EXISTS "Wc2026Standing_points_idx" ON "Wc2026Standing"("points");
+CREATE UNIQUE INDEX "Wc2026Standing_group_team_key" ON "Wc2026Standing"("group", "team");
+CREATE INDEX "Wc2026Standing_group_idx" ON "Wc2026Standing"("group");
+CREATE INDEX "Wc2026Standing_points_idx" ON "Wc2026Standing"("points");

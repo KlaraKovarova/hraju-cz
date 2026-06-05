@@ -617,3 +617,43 @@ model PrciceRoute {
   @@unique([year, routeName])
   @@index([year])
 }
+
+// HRAA-35: MS ve fotbale 2026 — match schedule and group standings
+model Wc2026Match {
+  id         String   @id @default(cuid())
+  matchId    String   @unique // static match ID e.g. "A1"
+  group      String
+  homeTeam   String
+  awayTeam   String
+  kickoffUtc DateTime
+  venue      String
+  city       String
+  homeGoals  Int?
+  awayGoals  Int?
+  status     String   @default("scheduled") // scheduled | live | finished
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([group])
+  @@index([kickoffUtc])
+  @@index([status])
+}
+
+model Wc2026Standing {
+  id           String   @id @default(cuid())
+  group        String
+  team         String
+  played       Int      @default(0)
+  won          Int      @default(0)
+  drawn        Int      @default(0)
+  lost         Int      @default(0)
+  goalsFor     Int      @default(0)
+  goalsAgainst Int      @default(0)
+  points       Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@unique([group, team])
+  @@index([group])
+  @@index([points])
+}
