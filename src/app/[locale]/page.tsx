@@ -12,10 +12,7 @@ import {
 } from "@/lib/data";
 import { HeroSearchForm } from "@/components/HeroSearchForm";
 import { HomeRecentConditions } from "@/components/HomeRecentConditions";
-import { HomeRecentPhotos } from "@/components/HomeRecentPhotos";
-import { HomePhotoOfTheWeek } from "@/components/HomePhotoOfTheWeek";
 import { HomeRecentTripReports } from "@/components/HomeRecentTripReports";
-import { getRecentPhotos, getLatestPhotoOfTheWeek } from "@/lib/photos";
 import { AdSlot } from "@/components/AdSlot";
 import { WeekendEvents } from "@/components/WeekendEvents";
 import { MonthlyChallenges } from "@/components/MonthlyChallenges";
@@ -27,17 +24,14 @@ export const revalidate = 86400;
 export default async function Home() {
   const totalFacilities = getTotalFacilityCount();
   const totalSports = getTotalSportCount();
-  const [topCities, mostActiveFacilities, recentConditions, recentPhotos, photoOfTheWeek, recentTripReports] =
+  const [topCities, mostActiveFacilities, recentConditions, recentTripReports] =
     await Promise.all([
       getTopCitiesOverall(10),
       getMostActiveFacilities(30, 5),
       getRecentConditionReports(6, 7),
-      getRecentPhotos(6, 14),
-      getLatestPhotoOfTheWeek(),
       getRecentTripReports(6),
     ]);
   const conditionsLcpThumb = recentConditions.find((r) => r.thumbnailUrl)?.thumbnailUrl ?? null;
-  const photosLcpThumb = recentPhotos[0]?.url ?? null;
 
   // FAQ data for structured markup
   const faqItems = [
@@ -144,11 +138,6 @@ export default async function Home() {
       {conditionsLcpThumb && (
         <link rel="preload" as="image" href={conditionsLcpThumb} fetchPriority="high" />
       )}
-      {/* LCP preload for first photos rail thumbnail (SIL-665) */}
-      {photosLcpThumb && (
-        <link rel="preload" as="image" href={photosLcpThumb} fetchPriority="high" />
-      )}
-
       {/* Navigation */}
       <nav className="border-b border-zinc-100 bg-white/80 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -242,12 +231,6 @@ export default async function Home() {
 
       {/* Recent Conditions Rail (SIL-655) */}
       <HomeRecentConditions reports={recentConditions} />
-
-      {/* Foto týdne Winner (SIL-666) — hidden when no winner yet */}
-      <HomePhotoOfTheWeek winner={photoOfTheWeek} />
-
-      {/* Recent Photos Rail (SIL-665) */}
-      <HomeRecentPhotos photos={recentPhotos} />
 
       {/* Recent Trip Reports Rail (SIL-678) — ferraty + lezení only */}
       <HomeRecentTripReports reports={recentTripReports} />

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { MapPin, ChevronRight, ChevronDown, Calendar, ArrowRight, PlusCircle, Star, Map, ShoppingBag } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
-import { getRegionsBySport, getTopFacilitiesBySport, getTopCitiesBySport, getTopReviewsBySport, getSportReviewStats, getFacilityMapMarkersBySport, getRecentActivity } from "@/lib/data";
+import { getRegionsBySport, getTopFacilitiesBySport, getTopCitiesBySport, getSportReviewStats, getFacilityMapMarkersBySport, getRecentActivity } from "@/lib/data";
 import { getSportTitleSuffix, getSportFacilityTypePluralGenitive, getSportFacilityType, safeJsonLd } from "@/lib/seo";
 import { FacilityCard } from "@/components/FacilityCard";
 import { FacilityMap } from "@/components/FacilityMap";
@@ -54,18 +54,6 @@ export async function generateMetadata({
   };
 }
 
-function StarRating({ rating }: { rating: number }) {
-  return (
-    <span className="inline-flex items-center gap-0.5">
-      {Array.from({ length: 5 }, (_, i) => (
-        <Star
-          key={i}
-          className={`h-4 w-4 ${i < Math.round(rating) ? "fill-amber-400 text-amber-400" : "fill-zinc-200 text-zinc-200"}`}
-        />
-      ))}
-    </span>
-  );
-}
 
 export default async function SportPage({ params }: SportPageProps) {
   const { sport: sportSlug } = await params;
@@ -75,12 +63,11 @@ export default async function SportPage({ params }: SportPageProps) {
     notFound();
   }
 
-  const [regions, topFacilities, topCities, reviewStats, topReviews, activityItems] = await Promise.all([
+  const [regions, topFacilities, topCities, reviewStats, activityItems] = await Promise.all([
     getRegionsBySport(sport.slug),
     getTopFacilitiesBySport(sport.slug, 10),
     getTopCitiesBySport(sport.slug, 10),
     getSportReviewStats(sport.slug),
-    getTopReviewsBySport(sport.slug, 3),
     getRecentActivity({ sport: sport.slug, limit: 8 }),
   ]);
 
@@ -269,16 +256,6 @@ export default async function SportPage({ params }: SportPageProps) {
               <span className="font-semibold text-white">{totalFacilities}</span> sportovišť
               {" "}v <span className="font-semibold text-white">{regions.length}</span> krajích
             </span>
-            {reviewStats.totalReviews > 0 && (
-              <>
-                <span className="text-white/40">|</span>
-                <span className="flex items-center gap-1.5">
-                  <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
-                  <span className="font-semibold text-white">{reviewStats.averageRating}</span>
-                  {" "}z <span className="font-semibold text-white">{reviewStats.totalReviews}</span> recenzí
-                </span>
-              </>
-            )}
             {sportPosts.length > 0 && (
               <>
                 <span className="text-white/40">|</span>
@@ -428,58 +405,6 @@ export default async function SportPage({ params }: SportPageProps) {
         </section>
       )}
 
-      {/* Featured Reviews */}
-      {topReviews.length > 0 && (
-        <section className="mx-auto max-w-6xl px-6 py-8 border-t border-zinc-100">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl font-bold text-zinc-900">
-              Recenze — {sport.nameCs.toLowerCase()}
-            </h2>
-            <Link
-              href={`/recenze?sport=${sportSlug}`}
-              className="text-sm font-semibold text-emerald-600 transition hover:text-emerald-700"
-            >
-              Všechny recenze
-            </Link>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-3">
-            {topReviews.map((review) => (
-              <div
-                key={review.id}
-                className="rounded-2xl border border-zinc-100 bg-white p-5"
-              >
-                <div className="flex items-center justify-between">
-                  <StarRating rating={review.rating} />
-                  <span className="text-xs text-zinc-400">
-                    {new Date(review.createdAt).toLocaleDateString("cs-CZ")}
-                  </span>
-                </div>
-                {review.title && (
-                  <h3 className="mt-3 font-semibold text-zinc-900 text-sm">
-                    {review.title}
-                  </h3>
-                )}
-                {review.text && (
-                  <p className="mt-2 text-sm text-zinc-600 line-clamp-3">
-                    {review.text}
-                  </p>
-                )}
-                <div className="mt-3 pt-3 border-t border-zinc-50">
-                  <Link
-                    href={`/sport/${review.facility.sport ?? sportSlug}/${review.facility.slug}`}
-                    className="text-xs font-medium text-emerald-600 hover:text-emerald-700"
-                  >
-                    {review.facility.name}
-                  </Link>
-                  <span className="text-xs text-zinc-400"> — {review.facility.city}</span>
-                  <p className="text-xs text-zinc-500 mt-0.5">{review.authorName}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
       {/* Community Activity Feed */}
       {activityItems.length > 0 && (
         <section className="mx-auto max-w-6xl px-6 py-8 border-t border-zinc-100">
@@ -512,12 +437,6 @@ export default async function SportPage({ params }: SportPageProps) {
               className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 text-sm font-bold text-white transition hover:bg-emerald-700"
             >
               Prohlédnout recenze
-            </Link>
-            <Link
-              href="/prihlaseni"
-              className="inline-flex items-center gap-2 rounded-xl border border-emerald-200 bg-white px-6 py-3 text-sm font-bold text-emerald-700 transition hover:bg-emerald-50"
-            >
-              Napsat recenzi
             </Link>
           </div>
           <div className="mt-4">

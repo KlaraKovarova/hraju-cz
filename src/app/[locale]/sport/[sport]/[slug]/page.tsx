@@ -22,10 +22,6 @@ import { getGuideBySlug } from "@/lib/guides";
 import { getSportFacilityType, getSportFacilityTypePluralGenitive, safeJsonLd } from "@/lib/seo";
 import { getCityInPhrase } from "@/lib/locative";
 import EditSuggestionForm from "@/components/EditSuggestionForm";
-import { StarRating } from "@/components/StarRating";
-import { ReviewForm } from "@/components/ReviewForm";
-import { ReviewList } from "@/components/ReviewList";
-import { AggregateRating } from "@/components/AggregateRating";
 import { CityLandingContent } from "@/components/CityLandingContent";
 import { PhotoGallery } from "@/components/PhotoGallery";
 import { OpeningHoursDisplay } from "@/components/OpeningHoursDisplay";
@@ -35,11 +31,6 @@ import { AdSlot } from "@/components/AdSlot";
 import { BannerSlot } from "@/components/BannerSlot";
 import { TrackPageView } from "@/components/TrackPageView";
 import { TrackClick } from "@/components/TrackClick";
-import { CheckInButton } from "@/components/CheckInButton";
-import { FavoriteButton } from "@/components/FavoriteButton";
-import { FacilityGallery } from "@/components/FacilityGallery";
-import { FacilityReviewCTA } from "@/components/FacilityReviewCTA";
-import { FacilityPhotosPreview } from "@/components/FacilityPhotosPreview";
 import { FacilityTripReportsRail } from "@/components/FacilityTripReportsRail";
 import { ConditionReportsSection } from "@/components/ConditionReportsSection";
 import {
@@ -79,15 +70,6 @@ export async function generateMetadata({
     const url = `https://www.hraju.cz/sport/${sportSlug}/${slug}`;
 
     const primaryImage = facility.images?.find((img: { isPrimary: boolean }) => img.isPrimary) ?? facility.images?.[0];
-    // Prefer the most recent non-hidden user photo for OG (SIL-661); falls back
-    // to the facility's primary image, then to a dynamically generated OG card.
-    const recentUserPhoto = await prisma.userPhoto
-      .findFirst({
-        where: { facilityId: facility.id, isHidden: false },
-        orderBy: { createdAt: "desc" },
-        select: { url: true, alt: true },
-      })
-      .catch(() => null);
     const dynamicOgUrl = `/api/og?${new URLSearchParams({
       title: facility.name,
       subtitle: `${sport.nameCs} · ${facility.location.city}`,
@@ -95,9 +77,7 @@ export async function generateMetadata({
       type: "facility",
       ...(facility.averageRating ? { rating: facility.averageRating.toFixed(1) } : {}),
     }).toString()}`;
-    const ogImage = recentUserPhoto?.url
-      ? { url: recentUserPhoto.url, alt: recentUserPhoto.alt ?? `${facility.name} — ${sport.nameCs}` }
-      : primaryImage?.url
+    const ogImage = primaryImage?.url
       ? { url: primaryImage.url, alt: primaryImage.alt ?? facility.name }
       : { url: dynamicOgUrl, width: 1200, height: 630, alt: `${facility.name} — hraju.cz` };
 
@@ -290,12 +270,6 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
       },
     },
   });
-  const userPhotosQuery = prisma.userPhoto.findMany({
-    where: { facilityId: facility.id, isHidden: false },
-    orderBy: { createdAt: "desc" },
-    take: 5,
-    select: { url: true },
-  });
   const recentConditionReportsQuery = prisma.conditionReport.findMany({
     where: {
       facilityId: facility.id,
@@ -326,15 +300,12 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
       console.error(`[facility page] ${label} query failed:`, err);
       return empty;
     };
-  const [starDistribution, recentApprovedReviews, userPhotos, recentConditionReports] = await Promise.all([
+  const [starDistribution, recentApprovedReviews, recentConditionReports] = await Promise.all([
     starDistributionQuery.catch(
       logDbFail<Awaited<typeof starDistributionQuery>>("review.groupBy", []),
     ),
     recentApprovedReviewsQuery.catch(
       logDbFail<Awaited<typeof recentApprovedReviewsQuery>>("review.findMany", []),
-    ),
-    userPhotosQuery.catch(
-      logDbFail<Awaited<typeof userPhotosQuery>>("userPhoto.findMany", []),
     ),
     recentConditionReportsQuery.catch(
       logDbFail<Awaited<typeof recentConditionReportsQuery>>("conditionReport.findMany", []),
@@ -352,14 +323,6 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
     user: r.user,
     photos: r.photos,
   }));
-
-  // Build distribution array [1star, 2star, 3star, 4star, 5star]
-  const distribution = [0, 0, 0, 0, 0];
-  for (const row of starDistribution) {
-    if (row.rating >= 1 && row.rating <= 5) {
-      distribution[row.rating - 1] = row._count.rating;
-    }
-  }
 
   // Build JSON-LD LocalBusiness structured data for SEO
   const phone = facility.isClaimed
@@ -426,11 +389,8 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
     ...(phone && { telephone: phone }),
     ...(email && { email }),
     ...(facility.website && { sameAs: facility.website }),
-    ...((primaryImage || userPhotos.length > 0) && {
-      image: [
-        ...(primaryImage ? [`https://www.hraju.cz${primaryImage.url}`] : []),
-        ...userPhotos.map((p) => `https://www.hraju.cz${p.url}`),
-      ],
+    ...(primaryImage && {
+      image: [`https://www.hraju.cz${primaryImage.url}`],
     }),
     ...(mapLat && mapLng && {
       geo: {
@@ -619,9 +579,6 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
                 Premium
               </span>
             )}
-            {facility.averageRating != null && facility.reviewCount > 0 && (
-              <StarRating rating={facility.averageRating} count={facility.reviewCount} size="md" />
-            )}
             <OwnerEditButton facilityId={facility.id} />
           </div>
 
@@ -655,13 +612,6 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
             ))}
           </div>
 
-          {/* Check-in & favorite buttons */}
-          <div className="mt-4 space-y-2">
-            <CheckInButton facilityId={facility.id} currentPath={`/sport/${sportSlug}/${slug}`} facilityName={facility.name} />
-            <div className="flex items-center rounded-xl border border-zinc-100 bg-white px-4 py-2">
-              <FavoriteButton facilityId={facility.id} currentPath={`/sport/${sportSlug}/${slug}`} />
-            </div>
-          </div>
         </div>
       </section>
 
@@ -1082,77 +1032,6 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
         alwaysShow={sportSlug === "ferraty" || sportSlug === "lezeni"}
       />
 
-      {/* User-uploaded photos preview (top 6) — links to full /fotky gallery */}
-      <FacilityPhotosPreview
-        facilityId={facility.id}
-        facilityName={facility.name}
-        sportName={sport.nameCs}
-        facilityHref={`/sport/${sportSlug}/${slug}`}
-      />
-
-      {/* State-aware review CTA */}
-      <FacilityReviewCTA
-        facilityId={facility.id}
-        facilityName={facility.name}
-        sportSlug={sportSlug}
-        slug={slug}
-        sportIcon={sport.icon}
-        reviewCount={facility.reviewCount}
-      />
-
-      {/* Reviews Section */}
-      <section id="recenze" className="border-t border-zinc-100 bg-white scroll-mt-4">
-        <div className="mx-auto max-w-6xl px-6 py-8">
-          <h2 className="mb-6 text-xl font-bold text-zinc-900">
-            Recenze
-          </h2>
-
-          {/* Aggregate rating summary */}
-          {facility.averageRating != null && facility.reviewCount > 0 && (
-            <div className="mb-8 rounded-2xl border border-zinc-100 bg-zinc-50/50 p-6">
-              <AggregateRating
-                averageRating={facility.averageRating}
-                reviewCount={facility.reviewCount}
-                distribution={distribution}
-              />
-            </div>
-          )}
-
-          <div className="grid gap-8 lg:grid-cols-3">
-            <div className="lg:col-span-2">
-              <ReviewList facilityId={facility.id} facilityUrl={`https://www.hraju.cz/sport/${sportSlug}/${slug}`} />
-            </div>
-            <div>
-              {/* Inline top tips */}
-              {topTips.length > 0 && (
-                <div className="mb-6">
-                  <h3 className="mb-3 text-sm font-semibold text-zinc-700">
-                    Tipy od návštěvníků
-                  </h3>
-                  <div className="space-y-2">
-                    {topTips.map((tip) => (
-                      <div key={tip.id} className="flex items-start gap-2 rounded-lg bg-amber-50/60 px-3 py-2 text-xs text-zinc-600">
-                        <span className="mt-0.5 shrink-0">💡</span>
-                        <span>{tip.text}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <a
-                    href="#tipy"
-                    className="mt-2 inline-block text-xs font-medium text-emerald-600 hover:text-emerald-700"
-                  >
-                    Všechny tipy &darr;
-                  </a>
-                </div>
-              )}
-              <h3 id="napsat-recenzi" className="mb-3 text-sm font-semibold text-zinc-700 scroll-mt-4">
-                Napsat recenzi
-              </h3>
-              <ReviewForm facilityId={facility.id} currentPath={`/sport/${sportSlug}/${slug}`} facilityName={facility.name} facilityUrl={`https://www.hraju.cz/sport/${sportSlug}/${slug}`} />
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Tips Section */}
       <section id="tipy" className="border-t border-zinc-100 bg-zinc-50/50 scroll-mt-4">
@@ -1171,13 +1050,6 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
               <TipForm facilityId={facility.id} currentPath={`/sport/${sportSlug}/${slug}`} />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* User Photos Gallery */}
-      <section className="border-t border-zinc-100 bg-zinc-50/50">
-        <div className="mx-auto max-w-6xl px-6 py-8">
-          <FacilityGallery facilityId={facility.id} />
         </div>
       </section>
 
