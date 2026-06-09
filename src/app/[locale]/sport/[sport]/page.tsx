@@ -1,16 +1,15 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, ChevronRight, ChevronDown, Calendar, ArrowRight, PlusCircle, Star, Map, ShoppingBag } from "lucide-react";
+import { MapPin, ChevronRight, ChevronDown, Calendar, ArrowRight, Map, ShoppingBag } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { getSportBySlug, SPORTS } from "@/lib/sports";
-import { getRegionsBySport, getTopFacilitiesBySport, getTopCitiesBySport, getSportReviewStats, getFacilityMapMarkersBySport, getRecentActivity } from "@/lib/data";
+import { getRegionsBySport, getTopFacilitiesBySport, getTopCitiesBySport, getSportReviewStats, getFacilityMapMarkersBySport } from "@/lib/data";
 import { getSportTitleSuffix, getSportFacilityTypePluralGenitive, getSportFacilityType, safeJsonLd } from "@/lib/seo";
 import { FacilityCard } from "@/components/FacilityCard";
 import { FacilityMap } from "@/components/FacilityMap";
 import { HeroSearchForm } from "@/components/HeroSearchForm";
 import { AdSlot } from "@/components/AdSlot";
-import { ActivityFeed } from "@/components/ActivityFeed";
 import { BannerSlot } from "@/components/BannerSlot";
 import { ChallengeCards } from "@/components/ChallengeCards";
 import { MonthlyChallenges } from "@/components/MonthlyChallenges";
@@ -63,12 +62,11 @@ export default async function SportPage({ params }: SportPageProps) {
     notFound();
   }
 
-  const [regions, topFacilities, topCities, reviewStats, activityItems] = await Promise.all([
+  const [regions, topFacilities, topCities, reviewStats] = await Promise.all([
     getRegionsBySport(sport.slug),
     getTopFacilitiesBySport(sport.slug, 10),
     getTopCitiesBySport(sport.slug, 10),
     getSportReviewStats(sport.slug),
-    getRecentActivity({ sport: sport.slug, limit: 8 }),
   ]);
 
   const totalFacilities = regions.reduce((sum, r) => sum + r.facilityCount, 0);
@@ -405,51 +403,10 @@ export default async function SportPage({ params }: SportPageProps) {
         </section>
       )}
 
-      {/* Community Activity Feed */}
-      {activityItems.length > 0 && (
-        <section className="mx-auto max-w-6xl px-6 py-8 border-t border-zinc-100">
-          <h2 className="mb-6 text-xl font-bold text-zinc-900">
-            Právě se děje — {sport.nameCs.toLowerCase()}
-          </h2>
-          <div className="mx-auto max-w-2xl">
-            <ActivityFeed items={activityItems} />
-          </div>
-        </section>
-      )}
-
       {/* Ad: after facility cards */}
       <div className="mx-auto max-w-6xl px-6 py-4">
         <AdSlot slot="1234567891" format="horizontal" />
       </div>
-
-      {/* Community CTA */}
-      <section className="mx-auto max-w-6xl px-6 py-12 border-t border-zinc-100">
-        <div className="rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-100 p-8 text-center">
-          <h2 className="text-xl font-bold text-zinc-900">
-            Byl/a jsi tu sportovat?
-          </h2>
-          <p className="mt-2 text-sm text-zinc-600 max-w-lg mx-auto">
-            Pomoz ostatním sportovcům vybrat si to pravé sportoviště. Napiš recenzi a sdílej svou zkušenost s komunitou.
-          </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="/recenze"
-              className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 text-sm font-bold text-white transition hover:bg-emerald-700"
-            >
-              Prohlédnout recenze
-            </Link>
-          </div>
-          <div className="mt-4">
-            <Link
-              href="/pridat-sportoviste"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-emerald-700 transition hover:text-emerald-800"
-            >
-              <PlusCircle className="h-4 w-4" />
-              Chybí ti sportoviště? Přidej ho
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* FAQ Section */}
       {faqItems.length > 0 && (
@@ -552,31 +509,6 @@ export default async function SportPage({ params }: SportPageProps) {
           )}
         </section>
       )}
-
-      {/* Guides (Průvodce) */}
-      <section className="border-t border-zinc-100 bg-zinc-50">
-        <div className="mx-auto max-w-6xl px-6 py-10">
-          <h2 className="mb-2 text-xl font-bold text-zinc-900">Průvodce</h2>
-          <p className="mb-6 text-sm text-zinc-500">
-            Nejlepší {sport.nameCs.toLowerCase()} podle kraje a hodnocení — vyberte si průvodce
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href={`/pruvodce/${sport.slug}/nejlepe-hodnocene`}
-              className="inline-flex items-center gap-2 rounded-lg bg-amber-50 border border-amber-100 px-4 py-2.5 text-sm font-semibold text-amber-700 transition hover:shadow-sm"
-            >
-              <Star className="h-4 w-4" />
-              Nejlépe hodnocené v ČR
-            </Link>
-            <Link
-              href={`/pruvodce/${sport.slug}`}
-              className="inline-flex items-center gap-2 rounded-lg bg-white border border-zinc-200 px-4 py-2.5 text-sm font-semibold text-zinc-700 transition hover:shadow-sm"
-            >
-              Všechny průvodce <ArrowRight className="h-3.5 w-3.5" />
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Product Catalog */}
       {sportProducts.length > 0 && (
