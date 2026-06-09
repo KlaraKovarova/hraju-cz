@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, ArrowRight, ChevronDown, Calendar, PlusCircle, Flame } from "lucide-react";
+import { MapPin, ArrowRight, ChevronDown, Calendar, PlusCircle, Flame, Trophy } from "lucide-react";
 import { SPORTS } from "@/lib/sports";
 import { safeJsonLd } from "@/lib/seo";
 import {
@@ -10,6 +10,8 @@ import {
   getRecentConditionReports,
   getRecentTripReports,
 } from "@/lib/data";
+import { prisma } from "@/lib/prisma";
+import { WC2026_MATCHES, WC2026_TEAMS } from "@/lib/wc2026-data";
 import { HeroSearchForm } from "@/components/HeroSearchForm";
 import { HomeRecentConditions } from "@/components/HomeRecentConditions";
 import { HomeRecentTripReports } from "@/components/HomeRecentTripReports";
@@ -18,8 +20,8 @@ import { WeekendEvents } from "@/components/WeekendEvents";
 import { MonthlyChallenges } from "@/components/MonthlyChallenges";
 import { getActiveChallenges } from "@/lib/monthly-challenges";
 
-// ISR: revalidate homepage every 24 hours (optimization: reduce Vercel invocations)
-export const revalidate = 86400;
+// ISR: 30 min during MS 2026 tournament (Jun 11–Jul 19) to keep match results fresh
+export const revalidate = 1800;
 
 export default async function Home() {
   const totalFacilities = getTotalFacilityCount();
@@ -32,6 +34,9 @@ export default async function Home() {
       getRecentTripReports(6),
     ]);
   const conditionsLcpThumb = recentConditions.find((r) => r.thumbnailUrl)?.thumbnailUrl ?? null;
+
+  // WC2026: fetch today's matches sequentially (CloudLinux pg-thread limit)
+  const todayWcMatches = await getTodayWc2026Matches();
 
   // FAQ data for structured markup
   const faqItems = [
@@ -274,6 +279,80 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* MS ve fotbale 2026 — today's matches */}
+      {todayWcMatches.length > 0 && (
+        <section className="border-t border-zinc-100 bg-white">
+          <div className="mx-auto max-w-6xl px-6 py-8">
+            <div className="mb-4 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Trophy className="h-5 w-5 text-emerald-600" />
+                <h2 className="text-lg font-bold text-zinc-900">MS ve fotbale 2026 — dnešní zápasy</h2>
+              </div>
+              <Link
+                href="/ms-2026"
+                className="flex items-center gap-1 text-sm font-medium text-emerald-600 hover:underline"
+              >
+                Všechny skupiny <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              {todayWcMatches.map((m) => {
+                const homeTeam = WC2026_TEAMS.find((t) => t.name === m.homeTeam);
+                const awayTeam = WC2026_TEAMS.find((t) => t.name === m.awayTeam);
+                const kickoffTime = new Date(m.kickoffUtc).toLocaleTimeString("cs-CZ", {
+                  timeZone: "Europe/Prague",
+                  hour: "2-digit",
+                  minute: "2-digit",
+                });
+                const isCzMatch = m.homeTeam === "Czech Republic" || m.awayTeam === "Czech Republic";
+                return (
+                  <div
+                    key={m.id}
+                    className={`flex items-center gap-3 rounded-xl border px-4 py-3 ${
+                      isCzMatch
+                        ? "border-emerald-200 bg-emerald-50"
+                        : "border-zinc-100 bg-zinc-50/50"
+                    }`}
+                  >
+                    <div className="w-12 shrink-0 text-center">
+                      {m.status === "finished" ? (
+                        <span className="text-xs font-medium text-zinc-400">konec</span>
+                      ) : m.status === "live" ? (
+                        <span className="text-xs font-bold text-red-500">LIVE</span>
+                      ) : (
+                        <span className="text-xs font-medium text-zinc-500">{kickoffTime}</span>
+                      )}
+                    </div>
+                    <div className="flex flex-1 items-center justify-between gap-2 text-sm font-medium">
+                      <div className="flex items-center gap-1.5">
+                        <span>{homeTeam?.flag}</span>
+                        <span className={isCzMatch && m.homeTeam === "Czech Republic" ? "text-emerald-700 font-bold" : "text-zinc-800"}>
+                          {homeTeam?.nameCs ?? m.homeTeam}
+                        </span>
+                      </div>
+                      {m.homeGoals !== null && m.awayGoals !== null ? (
+                        <span className="shrink-0 rounded bg-zinc-900 px-2 py-0.5 text-xs font-extrabold text-white tabular-nums">
+                          {m.homeGoals} : {m.awayGoals}
+                        </span>
+                      ) : (
+                        <span className="shrink-0 text-xs text-zinc-400">vs</span>
+                      )}
+                      <div className="flex items-center gap-1.5">
+                        <span className={isCzMatch && m.awayTeam === "Czech Republic" ? "text-emerald-700 font-bold" : "text-zinc-800"}>
+                          {awayTeam?.nameCs ?? m.awayTeam}
+                        </span>
+                        <span>{awayTeam?.flag}</span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <p className="mt-3 text-right text-xs text-zinc-400">Časy v SELČ · aktualizace každých 30 min</p>
+          </div>
+        </section>
+      )}
+
       {/* Ad: between Featured and Top Cities */}
       <div className="mx-auto max-w-6xl px-6 py-4">
         <AdSlot slot="1234567890" format="horizontal" />
@@ -418,4 +497,39 @@ export default async function Home() {
       </section>
     </main>
   );
+}
+
+async function getTodayWc2026Matches() {
+  try {
+    const now = new Date();
+    // "sv-SE" locale produces YYYY-MM-DD — reliable for date comparison
+    const todayPrague = now.toLocaleDateString("sv-SE", { timeZone: "Europe/Prague" });
+
+    const todayMatches = WC2026_MATCHES.filter((m) => {
+      const d = new Date(m.kickoffUtc).toLocaleDateString("sv-SE", { timeZone: "Europe/Prague" });
+      return d === todayPrague;
+    });
+
+    if (todayMatches.length === 0) return [];
+
+    const matchIds = todayMatches.map((m) => m.id);
+    const results = await prisma.wc2026Match.findMany({
+      where: { matchId: { in: matchIds } },
+      select: { matchId: true, homeGoals: true, awayGoals: true, status: true },
+    });
+
+    const resultMap = new Map(results.map((r) => [r.matchId, r]));
+
+    return todayMatches.map((m) => {
+      const r = resultMap.get(m.id);
+      return {
+        ...m,
+        homeGoals: r?.homeGoals ?? null,
+        awayGoals: r?.awayGoals ?? null,
+        status: r?.status ?? "scheduled",
+      };
+    });
+  } catch {
+    return [];
+  }
 }
