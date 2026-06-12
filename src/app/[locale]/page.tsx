@@ -500,36 +500,39 @@ export default async function Home() {
 }
 
 async function getTodayWc2026Matches() {
+  const now = new Date();
+  // "sv-SE" locale produces YYYY-MM-DD — reliable for date comparison
+  const todayPrague = now.toLocaleDateString("sv-SE", { timeZone: "Europe/Prague" });
+
+  // Static filter — never fails; section always renders on match days
+  const todayMatches = WC2026_MATCHES.filter((m) => {
+    const d = new Date(m.kickoffUtc).toLocaleDateString("sv-SE", { timeZone: "Europe/Prague" });
+    return d === todayPrague;
+  });
+
+  if (todayMatches.length === 0) return [];
+
+  // DB results are best-effort — if Prisma throws (CloudLinux thread limit),
+  // we still show the scheduled matches with kickoff times.
+  let resultMap = new Map<string, { homeGoals: number | null; awayGoals: number | null; status: string }>();
   try {
-    const now = new Date();
-    // "sv-SE" locale produces YYYY-MM-DD — reliable for date comparison
-    const todayPrague = now.toLocaleDateString("sv-SE", { timeZone: "Europe/Prague" });
-
-    const todayMatches = WC2026_MATCHES.filter((m) => {
-      const d = new Date(m.kickoffUtc).toLocaleDateString("sv-SE", { timeZone: "Europe/Prague" });
-      return d === todayPrague;
-    });
-
-    if (todayMatches.length === 0) return [];
-
     const matchIds = todayMatches.map((m) => m.id);
     const results = await prisma.wc2026Match.findMany({
       where: { matchId: { in: matchIds } },
       select: { matchId: true, homeGoals: true, awayGoals: true, status: true },
     });
-
-    const resultMap = new Map(results.map((r) => [r.matchId, r]));
-
-    return todayMatches.map((m) => {
-      const r = resultMap.get(m.id);
-      return {
-        ...m,
-        homeGoals: r?.homeGoals ?? null,
-        awayGoals: r?.awayGoals ?? null,
-        status: r?.status ?? "scheduled",
-      };
-    });
+    resultMap = new Map(results.map((r) => [r.matchId, r]));
   } catch {
-    return [];
+    // Silently degrade — show matches without scores
   }
+
+  return todayMatches.map((m) => {
+    const r = resultMap.get(m.id);
+    return {
+      ...m,
+      homeGoals: r?.homeGoals ?? null,
+      awayGoals: r?.awayGoals ?? null,
+      status: r?.status ?? "scheduled",
+    };
+  });
 }
