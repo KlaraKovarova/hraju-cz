@@ -215,12 +215,15 @@ export default async function SportPage({ params }: SportPageProps) {
               {sport.icon} {sport.nameCs}
             </span>
           </div>
-          <Link
-            href="/"
-            className="rounded-lg border border-zinc-200 px-3 py-1.5 text-sm text-zinc-500 transition hover:border-zinc-300 hover:text-zinc-700"
-          >
-            Všechny sporty
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link href="/ms-2026" className="font-semibold text-emerald-600 transition hover:text-emerald-700">⚽ MS 2026</Link>
+            <Link
+              href="/"
+              className="rounded-lg border border-zinc-200 px-3 py-1.5 text-sm text-zinc-500 transition hover:border-zinc-300 hover:text-zinc-700"
+            >
+              Všechny sporty
+            </Link>
+          </div>
         </div>
       </nav>
 

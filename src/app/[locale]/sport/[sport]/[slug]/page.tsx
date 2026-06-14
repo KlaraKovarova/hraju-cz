@@ -999,6 +999,17 @@ export default async function FacilityPage({ params }: FacilityPageProps) {
               facilityName={facility.name}
             />
 
+            {/* FIFA MS 2026 banner */}
+            <a href="/ms-2026" className="mt-4 block overflow-hidden rounded-xl shadow-sm transition-shadow hover:shadow-md">
+              <Image
+                src="/images/fifa-banner.jpg"
+                alt="MS 2026 — Mistrovství světa ve fotbale"
+                width={1184}
+                height={1822}
+                className="h-auto w-full"
+              />
+            </a>
+
             {/* Sidebar Banner + Ad (hidden for premium facilities) */}
             {!facility.isPremium && (
               <>
