@@ -56,6 +56,40 @@ function mapFdStatus(s: string): string {
   return "scheduled";
 }
 
+// GET /api/cron/wc2026-results — diagnostic: returns DB state and env check (requires Bearer CRON_SECRET)
+export async function GET(request: NextRequest) {
+  const authHeader = request.headers.get("authorization");
+  if (!CRON_SECRET || authHeader !== `Bearer ${CRON_SECRET}`) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  const [totalMatches, finishedMatches, totalStandings] = await Promise.all([
+    prisma.wc2026Match.count().catch(() => -1),
+    prisma.wc2026Match.count({ where: { status: "finished" } }).catch(() => -1),
+    prisma.wc2026Standing.count().catch(() => -1),
+  ]);
+
+  const recentFinished = await prisma.wc2026Match.findMany({
+    where: { status: "finished" },
+    orderBy: { updatedAt: "desc" },
+    take: 5,
+    select: { matchId: true, homeTeam: true, awayTeam: true, homeGoals: true, awayGoals: true, updatedAt: true },
+  }).catch(() => []);
+
+  return NextResponse.json({
+    db: {
+      totalMatches,
+      finishedMatches,
+      totalStandings,
+      recentFinished,
+    },
+    env: {
+      footballDataApiKeySet: !!FOOTBALL_DATA_KEY,
+      cronSecretSet: !!CRON_SECRET,
+    },
+  });
+}
+
 export async function POST(request: NextRequest) {
   const authHeader = request.headers.get("authorization");
   if (!CRON_SECRET || authHeader !== `Bearer ${CRON_SECRET}`) {
